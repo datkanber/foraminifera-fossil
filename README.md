@@ -681,3 +681,10 @@ The main priority is maintainability, explicit structure, and easy modification 
 ## License
 
 This project currently uses the ISC license configuration defined in the generated `package.json` files.
+
+### Dependencies
+To run this project, make sure you have the following packages installed:
+* TensorFlow
+* OpenCV
+* NumPy
+* Matplotlib
