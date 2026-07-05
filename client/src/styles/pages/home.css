@@ -1,0 +1,94 @@
+.home-page {
+  width: 100%;
+  max-width: var(--page-max-width);
+
+  margin: 0 auto;
+  padding: var(--spacing-large);
+}
+
+.home-introduction {
+  margin-bottom: 32px;
+
+  padding: 24px;
+
+  background-color: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+}
+
+.home-introduction h1 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-medium);
+
+  color: var(--color-primary);
+
+  font-size: 30px;
+}
+
+.home-introduction p {
+  max-width: 900px;
+
+  margin-top: 0;
+  margin-bottom: var(--spacing-medium);
+
+  color: var(--color-text);
+}
+
+.home-introduction p:last-child {
+  margin-bottom: 0;
+}
+
+.home-information {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--spacing-medium);
+}
+
+.information-panel {
+  padding: var(--spacing-large);
+
+  background-color: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+}
+
+.information-panel h2 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-medium);
+
+  color: var(--color-primary);
+
+  font-size: 20px;
+}
+
+.information-panel p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+}
+
+/* -jr Mobile page layout starts here */
+@media (max-width: 768px) {
+  .home-page {
+    padding: var(--spacing-medium);
+  }
+
+  .home-introduction {
+    padding: var(--spacing-medium);
+  }
+
+  .home-introduction h1 {
+    font-size: 24px;
+  }
+
+  /* -jr Three desktop columns become one mobile column */
+  .home-information {
+    grid-template-columns: 1fr;
+  }
+
+  .information-panel {
+    padding: var(--spacing-medium);
+  }
+}

@@ -1,0 +1,127 @@
+.navbar {
+  width: 100%;
+
+  background-color: var(--color-surface);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: var(--page-max-width);
+
+  margin: 0 auto;
+  padding: 0 var(--spacing-large);
+
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: block;
+
+  width: auto;
+  height: 60px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: var(--spacing-large);
+}
+
+.navbar-menu a {
+  color: var(--color-text);
+
+  font-size: 15px;
+}
+
+.navbar-menu a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-toggle {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 8px;
+
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background-color: var(--color-text);
+}
+
+/* -jr Mobile navigation layout starts here */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative;
+
+    padding: 0 var(--spacing-medium);
+  }
+
+  /* -jr Logo uses a smaller height on mobile screens */
+  .navbar-logo {
+    height: 34px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 64px;
+    left: 0;
+
+    width: 100%;
+
+    padding: var(--spacing-medium);
+
+    background-color: var(--color-surface);
+
+    border-bottom: 1px solid var(--color-border);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: var(--spacing-medium);
+  }
+
+  /* -jr React adds this class when the mobile menu is open */
+  .navbar-menu-open {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    width: 100%;
+
+    padding: var(--spacing-small) 0;
+  }
+}
