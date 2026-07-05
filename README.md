@@ -1,12 +1,4 @@
-# Foraminifera Fossil
-
-A simple and maintainable full-stack web application for presenting and later managing geological and fossil-related information about foraminifera.
-
-The project is intentionally built with a clear and traditional structure. The main goal is to keep the codebase easy to understand, easy to modify, and accessible to junior developers.
-
-The frontend uses React with plain JavaScript, Webpack, Babel, and plain CSS. The backend uses Express.js with a separated route and controller structure.
-
-## Project Goals
+<img width="1234" height="994" alt="image" src="https://github.com/user-attachments/assets/197b8649-ca78-49a2-91b5-566ccdf7223b" />
 
 The project is designed around the following principles:
 
