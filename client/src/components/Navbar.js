@@ -37,6 +37,7 @@ function Navbar() {
           <a href="#about">About</a>
           <a href="#geology">Geology</a>
           <a href="#fossils">Fossils</a>
+          <a href="/predict" className="navbar-predict-btn">Predict</a>
         </nav>
       </div>
     </header>
