@@ -11,9 +11,9 @@
   max-width: var(--page-max-width);
 
   margin: 0 auto;
-  padding: 0 var(--spacing-large);
+  padding: 0 var(--spacing-small);
 
-  min-height: 64px;
+  min-height: 32px;
 
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@
   display: block;
 
   width: auto;
-  height: 60px;
+  height: 20px;
 }
 
 .navbar-menu {
@@ -41,12 +41,13 @@
 
 .navbar-menu a {
   color: var(--color-text);
-
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .navbar-menu a:hover {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .navbar-toggle {

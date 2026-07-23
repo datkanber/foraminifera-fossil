@@ -1,17 +1,18 @@
 :root {
-  --color-background: #f4f4f4;
+  --color-background: #FFFFCC; /* Classic SAP ALV Yellow */
   --color-surface: #ffffff;
+  
+  --color-text: #000000;
+  --color-text-muted: #333333;
+  
+  --color-border: #808080;
+  
+  --color-primary: #008000; /* Classic green */
+  --color-sap-bg: #d4d0c8; /* Windows 95/SAP classic gray */
 
-  --color-text: #222222;
-  --color-text-muted: #666666;
+  --page-max-width: 1000px;
 
-  --color-border: #cccccc;
-
-  --color-primary: #355f5b;
-
-  --page-max-width: 1200px;
-
-  --spacing-small: 8px;
-  --spacing-medium: 16px;
-  --spacing-large: 24px;
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 12px;
 }

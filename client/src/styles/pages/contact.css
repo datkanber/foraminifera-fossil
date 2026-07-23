@@ -1,0 +1,30 @@
+.contact-page {
+  padding: var(--spacing-large) var(--spacing-medium);
+  background-color: transparent;
+}
+
+.contact-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.contact-container h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 4px;
+}
+
+.contact-details {
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  padding: var(--spacing-medium);
+}
+
+.contact-details p {
+  margin: var(--spacing-small) 0;
+  font-size: 12px;
+  color: var(--color-text);
+}

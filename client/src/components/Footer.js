@@ -1,36 +1,26 @@
 import "../styles/components/footer.css";
+import logo from "../assets/images/logo.png";
 
 function Footer() {
-  // -jr Keeps the copyright year current automatically
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="site-footer">
-      <div className="footer-container">
-        <div className="footer-summary">
-          <strong>Foraminifera Fossil</strong>
-
-          <p>
-            A simple geological information platform for studying
-            foraminifera, fossil records, and sample data.
-          </p>
+    <footer className="site-footer" style={{ borderTop: "1px solid var(--color-border)", backgroundColor: "var(--color-sap-bg)", color: "var(--color-text)", padding: "var(--spacing-medium)" }}>
+      <div className="footer-container" style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: "var(--spacing-medium)", maxWidth: "var(--page-max-width)", margin: "0 auto", fontSize: "12px", padding: 0 }}>
+        
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <strong style={{ color: "var(--color-primary)" }}>Foraminifera Karar Destek Sistemi</strong>
         </div>
-
-        <nav
-          className="footer-links"
-          aria-label="Footer navigation"
-        >
-          <a href="/">Home</a>
-          <a href="#about">About</a>
-          <a href="#geology">Geology</a>
-          <a href="#fossils">Fossils</a>
-        </nav>
-      </div>
-
-      <div className="footer-bottom">
-        <p>
-          © {currentYear} Foraminifera Fossil. All rights reserved.
-        </p>
+        
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <img src={logo} alt="GeoKnow Logo" style={{ height: "24px" }} />
+          <a href="https://avesis.ogu.edu.tr/arastirma-grubu/geoknow" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-text)", textDecoration: "none", fontWeight: "bold" }}>
+            GeoKnow Araştırma Grubu
+          </a>
+          <span style={{ color: "var(--color-border)" }}>|</span>
+          <span style={{ color: "var(--color-text-muted)" }}>© {currentYear} Tüm hakları saklıdır.</span>
+        </div>
+        
       </div>
     </footer>
   );
