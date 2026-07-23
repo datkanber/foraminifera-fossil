@@ -2,6 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
+if (process.argv.includes("production")) {
+  process.env.NODE_ENV = "production";
+}
+
 module.exports = {
   entry: "./src/index.js",
 
