@@ -39,6 +39,20 @@ function Fossils() {
     }
   };
 
+  const popularTerms = [
+    "Oval", "İnvolut", "Evolut", "Yüksek konik", 
+    "Diskoidal", "Megalosferik", "Mikrosferik", 
+    "Kalkersiz", "Kanal sistemi", "Işınsal", "İri prolokulum"
+  ];
+
+  const handleTermClick = (term) => {
+    if (!characters) {
+      setCharacters(term);
+    } else if (!characters.includes(term)) {
+      setCharacters(characters + ", " + term);
+    }
+  };
+
   return (
     <section id="fossils" className="fossils-page">
       <div className="fossils-content">
@@ -73,7 +87,33 @@ function Fossils() {
                   value={characters}
                   onChange={(e) => setCharacters(e.target.value)}
                 />
-                <small>Birden fazla özellik aramak için aralarına virgül koyun.</small>
+                
+                <div style={{ marginTop: "12px", marginBottom: "8px" }}>
+                  <label style={{ fontSize: "11px", color: "var(--color-text-muted)", display: "block", marginBottom: "4px" }}>
+                    Standart Terim Sözlüğü (Eklemek için tıklayın):
+                  </label>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                    {popularTerms.map(term => (
+                      <span 
+                        key={term}
+                        onClick={() => handleTermClick(term)}
+                        style={{
+                          fontSize: "10px",
+                          padding: "2px 8px",
+                          backgroundColor: "#e0e0e0",
+                          border: "1px solid #b0b0b0",
+                          borderRadius: "12px",
+                          cursor: "pointer",
+                          userSelect: "none"
+                        }}
+                        onMouseEnter={(e) => e.target.style.backgroundColor = "#fbdb6b"}
+                        onMouseLeave={(e) => e.target.style.backgroundColor = "#e0e0e0"}
+                      >
+                        + {term}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <button type="submit" className="diagnose-button" disabled={loading} style={{ width: "auto", alignSelf: "flex-start", padding: "4px 16px" }}>
