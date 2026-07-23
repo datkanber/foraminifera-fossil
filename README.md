@@ -1,4 +1,4 @@
-<img width="1234" height="994" alt="image" src="https://github.com/user-attachments/assets/197b8649-ca78-49a2-91b5-566ccdf7223b" />
+<img width="1146" height="936" alt="image" src="https://github.com/user-attachments/assets/b675f4ba-3449-4fb2-b5ac-e23c344ab1df" />
 
 The project is designed around the following principles:
 
