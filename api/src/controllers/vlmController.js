@@ -66,35 +66,63 @@ function normalizeObservations(raw) {
 async function callGemini({ prompt, mimeType, data }) {
   if (!GEMINI_API_KEY) {
     const err = new Error(
-      "GEMINI_API_KEY tanımlı değil. api/.env dosyasına Google AI Studio anahtarını ekleyin."
+      "GEMINI_API_KEY tanımlı değil. api/.env dosyasına API anahtarını ekleyin."
     );
     err.status = 503;
     throw err;
   }
 
-  const url = `${GEMINI_BASE}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
-  const body = {
-    contents: [
-      {
-        role: "user",
-        parts: [
-          { text: prompt },
-          { inline_data: { mime_type: mimeType, data } },
-        ],
+  const isOpenAI = GEMINI_BASE.includes("groq") || GEMINI_BASE.includes("openai");
+  let url, body, headers;
+
+  if (isOpenAI) {
+    const base = GEMINI_BASE.replace(/\/$/, "");
+    url = base.endsWith("/chat/completions") ? base : `${base}/chat/completions`;
+    
+    headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${GEMINI_API_KEY}`
+    };
+    
+    body = {
+      model: GEMINI_MODEL,
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: prompt },
+            { type: "image_url", image_url: { url: `data:${mimeType};base64,${data}` } }
+          ]
+        }
+      ],
+      temperature: 0.2
+    };
+  } else {
+    url = `${GEMINI_BASE}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`;
+    headers = {
+      "Content-Type": "application/json",
+      "x-goog-api-key": GEMINI_API_KEY,
+    };
+    body = {
+      contents: [
+        {
+          role: "user",
+          parts: [
+            { text: prompt },
+            { inline_data: { mime_type: mimeType, data } },
+          ],
+        },
+      ],
+      generationConfig: {
+        temperature: 0.2,
+        responseMimeType: "application/json",
       },
-    ],
-    generationConfig: {
-      temperature: 0.2,
-      responseMimeType: "application/json",
-    },
-  };
+    };
+  }
 
   const response = await fetch(url, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-goog-api-key": GEMINI_API_KEY,
-    },
+    headers,
     body: JSON.stringify(body),
   });
 
@@ -103,17 +131,23 @@ async function callGemini({ prompt, mimeType, data }) {
     const message =
       payload?.error?.message ||
       payload?.error?.status ||
-      `Gemini HTTP ${response.status}`;
+      `API HTTP ${response.status}`;
     const err = new Error(message);
     err.status = response.status === 429 ? 429 : 502;
     err.details = payload?.error || payload;
     throw err;
   }
 
-  const text =
-    payload?.candidates?.[0]?.content?.parts
-      ?.map((part) => part.text || "")
-      .join("\n") || "";
+  let text = "";
+  if (isOpenAI) {
+    text = payload?.choices?.[0]?.message?.content || "";
+  } else {
+    text =
+      payload?.candidates?.[0]?.content?.parts
+        ?.map((part) => part.text || "")
+        .join("\n") || "";
+  }
+  
   return { text, raw: payload, model: GEMINI_MODEL };
 }
 
