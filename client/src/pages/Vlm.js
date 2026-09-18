@@ -185,37 +185,39 @@ function Vlm() {
               />
             </div>
 
-            <div className="form-group">
-              <label>Lokasyon (Locality)</label>
-              <input 
-                type="text" 
-                name="locality" 
-                placeholder="Örn: Sivrihisar, Ankara..." 
-                value={formData.locality} 
-                onChange={handleChange} 
-              />
-            </div>
+            <div className="form-grid">
+              <div className="form-group">
+                <label>Lokasyon</label>
+                <input 
+                  type="text" 
+                  name="locality" 
+                  placeholder="Örn: Sivrihisar..." 
+                  value={formData.locality} 
+                  onChange={handleChange} 
+                />
+              </div>
 
-            <div className="form-group">
-              <label>Jeolojik Yaş (Age / Stratigraphy)</label>
-              <input 
-                type="text" 
-                name="age" 
-                placeholder="Örn: Eosen, Miyosen..." 
-                value={formData.age} 
-                onChange={handleChange} 
-              />
-            </div>
+              <div className="form-group">
+                <label>Jeolojik Yaş</label>
+                <input 
+                  type="text" 
+                  name="age" 
+                  placeholder="Örn: Eosen..." 
+                  value={formData.age} 
+                  onChange={handleChange} 
+                />
+              </div>
 
-            <div className="form-group">
-              <label>Işıklandırma / Büyütme (Optics)</label>
-              <input 
-                type="text" 
-                name="optics" 
-                placeholder="Örn: İnce kesit, yansıyan ışık..." 
-                value={formData.optics} 
-                onChange={handleChange} 
-              />
+              <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                <label>Işıklandırma / Büyütme (Optics)</label>
+                <input 
+                  type="text" 
+                  name="optics" 
+                  placeholder="Örn: İnce kesit, yansıyan ışık..." 
+                  value={formData.optics} 
+                  onChange={handleChange} 
+                />
+              </div>
             </div>
 
             <div className="checkbox-group">

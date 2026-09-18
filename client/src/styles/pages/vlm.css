@@ -57,10 +57,17 @@
   overflow-y: auto;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
 .upload-zone {
   border: 2px dashed var(--color-border);
   border-radius: 8px;
-  padding: 32px 16px;
+  padding: 16px 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -79,27 +86,27 @@
 }
 
 .upload-icon {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   color: var(--color-primary);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .upload-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-text);
 }
 
 .upload-hint {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--color-text-muted);
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .image-preview {
   max-width: 100%;
-  max-height: 250px;
+  max-height: 180px;
   object-fit: contain;
   border-radius: 6px;
 }
@@ -112,8 +119,8 @@
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,14 +135,14 @@
 }
 
 .form-group {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .form-group label {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--color-text);
 }
 
