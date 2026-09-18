@@ -60,3 +60,5 @@ desktop.ini
 
 # Local backup files
 *.bak
+.vercel
+.env*

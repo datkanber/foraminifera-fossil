@@ -42,56 +42,48 @@ function Navbar() {
         </button>
 
         {/* NAVIGATION LINKS */}
-        <nav className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`} style={{ display: 'flex', gap: '25px', alignItems: 'center', zIndex: 1000 }}>
+        <nav className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`} style={{ display: 'flex', gap: '28px', alignItems: 'center', zIndex: 1000 }}>
           <Link 
             to="/" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             Ana Sayfa
           </Link>
           <Link 
             to="/tani" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/tani' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/tani' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/tani' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/tani' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             Taksonomi Karar Destek
           </Link>
           <Link 
             to="/vlm" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/vlm' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/vlm' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/vlm' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/vlm' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             VLM Gözlem
           </Link>
           <Link 
             to="/jeoloji" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/jeoloji' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/jeoloji' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/jeoloji' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/jeoloji' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             Jeolojik Bağlam
           </Link>
           <Link 
             to="/hakkinda" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/hakkinda' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/hakkinda' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/hakkinda' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/hakkinda' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             Hakkında
           </Link>
           <Link 
             to="/iletisim" 
             onClick={handleLinkClick} 
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/iletisim' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/iletisim' ? '600' : '400' }}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/iletisim' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/iletisim' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             İletişim
-          </Link>
-          <Link 
-            to="/predict" 
-            onClick={handleLinkClick} 
-            className="navbar-predict-btn"
-            style={{ textDecoration: 'none', fontSize: '14px', color: location.pathname === '/predict' ? '#2c3e50' : '#555', fontWeight: location.pathname === '/predict' ? '600' : '400' }}
-          >
-            Predict
           </Link>
         </nav>
 
