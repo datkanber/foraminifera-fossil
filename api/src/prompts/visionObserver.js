@@ -143,6 +143,7 @@ Return exactly this JSON schema:
     "lookalikes": [],
     "why_not_species_level": ""
   },
+  "student_explanation_en": "Max 120 words, simple English.",
   "student_explanation_tr": "En fazla 120 kelime, sade Türkçe.",
   "expert_checklist_tr": ["uzmanın kontrol edeceği 3-5 nokta"],
   "disclaimer_tr": "Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir."

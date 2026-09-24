@@ -266,7 +266,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
       <div className="answer-grid">
         {answers.map((a, i) => (
           <button key={i} className="answer-btn" onClick={() => onAnswer(a)}>
-            <span className="answer-label">{lang === 'tr' ? (a.labelTr || a.value) : (a.labelEn || a.value)}</span>
+            <span className="answer-label">{lang === 'tr' ? (a.labelTr || a.value || a.code) : (a.labelEn || a.value || a.code)}</span>
             {a.nextType === "genus"   && <span className="answer-tag genus-tag">→ Genus</span>}
             {a.nextType === "outcome" && <span className="answer-tag outcome-tag">→ Outcome</span>}
           </button>
@@ -443,62 +443,62 @@ function ResultCard({ result, onReset, onBack }) {
 // SCORING MODE
 // ═══════════════════════════════════════════════════════════════════════════════
 const CHR_LIST = [
-  { id: "CHR_01", nameTr: "Kavkı bileşimi", values: [
-    { code: "AGGLUTINATED", labelTr: "Aglütinat" },
-    { code: "PORCELANEOUS", labelTr: "Porselen" },
-    { code: "HYALINE",      labelTr: "Hyalin" },
+  { id: "CHR_01", nameTr: "Kavkı bileşimi", nameEn: "Test composition", values: [
+    { code: "AGGLUTINATED", labelTr: "Aglütinat", labelEn: "Agglutinated" },
+    { code: "PORCELANEOUS", labelTr: "Porselen", labelEn: "Porcelaneous" },
+    { code: "HYALINE",      labelTr: "Hyalin", labelEn: "Hyaline" },
   ]},
-  { id: "CHR_03", nameTr: "Septalarla bölünme", values: [
-    { code: "PRESENT", labelTr: "Var" }, { code: "ABSENT", labelTr: "Yok" },
+  { id: "CHR_03", nameTr: "Septalarla bölünme", nameEn: "Septation", values: [
+    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
   ]},
-  { id: "CHR_04", nameTr: "Loca organizasyonu", values: [
-    { code: "UNDIVIDED", labelTr: "Septasız" }, { code: "MULTICHAMBERED", labelTr: "Çok localı" },
+  { id: "CHR_04", nameTr: "Loca organizasyonu", nameEn: "Chamber organization", values: [
+    { code: "UNDIVIDED", labelTr: "Septasız", labelEn: "Undivided" }, { code: "MULTICHAMBERED", labelTr: "Çok localı", labelEn: "Multichambered" },
   ]},
-  { id: "CHR_05", nameTr: "Loca dizilimi", values: [
-    { code: "UNISERIAL", labelTr: "Uniserial" }, { code: "BISERIAL", labelTr: "Biserial" },
-    { code: "TRISERIAL", labelTr: "Triserial" }, { code: "QUINQUELOCULINE", labelTr: "Quinqueloculine" },
-    { code: "CYCLIC", labelTr: "Siklik" },
+  { id: "CHR_05", nameTr: "Loca dizilimi", nameEn: "Chamber arrangement", values: [
+    { code: "UNISERIAL", labelTr: "Uniserial", labelEn: "Uniserial" }, { code: "BISERIAL", labelTr: "Biserial", labelEn: "Biserial" },
+    { code: "TRISERIAL", labelTr: "Triserial", labelEn: "Triserial" }, { code: "QUINQUELOCULINE", labelTr: "Quinqueloculine", labelEn: "Quinqueloculine" },
+    { code: "CYCLIC", labelTr: "Siklik", labelEn: "Cyclic" },
   ]},
-  { id: "CHR_06", nameTr: "Sarılım tipi", values: [
-    { code: "PLANISPIRAL", labelTr: "Planispiral" }, { code: "TROCHOSPIRAL", labelTr: "Trokospiral" },
-    { code: "STREPTOSPIRAL", labelTr: "Streptospiral" }, { code: "GLOMOSPIRAL", labelTr: "Glomospiral" },
-    { code: "UNCOILED", labelTr: "Sarılmamış" },
+  { id: "CHR_06", nameTr: "Sarılım tipi", nameEn: "Coiling pattern", values: [
+    { code: "PLANISPIRAL", labelTr: "Planispiral", labelEn: "Planispiral" }, { code: "TROCHOSPIRAL", labelTr: "Trokospiral", labelEn: "Trochospiral" },
+    { code: "STREPTOSPIRAL", labelTr: "Streptospiral", labelEn: "Streptospiral" }, { code: "GLOMOSPIRAL", labelTr: "Glomospiral", labelEn: "Glomospiral" },
+    { code: "UNCOILED", labelTr: "Sarılmamış", labelEn: "Uncoiled" },
   ]},
-  { id: "CHR_08", nameTr: "İnvolüt / Evolüt", values: [
-    { code: "INVOLUTE", labelTr: "İnvolüt" }, { code: "SEMI_INVOLUTE", labelTr: "Yarı involüt" },
-    { code: "EVOLUTE", labelTr: "Evolüt" },
+  { id: "CHR_08", nameTr: "İnvolüt / Evolüt", nameEn: "Involution / Evolution", values: [
+    { code: "INVOLUTE", labelTr: "İnvolüt", labelEn: "Involute" }, { code: "SEMI_INVOLUTE", labelTr: "Yarı involüt", labelEn: "Semi Involute" },
+    { code: "EVOLUTE", labelTr: "Evolüt", labelEn: "Evolute" },
   ]},
-  { id: "CHR_09", nameTr: "Büyüme sırasında değişim", values: [
-    { code: "NONE", labelTr: "Değişim yok" },
-    { code: "PLANISPIRAL_TO_BISERIAL",  labelTr: "Planispiral → Biserial" },
-    { code: "PLANISPIRAL_TO_UNISERIAL", labelTr: "Planispiral → Uniserial" },
-    { code: "TRISERIAL_TO_BISERIAL",    labelTr: "Triserial → Biserial" },
-    { code: "TRISERIAL_TO_UNISERIAL",   labelTr: "Triserial → Uniserial" },
-    { code: "COILED_TO_SERIAL",         labelTr: "Sarılı → Seri" },
+  { id: "CHR_09", nameTr: "Büyüme sırasında değişim", nameEn: "Ontogenetic change", values: [
+    { code: "NONE", labelTr: "Değişim yok", labelEn: "None" },
+    { code: "PLANISPIRAL_TO_BISERIAL",  labelTr: "Planispiral → Biserial", labelEn: "Planispiral → Biserial" },
+    { code: "PLANISPIRAL_TO_UNISERIAL", labelTr: "Planispiral → Uniserial", labelEn: "Planispiral → Uniserial" },
+    { code: "TRISERIAL_TO_BISERIAL",    labelTr: "Triserial → Biserial", labelEn: "Triserial → Biserial" },
+    { code: "TRISERIAL_TO_UNISERIAL",   labelTr: "Triserial → Uniserial", labelEn: "Triserial → Uniserial" },
+    { code: "COILED_TO_SERIAL",         labelTr: "Sarılı → Seri", labelEn: "Coiled → Serial" },
   ]},
-  { id: "CHR_10", nameTr: "İç yapı karmaşıklığı", values: [
-    { code: "SIMPLE", labelTr: "Basit" }, { code: "SUBDIVIDED", labelTr: "Alt bölmeli" },
-    { code: "COMPLEX", labelTr: "Karmaşık" }, { code: "LABYRINTHIC", labelTr: "Labirentik" },
+  { id: "CHR_10", nameTr: "İç yapı karmaşıklığı", nameEn: "Internal complexity", values: [
+    { code: "SIMPLE", labelTr: "Basit", labelEn: "Simple" }, { code: "SUBDIVIDED", labelTr: "Alt bölmeli", labelEn: "Subdivided" },
+    { code: "COMPLEX", labelTr: "Karmaşık", labelEn: "Complex" }, { code: "LABYRINTHIC", labelTr: "Labirentik", labelEn: "Labyrinthic" },
   ]},
-  { id: "CHR_11", nameTr: "İkincil locacıklar", values: [
-    { code: "PRESENT", labelTr: "Var" }, { code: "ABSENT", labelTr: "Yok" },
-    { code: "WELL_DEVELOPED", labelTr: "İyi gelişmiş" },
+  { id: "CHR_11", nameTr: "İkincil locacıklar", nameEn: "Secondary chamberlets", values: [
+    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
+    { code: "WELL_DEVELOPED", labelTr: "İyi gelişmiş", labelEn: "Well Developed" },
   ]},
-  { id: "CHR_13", nameTr: "İç bölmeler", values: [
-    { code: "ABSENT", labelTr: "Yok" }, { code: "RADIAL", labelTr: "Radyal" },
-    { code: "SUBEPIDERMAL", labelTr: "Subepidermal" }, { code: "VERTICAL", labelTr: "Düşey" },
+  { id: "CHR_13", nameTr: "İç bölmeler", nameEn: "Internal partitions", values: [
+    { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" }, { code: "RADIAL", labelTr: "Radyal", labelEn: "Radial" },
+    { code: "SUBEPIDERMAL", labelTr: "Subepidermal", labelEn: "Subepidermal" }, { code: "VERTICAL", labelTr: "Düşey", labelEn: "Vertical" },
   ]},
-  { id: "CHR_14", nameTr: "Pillarlar", values: [
-    { code: "PRESENT", labelTr: "Var" }, { code: "ABSENT", labelTr: "Yok" },
-    { code: "STRONG", labelTr: "Güçlü" }, { code: "WEAK", labelTr: "Zayıf" },
+  { id: "CHR_14", nameTr: "Pillarlar", nameEn: "Pillars", values: [
+    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
+    { code: "STRONG", labelTr: "Güçlü", labelEn: "Strong" }, { code: "WEAK", labelTr: "Zayıf", labelEn: "Weak" },
   ]},
-  { id: "CHR_17", nameTr: "Marjinal kord", values: [
-    { code: "PRESENT", labelTr: "Var" }, { code: "ABSENT", labelTr: "Yok" },
-    { code: "STRONG", labelTr: "Güçlü" },
+  { id: "CHR_17", nameTr: "Marjinal kord", nameEn: "Marginal cord", values: [
+    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
+    { code: "STRONG", labelTr: "Güçlü", labelEn: "Strong" },
   ]},
-  { id: "CHR_21", nameTr: "Kesit yönü", values: [
-    { code: "AXIAL", labelTr: "Eksenel" }, { code: "EQUATORIAL", labelTr: "Ekvatoryal" },
-    { code: "OBLIQUE", labelTr: "Eğik" }, { code: "UNKNOWN", labelTr: "Bilinmiyor" },
+  { id: "CHR_21", nameTr: "Kesit yönü", nameEn: "Section orientation", values: [
+    { code: "AXIAL", labelTr: "Eksenel", labelEn: "Axial" }, { code: "EQUATORIAL", labelTr: "Ekvatoryal", labelEn: "Equatorial" },
+    { code: "OBLIQUE", labelTr: "Eğik", labelEn: "Oblique" }, { code: "UNKNOWN", labelTr: "Bilinmiyor", labelEn: "Unknown" },
   ]},
 ];
 
