@@ -424,14 +424,8 @@
   "level": "D",
   "code": "D2",
   "text": "No tubular coiling",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "NONE"
  },
  {
   "rule_key": "Saccammina_S1",
@@ -979,7 +973,7 @@
   "mappings": [
    {
     "chr_id": "CHR_04",
-    "value": "MULTICHAMBERED",
+    "value": "UNDIVIDED",
     "confidence": "HIGH"
    }
   ],
@@ -3910,14 +3904,8 @@
   "level": "D",
   "code": "D4",
   "text": "Glomalveolina-type early milioline/triloculine stage = absent",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "TRILOCULINE",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "NONE"
  },
  {
   "rule_key": "Alveolina_S1",
@@ -4228,7 +4216,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -4412,7 +4400,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -4934,7 +4922,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -5086,7 +5074,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -5426,7 +5414,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -7244,7 +7232,7 @@
   "mappings": [
    {
     "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
+    "value": "SIMPLE",
     "confidence": "MEDIUM"
    }
   ],
@@ -8908,14 +8896,8 @@
   "level": "D",
   "code": "D1",
   "text": "annular stolons absent",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "ANNULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "NONE"
  },
  {
   "rule_key": "Orbitoclypeus_D2",
@@ -8998,14 +8980,8 @@
   "level": "D",
   "code": "D1",
   "text": "annular stolons absent",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "ANNULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "NONE"
  },
  {
   "rule_key": "Nemkovella_D2",
@@ -9101,7 +9077,7 @@
   "mappings": [
    {
     "chr_id": "CHR_17",
-    "value": "PRESENT",
+    "value": "ABSENT",
     "confidence": "MEDIUM"
    }
   ],
@@ -9682,11 +9658,6 @@
     "chr_id": "CHR_08",
     "value": "EVOLUTE",
     "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_17",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
    }
   ],
   "status": "HIGH"

@@ -3,17 +3,18 @@ import "../styles/pages/fossils.css";
 import ceratiteIcon from "../assets/johnny-automatic-ceratite.svg";
 import foraminiferaIcon from "../assets/foraminifera.svg";
 import TaxonProfileCard from "../components/TaxonProfileCard";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const API = process.env.REACT_APP_API_URL + "/api/diagnose";
 
 // ─── STATUS / LEVEL META ────────────────────────────────────────────────────
-const STATUS_META = {
-  CONFIRMED_GENUS:          { label: "TEYİT EDİLDİ",      color: "#1a7a1a", bg: "#d4edda" },
-  PROBABLE_GENUS:           { label: "MUHTEMEL",           color: "#856404", bg: "#fff3cd" },
-  CANDIDATE_GENUS:          { label: "ADAY",               color: "#0c5460", bg: "#d1ecf1" },
-  INDETERMINATE:            { label: "BELİRSİZ",           color: "#721c24", bg: "#f8d7da" },
-  NO_MATCH_WITHIN_CORE_TAXA:{ label: "EŞLEŞİLEMEDİ",     color: "#383d41", bg: "#e2e3e5" },
-};
+const getStatusMeta = (t) => ({
+  CONFIRMED_GENUS:          { label: t("status.confirmed"),      color: "#1a7a1a", bg: "#d4edda" },
+  PROBABLE_GENUS:           { label: t("status.probable"),       color: "#856404", bg: "#fff3cd" },
+  CANDIDATE_GENUS:          { label: t("status.candidate"),      color: "#0c5460", bg: "#d1ecf1" },
+  INDETERMINATE:            { label: t("status.indeterminate"),  color: "#721c24", bg: "#f8d7da" },
+  NO_MATCH_WITHIN_CORE_TAXA:{ label: t("status.nomatch"),        color: "#383d41", bg: "#e2e3e5" },
+});
 
 const LEVEL_LABELS = {
   M: { label: "ZORUNLU",      color: "#721c24", bg: "#f8d7da" },
@@ -34,14 +35,14 @@ const MODULE_VALUE_TO_LABEL = {
 // ═══════════════════════════════════════════════════════════════════════════════
 function Fossils() {
   const [mode, setMode] = useState(null);
+  const { t } = useLanguage();
 
   return (
     <section id="fossils" className="fossils-page">
       <div className="fossils-content">
-        <h2 className="fossils-title">Tanı Destek Sistemi</h2>
+        <h2 className="fossils-title">{t("fossils.title")}</h2>
         <p className="fossils-desc">
-          Mikroskop altında ince kesitte gözlemlediğiniz morfolojik özellikleri
-          girerek olası cinsleri adım adım eleyebilirsiniz.
+          {t("fossils.desc")}
         </p>
         {mode === null   && <ModeSelector onSelect={setMode} />}
         {mode === "wizard"  && <WizardMode  onBack={() => setMode(null)} />}
@@ -53,25 +54,26 @@ function Fossils() {
 
 // ─── MODE SELECTOR ──────────────────────────────────────────────────────────
 function ModeSelector({ onSelect }) {
+  const { t } = useLanguage();
   return (
     <div className="mode-selector">
       <button className="mode-card" onClick={() => onSelect("wizard")}>
         <img
           src={ceratiteIcon}
-          alt="Adım adım tanı"
+          alt={t("mode.wizard.title")}
           className="mode-icon-svg"
         />
-        <strong>Adım Adım Tanı</strong>
-        <span>Karar ağacı üzerinden yönlendirilmiş soru-cevap</span>
+        <strong>{t("mode.wizard.title")}</strong>
+        <span>{t("mode.wizard.desc")}</span>
       </button>
       <button className="mode-card" onClick={() => onSelect("scoring")}>
         <img
           src={foraminiferaIcon}
-          alt="Karakter puanlama"
+          alt={t("mode.scoring.title")}
           className="mode-icon-svg"
         />
-        <strong>Karakter Puanlama</strong>
-        <span>Gözlemlediğiniz CHR karakterlerini girin, motor puanlasın</span>
+        <strong>{t("mode.scoring.title")}</strong>
+        <span>{t("mode.scoring.desc")}</span>
       </button>
     </div>
   );
@@ -87,6 +89,7 @@ function WizardMode({ onBack }) {
   const [result, setResult]   = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState(null);
+  const { lang, t } = useLanguage();
   // Human-readable breadcrumb: [{q, a}]
   const [crumbs, setCrumbs]   = useState([]);
 
@@ -116,8 +119,8 @@ function WizardMode({ onBack }) {
     // Push current to stack (for back navigation)
     setStack((s) => [...s, { current, result }]);
 
-    const qText = current.node?.textTr || "Kavkı bileşimi nedir?";
-    const aLabel = answer.labelTr || answer.value;
+    const qText = lang === 'tr' ? (current.node?.textTr || "Kavkı bileşimi nedir?") : (current.node?.textEn || "What is the test composition?");
+    const aLabel = lang === 'tr' ? (answer.labelTr || answer.value) : (answer.labelEn || answer.value);
 
     try {
       // ── Step A: CHR_01 composition chosen → fetch module entry question ──
@@ -178,7 +181,7 @@ function WizardMode({ onBack }) {
     <div className="wizard-layout">
       {/* Breadcrumb bar */}
       <div className="wizard-breadcrumb">
-        <button className="back-link" onClick={onBack}>← Mod Seç</button>
+        <button className="back-link" onClick={onBack}>{t("btn.back")}</button>
         {crumbs.map((c, i) => (
           <span key={i} className="breadcrumb-step">
             <span className="breadcrumb-sep">›</span>
@@ -229,6 +232,7 @@ function WizardMode({ onBack }) {
 // ─── QUESTION CARD ─────────────────────────────────────────────────────────
 function QuestionCard({ current, onAnswer, onBack }) {
   const { nodeType, node } = current;
+  const { lang, t } = useLanguage();
   // module_select uses node.values; question uses node.answers
   const answers = nodeType === "module_select" ? node.values : (node.answers || []);
 
@@ -242,12 +246,12 @@ function QuestionCard({ current, onAnswer, onBack }) {
       )}
 
       <div className="question-code">{node.code || "CHR_01"}</div>
-      <div className="question-text">{node.textTr || "Kavkı bileşimi nedir?"}</div>
+      <div className="question-text">{lang === 'tr' ? (node.textTr || "Kavkı bileşimi nedir?") : (node.textEn || "What is the test composition?")}</div>
 
       {node.character && (
         <div className="question-chr-badge">
           <span className="chr-id">{node.character.id}</span>
-          <span className="chr-name">{node.character.nameTr}</span>
+          <span className="chr-name">{lang === 'tr' ? node.character.nameTr : (node.character.nameEn || node.character.nameTr)}</span>
         </div>
       )}
 
@@ -263,20 +267,20 @@ function QuestionCard({ current, onAnswer, onBack }) {
       <div className="answer-grid">
         {answers.map((a, i) => (
           <button key={i} className="answer-btn" onClick={() => onAnswer(a)}>
-            <span className="answer-label">{a.labelTr || a.value}</span>
-            {a.nextType === "genus"   && <span className="answer-tag genus-tag">→ Cins</span>}
-            {a.nextType === "outcome" && <span className="answer-tag outcome-tag">→ Çıkış</span>}
+            <span className="answer-label">{lang === 'tr' ? (a.labelTr || a.value) : (a.labelEn || a.value)}</span>
+            {a.nextType === "genus"   && <span className="answer-tag genus-tag">→ Genus</span>}
+            {a.nextType === "outcome" && <span className="answer-tag outcome-tag">→ Outcome</span>}
           </button>
         ))}
       </div>
 
       <div className="question-nav">
-        {onBack && <button className="nav-btn back-btn" onClick={onBack}>← Geri</button>}
+        {onBack && <button className="nav-btn back-btn" onClick={onBack}>← Back</button>}
         <button
           className="nav-btn skip-btn"
-          onClick={() => onAnswer({ value: "NOT_OBSERVABLE", labelTr: "Gözlenemiyor / Emin Değilim" })}
+          onClick={() => onAnswer({ value: "NOT_OBSERVABLE", labelTr: "Gözlenemiyor / Emin Değilim", labelEn: "Not Observable / Not Sure" })}
         >
-          Gözlenemiyor / Emin Değilim
+          {t("btn.skip")}
         </button>
       </div>
     </div>
@@ -286,6 +290,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
 // ─── RESULT CARD ───────────────────────────────────────────────────────────
 function ResultCard({ result, onReset, onBack }) {
   const { nodeType, node } = result;
+  const { t } = useLanguage();
 
   if (nodeType === "outcome") {
     const isIndet = node.kind === "INDETERMINATE";
@@ -363,8 +368,8 @@ function ResultCard({ result, onReset, onBack }) {
         )}
 
         <div className="result-actions">
-          <button className="nav-btn back-btn" onClick={onBack}>← Geri</button>
-          <button className="nav-btn reset-btn" onClick={onReset}>↺ Yeniden Başla</button>
+          <button className="nav-btn back-btn" onClick={onBack}>← Back</button>
+          <button className="nav-btn reset-btn" onClick={onReset}>{t("btn.reset")}</button>
         </div>
       </div>
     );
@@ -383,11 +388,11 @@ function ResultCard({ result, onReset, onBack }) {
 
       {flag && <div className="flag-warning">⚠️ {flag}</div>}
       {taxonomicReviewRequired && (
-        <div className="flag-warning">⚠️ Taksonomik inceleme gerekli</div>
+        <div className="flag-warning">⚠️ {t("warning.taxonomic")}</div>
       )}
 
       <div className="flag-warning" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", marginTop: "12px", fontSize: "13px" }}>
-        <strong>Uyarı:</strong> Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.
+        <strong>Uyarı:</strong> {t("warning.disclaimer")}
       </div>
 
       <div className="rules-section">
@@ -428,8 +433,8 @@ function ResultCard({ result, onReset, onBack }) {
       <TaxonProfileCard scientificName={name} />
 
       <div className="result-actions">
-        <button className="nav-btn back-btn" onClick={onBack}>← Geri</button>
-        <button className="nav-btn reset-btn" onClick={onReset}>↺ Yeniden Başla</button>
+        <button className="nav-btn back-btn" onClick={onBack}>← Back</button>
+        <button className="nav-btn reset-btn" onClick={onReset}>{t("btn.reset")}</button>
       </div>
     </div>
   );
@@ -503,6 +508,7 @@ function ScoringMode({ onBack }) {
   const [scoreResult, setScoreResult]   = useState(null);
   const [loading, setLoading]           = useState(false);
   const [error, setError]               = useState(null);
+  const { lang, t } = useLanguage();
 
   const toggleObs = (chrId, value) => {
     setObservations((prev) => {
@@ -540,7 +546,7 @@ function ScoringMode({ onBack }) {
   return (
     <div className="scoring-layout">
       <button className="back-link" onClick={onBack} style={{ marginBottom: "12px" }}>
-        ← Mod Seç
+        {t("btn.back")}
       </button>
 
       <div className="scoring-body">
@@ -557,7 +563,7 @@ function ScoringMode({ onBack }) {
               <div key={chr.id} className="chr-block">
                 <div className="chr-block-header">
                   <span className="chr-id-badge">{chr.id}</span>
-                  <span className="chr-name-text">{chr.nameTr}</span>
+                  <span className="chr-name-text">{lang === 'tr' ? chr.nameTr : (chr.nameEn || chr.nameTr)}</span>
                   {obs && (
                     <button className="chr-clear" onClick={() => {
                       setObservations((p) => { const n={...p}; delete n[chr.id]; return n; });
@@ -573,7 +579,7 @@ function ScoringMode({ onBack }) {
                         className={`chr-value-btn${sel ? " selected" : ""}`}
                         onClick={() => toggleObs(chr.id, v.code)}
                       >
-                        {v.labelTr}
+                        {lang === 'tr' ? v.labelTr : (v.labelEn || v.labelTr || v.code)}
                       </button>
                     );
                   })}
@@ -581,7 +587,7 @@ function ScoringMode({ onBack }) {
                     className={`chr-value-btn not-obs-btn${obs?.state === "NOT_OBSERVABLE" ? " selected" : ""}`}
                     onClick={() => toggleObs(chr.id, "__NOT_OBS__")}
                   >
-                    Gözlenemiyor
+                    {t("btn.skip")}
                   </button>
                 </div>
               </div>
@@ -589,11 +595,11 @@ function ScoringMode({ onBack }) {
           })}
 
           <button className="diagnose-button" onClick={handleScore} disabled={loading}>
-            {loading ? "Hesaplanıyor..." : "Puanla ve Tanı Yap"}
+            {loading ? t("btn.scoring") : t("btn.score")}
           </button>
           {Object.keys(observations).length > 0 && (
             <button className="nav-btn reset-btn" onClick={reset} style={{ marginTop: "6px", width: "100%" }}>
-              ↺ Sıfırla
+              {t("btn.reset")}
             </button>
           )}
         </div>
@@ -619,7 +625,8 @@ function ScoringMode({ onBack }) {
 // ─── SCORE RESULT ──────────────────────────────────────────────────────────
 function ScoreResult({ data }) {
   const { status, identification, confidenceNote, ranking = [], excluded = [], observedCharacterCount } = data;
-  const meta = STATUS_META[status] || {};
+  const { t } = useLanguage();
+  const meta = getStatusMeta(t)[status] || {};
 
   return (
     <div className="score-result">
@@ -632,19 +639,19 @@ function ScoreResult({ data }) {
       </div>
 
       <div className="confidence-note" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", padding: "8px 12px", borderRadius: "6px", marginBottom: "12px", fontSize: "13px", marginTop: "12px" }}>
-        <strong>Uyarı:</strong> Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.
+        <strong>Uyarı:</strong> {t("warning.disclaimer")}
       </div>
 
       {confidenceNote && <div className="confidence-note">{confidenceNote}</div>}
       <div className="obs-count">
-        Değerlendirilen gözlem: <strong>{observedCharacterCount}</strong>
+        {t("score.obs_count")}: <strong>{observedCharacterCount}</strong>
       </div>
 
       {identification && <TaxonProfileCard scientificName={identification} />}
 
       {ranking.length > 0 && (
         <div className="ranking-section">
-          <div className="ranking-header">Sıralama (aktif adaylar)</div>
+          <div className="ranking-header">{t("score.ranking")}</div>
           <table className="ranking-table">
             <thead>
               <tr>
@@ -701,7 +708,7 @@ function ScoreResult({ data }) {
 
       {excluded.length > 0 && (
         <details className="excluded-section">
-          <summary>Elinen cinsler ({excluded.length})</summary>
+          <summary>{t("score.excluded")} ({excluded.length})</summary>
           <ul className="excluded-list">
             {excluded.map((r) => (
               <li key={r.genus}>

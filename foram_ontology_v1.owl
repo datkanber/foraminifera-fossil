@@ -1841,12 +1841,9 @@
 
 <owl:NamedIndividual rdf:about="#Saccammina_D2">
   <rdf:type rdf:resource="#RuleItem"/>
-  <refersToCharacter rdf:resource="#CHR_02"/>
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No tubular coiling</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSTIC</evidenceLevel>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saccammina DIAGNOSTIC #2</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_02=TUBULAR</suggestedCharacterValue>
-  <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_02:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Saccammina_S1">
@@ -2270,7 +2267,7 @@
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No conventional multichambered organization</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANDATORY</evidenceLevel>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhizammina MANDATORY #3</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_04=MULTICHAMBERED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_04=UNDIVIDED</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_04:HIGH</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -4503,13 +4500,10 @@
 
 <owl:NamedIndividual rdf:about="#Alveolina_D4">
   <rdf:type rdf:resource="#RuleItem"/>
-  <refersToCharacter rdf:resource="#CHR_05"/>
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glomalveolina-type early milioline/triloculine stage = absent</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSTIC</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D4</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alveolina DIAGNOSTIC #4</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05=TRILOCULINE</suggestedCharacterValue>
-  <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05:HIGH</mappingConfidence>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Alveolina_S1">
@@ -4748,7 +4742,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONTRADICTORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glomalveolina CONTRADICTORY #2</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -4899,7 +4893,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONTRADICTORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borelis CONTRADICTORY #2</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -5333,7 +5327,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANDATORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M4</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triloculina MANDATORY #4</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -5457,7 +5451,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANDATORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M4</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miliolinella MANDATORY #4</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -5744,7 +5738,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANDATORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M3</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigmoilina MANDATORY #3</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -7205,7 +7199,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANDATORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M4</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miliola MANDATORY #4</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SUBDIVIDED</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10=SIMPLE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_10:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -8614,13 +8608,10 @@
 
 <owl:NamedIndividual rdf:about="#Orbitoclypeus_D1">
   <rdf:type rdf:resource="#RuleItem"/>
-  <refersToCharacter rdf:resource="#CHR_05"/>
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annular stolons absent</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSTIC</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orbitoclypeus DIAGNOSTIC #1</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05=ANNULAR</suggestedCharacterValue>
-  <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Orbitoclypeus_D2">
@@ -8688,13 +8679,10 @@
 
 <owl:NamedIndividual rdf:about="#Nemkovella_D1">
   <rdf:type rdf:resource="#RuleItem"/>
-  <refersToCharacter rdf:resource="#CHR_05"/>
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annular stolons absent</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSTIC</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemkovella DIAGNOSTIC #1</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05=ANNULAR</suggestedCharacterValue>
-  <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_05:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Nemkovella_D2">
@@ -8776,7 +8764,7 @@
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSTIC</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lenticulina DIAGNOSTIC #1</rdfs:label>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_17=PRESENT</suggestedCharacterValue>
+  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_17=ABSENT</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_17:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
@@ -9245,15 +9233,12 @@
 <owl:NamedIndividual rdf:about="#Nummulitoides_C2">
   <rdf:type rdf:resource="#RuleItem"/>
   <refersToCharacter rdf:resource="#CHR_08"/>
-  <refersToCharacter rdf:resource="#CHR_17"/>
   <ruleText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completely evolute adult whorls with no clasping of the previous marginal cord</ruleText>
   <evidenceLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONTRADICTORY</evidenceLevel>
   <ruleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</ruleCode>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nummulitoides CONTRADICTORY #2</rdfs:label>
   <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_08=EVOLUTE</suggestedCharacterValue>
   <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_08:HIGH</mappingConfidence>
-  <suggestedCharacterValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_17=PRESENT</suggestedCharacterValue>
-  <mappingConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHR_17:MEDIUM</mappingConfidence>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Nummulitoides_C3">

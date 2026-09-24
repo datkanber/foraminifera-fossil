@@ -7,12 +7,14 @@ import Geology from "./pages/Geology";
 import Fossils from "./pages/Fossils";
 import Contact from "./pages/Contact";
 import Vlm from "./pages/Vlm";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 import "./styles/global.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
       <div className="app-layout">
         <Navbar />
 
@@ -31,6 +33,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </LanguageProvider>
   );
 }
 

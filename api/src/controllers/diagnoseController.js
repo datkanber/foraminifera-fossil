@@ -19,82 +19,9 @@
  */
 
 const { getSession } = require("../db/neo4j");
+const { scoreGenera } = require("../services/scoring");
 
-// ─── SCORING CONSTANTS ─────────────────────────────────────────────────────
-const SCORES = { MANDATORY: 3, DIAGNOSTIC: 5, SUPPORTING: 1, CONTRADICTORY: -5 };
 const NEUTRAL_STATES = new Set(["NOT_OBSERVABLE", "UNCERTAIN"]);
-
-// Cross-character implications:
-// e.g. CHR_09=PLANISPIRAL_TO_BISERIAL implies CHR_06=PLANISPIRAL and CHR_05=BISERIAL
-const VALUE_IMPLIES = {
-  "CHR_11:WELL_DEVELOPED":          [["CHR_11", "PRESENT"]],
-  "CHR_11:WEAKLY_DEVELOPED":        [["CHR_11", "PRESENT"]],
-  "CHR_14:STRONG":                  [["CHR_14", "PRESENT"]],
-  "CHR_14:WEAK":                    [["CHR_14", "PRESENT"]],
-  "CHR_15:WELL_DEVELOPED":          [["CHR_15", "PRESENT"]],
-  "CHR_15:WEAKLY_DEVELOPED":        [["CHR_15", "PRESENT"]],
-  "CHR_17:STRONG":                  [["CHR_17", "PRESENT"]],
-  "CHR_17:WEAK":                    [["CHR_17", "PRESENT"]],
-  "CHR_09:PLANISPIRAL_TO_BISERIAL": [["CHR_06", "PLANISPIRAL"], ["CHR_05", "BISERIAL"]],
-  "CHR_09:PLANISPIRAL_TO_UNISERIAL":[["CHR_06", "PLANISPIRAL"], ["CHR_05", "UNISERIAL"]],
-  "CHR_09:BISERIAL_TO_UNISERIAL":   [["CHR_05", "BISERIAL"],   ["CHR_05", "UNISERIAL"]],
-  "CHR_09:TRISERIAL_TO_BISERIAL":   [["CHR_05", "TRISERIAL"],  ["CHR_05", "BISERIAL"]],
-  "CHR_09:TRISERIAL_TO_UNISERIAL":  [["CHR_05", "TRISERIAL"],  ["CHR_05", "UNISERIAL"]],
-};
-
-// ─── HELPERS ───────────────────────────────────────────────────────────────
-
-/**
- * Given a set of observations {chrId: {value, state}},
- * returns true if (chrId, value) is directly observed or implied.
- * Returns false if observed but different.
- * Returns null if not evaluable (neutral/not-observed).
- */
-function valueHolds(observations, chrId, value) {
-  // Check direct implications from other observed characters
-  const impliedByOther = Object.entries(observations).some(([c, o]) => {
-    if (!o || NEUTRAL_STATES.has(o.state) || !o.value) return false;
-    const key = `${c}:${o.value}`;
-    const implied = VALUE_IMPLIES[key] || [];
-    return implied.some(([ic, iv]) => ic === chrId && iv === value);
-  });
-
-  const obs = observations[chrId];
-  const isNeutral = !obs || NEUTRAL_STATES.has(obs.state);
-
-  if (isNeutral) return impliedByOther ? true : null;
-  if (obs.value === value || impliedByOther) return true;
-  return false;
-}
-
-/**
- * Evaluate a single RuleItem against specimen observations.
- * Returns { verdict: 'MATCH'|'MISMATCH'|'NEUTRAL', detail }
- *
- * A rule has N mappings (conjunctive: ALL must match for MATCH).
- * Any MISMATCH on an observable mapping → MISMATCH.
- */
-function evaluateRule(observations, mappings) {
-  if (!mappings || mappings.length === 0) {
-    return { verdict: "NEUTRAL", detail: "unmapped rule" };
-  }
-
-  let confirmed = 0;
-  for (const { chrId, value } of mappings) {
-    if (!value) continue;
-    const holds = valueHolds(observations, chrId, value);
-    if (holds === false) {
-      return {
-        verdict: "MISMATCH",
-        detail: `${chrId} expected ${value}, got ${observations[chrId]?.value || "not observed"}`,
-      };
-    }
-    if (holds === true) confirmed++;
-  }
-  return confirmed > 0
-    ? { verdict: "MATCH", detail: mappings.map((m) => `${m.chrId}=${m.value}`).join(", ") }
-    : { verdict: "NEUTRAL", detail: "referenced character not observable" };
-}
 
 // ─── ENDPOINT 1: decision-tree question walk ───────────────────────────────
 
@@ -374,151 +301,13 @@ exports.score = async (req, res) => {
       });
     }
 
-    // Score each genus
-    const nObserved = Object.entries(observations).filter(
-      ([chr, o]) => chr !== "CHR_21" && o && !NEUTRAL_STATES.has(o.state)
-    ).length;
-
-    const scored = Object.values(generaMap).map((g) => {
-      let score = 0;
-      let mandatoryTotal = 0;
-      let mandatoryMatched = 0;
-      const mandatoryViolated = [];
-      const diagnosticMatched = [];
-      const diagnosticUnobservable = [];
-      const supportingMatched = [];
-      const contradictions = [];
-      const matchedEvidence = [];
-      const neutralRules = [];
-      let excluded = false;
-      let exclusionReason = null;
-
-      for (const rule of g.rules) {
-        const { level, text, mappings } = rule;
-        const { verdict, detail } = evaluateRule(observations, mappings);
-
-        if (level === "CONTRADICTORY") {
-          if (verdict === "MATCH") {
-            score += SCORES.CONTRADICTORY;
-            contradictions.push(`${text} [${detail}]`);
-          }
-          continue;
-        }
-
-        if (level === "MANDATORY") {
-          mandatoryTotal++;
-          if (verdict === "MATCH") {
-            mandatoryMatched++;
-            score += SCORES.MANDATORY;
-            matchedEvidence.push({ level: "M", text, detail });
-          } else if (verdict === "MISMATCH") {
-            mandatoryViolated.push(`${text} [${detail}]`);
-          } else {
-            neutralRules.push({ level: "M", text });
-          }
-          continue;
-        }
-
-        if (verdict === "MATCH") {
-          score += SCORES[level] || 0;
-          matchedEvidence.push({ level: level[0], text, detail });
-          if (level === "DIAGNOSTIC") diagnosticMatched.push(text);
-          else if (level === "SUPPORTING") supportingMatched.push(text);
-        } else if (verdict === "NEUTRAL") {
-          neutralRules.push({ level: level[0], text });
-          if (level === "DIAGNOSTIC") diagnosticUnobservable.push(text);
-        }
-      }
-
-      // Exclusion logic
-      if (mandatoryViolated.length > 0) {
-        excluded = true;
-        exclusionReason = "mandatory character incompatible: " + mandatoryViolated[0];
-      }
-      if (contradictions.length >= 1 && score < 0) {
-        excluded = true;
-        exclusionReason = exclusionReason || "strong contradiction: " + contradictions[0];
-      }
-
-      return {
-        genus: g.genus,
-        module: g.module,
-        flag: g.flag || null,
-        taxonomicReviewRequired: g.taxonomicReviewRequired || false,
-        score,
-        mandatoryTotal,
-        mandatoryMatched,
-        mandatoryViolated,
-        diagnosticMatched,
-        diagnosticUnobservable,
-        supportingMatched,
-        contradictions,
-        matchedEvidence,
-        neutralRules,
-        excluded,
-        exclusionReason,
-      };
-    });
-
-    const active = scored
-      .filter((r) => !r.excluded)
-      .sort((a, b) => b.score - a.score || b.diagnosticMatched.length - a.diagnosticMatched.length);
-    const excluded = scored.filter((r) => r.excluded);
-
-    // Confidence status
-    let status = "INDETERMINATE";
-    let identification = null;
-    let confidenceNote = null;
-
-    if (active.length === 0) {
-      status =
-        nObserved >= 3
-          ? "NO_MATCH_WITHIN_CORE_TAXA"
-          : "INDETERMINATE";
-      confidenceNote =
-        status === "NO_MATCH_WITHIN_CORE_TAXA"
-          ? "Yeterli morfolojik bilgi mevcut ancak hiçbir çekirdek takson uyumlu değil. Bu geçerli bir sonuçtur; zorla tanı verilmez."
-          : "Güvenilir cins kararı için yetersiz tanı bilgisi.";
-    } else {
-      const top = active[0];
-      const runner = active[1] || null;
-      const noStrongContra = top.contradictions.length === 0;
-      const mandatoryOk = top.mandatoryViolated.length === 0;
-      const hasDiag = top.diagnosticMatched.length > 0;
-      const separated =
-        !runner ||
-        (top.diagnosticMatched.some((d) => !runner.diagnosticMatched.includes(d)) &&
-          top.score - runner.score >= 1);
-
-      if (nObserved < 2 || top.mandatoryMatched === 0) {
-        status = "INDETERMINATE";
-        confidenceNote = "Güvenilir cins kararı için yetersiz gözlenen morfoloji.";
-      } else if (mandatoryOk && hasDiag && noStrongContra && separated) {
-        status = "CONFIRMED_GENUS";
-        identification = top.genus;
-      } else if (mandatoryOk && noStrongContra && top.diagnosticUnobservable.length > 0 && !hasDiag) {
-        status = "PROBABLE_GENUS";
-        identification = top.genus;
-        confidenceNote = "Kritik tanısal karakter(ler) bu kesitte gözlenemiyor.";
-      } else if (mandatoryOk && noStrongContra && !separated) {
-        status = "CANDIDATE_GENUS";
-        identification = top.genus;
-        confidenceNote = "İki veya daha fazla cins gözlenen karakterlerle ayrıştırılamıyor.";
-      } else {
-        status = mandatoryOk && noStrongContra ? "PROBABLE_GENUS" : "CANDIDATE_GENUS";
-        identification = top.genus;
-      }
-    }
+    const scoredResults = scoreGenera(observations, generaMap);
 
     res.json({
       success: true,
-      observedCharacterCount: nObserved,
+      observedCharacterCount: Object.values(observations).filter(o => o && o.state !== "NOT_OBSERVABLE" && o.state !== "UNCERTAIN").length,
       module: moduleName,
-      status,
-      identification,
-      confidenceNote,
-      ranking: active.slice(0, 10),
-      excluded: excluded.slice(0, 10),
+      ...scoredResults
     });
   } catch (error) {
     console.error("Score error:", error);

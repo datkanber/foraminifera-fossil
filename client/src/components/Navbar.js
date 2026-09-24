@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
 import logo from "../assets/images/logo.png";
 
 import "../styles/components/navbar.css";
@@ -7,6 +8,7 @@ import "../styles/components/navbar.css";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { lang, toggleLanguage, t } = useLanguage();
 
   // Handler to close the mobile menu on link click
   const handleLinkClick = () => {
@@ -48,43 +50,47 @@ function Navbar() {
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            Ana Sayfa
+            {t('nav.home')}
           </Link>
           <Link 
             to="/tani" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/tani' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/tani' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            Taksonomi Karar Destek
+            {t('nav.diagnose')}
           </Link>
           <Link 
             to="/vlm" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/vlm' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/vlm' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            VLM Gözlem
+            {t('nav.vlm')}
           </Link>
           <Link 
             to="/jeoloji" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/jeoloji' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/jeoloji' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            Jeolojik Bağlam
+            {t('nav.geology')}
           </Link>
           <Link 
             to="/hakkinda" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/hakkinda' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/hakkinda' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            Hakkında
+            {t('nav.about')}
           </Link>
           <Link 
             to="/iletisim" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/iletisim' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/iletisim' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
-            İletişim
+            {t('nav.contact')}
           </Link>
+          
+          <button onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '4px 8px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold' }}>
+            {lang === 'tr' ? 'EN' : 'TR'}
+          </button>
         </nav>
 
       </div>
