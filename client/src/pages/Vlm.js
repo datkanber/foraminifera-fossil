@@ -275,7 +275,7 @@ function Vlm() {
                 {/* VLM Suggestion */}
                 {result.observation?.vlm_suggestion && (
                   <div className="vlm-suggestion">
-                    <div className="vlm-status">{result.observation.vlm_suggestion.identification_status}</div>
+                    <div className="vlm-status">{lang === 'tr' ? "VLM Önerisi" : "VLM suggestion"}</div>
                     <div className="vlm-id">
                       {result.observation.vlm_suggestion.best_open_id || (lang === 'tr' ? "Belirsiz Takson" : "Uncertain Taxon")}
                     </div>

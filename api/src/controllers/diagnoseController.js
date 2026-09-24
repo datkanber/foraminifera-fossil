@@ -137,8 +137,10 @@ exports.question = async (req, res) => {
       );
 
       const compResult = await session.run(
-        `MATCH (g:Genus {name: $name})-[:CLOSEST_COMPARISON]->(g2:Genus)
-         RETURN collect(g2.name) AS comparisons`,
+        `MATCH (g:Genus {name: $name})
+         OPTIONAL MATCH (g)-[:CLOSEST_COMPARISON]->(g2:Genus)
+         OPTIONAL MATCH (g)-[:BELONGS_TO]->(m:Module)
+         RETURN collect(g2.name) AS comparisons, m.name AS module`,
         { name: nextNode.name }
       );
 
@@ -147,12 +149,13 @@ exports.question = async (req, res) => {
         rules[r.get("level")]?.push({ text: r.get("text"), code: r.get("code") });
       }
       const comparisons = compResult.records[0]?.get("comparisons") || [];
+      const moduleName = compResult.records[0]?.get("module") || null;
 
       return res.json({
         nodeType: "genus",
         node: {
           name: nextNode.name,
-          module: nextNode.module,
+          module: moduleName,
           flag: nextNode.flag || null,
           taxonomicReviewRequired: nextNode.taxonomicReviewRequired || false,
           rules,
@@ -263,14 +266,15 @@ exports.score = async (req, res) => {
       ? `MATCH (g:Genus)-[:BELONGS_TO]->(m:Module {name: $module})
          MATCH (g)-[hr:HAS_RULE]->(r:RuleItem)
          OPTIONAL MATCH (r)-[ref:REFERS_TO]->(c:Character)
-         RETURN g.name AS genus, g.module AS module,
+         RETURN g.name AS genus, m.name AS module,
                 g.flag AS flag, g.taxonomicReviewRequired AS taxFlag,
                 hr.level AS level,
                 r.key AS ruleKey, r.text AS ruleText,
                 collect({chrId: c.id, value: ref.suggestedValue, confidence: ref.confidence}) AS mappings`
-      : `MATCH (g:Genus)-[hr:HAS_RULE]->(r:RuleItem)
+      : `MATCH (g:Genus)-[:BELONGS_TO]->(m:Module)
+         MATCH (g)-[hr:HAS_RULE]->(r:RuleItem)
          OPTIONAL MATCH (r)-[ref:REFERS_TO]->(c:Character)
-         RETURN g.name AS genus, g.module AS module,
+         RETURN g.name AS genus, m.name AS module,
                 g.flag AS flag, g.taxonomicReviewRequired AS taxFlag,
                 hr.level AS level,
                 r.key AS ruleKey, r.text AS ruleText,
@@ -305,7 +309,7 @@ exports.score = async (req, res) => {
 
     res.json({
       success: true,
-      observedCharacterCount: Object.values(observations).filter(o => o && o.state !== "NOT_OBSERVABLE" && o.state !== "UNCERTAIN").length,
+      observedCharacterCount: Object.keys(observations).filter(k => k !== "CHR_01" && k !== "CHR_21" && observations[k] && (observations[k].state === "PRESENT" || observations[k].state === "ABSENT")).length,
       module: moduleName,
       ...scoredResults
     });

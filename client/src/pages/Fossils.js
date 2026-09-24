@@ -383,7 +383,7 @@ function ResultCard({ result, onReset, onBack }) {
         ✓ {t("genus.found")}
       </div>
       <h3 className="result-genus"><em>{name}</em></h3>
-      <div className="result-module-badge">{module}</div>
+      {module && <div className="result-module-badge">{module}</div>}
 
       {flag && <div className="flag-warning">⚠️ {flag}</div>}
       {taxonomicReviewRequired && (
@@ -411,7 +411,7 @@ function ResultCard({ result, onReset, onBack }) {
                 {items.map((r, i) => (
                   <li key={i} className="rule-item">
                     {r.code && <span className="rule-code">{r.code}</span>}
-                    {r.text}
+                    {lang === 'en' ? r.text.replace(/\s*\([^)]*\)$/, '') : r.text}
                   </li>
                 ))}
               </ul>
@@ -609,7 +609,7 @@ function ScoringMode({ onBack }) {
             <div className="no-results">
               {Object.keys(observations).length === 0
                 ? (lang === 'tr' ? "Gözlem seçin ve puanlama yapın." : "Select observations and calculate score.")
-                : (lang === 'tr' ? `${Object.keys(observations).filter(k => observations[k]?.state === "PRESENT").length} aktif gözlem seçildi — Puanla butonuna tıklayın.` : `${Object.keys(observations).filter(k => observations[k]?.state === "PRESENT").length} active observations selected — Click Score.`)}
+                : (lang === 'tr' ? `${Object.keys(observations).filter(k => k !== "CHR_01" && k !== "CHR_21" && (observations[k]?.state === "PRESENT" || observations[k]?.state === "ABSENT")).length} aktif gözlem seçildi — Puanla butonuna tıklayın.` : `${Object.keys(observations).filter(k => k !== "CHR_01" && k !== "CHR_21" && (observations[k]?.state === "PRESENT" || observations[k]?.state === "ABSENT")).length} active observations selected — Click Score.`)}
             </div>
           )}
           {loading && <div className="wizard-loading"><span className="spinner" /> {lang === 'tr' ? "Puanlanıyor..." : "Scoring..."}</div>}
@@ -695,7 +695,7 @@ function ScoreResult({ data }) {
                     >
                       [{e.level}]
                     </span>
-                    <span className="evidence-text">{e.text}</span>
+                    <span className="evidence-text">{lang === 'en' ? e.text.replace(/\s*\([^)]*\)$/, '') : e.text}</span>
                     <span className="evidence-detail">{e.detail}</span>
                   </div>
                 );
