@@ -391,7 +391,7 @@ function ResultCard({ result, onReset, onBack }) {
       )}
 
       <div className="flag-warning" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", marginTop: "12px", fontSize: "13px" }}>
-        <strong>Uyarı:</strong> {t("warning.disclaimer")}
+        <strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer")}
       </div>
 
       <div className="rules-section">
@@ -638,10 +638,10 @@ function ScoreResult({ data }) {
       </div>
 
       <div className="confidence-note" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", padding: "8px 12px", borderRadius: "6px", marginBottom: "12px", fontSize: "13px", marginTop: "12px" }}>
-        <strong>Uyarı:</strong> {t("warning.disclaimer")}
+        <strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer")}
       </div>
 
-      {confidenceNote && <div className="confidence-note">{confidenceNote}</div>}
+      {confidenceNote && <div className="confidence-note">{t(confidenceNote)}</div>}
       <div className="obs-count">
         {t("score.obs_count")}: <strong>{observedCharacterCount}</strong>
       </div>

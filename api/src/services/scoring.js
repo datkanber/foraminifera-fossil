@@ -41,15 +41,17 @@ function buildH(obs) {
 }
 
 function evaluateRuleM(h, mappings) {
-  if (!mappings || mappings.length === 0) {
+  const validMappings = mappings ? mappings.filter(m => m.value) : [];
+  if (validMappings.length === 0) {
     return { verdict: 'NEUTRAL', held: new Set() };
   }
   
   // Group rule mappings by character (multi-mapping evaluation, conjunctive across characters, disjunctive within)
   const groups = {};
-  for (const m of mappings) {
-    if (!groups[m.chrId]) groups[m.chrId] = new Set();
-    groups[m.chrId].add(m.value);
+  for (const m of validMappings) {
+    const c = m.chrId || m.chr_id;
+    if (!groups[c]) groups[c] = new Set();
+    groups[c].add(m.value);
   }
   
   let anyhold = false;
@@ -63,11 +65,9 @@ function evaluateRuleM(h, mappings) {
       }
       anyhold = true;
       for (const v of hit) held.add(`${c}:${v}`);
-    } else {
-      // If a character required by the rule is not observed, the rule is mismatch if conjunctive (Algorithm 1)
-      // Actually Engine M says: if h[c] is empty/missing, intersection is empty -> MISMATCH.
-      return { verdict: 'MISMATCH', held: new Set() };
     }
+    // If not in h[c], it is unobserved. We skip this character group. 
+    // It doesn't cause a MISMATCH unless a character was observed and contradicts.
   }
   
   return anyhold ? { verdict: 'MATCH', held } : { verdict: 'NEUTRAL', held: new Set() };
@@ -121,7 +121,7 @@ function scoreGenera(observations, generaMap) {
       const L = rule.level;
       
       const text = rule.text;
-      const detail = rule.mappings ? rule.mappings.map(m => `${m.chrId}=${m.value}`).join(", ") : "";
+      const detail = rule.mappings ? rule.mappings.map(m => `${m.chrId || m.chr_id}=${m.value}`).join(", ") : "";
 
       if (L === "CONTRADICTORY") {
         if (verdict === "MATCH") {
@@ -204,17 +204,17 @@ function scoreGenera(observations, generaMap) {
   let confidenceNote = null;
   
   if (active.length === 0) {
-    status = (nObserved + (observations["CHR_01"] ? 1 : 0)) >= 3 ? "NO_MATCH_WITHIN_CORE_TAXA" : "INDETERMINATE";
+    status = nObserved >= 3 ? "NO_MATCH_WITHIN_CORE_TAXA" : "INDETERMINATE";
     confidenceNote = status === "NO_MATCH_WITHIN_CORE_TAXA" 
-      ? "Yeterli morfolojik bilgi mevcut ancak hiçbir çekirdek takson uyumlu değil. Bu geçerli bir sonuçtur; zorla tanı verilmez."
-      : "Güvenilir cins kararı için yetersiz tanı bilgisi.";
+      ? "VALID_NO_MATCH"
+      : "INSUFFICIENT_OBSERVATIONS";
   } else {
     const g1 = active[0];
     const g2 = active.length > 1 ? active[1] : null;
     
     if (nObserved < 2 || !g1._m01) {
       status = "INDETERMINATE";
-      confidenceNote = "Güvenilir cins kararı için en az iki bilgilendirici (CHR_01 dışı zorunlu dahil) karakter gözlenmelidir.";
+      confidenceNote = "INSUFFICIENT_OBSERVATIONS_LEAD";
     } else {
       const hasD = g1._Dset.size > 0;
       const noC = g1._nc === 0;
@@ -226,15 +226,15 @@ function scoreGenera(observations, generaMap) {
       } else if (g2 && g1.score === g2.score) {
         status = "CANDIDATE_GENUS";
         identification = g1.genus;
-        confidenceNote = "İki veya daha fazla cins gözlenen karakterlerle ayrıştırılamıyor (beraberlik).";
+        confidenceNote = "TIE_BREAK_FAILED";
       } else if (noC && !hasD && g1._dnm) {
         status = "PROBABLE_GENUS";
         identification = g1.genus;
-        confidenceNote = "Kritik tanısal karakter(ler) bu kesitte gözlenemiyor.";
+        confidenceNote = "MISSING_DIAGNOSTIC";
       } else if (noC && !sep) {
         status = "CANDIDATE_GENUS";
         identification = g1.genus;
-        confidenceNote = "Liderin tanısal kanıtları rakibinden ayrışmıyor veya puan farkı yetersiz.";
+        confidenceNote = "POOR_SEPARATION";
       } else {
         status = noC ? "PROBABLE_GENUS" : "CANDIDATE_GENUS";
         identification = g1.genus;
@@ -250,8 +250,8 @@ function scoreGenera(observations, generaMap) {
     status,
     identification,
     confidenceNote,
-    ranking: active.slice(0, 10),
-    excluded: excludedArr.slice(0, 10)
+    ranking: active,
+    excluded: excludedArr
   };
 }
 

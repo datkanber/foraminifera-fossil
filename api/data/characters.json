@@ -3,83 +3,612 @@
     "source": "Paleocene_Eocene_Benthic_Foraminifera_Genus_Identification_Ontology_v1_0.docx",
     "version": "1.0",
     "global_response_states": {
-      "PRESENT": {"tr": "Var", "note": "The character is clearly observable in the specimen."},
-      "ABSENT": {"tr": "Yok", "note": "Expected to be observable in the available section but clearly absent."},
-      "NOT_OBSERVABLE": {"tr": "Gözlenemiyor", "note": "Cannot be reliably evaluated (section orientation, preservation, image quality, incomplete exposure). NOT_OBSERVABLE != ABSENT; must not exclude a genus."},
-      "UNCERTAIN": {"tr": "Emin değilim", "note": "Observed area visible but state cannot be confidently determined. Neutral score."}
+      "PRESENT": {
+        "tr": "Var",
+        "note": "The character is clearly observable in the specimen."
+      },
+      "ABSENT": {
+        "tr": "Yok",
+        "note": "Expected to be observable in the available section but clearly absent."
+      },
+      "NOT_OBSERVABLE": {
+        "tr": "Gözlenemiyor",
+        "note": "Cannot be reliably evaluated (section orientation, preservation, image quality, incomplete exposure). NOT_OBSERVABLE != ABSENT; must not exclude a genus."
+      },
+      "UNCERTAIN": {
+        "tr": "Emin değilim",
+        "note": "Observed area visible but state cannot be confidently determined. Neutral score."
+      }
     },
     "core_rule": "Specimen -> Character ID -> Observed Value -> Observation State",
     "principle": "ONE MORPHOLOGICAL CHARACTER = ONE CHARACTER ID"
   },
   "characters": [
-    {"id": "CHR_01", "name_en": "Test composition", "name_tr": "Kavkı bileşimi", "group": "CORE",
-     "values": ["AGGLUTINATED", "PORCELANEOUS", "HYALINE", "UNCERTAIN"],
-     "value_labels_tr": {"AGGLUTINATED": "Aglütinat", "PORCELANEOUS": "Porselen", "HYALINE": "Hyalin", "UNCERTAIN": "Emin değilim"},
-     "note": "Principal entry character of the identification system."},
-    {"id": "CHR_02", "name_en": "Test shape", "name_tr": "Kavkı şekli", "group": "CORE",
-     "values": ["GLOBULAR", "SAC_LIKE", "TUBULAR", "ELONGATE", "FUSIFORM", "OVOID", "LENTICULAR", "DISCOIDAL", "FLATTENED", "CONICAL", "HIGH_CONICAL", "FLABELLIFORM", "STELLATE", "IRREGULAR", "OTHER", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "value_labels_tr": {"GLOBULAR": "Küresel", "SAC_LIKE": "Kese biçimli", "TUBULAR": "Tübüler", "ELONGATE": "Uzamış", "FUSIFORM": "Fusiform / iğ biçimli", "OVOID": "Ovoid", "LENTICULAR": "Merceksi", "DISCOIDAL": "Diskoidal", "FLATTENED": "Basık", "CONICAL": "Konik", "HIGH_CONICAL": "Yüksek konik", "FLABELLIFORM": "Yelpaze biçimli", "STELLATE": "Yıldızsı", "IRREGULAR": "Düzensiz", "OTHER": "Diğer", "NOT_OBSERVABLE": "Gözlenemiyor", "UNCERTAIN": "Emin değilim"},
-     "note": "Test shape and coiling must be stored as separate characters."},
-    {"id": "CHR_03", "name_en": "Septation", "name_tr": "Septalarla bölünme", "group": "CORE",
-     "values": ["PRESENT", "ABSENT", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Determines whether the test contains true chambers separated by septa. A coiled tubular test without true septa must not automatically be interpreted as multichambered."},
-    {"id": "CHR_04", "name_en": "Chamber number organization", "name_tr": "Loca organizasyonu", "group": "CORE",
-     "values": ["UNDIVIDED", "MULTICHAMBERED", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "value_labels_tr": {"UNDIVIDED": "Septalarla bölünmemiş", "MULTICHAMBERED": "Çok localı"},
-     "note": "Important for separating undivided tubular agglutinated forms from true multichambered taxa."},
-    {"id": "CHR_05", "name_en": "Chamber arrangement", "name_tr": "Loca dizilimi", "group": "CORE",
-     "values": ["UNISERIAL", "BISERIAL", "TRISERIAL", "QUINQUELOCULINE", "TRILOCULINE", "BILOCULINE", "ANNULAR", "CYCLIC", "IRREGULAR_SERIAL", "OTHER", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "PLANISPIRAL, TROCHOSPIRAL and STREPTOSPIRAL must NOT be stored here; they belong to CHR_06 Coiling Pattern."},
-    {"id": "CHR_06", "name_en": "Coiling pattern", "name_tr": "Sarılım tipi", "group": "CORE",
-     "values": ["PLANISPIRAL", "TROCHOSPIRAL", "STREPTOSPIRAL", "GLOMOSPIRAL", "IRREGULAR_COILING", "UNCOILED", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_07", "name_en": "Coiling plane", "name_tr": "Sarılım düzlemi", "group": "CORE",
-     "values": ["SINGLE_PLANE", "CHANGING_PLANES", "MULTIDIRECTIONAL", "NOT_APPLICABLE", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Example: Ammodiscus = PLANISPIRAL + SINGLE_PLANE; Glomospira = GLOMOSPIRAL/IRREGULAR_COILING + CHANGING_PLANES."},
-    {"id": "CHR_08", "name_en": "Involution / evolution", "name_tr": "İnvolüt–evolüt sarılım", "group": "CORE",
-     "values": ["INVOLUTE", "SEMI_INVOLUTE", "EVOLUTE", "NOT_APPLICABLE", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Activate only for taxa in which involution/evolution is morphologically meaningful."},
-    {"id": "CHR_09", "name_en": "Ontogenetic arrangement change", "name_tr": "Büyüme sırasında loca dizilimi değişimi", "group": "CORE",
-     "values": ["NONE", "PLANISPIRAL_TO_UNISERIAL", "PLANISPIRAL_TO_BISERIAL", "BISERIAL_TO_UNISERIAL", "TRISERIAL_TO_BISERIAL", "TRISERIAL_TO_UNISERIAL", "COILED_TO_SERIAL", "OTHER", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Treated separately from the adult chamber arrangement. Example: Spiroplectammina = PLANISPIRAL_TO_BISERIAL."},
-    {"id": "CHR_10", "name_en": "Internal complexity", "name_tr": "İç yapı karmaşıklığı", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["SIMPLE", "SUBDIVIDED", "COMPLEX", "RETICULATE", "LABYRINTHIC", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_11", "name_en": "Secondary chamberlets", "name_tr": "İkincil locacıklar", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["PRESENT", "ABSENT", "WEAKLY_DEVELOPED", "WELL_DEVELOPED", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Particularly important in larger benthic foraminifera."},
-    {"id": "CHR_12", "name_en": "Embryonic apparatus", "name_tr": "Embriyonik aparat", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["SIMPLE", "BILOCULAR", "MULTILOCULAR", "COMPLEX", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Detailed taxon-specific embryonic characters remain in genus rule cards."},
-    {"id": "CHR_13", "name_en": "Radial / internal partitions", "name_tr": "İç bölmeler", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["ABSENT", "RADIAL", "VERTICAL", "SUBEPIDERMAL", "RETICULATE", "OTHER", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Relevant to complex conical agglutinated taxa and some larger benthic groups."},
-    {"id": "CHR_14", "name_en": "Pillars", "name_tr": "Pillarlar", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["PRESENT", "ABSENT", "WEAK", "STRONG", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_15", "name_en": "Lateral chamberlets", "name_tr": "Lateral locacıklar", "group": "INTERNAL_ARCHITECTURE",
-     "values": ["PRESENT", "ABSENT", "WEAKLY_DEVELOPED", "WELL_DEVELOPED", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_16", "name_en": "Aperture type", "name_tr": "Apertür", "group": "ADDITIONAL_DIAGNOSTIC",
-     "values": ["TERMINAL", "INTERIOMARGINAL", "BASAL", "MULTIPLE", "SLIT_LIKE", "CRIBRATE", "OTHER", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Must not be mandatory when it cannot be reliably observed in thin section."},
-    {"id": "CHR_17", "name_en": "Marginal cord", "name_tr": "Marjinal kord", "group": "ADDITIONAL_DIAGNOSTIC",
-     "values": ["PRESENT", "ABSENT", "WEAK", "STRONG", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_18", "name_en": "Septal filaments", "name_tr": "Septal filamentler", "group": "ADDITIONAL_DIAGNOSTIC",
-     "values": ["ABSENT", "SIMPLE", "CURVED", "WAVY", "RETICULATE", "COMPLEX", "NOT_OBSERVABLE", "UNCERTAIN"]},
-    {"id": "CHR_19", "name_en": "Attachment mode", "name_tr": "Tutunma biçimi", "group": "ADDITIONAL_DIAGNOSTIC",
-     "values": ["FREE", "ATTACHED", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "value_labels_tr": {"FREE": "Serbest", "ATTACHED": "Tutunmuş"},
-     "note": "Activate only where it has diagnostic value."},
-    {"id": "CHR_20", "name_en": "Dimorphism", "name_tr": "Dimorfizm", "group": "ADDITIONAL_DIAGNOSTIC",
-     "values": ["PRESENT", "ABSENT", "MEGALOSPHERIC_FORM", "MICROSPHERIC_FORM", "NOT_OBSERVABLE", "UNCERTAIN"],
-     "note": "Generally supporting / species-level unless explicitly required by a genus rule."},
-    {"id": "CHR_21", "name_en": "Section orientation", "name_tr": "Kesit yönü", "group": "SECTION",
-     "values": ["AXIAL", "EQUATORIAL", "OBLIQUE", "TANGENTIAL", "UNKNOWN"],
-     "value_labels_tr": {"AXIAL": "Eksenel", "EQUATORIAL": "Ekvatoryal", "OBLIQUE": "Eğik", "TANGENTIAL": "Teğetsel", "UNKNOWN": "Bilinmiyor / Emin değilim"},
-     "note": "Auxiliary observation; must not automatically exclude a genus. Section Orientation Control rule activates only for section-sensitive taxa."}
+    {
+      "id": "CHR_01",
+      "name_en": "Test composition",
+      "name_tr": "Kavkı bileşimi",
+      "group": "CORE",
+      "values": [
+        "AGGLUTINATED",
+        "PORCELANEOUS",
+        "HYALINE",
+        "UNCERTAIN"
+      ],
+      "value_labels_tr": {
+        "AGGLUTINATED": "Aglütinat",
+        "PORCELANEOUS": "Porselen",
+        "HYALINE": "Hyalin",
+        "UNCERTAIN": "Emin değilim"
+      },
+      "note": "Principal entry character of the identification system.",
+      "value_labels_en": {
+        "AGGLUTINATED": "Agglutinated",
+        "PORCELANEOUS": "Porcelaneous",
+        "HYALINE": "Hyaline",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_02",
+      "name_en": "Test shape",
+      "name_tr": "Kavkı şekli",
+      "group": "CORE",
+      "values": [
+        "GLOBULAR",
+        "SAC_LIKE",
+        "TUBULAR",
+        "ELONGATE",
+        "FUSIFORM",
+        "OVOID",
+        "LENTICULAR",
+        "DISCOIDAL",
+        "FLATTENED",
+        "CONICAL",
+        "HIGH_CONICAL",
+        "FLABELLIFORM",
+        "STELLATE",
+        "IRREGULAR",
+        "OTHER",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_tr": {
+        "GLOBULAR": "Küresel",
+        "SAC_LIKE": "Kese biçimli",
+        "TUBULAR": "Tübüler",
+        "ELONGATE": "Uzamış",
+        "FUSIFORM": "Fusiform / iğ biçimli",
+        "OVOID": "Ovoid",
+        "LENTICULAR": "Merceksi",
+        "DISCOIDAL": "Diskoidal",
+        "FLATTENED": "Basık",
+        "CONICAL": "Konik",
+        "HIGH_CONICAL": "Yüksek konik",
+        "FLABELLIFORM": "Yelpaze biçimli",
+        "STELLATE": "Yıldızsı",
+        "IRREGULAR": "Düzensiz",
+        "OTHER": "Diğer",
+        "NOT_OBSERVABLE": "Gözlenemiyor",
+        "UNCERTAIN": "Emin değilim"
+      },
+      "note": "Test shape and coiling must be stored as separate characters.",
+      "value_labels_en": {
+        "GLOBULAR": "Globular",
+        "SAC_LIKE": "Sac-like",
+        "TUBULAR": "Tubular",
+        "ELONGATE": "Elongate",
+        "FUSIFORM": "Fusiform",
+        "OVOID": "Ovoid",
+        "LENTICULAR": "Lenticular",
+        "DISCOIDAL": "Discoidal",
+        "FLATTENED": "Flattened",
+        "CONICAL": "Conical",
+        "HIGH_CONICAL": "High conical",
+        "FLABELLIFORM": "Flabelliform",
+        "STELLATE": "Stellate",
+        "IRREGULAR": "Irregular",
+        "OTHER": "Other",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_03",
+      "name_en": "Septation",
+      "name_tr": "Septalarla bölünme",
+      "group": "CORE",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Determines whether the test contains true chambers separated by septa. A coiled tubular test without true septa must not automatically be interpreted as multichambered.",
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_04",
+      "name_en": "Chamber number organization",
+      "name_tr": "Loca organizasyonu",
+      "group": "CORE",
+      "values": [
+        "UNDIVIDED",
+        "MULTICHAMBERED",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_tr": {
+        "UNDIVIDED": "Septalarla bölünmemiş",
+        "MULTICHAMBERED": "Çok localı"
+      },
+      "note": "Important for separating undivided tubular agglutinated forms from true multichambered taxa.",
+      "value_labels_en": {
+        "UNDIVIDED": "Undivided",
+        "MULTICHAMBERED": "Multichambered",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_05",
+      "name_en": "Chamber arrangement",
+      "name_tr": "Loca dizilimi",
+      "group": "CORE",
+      "values": [
+        "UNISERIAL",
+        "BISERIAL",
+        "TRISERIAL",
+        "QUINQUELOCULINE",
+        "TRILOCULINE",
+        "BILOCULINE",
+        "ANNULAR",
+        "CYCLIC",
+        "IRREGULAR_SERIAL",
+        "OTHER",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "PLANISPIRAL, TROCHOSPIRAL and STREPTOSPIRAL must NOT be stored here; they belong to CHR_06 Coiling Pattern.",
+      "value_labels_en": {
+        "UNISERIAL": "Uniserial",
+        "BISERIAL": "Biserial",
+        "TRISERIAL": "Triserial",
+        "QUINQUELOCULINE": "Quinqueloculine",
+        "TRILOCULINE": "Triloculine",
+        "BILOCULINE": "Biloculine",
+        "ANNULAR": "Annular",
+        "CYCLIC": "Cyclic",
+        "IRREGULAR_SERIAL": "Irregular serial",
+        "OTHER": "Other",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_06",
+      "name_en": "Coiling pattern",
+      "name_tr": "Sarılım tipi",
+      "group": "CORE",
+      "values": [
+        "PLANISPIRAL",
+        "TROCHOSPIRAL",
+        "STREPTOSPIRAL",
+        "GLOMOSPIRAL",
+        "IRREGULAR_COILING",
+        "UNCOILED",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "PLANISPIRAL": "Planispiral",
+        "TROCHOSPIRAL": "Trochospiral",
+        "STREPTOSPIRAL": "Streptospiral",
+        "GLOMOSPIRAL": "Glomospiral",
+        "IRREGULAR_COILING": "Irregular coiling",
+        "UNCOILED": "Uncoiled",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_07",
+      "name_en": "Coiling plane",
+      "name_tr": "Sarılım düzlemi",
+      "group": "CORE",
+      "values": [
+        "SINGLE_PLANE",
+        "CHANGING_PLANES",
+        "MULTIDIRECTIONAL",
+        "NOT_APPLICABLE",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Example: Ammodiscus = PLANISPIRAL + SINGLE_PLANE; Glomospira = GLOMOSPIRAL/IRREGULAR_COILING + CHANGING_PLANES.",
+      "value_labels_en": {
+        "SINGLE_PLANE": "Single plane",
+        "CHANGING_PLANES": "Changing planes",
+        "MULTIDIRECTIONAL": "Multidirectional",
+        "NOT_APPLICABLE": "Not applicable",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_08",
+      "name_en": "Involution / evolution",
+      "name_tr": "İnvolüt–evolüt sarılım",
+      "group": "CORE",
+      "values": [
+        "INVOLUTE",
+        "SEMI_INVOLUTE",
+        "EVOLUTE",
+        "NOT_APPLICABLE",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Activate only for taxa in which involution/evolution is morphologically meaningful.",
+      "value_labels_en": {
+        "INVOLUTE": "Involute",
+        "SEMI_INVOLUTE": "Semi involute",
+        "EVOLUTE": "Evolute",
+        "NOT_APPLICABLE": "Not applicable",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_09",
+      "name_en": "Ontogenetic arrangement change",
+      "name_tr": "Büyüme sırasında loca dizilimi değişimi",
+      "group": "CORE",
+      "values": [
+        "NONE",
+        "PLANISPIRAL_TO_UNISERIAL",
+        "PLANISPIRAL_TO_BISERIAL",
+        "BISERIAL_TO_UNISERIAL",
+        "TRISERIAL_TO_BISERIAL",
+        "TRISERIAL_TO_UNISERIAL",
+        "COILED_TO_SERIAL",
+        "OTHER",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Treated separately from the adult chamber arrangement. Example: Spiroplectammina = PLANISPIRAL_TO_BISERIAL.",
+      "value_labels_en": {
+        "NONE": "None",
+        "PLANISPIRAL_TO_UNISERIAL": "Planispiral to uniserial",
+        "PLANISPIRAL_TO_BISERIAL": "Planispiral to biserial",
+        "BISERIAL_TO_UNISERIAL": "Biserial to uniserial",
+        "TRISERIAL_TO_BISERIAL": "Triserial to biserial",
+        "TRISERIAL_TO_UNISERIAL": "Triserial to uniserial",
+        "COILED_TO_SERIAL": "Coiled to serial",
+        "OTHER": "Other",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_10",
+      "name_en": "Internal complexity",
+      "name_tr": "İç yapı karmaşıklığı",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "SIMPLE",
+        "SUBDIVIDED",
+        "COMPLEX",
+        "RETICULATE",
+        "LABYRINTHIC",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "SIMPLE": "Simple",
+        "SUBDIVIDED": "Subdivided",
+        "COMPLEX": "Complex",
+        "RETICULATE": "Reticulate",
+        "LABYRINTHIC": "Labyrinthic",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_11",
+      "name_en": "Secondary chamberlets",
+      "name_tr": "İkincil locacıklar",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "WEAKLY_DEVELOPED",
+        "WELL_DEVELOPED",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Particularly important in larger benthic foraminifera.",
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "WEAKLY_DEVELOPED": "Weakly developed",
+        "WELL_DEVELOPED": "Well developed",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_12",
+      "name_en": "Embryonic apparatus",
+      "name_tr": "Embriyonik aparat",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "SIMPLE",
+        "BILOCULAR",
+        "MULTILOCULAR",
+        "COMPLEX",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Detailed taxon-specific embryonic characters remain in genus rule cards.",
+      "value_labels_en": {
+        "SIMPLE": "Simple",
+        "BILOCULAR": "Bilocular",
+        "MULTILOCULAR": "Multilocular",
+        "COMPLEX": "Complex",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_13",
+      "name_en": "Radial / internal partitions",
+      "name_tr": "İç bölmeler",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "ABSENT",
+        "RADIAL",
+        "VERTICAL",
+        "SUBEPIDERMAL",
+        "RETICULATE",
+        "OTHER",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Relevant to complex conical agglutinated taxa and some larger benthic groups.",
+      "value_labels_en": {
+        "ABSENT": "Absent",
+        "RADIAL": "Radial",
+        "VERTICAL": "Vertical",
+        "SUBEPIDERMAL": "Subepidermal",
+        "RETICULATE": "Reticulate",
+        "OTHER": "Other",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_14",
+      "name_en": "Pillars",
+      "name_tr": "Pillarlar",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "WEAK",
+        "STRONG",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "WEAK": "Weak",
+        "STRONG": "Strong",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_15",
+      "name_en": "Lateral chamberlets",
+      "name_tr": "Lateral locacıklar",
+      "group": "INTERNAL_ARCHITECTURE",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "WEAKLY_DEVELOPED",
+        "WELL_DEVELOPED",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "WEAKLY_DEVELOPED": "Weakly developed",
+        "WELL_DEVELOPED": "Well developed",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_16",
+      "name_en": "Aperture type",
+      "name_tr": "Apertür",
+      "group": "ADDITIONAL_DIAGNOSTIC",
+      "values": [
+        "TERMINAL",
+        "INTERIOMARGINAL",
+        "BASAL",
+        "MULTIPLE",
+        "SLIT_LIKE",
+        "CRIBRATE",
+        "OTHER",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Must not be mandatory when it cannot be reliably observed in thin section.",
+      "value_labels_en": {
+        "TERMINAL": "Terminal",
+        "INTERIOMARGINAL": "Interiomarginal",
+        "BASAL": "Basal",
+        "MULTIPLE": "Multiple",
+        "SLIT_LIKE": "Slit-like",
+        "CRIBRATE": "Cribrate",
+        "OTHER": "Other",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_17",
+      "name_en": "Marginal cord",
+      "name_tr": "Marjinal kord",
+      "group": "ADDITIONAL_DIAGNOSTIC",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "WEAK",
+        "STRONG",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "WEAK": "Weak",
+        "STRONG": "Strong",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_18",
+      "name_en": "Septal filaments",
+      "name_tr": "Septal filamentler",
+      "group": "ADDITIONAL_DIAGNOSTIC",
+      "values": [
+        "ABSENT",
+        "SIMPLE",
+        "CURVED",
+        "WAVY",
+        "RETICULATE",
+        "COMPLEX",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_en": {
+        "ABSENT": "Absent",
+        "SIMPLE": "Simple",
+        "CURVED": "Curved",
+        "WAVY": "Wavy",
+        "RETICULATE": "Reticulate",
+        "COMPLEX": "Complex",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_19",
+      "name_en": "Attachment mode",
+      "name_tr": "Tutunma biçimi",
+      "group": "ADDITIONAL_DIAGNOSTIC",
+      "values": [
+        "FREE",
+        "ATTACHED",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "value_labels_tr": {
+        "FREE": "Serbest",
+        "ATTACHED": "Tutunmuş"
+      },
+      "note": "Activate only where it has diagnostic value.",
+      "value_labels_en": {
+        "FREE": "Free",
+        "ATTACHED": "Attached",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_20",
+      "name_en": "Dimorphism",
+      "name_tr": "Dimorfizm",
+      "group": "ADDITIONAL_DIAGNOSTIC",
+      "values": [
+        "PRESENT",
+        "ABSENT",
+        "MEGALOSPHERIC_FORM",
+        "MICROSPHERIC_FORM",
+        "NOT_OBSERVABLE",
+        "UNCERTAIN"
+      ],
+      "note": "Generally supporting / species-level unless explicitly required by a genus rule.",
+      "value_labels_en": {
+        "PRESENT": "Present",
+        "ABSENT": "Absent",
+        "MEGALOSPHERIC_FORM": "Megalospheric form",
+        "MICROSPHERIC_FORM": "Microspheric form",
+        "NOT_OBSERVABLE": "Not observable",
+        "UNCERTAIN": "Uncertain"
+      }
+    },
+    {
+      "id": "CHR_21",
+      "name_en": "Section orientation",
+      "name_tr": "Kesit yönü",
+      "group": "SECTION",
+      "values": [
+        "AXIAL",
+        "EQUATORIAL",
+        "OBLIQUE",
+        "TANGENTIAL",
+        "UNKNOWN"
+      ],
+      "value_labels_tr": {
+        "AXIAL": "Eksenel",
+        "EQUATORIAL": "Ekvatoryal",
+        "OBLIQUE": "Eğik",
+        "TANGENTIAL": "Teğetsel",
+        "UNKNOWN": "Bilinmiyor / Emin değilim"
+      },
+      "note": "Auxiliary observation; must not automatically exclude a genus. Section Orientation Control rule activates only for section-sensitive taxa.",
+      "value_labels_en": {
+        "AXIAL": "Axial",
+        "EQUATORIAL": "Equatorial",
+        "OBLIQUE": "Oblique",
+        "TANGENTIAL": "Tangential",
+        "UNKNOWN": "Unknown"
+      }
+    }
   ],
-  "identification_statuses": ["CONFIRMED_GENUS", "PROBABLE_GENUS", "CANDIDATE_GENUS", "INDETERMINATE", "NO_MATCH_WITHIN_CORE_TAXA"],
+  "identification_statuses": [
+    "CONFIRMED_GENUS",
+    "PROBABLE_GENUS",
+    "CANDIDATE_GENUS",
+    "INDETERMINATE",
+    "NO_MATCH_WITHIN_CORE_TAXA"
+  ],
   "evidence_levels": {
-    "M": {"name": "MANDATORY", "note": "A required structural condition for the genus."},
-    "D": {"name": "DIAGNOSTIC", "note": "A character with strong discriminatory value."},
-    "S": {"name": "SUPPORTING", "note": "Supports the identification but is insufficient alone."},
-    "C": {"name": "CONTRADICTORY", "note": "An observable character inconsistent with the genus."}
+    "M": {
+      "name": "MANDATORY",
+      "note": "A required structural condition for the genus."
+    },
+    "D": {
+      "name": "DIAGNOSTIC",
+      "note": "A character with strong discriminatory value."
+    },
+    "S": {
+      "name": "SUPPORTING",
+      "note": "Supports the identification but is insufficient alone."
+    },
+    "C": {
+      "name": "CONTRADICTORY",
+      "note": "An observable character inconsistent with the genus."
+    }
   }
 }

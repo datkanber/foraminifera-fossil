@@ -330,7 +330,7 @@ function Vlm() {
                 
                 <div style={{ background: "#fffbeb", color: "#b45309", border: "1px solid #fcd34d", padding: "12px 16px", borderRadius: "6px", fontSize: "13px", marginTop: "12px", display: "flex", gap: "8px" }}>
                   <div style={{ marginTop: "2px" }}><AlertIcon /></div>
-                  <div><strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer").replace("Uyarı: ", "").replace("Warning: ", "")}</div>
+                  <div><strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer")}</div>
                 </div>
               </div>
             )}

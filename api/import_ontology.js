@@ -159,18 +159,25 @@ async function step5_createCharactersAndValues(session) {
 
     // Values
     const labelsTr = c.value_labels_tr || {};
+    const labelsEn = c.value_labels_en || {};
     for (const v of c.values) {
       const key = `${c.id}_${v}`;
       const tr = labelsTr[v] || null;
+      const en = labelsEn[v] || null;
+      
+      let setCypher = "SET v.code = $code, v.character = $charId";
+      if (tr) setCypher += ", v.labelTr = $labelTr";
+      if (en) setCypher += ", v.labelEn = $labelEn";
+
       stmts.push({
         cypher: `MERGE (v:Value {key: $key})
-                 SET v.code = $code, v.character = $charId
-                 ${tr ? ", v.labelTr = $labelTr" : ""}`,
+                 ${setCypher}`,
         params: {
           key,
           code: v,
           charId: c.id,
           ...(tr ? { labelTr: tr } : {}),
+          ...(en ? { labelEn: en } : {}),
         },
       });
 

@@ -609,11 +609,11 @@ def main():
             f"{k[0]}|{k[1]}": (v if k[1] == "meta" else [dict(v[0]), dict(v[1])])
             for k, v in summary.items()
         },
-        open("consistency_summary.json", "w", encoding="utf-8"),
+        open("eval/results/consistency_summary.json", "w", encoding="utf-8"),
         indent=1,
         default=str,
     )
-    print("\n-> consistency_summary.json written")
+    print("\n-> eval/results/consistency_summary.json written")
 
     # ── Write CSV ────────────────────────────────────────────────────
     fieldnames = [
@@ -622,11 +622,30 @@ def main():
         "v18_state", "v18_top", "v18_leaf_rank",
         "leaf_excluded", "leaf_exclusion_rules",
     ]
-    with open("consistency_paths.csv", "w", newline="", encoding="utf-8") as f:
+    with open("eval/results/consistency_paths.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(all_paths_data)
-    print(f"-> consistency_paths.csv written ({len(all_paths_data)} rows)")
+    print(f"-> eval/results/consistency_paths.csv written ({len(all_paths_data)} rows)")
+
+    if "--export-paths" in sys.argv:
+        # Create a cleaner list for the JS test to use
+        export_data = []
+        for d in all_paths_data:
+            export_data.append({
+                "module": d["module"],
+                "leaf_genus": d["leaf_genus"],
+                "observations": d["observations"],
+                "expected_state": d["v18_state"],
+                "expected_top": d["v18_top"],
+                "expected_excluded": d["leaf_excluded"]
+            })
+        json.dump(
+            export_data,
+            open("eval/results/paths.json", "w", encoding="utf-8"),
+            indent=2
+        )
+        print(f"-> eval/results/paths.json written ({len(export_data)} paths)")
 
 
 if __name__ == "__main__":

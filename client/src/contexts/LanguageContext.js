@@ -46,7 +46,7 @@ export const LanguageProvider = ({ children }) => {
       "score.ranking": "Sıralama (aktif adaylar)",
       "score.excluded": "Elenen cinsler",
       "warning.taxonomic": "Taksonomik inceleme gerekli",
-      "warning.disclaimer": "Uyarı: Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.",
+      "warning.disclaimer": "Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.",
       "genus.found": "CİNS BULUNDU",
       "genus.closest": "En yakın karşılaştırmalar: ",
       "level.m": "ZORUNLU",
@@ -75,7 +75,13 @@ export const LanguageProvider = ({ children }) => {
       "vlm.auto_score": "Analiz sonrası Karar Destek motorunu çalıştır (Skorlama)",
       "vlm.analyze_btn": "Görüntüyü Analiz Et",
       "vlm.results": "Analiz Sonuçları",
-      "vlm.results.ph": "Yapay zeka çıkarımları burada görüntülenecektir."
+      "vlm.results.ph": "Yapay zeka çıkarımları burada görüntülenecektir.",
+      "VALID_NO_MATCH": "Yeterli morfolojik bilgi mevcut ancak hiçbir çekirdek takson uyumlu değil. Bu geçerli bir sonuçtur; zorla tanı verilmez.",
+      "INSUFFICIENT_OBSERVATIONS": "Güvenilir cins kararı için yetersiz tanı bilgisi.",
+      "INSUFFICIENT_OBSERVATIONS_LEAD": "Güvenilir cins kararı için en az iki bilgilendirici (CHR_01 dışı zorunlu dahil) karakter gözlenmelidir.",
+      "TIE_BREAK_FAILED": "İki veya daha fazla cins gözlenen karakterlerle ayrıştırılamıyor (beraberlik).",
+      "MISSING_DIAGNOSTIC": "Kritik tanısal karakter(ler) bu kesitte gözlenemiyor.",
+      "POOR_SEPARATION": "Liderin tanısal kanıtları rakibinden ayrışmıyor veya puan farkı yetersiz."
     },
     en: {
       "app.title": "ForamID",
@@ -107,7 +113,7 @@ export const LanguageProvider = ({ children }) => {
       "score.ranking": "Ranking (active candidates)",
       "score.excluded": "Excluded genera",
       "warning.taxonomic": "Taxonomic review required",
-      "warning.disclaimer": "Warning: Always verify results before use. This is an educational and decision-support tool, not an official taxonomic diagnosis.",
+      "warning.disclaimer": "Always verify results before use. This is an educational and decision-support tool, not an official taxonomic diagnosis.",
       "genus.found": "GENUS FOUND",
       "genus.closest": "Closest comparisons: ",
       "level.m": "MANDATORY",
@@ -136,7 +142,13 @@ export const LanguageProvider = ({ children }) => {
       "vlm.auto_score": "Run Decision Support engine after analysis (Scoring)",
       "vlm.analyze_btn": "Analyze Image",
       "vlm.results": "Analysis Results",
-      "vlm.results.ph": "AI inferences will be displayed here."
+      "vlm.results.ph": "AI inferences will be displayed here.",
+      "VALID_NO_MATCH": "Sufficient morphological data available but no core taxon is compatible. This is a valid result; do not force a diagnosis.",
+      "INSUFFICIENT_OBSERVATIONS": "Insufficient diagnostic information for a reliable genus determination.",
+      "INSUFFICIENT_OBSERVATIONS_LEAD": "At least two informative characters (including non-CHR_01 mandatory) must be observed for a reliable genus decision.",
+      "TIE_BREAK_FAILED": "Two or more genera cannot be differentiated with the observed characters (tie).",
+      "MISSING_DIAGNOSTIC": "Critical diagnostic character(s) cannot be observed in this section.",
+      "POOR_SEPARATION": "The leader's diagnostic evidence does not separate from its rival or the score difference is insufficient."
     }
   };
 
