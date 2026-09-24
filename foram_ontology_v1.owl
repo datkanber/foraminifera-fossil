@@ -6,7 +6,9 @@
          xml:base="http://example.org/foram-ontology"
          xmlns="http://example.org/foram-ontology#">
 
-<owl:Ontology rdf:about="http://example.org/foram-ontology"/>
+<owl:Ontology rdf:about="http://example.org/foram-ontology">
+  <owl:versionIRI rdf:resource="http://example.org/foram-ontology/1.0"/>
+</owl:Ontology>
 
 <owl:ObjectProperty rdf:about="#hasRule">
   <rdfs:domain rdf:resource="#Genus"/>

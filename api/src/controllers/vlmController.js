@@ -46,14 +46,34 @@ function extractJson(text) {
   return JSON.parse(candidate.slice(start, end + 1));
 }
 
+const path = require("path");
+const fs = require("fs");
+const charsData = JSON.parse(fs.readFileSync(path.join(__dirname, "../../data/characters.json"), "utf8"));
+const validValues = {};
+for (const c of charsData.characters) {
+  validValues[c.id] = new Set(c.values);
+}
+
 function normalizeObservations(raw) {
   const src = raw && typeof raw === "object" ? raw : {};
   const observations = {};
   for (let i = 1; i <= 21; i += 1) {
     const id = `CHR_${String(i).padStart(2, "0")}`;
     const item = src[id] || {};
-    const state = item.state || "NOT_OBSERVABLE";
-    const value = item.value === "" ? null : item.value ?? null;
+    let state = item.state || "NOT_OBSERVABLE";
+    let value = item.value === "" ? null : item.value ?? null;
+    
+    // Validate value against dictionary
+    if (value && validValues[id] && !validValues[id].has(value)) {
+      value = null;
+      state = "NOT_OBSERVABLE";
+    }
+    
+    // Normalize state based on valid value
+    if (value && !["NOT_OBSERVABLE", "UNCERTAIN"].includes(value)) {
+      state = "PRESENT";
+    }
+
     observations[id] = {
       value,
       state,
@@ -216,7 +236,7 @@ exports.observe = async (req, res) => {
 
     let score = null;
     if (runScore) {
-      score = await runScoreEngine(req, observations, parsedJson.module);
+      score = await runScoreEngine(req, observations);
     }
 
     return res.json({
@@ -234,13 +254,11 @@ exports.observe = async (req, res) => {
   }
 };
 
-function runScoreEngine(origReq, observations, moduleName) {
+function runScoreEngine(origReq, observations) {
   return new Promise((resolve) => {
     const fakeReq = {
       body: {
-        observations,
-        module:
-          moduleName && moduleName !== "UNKNOWN" ? moduleName : undefined,
+        observations
       },
     };
     const fakeRes = {
