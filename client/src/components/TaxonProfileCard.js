@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/components/taxon-profile-card.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const API = process.env.REACT_APP_API_URL + "/api/taxa";
 
@@ -16,6 +17,7 @@ function TaxonProfileCard({ scientificName }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { lang, t } = useLanguage();
 
   useEffect(() => {
     if (!scientificName) return;
@@ -51,7 +53,7 @@ function TaxonProfileCard({ scientificName }) {
     return (
       <div className="taxon-card">
         <div className="taxon-card-header">
-          <span className="taxon-card-title">Takson Profili</span>
+          <span className="taxon-card-title">{t("taxon.profile")}</span>
         </div>
         <div className="taxon-skeleton">
           <div className="skeleton-line" style={{ width: "60%" }} />
@@ -66,10 +68,10 @@ function TaxonProfileCard({ scientificName }) {
     return (
       <div className="taxon-card">
         <div className="taxon-card-header">
-          <span className="taxon-card-title">Takson Profili</span>
+          <span className="taxon-card-title">{t("taxon.profile")}</span>
         </div>
         <div className="taxon-info-notice">
-          Takson profili yüklenirken bir hata oluştu.
+          {lang === 'tr' ? "Takson profili yüklenirken bir hata oluştu." : "Error loading taxon profile."}
         </div>
       </div>
     );
@@ -82,8 +84,8 @@ function TaxonProfileCard({ scientificName }) {
   return (
     <div className="taxon-card">
       <div className="taxon-card-header">
-        <span className="taxon-card-title">Takson Profili — <em>{scientificName}</em></span>
-        <AvailabilityBadge worms={availability?.worms} local={availability?.local} />
+        <span className="taxon-card-title">{t("taxon.profile")} — <em>{scientificName}</em></span>
+        <AvailabilityBadge worms={availability?.worms} local={availability?.local} lang={lang} />
       </div>
 
       {/* Warnings */}
@@ -96,24 +98,24 @@ function TaxonProfileCard({ scientificName }) {
       )}
 
       {/* Taxonomy Section */}
-      <TaxonomySection taxonomy={taxonomy} />
+      <TaxonomySection taxonomy={taxonomy} lang={lang} t={t} />
 
       {/* WoRMS Environment Section */}
-      <WormsEnvironmentSection env={wormsEnvironment} />
+      <WormsEnvironmentSection env={wormsEnvironment} lang={lang} t={t} />
 
       {/* Local Profiles Section */}
-      <LocalProfilesSection profiles={localProfiles} genusName={scientificName} />
+      <LocalProfilesSection profiles={localProfiles} genusName={scientificName} lang={lang} t={t} />
     </div>
   );
 }
 
 // ─── Sub-components ───────────────────────────────────────────────────────
 
-function AvailabilityBadge({ worms, local }) {
+function AvailabilityBadge({ worms, local, lang }) {
   const wormsLabel = {
     live: "WoRMS ✓",
-    stale_cache: "WoRMS (önbellek)",
-    not_found: "WoRMS (bulunamadı)",
+    stale_cache: lang === 'tr' ? "WoRMS (önbellek)" : "WoRMS (cache)",
+    not_found: lang === 'tr' ? "WoRMS (bulunamadı)" : "WoRMS (not found)",
     unavailable: "WoRMS ✗",
   };
 
@@ -122,12 +124,12 @@ function AvailabilityBadge({ worms, local }) {
       <span className={`avail-badge ${worms === "live" ? "avail-ok" : worms === "unavailable" ? "avail-off" : "avail-warn"}`}>
         {wormsLabel[worms] || "WoRMS ?"}
       </span>
-      {local && <span className="avail-badge avail-ok">Yerel ✓</span>}
+      {local && <span className="avail-badge avail-ok">{lang === 'tr' ? "Yerel ✓" : "Local ✓"}</span>}
     </div>
   );
 }
 
-function TaxonomySection({ taxonomy }) {
+function TaxonomySection({ taxonomy, lang, t }) {
   const fields = [
     { label: "Order", key: "order" },
     { label: "Superfamily", key: "superfamily" },
@@ -141,10 +143,10 @@ function TaxonomySection({ taxonomy }) {
 
   return (
     <details className="taxon-section" open>
-      <summary className="taxon-section-title">Taksonomi</summary>
+      <summary className="taxon-section-title">{lang === 'tr' ? "Taksonomi" : "Taxonomy"}</summary>
       <div className="taxon-section-body">
         {!taxonomy ? (
-          <div className="taxon-info-notice">WoRMS taksonomi verisi mevcut değil.</div>
+          <div className="taxon-info-notice">{lang === 'tr' ? "WoRMS taksonomi verisi mevcut değil." : "WoRMS taxonomy data not available."}</div>
         ) : (
           <table className="taxon-table">
             <tbody>
@@ -155,7 +157,7 @@ function TaxonomySection({ taxonomy }) {
                     {taxonomy[f.key] != null ? (
                       f.key === "status" ? <StatusBadge status={taxonomy[f.key]} /> : String(taxonomy[f.key])
                     ) : (
-                      <span className="taxon-no-data">Veri mevcut değil</span>
+                      <span className="taxon-no-data">{t("taxon.nodata")}</span>
                     )}
                   </td>
                 </tr>
@@ -173,7 +175,7 @@ function TaxonomySection({ taxonomy }) {
                       {taxonomy.source || "WoRMS"} ↗
                     </a>
                   ) : (
-                    <span className="taxon-no-data">Veri mevcut değil</span>
+                    <span className="taxon-no-data">{t("taxon.nodata")}</span>
                   )}
                 </td>
               </tr>
@@ -194,7 +196,7 @@ function StatusBadge({ status }) {
   );
 }
 
-function WormsEnvironmentSection({ env }) {
+function WormsEnvironmentSection({ env, lang, t }) {
   const boolFields = [
     { label: "Marine", key: "marine" },
     { label: "Brackish water", key: "brackishWater" },
@@ -205,10 +207,10 @@ function WormsEnvironmentSection({ env }) {
 
   return (
     <details className="taxon-section">
-      <summary className="taxon-section-title">WoRMS Ortam Bilgisi</summary>
+      <summary className="taxon-section-title">{lang === 'tr' ? "WoRMS Ortam Bilgisi" : "WoRMS Environment Data"}</summary>
       <div className="taxon-section-body">
         {!env ? (
-          <div className="taxon-info-notice">WoRMS ortam verisi mevcut değil.</div>
+          <div className="taxon-info-notice">{lang === 'tr' ? "WoRMS ortam verisi mevcut değil." : "WoRMS environment data not available."}</div>
         ) : (
           <>
             <table className="taxon-table">
@@ -217,7 +219,7 @@ function WormsEnvironmentSection({ env }) {
                   <tr key={f.key}>
                     <td className="taxon-field-label">{f.label}</td>
                     <td className="taxon-field-value">
-                      <BoolValue val={env[f.key]} />
+                      <BoolValue val={env[f.key]} t={t} />
                     </td>
                   </tr>
                 ))}
@@ -226,7 +228,7 @@ function WormsEnvironmentSection({ env }) {
                   <td className="taxon-field-value">
                     {env.functionalGroups && env.functionalGroups.length > 0
                       ? env.functionalGroups.join(", ")
-                      : <span className="taxon-no-data">Veri mevcut değil</span>}
+                      : <span className="taxon-no-data">{t("taxon.nodata")}</span>}
                   </td>
                 </tr>
               </tbody>
@@ -238,19 +240,19 @@ function WormsEnvironmentSection({ env }) {
   );
 }
 
-function BoolValue({ val }) {
-  if (val === true) return <span className="bool-yes">Evet</span>;
-  if (val === false) return <span className="bool-no">Hayır</span>;
-  return <span className="taxon-no-data">Veri mevcut değil</span>;
+function BoolValue({ val, t }) {
+  if (val === true) return <span className="bool-yes">{t("taxon.yes")}</span>;
+  if (val === false) return <span className="bool-no">{t("taxon.no")}</span>;
+  return <span className="taxon-no-data">{t("taxon.nodata")}</span>;
 }
 
-function LocalProfilesSection({ profiles, genusName }) {
+function LocalProfilesSection({ profiles, genusName, lang, t }) {
   if (!profiles || profiles.length === 0) {
     return (
       <details className="taxon-section">
-        <summary className="taxon-section-title">Proje Veri Seti</summary>
+        <summary className="taxon-section-title">{lang === 'tr' ? "Proje Veri Seti" : "Project Dataset"}</summary>
         <div className="taxon-section-body">
-          <div className="taxon-info-notice">Bu takson için yerel ortam kaydı bulunmuyor.</div>
+          <div className="taxon-info-notice">{t("taxon.nolocal")}</div>
         </div>
       </details>
     );
@@ -258,31 +260,31 @@ function LocalProfilesSection({ profiles, genusName }) {
 
   return (
     <details className="taxon-section" open>
-      <summary className="taxon-section-title">Proje Veri Seti ({profiles.length} kayıt)</summary>
+      <summary className="taxon-section-title">{lang === 'tr' ? "Proje Veri Seti" : "Project Dataset"} ({profiles.length} {lang === 'tr' ? "kayıt" : "records"})</summary>
       <div className="taxon-section-body">
         {profiles.map((p, i) => (
           <div key={i} className="local-profile-item">
             <div className="local-profile-header">
               <em className="local-profile-name">{p.scientificName}</em>
               <span className={`rank-badge ${p.rank === "SPECIES" ? "rank-species" : "rank-genus"}`}>
-                {p.rank === "SPECIES" ? "Tür" : "Cins"}
+                {p.rank === "SPECIES" ? (lang === 'tr' ? "Tür" : "Species") : (lang === 'tr' ? "Cins" : "Genus")}
               </span>
               {p.taxonomicReviewRequired && (
-                <span className="review-badge">Taksonomik inceleme gerekli</span>
+                <span className="review-badge">{lang === 'tr' ? "Taksonomik inceleme gerekli" : "Taxonomic review required"}</span>
               )}
             </div>
 
             <div className="local-profile-fields">
               <div className="local-field">
-                <span className="local-field-label">Derinlik:</span>
-                <span className="local-field-value">{p.depthTextTr || "—"}</span>
+                <span className="local-field-label">{lang === 'tr' ? "Derinlik:" : "Depth:"}</span>
+                <span className="local-field-value">{lang === 'tr' ? (p.depthTextTr || "—") : (p.depthTextEn || p.depthTextTr || "—")}</span>
               </div>
               <div className="local-field">
-                <span className="local-field-label">Yaşadığı ortam:</span>
-                <span className="local-field-value">{p.habitatTextTr || "—"}</span>
+                <span className="local-field-label">{lang === 'tr' ? "Yaşadığı ortam:" : "Habitat:"}</span>
+                <span className="local-field-value">{lang === 'tr' ? (p.habitatTextTr || "—") : (p.habitatTextEn || p.habitatTextTr || "—")}</span>
               </div>
               <div className="local-field">
-                <span className="local-field-label">Kaynak:</span>
+                <span className="local-field-label">{lang === 'tr' ? "Kaynak:" : "Source:"}</span>
                 <span className="local-field-value local-source">{p.sourceLabel || "—"}</span>
               </div>
             </div>

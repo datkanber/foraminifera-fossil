@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../styles/pages/vlm.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 // React app starts with REACT_APP_API_URL or falls back to relative/local route
 const API_URL = (process.env.REACT_APP_API_URL || "") + "/api/vlm/observe";
@@ -45,6 +46,7 @@ function Vlm() {
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
   const fileInputRef = useRef(null);
+  const { lang, t } = useLanguage();
 
   const [formData, setFormData] = useState({
     locality: "",
@@ -139,9 +141,9 @@ function Vlm() {
   return (
     <div className="vlm-page">
       <div className="vlm-content-wrapper">
-        <h2 className="vlm-title">VLM Gözlemcisi (AI)</h2>
+        <h2 className="vlm-title">{t("vlm.title")}</h2>
         <p className="vlm-desc">
-          Google Gemini Vision destekli yapay zeka ile foraminifer mikrofosili görüntülerini analiz edin, morfolojik karakterleri otomatik çıkarın.
+          {t("vlm.desc")}
         </p>
 
         <div className="vlm-body">
@@ -172,8 +174,8 @@ function Vlm() {
               ) : (
                 <>
                   <CameraIcon />
-                  <div className="upload-text">Görüntü yüklemek için tıklayın veya sürükleyip bırakın</div>
-                  <div className="upload-hint">Desteklenen formatlar: JPG, PNG, WEBP (Max 8MB)</div>
+                  <div className="upload-text">{t("vlm.upload")}</div>
+                  <div className="upload-hint">{t("vlm.formats")}</div>
                 </>
               )}
               <input 
@@ -187,33 +189,33 @@ function Vlm() {
 
             <div className="form-grid">
               <div className="form-group">
-                <label>Lokasyon</label>
+                <label>{t("vlm.loc")}</label>
                 <input 
                   type="text" 
                   name="locality" 
-                  placeholder="Örn: Sivrihisar..." 
+                  placeholder={t("vlm.loc.ph")} 
                   value={formData.locality} 
                   onChange={handleChange} 
                 />
               </div>
 
               <div className="form-group">
-                <label>Jeolojik Yaş</label>
+                <label>{t("vlm.age")}</label>
                 <input 
                   type="text" 
                   name="age" 
-                  placeholder="Örn: Eosen..." 
+                  placeholder={t("vlm.age.ph")} 
                   value={formData.age} 
                   onChange={handleChange} 
                 />
               </div>
 
               <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                <label>Işıklandırma / Büyütme (Optics)</label>
+                <label>{t("vlm.optics")}</label>
                 <input 
                   type="text" 
                   name="optics" 
-                  placeholder="Örn: İnce kesit, yansıyan ışık..." 
+                  placeholder={t("vlm.optics.ph")} 
                   value={formData.optics} 
                   onChange={handleChange} 
                 />
@@ -228,7 +230,7 @@ function Vlm() {
                 checked={formData.runScore} 
                 onChange={handleChange} 
               />
-              <label htmlFor="runScore">Analiz sonrası Karar Destek motorunu çalıştır (Skorlama)</label>
+              <label htmlFor="runScore">{t("vlm.auto_score")}</label>
             </div>
 
             {error && (
@@ -243,9 +245,9 @@ function Vlm() {
               disabled={loading || !base64Image}
             >
               {loading ? (
-                <><span className="spinner"></span> Analiz Ediliyor...</>
+                <><span className="spinner"></span> {lang === 'tr' ? "Analiz Ediliyor..." : "Analyzing..."}</>
               ) : (
-                "Görüntüyü Analiz Et"
+                t("vlm.analyze_btn")
               )}
             </button>
           </div>
@@ -255,16 +257,16 @@ function Vlm() {
             {!result && !loading && (
               <div className="empty-state">
                 <BotIcon />
-                <h3>Analiz Sonuçları</h3>
-                <p>Yapay zeka çıkarımları burada görüntülenecektir.</p>
+                <h3>{t("vlm.results")}</h3>
+                <p>{t("vlm.results.ph")}</p>
               </div>
             )}
 
             {loading && (
               <div className="empty-state">
                 <span className="spinner"></span>
-                <h3>Yapay Zeka Çalışıyor...</h3>
-                <p>Gemini Vision modeli görüntüyü inceliyor. Bu işlem birkaç saniye sürebilir.</p>
+                <h3>{lang === 'tr' ? "Yapay Zeka Çalışıyor..." : "AI is working..."}</h3>
+                <p>{lang === 'tr' ? "Gemini Vision modeli görüntüyü inceliyor. Bu işlem birkaç saniye sürebilir." : "Gemini Vision model is processing the image. This may take a few seconds."}</p>
               </div>
             )}
 
@@ -275,18 +277,18 @@ function Vlm() {
                   <div className="vlm-suggestion">
                     <div className="vlm-status">{result.observation.vlm_suggestion.identification_status}</div>
                     <div className="vlm-id">
-                      {result.observation.vlm_suggestion.best_open_id || "Belirsiz Takson"}
+                      {result.observation.vlm_suggestion.best_open_id || (lang === 'tr' ? "Belirsiz Takson" : "Uncertain Taxon")}
                     </div>
                     
-                    {result.observation.student_explanation_tr && (
+                    {(lang === 'tr' ? result.observation.student_explanation_tr : (result.observation.student_explanation_en || result.observation.student_explanation_tr)) && (
                       <div className="vlm-explanation">
-                        {result.observation.student_explanation_tr}
+                        {lang === 'tr' ? result.observation.student_explanation_tr : (result.observation.student_explanation_en || result.observation.student_explanation_tr)}
                       </div>
                     )}
 
                     <div style={{ fontSize: '14px', color: 'var(--color-text-muted)' }}>
-                      <strong>Aday Cinsler: </strong>
-                      {result.observation.vlm_suggestion.candidate_genera?.map(g => g.name).join(", ") || "Bulunamadı"}
+                      <strong>{lang === 'tr' ? "Aday Cinsler: " : "Candidate Genera: "}</strong>
+                      {result.observation.vlm_suggestion.candidate_genera?.map(g => g.name).join(", ") || (lang === 'tr' ? "Bulunamadı" : "None")}
                     </div>
                   </div>
                 )}
@@ -294,9 +296,9 @@ function Vlm() {
                 {/* Scoring Engine Result */}
                 {result.score && (
                   <div style={{ padding: '16px 20px', border: '1px solid var(--color-border)', borderRadius: '8px', marginBottom: '8px', background: 'var(--color-surface)' }}>
-                    <h4 style={{ margin: '0 0 8px 0', color: 'var(--color-text)', fontSize: '15px' }}>Skor Motoru Sonucu</h4>
+                    <h4 style={{ margin: '0 0 8px 0', color: 'var(--color-text)', fontSize: '15px' }}>{lang === 'tr' ? "Skor Motoru Sonucu" : "Scoring Engine Result"}</h4>
                     <div style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-text)' }}>
-                      {result.score.identification ? <em>{result.score.identification}</em> : "Tanı Konulamadı"}
+                      {result.score.identification ? <em>{result.score.identification}</em> : (lang === 'tr' ? "Tanı Konulamadı" : "No diagnosis")}
                     </div>
                     <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--color-primary)', marginTop: '6px' }}>
                       {result.score.status}
@@ -306,7 +308,7 @@ function Vlm() {
 
                 {/* Observations */}
                 <div>
-                  <h3 className="result-section-title">Karakter Çıkarımları</h3>
+                  <h3 className="result-section-title">{lang === 'tr' ? "Karakter Çıkarımları" : "Character Extractions"}</h3>
                   <div className="observation-grid">
                     {Object.entries(result.observation?.observations || {}).map(([key, obs]) => {
                       if (obs.state === "NOT_OBSERVABLE") return null;
@@ -328,7 +330,7 @@ function Vlm() {
                 
                 <div style={{ background: "#fffbeb", color: "#b45309", border: "1px solid #fcd34d", padding: "12px 16px", borderRadius: "6px", fontSize: "13px", marginTop: "12px", display: "flex", gap: "8px" }}>
                   <div style={{ marginTop: "2px" }}><AlertIcon /></div>
-                  <div><strong>Uyarı:</strong> Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.</div>
+                  <div><strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer").replace("Uyarı: ", "").replace("Warning: ", "")}</div>
                 </div>
               </div>
             )}

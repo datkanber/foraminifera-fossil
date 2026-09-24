@@ -15,7 +15,6 @@ export const LanguageProvider = ({ children }) => {
     setLang((prev) => (prev === 'tr' ? 'en' : 'tr'));
   };
 
-  // Basic dictionary for static strings
   const dict = {
     tr: {
       "app.title": "ForamID",
@@ -47,7 +46,36 @@ export const LanguageProvider = ({ children }) => {
       "score.ranking": "Sıralama (aktif adaylar)",
       "score.excluded": "Elenen cinsler",
       "warning.taxonomic": "Taksonomik inceleme gerekli",
-      "warning.disclaimer": "Uyarı: Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir."
+      "warning.disclaimer": "Uyarı: Sonuçları kullanmadan önce daima doğrulayın. Bu bir eğitim ve karar-destek aracıdır, resmi bir taksonomik teşhis değildir.",
+      "genus.found": "CİNS BULUNDU",
+      "genus.closest": "En yakın karşılaştırmalar: ",
+      "level.m": "ZORUNLU",
+      "level.d": "TANISAL",
+      "level.s": "DESTEKLEYİCİ",
+      "level.c": "ÇELİŞEN",
+      "taxon.profile": "Takson Profili",
+      "taxon.nodata": "Veri mevcut değil",
+      "taxon.yes": "Evet",
+      "taxon.no": "Hayır",
+      "taxon.nolocal": "Bu takson için yerel ortam kaydı bulunmuyor.",
+      "footer.title": "Foraminifera Karar Destek Sistemi",
+      "footer.uni": "Eskişehir Osmangazi Üniversitesi",
+      "footer.lab": "GeoKnow Araştırma Grubu",
+      "footer.rights": "Tüm hakları saklıdır.",
+      "vlm.title": "VLM Gözlemcisi (AI)",
+      "vlm.desc": "Google Gemini Vision destekli yapay zeka ile foraminifer mikrofosili görüntülerini analiz edin, morfolojik karakterleri otomatik çıkarın.",
+      "vlm.upload": "Görüntü yüklemek için tıklayın veya sürükleyip bırakın",
+      "vlm.formats": "Desteklenen formatlar: JPG, PNG, WEBP (Max 8MB)",
+      "vlm.loc": "Lokasyon",
+      "vlm.loc.ph": "Örn: Sivrihisar...",
+      "vlm.age": "Jeolojik Yaş",
+      "vlm.age.ph": "Örn: Eosen...",
+      "vlm.optics": "Işıklandırma / Büyütme (Optics)",
+      "vlm.optics.ph": "Örn: İnce kesit, yansıyan ışık...",
+      "vlm.auto_score": "Analiz sonrası Karar Destek motorunu çalıştır (Skorlama)",
+      "vlm.analyze_btn": "Görüntüyü Analiz Et",
+      "vlm.results": "Analiz Sonuçları",
+      "vlm.results.ph": "Yapay zeka çıkarımları burada görüntülenecektir."
     },
     en: {
       "app.title": "ForamID",
@@ -79,7 +107,36 @@ export const LanguageProvider = ({ children }) => {
       "score.ranking": "Ranking (active candidates)",
       "score.excluded": "Excluded genera",
       "warning.taxonomic": "Taxonomic review required",
-      "warning.disclaimer": "Warning: Always verify results before use. This is an educational and decision-support tool, not an official taxonomic diagnosis."
+      "warning.disclaimer": "Warning: Always verify results before use. This is an educational and decision-support tool, not an official taxonomic diagnosis.",
+      "genus.found": "GENUS FOUND",
+      "genus.closest": "Closest comparisons: ",
+      "level.m": "MANDATORY",
+      "level.d": "DIAGNOSTIC",
+      "level.s": "SUPPORTING",
+      "level.c": "CONTRADICTORY",
+      "taxon.profile": "Taxon Profile",
+      "taxon.nodata": "No data available",
+      "taxon.yes": "Yes",
+      "taxon.no": "No",
+      "taxon.nolocal": "No local environment record for this taxon.",
+      "footer.title": "Foraminifera Decision Support System",
+      "footer.uni": "Eskişehir Osmangazi University",
+      "footer.lab": "GeoKnow Research Group",
+      "footer.rights": "All rights reserved.",
+      "vlm.title": "VLM Observer (AI)",
+      "vlm.desc": "Analyze foraminifera microfossil images with Google Gemini Vision AI to automatically extract morphological characters.",
+      "vlm.upload": "Click or drag and drop to upload an image",
+      "vlm.formats": "Supported formats: JPG, PNG, WEBP (Max 8MB)",
+      "vlm.loc": "Location",
+      "vlm.loc.ph": "e.g. Sivrihisar...",
+      "vlm.age": "Geological Age",
+      "vlm.age.ph": "e.g. Eocene...",
+      "vlm.optics": "Lighting / Optics",
+      "vlm.optics.ph": "e.g. Thin section, reflected light...",
+      "vlm.auto_score": "Run Decision Support engine after analysis (Scoring)",
+      "vlm.analyze_btn": "Analyze Image",
+      "vlm.results": "Analysis Results",
+      "vlm.results.ph": "AI inferences will be displayed here."
     }
   };
 

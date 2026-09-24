@@ -16,12 +16,12 @@ const getStatusMeta = (t) => ({
   NO_MATCH_WITHIN_CORE_TAXA:{ label: t("status.nomatch"),        color: "#383d41", bg: "#e2e3e5" },
 });
 
-const LEVEL_LABELS = {
-  M: { label: "ZORUNLU",      color: "#721c24", bg: "#f8d7da" },
-  D: { label: "TANISAL",      color: "#0c5460", bg: "#d1ecf1" },
-  S: { label: "DESTEKLEYİCİ",color: "#1a7a1a", bg: "#d4edda" },
-  C: { label: "ÇELİŞEN",     color: "#383d41", bg: "#e2e3e5" },
-};
+const getLevelLabels = (t) => ({
+  M: { label: t("level.m"), color: "#721c24", bg: "#f8d7da" },
+  D: { label: t("level.d"), color: "#0c5460", bg: "#d1ecf1" },
+  S: { label: t("level.s"), color: "#1a7a1a", bg: "#d4edda" },
+  C: { label: t("level.c"), color: "#383d41", bg: "#e2e3e5" },
+});
 
 // ─── MODULE MAP ──────────────────────────────────────────────────────────────
 const MODULE_VALUE_TO_LABEL = {
@@ -194,8 +194,8 @@ function WizardMode({ onBack }) {
       <div className="wizard-body">
         {/* Sidebar: step log */}
         <div className="wizard-steps">
-          <div className="steps-header">Yol ({crumbs.length} adım)</div>
-          {crumbs.length === 0 && <div className="steps-empty">Henüz adım atılmadı.</div>}
+          <div className="steps-header">{lang === 'tr' ? "Yol" : "Path"} ({crumbs.length} {lang === 'tr' ? "adım" : "steps"})</div>
+          {crumbs.length === 0 && <div className="steps-empty">{lang === 'tr' ? "Henüz adım atılmadı." : "No steps taken yet."}</div>}
           {crumbs.map((c, i) => (
             <div key={i} className="step-item">
               <span className="step-num">{i + 1}</span>
@@ -209,7 +209,7 @@ function WizardMode({ onBack }) {
 
         {/* Main panel */}
         <div className="wizard-main">
-          {loading && <div className="wizard-loading"><span className="spinner" /> Yükleniyor...</div>}
+          {loading && <div className="wizard-loading"><span className="spinner" /> {lang === 'tr' ? "Yükleniyor..." : "Loading..."}</div>}
           {error   && <div className="wizard-error">{error}</div>}
 
           {!loading && !error && current && !result && (
@@ -240,8 +240,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
     <div className="question-card">
       {node.sectionSensitive && (
         <div className="section-warning">
-          ⚠️ <strong>Kesit Yönü Kontrolü:</strong> Bu soru kesit yönüne duyarlıdır.
-          Aksiyal veya ekvatoryal kesit olduğundan emin olun (CHR_21).
+          ⚠️ <strong>{lang === 'tr' ? "Kesit Yönü Kontrolü:" : "Section Orientation:"}</strong> {lang === 'tr' ? "Bu soru kesit yönüne duyarlıdır. Aksiyal veya ekvatoryal kesit olduğundan emin olun" : "This question is sensitive to section orientation. Make sure you are using an axial or equatorial section"} (CHR_21).
         </div>
       )}
 
@@ -257,7 +256,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
 
       {node.observationHint && (
         <div className="observation-hint">
-          💡 Gözlem ipucu:{" "}
+          💡 {lang === 'tr' ? "Gözlem ipucu" : "Observation hint"}:{" "}
           {Array.isArray(node.observationHint)
             ? node.observationHint.join(", ")
             : node.observationHint}
@@ -290,7 +289,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
 // ─── RESULT CARD ───────────────────────────────────────────────────────────
 function ResultCard({ result, onReset, onBack }) {
   const { nodeType, node } = result;
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   if (nodeType === "outcome") {
     const isIndet = node.kind === "INDETERMINATE";
@@ -305,26 +304,26 @@ function ResultCard({ result, onReset, onBack }) {
             color: isNotObs ? "#92400e" : "#991b1b",
           }}
         >
-          {isNotObs ? "GÖZLENEMİYOR" : isIndet ? "BELİRSİZ SONUÇ" : "YÖNLENDİRME"}
+          {isNotObs ? (lang === 'tr' ? "GÖZLENEMİYOR" : "NOT OBSERVABLE") : isIndet ? (lang === 'tr' ? "BELİRSİZ SONUÇ" : "INDETERMINATE RESULT") : (lang === 'tr' ? "YÖNLENDİRME" : "FORWARDING")}
         </div>
 
         <h3 className="result-genus" style={{ fontSize: "20px" }}>
-          {isNotObs ? "Bu karakter belirlenemedi" : node.id.replace(/_/g, " ")}
+          {isNotObs ? (lang === 'tr' ? "Bu karakter belirlenemedi" : "This character could not be determined") : node.id.replace(/_/g, " ")}
         </h3>
 
         <p style={{ color: "var(--color-text-muted)", fontSize: "14px", lineHeight: "1.6", marginBottom: "16px" }}>
           {isNotObs
-            ? node.message || "Bu karakter gözlenemediğinden karar ağacında ilerlenemiyor."
+            ? (node.message || (lang === 'tr' ? "Bu karakter gözlenemediğinden karar ağacında ilerlenemiyor." : "Cannot proceed in decision tree because this character is not observable."))
             : isIndet
-              ? "Bu kesitte yeterli tanı bilgisi elde edilemedi. Farklı kesit yönü veya ek gözlem deneyin."
-              : "Karar ağacı bu noktada başka bir dala yönlendiriyor."}
+              ? (lang === 'tr' ? "Bu kesitte yeterli tanı bilgisi elde edilemedi. Farklı kesit yönü veya ek gözlem deneyin." : "Insufficient diagnostic information in this section. Try a different section or observation.")
+              : (lang === 'tr' ? "Karar ağacı bu noktada başka bir dala yönlendiriyor." : "The decision tree forwards to another branch here.")}
         </p>
 
         {/* NOT_OBSERVABLE: show reachable genera */}
         {isNotObs && node.reachableGenera && node.reachableGenera.length > 0 && (
           <div style={{ marginBottom: "16px" }}>
             <div style={{ fontSize: "14px", fontWeight: "600", marginBottom: "8px", color: "var(--color-text)" }}>
-              Bu daldan erişilebilir olası cinsler ({node.reachableGenera.length}):
+              {lang === 'tr' ? "Bu daldan erişilebilir olası cinsler" : "Reachable candidate genera from this branch"} ({node.reachableGenera.length}):
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
               {node.reachableGenera.map((g) => (
@@ -359,10 +358,10 @@ function ResultCard({ result, onReset, onBack }) {
             marginBottom: "16px",
             fontSize: "14px",
           }}>
-            <strong style={{ color: "#1e3a8a" }}>💡 İpucu:</strong>{" "}
+            <strong style={{ color: "#1e3a8a" }}>💡 {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
             <span style={{ color: "#1e40af" }}>
-              Geri gidip bu soru için mevcut cevaplardan birini seçebilirsiniz:{" "}
-              {node.availableBranches.map((b) => b.labelTr || b.value).join(", ")}
+              {lang === 'tr' ? "Geri gidip bu soru için mevcut cevaplardan birini seçebilirsiniz:" : "You can go back and choose one of the available answers for this question:"}{" "}
+              {node.availableBranches.map((b) => (lang === 'tr' ? b.labelTr : b.labelEn) || b.value).join(", ")}
             </span>
           </div>
         )}
@@ -381,7 +380,7 @@ function ResultCard({ result, onReset, onBack }) {
   return (
     <div className="result-card genus-result">
       <div className="result-status" style={{ background: "#d4edda", color: "#1a7a1a" }}>
-        ✓ CİNS BULUNDU
+        ✓ {t("genus.found")}
       </div>
       <h3 className="result-genus"><em>{name}</em></h3>
       <div className="result-module-badge">{module}</div>
@@ -402,11 +401,11 @@ function ResultCard({ result, onReset, onBack }) {
               <div
                 className="rule-group-header"
                 style={{
-                  background: LEVEL_LABELS[level[0]]?.bg,
-                  color: LEVEL_LABELS[level[0]]?.color,
+                  background: getLevelLabels(t)[level[0]]?.bg,
+                  color: getLevelLabels(t)[level[0]]?.color,
                 }}
               >
-                [{level[0]}] {LEVEL_LABELS[level[0]]?.label || level}
+                [{level[0]}] {getLevelLabels(t)[level[0]]?.label || level}
               </div>
               <ul className="rule-list">
                 {items.map((r, i) => (
@@ -423,7 +422,7 @@ function ResultCard({ result, onReset, onBack }) {
 
       {closestComparisons.length > 0 && (
         <div className="comparisons">
-          <strong>En yakın karşılaştırmalar: </strong>
+          <strong>{t("genus.closest")}</strong>
           {closestComparisons.map((c, i) => (
             <span key={i} className="comparison-chip"><em>{c}</em></span>
           ))}
@@ -552,9 +551,9 @@ function ScoringMode({ onBack }) {
       <div className="scoring-body">
         {/* Left: character selector */}
         <div className="scoring-form">
-          <div className="scoring-form-header">Morfolojik Gözlemler</div>
+          <div className="scoring-form-header">{lang === 'tr' ? "Morfolojik Gözlemler" : "Morphological Observations"}</div>
           <p className="scoring-hint">
-            Gözlemlediğiniz değerleri seçin. Belirsizse &quot;Gözlenemiyor&quot;u işaretleyin.
+            {lang === 'tr' ? "Gözlemlediğiniz değerleri seçin. Belirsizse \"Gözlenemiyor\"u işaretleyin." : "Select the values you observed. If uncertain, check \"Not Observable\"."}
           </p>
 
           {CHR_LIST.map((chr) => {
@@ -609,11 +608,11 @@ function ScoringMode({ onBack }) {
           {!scoreResult && !loading && !error && (
             <div className="no-results">
               {Object.keys(observations).length === 0
-                ? "Gözlem seçin ve puanlama yapın."
-                : `${Object.keys(observations).filter(k => observations[k]?.state === "PRESENT").length} aktif gözlem seçildi — Puanla butonuna tıklayın.`}
+                ? (lang === 'tr' ? "Gözlem seçin ve puanlama yapın." : "Select observations and calculate score.")
+                : (lang === 'tr' ? `${Object.keys(observations).filter(k => observations[k]?.state === "PRESENT").length} aktif gözlem seçildi — Puanla butonuna tıklayın.` : `${Object.keys(observations).filter(k => observations[k]?.state === "PRESENT").length} active observations selected — Click Score.`)}
             </div>
           )}
-          {loading && <div className="wizard-loading"><span className="spinner" /> Puanlanıyor...</div>}
+          {loading && <div className="wizard-loading"><span className="spinner" /> {lang === 'tr' ? "Puanlanıyor..." : "Scoring..."}</div>}
           {error   && <div className="wizard-error">{error}</div>}
           {scoreResult && !loading && <ScoreResult data={scoreResult} />}
         </div>
@@ -625,7 +624,7 @@ function ScoringMode({ onBack }) {
 // ─── SCORE RESULT ──────────────────────────────────────────────────────────
 function ScoreResult({ data }) {
   const { status, identification, confidenceNote, ranking = [], excluded = [], observedCharacterCount } = data;
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const meta = getStatusMeta(t)[status] || {};
 
   return (
@@ -655,8 +654,8 @@ function ScoreResult({ data }) {
           <table className="ranking-table">
             <thead>
               <tr>
-                <th>#</th><th>Cins</th><th>Mod.</th>
-                <th>Puan</th><th>Z.</th><th>T.</th><th>Ç.</th>
+                <th>#</th><th>{lang === 'tr' ? "Cins" : "Genus"}</th><th>{lang === 'tr' ? "Mod." : "Mod."}</th>
+                <th>{lang === 'tr' ? "Puan" : "Score"}</th><th>M.</th><th>D.</th><th>C.</th>
               </tr>
             </thead>
             <tbody>
@@ -680,10 +679,10 @@ function ScoreResult({ data }) {
           {ranking[0]?.matchedEvidence?.length > 0 && (
             <div className="evidence-section">
               <div className="evidence-header">
-                Eşleşen kanıtlar — <em>{ranking[0].genus}</em>
+                {lang === 'tr' ? "Eşleşen kanıtlar" : "Matched evidence"} — <em>{ranking[0].genus}</em>
               </div>
               {ranking[0].matchedEvidence.map((e, i) => {
-                const lm = LEVEL_LABELS[e.level] || {};
+                const lm = getLevelLabels(t)[e.level] || {};
                 return (
                   <div
                     key={i}

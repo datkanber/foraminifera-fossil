@@ -45,7 +45,7 @@ exports.question = async (req, res) => {
         `MATCH (c:Character {id: 'CHR_01'})-[:ALLOWS]->(v:Value)
          RETURN c.nameEn AS nameEn, c.nameTr AS nameTr,
                 c.id AS chrId,
-                collect({code: v.code, labelTr: v.labelTr}) AS values`
+                collect({code: v.code, labelTr: v.labelTr, labelEn: v.labelEn}) AS values`
       );
       const rec = result.records[0];
       return res.json({
@@ -193,7 +193,7 @@ exports.question = async (req, res) => {
       const charResult = await session.run(
         `MATCH (c:Character {id: $chrId})-[:ALLOWS]->(v:Value)
          RETURN c.nameEn AS nameEn, c.nameTr AS nameTr,
-                collect({code: v.code, labelTr: v.labelTr}) AS values`,
+                collect({code: v.code, labelTr: v.labelTr, labelEn: v.labelEn}) AS values`,
         { chrId: nextNode.chrId }
       );
       if (charResult.records.length > 0) {
@@ -382,7 +382,7 @@ exports.questionEntry = async (req, res) => {
       const charResult = await session.run(
         `MATCH (c:Character {id: $chrId})-[:ALLOWS]->(v:Value)
          RETURN c.nameEn AS nameEn, c.nameTr AS nameTr,
-                collect({code: v.code, labelTr: v.labelTr}) AS values`,
+                collect({code: v.code, labelTr: v.labelTr, labelEn: v.labelEn}) AS values`,
         { chrId: qNode.chrId }
       );
       if (charResult.records.length > 0) {
