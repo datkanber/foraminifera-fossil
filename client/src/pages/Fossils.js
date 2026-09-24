@@ -120,7 +120,7 @@ function WizardMode({ onBack }) {
     setStack((s) => [...s, { current, result }]);
 
     const qText = lang === 'tr' ? (current.node?.textTr || "Kavkı bileşimi nedir?") : (current.node?.textEn || "What is the test composition?");
-    const aLabel = lang === 'tr' ? (answer.labelTr || answer.value) : (answer.labelEn || answer.value);
+    const aLabel = lang === 'tr' ? (answer.labelTr || answer.value || answer.code) : (answer.labelEn || answer.value || answer.code);
 
     try {
       // ── Step A: CHR_01 composition chosen → fetch module entry question ──
