@@ -7,6 +7,12 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const API = process.env.REACT_APP_API_URL + "/api/diagnose";
 
+const renderText = (str, lang) => {
+  if (!str) return null;
+  const clean = lang === 'en' ? str.replace(/\s*\([^)]*\)$/, '') : str;
+  return <span dangerouslySetInnerHTML={{ __html: clean.replace(/\*(.*?)\*/g, '<em>$1</em>') }} />;
+};
+
 // ─── STATUS / LEVEL META ────────────────────────────────────────────────────
 const getStatusMeta = (t) => ({
   CONFIRMED_GENUS:          { label: t("status.confirmed"),      color: "#1a7a1a", bg: "#d4edda" },
@@ -266,7 +272,14 @@ function QuestionCard({ current, onAnswer, onBack }) {
       <div className="answer-grid">
         {answers.map((a, i) => (
           <button key={i} className="answer-btn" onClick={() => onAnswer(a)}>
-            <span className="answer-label">{lang === 'tr' ? (a.labelTr || a.value || a.code) : (a.labelEn || a.value || a.code)}</span>
+            <span className="answer-label">
+              {(() => {
+                let label = lang === 'tr' ? (a.labelTr || a.value || a.code) : (a.labelEn || a.value || a.code);
+                if (a.value === 'YES') label = t("taxon.yes");
+                if (a.value === 'NO') label = t("taxon.no");
+                return label;
+              })()}
+            </span>
             {a.nextType === "genus"   && <span className="answer-tag genus-tag">→ Genus</span>}
             {a.nextType === "outcome" && <span className="answer-tag outcome-tag">→ Outcome</span>}
           </button>
@@ -383,7 +396,7 @@ function ResultCard({ result, onReset, onBack }) {
         ✓ {t("genus.found")}
       </div>
       <h3 className="result-genus"><em>{name}</em></h3>
-      {module && <div className="result-module-badge">{module}</div>}
+      <div className="result-module-badge">{module}</div>
 
       {flag && <div className="flag-warning">⚠️ {flag}</div>}
       {taxonomicReviewRequired && (
@@ -411,7 +424,7 @@ function ResultCard({ result, onReset, onBack }) {
                 {items.map((r, i) => (
                   <li key={i} className="rule-item">
                     {r.code && <span className="rule-code">{r.code}</span>}
-                    {lang === 'en' ? r.text.replace(/\s*\([^)]*\)$/, '') : r.text}
+                    {renderText(r.text, lang)}
                   </li>
                 ))}
               </ul>
@@ -448,6 +461,21 @@ const CHR_LIST = [
     { code: "PORCELANEOUS", labelTr: "Porselen", labelEn: "Porcelaneous" },
     { code: "HYALINE",      labelTr: "Hyalin", labelEn: "Hyaline" },
   ]},
+  { id: "CHR_02", nameTr: "Kavk\u0131 \u015fekli", nameEn: "Test shape", values: [
+    { code: "GLOBULAR",     labelTr: "K\u00fcresel",       labelEn: "Globular" },
+    { code: "SAC_LIKE",     labelTr: "Kese bi\u00e7imli",  labelEn: "Sac-like" },
+    { code: "TUBULAR",      labelTr: "T\u00fcb\u00fcler",        labelEn: "Tubular" },
+    { code: "ELONGATE",     labelTr: "Uzam\u0131\u015f",        labelEn: "Elongate" },
+    { code: "FUSIFORM",     labelTr: "Fusiform",         labelEn: "Fusiform" },
+    { code: "OVOID",        labelTr: "Ovoid",            labelEn: "Ovoid" },
+    { code: "LENTICULAR",   labelTr: "Merceksi",         labelEn: "Lenticular" },
+    { code: "DISCOIDAL",    labelTr: "Diskoidal",        labelEn: "Discoidal" },
+    { code: "FLATTENED",    labelTr: "Bas\u0131k",          labelEn: "Flattened" },
+    { code: "CONICAL",      labelTr: "Konik",            labelEn: "Conical" },
+    { code: "HIGH_CONICAL", labelTr: "Y\u00fcksek konik", labelEn: "High conical" },
+    { code: "STELLATE",     labelTr: "Y\u0131ld\u0131zs\u0131",       labelEn: "Stellate" },
+    { code: "IRREGULAR",    labelTr: "D\u00fczensiz",       labelEn: "Irregular" },
+  ]},
   { id: "CHR_03", nameTr: "Septalarla bölünme", nameEn: "Septation", values: [
     { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
   ]},
@@ -463,6 +491,11 @@ const CHR_LIST = [
     { code: "PLANISPIRAL", labelTr: "Planispiral", labelEn: "Planispiral" }, { code: "TROCHOSPIRAL", labelTr: "Trokospiral", labelEn: "Trochospiral" },
     { code: "STREPTOSPIRAL", labelTr: "Streptospiral", labelEn: "Streptospiral" }, { code: "GLOMOSPIRAL", labelTr: "Glomospiral", labelEn: "Glomospiral" },
     { code: "UNCOILED", labelTr: "Sarılmamış", labelEn: "Uncoiled" },
+  ]},
+  { id: "CHR_07", nameTr: "Sar\u0131l\u0131m d\u00fczlemi", nameEn: "Coiling plane", values: [
+    { code: "SINGLE_PLANE",     labelTr: "Tek d\u00fczlem",        labelEn: "Single plane" },
+    { code: "CHANGING_PLANES",  labelTr: "De\u011fi\u015fen d\u00fczlemler", labelEn: "Changing planes" },
+    { code: "MULTIDIRECTIONAL", labelTr: "\u00c7ok y\u00f6nl\u00fc",          labelEn: "Multidirectional" },
   ]},
   { id: "CHR_08", nameTr: "İnvolüt / Evolüt", nameEn: "Involution / Evolution", values: [
     { code: "INVOLUTE", labelTr: "İnvolüt", labelEn: "Involute" }, { code: "SEMI_INVOLUTE", labelTr: "Yarı involüt", labelEn: "Semi Involute" },
@@ -695,7 +728,7 @@ function ScoreResult({ data }) {
                     >
                       [{e.level}]
                     </span>
-                    <span className="evidence-text">{lang === 'en' ? e.text.replace(/\s*\([^)]*\)$/, '') : e.text}</span>
+                    <span className="evidence-text">{renderText(e.text, lang)}</span>
                     <span className="evidence-detail">{e.detail}</span>
                   </div>
                 );
