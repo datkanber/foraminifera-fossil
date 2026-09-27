@@ -44,7 +44,7 @@ function Navbar() {
         </button>
 
         {/* NAVIGATION LINKS */}
-        <nav className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`} style={{ display: 'flex', gap: '28px', alignItems: 'center', zIndex: 1000 }}>
+        <nav className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`}>
           <Link 
             to="/" 
             onClick={handleLinkClick} 
@@ -89,7 +89,12 @@ function Navbar() {
           </Link>
           
           <button className="navbar-lang-btn" onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '6px 12px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '6px', transition: 'all 0.2s' }}>
-            {lang === 'tr' ? '🇹🇷 TR' : '🇬🇧 EN'}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            {lang === 'tr' ? 'TR' : 'EN'}
           </button>
         </nav>
 
