@@ -58,5 +58,5 @@ module.exports = {
     historyApiFallback: true,
   },
 
-  devtool: "source-map",
+  devtool: process.env.NODE_ENV === "production" ? false : "source-map",
 };

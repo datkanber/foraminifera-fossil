@@ -90,6 +90,22 @@ test('scoreGenera - A=empty => NO_MATCH or INDETERMINATE', (t) => {
   assert.strictEqual(scoreGenera(obs2, generaMap).status, "NO_MATCH_WITHIN_CORE_TAXA");
 });
 
+test('scoreGenera - implied characters do not artificially inflate nObserved', (t) => {
+  const generaMap = {
+    "FakeGenus": { genus: "FakeGenus", module: "AGGLUTINATED", rules: [
+      { level: "MANDATORY", mappings: [{ chrId: "CHR_03", value: "ABSENT" }] }
+    ]}
+  };
+  
+  // CHR_09 implies CHR_06 and CHR_05, but only CHR_09 is observed. So n(O) = 1.
+  const obs1 = {
+    CHR_09: { value: "PLANISPIRAL_TO_BISERIAL", state: "PRESENT" },
+    CHR_03: { value: "PRESENT", state: "PRESENT" } // causes mismatch -> excluded
+  };
+  // nObserved is 2. A is empty. Should be INDETERMINATE, not NO_MATCH_WITHIN_CORE_TAXA
+  assert.strictEqual(scoreGenera(obs1, generaMap).status, "INDETERMINATE");
+});
+
 test('scoreGenera - nObserved < 2 => INDETERMINATE', (t) => {
   const generaMap = {
     "FakeGenus": { genus: "FakeGenus", module: "AGGLUTINATED", rules: [

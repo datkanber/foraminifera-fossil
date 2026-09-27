@@ -14,6 +14,7 @@ Usage (from the repository root):
 (f) genera without a scoring diagnostic rule
 (g) decision-tree answers whose value is outside the controlled vocabulary of the character the node asks about
 (h) decision-tree nodes that ask again about a character already asked on the path leading to them
+(i) genera that do not resolve to exactly one module
 """
 import json, re, sys, collections
 
@@ -55,7 +56,7 @@ def groups(r):
         g[c].add(v)
     return g
 
-F = collections.OrderedDict((k, []) for k in 'abcdefgh')
+F = collections.OrderedDict((k, []) for k in 'abcdefghi')
 
 for (mod, genus), rs in genera.items():
     pos = {p for r in rs if r['level'] in 'MDS' for p in r['pairs']}
@@ -98,6 +99,15 @@ for (mod, genus), rs in genera.items():
     if not any(r['level'] == 'D' and r['pairs'] for r in rs):
         F['f'].append('%s (%s)' % (genus, mod))
 
+# (i)
+genus_modules = collections.defaultdict(set)
+for r in rules:
+    genus_modules[r['genus']].add(r['module'])
+for g, mods in genus_modules.items():
+    if len(mods) != 1:
+        F['i'].append('%s resolves to modules: %s' % (g, sorted(mods)))
+
+
 # (c)
 for r in rules:
     if r['pairs'] and NEGATION.search(r['text']) and all(v not in NEGATIVE_STATES for _, v in r['pairs']):
@@ -133,8 +143,9 @@ for module in ('agglutinated', 'porcelaneous', 'hyaline'):
 LABEL = dict(a='contradictory rule repeats a positive pair', b='mandatory rule conflicts with M/D rule',
              c='negated text, positive mapping (screen)', d='pair counted more than once in a genus',
              e='mandatory rule without mapping', f='genus without scoring diagnostic rule',
-             g='tree answer outside vocabulary', h='character asked again on a path')
-unit = dict(a='rules', b='rule pairs', c='rules', d='pairs', e='rules', f='genera', g='answers', h='nodes')
+             g='tree answer outside vocabulary', h='character asked again on a path',
+             i='genus without exactly one module')
+unit = dict(a='rules', b='rule pairs', c='rules', d='pairs', e='rules', f='genera', g='answers', h='nodes', i='genera')
 for k, items in F.items():
     print('(%s) %-44s %4d %s' % (k, LABEL[k], len(items), unit[k]))
     if LIST:

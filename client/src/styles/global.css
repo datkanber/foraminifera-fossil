@@ -19,6 +19,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  zoom: 0.8; /* Tüm siteyi %80 boyutuna ölçekler */
 }
 
 #root {
