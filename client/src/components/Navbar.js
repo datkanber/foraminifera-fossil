@@ -33,7 +33,7 @@ function Navbar() {
 
         {/* MOBILE MENU TOGGLE BUTTON */}
         <button
-          className="navbar-toggle"
+          className={`navbar-toggle ${isMenuOpen ? "navbar-toggle-active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle navigation"
           style={{ zIndex: 1001 }}
@@ -88,8 +88,8 @@ function Navbar() {
             {t('nav.contact')}
           </Link>
           
-          <button onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '4px 8px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold' }}>
-            {lang === 'tr' ? 'EN' : 'TR'}
+          <button className="navbar-lang-btn" onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '6px 12px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '6px', transition: 'all 0.2s' }}>
+            {lang === 'tr' ? '🇹🇷 TR' : '🇬🇧 EN'}
           </button>
         </nav>
 

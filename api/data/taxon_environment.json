@@ -4,72 +4,99 @@
     "rank": "SPECIES",
     "parentGenus": "Karsella",
     "depthTextTr": "Sığ denizel ortam",
+    "depthTextEn": "Shallow marine environment",
     "habitatTextTr": "Sıcak ve sığ kıyı suları",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Warm and shallow coastal waters",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Pseudolacazina oeztemueri",
     "rank": "SPECIES",
     "parentGenus": "Pseudolacazina",
     "depthTextTr": "Çok sığ ile sığ su denizel ortamı",
+    "depthTextEn": "Very shallow to shallow marine water environment",
     "habitatTextTr": "Kırmızı ve yeşil alglerle birlikte deniz tabanında yaşamıştır.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Lived on the seabed together with red and green algae.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Alveolina haymanaensis",
     "rank": "SPECIES",
     "parentGenus": "Alveolina",
     "depthTextTr": "Sığ–çok sığ denizel bölge, iç rampa",
+    "depthTextEn": "Shallow-very shallow marine zone, inner ramp",
     "habitatTextTr": "Okyanusların sığ kesimlerinde tabana tutunarak yaşayan, sıcak ve güneşli sahil ekosistemleri.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Warm and sunny coastal ecosystems, living attached to the bottom in the shallow parts of the oceans.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Ranikothalia polatliensis",
     "rank": "SPECIES",
     "parentGenus": "Ranikothalia",
     "depthTextTr": "Karadan denize geçişi temsil eden, kıyı çizgisine son derece yakın çok sığ ortam",
+    "depthTextEn": "Very shallow environment extremely close to the shoreline, representing the transition from land to sea",
     "habitatTextTr": "Akarsuların denize döküldüğü deltaların hemen önündeki çok sığ ve sıcak okyanus kıyıları.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Very shallow and warm ocean coasts just in front of deltas where rivers flow into the sea.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Laffitteina erki",
     "rank": "SPECIES",
     "parentGenus": "Laffitteina",
     "depthTextTr": "Sığ su denizel ortamı",
+    "depthTextEn": "Shallow marine water environment",
     "habitatTextTr": "Algler ve diğer sığ su canlılarıyla birlikte, güneş ışığının deniz tabanına rahatça ulaştığı sıcak, berrak ve sakin okyanus suları.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Warm, clear, and calm ocean waters where sunlight easily reaches the seabed, along with algae and other shallow water organisms.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Discocyclina seunesi",
     "rank": "SPECIES",
     "parentGenus": "Discocyclina",
     "depthTextTr": "Çok sığ su denizel ortamı",
+    "depthTextEn": "Very shallow marine water environment",
     "habitatTextTr": "Deniz tabanında, diğer çok sığ su canlılarıyla birlikte sıcak okyanus kıyı ekosistemleri.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Warm ocean coastal ecosystems on the seabed, together with other very shallow water organisms.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Orbitoclypeus haymanaensis",
     "rank": "SPECIES",
     "parentGenus": "Orbitoclypeus",
     "depthTextTr": "Sığ deniz",
+    "depthTextEn": "Shallow sea",
     "habitatTextTr": "İlerleyen deniz suyunun oluşturduğu masif kireçtaşı kayalıklarının altında yer alan kırıntılı ve karbonatlı denizel kıyı ortamı.",
-    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi"
+    "habitatTextEn": "Detrital and carbonate marine coastal environment located under massive limestone rocks formed by advancing sea water.",
+    "sourceLabel": "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+    "sourceLabelEn": "Project dataset – Excel Sheet 10, literature review"
   },
   {
     "scientificName": "Orbitolites",
     "rank": "GENUS",
     "parentGenus": "Orbitolites",
     "depthTextTr": "Çok sığ ile sığ deniz",
+    "depthTextEn": "Very shallow to shallow sea",
     "habitatTextTr": "Normal tuzluluğa sahip kısıtlı şelf, iç rampa ve sığ denizel karbonat platformu çökelleri.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Restricted shelf with normal salinity, inner ramp and shallow marine carbonate platform deposits.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Opertorbitolites",
     "rank": "GENUS",
     "parentGenus": "Opertorbitolites",
     "depthTextTr": "Çok sığ ile sığ deniz",
+    "depthTextEn": "Very shallow to shallow sea",
     "habitatTextTr": "Karadan gelen kırıntılı malzeme ile karbonatların birlikte çökeldiği geçişli kumlu kireçtaşı ve sığ denizel kıyı ortamı.",
+    "habitatTextEn": "Transitional sandy limestone and shallow marine coastal environment where detrital material from land and carbonates precipitate together.",
     "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table",
     "taxonomicReviewRequired": true
   },
   {
@@ -77,71 +104,98 @@
     "rank": "GENUS",
     "parentGenus": "Bolkarina",
     "depthTextTr": "Çok sığ ile sığ deniz",
+    "depthTextEn": "Very shallow to shallow sea",
     "habitatTextTr": "Kıyı ardı ve resif çevresindeki kısıtlı şelf, resif gerisi ve sakin algli kireçtaşı ortamları.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Restricted shelf behind the coast and around reefs, back-reef, and calm algal limestone environments.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Chapmanina",
     "rank": "GENUS",
     "parentGenus": "Chapmanina",
     "depthTextTr": "Çok sığ ile sığ deniz",
+    "depthTextEn": "Very shallow to shallow sea",
     "habitatTextTr": "İç rampa, resif gerisi veya önüyle bağlantılı sığ denizel kireçtaşı ve killi ya da kumlu kireçtaşı çökelleri.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Inner ramp, shallow marine limestone, and clayey or sandy limestone deposits associated with back-reef or fore-reef.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Elphidium",
     "rank": "GENUS",
     "parentGenus": "Elphidium",
     "depthTextTr": "Çok sığ deniz",
+    "depthTextEn": "Very shallow sea",
     "habitatTextTr": "Kıyı çizgisi, lagünler, haliçler, gelgit alanları ve kıta sahanlığı. Değişken tuzluluk ve hafif acı su koşullarına dayanıklıdır.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Shoreline, lagoons, estuaries, tidal zones, and continental shelf. Tolerant to variable salinity and slightly brackish water conditions.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Bolivinella",
     "rank": "GENUS",
     "parentGenus": "Bolivinella",
     "depthTextTr": "Sığ deniz",
+    "depthTextEn": "Shallow sea",
     "habitatTextTr": "Kıyıya yakın korunaklı koylar, resif arkası, lagünler ve sığ şelf tabanındaki tortullar; genellikle ılık ve ılıman sığ deniz ortamları.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Sheltered bays near the coast, back-reef, lagoons, and sediments on the shallow shelf bottom; generally warm and temperate shallow marine environments.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Polymorphina",
     "rank": "GENUS",
     "parentGenus": "Polymorphina",
     "depthTextTr": "Sığ ile orta derinlikteki şelf suları",
+    "depthTextEn": "Shallow to medium depth shelf waters",
     "habitatTextTr": "Normal tuzluluğa sahip denizel şelf ve kıyıya geçiş ortamlarındaki çamurlu ve kumlu tabanlarda serbest bentik yaşam.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Free benthic life on muddy and sandy bottoms in marine shelf and coastal transition environments with normal salinity.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Glandulina",
     "rank": "GENUS",
     "parentGenus": "Glandulina",
     "depthTextTr": "Orta şelften batyal zona kadar; yaklaşık 50 metreden 500–1000 metreye kadar",
+    "depthTextEn": "From middle shelf to bathyal zone; approximately from 50 meters to 500-1000 meters",
     "habitatTextTr": "Dış kıta sahanlığı, açık şelf ve üst kıta yamacı deniz tabanı ortamları.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Outer continental shelf, open shelf, and upper continental slope seabed environments.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Bulimina",
     "rank": "GENUS",
     "parentGenus": "Bulimina",
     "depthTextTr": "Orta şelften batyal zona kadar; tipik olarak 100–200 metreden 1000–2000+ metreye kadar",
+    "depthTextEn": "From middle shelf to bathyal zone; typically from 100-200 meters to 1000-2000+ meters",
     "habitatTextTr": "Açık denizel dış şelf ve kıta yamacı çökelleri; organik maddece zengin, oksijeni düşük çamurlu tabanlara toleranslı infaunal yaşam.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Open marine outer shelf and continental slope deposits; infaunal life tolerant to organic-rich, low-oxygen muddy bottoms.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Nodosaria",
     "rank": "GENUS",
     "parentGenus": "Nodosaria",
     "depthTextTr": "Genellikle 50–100 metreden batyal zon derinliklerine, 200–1000+ metreye kadar",
+    "depthTextEn": "Generally from 50-100 meters to bathyal zone depths, 200-1000+ meters",
     "habitatTextTr": "Orta-dış kıta sahanlığı, kıta yamacı ve açık havza; normal denizel tuzlulukta ince taneli sedimanlarda serbest bentik veya infaunal yaşam.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Middle-outer continental shelf, continental slope, and open basin; free benthic or infaunal life in fine-grained sediments with normal marine salinity.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   },
   {
     "scientificName": "Frondicularia",
     "rank": "GENUS",
     "parentGenus": "Frondicularia",
     "depthTextTr": "Çoğunlukla 50–200 metre; bazı türlerde üst batyal zona, 200–400 metreye kadar",
+    "depthTextEn": "Mostly 50-200 meters; in some species up to the upper bathyal zone, 200-400 meters",
     "habitatTextTr": "Orta ve dış neritik şelf ile havza geçiş alanlarındaki killi kireçtaşı, şeyl ve marn çökelleri.",
-    "sourceLabel": "Proje ortam veri tablosu"
+    "habitatTextEn": "Clayey limestone, shale, and marl deposits in middle and outer neritic shelf and basin transition areas.",
+    "sourceLabel": "Proje ortam veri tablosu",
+    "sourceLabelEn": "Project environment data table"
   }
 ]

@@ -1,25 +1,33 @@
 .about-page {
-  padding: var(--spacing-large) var(--spacing-medium);
-  background-color: transparent;
-  text-align: center;
+  padding: 40px var(--spacing-medium);
+  background-color: var(--color-background);
+  min-height: 80vh;
 }
 
 .about-content {
   max-width: var(--page-max-width);
   margin: 0 auto;
+  background-color: var(--color-surface);
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
 .about-content h2 {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-medium);
-  font-size: 14px;
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 4px;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 12px;
 }
 
 .about-content p {
-  color: var(--color-text-muted);
-  line-height: 1.4;
-  margin-bottom: var(--spacing-small);
-  font-size: 12px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 16px;
 }

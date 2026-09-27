@@ -94,8 +94,11 @@ async function searchProfiles(searchTerm, rankFilter) {
         rank: props.rank,
         parentGenus: props.parentGenus,
         depthTextTr: props.depthTextTr || null,
+        depthTextEn: props.depthTextEn || null,
         habitatTextTr: props.habitatTextTr || null,
+        habitatTextEn: props.habitatTextEn || null,
         sourceLabel: props.sourceLabel || null,
+        sourceLabelEn: props.sourceLabelEn || null,
         taxonomicReviewRequired: props.taxonomicReviewRequired || false,
       };
     });

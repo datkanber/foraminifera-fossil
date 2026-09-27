@@ -141,7 +141,7 @@ function TaxonEnvironmentSection() {
                 </div>
                 <div className="taxon-env-field taxon-env-source">
                   <span className="taxon-env-field-label">{lang === 'tr' ? "Kaynak:" : "Source:"}</span>
-                  <span>{p.sourceLabel || "—"}</span>
+                  <span>{lang === 'tr' ? (p.sourceLabel || "—") : (p.sourceLabelEn || p.sourceLabel || "—")}</span>
                 </div>
 
                 {!p.linkedToOntology && (

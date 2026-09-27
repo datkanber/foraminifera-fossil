@@ -474,8 +474,11 @@ async function step11_createTaxonProfiles(session) {
       "tp.rank = $rank",
       "tp.parentGenus = $parentGenus",
       "tp.depthTextTr = $depthTextTr",
+      "tp.depthTextEn = $depthTextEn",
       "tp.habitatTextTr = $habitatTextTr",
+      "tp.habitatTextEn = $habitatTextEn",
       "tp.sourceLabel = $sourceLabel",
+      "tp.sourceLabelEn = $sourceLabelEn",
     ];
     const params = {
       key,
@@ -484,8 +487,11 @@ async function step11_createTaxonProfiles(session) {
       rank: entry.rank,
       parentGenus: entry.parentGenus,
       depthTextTr: entry.depthTextTr || "",
+      depthTextEn: entry.depthTextEn || "",
       habitatTextTr: entry.habitatTextTr || "",
+      habitatTextEn: entry.habitatTextEn || "",
       sourceLabel: entry.sourceLabel || "",
+      sourceLabelEn: entry.sourceLabelEn || "",
     };
 
     if (entry.taxonomicReviewRequired) {
