@@ -1,56 +1,75 @@
 import "../styles/pages/home.css";
 import { useLanguage } from "../contexts/LanguageContext";
+import foram1 from "../assets/images/foram1.jpg";
+import foram2 from "../assets/images/foram2.jpg";
+import foram3 from "../assets/images/foram3.jpg";
 
 function Home() {
   const { lang } = useLanguage();
   return (
     <main className="home-page">
-      <section className="home-introduction">
-        <h1>{lang === 'tr' ? "Foraminifera ve Jeoloji" : "Foraminifera and Geology"}</h1>
 
-        <p>
-          {lang === 'tr' 
-            ? "Foraminiferler, temel olarak deniz ortamlarında yaşayan mikroskobik tek hücreli organizmalardır. Kavkı olarak bilinen kabukları, tortullarda ve fosil kayıtlarında yaygın olarak korunur." 
-            : "Foraminifera are microscopic single-celled organisms that live mainly in marine environments. Their shells, known as tests, are commonly preserved in sediment and the fossil record."}
-        </p>
+      {/* ── HERO SECTION ── */}
+      <section className="home-hero">
+        {/* Decorative floating foram images */}
+        <img src={foram2} alt="" className="hero-foram hero-foram--left"  aria-hidden="true" />
+        <img src={foram3} alt="" className="hero-foram hero-foram--right" aria-hidden="true" />
+        <img src={foram1} alt="" className="hero-foram hero-foram--bg"   aria-hidden="true" />
 
-        <p>
-          {lang === 'tr' 
-            ? "Jeologlar ve paleontologlar, jeolojik yaşı, eski deniz ortamlarını, su derinliğini ve Dünya'nın iklimindeki değişiklikleri araştırmak için foraminiferleri incelerler." 
-            : "Geologists and paleontologists study foraminifera to investigate geological age, ancient marine environments, water depth, and changes in Earth's climate."}
-        </p>
+        <div className="hero-content">
+          <h1>{lang === 'tr' ? "Foraminifera ve Jeoloji" : "Foraminifera and Geology"}</h1>
+          <p>
+            {lang === 'tr'
+              ? "Foraminiferler, temel olarak deniz ortamlarında yaşayan mikroskobik tek hücreli organizmalardır. Kavkı olarak bilinen kabukları, tortullarda ve fosil kayıtlarında yaygın olarak korunur."
+              : "Foraminifera are microscopic single-celled organisms that live mainly in marine environments. Their shells, known as tests, are commonly preserved in sediment and the fossil record."}
+          </p>
+          <p>
+            {lang === 'tr'
+              ? "Jeologlar ve paleontologlar, jeolojik yaşı, eski deniz ortamlarını, su derinliğini ve Dünya'nın iklimindeki değişiklikleri araştırmak için foraminiferleri incelerler."
+              : "Geologists and paleontologists study foraminifera to investigate geological age, ancient marine environments, water depth, and changes in Earth's climate."}
+          </p>
+        </div>
       </section>
 
+      {/* ── INFO CARDS ── */}
       <section className="home-information" id="about">
-        <article className="information-panel">
-          <h2>{lang === 'tr' ? "Foraminifera Nedir?" : "What are Foraminifera?"}</h2>
 
+        <article className="information-panel">
+          <div className="panel-icon">
+            <img src={foram1} alt="" />
+          </div>
+          <h2>{lang === 'tr' ? "Foraminifera Nedir?" : "What are Foraminifera?"}</h2>
           <p>
-            {lang === 'tr' 
-              ? "Foraminiferler, farklı şekillere, loca dizilimlerine ve duvar yapılarına sahip olabilen kabuklu mikroorganizmalardır. Bu özellikler biyolojik ve jeolojik sınıflandırma için oldukça faydalıdır." 
+            {lang === 'tr'
+              ? "Foraminiferler, farklı şekillere, loca dizilimlerine ve duvar yapılarına sahip olabilen kabuklu mikroorganizmalardır. Bu özellikler biyolojik ve jeolojik sınıflandırma için oldukça faydalıdır."
               : "Foraminifera are microorganisms with shells that may have different shapes, chamber arrangements, and wall structures. These characteristics are useful for biological and geological classification."}
           </p>
         </article>
 
         <article className="information-panel" id="geology">
+          <div className="panel-icon">
+            <img src={foram2} alt="" />
+          </div>
           <h2>{lang === 'tr' ? "Jeolojik Önemi" : "Geological Importance"}</h2>
-
           <p>
-            {lang === 'tr' 
-              ? "Fosil foraminiferler, biyostratigrafi ve paleo-ortamsal yorumlama için kullanılır. Kayaç ve tortul örneklerindeki varlıkları, jeolojik zaman ve çökel ortamları hakkında bilgi sağlayabilir." 
+            {lang === 'tr'
+              ? "Fosil foraminiferler, biyostratigrafi ve paleo-ortamsal yorumlama için kullanılır. Kayaç ve tortul örneklerindeki varlıkları, jeolojik zaman ve çökel ortamları hakkında bilgi sağlayabilir."
               : "Fossil foraminifera are used in biostratigraphy and paleoenvironmental interpretation. Their occurrence in rock and sediment samples can provide information about geological time and depositional environments."}
           </p>
         </article>
 
         <article className="information-panel" id="fossils">
+          <div className="panel-icon">
+            <img src={foram3} alt="" />
+          </div>
           <h2>{lang === 'tr' ? "Fosil Verileri" : "Fossil Data"}</h2>
-
           <p>
-            {lang === 'tr' 
-              ? "Fosil kayıtları; taksonomi, jeolojik yaş, örnek derinliği, morfoloji, loca sayısı, kabuk tipi ve bentik veya planktonik habitat gibi ekolojik bilgileri içerebilir." 
+            {lang === 'tr'
+              ? "Fosil kayıtları; taksonomi, jeolojik yaş, örnek derinliği, morfoloji, loca sayısı, kabuk tipi ve bentik veya planktonik habitat gibi ekolojik bilgileri içerebilir."
               : "Fossil records may include taxonomy, geological age, sample depth, morphology, chamber count, shell type, and ecological information such as benthic or planktonic habitat."}
           </p>
         </article>
+
       </section>
     </main>
   );

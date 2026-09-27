@@ -4,6 +4,28 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const API = process.env.REACT_APP_API_URL + "/api/taxa";
 
+// Client-side English translation fallback (used when API doesn't return *En fields)
+const EN_TRANSLATIONS = {
+  "Karsella hottingeri":           { depth: "Shallow marine environment", habitat: "Warm and shallow coastal waters", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Pseudolacazina oeztemueri":     { depth: "Very shallow to shallow marine water environment", habitat: "Lived on the seabed together with red and green algae.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Alveolina haymanaensis":        { depth: "Shallow-very shallow marine zone, inner ramp", habitat: "Warm and sunny coastal ecosystems, living attached to the bottom in the shallow parts of the oceans.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Ranikothalia polatliensis":     { depth: "Very shallow environment extremely close to the shoreline, representing the transition from land to sea", habitat: "Very shallow and warm ocean coasts just in front of deltas where rivers flow into the sea.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Laffitteina erki":              { depth: "Shallow marine water environment", habitat: "Warm, clear, and calm ocean waters where sunlight easily reaches the seabed, along with algae and other shallow water organisms.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Discocyclina seunesi":          { depth: "Very shallow marine water environment", habitat: "Warm ocean coastal ecosystems on the seabed, together with other very shallow water organisms.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Orbitoclypeus haymanaensis":    { depth: "Shallow sea", habitat: "Detrital and carbonate marine coastal environment located under massive limestone rocks formed by advancing sea water.", source: "Project dataset – Excel Sheet 10, literature review" },
+  "Orbitolites":                   { depth: "Very shallow to shallow sea", habitat: "Restricted shelf with normal salinity, inner ramp and shallow marine carbonate platform deposits.", source: "Project environment data table" },
+  "Opertorbitolites":              { depth: "Very shallow to shallow sea", habitat: "Transitional sandy limestone and shallow marine coastal environment where detrital material from land and carbonates precipitate together.", source: "Project environment data table" },
+  "Bolkarina":                     { depth: "Very shallow to shallow sea", habitat: "Restricted shelf behind the coast and around reefs, back-reef, and calm algal limestone environments.", source: "Project environment data table" },
+  "Chapmanina":                    { depth: "Very shallow to shallow sea", habitat: "Inner ramp, shallow marine limestone, and clayey or sandy limestone deposits associated with back-reef or fore-reef.", source: "Project environment data table" },
+  "Elphidium":                     { depth: "Very shallow sea", habitat: "Shoreline, lagoons, estuaries, tidal zones, and continental shelf. Tolerant to variable salinity and slightly brackish water conditions.", source: "Project environment data table" },
+  "Bolivinella":                   { depth: "Shallow sea", habitat: "Sheltered bays near the coast, back-reef, lagoons, and sediments on the shallow shelf bottom; generally warm and temperate shallow marine environments.", source: "Project environment data table" },
+  "Polymorphina":                  { depth: "Shallow to medium depth shelf waters", habitat: "Free benthic life on muddy and sandy bottoms in marine shelf and coastal transition environments with normal salinity.", source: "Project environment data table" },
+  "Glandulina":                    { depth: "From middle shelf to bathyal zone; approximately from 50 meters to 500-1000 meters", habitat: "Outer continental shelf, open shelf, and upper continental slope seabed environments.", source: "Project environment data table" },
+  "Bulimina":                      { depth: "From middle shelf to bathyal zone; typically from 100-200 meters to 1000-2000+ meters", habitat: "Open marine outer shelf and continental slope deposits; infaunal life tolerant to organic-rich, low-oxygen muddy bottoms.", source: "Project environment data table" },
+  "Nodosaria":                     { depth: "Generally from 50-100 meters to bathyal zone depths, 200-1000+ meters", habitat: "Middle-outer continental shelf, continental slope, and open basin; free benthic or infaunal life in fine-grained sediments with normal marine salinity.", source: "Project environment data table" },
+  "Frondicularia":                 { depth: "Mostly 50-200 meters; in some species up to the upper bathyal zone, 200-400 meters", habitat: "Clayey limestone, shale, and marl deposits in middle and outer neritic shelf and basin transition areas.", source: "Project environment data table" },
+};
+
 function Geology() {
   const { lang } = useLanguage();
   return (
@@ -133,15 +155,15 @@ function TaxonEnvironmentSection() {
 
                 <div className="taxon-env-field">
                   <span className="taxon-env-field-label">{lang === 'tr' ? "Derinlik:" : "Depth:"}</span>
-                  <span>{lang === 'tr' ? (p.depthTextTr || "—") : (p.depthTextEn || p.depthTextTr || "—")}</span>
+                  <span>{lang === 'tr' ? (p.depthTextTr || "—") : (p.depthTextEn || (EN_TRANSLATIONS[p.scientificName]?.depth) || p.depthTextTr || "—")}</span>
                 </div>
                 <div className="taxon-env-field">
                   <span className="taxon-env-field-label">{lang === 'tr' ? "Yaşadığı ortam:" : "Habitat:"}</span>
-                  <span>{lang === 'tr' ? (p.habitatTextTr || "—") : (p.habitatTextEn || p.habitatTextTr || "—")}</span>
+                  <span>{lang === 'tr' ? (p.habitatTextTr || "—") : (p.habitatTextEn || (EN_TRANSLATIONS[p.scientificName]?.habitat) || p.habitatTextTr || "—")}</span>
                 </div>
                 <div className="taxon-env-field taxon-env-source">
                   <span className="taxon-env-field-label">{lang === 'tr' ? "Kaynak:" : "Source:"}</span>
-                  <span>{lang === 'tr' ? (p.sourceLabel || "—") : (p.sourceLabelEn || p.sourceLabel || "—")}</span>
+                  <span>{lang === 'tr' ? (p.sourceLabel || "—") : (p.sourceLabelEn || (EN_TRANSLATIONS[p.scientificName]?.source) || p.sourceLabel || "—")}</span>
                 </div>
 
                 {!p.linkedToOntology && (

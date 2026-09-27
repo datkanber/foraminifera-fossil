@@ -94,7 +94,7 @@ function Navbar() {
             <img 
               src={lang === 'tr' ? trFlag : enFlag} 
               alt={lang === 'tr' ? 'Turkish Flag' : 'British Flag'} 
-              style={{ width: '20px', height: '14px', objectFit: 'cover', borderRadius: '2px' }} 
+              style={{ width: '24px', height: '16px', objectFit: 'cover', borderRadius: '3px', border: '1px solid rgba(0,0,0,0.1)' }} 
             />
             {lang === 'tr' ? 'TR' : 'EN'}
           </button>
