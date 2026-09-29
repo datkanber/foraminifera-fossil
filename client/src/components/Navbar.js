@@ -76,6 +76,13 @@ function Navbar() {
             {t('nav.geology')}
           </Link>
           <Link 
+            to="/lab" 
+            onClick={handleLinkClick} 
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/lab' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/lab' ? '600' : '500', transition: 'color 0.2s ease', background: location.pathname === '/lab' ? 'none' : 'linear-gradient(135deg, #2d5a27, #4a8f3f)', WebkitBackgroundClip: location.pathname !== '/lab' ? 'text' : 'none', WebkitTextFillColor: location.pathname !== '/lab' ? 'transparent' : 'inherit', padding: '4px 10px', borderRadius: '6px', border: '1px solid #4a8f3f' }}
+          >
+            🔬 {t('nav.lab')}
+          </Link>
+          <Link 
             to="/hakkinda" 
             onClick={handleLinkClick} 
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/hakkinda' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/hakkinda' ? '600' : '500', transition: 'color 0.2s ease' }}
