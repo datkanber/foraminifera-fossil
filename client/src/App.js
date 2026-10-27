@@ -43,7 +43,7 @@ function App() {
               path="/haberler/:slug?"
               element={<Suspense fallback={null}><News /></Suspense>}
             />
-            <Route path="/news" element={<Navigate to="/haberler" replace />} />
+            <Route path="/news" element={<Suspense fallback={null}><News /></Suspense>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

@@ -56,6 +56,14 @@ function Navbar() {
           >
             {t('nav.home')}
           </Link>
+          <Link
+            to="/haberler"
+            onClick={handleLinkClick}
+            aria-current={location.pathname.startsWith('/haberler') ? 'page' : undefined}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname.startsWith('/haberler') ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname.startsWith('/haberler') ? '600' : '500', transition: 'color 0.2s ease' }}
+          >
+            {t('nav.news')}
+          </Link>
           <Link 
             to="/tani" 
             onClick={handleLinkClick} 
@@ -97,14 +105,6 @@ function Navbar() {
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/iletisim' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/iletisim' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             {t('nav.contact')}
-          </Link>
-          <Link
-            to="/haberler"
-            onClick={handleLinkClick}
-            aria-current={location.pathname.startsWith('/haberler') ? 'page' : undefined}
-            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname.startsWith('/haberler') ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname.startsWith('/haberler') ? '600' : '500', transition: 'color 0.2s ease' }}
-          >
-            {t('nav.news')}
           </Link>
           
           <button className="navbar-lang-btn" onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '6px 12px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', transition: 'all 0.2s' }}>
