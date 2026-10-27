@@ -39,6 +39,16 @@
   z-index: 1000;
 }
 
+.navbar-menu > a {
+  white-space: nowrap;
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .navbar-menu {
+    gap: 16px;
+  }
+}
+
 .navbar-menu a {
   color: var(--color-text);
   font-size: 12px;
@@ -85,7 +95,7 @@
 }
 
 /* -jr Mobile navigation layout starts here */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .navbar-container {
     position: relative;
 

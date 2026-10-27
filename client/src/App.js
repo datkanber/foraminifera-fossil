@@ -11,6 +11,7 @@ import Vlm from "./pages/Vlm";
 // -jr Loaded on demand: the lab brings three.js (~600 KB), which no other
 // page needs.
 const Lab = lazy(() => import("./pages/Lab"));
+const News = lazy(() => import("./pages/News"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 import "./styles/global.css";
@@ -38,6 +39,11 @@ function App() {
               }
             />
             <Route path="/iletisim" element={<Contact />} />
+            <Route
+              path="/haberler/:slug?"
+              element={<Suspense fallback={null}><News /></Suspense>}
+            />
+            <Route path="/news" element={<Navigate to="/haberler" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

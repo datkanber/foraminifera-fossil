@@ -37,7 +37,9 @@ function Navbar() {
         <button
           className={`navbar-toggle ${isMenuOpen ? "navbar-toggle-active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle navigation"
+          aria-label={lang === 'tr' ? 'Gezinme menüsü' : 'Navigation menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="site-navigation"
           style={{ zIndex: 1001 }}
         >
           <span></span>
@@ -46,7 +48,7 @@ function Navbar() {
         </button>
 
         {/* NAVIGATION LINKS */}
-        <nav className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`}>
+        <nav id="site-navigation" className={`navbar-menu ${isMenuOpen ? "navbar-menu-open" : ""}`}>
           <Link 
             to="/" 
             onClick={handleLinkClick} 
@@ -95,6 +97,14 @@ function Navbar() {
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname === '/iletisim' ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname === '/iletisim' ? '600' : '500', transition: 'color 0.2s ease' }}
           >
             {t('nav.contact')}
+          </Link>
+          <Link
+            to="/haberler"
+            onClick={handleLinkClick}
+            aria-current={location.pathname.startsWith('/haberler') ? 'page' : undefined}
+            style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname.startsWith('/haberler') ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname.startsWith('/haberler') ? '600' : '500', transition: 'color 0.2s ease' }}
+          >
+            {t('nav.news')}
           </Link>
           
           <button className="navbar-lang-btn" onClick={toggleLanguage} style={{ background: 'none', border: '1px solid var(--color-primary)', borderRadius: '4px', padding: '6px 12px', color: 'var(--color-primary)', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', transition: 'all 0.2s' }}>

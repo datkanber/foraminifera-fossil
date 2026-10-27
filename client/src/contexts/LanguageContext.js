@@ -19,6 +19,7 @@ export const LanguageProvider = ({ children }) => {
     tr: {
       "app.title": "ForamID",
       "nav.home": "Ana Sayfa",
+      "nav.news": "Haberler ve Etkinlikler",
       "nav.diagnose": "Tanı Yap",
       "nav.fossils": "Fosiller",
       "nav.vlm": "Görsel YZ",
@@ -87,6 +88,7 @@ export const LanguageProvider = ({ children }) => {
     en: {
       "app.title": "ForamID",
       "nav.home": "Home",
+      "nav.news": "News & Events",
       "nav.diagnose": "Diagnose",
       "nav.fossils": "Fossils",
       "nav.vlm": "Visual AI",
