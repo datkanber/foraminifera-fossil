@@ -168,3 +168,18 @@
   color: #fff;
 }
 }
+
+.navbar-news-link {
+  animation: navbar-news-blink 1.4s ease-in-out infinite;
+}
+.navbar-news-link:hover,
+.navbar-news-link:focus-visible {
+  animation: none;
+}
+@keyframes navbar-news-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar-news-link { animation: none; }
+}

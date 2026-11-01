@@ -1,10 +1,12 @@
+import { dayTwoPhotos } from './fieldPhotos';
+
 const photoFiles = require.context('../assets/photos', false, /\.jpg$/);
 
 function photo(id, day, tr, en, width = 1152, height = 1536) {
   return { id, day, src: photoFiles(`./${id}.jpg`), caption: { tr, en }, width, height };
 }
 
-// The cover and the two galleries together contain every photo in assets/photos.
+// The cover and daily galleries share one ordered collection for the photo viewer.
 export const eventPhotos = [
   photo('1792745406529', 1, 'STONE proje ekibi, ESOGÜ Jeoloji Mühendisliği Bölümü', 'The STONE project team at ESOGÜ’s Department of Geological Engineering', 2048, 1536),
   photo('1792745401979', 1, 'Jeoloji koleksiyonları üzerine sohbet', 'Discussing the geological collections'),
@@ -19,6 +21,7 @@ export const eventPhotos = [
   photo('1792745431264', 1, 'Yapı taşları üzerine değerlendirmeler', 'Discussing building stones'),
   photo('1792745433581', 1, 'Kurşunlu Külliyesi’nde proje ekibi', 'The project team at the Kurşunlu Complex', 2048, 1536),
   photo('1792745438026', 1, 'Odunpazarı’nın tarihi sokaklarında', 'In the historic streets of Odunpazarı', 2048, 1536),
+  ...dayTwoPhotos,
   photo('1793084811332', 3, 'Projenin sonraki aşamaları üzerine toplantı', 'Discussing the next stages of the project', 2048, 1536),
   photo('1793084811531', 3, 'Proje ortaklarıyla ortak planlama', 'Planning together with project partners', 2048, 1536),
   photo('1793084811608', 3, 'Uluslararası iş birliğinin değerlendirilmesi', 'Reviewing our international collaboration', 2048, 1536),

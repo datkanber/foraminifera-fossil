@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { eventPhotos, stoneDays, pressSources, projectParticipants } from '../data/news';
 import '../styles/pages/news.css';
@@ -62,6 +63,8 @@ function Photograph({ photo, lang, text, onOpen, cover = false }) {
       >
         <img
           src={photo.src}
+          srcSet={photo.srcSet}
+          sizes={cover ? '(max-width: 850px) 100vw, 50vw' : '(max-width: 520px) 50vw, (max-width: 1150px) 33vw, 25vw'}
           alt={photo.caption[lang]}
           width={photo.width}
           height={photo.height}
@@ -168,10 +171,19 @@ function DailyReport({ day, lang, text, onOpen }) {
 
 export default function News() {
   const { lang } = useLanguage();
+  const { hash } = useLocation();
   const text = copy[lang];
   const [activeIndex, setActiveIndex] = useState(null);
   const dialogRef = useRef(null);
   const triggerRef = useRef(null);
+
+  useEffect(() => {
+    if (!hash) return;
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ block: 'start' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash]);
 
   useEffect(() => {
     const previousTitle = document.title;

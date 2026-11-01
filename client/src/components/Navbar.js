@@ -28,7 +28,7 @@ function Navbar() {
               src={logo}
               alt="GeoKnow Logo"
               className="navbar-logo"
-              style={{ height: "45px", objectFit: 'contain' }}
+              style={{ height: "56px", objectFit: 'contain', marginBlock: '-5.5px' }}
             />
           </Link>
         </div>
@@ -58,6 +58,7 @@ function Navbar() {
           </Link>
           <Link
             to="/haberler"
+            className="navbar-news-link"
             onClick={handleLinkClick}
             aria-current={location.pathname.startsWith('/haberler') ? 'page' : undefined}
             style={{ textDecoration: 'none', fontSize: '15px', color: location.pathname.startsWith('/haberler') ? 'var(--color-primary)' : 'var(--color-text)', fontWeight: location.pathname.startsWith('/haberler') ? '600' : '500', transition: 'color 0.2s ease' }}
