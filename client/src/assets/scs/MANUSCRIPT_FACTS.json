@@ -1,0 +1,212 @@
+{
+  "base_git_commit": "1e12fb5fc2c32e5d042f4f322c823c50dcda59b6",
+  "project_doi": null,
+  "archived_release_published": false,
+  "study_type": "Exploratory, source-labelled image-panel case series; no independent human expert evaluation",
+  "n_image_panels": 150,
+  "verified_independent_specimens": false,
+  "n_reference_genera": 24,
+  "by_module": {
+    "AGGLUTINATED": 33,
+    "PORCELANEOUS": 37,
+    "HYALINE": 80
+  },
+  "runs_per_image": 1,
+  "model": "gemini-3.5-flash-lite",
+  "cohorts": [
+    {
+      "group": "Additional articles",
+      "n": 28,
+      "source_clusters": 9,
+      "acc1": {
+        "mean": 0.017857142857142856,
+        "low": 0.0,
+        "high": 0.04,
+        "n": 28,
+        "clusters": 9
+      },
+      "acc3": {
+        "mean": 0.4642857142857143,
+        "low": 0.0,
+        "high": 0.6857142857142857,
+        "n": 28,
+        "clusters": 9
+      },
+      "coverage": {
+        "mean": 0.9642857142857143,
+        "low": 0.8125,
+        "high": 1.0,
+        "n": 28,
+        "clusters": 9
+      },
+      "reference_exclusion": {
+        "mean": 0.35714285714285715,
+        "low": 0.18604651162790697,
+        "high": 0.5555555555555556,
+        "n": 28,
+        "clusters": 9
+      },
+      "displayed_top1_accuracy": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n": 28,
+        "clusters": 9
+      },
+      "states": {
+        "CONFIRMED_GENUS": 10,
+        "CANDIDATE_GENUS": 17,
+        "INDETERMINATE": 1
+      }
+    },
+    {
+      "group": "KB reference book (overlap)",
+      "n": 122,
+      "source_clusters": 21,
+      "acc1": {
+        "mean": 0.056010928961748634,
+        "low": 0.024048846342660773,
+        "high": 0.08764367816091953,
+        "n": 122,
+        "clusters": 21
+      },
+      "acc3": {
+        "mean": 0.1407103825136612,
+        "low": 0.0697623862487361,
+        "high": 0.22319581686429507,
+        "n": 122,
+        "clusters": 21
+      },
+      "coverage": {
+        "mean": 0.8688524590163934,
+        "low": 0.785695084485407,
+        "high": 0.934309560847194,
+        "n": 122,
+        "clusters": 21
+      },
+      "reference_exclusion": {
+        "mean": 0.47540983606557374,
+        "low": 0.34965034965034963,
+        "high": 0.6140350877192983,
+        "n": 122,
+        "clusters": 21
+      },
+      "displayed_top1_accuracy": {
+        "mean": 0.04918032786885246,
+        "low": 0.018018018018018018,
+        "high": 0.078125,
+        "n": 122,
+        "clusters": 21
+      },
+      "states": {
+        "CONFIRMED_GENUS": 64,
+        "INDETERMINATE": 16,
+        "CANDIDATE_GENUS": 41,
+        "PROBABLE_GENUS": 1
+      }
+    }
+  ],
+  "overall": {
+    "group": "All panels",
+    "n": 150,
+    "source_clusters": 30,
+    "acc1": {
+      "mean": 0.048888888888888885,
+      "low": 0.020833333333333332,
+      "high": 0.07595460642132615,
+      "n": 150,
+      "clusters": 30
+    },
+    "acc3": {
+      "mean": 0.20111111111111113,
+      "low": 0.10216479840111227,
+      "high": 0.3118559990717102,
+      "n": 150,
+      "clusters": 30
+    },
+    "coverage": {
+      "mean": 0.8866666666666667,
+      "low": 0.8134303482587065,
+      "high": 0.945054945054945,
+      "n": 150,
+      "clusters": 30
+    },
+    "reference_exclusion": {
+      "mean": 0.4533333333333333,
+      "low": 0.3419236821400472,
+      "high": 0.5666732283464566,
+      "n": 150,
+      "clusters": 30
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.04,
+      "low": 0.014385919835560125,
+      "high": 0.06622516556291391,
+      "n": 150,
+      "clusters": 30
+    },
+    "states": {
+      "CONFIRMED_GENUS": 74,
+      "CANDIDATE_GENUS": 58,
+      "INDETERMINATE": 17,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  "source_clusters": 30,
+  "bootstrap_resamples": 2000,
+  "seed": 20261109,
+  "known_reference_overlap_panels": 122,
+  "additional_article_panels": 28,
+  "expert_review_performed": false,
+  "expert_vlm_character_kappa_available": false,
+  "human_timing_available": false,
+  "open_set_experiment_performed": false,
+  "weight_grid_sweep_performed": false,
+  "normalization_changed_entries": 497,
+  "smoke_probe_scope": "The larger Fig.4a development-field crop included adjacent Fig.4b, which reappears in IMG_001. No prompt/engine/image selection was tuned on accuracy; this panel is exploratory and is not a certified untouched test set.",
+  "table_XIII_scenario_A": {
+    "top_genus": "Ammodiscus",
+    "score": 19,
+    "runner_up": "Saccammina",
+    "runner_up_score": 9,
+    "margin": 10,
+    "evaluated_observations": 4,
+    "excluded_genera": 18,
+    "mandatory_exclusions": 18,
+    "strong_contradiction_exclusions": 0
+  },
+  "internal_104_paths": {
+    "rank1_unique": 24,
+    "rank1_tied": 10,
+    "top3_shared_rank": 64,
+    "leaf_excluded": 17,
+    "confirmed_correct": 14,
+    "confirmed_total": 48
+  },
+  "competency_queries": {
+    "executed": 10,
+    "master_json_matches": 10
+  },
+  "existing_api_tests": {
+    "passed": 43,
+    "failed": 0
+  },
+  "author_photo": {
+    "file": "Author_Photo_300dpi.jpg",
+    "width_px": 465,
+    "height_px": 654,
+    "dpi": 300,
+    "recommended_width_cm": 3.0,
+    "preserve_aspect_ratio": true
+  },
+  "limitations": [
+    "No independent expert sheets or expert agreement",
+    "150 panels are not 150 verified independent specimens",
+    "122 book panels overlap a named knowledge-base reference; reported separately",
+    "Additional-article rule-level provenance overlap cannot be excluded because per-rule references are not supplied",
+    "Public-image VLM training contamination unknown",
+    "Class/module imbalance and low-resolution source panels",
+    "One VLM pass; no run-to-run variability estimate",
+    "Existing application normalization retained without manual correction"
+  ]
+}

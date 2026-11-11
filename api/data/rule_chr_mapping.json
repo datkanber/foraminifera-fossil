@@ -74,14 +74,15 @@
     "chr_id": "CHR_06",
     "value": "PLANISPIRAL",
     "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Ammodiscus_D2",
@@ -375,10 +376,21 @@
    {
     "chr_id": "CHR_02",
     "value": "GLOBULAR",
-    "confidence": "MEDIUM"
+    "confidence": "HIGH"
+   },
+   {
+    "chr_id": "CHR_02",
+    "value": "SAC_LIKE",
+    "confidence": "HIGH"
    }
   ],
-  "status": "MEDIUM"
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Both alternatives are explicitly stated in the mandatory rule.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Saccammina_M4",
@@ -403,19 +415,14 @@
   "level": "D",
   "code": "D1",
   "text": "Simple sac-like single chamber",
-  "mappings": [
-   {
-    "chr_id": "CHR_04",
-    "value": "UNDIVIDED",
-    "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_02",
-    "value": "SAC_LIKE",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Saccammina_D2",
@@ -424,8 +431,20 @@
   "level": "D",
   "code": "D2",
   "text": "No tubular coiling",
-  "mappings": [],
-  "status": "NONE"
+  "mappings": [
+   {
+    "chr_id": "CHR_06",
+    "value": "UNCOILED",
+    "confidence": "HIGH"
+   }
+  ],
+  "status": "NONE",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "No tubular coiling: uncoiled state, without inventing a chamber type.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Saccammina_S1",
@@ -706,14 +725,14 @@
   "level": "D",
   "code": "D1",
   "text": "Long, relatively straight or gently curved tube",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Bathysiphon_D2",
@@ -722,14 +741,14 @@
   "level": "D",
   "code": "D2",
   "text": "Tube comparatively robust and regular",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Bathysiphon_S1",
@@ -906,14 +925,14 @@
   "level": "C",
   "code": "C1",
   "text": "Simple unbranched straight tube",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Rhabdammina_C2",
@@ -1032,14 +1051,14 @@
   "level": "C",
   "code": "C1",
   "text": "Thick straight regular tube",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Rhizammina_C2",
@@ -1442,14 +1461,14 @@
   "level": "D",
   "code": "D2",
   "text": "Narrow caudate/tubular connections between chambers",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Tubular inter-chamber connections are not whole-test shape; the vocabulary has no connection-shape character.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Caudammina_D3",
@@ -1458,14 +1477,14 @@
   "level": "D",
   "code": "D3",
   "text": "Characteristic elongated chamber profile",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "ELONGATE",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Caudammina_S1",
@@ -1586,8 +1605,20 @@
   "level": "D",
   "code": "D1",
   "text": "Chambers internally simple",
-  "mappings": [],
-  "status": "NONE"
+  "mappings": [
+   {
+    "chr_id": "CHR_10",
+    "value": "SIMPLE",
+    "confidence": "HIGH"
+   }
+  ],
+  "status": "NONE",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Literal chambers internally simple, already in the controlled vocabulary.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Haplophragmoides_D2",
@@ -1596,14 +1627,14 @@
   "level": "D",
   "code": "D2",
   "text": "Planispiral growth persists through adult stage",
-  "mappings": [
-   {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Haplophragmoides_D3",
@@ -1892,12 +1923,18 @@
   "text": "Early part = Planispiral",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "PLANISPIRAL_TO_UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "The jointly stated early planispiral and adult uniserial ontogeny is represented by the existing transition state, rather than simultaneous incompatible coiling values.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Ammobaculites_D2",
@@ -1955,12 +1992,18 @@
   "text": "Adult remains planispiral throughout",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "NONE",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Ammobaculites_C2",
@@ -1971,22 +2014,18 @@
   "text": "Planispiral → biserial transition",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_05",
-    "value": "BISERIAL",
-    "confidence": "HIGH"
-   },
-   {
     "chr_id": "CHR_09",
     "value": "PLANISPIRAL_TO_BISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Reticulophragmium_M1",
@@ -2047,10 +2086,21 @@
    {
     "chr_id": "CHR_10",
     "value": "SUBDIVIDED",
-    "confidence": "MEDIUM"
+    "confidence": "HIGH"
+   },
+   {
+    "chr_id": "CHR_10",
+    "value": "LABYRINTHIC",
+    "confidence": "HIGH"
    }
   ],
-  "status": "MEDIUM"
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Accept the explicitly described specialized subdivision as an alternative to its generic subdivision state.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Reticulophragmium_D1",
@@ -2059,14 +2109,14 @@
   "level": "D",
   "code": "D1",
   "text": "Chambers possess complex reticulate/labyrinthic secondary subdivisions",
-  "mappings": [
-   {
-    "chr_id": "CHR_10",
-    "value": "LABYRINTHIC",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Reticulophragmium_D2",
@@ -2207,14 +2257,14 @@
   "level": "D",
   "code": "D1",
   "text": "Low trochospiral chamber arrangement",
-  "mappings": [
-   {
-    "chr_id": "CHR_06",
-    "value": "TROCHOSPIRAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Trochammina_D2",
@@ -2521,14 +2571,14 @@
   "level": "D",
   "code": "D2",
   "text": "Biserial arrangement persists through observed adult part",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "BISERIAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Textularia_S1",
@@ -2571,17 +2621,18 @@
   "text": "Triserial early part clearly changing to biserial",
   "mappings": [
    {
-    "chr_id": "CHR_05",
-    "value": "BISERIAL",
-    "confidence": "HIGH"
-   },
-   {
     "chr_id": "CHR_09",
     "value": "TRISERIAL_TO_BISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Textularia_C2",
@@ -2740,22 +2791,18 @@
   "text": "Planispiral → uniserial transition",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_05",
-    "value": "UNISERIAL",
-    "confidence": "HIGH"
-   },
-   {
     "chr_id": "CHR_09",
     "value": "PLANISPIRAL_TO_UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Gaudryina_M1",
@@ -3148,14 +3195,14 @@
   "level": "S",
   "code": "S2",
   "text": "Uniserial adult chambers conspicuous",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "UNISERIAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Clavulina_C1",
@@ -3187,12 +3234,18 @@
   "text": "Biserial → uniserial transition",
   "mappings": [
    {
-    "chr_id": "CHR_05",
-    "value": "UNISERIAL",
+    "chr_id": "CHR_09",
+    "value": "BISERIAL_TO_UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Karrerulina_M1",
@@ -3421,14 +3474,14 @@
   "level": "D",
   "code": "D1",
   "text": "Marginal chamber zone essentially undivided by an exoskeleton",
-  "mappings": [
-   {
-    "chr_id": "CHR_04",
-    "value": "UNDIVIDED",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Marginal chamber lumen is not the whole test cavity; undivided marginal space does not mean an unchambered organism.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Coskinolina_D2",
@@ -3437,8 +3490,20 @@
   "level": "D",
   "code": "D2",
   "text": "**No developed beams/rafters subdividing the marginal chamber lumen**",
-  "mappings": [],
-  "status": "NONE"
+  "mappings": [
+   {
+    "chr_id": "CHR_13",
+    "value": "ABSENT",
+    "confidence": "HIGH"
+   }
+  ],
+  "status": "NONE",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Map explicitly absent marginal exoskeletal partitions; do not infer absence of true septa.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Coskinolina_D3",
@@ -3447,14 +3512,14 @@
   "level": "D",
   "code": "D3",
   "text": "Relatively simple conical internal architecture compared with exoskeleton-bearing relatives",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "CONICAL",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Coskinolina_S1",
@@ -3561,10 +3626,21 @@
    {
     "chr_id": "CHR_10",
     "value": "SUBDIVIDED",
-    "confidence": "MEDIUM"
+    "confidence": "HIGH"
+   },
+   {
+    "chr_id": "CHR_10",
+    "value": "RETICULATE",
+    "confidence": "HIGH"
    }
   ],
-  "status": "MEDIUM"
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Accept the explicitly described specialized subdivision as an alternative to its generic subdivision state.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Dictyoconus_D1",
@@ -3593,14 +3669,14 @@
   "level": "D",
   "code": "D3",
   "text": "Reticulate or highly compartmentalized appearance in appropriate sections",
-  "mappings": [
-   {
-    "chr_id": "CHR_10",
-    "value": "RETICULATE",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Dictyoconus_S1",
@@ -3681,10 +3757,21 @@
    {
     "chr_id": "CHR_02",
     "value": "CONICAL",
-    "confidence": "MEDIUM"
+    "confidence": "HIGH"
+   },
+   {
+    "chr_id": "CHR_02",
+    "value": "HIGH_CONICAL",
+    "confidence": "HIGH"
    }
   ],
-  "status": "MEDIUM"
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "High-conical is included in the conical mandatory description and explicitly described by D1.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Barattolites_M3",
@@ -3703,14 +3790,14 @@
   "level": "D",
   "code": "D1",
   "text": "High-conical morphology",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "HIGH_CONICAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Barattolites_D2",
@@ -3856,14 +3943,14 @@
   "level": "D",
   "code": "D1",
   "text": "Early growth predominantly regular planispiral",
-  "mappings": [
-   {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Alveolina_D2",
@@ -3872,14 +3959,14 @@
   "level": "D",
   "code": "D2",
   "text": "Alveolinid chamberlet architecture",
-  "mappings": [
-   {
-    "chr_id": "CHR_11",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Alveolina_D3",
@@ -3888,14 +3975,14 @@
   "level": "D",
   "code": "D3",
   "text": "Borelis-type secondary chamberlet tier = absent",
-  "mappings": [
-   {
-    "chr_id": "CHR_11",
-    "value": "ABSENT",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Alveolina_D4",
@@ -4013,14 +4100,14 @@
   "level": "C",
   "code": "C4",
   "text": "Borelis-type diagnostic secondary chamberlet pattern present",
-  "mappings": [
-   {
-    "chr_id": "CHR_11",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Glomalveolina_M1",
@@ -4132,17 +4219,18 @@
   "text": "Transition from early changing coiling planes to later planispiral growth",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   },
-   {
     "chr_id": "CHR_07",
     "value": "CHANGING_PLANES",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Glomalveolina_S1",
@@ -4187,24 +4275,14 @@
   "level": "C",
   "code": "C1",
   "text": "Entire ontogeny clearly regular planispiral with no early milioline stage in a section where the nepionic region is demonstrably preserved",
-  "mappings": [
-   {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_05",
-    "value": "QUINQUELOCULINE",
-    "confidence": "LOW"
-   },
-   {
-    "chr_id": "CHR_12",
-    "value": null,
-    "confidence": "LOW"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Glomalveolina_C2",
@@ -4355,14 +4433,14 @@
   "level": "S",
   "code": "S2",
   "text": "Numerous chamberlets",
-  "mappings": [
-   {
-    "chr_id": "CHR_11",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Borelis_S3",
@@ -4671,8 +4749,20 @@
   "level": "D",
   "code": "D2",
   "text": "Multiple apertural openings / apertural modification",
-  "mappings": [],
-  "status": "NONE"
+  "mappings": [
+   {
+    "chr_id": "CHR_16",
+    "value": "MULTIPLE",
+    "confidence": "HIGH"
+   }
+  ],
+  "status": "NONE",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Multiple apertural openings is an existing, literal controlled state.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Hauerina_S1",
@@ -4829,14 +4919,14 @@
   "level": "S",
   "code": "S2",
   "text": "Elongated adult morphology",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "ELONGATE",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Articulina_C1",
@@ -4847,12 +4937,18 @@
   "text": "Adult remains compact quinqueloculine",
   "mappings": [
    {
-    "chr_id": "CHR_05",
-    "value": "QUINQUELOCULINE",
+    "chr_id": "CHR_09",
+    "value": "NONE",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Articulina_C2",
@@ -5544,14 +5640,14 @@
   "level": "D",
   "code": "D1",
   "text": "Peneropline planispiral morphology",
-  "mappings": [
-   {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Peneroplis_D2",
@@ -5662,12 +5758,18 @@
   "text": "Early planispiral stage",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "PLANISPIRAL_TO_UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Represent early coiling plus uniserial adult ontogeny in the existing transition character.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Spirolina_D1",
@@ -5726,12 +5828,18 @@
   "text": "Adult remains entirely planispiral",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "NONE",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Spirolina_C2",
@@ -5790,12 +5898,18 @@
   "text": "Early planispiral growth",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "PLANISPIRAL_TO_UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Represent the early-to-adult change instead of requiring incompatible coiling states simultaneously.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Coscinospira_M4",
@@ -5806,17 +5920,18 @@
   "text": "Later uncoiled/uniserial growth",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "UNCOILED",
-    "confidence": "MEDIUM"
-   },
-   {
     "chr_id": "CHR_05",
     "value": "UNISERIAL",
     "confidence": "HIGH"
    }
   ],
-  "status": "MEDIUM"
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Adult serial arrangement; early coiling is represented separately in CHR_09.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Coscinospira_D1",
@@ -5885,12 +6000,18 @@
   "text": "Adult remains completely planispiral",
   "mappings": [
    {
-    "chr_id": "CHR_06",
-    "value": "PLANISPIRAL",
+    "chr_id": "CHR_09",
+    "value": "NONE",
     "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Dendritina_M1",
@@ -6252,15 +6373,16 @@
    {
     "chr_id": "CHR_19",
     "value": "FREE",
-    "confidence": "MEDIUM"
-   },
-   {
-    "chr_id": "CHR_02",
-    "value": "TUBULAR",
-    "confidence": "MEDIUM"
+    "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove shared tubular shape; retain the stated free, planispiral architecture.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Fabularia_M1",
@@ -6343,14 +6465,14 @@
   "level": "D",
   "code": "D2",
   "text": "Extensive regular internal subdivision",
-  "mappings": [
-   {
-    "chr_id": "CHR_10",
-    "value": "SUBDIVIDED",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Fabularia_S1",
@@ -6491,14 +6613,14 @@
   "level": "D",
   "code": "D2",
   "text": "Pillars alternate between adjacent rows",
-  "mappings": [
-   {
-    "chr_id": "CHR_14",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Lacazina_S1",
@@ -6623,19 +6745,14 @@
   "level": "M",
   "code": "M4",
   "text": "Longitudinal partitions and/or supporting pillars",
-  "mappings": [
-   {
-    "chr_id": "CHR_13",
-    "value": null,
-    "confidence": "LOW"
-   },
-   {
-    "chr_id": "CHR_14",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "LOW"
+  "mappings": [],
+  "status": "LOW",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Partitions and/or pillars is an OR across different characters; the current mapping evaluator implements AND across characters. Retain an explicit non-scoring hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Pseudolacazina_D1",
@@ -6644,14 +6761,14 @@
   "level": "D",
   "code": "D1",
   "text": "Lacazina-type regular alternating pillar pattern absent",
-  "mappings": [
-   {
-    "chr_id": "CHR_14",
-    "value": "ABSENT",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Pseudolacazina_D2",
@@ -6712,14 +6829,14 @@
   "level": "C",
   "code": "C1",
   "text": "Clear Lacazina alternating pillar architecture",
-  "mappings": [
-   {
-    "chr_id": "CHR_14",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Lacazinella_M1",
@@ -6982,12 +7099,18 @@
   "text": "Simple milioline architecture",
   "mappings": [
    {
-    "chr_id": "CHR_05",
-    "value": "QUINQUELOCULINE",
-    "confidence": "LOW"
+    "chr_id": "CHR_10",
+    "value": "SIMPLE",
+    "confidence": "HIGH"
    }
   ],
-  "status": "LOW"
+  "status": "LOW",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Simple chamber interiors are internal complexity, not the absence of true chambers or a shared milioline arrangement.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Periloculina_C2",
@@ -7086,14 +7209,14 @@
   "level": "D",
   "code": "D2",
   "text": "Specialized internal milioline partitions",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "QUINQUELOCULINE",
-    "confidence": "LOW"
-   }
-  ],
-  "status": "LOW"
+  "mappings": [],
+  "status": "LOW",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Idalina_D3",
@@ -7162,17 +7285,18 @@
   "text": "Simple undivided milioline chambers",
   "mappings": [
    {
-    "chr_id": "CHR_04",
-    "value": "UNDIVIDED",
+    "chr_id": "CHR_10",
+    "value": "SIMPLE",
     "confidence": "HIGH"
-   },
-   {
-    "chr_id": "CHR_05",
-    "value": "QUINQUELOCULINE",
-    "confidence": "LOW"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Simple chamber interiors are internal complexity, not the absence of true chambers or a shared milioline arrangement.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Miliola_M1",
@@ -7389,14 +7513,14 @@
   "level": "D",
   "code": "D2",
   "text": "well-developed marginal cord",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "STRONG",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Nummulites_D3",
@@ -8665,9 +8789,20 @@
     "chr_id": "CHR_02",
     "value": "DISCOIDAL",
     "confidence": "HIGH"
+   },
+   {
+    "chr_id": "CHR_02",
+    "value": "STELLATE",
+    "confidence": "HIGH"
    }
   ],
-  "status": "HIGH"
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Allow the explicitly described stellate outline of the flattened test.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Asterocyclina_M3",
@@ -8712,14 +8847,14 @@
   "level": "D",
   "code": "D2",
   "text": "stellate outline",
-  "mappings": [
-   {
-    "chr_id": "CHR_02",
-    "value": "STELLATE",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Discocyclina_M1",
@@ -8796,14 +8931,14 @@
   "level": "D",
   "code": "D1",
   "text": "annular stolons present",
-  "mappings": [
-   {
-    "chr_id": "CHR_05",
-    "value": "ANNULAR",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Discocyclina_D2",
@@ -8919,11 +9054,17 @@
   "mappings": [
    {
     "chr_id": "CHR_12",
-    "value": null,
-    "confidence": "LOW"
+    "value": "COMPLEX",
+    "confidence": "HIGH"
    }
   ],
-  "status": "LOW"
+  "status": "LOW",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing HYA_Q5C answer + generic D3 rule",
+   "reason": "Use the explicit embryonic-apparatus answer in the existing HYA_Q5C tree; development-set alignment, not independent taxonomic verification.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Nemkovella_M1",
@@ -9003,11 +9144,17 @@
   "mappings": [
    {
     "chr_id": "CHR_12",
-    "value": null,
-    "confidence": "LOW"
+    "value": "SIMPLE",
+    "confidence": "HIGH"
    }
   ],
-  "status": "LOW"
+  "status": "LOW",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing HYA_Q5C answer + generic D3 rule",
+   "reason": "Use the explicit embryonic-apparatus answer in the existing HYA_Q5C tree; development-set alignment, not independent taxonomic verification.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Lenticulina_M1",
@@ -9279,14 +9426,14 @@
   "level": "D",
   "code": "D6",
   "text": "Marginal cord only finely to moderately developed",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "WEAK",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Palaeonummulites_S1",
@@ -9321,14 +9468,14 @@
   "level": "S",
   "code": "S3",
   "text": "Marginal cord thinner than in strongly cordate Paleocene genera",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "STRONG",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Relative cord thickness cannot be encoded as STRONG, which this genus explicitly contradicts.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Palaeonummulites_S4",
@@ -9533,14 +9680,14 @@
   "level": "D",
   "code": "D2",
   "text": "Spiral laminae clasp mainly the marginal cord of the preceding whorl rather than completely enclosing earlier whorls",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "PRESENT",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Nummulitoides_D3",
@@ -9559,14 +9706,14 @@
   "level": "D",
   "code": "D4",
   "text": "Marginal cord thick and massive",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "STRONG",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Nummulitoides_D5",
@@ -9863,14 +10010,14 @@
   "level": "D",
   "code": "D6",
   "text": "Marginal cord finely developed and relatively thin",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "WEAK",
-    "confidence": "MEDIUM"
-   }
-  ],
-  "status": "MEDIUM"
+  "mappings": [],
+  "status": "MEDIUM",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Planocamerinoides_S1",
@@ -10105,14 +10252,14 @@
   "level": "D",
   "code": "D1",
   "text": "Very thick/massive marginal cord",
-  "mappings": [
-   {
-    "chr_id": "CHR_17",
-    "value": "STRONG",
-    "confidence": "HIGH"
-   }
-  ],
-  "status": "HIGH"
+  "mappings": [],
+  "status": "HIGH",
+  "curation": {
+   "date": "2026-11-11",
+   "basis": "Existing rule text",
+   "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+   "independent_expert_validated": false
+  }
  },
  {
   "rule_key": "Chordoperculinoides_D2",

@@ -86,7 +86,19 @@ function isSubset(setA, setB) {
  * @param {Object} generaMap - { "GenusName": { genus, module, flag, taxonomicReviewRequired, rules: [{ level, text, mappings }] } }
  * @returns {Object} { status, identification, confidenceNote, ranking, excluded }
  */
-function scoreGenera(observations, generaMap) {
+function scoreGenera(observations, generaMap, options = {}) {
+  const weights = { ...SCORES, ...(options.weights || {}) };
+  const tauObs = options.tauObs ?? 2;
+  const tauNoMatch = options.tauNoMatch ?? 3;
+  const delta = options.delta ?? 1;
+  for (const [level, weight] of Object.entries(weights)) {
+    if (!(level in SCORES) || !Number.isFinite(weight) ||
+        (level === 'CONTRADICTORY' ? weight > 0 : weight < 0)) {
+      throw new RangeError('Invalid evidence weight: ' + level);
+    }
+  }
+  if (![tauObs, tauNoMatch].every(x => Number.isInteger(x) && x >= 1) ||
+      !Number.isFinite(delta) || delta < 0) throw new RangeError('Invalid scoring threshold');
   const h = buildH(observations);
   const scored = [];
   
@@ -134,7 +146,7 @@ function scoreGenera(observations, generaMap) {
       if (L === "MANDATORY") mandatoryTotal++;
       
       if (verdict === "MATCH") {
-        score += SCORES[L] || 0;
+        score += weights[L] || 0;
         matchedEvidence.push({ level: L[0], text, detail });
         
         if (L === "MANDATORY") {
@@ -164,7 +176,7 @@ function scoreGenera(observations, generaMap) {
       }
     }
     
-    score -= 5 * nc;
+    score += weights.CONTRADICTORY * nc;
     const excluded = mv || (nc >= 1 && score < 0);
     let exclusionReason = null;
     if (mv) exclusionReason = "mandatory character incompatible: " + mandatoryViolated[0];
@@ -204,7 +216,7 @@ function scoreGenera(observations, generaMap) {
   let confidenceNote = null;
   
   if (active.length === 0) {
-    status = nObserved >= 3 ? "NO_MATCH_WITHIN_CORE_TAXA" : "INDETERMINATE";
+    status = nObserved >= tauNoMatch ? "NO_MATCH_WITHIN_CORE_TAXA" : "INDETERMINATE";
     confidenceNote = status === "NO_MATCH_WITHIN_CORE_TAXA" 
       ? "VALID_NO_MATCH"
       : "INSUFFICIENT_OBSERVATIONS";
@@ -212,13 +224,13 @@ function scoreGenera(observations, generaMap) {
     const g1 = active[0];
     const g2 = active.length > 1 ? active[1] : null;
     
-    if (nObserved < 2 || !g1._m01) {
+    if (nObserved < tauObs || !g1._m01) {
       status = "INDETERMINATE";
       confidenceNote = "INSUFFICIENT_OBSERVATIONS_LEAD";
     } else {
       const hasD = g1._Dset.size > 0;
       const noC = g1._nc === 0;
-      const sep = g2 === null ? true : ((g1.score - g2.score >= 1) && !isSubset(g1._Dset, g2._Dset));
+      const sep = g2 === null ? true : ((g1.score - g2.score >= delta) && !isSubset(g1._Dset, g2._Dset));
       
       if (hasD && noC && sep) {
         status = "CONFIRMED_GENUS";
@@ -258,5 +270,7 @@ function scoreGenera(observations, generaMap) {
 module.exports = {
   scoreGenera,
   buildH,
-  evaluateRuleM
+  evaluateRuleM,
+  SCORES,
+  VALUE_IMPLIES
 };

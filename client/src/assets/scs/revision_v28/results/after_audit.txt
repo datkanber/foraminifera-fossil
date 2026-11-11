@@ -1,0 +1,86 @@
+(a) contradictory rule repeats a positive pair      0 rules
+(b) mandatory rule conflicts with M/D rule          0 rule pairs
+(c) negated text, positive mapping (screen)         3 rules
+       Caudammina_C1 [C]: "Compact globular chambers without elongated connections" -> [('CHR_02', 'GLOBULAR')]
+       Karrerulina_C2 [C]: "Persistent simple biserial architecture without ontogenetic change" -> [('CHR_05', 'BISERIAL')]
+       Nummulitoides_C2 [C]: "Completely evolute adult whorls with no clasping of the previous marginal cord" -> [('CHR_08', 'EVOLUTE')]
+(d) pair counted more than once in a genus          0 pairs
+(e) mandatory rule without mapping                 28 rules
+       Ammodiscus_M4
+       Recurvoides_M4
+       Rzehakina_M3
+       Gaudryina_M3
+       Dorothia_M3
+       Clavulina_M3
+       Karrerulina_M3
+       Coskinolina_M2
+       Coskinolina_M5
+       Barattolites_M3
+       Quinqueloculina_M3
+       Dendritina_M3
+       Lacazina_M3
+       Pseudolacazina_M4
+       Lacazinella_M4
+       Idalina_M4
+       Operculina_M3
+       Ranikothalia_M3
+       Heterostegina_M3
+       Spiroclypeus_M3
+       Kathina_M3
+       Miscellanea_M2
+       Cuvillierina_M3
+       Asterocyclina_M4
+       Discocyclina_M4
+       Discocyclina_M5
+       Orbitoclypeus_M4
+       Lenticulina_M4
+(f) genus without scoring diagnostic rule          28 genera
+       Psammosphaera (AGGLUTINATED)
+       Bathysiphon (AGGLUTINATED)
+       Rhabdammina (AGGLUTINATED)
+       Rhizammina (AGGLUTINATED)
+       Reticulophragmium (AGGLUTINATED)
+       Trochammina (AGGLUTINATED)
+       Textularia (AGGLUTINATED)
+       Dictyoconus (AGGLUTINATED)
+       Alveolina (PORCELANEOUS)
+       Triloculina (PORCELANEOUS)
+       Pyrgoina (PORCELANEOUS)
+       Peneroplis (PORCELANEOUS)
+       Dendritina (PORCELANEOUS)
+       Fabularia (PORCELANEOUS)
+       Pseudolacazina (PORCELANEOUS)
+       Lacazinella (PORCELANEOUS)
+       Periloculina (PORCELANEOUS)
+       Idalina (PORCELANEOUS)
+       Miliola (PORCELANEOUS)
+       Laffitteina (HYALINE)
+       Rotalia (HYALINE)
+       Pararotalia (HYALINE)
+       Cuvillierina (HYALINE)
+       Ornatorotalia (HYALINE)
+       Granorotalia (HYALINE)
+       Asterocyclina (HYALINE)
+       Discocyclina (HYALINE)
+       Chordoperculinoides (HYALINE)
+(g) tree answer outside vocabulary                  7 answers
+       AGG_Q3E (CHR_05): PLANISPIRAL [maps_to {'CHR_06': 'PLANISPIRAL'}]
+       AGG_Q3E (CHR_05): STREPTOSPIRAL [maps_to {'CHR_06': 'STREPTOSPIRAL'}]
+       AGG_Q3E (CHR_05): TROCHOSPIRAL [maps_to {'CHR_06': 'TROCHOSPIRAL'}]
+       AGG_Q3E (CHR_05): CHANGES_DURING_GROWTH [maps_to {'CHR_09': '*'}]
+       AGG_Q3E (CHR_05): FLATTENED_SIGMOID
+       PORC_Q4B3 (CHR_13): SPECIALISED
+       HYA_Q1 (CHR_06): ANNULAR_CYCLIC [maps_to {'CHR_05': 'ANNULAR'}]
+(h) character asked again on a path                11 nodes
+       AGG_Q4F asks CHR_03 again (first asked at AGG_Q1)
+       AGG_Q5A asks CHR_13 again (first asked at AGG_Q3D)
+       AGG_Q5E asks CHR_09 again (first asked at AGG_Q4H)
+       AGG_Q5F asks CHR_09 again (first asked at AGG_Q4I)
+       AGG_Q6B asks CHR_09 again (first asked at AGG_Q4H)
+       PORC_Q4A3 asks CHR_11 again (first asked at PORC_Q4A)
+       PORC_Q4B3 asks CHR_13 again (first asked at PORC_Q4B2A)
+       PORC_Q4BF asks CHR_10 again (first asked at PORC_Q2)
+       HYA_Q4A asks CHR_17 again (first asked at HYA_Q3B)
+       HYA_Q6BT asks CHR_14 again (first asked at HYA_Q4BT)
+       HYA_Q7B asks CHR_02 again (first asked at HYA_Q5A)
+(i) genus without exactly one module                0 genera

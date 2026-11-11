@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "api/data/rule_chr_mapping.json": "ffaf13dd5ee384d01cd1b30380a314c615e5d3c3d846c4191037630eb7c3a309",
+    "api/data/characters.json": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "api/src/services/scoring.js": "443d8058fdc9e7dcb80702ffb4a3d6edb1fd452d5644f3bd54f8915dd52ed994",
+    "client/src/assets/scs/evaluation/panel_manifest.json": "6fb4c75f2d0a095c15262c0e4551507b7ae537b77255218f45791262849b804c"
+  },
+  "configurations": 33,
+  "p": 0.9,
+  "threshold_grid": 27,
+  "rbo_source": "https://www.williamwebber.com/research/papers/wmz10_tois.pdf, Eq. 32",
+  "ties": "RBO uses actual deterministic service order; Acc@k uses fractional score ties. Empty/empty ranking similarity=1, not a correct identification.",
+  "normalization": "Primary = archived application-normalized sheets; secondary = restore raw UNCERTAIN/NOT_OBSERVABLE only.",
+  "limits": "Development sensitivity, no weight tuning on a held-out set and no new model requests."
+}

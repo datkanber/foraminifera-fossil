@@ -1,0 +1,6 @@
+candidate_id,source_doi,page,figure,panel,source_sample,source_identification,reference_genus,module,age,imaging,license,status
+MATTERN2024_F15_A,10.3390/geosciences14120352,23,15,A,Log Segment 1 Sample 1,Alveolina cf. elliptica,Alveolina,PORCELANEOUS,Ypresian and mid-Eocene,PPL,CC-BY-4.0,candidate_not_evaluated
+MATTERN2024_F15_B,10.3390/geosciences14120352,23,15,B,Log Segment 1 Sample 4,Alveolina cf. oblonga,Alveolina,PORCELANEOUS,Ypresian,PPL,CC-BY-4.0,candidate_not_evaluated
+MATTERN2024_F15_C,10.3390/geosciences14120352,23,15,C,Log Segment 1 Sample 7,Alveolina cf. leupoldi,Alveolina,PORCELANEOUS,Ypresian,PPL,CC-BY-4.0,candidate_not_evaluated
+MATTERN2024_F15_D,10.3390/geosciences14120352,23,15,D,Log Segment 1 Sample 8,Alveolina cf. globosa,Alveolina,PORCELANEOUS,Ypresian,PPL,CC-BY-4.0,candidate_not_evaluated
+MATTERN2024_F15_E,10.3390/geosciences14120352,23,15,E,Log Segment 1 Sample 11,Alveolina cf. subpyrenaica,Alveolina,PORCELANEOUS,Ypresian,PL,CC-BY-4.0,candidate_not_evaluated

@@ -1,0 +1,35 @@
+[
+  {
+    "file": "Figure_12_Exploratory_Accuracy.pdf",
+    "pages": [
+      {
+        "width_pt": 534.3353271484375,
+        "height_pt": 305.09295654296875,
+        "text_characters": 396,
+        "raster_images": 0
+      }
+    ]
+  },
+  {
+    "file": "Figure_13_Source_Label_Confusion.pdf",
+    "pages": [
+      {
+        "width_pt": 529.9756469726562,
+        "height_pt": 742.9202880859375,
+        "text_characters": 1575,
+        "raster_images": 0
+      }
+    ]
+  },
+  {
+    "file": "Figure_14_Confidence_State_Agreement.pdf",
+    "pages": [
+      {
+        "width_pt": 537.9868774414062,
+        "height_pt": 332.27130126953125,
+        "text_characters": 462,
+        "raster_images": 0
+      }
+    ]
+  }
+]

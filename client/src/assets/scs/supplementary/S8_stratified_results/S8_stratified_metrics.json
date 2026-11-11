@@ -1,0 +1,404 @@
+[
+  {
+    "group": "AGGLUTINATED",
+    "n": 33,
+    "source_clusters": 7,
+    "acc1": {
+      "mean": 0.030303030303030304,
+      "low": 0.0,
+      "high": 0.05660913379073754,
+      "n": 33,
+      "clusters": 7
+    },
+    "acc3": {
+      "mean": 0.5454545454545454,
+      "low": 0.2962962962962963,
+      "high": 0.7435897435897436,
+      "n": 33,
+      "clusters": 7
+    },
+    "coverage": {
+      "mean": 0.9696969696969697,
+      "low": 0.8709677419354839,
+      "high": 1.0,
+      "n": 33,
+      "clusters": 7
+    },
+    "reference_exclusion": {
+      "mean": 0.36363636363636365,
+      "low": 0.22448979591836735,
+      "high": 0.5238095238095238,
+      "n": 33,
+      "clusters": 7
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 33,
+      "clusters": 7
+    },
+    "states": {
+      "CONFIRMED_GENUS": 11,
+      "CANDIDATE_GENUS": 21,
+      "INDETERMINATE": 1
+    }
+  },
+  {
+    "group": "PORCELANEOUS",
+    "n": 37,
+    "source_clusters": 10,
+    "acc1": {
+      "mean": 0.10810810810810811,
+      "low": 0.037718378756114605,
+      "high": 0.16666666666666666,
+      "n": 37,
+      "clusters": 10
+    },
+    "acc3": {
+      "mean": 0.13513513513513514,
+      "low": 0.04,
+      "high": 0.23529411764705882,
+      "n": 37,
+      "clusters": 10
+    },
+    "coverage": {
+      "mean": 0.9459459459459459,
+      "low": 0.8569264069264069,
+      "high": 1.0,
+      "n": 37,
+      "clusters": 10
+    },
+    "reference_exclusion": {
+      "mean": 0.35135135135135137,
+      "low": 0.11764705882352941,
+      "high": 0.5333333333333333,
+      "n": 37,
+      "clusters": 10
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.10810810810810811,
+      "low": 0.037718378756114605,
+      "high": 0.16666666666666666,
+      "n": 37,
+      "clusters": 10
+    },
+    "states": {
+      "CONFIRMED_GENUS": 22,
+      "INDETERMINATE": 2,
+      "CANDIDATE_GENUS": 13
+    }
+  },
+  {
+    "group": "HYALINE",
+    "n": 80,
+    "source_clusters": 16,
+    "acc1": {
+      "mean": 0.029166666666666664,
+      "low": 0.0,
+      "high": 0.06468571775269986,
+      "n": 80,
+      "clusters": 16
+    },
+    "acc3": {
+      "mean": 0.08958333333333332,
+      "low": 0.03332417582417582,
+      "high": 0.16452850877192954,
+      "n": 80,
+      "clusters": 16
+    },
+    "coverage": {
+      "mean": 0.825,
+      "low": 0.7101332398316971,
+      "high": 0.9176470588235294,
+      "n": 80,
+      "clusters": 16
+    },
+    "reference_exclusion": {
+      "mean": 0.5375,
+      "low": 0.3522727272727273,
+      "high": 0.7143298059964724,
+      "n": 80,
+      "clusters": 16
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.025,
+      "low": 0.0,
+      "high": 0.05952380952380952,
+      "n": 80,
+      "clusters": 16
+    },
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 41,
+      "CANDIDATE_GENUS": 24,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "group": "Additional articles / AGGLUTINATED",
+    "n": 23,
+    "source_clusters": 4,
+    "acc1": {
+      "mean": 0.021739130434782608,
+      "low": 0.0,
+      "high": 0.04838709677419355,
+      "n": 23,
+      "clusters": 4
+    },
+    "acc3": {
+      "mean": 0.5652173913043478,
+      "low": 0.21428571428571427,
+      "high": 0.8275862068965517,
+      "n": 23,
+      "clusters": 4
+    },
+    "coverage": {
+      "mean": 1.0,
+      "low": 1.0,
+      "high": 1.0,
+      "n": 23,
+      "clusters": 4
+    },
+    "reference_exclusion": {
+      "mean": 0.34782608695652173,
+      "low": 0.16129032258064516,
+      "high": 0.5,
+      "n": 23,
+      "clusters": 4
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 23,
+      "clusters": 4
+    },
+    "states": {
+      "CONFIRMED_GENUS": 8,
+      "CANDIDATE_GENUS": 15
+    }
+  },
+  {
+    "group": "Additional articles / PORCELANEOUS",
+    "n": 5,
+    "source_clusters": 5,
+    "acc1": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 5,
+      "clusters": 5
+    },
+    "acc3": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 5,
+      "clusters": 5
+    },
+    "coverage": {
+      "mean": 0.8,
+      "low": 0.4,
+      "high": 1.0,
+      "n": 5,
+      "clusters": 5
+    },
+    "reference_exclusion": {
+      "mean": 0.4,
+      "low": 0.0,
+      "high": 0.8,
+      "n": 5,
+      "clusters": 5
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 5,
+      "clusters": 5
+    },
+    "states": {
+      "CONFIRMED_GENUS": 2,
+      "INDETERMINATE": 1,
+      "CANDIDATE_GENUS": 2
+    }
+  },
+  {
+    "group": "Additional articles / HYALINE",
+    "n": 0,
+    "source_clusters": 0,
+    "acc1": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "n": 0,
+      "clusters": 0
+    },
+    "acc3": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "n": 0,
+      "clusters": 0
+    },
+    "coverage": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "n": 0,
+      "clusters": 0
+    },
+    "reference_exclusion": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "n": 0,
+      "clusters": 0
+    },
+    "displayed_top1_accuracy": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "n": 0,
+      "clusters": 0
+    },
+    "states": {}
+  },
+  {
+    "group": "KB reference book (overlap) / AGGLUTINATED",
+    "n": 10,
+    "source_clusters": 3,
+    "acc1": {
+      "mean": 0.05,
+      "low": 0.0,
+      "high": 0.08333333333333333,
+      "n": 10,
+      "clusters": 3
+    },
+    "acc3": {
+      "mean": 0.5,
+      "low": 0.0,
+      "high": 0.6666666666666666,
+      "n": 10,
+      "clusters": 3
+    },
+    "coverage": {
+      "mean": 0.9,
+      "low": 0.6666666666666666,
+      "high": 1.0,
+      "n": 10,
+      "clusters": 3
+    },
+    "reference_exclusion": {
+      "mean": 0.4,
+      "low": 0.3333333333333333,
+      "high": 1.0,
+      "n": 10,
+      "clusters": 3
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "n": 10,
+      "clusters": 3
+    },
+    "states": {
+      "CONFIRMED_GENUS": 3,
+      "INDETERMINATE": 1,
+      "CANDIDATE_GENUS": 6
+    }
+  },
+  {
+    "group": "KB reference book (overlap) / PORCELANEOUS",
+    "n": 32,
+    "source_clusters": 5,
+    "acc1": {
+      "mean": 0.125,
+      "low": 0.05263157894736842,
+      "high": 0.2,
+      "n": 32,
+      "clusters": 5
+    },
+    "acc3": {
+      "mean": 0.15625,
+      "low": 0.058823529411764705,
+      "high": 0.28,
+      "n": 32,
+      "clusters": 5
+    },
+    "coverage": {
+      "mean": 0.96875,
+      "low": 0.9117647058823529,
+      "high": 1.0,
+      "n": 32,
+      "clusters": 5
+    },
+    "reference_exclusion": {
+      "mean": 0.34375,
+      "low": 0.10714285714285714,
+      "high": 0.525,
+      "n": 32,
+      "clusters": 5
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.125,
+      "low": 0.05263157894736842,
+      "high": 0.2,
+      "n": 32,
+      "clusters": 5
+    },
+    "states": {
+      "CONFIRMED_GENUS": 20,
+      "CANDIDATE_GENUS": 11,
+      "INDETERMINATE": 1
+    }
+  },
+  {
+    "group": "KB reference book (overlap) / HYALINE",
+    "n": 80,
+    "source_clusters": 16,
+    "acc1": {
+      "mean": 0.029166666666666664,
+      "low": 0.0,
+      "high": 0.06468571775269986,
+      "n": 80,
+      "clusters": 16
+    },
+    "acc3": {
+      "mean": 0.08958333333333332,
+      "low": 0.03332417582417582,
+      "high": 0.16452850877192954,
+      "n": 80,
+      "clusters": 16
+    },
+    "coverage": {
+      "mean": 0.825,
+      "low": 0.7101332398316971,
+      "high": 0.9176470588235294,
+      "n": 80,
+      "clusters": 16
+    },
+    "reference_exclusion": {
+      "mean": 0.5375,
+      "low": 0.3522727272727273,
+      "high": 0.7143298059964724,
+      "n": 80,
+      "clusters": 16
+    },
+    "displayed_top1_accuracy": {
+      "mean": 0.025,
+      "low": 0.0,
+      "high": 0.05952380952380952,
+      "n": 80,
+      "clusters": 16
+    },
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 41,
+      "CANDIDATE_GENUS": 24,
+      "PROBABLE_GENUS": 1
+    }
+  }
+]

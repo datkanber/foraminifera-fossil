@@ -1,0 +1,75 @@
+
+> api@1.0.0 test
+> node --test test/*.test.js
+
+✔ consistency.test.js - Check 104 paths against Engine M (31.084ms)
+✔ sensitivity options preserve default and do not mutate observations (1.5708ms)
+✔ tauObs affects output state while preserving the ranking (0.2575ms)
+✔ tauNoMatch is applied only when no active candidate remains (0.2402ms)
+✔ weight sign and threshold validation catches invalid experiment settings (1.3009ms)
+✔ scoring.table13.test.js - Tablo XIII A (1.896ms)
+✔ scoring.table13.test.js - Tablo XIII B (0.603ms)
+✔ evaluateRuleM - single character unobserved -> NEUTRAL (2.4457ms)
+✔ evaluateRuleM - two characters, one observed and matching, one unobserved -> MATCH (0.6327ms)
+✔ evaluateRuleM - two characters, one matching, one mismatching -> MISMATCH (0.3612ms)
+✔ evaluateRuleM - two alternative states, one observed -> MATCH (0.3535ms)
+✔ evaluateRuleM - implication CHR_17 STRONG implies PRESENT (1.2872ms)
+✔ evaluateRuleM - NOT_OBSERVABLE and UNCERTAIN never mismatch (0.173ms)
+✔ scoreGenera - A=empty => NO_MATCH or INDETERMINATE (1.0689ms)
+✔ scoreGenera - implied characters do not artificially inflate nObserved (0.176ms)
+✔ scoreGenera - nObserved < 2 => INDETERMINATE (0.2546ms)
+✔ scoreGenera - tie -> CANDIDATE_GENUS (0.313ms)
+▶ normalizeBool
+  ✔ should normalize 1 to true (0.8237ms)
+  ✔ should normalize "1" to true (0.2071ms)
+  ✔ should normalize true to true (0.2066ms)
+  ✔ should normalize 0 to false (0.1162ms)
+  ✔ should normalize "0" to false (0.1048ms)
+  ✔ should normalize false to false (0.1023ms)
+  ✔ should normalize null to null (0.0994ms)
+  ✔ should normalize undefined to null (0.1513ms)
+  ✔ should normalize unknown string to null (0.1261ms)
+  ✔ should normalize empty string to null (0.3053ms)
+✔ normalizeBool (3.6216ms)
+▶ extractClassification
+  ✔ should extract Order, Superfamily, Family, Genus from nested tree (0.1981ms)
+  ✔ should handle case-insensitive rank matching (0.6514ms)
+  ✔ should return all nulls for null input (0.5434ms)
+  ✔ should return all nulls for empty classification (0.1184ms)
+  ✔ should handle partial classification tree (0.0654ms)
+✔ extractClassification (1.9928ms)
+▶ extractFunctionalGroups
+  ✔ should extract functional groups from attributes (0.1286ms)
+  ✔ should return empty array for no matching attributes (0.0469ms)
+  ✔ should return empty array for null input (0.0315ms)
+  ✔ should not duplicate values (0.037ms)
+✔ extractFunctionalGroups (0.3084ms)
+▶ Accepted vs unaccepted name handling
+  ✔ should identify accepted status correctly (0.0615ms)
+  ✔ should preserve both queried and accepted names for unaccepted records (0.0424ms)
+✔ Accepted vs unaccepted name handling (0.1439ms)
+▶ Species vs Genus data separation
+  ✔ should not label species records as genus data (0.2962ms)
+  ✔ should allow genus-level records without generalization warning (0.0778ms)
+✔ Species vs Genus data separation (0.448ms)
+▶ Opertorbitolites name preservation
+  ✔ should not silently change Opertorbitolites (0.0963ms)
+  ✔ should flag Opertorbitolites as needing taxonomic review (0.0643ms)
+✔ Opertorbitolites name preservation (0.2665ms)
+▶ Case-insensitive search
+  ✔ should match lowercase search against mixed-case names (0.2521ms)
+  ✔ should match uppercase search against mixed-case names (0.2423ms)
+  ✔ should return all when search is empty (0.0885ms)
+✔ Case-insensitive search (0.75ms)
+▶ WoRMS timeout fallback behavior
+  ✔ should return local data structure when WoRMS is unavailable (0.2211ms)
+  ✔ should return stale cache when WoRMS is unavailable but cache exists (0.1435ms)
+✔ WoRMS timeout fallback behavior (0.4365ms)
+ℹ tests 47
+ℹ suites 8
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 172.8511

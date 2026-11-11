@@ -1,0 +1,32 @@
+{
+  "n_images": 150,
+  "n_genera": 24,
+  "by_module": {
+    "AGGLUTINATED": 33,
+    "PORCELANEOUS": 37,
+    "HYALINE": 80
+  },
+  "by_cohort": {
+    "Additional articles": 28,
+    "KB reference book (overlap)": 122
+  },
+  "n_source_clusters": 30,
+  "manifest_sha256": "3cf439f41542fe4f131b6e2c78626bb6df50857794d0ae25b5dc5ee2c9e71ebf",
+  "selection": "28 article panels, then first 122 eligible book panels in plate/panel order; fixed before outcome analysis.",
+  "independence": "150 image panels, not 150 verified independent specimens. Source/reference overlap reported separately.",
+  "runs_per_image": 1,
+  "development_probe": "Coskinolina Fig.4a, excluded",
+  "evaluated_conditions": [
+    "VLM character sheet + released local engine (C4-like)"
+  ],
+  "excluded_conditions": [
+    "C1",
+    "C2",
+    "C3",
+    "B1 on expert sheets",
+    "expert-VLM character agreement",
+    "human timing"
+  ],
+  "model": "configured api/.env model; recorded at execution",
+  "no_posthoc_tuning": true
+}

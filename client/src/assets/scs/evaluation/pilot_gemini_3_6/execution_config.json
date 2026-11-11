@@ -1,0 +1,17 @@
+{
+  "manifestSha256": "6fb4c75f2d0a095c15262c0e4551507b7ae537b77255218f45791262849b804c",
+  "model": "gemini-3.6-flash",
+  "providerHost": "generativelanguage.googleapis.com",
+  "scoringSha256": "c19de11b1b8792850a667de65ef0ae596c252f4d507fab499bcfee71a9a68a67",
+  "controllerSha256": "9bedb81e3f7a5f628de2bfce7b80b7c04acd065e5d171c1632f45ec84f411f9b",
+  "promptSha256": "07220d3a9c67b5686a7887b2f9c29a8f4ad787cef21cb3f14bd58a817d2cb4dc",
+  "rulesSha256": "acb0354cf4a2b1af0ff6609b3b2b858923bb3a1f0bc1632838e84ab7a5229c35",
+  "runsPerImage": 1,
+  "concurrency": 3,
+  "minimumStartIntervalMs": 3500,
+  "observationSource": "Uncorrected, application-normalized VLM observations",
+  "referenceLabelsSentToModel": false,
+  "useReferenceModuleForScoring": false,
+  "configHash": "3c7ff4caad902856355fa1a7253d4c73a0ac3f8eb969e4ac6bdcf3a78176219b",
+  "startedAt": "2026-11-09T09:11:23.833Z"
+}

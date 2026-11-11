@@ -83,7 +83,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Glomalveolina",
@@ -155,7 +162,14 @@
         "Erken evre fotoğrafta **görünmüyorsa** C1 uygulanmaz.",
         "Yalnızca erken evrenin gerçekten kesildiğinden eminsek ve milioline evre yoksa bu negatif kanıt sayılır."
       ],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 10,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Borelis",
@@ -225,7 +239,14 @@
       "notes": [
         "Dolayısıyla **Alveolina--Glomalveolina--Borelis** üçlüsü artık yalnızca şekle göre ayrılmıyor."
       ],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Quinqueloculina",
@@ -289,7 +310,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Hauerina",
@@ -345,7 +373,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Articulina",
@@ -397,7 +432,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Triloculina",
@@ -457,7 +499,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Miliolinella",
@@ -509,7 +558,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Pyrgo",
@@ -561,7 +617,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Pyrgoina",
@@ -609,7 +672,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Sigmoilina",
@@ -653,7 +723,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Peneroplis",
@@ -705,7 +782,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Spirolina",
@@ -752,7 +836,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Coscinospira",
@@ -804,7 +895,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Dendritina",
@@ -844,7 +942,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 3,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Vertebralina",
@@ -888,7 +993,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Cornuspira",
@@ -923,7 +1035,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Nubecularia",
@@ -959,7 +1078,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Fabularia",
@@ -1019,7 +1145,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Lacazina",
@@ -1075,7 +1208,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Pseudolacazina",
@@ -1131,7 +1271,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Lacazinella",
@@ -1191,7 +1338,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Periloculina",
@@ -1243,7 +1397,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Idalina",
@@ -1305,7 +1466,14 @@
       "notes": [
         "Burada numara 26 görünmesinin nedeni Miliolayı ayrıca aşağıda vermemiz; toplam hedef hâlâ 25 cins."
       ],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Miliola",
@@ -1348,7 +1516,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     }
   ]
 }

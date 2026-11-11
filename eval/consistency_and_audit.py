@@ -32,7 +32,8 @@ if sys.stdout.encoding != "utf-8":
 # 1.  Load data
 # ──────────────────────────────────────────────────────────────────────
 
-D = (sys.argv[1] if len(sys.argv) > 1 else "api/data").rstrip("/") + "/"
+positional_args = [arg for arg in sys.argv[1:] if not arg.startswith('--')]
+D = (positional_args[0] if positional_args else "api/data").rstrip("/") + "/"
 
 chars = {
     c["id"]: c["values"]
@@ -467,10 +468,16 @@ def find_exclusion_rules(obs, module, genus):
     rs = genera.get((module, genus), [])
     h = H(obs)
     for r in rs:
-        v_r = verdict_R(obs, r)
         v_m, _ = verdict_M(h, r)
-        if r["level"] == "M" and (v_r == "MISMATCH" or v_m == "MISMATCH"):
+        if r["level"] == "M" and v_m == "MISMATCH":
             reasons.append(f'{r["code"]}:{r["text"]}')
+    if not reasons:
+        _, results, _, _ = engine_M(obs, module)
+        target = next(x for x in results if x['g'] == genus)
+        if target['excl']:
+            for r in rs:
+                if r['level'] == 'C' and verdict_M(h, r)[0] == 'MATCH':
+                    reasons.append(f'{r["code"]}:{r["text"]} (strong contradiction; score={target["s"]})')
     return reasons
 
 
@@ -529,6 +536,7 @@ def main():
                 "v18_top": "",
                 "v18_leaf_rank": "",
                 "leaf_excluded": r_val is None,
+                "repo_leaf_excluded": r_val is None,
                 "leaf_exclusion_rules": " | ".join(excl_rules),
             })
 
@@ -564,6 +572,7 @@ def main():
             all_paths_data[offset + idx]["v18_state"] = st
             all_paths_data[offset + idx]["v18_top"] = top or ""
             all_paths_data[offset + idx]["v18_leaf_rank"] = r_val if r_val else "excluded"
+            all_paths_data[offset + idx]["leaf_excluded"] = r_val is None
 
         summary[(module, "M")] = (row_M, states_M)
 
@@ -620,7 +629,7 @@ def main():
         "module", "leaf_genus", "observations", "n_obs_excl_CHR01",
         "repo_state", "repo_top", "repo_leaf_rank",
         "v18_state", "v18_top", "v18_leaf_rank",
-        "leaf_excluded", "leaf_exclusion_rules",
+        "leaf_excluded", "repo_leaf_excluded", "leaf_exclusion_rules",
     ]
     with open("eval/results/consistency_paths.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)

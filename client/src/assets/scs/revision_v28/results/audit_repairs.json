@@ -1,0 +1,1244 @@
+{
+  "starting_mapping_sha256": "acb0354cf4a2b1af0ff6609b3b2b858923bb3a1f0bc1632838e84ab7a5229c35",
+  "result_mapping_sha256": "ffaf13dd5ee384d01cd1b30380a314c615e5d3c3d846c4191037630eb7c3a309",
+  "rules": 706,
+  "changes": [
+    {
+      "rule_key": "Rhabdammina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Rhizammina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Alveolina_C4",
+      "before": [
+        {
+          "chr_id": "CHR_11",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Glomalveolina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_05",
+          "value": "QUINQUELOCULINE",
+          "confidence": "LOW"
+        },
+        {
+          "chr_id": "CHR_12",
+          "value": null,
+          "confidence": "LOW"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Pseudolacazina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_14",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Alveolina_D3",
+      "before": [
+        {
+          "chr_id": "CHR_11",
+          "value": "ABSENT",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Pseudolacazina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_14",
+          "value": "ABSENT",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Qualifier is not represented in the controlled vocabulary; retain text as a non-scoring observation hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Ammobaculites_C1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "NONE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Ammobaculites_C2",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_05",
+          "value": "BISERIAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_BISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_BISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Textularia_C1",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "BISERIAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_09",
+          "value": "TRISERIAL_TO_BISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "TRISERIAL_TO_BISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Spiroplectammina_C2",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_05",
+          "value": "UNISERIAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Clavulina_C2",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "BISERIAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Articulina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "QUINQUELOCULINE",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "NONE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Spirolina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "NONE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coscinospira_C2",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "NONE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Encode the ontogenetic transition (or explicit lack of change), not a shared early/adult component.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Nubecularia_C1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_19",
+          "value": "FREE",
+          "confidence": "MEDIUM"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_19",
+          "value": "FREE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Remove shared tubular shape; retain the stated free, planispiral architecture.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Periloculina_C1",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "QUINQUELOCULINE",
+          "confidence": "LOW"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SIMPLE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Simple chamber interiors are internal complexity, not the absence of true chambers or a shared milioline arrangement.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Idalina_C2",
+      "before": [
+        {
+          "chr_id": "CHR_04",
+          "value": "UNDIVIDED",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_05",
+          "value": "QUINQUELOCULINE",
+          "confidence": "LOW"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SIMPLE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Simple chamber interiors are internal complexity, not the absence of true chambers or a shared milioline arrangement.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Palaeonummulites_S3",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "STRONG",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Relative cord thickness cannot be encoded as STRONG, which this genus explicitly contradicts.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Saccammina_M3",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "GLOBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_02",
+          "value": "GLOBULAR",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "SAC_LIKE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Both alternatives are explicitly stated in the mandatory rule.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Saccammina_D2",
+      "before": [],
+      "after": [
+        {
+          "chr_id": "CHR_06",
+          "value": "UNCOILED",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "No tubular coiling: uncoiled state, without inventing a chamber type.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Reticulophragmium_M4",
+      "before": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SUBDIVIDED",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SUBDIVIDED",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_10",
+          "value": "LABYRINTHIC",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Accept the explicitly described specialized subdivision as an alternative to its generic subdivision state.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Dictyoconus_M4",
+      "before": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SUBDIVIDED",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SUBDIVIDED",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_10",
+          "value": "RETICULATE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Accept the explicitly described specialized subdivision as an alternative to its generic subdivision state.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Barattolites_M2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "CONICAL",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_02",
+          "value": "CONICAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "HIGH_CONICAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "High-conical is included in the conical mandatory description and explicitly described by D1.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coskinolina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_04",
+          "value": "UNDIVIDED",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Marginal chamber lumen is not the whole test cavity; undivided marginal space does not mean an unchambered organism.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coskinolina_D2",
+      "before": [],
+      "after": [
+        {
+          "chr_id": "CHR_13",
+          "value": "ABSENT",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Map explicitly absent marginal exoskeletal partitions; do not infer absence of true septa.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Spirolina_M3",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Represent early coiling plus uniserial adult ontogeny in the existing transition character.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coscinospira_M3",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Represent the early-to-adult change instead of requiring incompatible coiling states simultaneously.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coscinospira_M4",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "UNCOILED",
+          "confidence": "MEDIUM"
+        },
+        {
+          "chr_id": "CHR_05",
+          "value": "UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_05",
+          "value": "UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Adult serial arrangement; early coiling is represented separately in CHR_09.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Pseudolacazina_M4",
+      "before": [
+        {
+          "chr_id": "CHR_13",
+          "value": null,
+          "confidence": "LOW"
+        },
+        {
+          "chr_id": "CHR_14",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Partitions and/or pillars is an OR across different characters; the current mapping evaluator implements AND across characters. Retain an explicit non-scoring hint.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Asterocyclina_M2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "DISCOIDAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_02",
+          "value": "DISCOIDAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "STELLATE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Allow the explicitly described stellate outline of the flattened test.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Hauerina_D2",
+      "before": [],
+      "after": [
+        {
+          "chr_id": "CHR_16",
+          "value": "MULTIPLE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Multiple apertural openings is an existing, literal controlled state.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Orbitoclypeus_D3",
+      "before": [
+        {
+          "chr_id": "CHR_12",
+          "value": null,
+          "confidence": "LOW"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_12",
+          "value": "COMPLEX",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Use the explicit embryonic-apparatus answer in the existing HYA_Q5C tree; development-set alignment, not independent taxonomic verification.",
+      "basis": "Existing HYA_Q5C answer + generic D3 rule"
+    },
+    {
+      "rule_key": "Nemkovella_D3",
+      "before": [
+        {
+          "chr_id": "CHR_12",
+          "value": null,
+          "confidence": "LOW"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_12",
+          "value": "SIMPLE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Use the explicit embryonic-apparatus answer in the existing HYA_Q5C tree; development-set alignment, not independent taxonomic verification.",
+      "basis": "Existing HYA_Q5C answer + generic D3 rule"
+    },
+    {
+      "rule_key": "Ammodiscus_D1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Saccammina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_04",
+          "value": "UNDIVIDED",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_02",
+          "value": "SAC_LIKE",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Bathysiphon_D1",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Bathysiphon_D2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Caudammina_D3",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "ELONGATE",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Haplophragmoides_D2",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Reticulophragmium_D1",
+      "before": [
+        {
+          "chr_id": "CHR_10",
+          "value": "LABYRINTHIC",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Trochammina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "TROCHOSPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Textularia_D2",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "BISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Clavulina_S2",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Coskinolina_D3",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "CONICAL",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Dictyoconus_D3",
+      "before": [
+        {
+          "chr_id": "CHR_10",
+          "value": "RETICULATE",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Barattolites_D1",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "HIGH_CONICAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Alveolina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Alveolina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_11",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Glomalveolina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        },
+        {
+          "chr_id": "CHR_07",
+          "value": "CHANGING_PLANES",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_07",
+          "value": "CHANGING_PLANES",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Borelis_S2",
+      "before": [
+        {
+          "chr_id": "CHR_11",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Articulina_S2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "ELONGATE",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Peneroplis_D1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Fabularia_D2",
+      "before": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SUBDIVIDED",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Lacazina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_14",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Idalina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "QUINQUELOCULINE",
+          "confidence": "LOW"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Nummulites_D2",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "STRONG",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Asterocyclina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "STELLATE",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Discocyclina_D1",
+      "before": [
+        {
+          "chr_id": "CHR_05",
+          "value": "ANNULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Palaeonummulites_D6",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "WEAK",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Nummulitoides_D2",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "PRESENT",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Nummulitoides_D4",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "STRONG",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Planocamerinoides_D6",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "WEAK",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Chordoperculinoides_D1",
+      "before": [
+        {
+          "chr_id": "CHR_17",
+          "value": "STRONG",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [],
+      "reason": "Remove repeated positive evidence; preserve the original detailed description as an unscored hint when the vocabulary cannot express its extra qualifier.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Haplophragmoides_D1",
+      "before": [],
+      "after": [
+        {
+          "chr_id": "CHR_10",
+          "value": "SIMPLE",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "Literal chambers internally simple, already in the controlled vocabulary.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Caudammina_D2",
+      "before": [
+        {
+          "chr_id": "CHR_02",
+          "value": "TUBULAR",
+          "confidence": "MEDIUM"
+        }
+      ],
+      "after": [],
+      "reason": "Tubular inter-chamber connections are not whole-test shape; the vocabulary has no connection-shape character.",
+      "basis": "Existing rule text"
+    },
+    {
+      "rule_key": "Ammobaculites_D1",
+      "before": [
+        {
+          "chr_id": "CHR_06",
+          "value": "PLANISPIRAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "after": [
+        {
+          "chr_id": "CHR_09",
+          "value": "PLANISPIRAL_TO_UNISERIAL",
+          "confidence": "HIGH"
+        }
+      ],
+      "reason": "The jointly stated early planispiral and adult uniserial ontogeny is represented by the existing transition state, rather than simultaneous incompatible coiling values.",
+      "basis": "Existing rule text"
+    }
+  ],
+  "original_18_without_diagnostic": [
+    {
+      "genus": "Psammosphaera",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Rhabdammina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Rhizammina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Hauerina",
+      "mapped_D_rules": [
+        "Hauerina_D2"
+      ],
+      "status": "mapped_from_existing_definition",
+      "reason": "Literal existing vocabulary / explicit development-tree state; not an expert-validated diagnosis."
+    },
+    {
+      "genus": "Triloculina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Pyrgoina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Dendritina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Lacazinella",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Periloculina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Miliola",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Laffitteina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Rotalia",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Pararotalia",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Cuvillierina",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Ornatorotalia",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Granorotalia",
+      "mapped_D_rules": [],
+      "status": "requires_vocabulary_extension_or_taxonomic_curation",
+      "reason": "No unique anatomical state may be invented to force a diagnostic hit; shared generic architecture is not a substitute for branching, wall texture, ornament, chamberlet subtype or apertural subtype."
+    },
+    {
+      "genus": "Orbitoclypeus",
+      "mapped_D_rules": [
+        "Orbitoclypeus_D3"
+      ],
+      "status": "mapped_from_existing_definition",
+      "reason": "Literal existing vocabulary / explicit development-tree state; not an expert-validated diagnosis."
+    },
+    {
+      "genus": "Nemkovella",
+      "mapped_D_rules": [
+        "Nemkovella_D3"
+      ],
+      "status": "mapped_from_existing_definition",
+      "reason": "Literal existing vocabulary / explicit development-tree state; not an expert-validated diagnosis."
+    }
+  ],
+  "scope": "Encoding repairs only. No VLM labels, path accuracy, or Monte Carlo outcomes used to choose repairs. Rule-card text/evidence levels unchanged. Unrepresentable anatomy is explicitly retained as hints."
+}

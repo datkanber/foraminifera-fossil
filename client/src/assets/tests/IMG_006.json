@@ -1,0 +1,1479 @@
+{
+  "imageId": "IMG_002",
+  "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+  "configHash": "3c7ff4caad902856355fa1a7253d4c73a0ac3f8eb969e4ac6bdcf3a78176219b",
+  "success": true,
+  "elapsedMs": 97259,
+  "attempts": [
+    {
+      "attempt": 1,
+      "at": "2026-11-09T09:11:39.182Z",
+      "httpStatus": 502,
+      "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+      "request": {
+        "model": "gemini-3.6-flash",
+        "generationConfig": {
+          "temperature": 0.2,
+          "responseMimeType": "application/json"
+        },
+        "text": "You are the vision observer for GeoKnow / ESOGU \"foraminifera-fossil\".\nYou are NOT a taxonomic authority and you do NOT replace the project's scoring engine.\n\nGoal: look at the attached optical image(s) of a microfossil (thin section or reflected-light photomicrograph) and fill the project's character sheet CHR_01–CHR_21.\n\nHard rules\n1. Observe first. Identify only as a tentative suggestion.\n2. Never invent a character. If it is not clearly visible, use state NOT_OBSERVABLE. If visible but ambiguous, use UNCERTAIN.\n3. NOT_OBSERVABLE is not ABSENT. Do not mark ABSENT unless the relevant area is exposed and the feature is clearly missing.\n4. Keep CHR_05 and CHR_06 separate:\n   - CHR_05 = serial arrangement only (UNISERIAL, BISERIAL, TRISERIAL, QUINQUELOCULINE, TRILOCULINE, BILOCULINE, ANNULAR, CYCLIC, IRREGULAR_SERIAL, OTHER)\n   - CHR_06 = coiling (PLANISPIRAL, TROCHOSPIRAL, STREPTOSPIRAL, GLOMOSPIRAL, IRREGULAR_COILING, UNCOILED)\n5. Do not force a species name. Prefer genus or morphogroup. If evidence is weak, identification_status = INDETERMINATE.\n6. This tool is academic and non-commercial. Do not present the answer as an official Foraminifera.eu, WoRMS, or museum determination.\n7. Reply with VALID JSON only. No markdown, no preamble, no trailing text.\n8. Allowed observation states: PRESENT, ABSENT, NOT_OBSERVABLE, UNCERTAIN.\n9. Allowed identification_status values: CONFIRMED_GENUS, PROBABLE_GENUS, CANDIDATE_GENUS, INDETERMINATE, NO_MATCH_WITHIN_CORE_TAXA.\n10. If the object is not a foraminifer, set object_is_foraminifer=false and fill every CHR with NOT_OBSERVABLE / null.\n\nAllowed values (use ONLY these codes)\n\nCHR_01 Test composition: AGGLUTINATED | PORCELANEOUS | HYALINE | UNCERTAIN\nCHR_02 Test shape: GLOBULAR | SAC_LIKE | TUBULAR | ELONGATE | FUSIFORM | OVOID | LENTICULAR | DISCOIDAL | FLATTENED | CONICAL | HIGH_CONICAL | FLABELLIFORM | STELLATE | IRREGULAR | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_03 Septation: PRESENT | ABSENT | NOT_OBSERVABLE | UNCERTAIN\nCHR_04 Chamber number organization: UNDIVIDED | MULTICHAMBERED | NOT_OBSERVABLE | UNCERTAIN\nCHR_05 Chamber arrangement: UNISERIAL | BISERIAL | TRISERIAL | QUINQUELOCULINE | TRILOCULINE | BILOCULINE | ANNULAR | CYCLIC | IRREGULAR_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_06 Coiling pattern: PLANISPIRAL | TROCHOSPIRAL | STREPTOSPIRAL | GLOMOSPIRAL | IRREGULAR_COILING | UNCOILED | NOT_OBSERVABLE | UNCERTAIN\nCHR_07 Coiling plane: SINGLE_PLANE | CHANGING_PLANES | MULTIDIRECTIONAL | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_08 Involution/evolution: INVOLUTE | SEMI_INVOLUTE | EVOLUTE | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_09 Ontogenetic arrangement change: NONE | PLANISPIRAL_TO_UNISERIAL | PLANISPIRAL_TO_BISERIAL | BISERIAL_TO_UNISERIAL | TRISERIAL_TO_BISERIAL | TRISERIAL_TO_UNISERIAL | COILED_TO_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_10 Internal complexity: SIMPLE | SUBDIVIDED | COMPLEX | RETICULATE | LABYRINTHIC | NOT_OBSERVABLE | UNCERTAIN\nCHR_11 Secondary chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_12 Embryonic apparatus: SIMPLE | BILOCULAR | MULTILOCULAR | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_13 Radial/internal partitions: ABSENT | RADIAL | VERTICAL | SUBEPIDERMAL | RETICULATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_14 Pillars: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_15 Lateral chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_16 Aperture type: TERMINAL | INTERIOMARGINAL | BASAL | MULTIPLE | SLIT_LIKE | CRIBRATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_17 Marginal cord: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_18 Septal filaments: ABSENT | SIMPLE | CURVED | WAVY | RETICULATE | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_19 Attachment mode: FREE | ATTACHED | NOT_OBSERVABLE | UNCERTAIN\nCHR_20 Dimorphism: PRESENT | ABSENT | MEGALOSPHERIC_FORM | MICROSPHERIC_FORM | NOT_OBSERVABLE | UNCERTAIN\nCHR_21 Section orientation: AXIAL | EQUATORIAL | OBLIQUE | TANGENTIAL | UNKNOWN\n\nObservation object format for every CHR:\n{\"value\": \"<CODE or null>\", \"state\": \"PRESENT|ABSENT|NOT_OBSERVABLE|UNCERTAIN\", \"reason\": \"one short sentence\"}\n\nWhen state is NOT_OBSERVABLE or UNCERTAIN, value may be null.\nFor CHR_01, if composition cannot be judged from lighting, value=UNCERTAIN and state=UNCERTAIN.\nFor CHR_21, state is usually PRESENT and value is the section type; use UNKNOWN if the view is external, not a thin section.\n\nContext from the user:\n- locality: unknown\n- age / stratigraphy: unknown\n- lighting / magnification: unknown\n- scale: unknown\n- views provided: unknown\n\nReturn exactly this JSON schema:\n\n{\n  \"object_is_foraminifer\": true,\n  \"image_quality\": \"good|fair|poor\",\n  \"image_type\": \"thin_section|reflected_light|sem|mixed|unknown\",\n  \"observations\": {\n    \"CHR_01\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_02\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_03\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_04\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_05\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_06\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_07\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_08\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_09\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_10\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_11\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_12\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_13\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_14\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_15\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_16\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_17\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_18\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_19\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_20\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_21\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"}\n  },\n  \"module\": \"AGGLUTINATED|PORCELANEOUS|HYALINE|UNKNOWN\",\n  \"vlm_suggestion\": {\n    \"identification_status\": \"INDETERMINATE\",\n    \"best_open_id\": \"\",\n    \"candidate_genera\": [{\"name\": \"\", \"confidence\": \"low|moderate|high\", \"why\": \"\"}],\n    \"lookalikes\": [],\n    \"why_not_species_level\": \"\"\n  },\n  \"student_explanation_en\": \"Max 120 words, simple English.\",\n  \"student_explanation_tr\": \"En fazla 120 kelime, sade Türkçe.\",\n  \"expert_checklist_tr\": [\"uzmanın kontrol edeceği 3-5 nokta\"],\n  \"disclaimer_tr\": \"Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir.\"\n}",
+        "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+        "mimeType": "image/png"
+      },
+      "providerStatus": 503,
+      "providerResponse": {
+        "error": {
+          "code": 503,
+          "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+          "status": "UNAVAILABLE"
+        }
+      },
+      "retryAfter": null
+    },
+    {
+      "attempt": 2,
+      "at": "2026-11-09T09:12:01.499Z",
+      "httpStatus": 502,
+      "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+      "request": {
+        "model": "gemini-3.6-flash",
+        "generationConfig": {
+          "temperature": 0.2,
+          "responseMimeType": "application/json"
+        },
+        "text": "You are the vision observer for GeoKnow / ESOGU \"foraminifera-fossil\".\nYou are NOT a taxonomic authority and you do NOT replace the project's scoring engine.\n\nGoal: look at the attached optical image(s) of a microfossil (thin section or reflected-light photomicrograph) and fill the project's character sheet CHR_01–CHR_21.\n\nHard rules\n1. Observe first. Identify only as a tentative suggestion.\n2. Never invent a character. If it is not clearly visible, use state NOT_OBSERVABLE. If visible but ambiguous, use UNCERTAIN.\n3. NOT_OBSERVABLE is not ABSENT. Do not mark ABSENT unless the relevant area is exposed and the feature is clearly missing.\n4. Keep CHR_05 and CHR_06 separate:\n   - CHR_05 = serial arrangement only (UNISERIAL, BISERIAL, TRISERIAL, QUINQUELOCULINE, TRILOCULINE, BILOCULINE, ANNULAR, CYCLIC, IRREGULAR_SERIAL, OTHER)\n   - CHR_06 = coiling (PLANISPIRAL, TROCHOSPIRAL, STREPTOSPIRAL, GLOMOSPIRAL, IRREGULAR_COILING, UNCOILED)\n5. Do not force a species name. Prefer genus or morphogroup. If evidence is weak, identification_status = INDETERMINATE.\n6. This tool is academic and non-commercial. Do not present the answer as an official Foraminifera.eu, WoRMS, or museum determination.\n7. Reply with VALID JSON only. No markdown, no preamble, no trailing text.\n8. Allowed observation states: PRESENT, ABSENT, NOT_OBSERVABLE, UNCERTAIN.\n9. Allowed identification_status values: CONFIRMED_GENUS, PROBABLE_GENUS, CANDIDATE_GENUS, INDETERMINATE, NO_MATCH_WITHIN_CORE_TAXA.\n10. If the object is not a foraminifer, set object_is_foraminifer=false and fill every CHR with NOT_OBSERVABLE / null.\n\nAllowed values (use ONLY these codes)\n\nCHR_01 Test composition: AGGLUTINATED | PORCELANEOUS | HYALINE | UNCERTAIN\nCHR_02 Test shape: GLOBULAR | SAC_LIKE | TUBULAR | ELONGATE | FUSIFORM | OVOID | LENTICULAR | DISCOIDAL | FLATTENED | CONICAL | HIGH_CONICAL | FLABELLIFORM | STELLATE | IRREGULAR | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_03 Septation: PRESENT | ABSENT | NOT_OBSERVABLE | UNCERTAIN\nCHR_04 Chamber number organization: UNDIVIDED | MULTICHAMBERED | NOT_OBSERVABLE | UNCERTAIN\nCHR_05 Chamber arrangement: UNISERIAL | BISERIAL | TRISERIAL | QUINQUELOCULINE | TRILOCULINE | BILOCULINE | ANNULAR | CYCLIC | IRREGULAR_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_06 Coiling pattern: PLANISPIRAL | TROCHOSPIRAL | STREPTOSPIRAL | GLOMOSPIRAL | IRREGULAR_COILING | UNCOILED | NOT_OBSERVABLE | UNCERTAIN\nCHR_07 Coiling plane: SINGLE_PLANE | CHANGING_PLANES | MULTIDIRECTIONAL | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_08 Involution/evolution: INVOLUTE | SEMI_INVOLUTE | EVOLUTE | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_09 Ontogenetic arrangement change: NONE | PLANISPIRAL_TO_UNISERIAL | PLANISPIRAL_TO_BISERIAL | BISERIAL_TO_UNISERIAL | TRISERIAL_TO_BISERIAL | TRISERIAL_TO_UNISERIAL | COILED_TO_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_10 Internal complexity: SIMPLE | SUBDIVIDED | COMPLEX | RETICULATE | LABYRINTHIC | NOT_OBSERVABLE | UNCERTAIN\nCHR_11 Secondary chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_12 Embryonic apparatus: SIMPLE | BILOCULAR | MULTILOCULAR | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_13 Radial/internal partitions: ABSENT | RADIAL | VERTICAL | SUBEPIDERMAL | RETICULATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_14 Pillars: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_15 Lateral chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_16 Aperture type: TERMINAL | INTERIOMARGINAL | BASAL | MULTIPLE | SLIT_LIKE | CRIBRATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_17 Marginal cord: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_18 Septal filaments: ABSENT | SIMPLE | CURVED | WAVY | RETICULATE | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_19 Attachment mode: FREE | ATTACHED | NOT_OBSERVABLE | UNCERTAIN\nCHR_20 Dimorphism: PRESENT | ABSENT | MEGALOSPHERIC_FORM | MICROSPHERIC_FORM | NOT_OBSERVABLE | UNCERTAIN\nCHR_21 Section orientation: AXIAL | EQUATORIAL | OBLIQUE | TANGENTIAL | UNKNOWN\n\nObservation object format for every CHR:\n{\"value\": \"<CODE or null>\", \"state\": \"PRESENT|ABSENT|NOT_OBSERVABLE|UNCERTAIN\", \"reason\": \"one short sentence\"}\n\nWhen state is NOT_OBSERVABLE or UNCERTAIN, value may be null.\nFor CHR_01, if composition cannot be judged from lighting, value=UNCERTAIN and state=UNCERTAIN.\nFor CHR_21, state is usually PRESENT and value is the section type; use UNKNOWN if the view is external, not a thin section.\n\nContext from the user:\n- locality: unknown\n- age / stratigraphy: unknown\n- lighting / magnification: unknown\n- scale: unknown\n- views provided: unknown\n\nReturn exactly this JSON schema:\n\n{\n  \"object_is_foraminifer\": true,\n  \"image_quality\": \"good|fair|poor\",\n  \"image_type\": \"thin_section|reflected_light|sem|mixed|unknown\",\n  \"observations\": {\n    \"CHR_01\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_02\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_03\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_04\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_05\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_06\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_07\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_08\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_09\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_10\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_11\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_12\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_13\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_14\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_15\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_16\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_17\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_18\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_19\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_20\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_21\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"}\n  },\n  \"module\": \"AGGLUTINATED|PORCELANEOUS|HYALINE|UNKNOWN\",\n  \"vlm_suggestion\": {\n    \"identification_status\": \"INDETERMINATE\",\n    \"best_open_id\": \"\",\n    \"candidate_genera\": [{\"name\": \"\", \"confidence\": \"low|moderate|high\", \"why\": \"\"}],\n    \"lookalikes\": [],\n    \"why_not_species_level\": \"\"\n  },\n  \"student_explanation_en\": \"Max 120 words, simple English.\",\n  \"student_explanation_tr\": \"En fazla 120 kelime, sade Türkçe.\",\n  \"expert_checklist_tr\": [\"uzmanın kontrol edeceği 3-5 nokta\"],\n  \"disclaimer_tr\": \"Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir.\"\n}",
+        "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+        "mimeType": "image/png"
+      },
+      "providerStatus": 503,
+      "providerResponse": {
+        "error": {
+          "code": 503,
+          "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+          "status": "UNAVAILABLE"
+        }
+      },
+      "retryAfter": null
+    },
+    {
+      "attempt": 3,
+      "at": "2026-11-09T09:13:01.099Z",
+      "httpStatus": 200,
+      "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+      "request": {
+        "model": "gemini-3.6-flash",
+        "generationConfig": {
+          "temperature": 0.2,
+          "responseMimeType": "application/json"
+        },
+        "text": "You are the vision observer for GeoKnow / ESOGU \"foraminifera-fossil\".\nYou are NOT a taxonomic authority and you do NOT replace the project's scoring engine.\n\nGoal: look at the attached optical image(s) of a microfossil (thin section or reflected-light photomicrograph) and fill the project's character sheet CHR_01–CHR_21.\n\nHard rules\n1. Observe first. Identify only as a tentative suggestion.\n2. Never invent a character. If it is not clearly visible, use state NOT_OBSERVABLE. If visible but ambiguous, use UNCERTAIN.\n3. NOT_OBSERVABLE is not ABSENT. Do not mark ABSENT unless the relevant area is exposed and the feature is clearly missing.\n4. Keep CHR_05 and CHR_06 separate:\n   - CHR_05 = serial arrangement only (UNISERIAL, BISERIAL, TRISERIAL, QUINQUELOCULINE, TRILOCULINE, BILOCULINE, ANNULAR, CYCLIC, IRREGULAR_SERIAL, OTHER)\n   - CHR_06 = coiling (PLANISPIRAL, TROCHOSPIRAL, STREPTOSPIRAL, GLOMOSPIRAL, IRREGULAR_COILING, UNCOILED)\n5. Do not force a species name. Prefer genus or morphogroup. If evidence is weak, identification_status = INDETERMINATE.\n6. This tool is academic and non-commercial. Do not present the answer as an official Foraminifera.eu, WoRMS, or museum determination.\n7. Reply with VALID JSON only. No markdown, no preamble, no trailing text.\n8. Allowed observation states: PRESENT, ABSENT, NOT_OBSERVABLE, UNCERTAIN.\n9. Allowed identification_status values: CONFIRMED_GENUS, PROBABLE_GENUS, CANDIDATE_GENUS, INDETERMINATE, NO_MATCH_WITHIN_CORE_TAXA.\n10. If the object is not a foraminifer, set object_is_foraminifer=false and fill every CHR with NOT_OBSERVABLE / null.\n\nAllowed values (use ONLY these codes)\n\nCHR_01 Test composition: AGGLUTINATED | PORCELANEOUS | HYALINE | UNCERTAIN\nCHR_02 Test shape: GLOBULAR | SAC_LIKE | TUBULAR | ELONGATE | FUSIFORM | OVOID | LENTICULAR | DISCOIDAL | FLATTENED | CONICAL | HIGH_CONICAL | FLABELLIFORM | STELLATE | IRREGULAR | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_03 Septation: PRESENT | ABSENT | NOT_OBSERVABLE | UNCERTAIN\nCHR_04 Chamber number organization: UNDIVIDED | MULTICHAMBERED | NOT_OBSERVABLE | UNCERTAIN\nCHR_05 Chamber arrangement: UNISERIAL | BISERIAL | TRISERIAL | QUINQUELOCULINE | TRILOCULINE | BILOCULINE | ANNULAR | CYCLIC | IRREGULAR_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_06 Coiling pattern: PLANISPIRAL | TROCHOSPIRAL | STREPTOSPIRAL | GLOMOSPIRAL | IRREGULAR_COILING | UNCOILED | NOT_OBSERVABLE | UNCERTAIN\nCHR_07 Coiling plane: SINGLE_PLANE | CHANGING_PLANES | MULTIDIRECTIONAL | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_08 Involution/evolution: INVOLUTE | SEMI_INVOLUTE | EVOLUTE | NOT_APPLICABLE | NOT_OBSERVABLE | UNCERTAIN\nCHR_09 Ontogenetic arrangement change: NONE | PLANISPIRAL_TO_UNISERIAL | PLANISPIRAL_TO_BISERIAL | BISERIAL_TO_UNISERIAL | TRISERIAL_TO_BISERIAL | TRISERIAL_TO_UNISERIAL | COILED_TO_SERIAL | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_10 Internal complexity: SIMPLE | SUBDIVIDED | COMPLEX | RETICULATE | LABYRINTHIC | NOT_OBSERVABLE | UNCERTAIN\nCHR_11 Secondary chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_12 Embryonic apparatus: SIMPLE | BILOCULAR | MULTILOCULAR | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_13 Radial/internal partitions: ABSENT | RADIAL | VERTICAL | SUBEPIDERMAL | RETICULATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_14 Pillars: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_15 Lateral chamberlets: PRESENT | ABSENT | WEAKLY_DEVELOPED | WELL_DEVELOPED | NOT_OBSERVABLE | UNCERTAIN\nCHR_16 Aperture type: TERMINAL | INTERIOMARGINAL | BASAL | MULTIPLE | SLIT_LIKE | CRIBRATE | OTHER | NOT_OBSERVABLE | UNCERTAIN\nCHR_17 Marginal cord: PRESENT | ABSENT | WEAK | STRONG | NOT_OBSERVABLE | UNCERTAIN\nCHR_18 Septal filaments: ABSENT | SIMPLE | CURVED | WAVY | RETICULATE | COMPLEX | NOT_OBSERVABLE | UNCERTAIN\nCHR_19 Attachment mode: FREE | ATTACHED | NOT_OBSERVABLE | UNCERTAIN\nCHR_20 Dimorphism: PRESENT | ABSENT | MEGALOSPHERIC_FORM | MICROSPHERIC_FORM | NOT_OBSERVABLE | UNCERTAIN\nCHR_21 Section orientation: AXIAL | EQUATORIAL | OBLIQUE | TANGENTIAL | UNKNOWN\n\nObservation object format for every CHR:\n{\"value\": \"<CODE or null>\", \"state\": \"PRESENT|ABSENT|NOT_OBSERVABLE|UNCERTAIN\", \"reason\": \"one short sentence\"}\n\nWhen state is NOT_OBSERVABLE or UNCERTAIN, value may be null.\nFor CHR_01, if composition cannot be judged from lighting, value=UNCERTAIN and state=UNCERTAIN.\nFor CHR_21, state is usually PRESENT and value is the section type; use UNKNOWN if the view is external, not a thin section.\n\nContext from the user:\n- locality: unknown\n- age / stratigraphy: unknown\n- lighting / magnification: unknown\n- scale: unknown\n- views provided: unknown\n\nReturn exactly this JSON schema:\n\n{\n  \"object_is_foraminifer\": true,\n  \"image_quality\": \"good|fair|poor\",\n  \"image_type\": \"thin_section|reflected_light|sem|mixed|unknown\",\n  \"observations\": {\n    \"CHR_01\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_02\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_03\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_04\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_05\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_06\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_07\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_08\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_09\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_10\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_11\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_12\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_13\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_14\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_15\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_16\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_17\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_18\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_19\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_20\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"},\n    \"CHR_21\": {\"value\": \"\", \"state\": \"\", \"reason\": \"\"}\n  },\n  \"module\": \"AGGLUTINATED|PORCELANEOUS|HYALINE|UNKNOWN\",\n  \"vlm_suggestion\": {\n    \"identification_status\": \"INDETERMINATE\",\n    \"best_open_id\": \"\",\n    \"candidate_genera\": [{\"name\": \"\", \"confidence\": \"low|moderate|high\", \"why\": \"\"}],\n    \"lookalikes\": [],\n    \"why_not_species_level\": \"\"\n  },\n  \"student_explanation_en\": \"Max 120 words, simple English.\",\n  \"student_explanation_tr\": \"En fazla 120 kelime, sade Türkçe.\",\n  \"expert_checklist_tr\": [\"uzmanın kontrol edeceği 3-5 nokta\"],\n  \"disclaimer_tr\": \"Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir.\"\n}",
+        "imageSha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+        "mimeType": "image/png"
+      },
+      "providerStatus": 200,
+      "providerResponse": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "{\n  \"object_is_foraminifer\": true,\n  \"image_quality\": \"fair\",\n  \"image_type\": \"thin_section\",\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"AGGLUTINATED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Dark microgranular test wall visible in thin section.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"ELONGATE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Overall test outline is distinctly elongate and tapered.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Distinct transverse septa clearly visible separating chambers.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test consists of numerous organized chambers.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"OTHER\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Initial portion is multiserial/triserial transitioning to uniserial.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"UNCOILED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test grows linearly along an axial axis without spiral coiling.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"NOT_APPLICABLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Non-coiled serial growth pattern.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"NOT_APPLICABLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Non-coiled test growth.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"TRISERIAL_TO_UNISERIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Early stage shows triserial chamber arrangement followed by uniserial adult stage.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers appear simple and undivided internally.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No secondary chamberlets observed inside chambers.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Initial proloculus region appears simple.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No internal radial or vertical partitions observed.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Internal structural pillars are absent.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No lateral chamberlet layers present.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"TERMINAL\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Apertural region located at the distal apex, though exact orifice structure is unclear.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Marginal cord absent in this wall structure.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Septal filaments absent.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Test shape suggests free-living benthic mode of life.\"\n    },\n    \"CHR_20\": {\n      \"value\": null,\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Single specimen view does not allow assessment of dimorphism.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"AXIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section is cut along the longitudinal axis passing through sequential chambers.\"\n    }\n  },\n  \"module\": \"AGGLUTINATED\",\n  \"vlm_suggestion\": {\n    \"identification_status\": \"CANDIDATE_GENUS\",\n    \"best_open_id\": \"Clavulina sp.\",\n    \"candidate_genera\": [\n      {\n        \"name\": \"Clavulina\",\n        \"confidence\": \"moderate\",\n        \"why\": \"Elongate microgranular agglutinated test with early triserial stage becoming uniserial.\"\n      },\n      {\n        \"name\": \"Pseudoclavulina\",\n        \"confidence\": \"low\",\n        \"why\": \"Morphologically similar triserial to uniserial agglutinated test.\"\n      }\n    ],\n    \"lookalikes\": [\n      \"Chrysalidina\",\n      \"Bigenerina\"\n    ],\n    \"why_not_species_level\": \"Detailed aperture wall layer and exact chamber internal morphology cannot be fully established from a single thin section view.\"\n  },\n  \"student_explanation_en\": \"This thin section shows an elongate, agglutinated foraminifer with a dark microgranular wall. The early portion shows chambers arranged in three rows (triserial), which then transitions into single wide chambers (uniserial). This ontogenetic pattern (triserial-to-uniserial) is characteristic of genera such as Clavulina.\",\n  \"student_explanation_tr\": \"Bu İnce kesitte koyu renkli mikrogranüler (aglütine) kavkı yapısına sahip uzamış bir foraminifer görülmektedir. Erken evrede kamaralar üçlü dizilim gösterirken (triseriyal), ilerleyen evrede tekli dizilime (uniseriyal) geçmektedir. Bu triseriyalden uniseriyale geçiş gösteren gelişim paterni Clavulina gibi cinslerin tipik özelliğidir.\",\n  \"expert_checklist_tr\": [\n    \"Kavkı duvarının aglütine yapısı yüksek büyütmede teyit edilmeli.\",\n    \"Erken triseriyal evrenin kamara düzeni daha detaylı incelenmeli.\",\n    \"Apertürün dişli (tooth) yapısının varlığı kontrol edilmeli.\",\n    \"Uniseriyal kamaraların iç bölmesiz basit yapıda olduğu doğrulanmalı.\"\n  ],\n  \"disclaimer_tr\": \"Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir.\"\n}",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 3258,
+          "candidatesTokenCount": 1547,
+          "totalTokenCount": 6888,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 2183
+            },
+            {
+              "modality": "IMAGE",
+              "tokenCount": 1075
+            }
+          ],
+          "thoughtsTokenCount": 2083,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.6-flash",
+        "responseId": "io7xaoTiMZyIvdIPqeelwQE"
+      },
+      "retryAfter": null
+    }
+  ],
+  "response": {
+    "success": true,
+    "model": "gemini-3.6-flash",
+    "observation": {
+      "object_is_foraminifer": true,
+      "image_quality": "fair",
+      "image_type": "thin_section",
+      "observations": {
+        "CHR_01": {
+          "value": "AGGLUTINATED",
+          "state": "PRESENT",
+          "reason": "Dark microgranular test wall visible in thin section."
+        },
+        "CHR_02": {
+          "value": "ELONGATE",
+          "state": "PRESENT",
+          "reason": "Overall test outline is distinctly elongate and tapered."
+        },
+        "CHR_03": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Distinct transverse septa clearly visible separating chambers."
+        },
+        "CHR_04": {
+          "value": "MULTICHAMBERED",
+          "state": "PRESENT",
+          "reason": "Test consists of numerous organized chambers."
+        },
+        "CHR_05": {
+          "value": "OTHER",
+          "state": "PRESENT",
+          "reason": "Initial portion is multiserial/triserial transitioning to uniserial."
+        },
+        "CHR_06": {
+          "value": "UNCOILED",
+          "state": "PRESENT",
+          "reason": "Test grows linearly along an axial axis without spiral coiling."
+        },
+        "CHR_07": {
+          "value": "NOT_APPLICABLE",
+          "state": "PRESENT",
+          "reason": "Non-coiled serial growth pattern."
+        },
+        "CHR_08": {
+          "value": "NOT_APPLICABLE",
+          "state": "PRESENT",
+          "reason": "Non-coiled test growth."
+        },
+        "CHR_09": {
+          "value": "TRISERIAL_TO_UNISERIAL",
+          "state": "PRESENT",
+          "reason": "Early stage shows triserial chamber arrangement followed by uniserial adult stage."
+        },
+        "CHR_10": {
+          "value": "SIMPLE",
+          "state": "PRESENT",
+          "reason": "Chambers appear simple and undivided internally."
+        },
+        "CHR_11": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No secondary chamberlets observed inside chambers."
+        },
+        "CHR_12": {
+          "value": "SIMPLE",
+          "state": "PRESENT",
+          "reason": "Initial proloculus region appears simple."
+        },
+        "CHR_13": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No internal radial or vertical partitions observed."
+        },
+        "CHR_14": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "Internal structural pillars are absent."
+        },
+        "CHR_15": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No lateral chamberlet layers present."
+        },
+        "CHR_16": {
+          "value": "TERMINAL",
+          "state": "PRESENT",
+          "reason": "Apertural region located at the distal apex, though exact orifice structure is unclear."
+        },
+        "CHR_17": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "Marginal cord absent in this wall structure."
+        },
+        "CHR_18": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "Septal filaments absent."
+        },
+        "CHR_19": {
+          "value": "FREE",
+          "state": "PRESENT",
+          "reason": "Test shape suggests free-living benthic mode of life."
+        },
+        "CHR_20": {
+          "value": null,
+          "state": "NOT_OBSERVABLE",
+          "reason": "Single specimen view does not allow assessment of dimorphism."
+        },
+        "CHR_21": {
+          "value": "AXIAL",
+          "state": "PRESENT",
+          "reason": "Section is cut along the longitudinal axis passing through sequential chambers."
+        }
+      },
+      "module": "AGGLUTINATED",
+      "vlm_suggestion": {
+        "identification_status": "CANDIDATE_GENUS",
+        "best_open_id": "Clavulina sp.",
+        "candidate_genera": [
+          {
+            "name": "Clavulina",
+            "confidence": "moderate",
+            "why": "Elongate microgranular agglutinated test with early triserial stage becoming uniserial."
+          },
+          {
+            "name": "Pseudoclavulina",
+            "confidence": "low",
+            "why": "Morphologically similar triserial to uniserial agglutinated test."
+          }
+        ],
+        "lookalikes": [
+          "Chrysalidina",
+          "Bigenerina"
+        ],
+        "why_not_species_level": "Detailed aperture wall layer and exact chamber internal morphology cannot be fully established from a single thin section view."
+      },
+      "student_explanation_en": "This thin section shows an elongate, agglutinated foraminifer with a dark microgranular wall. The early portion shows chambers arranged in three rows (triserial), which then transitions into single wide chambers (uniserial). This ontogenetic pattern (triserial-to-uniserial) is characteristic of genera such as Clavulina.",
+      "student_explanation_tr": "Bu İnce kesitte koyu renkli mikrogranüler (aglütine) kavkı yapısına sahip uzamış bir foraminifer görülmektedir. Erken evrede kamaralar üçlü dizilim gösterirken (triseriyal), ilerleyen evrede tekli dizilime (uniseriyal) geçmektedir. Bu triseriyalden uniseriyale geçiş gösteren gelişim paterni Clavulina gibi cinslerin tipik özelliğidir.",
+      "expert_checklist_tr": [
+        "Kavkı duvarının aglütine yapısı yüksek büyütmede teyit edilmeli.",
+        "Erken triseriyal evrenin kamara düzeni daha detaylı incelenmeli.",
+        "Apertürün dişli (tooth) yapısının varlığı kontrol edilmeli.",
+        "Uniseriyal kamaraların iç bölmesiz basit yapıda olduğu doğrulanmalı."
+      ],
+      "disclaimer_tr": "Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir."
+    },
+    "score": null
+  },
+  "score": {
+    "module": "AGGLUTINATED",
+    "status": "CONFIRMED_GENUS",
+    "identification": "Caudammina",
+    "confidenceNote": null,
+    "ranking": [
+      {
+        "genus": "Caudammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 20,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [
+          "Elongate, ovate or bottle-shaped chambers",
+          "Characteristic elongated chamber profile"
+        ],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Robust deep-water agglutinated morphology"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Uniserial/serial organization",
+            "detail": "CHR_05=UNISERIAL"
+          },
+          {
+            "level": "D",
+            "text": "Elongate, ovate or bottle-shaped chambers",
+            "detail": "CHR_02=ELONGATE"
+          },
+          {
+            "level": "D",
+            "text": "Characteristic elongated chamber profile",
+            "detail": "CHR_02=ELONGATE"
+          },
+          {
+            "level": "S",
+            "text": "Robust deep-water agglutinated morphology",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Ammobaculites",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 15,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [
+          "Adult part = Uncoiled/uniserial"
+        ],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Elongated adult test"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          },
+          {
+            "level": "D",
+            "text": "Adult part = Uncoiled/uniserial",
+            "detail": "CHR_06=UNCOILED, CHR_05=UNISERIAL"
+          },
+          {
+            "level": "S",
+            "text": "Elongated adult test",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "S",
+            "text": "Clear transition between coiled and straight portions"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Clavulina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 13,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [
+          "Early stage = Triserial",
+          "Adult stage = Uniserial"
+        ],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Elongated/clavate adult test",
+          "Uniserial adult chambers conspicuous"
+        ],
+        "contradictions": [
+          "Biserial → uniserial transition [CHR_05=UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "D",
+            "text": "Early stage = Triserial",
+            "detail": "CHR_05=TRISERIAL"
+          },
+          {
+            "level": "D",
+            "text": "Adult stage = Uniserial",
+            "detail": "CHR_05=UNISERIAL"
+          },
+          {
+            "level": "S",
+            "text": "Elongated/clavate adult test",
+            "detail": "CHR_02=ELONGATE"
+          },
+          {
+            "level": "S",
+            "text": "Uniserial adult chambers conspicuous",
+            "detail": "CHR_05=UNISERIAL"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Septate"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Reophax",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 13,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 4,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Elongate overall form"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          },
+          {
+            "level": "M",
+            "text": "Uniserial",
+            "detail": "CHR_05=UNISERIAL"
+          },
+          {
+            "level": "S",
+            "text": "Elongate overall form",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Chambers arranged sequentially in a single row"
+          },
+          {
+            "level": "D",
+            "text": "Connections generally less distinctly necked than in *Hormosina*"
+          },
+          {
+            "level": "S",
+            "text": "Irregular chamber enlargement"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Hormosina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 12,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 4,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Uniserial",
+            "detail": "CHR_05=UNISERIAL"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Adjacent chambers linked by conspicuously narrow necks"
+          },
+          {
+            "level": "D",
+            "text": "Bead- or necklace-like appearance"
+          },
+          {
+            "level": "S",
+            "text": "Chambers relatively regular in shape"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Spiroplectammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 10,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Flattened elongated adult test"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          },
+          {
+            "level": "S",
+            "text": "Flattened elongated adult test",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "S",
+            "text": "Initial coil visible when preservation/section permits"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Recurvoides",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 9,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Coiled"
+          },
+          {
+            "level": "D",
+            "text": "Coiling axis changes during ontogeny"
+          },
+          {
+            "level": "D",
+            "text": "Different sections may show different apparent coiling planes"
+          },
+          {
+            "level": "S",
+            "text": "Compact/subglobular test"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Gaudryina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 7,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [
+          "Early stage = Triserial"
+        ],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Elongate/tapering test"
+        ],
+        "contradictions": [
+          "Triserial → uniserial transition [CHR_05=UNISERIAL, CHR_09=TRISERIAL_TO_UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "D",
+            "text": "Early stage = Triserial",
+            "detail": "CHR_05=TRISERIAL"
+          },
+          {
+            "level": "S",
+            "text": "Elongate/tapering test",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Septate"
+          },
+          {
+            "level": "D",
+            "text": "Distinct ontogenetic reduction in number of chamber rows"
+          },
+          {
+            "level": "S",
+            "text": "Triangular early cross-section"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Karrerulina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 7,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Fine-grained agglutinated wall"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "S",
+            "text": "Fine-grained agglutinated wall",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Serial/coiled ontogenetic development"
+          },
+          {
+            "level": "D",
+            "text": "Later distinctly serial adult growth"
+          },
+          {
+            "level": "S",
+            "text": "Compact early growth"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Rzehakina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 6,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [
+          "Flattened, elongate to oval test"
+        ],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "Simple uniserial chain [CHR_05=UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "D",
+            "text": "Flattened, elongate to oval test",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Septate"
+          },
+          {
+            "level": "D",
+            "text": "Arrangement may appear transitional between enrolled and serial organization"
+          },
+          {
+            "level": "S",
+            "text": "Bilateral compression"
+          },
+          {
+            "level": "S",
+            "text": "Distinctive slit-like terminal apertural organization in suitable material"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      },
+      {
+        "genus": "Dorothia",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 1,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "Uniserial adult stage [CHR_05=UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Serial chamber arrangement"
+          },
+          {
+            "level": "S",
+            "text": "Comparatively thick test"
+          },
+          {
+            "level": "S",
+            "text": "Distinct apertural morphology where visible"
+          }
+        ],
+        "excluded": false,
+        "exclusionReason": null
+      }
+    ],
+    "excluded": [
+      {
+        "genus": "Ammodiscus",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": -6,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Undivided tubular chamber (Bölünmemiş tübüler loca) [CHR_04=UNDIVIDED, CHR_02=TUBULAR]",
+          "True septa = Absent (Gerçek septa yok) [CHR_03=ABSENT]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Simple internal structure (Basit iç yapı)"
+        ],
+        "contradictions": [
+          "True septa present [CHR_03=PRESENT]",
+          "Multichambered organization [CHR_04=MULTICHAMBERED]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Test composition = Agglutinated (Kavkı = Aglütinat)",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "S",
+            "text": "Simple internal structure (Basit iç yapı)",
+            "detail": "CHR_10=SIMPLE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Test = Coiled (Kavkı sarılmış)"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Undivided tubular chamber (Bölünmemiş tübüler loca) [CHR_04=UNDIVIDED, CHR_02=TUBULAR]"
+      },
+      {
+        "genus": "Glomospira",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": -1,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Undivided tubular chamber [CHR_04=UNDIVIDED, CHR_02=TUBULAR]",
+          "True septa absent [CHR_03=ABSENT]",
+          "Coiled tubular test [CHR_02=TUBULAR]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Simple internal architecture"
+        ],
+        "contradictions": [
+          "True chamber septa present [CHR_03=PRESENT]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "S",
+            "text": "Simple internal architecture",
+            "detail": "CHR_10=SIMPLE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "S",
+            "text": "Compact, tangled or subglobular outline"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Undivided tubular chamber [CHR_04=UNDIVIDED, CHR_02=TUBULAR]"
+      },
+      {
+        "genus": "Saccammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": -2,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Undivided single cavity [CHR_04=UNDIVIDED]",
+          "Globular/subglobular or sac-like test [CHR_02=GLOBULAR]",
+          "Septa absent [CHR_03=ABSENT]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "True multichambered organization [CHR_04=MULTICHAMBERED]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "No tubular coiling"
+          },
+          {
+            "level": "S",
+            "text": "Aperture usually simple"
+          },
+          {
+            "level": "S",
+            "text": "Wall finer/more coherent than typical coarse *Psammosphaera*"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Undivided single cavity [CHR_04=UNDIVIDED]"
+      },
+      {
+        "genus": "Psammosphaera",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 3,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Single undivided cavity [CHR_04=UNDIVIDED]",
+          "Globular test [CHR_02=GLOBULAR]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Wall conspicuously constructed from relatively coarse sediment grains"
+          },
+          {
+            "level": "D",
+            "text": "Very simple spherical architecture"
+          },
+          {
+            "level": "S",
+            "text": "Irregular external surface"
+          },
+          {
+            "level": "S",
+            "text": "No coiling"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Single undivided cavity [CHR_04=UNDIVIDED]"
+      },
+      {
+        "genus": "Bathysiphon",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 1,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [
+          "Undivided tubular chamber [CHR_04=UNDIVIDED, CHR_02=TUBULAR]",
+          "Septa absent [CHR_03=ABSENT]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "Multichambered/septate test [CHR_04=MULTICHAMBERED]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Uncoiled",
+            "detail": "CHR_06=UNCOILED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "S",
+            "text": "Simple internal cavity"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Undivided tubular chamber [CHR_04=UNDIVIDED, CHR_02=TUBULAR]"
+      },
+      {
+        "genus": "Rhabdammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 4,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Tubular architecture [CHR_02=TUBULAR]",
+          "Septa absent or no conventional chamber series [CHR_03=ABSENT]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Coarse agglutinated wall"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "S",
+            "text": "Coarse agglutinated wall",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Strong branching"
+          },
+          {
+            "level": "D",
+            "text": "Branches commonly radiate from a central area"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Tubular architecture [CHR_02=TUBULAR]"
+      },
+      {
+        "genus": "Rhizammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 4,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Slender tubular architecture [CHR_02=TUBULAR]",
+          "No conventional multichambered organization [CHR_04=UNDIVIDED]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Fine agglutinated wall"
+        ],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "S",
+            "text": "Fine agglutinated wall",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Very thin, flexible, irregularly branching/tangled tubes"
+          },
+          {
+            "level": "D",
+            "text": "Less robust and less radially organized than *Rhabdammina*"
+          },
+          {
+            "level": "S",
+            "text": "Irregular network-like appearance"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Slender tubular architecture [CHR_02=TUBULAR]"
+      },
+      {
+        "genus": "Haplophragmoides",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 4,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [
+          "Planispiral [CHR_06=PLANISPIRAL]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "Adult uniserial uncoiling [CHR_06=UNCOILED, CHR_05=UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Chambers internally simple"
+          },
+          {
+            "level": "S",
+            "text": "Rounded peripheral chambers"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Planispiral [CHR_06=PLANISPIRAL]"
+      },
+      {
+        "genus": "Reticulophragmium",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 6,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [
+          "Planispiral/recurvoid-related architecture [CHR_06=PLANISPIRAL]",
+          "Internal subdivision present [CHR_10=SUBDIVIDED]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Internal structure substantially more complex than *Haplophragmoides*"
+          },
+          {
+            "level": "S",
+            "text": "Relatively large, compact test"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Planispiral/recurvoid-related architecture [CHR_06=PLANISPIRAL]"
+      },
+      {
+        "genus": "Trochammina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 9,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [
+          "Trochospiral [CHR_06=TROCHOSPIRAL]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Spiral and umbilical sides distinguishable"
+          },
+          {
+            "level": "D",
+            "text": "Chambers commonly inflated"
+          },
+          {
+            "level": "S",
+            "text": "Umbilical region may be conspicuous"
+          },
+          {
+            "level": "S",
+            "text": "Relatively simple chamber interiors"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Trochospiral [CHR_06=TROCHOSPIRAL]"
+      },
+      {
+        "genus": "Textularia",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 5,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 3,
+        "mandatoryViolated": [
+          "Biserial adult arrangement [CHR_05=BISERIAL]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [
+          "Elongate/tapering test"
+        ],
+        "contradictions": [
+          "Biserial → uniserial adult change [CHR_05=UNISERIAL]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          },
+          {
+            "level": "M",
+            "text": "Septa present",
+            "detail": "CHR_03=PRESENT"
+          },
+          {
+            "level": "S",
+            "text": "Elongate/tapering test",
+            "detail": "CHR_02=ELONGATE"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Chambers alternate regularly in two rows"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Biserial adult arrangement [CHR_05=BISERIAL]"
+      },
+      {
+        "genus": "Coskinolina",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 6,
+        "mandatoryTotal": 5,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [
+          "Conical/orbitoliniform morphology [CHR_02=CONICAL]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Large benthic test"
+          },
+          {
+            "level": "M",
+            "text": "Internal differentiation present"
+          },
+          {
+            "level": "D",
+            "text": "**No developed beams/rafters subdividing the marginal chamber lumen**"
+          },
+          {
+            "level": "S",
+            "text": "Pseudokeriothecal wall structure"
+          },
+          {
+            "level": "S",
+            "text": "Large shallow-water benthic morphology"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Conical/orbitoliniform morphology [CHR_02=CONICAL]"
+      },
+      {
+        "genus": "Dictyoconus",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": 6,
+        "mandatoryTotal": 4,
+        "mandatoryMatched": 2,
+        "mandatoryViolated": [
+          "Large conical benthic test [CHR_02=CONICAL]",
+          "Complex internal subdivision [CHR_10=SUBDIVIDED]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          },
+          {
+            "level": "M",
+            "text": "Multichambered",
+            "detail": "CHR_04=MULTICHAMBERED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "D",
+            "text": "Strongly differentiated internal architecture"
+          },
+          {
+            "level": "D",
+            "text": "Numerous radial/secondary subdivisions"
+          },
+          {
+            "level": "S",
+            "text": "Complex marginal and central chamber differentiation"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Large conical benthic test [CHR_02=CONICAL]"
+      },
+      {
+        "genus": "Barattolites",
+        "module": "AGGLUTINATED",
+        "flag": null,
+        "taxonomicReviewRequired": false,
+        "score": -2,
+        "mandatoryTotal": 3,
+        "mandatoryMatched": 1,
+        "mandatoryViolated": [
+          "Large conical/orbitoliniform test [CHR_02=CONICAL]"
+        ],
+        "diagnosticMatched": [],
+        "diagnosticUnobservable": [],
+        "supportingMatched": [],
+        "contradictions": [
+          "No internal partitions [CHR_10=SIMPLE, CHR_13=ABSENT]"
+        ],
+        "matchedEvidence": [
+          {
+            "level": "M",
+            "text": "Agglutinated",
+            "detail": "CHR_01=AGGLUTINATED"
+          }
+        ],
+        "neutralRules": [
+          {
+            "level": "M",
+            "text": "Complex internally partitioned architecture"
+          },
+          {
+            "level": "S",
+            "text": "Shallow-water larger benthic architecture"
+          }
+        ],
+        "excluded": true,
+        "exclusionReason": "mandatory character incompatible: Large conical/orbitoliniform test [CHR_02=CONICAL]"
+      }
+    ]
+  }
+}

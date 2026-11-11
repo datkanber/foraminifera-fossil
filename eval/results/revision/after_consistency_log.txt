@@ -1,0 +1,113 @@
+AGGLUTINATED {'questions': 29, 'paths': 36, 'genera': 25, 'maxdepth': 7, 'oov': [('AGG_Q3E', 'CHR_05', 'FLATTENED_SIGMOID')]}
+  engine R {'paths': 36, 'rank1_unique': 16, 'top3': 29, 'excluded': 2, 'conf_total': 21, 'conf_correct': 14, 'rank1_tied': 5} {'PROBABLE': 10, 'CONFIRMED': 21, 'CANDIDATE': 5}
+  engine M {'paths': 36, 'top3': 30, 'rank1_unique': 16, 'conf_total': 14, 'conf_correct': 7, 'excluded': 1, 'rank1_tied': 5} {'PROBABLE': 2, 'CANDIDATE': 7, 'CONFIRMED': 14, 'INDETERMINATE': 13}
+PORCELANEOUS {'questions': 23, 'paths': 42, 'genera': 25, 'maxdepth': 10, 'oov': [('PORC_Q4B3', 'CHR_13', 'SPECIALISED'), ('PORC_Q4B3', 'CHR_13', 'SPECIALISED'), ('PORC_Q4B3', 'CHR_13', 'SPECIALISED'), ('PORC_Q4B3', 'CHR_13', 'SPECIALISED'), ('PORC_Q4B3', 'CHR_13', 'SPECIALISED'), ('PORC_Q4B3', 'CHR_13', 'SPECIALISED')]}
+  engine R {'paths': 42, 'rank1_unique': 6, 'top3': 23, 'conf_total': 6, 'conf_correct': 6, 'rank1_tied': 13, 'excluded': 16} {'CONFIRMED': 6, 'CANDIDATE': 2, 'PROBABLE': 34}
+  engine M {'paths': 42, 'rank1_unique': 6, 'top3': 23, 'conf_total': 4, 'conf_correct': 4, 'rank1_tied': 13, 'excluded': 16} {'INDETERMINATE': 2, 'CONFIRMED': 4, 'CANDIDATE': 36}
+HYALINE {'questions': 26, 'paths': 26, 'genera': 25, 'maxdepth': 8, 'oov': []}
+  engine R {'paths': 26, 'rank1_unique': 7, 'top3': 14, 'conf_total': 12, 'conf_correct': 7, 'rank1_tied': 4, 'excluded': 3} {'CONFIRMED': 12, 'CANDIDATE': 11, 'PROBABLE': 3}
+  engine M {'paths': 26, 'rank1_unique': 8, 'top3': 15, 'conf_total': 11, 'conf_correct': 6, 'rank1_tied': 4, 'excluded': 2} {'CONFIRMED': 11, 'CANDIDATE': 14, 'PROBABLE': 1}
+TOTAL engine R {'paths': 104, 'rank1_unique': 29, 'top3': 66, 'excluded': 21, 'conf_total': 39, 'conf_correct': 27, 'rank1_tied': 22} {'PROBABLE': 47, 'CONFIRMED': 39, 'CANDIDATE': 18}
+TOTAL engine M {'paths': 104, 'top3': 68, 'rank1_unique': 30, 'conf_total': 29, 'conf_correct': 17, 'excluded': 19, 'rank1_tied': 22} {'PROBABLE': 3, 'CANDIDATE': 57, 'CONFIRMED': 29, 'INDETERMINATE': 15}
+
+========================================================================
+KB AUDIT
+========================================================================
+
+-- inverted_mappings (0 findings) --
+
+-- contradictory_duplicates (0 findings) --
+
+-- diagnostic_mandatory_overlap (0 findings) --
+
+-- genera_no_scored_diagnostic (28 findings) --
+  * Psammosphaera (AGGLUTINATED)
+  * Bathysiphon (AGGLUTINATED)
+  * Rhabdammina (AGGLUTINATED)
+  * Rhizammina (AGGLUTINATED)
+  * Reticulophragmium (AGGLUTINATED)
+  * Trochammina (AGGLUTINATED)
+  * Textularia (AGGLUTINATED)
+  * Dictyoconus (AGGLUTINATED)
+  * Alveolina (PORCELANEOUS)
+  * Triloculina (PORCELANEOUS)
+  * Pyrgoina (PORCELANEOUS)
+  * Peneroplis (PORCELANEOUS)
+  * Dendritina (PORCELANEOUS)
+  * Fabularia (PORCELANEOUS)
+  * Pseudolacazina (PORCELANEOUS)
+  * Lacazinella (PORCELANEOUS)
+  * Periloculina (PORCELANEOUS)
+  * Idalina (PORCELANEOUS)
+  * Miliola (PORCELANEOUS)
+  * Laffitteina (HYALINE)
+  * Rotalia (HYALINE)
+  * Pararotalia (HYALINE)
+  * Cuvillierina (HYALINE)
+  * Ornatorotalia (HYALINE)
+  * Granorotalia (HYALINE)
+  * Asterocyclina (HYALINE)
+  * Discocyclina (HYALINE)
+  * Chordoperculinoides (HYALINE)
+
+-- multi_mapping_rules (23 findings) --
+  * Ammodiscus_M2: [('CHR_04', 'UNDIVIDED'), ('CHR_02', 'TUBULAR')]
+  * Glomospira_M2: [('CHR_04', 'UNDIVIDED'), ('CHR_02', 'TUBULAR')]
+  * Saccammina_M3: [('CHR_02', 'GLOBULAR'), ('CHR_02', 'SAC_LIKE')]
+  * Saccammina_C1: [('CHR_06', 'PLANISPIRAL'), ('CHR_02', 'TUBULAR')]
+  * Bathysiphon_M2: [('CHR_04', 'UNDIVIDED'), ('CHR_02', 'TUBULAR')]
+  * Haplophragmoides_C1: [('CHR_04', 'UNDIVIDED'), ('CHR_02', 'TUBULAR')]
+  * Haplophragmoides_C3: [('CHR_06', 'UNCOILED'), ('CHR_05', 'UNISERIAL')]
+  * Ammobaculites_D2: [('CHR_06', 'UNCOILED'), ('CHR_05', 'UNISERIAL')]
+  * Reticulophragmium_M4: [('CHR_10', 'SUBDIVIDED'), ('CHR_10', 'LABYRINTHIC')]
+  * Gaudryina_C2: [('CHR_05', 'UNISERIAL'), ('CHR_09', 'TRISERIAL_TO_UNISERIAL')]
+  * Dorothia_D1: [('CHR_05', 'BISERIAL'), ('CHR_09', 'TRISERIAL_TO_BISERIAL')]
+  * Clavulina_C1: [('CHR_05', 'BISERIAL'), ('CHR_09', 'TRISERIAL_TO_BISERIAL')]
+  * Karrerulina_D1: [('CHR_06', 'TROCHOSPIRAL'), ('CHR_05', 'TRISERIAL')]
+  * Dictyoconus_M4: [('CHR_10', 'SUBDIVIDED'), ('CHR_10', 'RETICULATE')]
+  * Barattolites_M2: [('CHR_02', 'CONICAL'), ('CHR_02', 'HIGH_CONICAL')]
+  * Barattolites_C2: [('CHR_10', 'SIMPLE'), ('CHR_13', 'ABSENT')]
+  * Alveolina_C3: [('CHR_04', 'UNDIVIDED'), ('CHR_10', 'SIMPLE')]
+  * Sigmoilina_D1: [('CHR_07', 'CHANGING_PLANES'), ('CHR_05', 'IRREGULAR_SERIAL')]
+  * Dendritina_S1: [('CHR_06', 'PLANISPIRAL'), ('CHR_02', 'DISCOIDAL')]
+  * Cornuspira_M2: [('CHR_04', 'UNDIVIDED'), ('CHR_02', 'TUBULAR')]
+  * Nubecularia_C1: [('CHR_06', 'PLANISPIRAL'), ('CHR_19', 'FREE')]
+  * Spiroclypeus_D1: [('CHR_11', 'PRESENT'), ('CHR_15', 'PRESENT')]
+  * Asterocyclina_M2: [('CHR_02', 'DISCOIDAL'), ('CHR_02', 'STELLATE')]
+
+-- unmapped_rules_with_text (232 findings) --
+  * Ammodiscus_M4: "Test = Coiled (Kavkı sarılmış)"
+  * Ammodiscus_C3: "Irregular multidirectional coiling"
+  * Glomospira_S1: "Compact, tangled or subglobular outline"
+  * Saccammina_D1: "Simple sac-like single chamber"
+  * Saccammina_S2: "Wall finer/more coherent than typical coarse *Psammosphaera*"
+  * Saccammina_C3: "Strong branching"
+  * Psammosphaera_D1: "Wall conspicuously constructed from relatively coarse sediment grains"
+  * Psammosphaera_D2: "Very simple spherical architecture"
+  * Psammosphaera_S1: "Irregular external surface"
+  * Psammosphaera_S2: "No coiling"
+  * Psammosphaera_C1: "Septate chambers"
+  * Bathysiphon_D1: "Long, relatively straight or gently curved tube"
+  * Bathysiphon_D2: "Tube comparatively robust and regular"
+  * Bathysiphon_S2: "Simple internal cavity"
+  * Bathysiphon_C3: "Strong radial branching"
+  * Rhabdammina_D1: "Strong branching"
+  * Rhabdammina_D2: "Branches commonly radiate from a central area"
+  * Rhabdammina_C1: "Simple unbranched straight tube"
+  * Rhizammina_D1: "Very thin, flexible, irregularly branching/tangled tubes"
+  * Rhizammina_D2: "Less robust and less radially organized than *Rhabdammina*"
+  * Rhizammina_S1: "Irregular network-like appearance"
+  * Rhizammina_C1: "Thick straight regular tube"
+  * Rhizammina_C2: "Strong central radial branching"
+  * Rhizammina_C3: "Septate serial chambers"
+  * Reophax_D2: "Chambers arranged sequentially in a single row"
+  * Reophax_D3: "Connections generally less distinctly necked than in *Hormosina*"
+  * Reophax_S1: "Irregular chamber enlargement"
+  * Hormosina_D2: "Adjacent chambers linked by conspicuously narrow necks"
+  * Hormosina_D3: "Bead- or necklace-like appearance"
+  * Hormosina_S1: "Chambers relatively regular in shape"
+  ... and 202 more
+
+-> eval/results/consistency_summary.json written
+-> eval/results/consistency_paths.csv written (104 rows)
+-> eval/results/paths.json written (104 paths)

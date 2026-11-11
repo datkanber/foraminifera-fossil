@@ -1,0 +1,8 @@
+{
+  "python": "3.14.6",
+  "preparation_pillow": "12.3.0",
+  "requests": "2.34.2",
+  "node": "24.17.0",
+  "evaluation_model": "gemini-3.5-flash-lite",
+  "evaluation_runs_per_image": 1
+}

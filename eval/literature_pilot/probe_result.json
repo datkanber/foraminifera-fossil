@@ -1,0 +1,157 @@
+{
+  "httpStatus": 200,
+  "data": {
+    "success": true,
+    "model": "gemini-3.6-flash",
+    "observation": {
+      "object_is_foraminifer": true,
+      "image_quality": "good",
+      "image_type": "thin_section",
+      "observations": {
+        "CHR_01": {
+          "value": "AGGLUTINATED",
+          "state": "PRESENT",
+          "reason": "Microgranular agglutinated test wall structure visible in thin section."
+        },
+        "CHR_02": {
+          "value": "HIGH_CONICAL",
+          "state": "PRESENT",
+          "reason": "Axial section shows a high conical test shape tapering to an apex."
+        },
+        "CHR_03": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Distinct septa divide the internal chamber structure."
+        },
+        "CHR_04": {
+          "value": "MULTICHAMBERED",
+          "state": "PRESENT",
+          "reason": "Multiple uniserial stacked chambers are present."
+        },
+        "CHR_05": {
+          "value": "UNISERIAL",
+          "state": "PRESENT",
+          "reason": "Chambers are arranged in a uniserial rectilinear/conical stack."
+        },
+        "CHR_06": {
+          "value": "UNCOILED",
+          "state": "PRESENT",
+          "reason": "The main test growth form is uncoiled."
+        },
+        "CHR_07": {
+          "value": "NOT_APPLICABLE",
+          "state": "PRESENT",
+          "reason": "Test is predominantly uncoiled and conical."
+        },
+        "CHR_08": {
+          "value": "NOT_APPLICABLE",
+          "state": "PRESENT",
+          "reason": "Test is uncoiled."
+        },
+        "CHR_09": {
+          "value": "NONE",
+          "state": "PRESENT",
+          "reason": "Uniserial conical arrangement maintained throughout adult stage."
+        },
+        "CHR_10": {
+          "value": "COMPLEX",
+          "state": "PRESENT",
+          "reason": "Chamber interiors feature marginal zone structures and central pillars/subdivisions."
+        },
+        "CHR_11": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Marginal chamberlets are clearly developed along the peripheral zone (labeled ma)."
+        },
+        "CHR_12": {
+          "value": "SIMPLE",
+          "state": "PRESENT",
+          "reason": "Apical embryonic area with distinct spherical proloculus visible (labeled pr in section b)."
+        },
+        "CHR_13": {
+          "value": "RADIAL",
+          "state": "PRESENT",
+          "reason": "Radial and vertical partitions form subepidermal networks in marginal zone."
+        },
+        "CHR_14": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Pillars or internal partitions are present in the central region."
+        },
+        "CHR_15": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No orbitoid-type lateral chamberlets present."
+        },
+        "CHR_16": {
+          "value": "MULTIPLE",
+          "state": "PRESENT",
+          "reason": "Multiple apertures open across the broad basal face."
+        },
+        "CHR_17": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No nummulitid marginal cord."
+        },
+        "CHR_18": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No septal filaments present."
+        },
+        "CHR_19": {
+          "value": "FREE",
+          "state": "PRESENT",
+          "reason": "Test is free-living conical morphotype."
+        },
+        "CHR_20": {
+          "value": "MEGALOSPHERIC_FORM",
+          "state": "PRESENT",
+          "reason": "Large, prominent proloculus (pr) visible in apical/transverse section."
+        },
+        "CHR_21": {
+          "value": "AXIAL",
+          "state": "PRESENT",
+          "reason": "Image a shows an axial thin section, image b shows a subapical/transverse section."
+        }
+      },
+      "module": "AGGLUTINATED",
+      "vlm_suggestion": {
+        "identification_status": "PROBABLE_GENUS",
+        "best_open_id": "Dictyoconus sp.",
+        "candidate_genera": [
+          {
+            "name": "Dictyoconus",
+            "confidence": "high",
+            "why": "High conical agglutinated test with distinct marginal chamberlets, central pillars, and uniserial cone arrangement."
+          },
+          {
+            "name": "Orbitolina",
+            "confidence": "moderate",
+            "why": "Conical orbitolinid test with complex interior, though typically lower conical."
+          },
+          {
+            "name": "Palorbitolina",
+            "confidence": "low",
+            "why": "Shares orbitolinid structural features but embryonic apparatus architecture differs."
+          }
+        ],
+        "lookalikes": [
+          "Coskinolina",
+          "Urnulina",
+          "Valvulina"
+        ],
+        "why_not_species_level": "Species-level determination requires precise measurements of embryonic chamber dimensions and detailed subepidermal partition count in ideal section orientation."
+      },
+      "student_explanation_en": "This thin section shows a high conical foraminifer with complex internal structures. Image (a) is an axial section displaying stacked uniserial chambers with subdivided marginal areas ('ma'). Image (b) shows a cross-section through the apex revealing a large spherical proloculus ('pr'), indicating a megalospheric form. These characteristics (agglutinated wall, conical shape, internal subdivisions into marginal zone and central pillars) are diagnostic of Orbitolinidae, particularly the genus Dictyoconus.",
+      "student_explanation_tr": "Bu ince kesit, karmaşık iç yapılara sahip yüksek konik bir foraminiferi göstermektedir. Görsel (a), bölünmüş kenar kamaralarını ('ma') ve üst üste dizilmiş odacıkları gösteren bir aksiyel kesittir. Görsel (b) ise tepe bölgesinden geçen ve büyük küresel prolokulusu ('pr') gösteren bir enine kesittir; bu durum megalosferik formu işaret eder. Aglütine duvar yapısı, konik biçim ve iç bölümlenmeler Orbitolinidae ailesini, özellikle Dictyoconus cinsini düşündürmektedir.",
+      "expert_checklist_tr": [
+        "Embriyonik kamara bileşenlerinin (prolokulus ve deuterokulus) ayrıntılı yapısı",
+        "Kenar bölgesindeki dikey ve yatay alt bölmelerin (rafter/beam) düzeni",
+        "Merkez sütunların (pillars) dağılımı ve basalla birleşme biçimi",
+        "Aglütine malzemenin tanecik boyutu ve çimento tipi"
+      ],
+      "disclaimer_tr": "Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir."
+    },
+    "score": null
+  }
+}

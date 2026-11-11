@@ -1,0 +1,16 @@
+{
+  "reason": "Gemini 3.6 Flash returned provider daily quota limit 20 after 10 completed image responses. Availability, not accuracy, prompted model change.",
+  "unchanged": [
+    "150 image manifest and image bytes",
+    "reference labels",
+    "prompt",
+    "normalization",
+    "scoring engine",
+    "metrics"
+  ],
+  "primary_model": "gemini-3.5-flash-lite",
+  "passes_per_image": 1,
+  "pilot_excluded_from_primary_metrics": "pilot_gemini_3_6",
+  "application_env_modified": false,
+  "selection_after_model_results": false
+}

@@ -1,0 +1,314 @@
+[
+  {
+    "dataset": "paths",
+    "configuration": "A0",
+    "n": 104,
+    "acc1": 0.2512286324786325,
+    "acc3": 0.46682692307692303,
+    "coverage": 0.8557692307692307,
+    "reference_exclusion": 0.18269230769230768,
+    "reference_omission": 0.0,
+    "rank1_unique": 30,
+    "rank1_tied": 22,
+    "top3_shared_rank": 68,
+    "confirmed_correct": 17,
+    "states": {
+      "PROBABLE_GENUS": 3,
+      "CANDIDATE_GENUS": 57,
+      "CONFIRMED_GENUS": 29,
+      "INDETERMINATE": 15
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A1",
+    "n": 104,
+    "acc1": 0.09375,
+    "acc3": 0.14182692307692307,
+    "coverage": 0.4807692307692308,
+    "reference_exclusion": 0.8173076923076923,
+    "reference_omission": 0.0,
+    "rank1_unique": 9,
+    "rank1_tied": 2,
+    "top3_shared_rank": 19,
+    "confirmed_correct": 5,
+    "states": {
+      "INDETERMINATE": 15,
+      "PROBABLE_GENUS": 21,
+      "NO_MATCH_WITHIN_CORE_TAXA": 39,
+      "CANDIDATE_GENUS": 20,
+      "CONFIRMED_GENUS": 9
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A2",
+    "n": 104,
+    "acc1": 0.24832875457875458,
+    "acc3": 0.4709478021978022,
+    "coverage": 0.875,
+    "reference_exclusion": 0.22115384615384615,
+    "reference_omission": 0.0,
+    "rank1_unique": 26,
+    "rank1_tied": 26,
+    "top3_shared_rank": 69,
+    "confirmed_correct": 16,
+    "states": {
+      "PROBABLE_GENUS": 2,
+      "CANDIDATE_GENUS": 62,
+      "CONFIRMED_GENUS": 27,
+      "INDETERMINATE": 13
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A3",
+    "n": 104,
+    "acc1": 0.24001068376068377,
+    "acc3": 0.4516025641025641,
+    "coverage": 0.8557692307692307,
+    "reference_exclusion": 0.14423076923076922,
+    "reference_omission": 0.0,
+    "rank1_unique": 28,
+    "rank1_tied": 21,
+    "top3_shared_rank": 67,
+    "confirmed_correct": 15,
+    "states": {
+      "PROBABLE_GENUS": 2,
+      "CANDIDATE_GENUS": 60,
+      "CONFIRMED_GENUS": 27,
+      "INDETERMINATE": 15
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A4",
+    "n": 104,
+    "acc1": 0.275267094017094,
+    "acc3": 0.4716346153846154,
+    "coverage": 0.875,
+    "reference_exclusion": 0.18269230769230768,
+    "reference_omission": 0.0,
+    "rank1_unique": 30,
+    "rank1_tied": 25,
+    "top3_shared_rank": 67,
+    "confirmed_correct": 16,
+    "states": {
+      "PROBABLE_GENUS": 4,
+      "CANDIDATE_GENUS": 63,
+      "CONFIRMED_GENUS": 24,
+      "INDETERMINATE": 13
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A5",
+    "n": 104,
+    "acc1": 0.2512286324786325,
+    "acc3": 0.46682692307692303,
+    "coverage": 0.8557692307692307,
+    "reference_exclusion": 0.18269230769230768,
+    "reference_omission": 0.0,
+    "rank1_unique": 30,
+    "rank1_tied": 22,
+    "top3_shared_rank": 68,
+    "confirmed_correct": 17,
+    "states": {
+      "PROBABLE_GENUS": 8,
+      "CANDIDATE_GENUS": 52,
+      "CONFIRMED_GENUS": 29,
+      "INDETERMINATE": 15
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A6",
+    "n": 104,
+    "acc1": 0.2512286324786325,
+    "acc3": 0.46682692307692303,
+    "coverage": 0.8557692307692307,
+    "reference_exclusion": 0.18269230769230768,
+    "reference_omission": 0.0,
+    "rank1_unique": 30,
+    "rank1_tied": 22,
+    "top3_shared_rank": 68,
+    "confirmed_correct": 17,
+    "states": {
+      "PROBABLE_GENUS": 2,
+      "CANDIDATE_GENUS": 58,
+      "CONFIRMED_GENUS": 29,
+      "INDETERMINATE": 15
+    }
+  },
+  {
+    "dataset": "paths",
+    "configuration": "A7",
+    "n": 104,
+    "acc1": 0.09794060106560107,
+    "acc3": 0.26016795704295703,
+    "coverage": 0.5192307692307693,
+    "reference_exclusion": 0.18269230769230768,
+    "reference_omission": 0.0,
+    "rank1_unique": 2,
+    "rank1_tied": 73,
+    "top3_shared_rank": 78,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 54,
+      "INDETERMINATE": 50
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A0",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.11444444444444445,
+    "coverage": 0.88,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 79,
+      "CANDIDATE_GENUS": 53,
+      "INDETERMINATE": 18
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A1",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.09833333333333333,
+    "coverage": 0.8866666666666667,
+    "reference_exclusion": 0.4533333333333333,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 16,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 74,
+      "CANDIDATE_GENUS": 59,
+      "INDETERMINATE": 16,
+      "NO_MATCH_WITHIN_CORE_TAXA": 1
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A2",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.08666666666666667,
+    "coverage": 0.8933333333333333,
+    "reference_exclusion": 0.48,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 14,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 78,
+      "CANDIDATE_GENUS": 56,
+      "INDETERMINATE": 16
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A3",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.11333333333333333,
+    "coverage": 0.88,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 75,
+      "CANDIDATE_GENUS": 57,
+      "INDETERMINATE": 18
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A4",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.105,
+    "coverage": 0.8866666666666667,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 17,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 78,
+      "CANDIDATE_GENUS": 55,
+      "INDETERMINATE": 17
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A5",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.11444444444444445,
+    "coverage": 0.88,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 79,
+      "CANDIDATE_GENUS": 50,
+      "PROBABLE_GENUS": 3,
+      "INDETERMINATE": 18
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A6",
+    "n": 150,
+    "acc1": 0.03222222222222222,
+    "acc3": 0.11444444444444445,
+    "coverage": 0.88,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 4,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 79,
+      "CANDIDATE_GENUS": 53,
+      "INDETERMINATE": 18
+    }
+  },
+  {
+    "dataset": "panels",
+    "configuration": "A7",
+    "n": 150,
+    "acc1": 0.04185185185185185,
+    "acc3": 0.09555555555555556,
+    "coverage": 0.8733333333333333,
+    "reference_exclusion": 0.44666666666666666,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 4,
+    "rank1_tied": 8,
+    "top3_shared_rank": 16,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 131,
+      "INDETERMINATE": 19
+    }
+  }
+]

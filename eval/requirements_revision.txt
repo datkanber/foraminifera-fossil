@@ -1,0 +1,7 @@
+# Plotting versions used in the local plot environment.
+matplotlib==3.11.2
+numpy==2.5.4
+Pillow==13.0.0
+# Manuscript editing and actual OWL reasoning.
+python-docx==1.2.0
+owlready2==0.51

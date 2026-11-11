@@ -1,0 +1,128 @@
+(a) contradictory rule repeats a positive pair     17 rules
+       Rhabdammina_C1: [('CHR_02', 'TUBULAR')]
+       Rhizammina_C1: [('CHR_02', 'TUBULAR')]
+       Ammobaculites_C1: [('CHR_06', 'PLANISPIRAL')]
+       Ammobaculites_C2: [('CHR_06', 'PLANISPIRAL')]
+       Textularia_C1: [('CHR_05', 'BISERIAL')]
+       Spiroplectammina_C2: [('CHR_06', 'PLANISPIRAL')]
+       Clavulina_C2: [('CHR_05', 'UNISERIAL')]
+       Alveolina_C4: [('CHR_11', 'PRESENT')]
+       Glomalveolina_C1: [('CHR_06', 'PLANISPIRAL')]
+       Articulina_C1: [('CHR_05', 'QUINQUELOCULINE')]
+       Spirolina_C1: [('CHR_06', 'PLANISPIRAL')]
+       Coscinospira_C2: [('CHR_06', 'PLANISPIRAL')]
+       Nubecularia_C1: [('CHR_02', 'TUBULAR')]
+       Pseudolacazina_C1: [('CHR_14', 'PRESENT')]
+       Periloculina_C1: [('CHR_05', 'QUINQUELOCULINE')]
+       Idalina_C2: [('CHR_05', 'QUINQUELOCULINE')]
+       Palaeonummulites_C2: [('CHR_17', 'STRONG')]
+(b) mandatory rule conflicts with M/D rule         10 rule pairs
+       Saccammina_M3 vs Saccammina_D1 on CHR_02: ['GLOBULAR'] / ['SAC_LIKE']
+       Reticulophragmium_M4 vs Reticulophragmium_D1 on CHR_10: ['SUBDIVIDED'] / ['LABYRINTHIC']
+       Coskinolina_M4 vs Coskinolina_D1 on CHR_04: ['MULTICHAMBERED'] / ['UNDIVIDED']
+       Dictyoconus_M4 vs Dictyoconus_D3 on CHR_10: ['SUBDIVIDED'] / ['RETICULATE']
+       Barattolites_M2 vs Barattolites_D1 on CHR_02: ['CONICAL'] / ['HIGH_CONICAL']
+       Alveolina_M5 vs Alveolina_D3 on CHR_11: ['PRESENT'] / ['ABSENT']
+       Spirolina_M3 vs Spirolina_D1 on CHR_06: ['PLANISPIRAL'] / ['UNCOILED']
+       Coscinospira_M3 vs Coscinospira_M4 on CHR_06: ['PLANISPIRAL'] / ['UNCOILED']
+       Pseudolacazina_M4 vs Pseudolacazina_D1 on CHR_14: ['PRESENT'] / ['ABSENT']
+       Asterocyclina_M2 vs Asterocyclina_D2 on CHR_02: ['DISCOIDAL'] / ['STELLATE']
+(c) negated text, positive mapping (screen)         4 rules
+       Caudammina_C1 [C]: "Compact globular chambers without elongated connections" -> [('CHR_02', 'GLOBULAR')]
+       Karrerulina_C2 [C]: "Persistent simple biserial architecture without ontogenetic change" -> [('CHR_05', 'BISERIAL')]
+       Glomalveolina_C1 [C]: "Entire ontogeny clearly regular planispiral with no early milioline stage in a section where the nepionic region is demonstrably preserved" -> [('CHR_06', 'PLANISPIRAL'), ('CHR_05', 'QUINQUELOCULINE')]
+       Nummulitoides_C2 [C]: "Completely evolute adult whorls with no clasping of the previous marginal cord" -> [('CHR_08', 'EVOLUTE')]
+(d) pair counted more than once in a genus         25 pairs
+       Ammodiscus: CHR_02=TUBULAR
+       Saccammina: CHR_04=UNDIVIDED
+       Bathysiphon: CHR_02=TUBULAR
+       Caudammina: CHR_02=ELONGATE
+       Haplophragmoides: CHR_06=PLANISPIRAL
+       Trochammina: CHR_06=TROCHOSPIRAL
+       Textularia: CHR_05=BISERIAL
+       Clavulina: CHR_05=UNISERIAL
+       Coskinolina: CHR_02=CONICAL
+       Alveolina: CHR_06=PLANISPIRAL
+       Alveolina: CHR_11=PRESENT
+       Glomalveolina: CHR_06=PLANISPIRAL
+       Borelis: CHR_11=PRESENT
+       Articulina: CHR_02=ELONGATE
+       Peneroplis: CHR_06=PLANISPIRAL
+       Fabularia: CHR_10=SUBDIVIDED
+       Lacazina: CHR_14=PRESENT
+       Idalina: CHR_05=QUINQUELOCULINE
+       Nummulites: CHR_17=STRONG
+       Discocyclina: CHR_05=ANNULAR
+       Palaeonummulites: CHR_17=WEAK
+       Nummulitoides: CHR_17=PRESENT
+       Nummulitoides: CHR_17=STRONG
+       Planocamerinoides: CHR_17=WEAK
+       Chordoperculinoides: CHR_17=STRONG
+(e) mandatory rule without mapping                 27 rules
+       Ammodiscus_M4
+       Recurvoides_M4
+       Rzehakina_M3
+       Gaudryina_M3
+       Dorothia_M3
+       Clavulina_M3
+       Karrerulina_M3
+       Coskinolina_M2
+       Coskinolina_M5
+       Barattolites_M3
+       Quinqueloculina_M3
+       Dendritina_M3
+       Lacazina_M3
+       Lacazinella_M4
+       Idalina_M4
+       Operculina_M3
+       Ranikothalia_M3
+       Heterostegina_M3
+       Spiroclypeus_M3
+       Kathina_M3
+       Miscellanea_M2
+       Cuvillierina_M3
+       Asterocyclina_M4
+       Discocyclina_M4
+       Discocyclina_M5
+       Orbitoclypeus_M4
+       Lenticulina_M4
+(f) genus without scoring diagnostic rule          18 genera
+       Psammosphaera (AGGLUTINATED)
+       Rhabdammina (AGGLUTINATED)
+       Rhizammina (AGGLUTINATED)
+       Hauerina (PORCELANEOUS)
+       Triloculina (PORCELANEOUS)
+       Pyrgoina (PORCELANEOUS)
+       Dendritina (PORCELANEOUS)
+       Lacazinella (PORCELANEOUS)
+       Periloculina (PORCELANEOUS)
+       Miliola (PORCELANEOUS)
+       Laffitteina (HYALINE)
+       Rotalia (HYALINE)
+       Pararotalia (HYALINE)
+       Cuvillierina (HYALINE)
+       Ornatorotalia (HYALINE)
+       Granorotalia (HYALINE)
+       Orbitoclypeus (HYALINE)
+       Nemkovella (HYALINE)
+(g) tree answer outside vocabulary                  7 answers
+       AGG_Q3E (CHR_05): PLANISPIRAL [maps_to {'CHR_06': 'PLANISPIRAL'}]
+       AGG_Q3E (CHR_05): STREPTOSPIRAL [maps_to {'CHR_06': 'STREPTOSPIRAL'}]
+       AGG_Q3E (CHR_05): TROCHOSPIRAL [maps_to {'CHR_06': 'TROCHOSPIRAL'}]
+       AGG_Q3E (CHR_05): CHANGES_DURING_GROWTH [maps_to {'CHR_09': '*'}]
+       AGG_Q3E (CHR_05): FLATTENED_SIGMOID
+       PORC_Q4B3 (CHR_13): SPECIALISED
+       HYA_Q1 (CHR_06): ANNULAR_CYCLIC [maps_to {'CHR_05': 'ANNULAR'}]
+(h) character asked again on a path                11 nodes
+       AGG_Q4F asks CHR_03 again (first asked at AGG_Q1)
+       AGG_Q5A asks CHR_13 again (first asked at AGG_Q3D)
+       AGG_Q5E asks CHR_09 again (first asked at AGG_Q4H)
+       AGG_Q5F asks CHR_09 again (first asked at AGG_Q4I)
+       AGG_Q6B asks CHR_09 again (first asked at AGG_Q4H)
+       PORC_Q4A3 asks CHR_11 again (first asked at PORC_Q4A)
+       PORC_Q4B3 asks CHR_13 again (first asked at PORC_Q4B2A)
+       PORC_Q4BF asks CHR_10 again (first asked at PORC_Q2)
+       HYA_Q4A asks CHR_17 again (first asked at HYA_Q3B)
+       HYA_Q6BT asks CHR_14 again (first asked at HYA_Q4BT)
+       HYA_Q7B asks CHR_02 again (first asked at HYA_Q5A)
+(i) genus without exactly one module                0 genera

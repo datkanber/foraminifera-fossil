@@ -1,0 +1,12 @@
+{
+  "engineSha256": "c19de11b1b8792850a667de65ef0ae596c252f4d507fab499bcfee71a9a68a67",
+  "FULL": "Unmodified released scoring.js",
+  "A1": "All rule groups referring to unobserved characters become MISMATCH. This formalizes manuscript A1; it is not a claim that literal ABSENT is a valid state of every character. nObserved remains the actual observed count.",
+  "A2": "Disable the 13 implication mappings",
+  "A3": "Remove all contradictory rules",
+  "A4": "Strict conjunction: all mapped character groups must be observed and supported for MATCH; any observed mismatch still takes precedence",
+  "A5": "PROBABLE test precedes equal-score tie test",
+  "A6": "PROBABLE test additionally requires margin at least 3; no runner-up means infinite margin",
+  "A7": "Divide score by total positive rule weight with non-neutral verdict; preserve released confidence thresholds, which therefore change scale relative to normalized scores",
+  "evaluation": "104 paths from the same KB; internal consistency only. Acc@k uses expected uniform score-tie breaking; abstentions count as errors. Table XIV shared-rank counts are also supplied separately."
+}

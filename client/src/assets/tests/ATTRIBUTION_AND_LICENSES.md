@@ -1,0 +1,1 @@
+This supplement contains the supplied machine-readable OWL and three JSON trees. The original source ontology DOCX cited in the manuscript was not supplied and is not claimed to be included. No reasoner or OOPS run is claimed.

@@ -1,0 +1,276 @@
+[
+  {
+    "id": "A0"
+  },
+  {
+    "id": "S1_equal",
+    "options": {
+      "weights": {
+        "MANDATORY": 1,
+        "DIAGNOSTIC": 1,
+        "SUPPORTING": 1,
+        "CONTRADICTORY": -1
+      }
+    }
+  },
+  {
+    "id": "S2_M_gt_D",
+    "options": {
+      "weights": {
+        "MANDATORY": 5,
+        "DIAGNOSTIC": 3,
+        "SUPPORTING": 1,
+        "CONTRADICTORY": -5
+      }
+    }
+  },
+  {
+    "id": "S3_no_S",
+    "options": {
+      "weights": {
+        "MANDATORY": 3,
+        "DIAGNOSTIC": 5,
+        "SUPPORTING": 0,
+        "CONTRADICTORY": -5
+      }
+    }
+  },
+  {
+    "id": "S4_C_low",
+    "options": {
+      "weights": {
+        "MANDATORY": 3,
+        "DIAGNOSTIC": 5,
+        "SUPPORTING": 1,
+        "CONTRADICTORY": -3
+      }
+    }
+  },
+  {
+    "id": "S4_C_high",
+    "options": {
+      "weights": {
+        "MANDATORY": 3,
+        "DIAGNOSTIC": 5,
+        "SUPPORTING": 1,
+        "CONTRADICTORY": -10
+      }
+    }
+  },
+  {
+    "id": "S5_o1_nm2_d1",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 2,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o1_nm2_d2",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 2,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o1_nm2_d3",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 2,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o1_nm3_d1",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 3,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o1_nm3_d2",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 3,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o1_nm3_d3",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 3,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o1_nm4_d1",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 4,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o1_nm4_d2",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 4,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o1_nm4_d3",
+    "options": {
+      "tauObs": 1,
+      "tauNoMatch": 4,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o2_nm2_d1",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 2,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o2_nm2_d2",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 2,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o2_nm2_d3",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 2,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o2_nm3_d1",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 3,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o2_nm3_d2",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 3,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o2_nm3_d3",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 3,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o2_nm4_d1",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 4,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o2_nm4_d2",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 4,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o2_nm4_d3",
+    "options": {
+      "tauObs": 2,
+      "tauNoMatch": 4,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o3_nm2_d1",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 2,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o3_nm2_d2",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 2,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o3_nm2_d3",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 2,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o3_nm3_d1",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 3,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o3_nm3_d2",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 3,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o3_nm3_d3",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 3,
+      "delta": 3
+    }
+  },
+  {
+    "id": "S5_o3_nm4_d1",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 4,
+      "delta": 1
+    }
+  },
+  {
+    "id": "S5_o3_nm4_d2",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 4,
+      "delta": 2
+    }
+  },
+  {
+    "id": "S5_o3_nm4_d3",
+    "options": {
+      "tauObs": 3,
+      "tauNoMatch": 4,
+      "delta": 3
+    }
+  }
+]

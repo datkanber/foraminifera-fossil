@@ -1,0 +1,218 @@
+[
+  {
+    "configuration": "FULL",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.048888888888888885,
+    "acc3": 0.20111111111111113,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 74
+  },
+  {
+    "configuration": "FULL",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.017857142857142856,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 10
+  },
+  {
+    "configuration": "FULL",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.056010928961748634,
+    "acc3": 0.1407103825136612,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 64
+  },
+  {
+    "configuration": "A1",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.06222222222222223,
+    "acc3": 0.18333333333333332,
+    "false_exclusion_rate": 0.46,
+    "confirmed": 72
+  },
+  {
+    "configuration": "A1",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.08928571428571429,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 9
+  },
+  {
+    "configuration": "A1",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.056010928961748634,
+    "acc3": 0.11885245901639344,
+    "false_exclusion_rate": 0.48360655737704916,
+    "confirmed": 63
+  },
+  {
+    "configuration": "A2",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.022222222222222223,
+    "acc3": 0.17333333333333334,
+    "false_exclusion_rate": 0.4866666666666667,
+    "confirmed": 85
+  },
+  {
+    "configuration": "A2",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.017857142857142856,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 11
+  },
+  {
+    "configuration": "A2",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.023224043715846993,
+    "acc3": 0.10655737704918032,
+    "false_exclusion_rate": 0.5163934426229508,
+    "confirmed": 74
+  },
+  {
+    "configuration": "A3",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.05888888888888888,
+    "acc3": 0.20666666666666667,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 82
+  },
+  {
+    "configuration": "A3",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.05357142857142857,
+    "acc3": 0.5,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 11
+  },
+  {
+    "configuration": "A3",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.060109289617486336,
+    "acc3": 0.13934426229508196,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 71
+  },
+  {
+    "configuration": "A4",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.06222222222222223,
+    "acc3": 0.19,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 74
+  },
+  {
+    "configuration": "A4",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.08928571428571429,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 9
+  },
+  {
+    "configuration": "A4",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.056010928961748634,
+    "acc3": 0.12704918032786885,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 65
+  },
+  {
+    "configuration": "A5",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.048888888888888885,
+    "acc3": 0.20111111111111113,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 74
+  },
+  {
+    "configuration": "A5",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.017857142857142856,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 10
+  },
+  {
+    "configuration": "A5",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.056010928961748634,
+    "acc3": 0.1407103825136612,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 64
+  },
+  {
+    "configuration": "A6",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.048888888888888885,
+    "acc3": 0.20111111111111113,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 74
+  },
+  {
+    "configuration": "A6",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.017857142857142856,
+    "acc3": 0.4642857142857143,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 10
+  },
+  {
+    "configuration": "A6",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.056010928961748634,
+    "acc3": 0.1407103825136612,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 64
+  },
+  {
+    "configuration": "A7",
+    "cohort": "ALL",
+    "n": 150,
+    "acc1": 0.018185185185185186,
+    "acc3": 0.12122222222222225,
+    "false_exclusion_rate": 0.4533333333333333,
+    "confirmed": 0
+  },
+  {
+    "configuration": "A7",
+    "cohort": "Additional articles",
+    "n": 28,
+    "acc1": 0.03571428571428571,
+    "acc3": 0.39285714285714285,
+    "false_exclusion_rate": 0.35714285714285715,
+    "confirmed": 0
+  },
+  {
+    "configuration": "A7",
+    "cohort": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.014162112932604736,
+    "acc3": 0.05887978142076502,
+    "false_exclusion_rate": 0.47540983606557374,
+    "confirmed": 0
+  }
+]

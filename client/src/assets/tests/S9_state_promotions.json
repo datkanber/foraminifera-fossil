@@ -1,0 +1,151 @@
+﻿image_id,reference_genus,module,cohort,source,plate,panel,cluster,model,predicted_genus,status,phi,phi_bin,acc1,acc3,displayed_top1_correct,covered,reference_excluded,elapsed_seconds,provider_attempts
+IMG_001,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,b,COS_CH4,gemini-3.5-flash-lite,Recurvoides,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,4.552,1
+IMG_002,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,c,COS_CH4,gemini-3.5-flash-lite,Textularia,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,8.75,1
+IMG_003,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,d,COS_CH12,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.583,1
+IMG_004,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,e,COS_CH4,gemini-3.5-flash-lite,Karrerulina,CONFIRMED_GENUS,0.2,2,0.0,1.0,0.0,1.0,0.0,15.0,1
+IMG_005,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,f,COS_CH12,gemini-3.5-flash-lite,Dictyoconus,CANDIDATE_GENUS,0.25,2,0.0,0.0,0.0,1.0,0.0,13.742,1
+IMG_006,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,g,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.231,1
+IMG_007,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,h,COS_CH2,gemini-3.5-flash-lite,Textularia,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,11.083,1
+IMG_008,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,i,COS_CH7,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,14.074,1
+IMG_009,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,j,COS_CH12,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.915,1
+IMG_010,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,k,COS_CH12,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,14.021,1
+IMG_011,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,4,l,COS_CH12,gemini-3.5-flash-lite,Textularia,CANDIDATE_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,12.23,1
+IMG_012,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,a,COS_CH2,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,13.052,1
+IMG_013,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,b,COS_CH7,gemini-3.5-flash-lite,Recurvoides,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.338,1
+IMG_014,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,c,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,14.898,1
+IMG_015,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,d,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,14.484,1
+IMG_016,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,e,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CONFIRMED_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.871,1
+IMG_017,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,f,COS_CH2,gemini-3.5-flash-lite,Ammobaculites,CANDIDATE_GENUS,0.15,1,0.5,1.0,0.0,1.0,0.0,13.086,1
+IMG_018,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,g,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.206,1
+IMG_019,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,h,COS_CH2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,14.361,1
+IMG_020,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,i,COS_CH12,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,13.403,1
+IMG_021,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,j,COS_CH4,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,13.273,1
+IMG_022,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,k,COS_CH12,gemini-3.5-flash-lite,Recurvoides,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.017,1
+IMG_023,Coskinolina,AGGLUTINATED,Additional articles,Schlagintweit_Hadi_2018,5,l,COS_CH12,gemini-3.5-flash-lite,Recurvoides,CANDIDATE_GENUS,0.35,3,0.0,0.0,0.0,1.0,1.0,14.029,1
+IMG_024,Alveolina,PORCELANEOUS,Additional articles,Mattern_2024,15,A,MATTERN_sample_1,gemini-3.5-flash-lite,Idalina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,45.158,2
+IMG_025,Alveolina,PORCELANEOUS,Additional articles,Mattern_2024,15,B,MATTERN_sample_4,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.0,0,0.0,0.0,0.0,0.0,0.0,14.386,1
+IMG_026,Alveolina,PORCELANEOUS,Additional articles,Mattern_2024,15,C,MATTERN_sample_7,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,13.603,1
+IMG_027,Alveolina,PORCELANEOUS,Additional articles,Mattern_2024,15,D,MATTERN_sample_8,gemini-3.5-flash-lite,Lockhartia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,8.703,1
+IMG_028,Alveolina,PORCELANEOUS,Additional articles,Mattern_2024,15,E,MATTERN_sample_11,gemini-3.5-flash-lite,Idalina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,8.626,1
+IMG_029,Barattolites,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.1,18,UCL_plate_6.1,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,8.855,1
+IMG_030,Coskinolina,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.1,22,UCL_plate_6.1,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.3,3,0.0,0.0,0.0,0.0,0.0,8.885,1
+IMG_031,Coskinolina,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.1,23,UCL_plate_6.1,gemini-3.5-flash-lite,Textularia,CANDIDATE_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,14.118,1
+IMG_032,Coskinolina,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,1,UCL_plate_6.2,gemini-3.5-flash-lite,Textularia,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.469,1
+IMG_033,Coskinolina,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,2,UCL_plate_6.2,gemini-3.5-flash-lite,Ammobaculites,CANDIDATE_GENUS,0.05,0,0.5,1.0,0.0,1.0,0.0,13.816,1
+IMG_034,Dictyoconus,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,7,UCL_plate_6.2,gemini-3.5-flash-lite,Coskinolina,CONFIRMED_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,12.23,1
+IMG_035,Dictyoconus,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,8,UCL_plate_6.2,gemini-3.5-flash-lite,Coskinolina,CANDIDATE_GENUS,0.2,2,0.0,0.0,0.0,1.0,1.0,13.524,1
+IMG_036,Dictyoconus,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,9,UCL_plate_6.2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.866,1
+IMG_037,Coskinolina,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.2,10,UCL_plate_6.2,gemini-3.5-flash-lite,Karrerulina,CANDIDATE_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,14.113,1
+IMG_038,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.2,15,UCL_plate_6.2,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,14.012,1
+IMG_039,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.2,16,UCL_plate_6.2,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.932,1
+IMG_040,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.2,17,UCL_plate_6.2,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,13.05,1
+IMG_041,Glomalveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.2,18,UCL_plate_6.2,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,12.398,1
+IMG_042,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.2,19,UCL_plate_6.2,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.05,0,1.0,1.0,1.0,1.0,0.0,12.646,1
+IMG_043,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.3,1,UCL_plate_6.3,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.0,0,1.0,1.0,1.0,1.0,0.0,14.473,1
+IMG_044,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.3,2,UCL_plate_6.3,gemini-3.5-flash-lite,Idalina,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,15.561,1
+IMG_045,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.3,3,UCL_plate_6.3,gemini-3.5-flash-lite,Dendritina,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,13.217,1
+IMG_046,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.3,4,UCL_plate_6.3,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,12.915,1
+IMG_047,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.3,6,UCL_plate_6.3,gemini-3.5-flash-lite,Fabularia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,12.389,1
+IMG_048,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,1,UCL_plate_6.4,gemini-3.5-flash-lite,Peneroplis,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.223,1
+IMG_049,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,3,UCL_plate_6.4,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.0,0,1.0,1.0,1.0,1.0,0.0,13.317,1
+IMG_050,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,4,UCL_plate_6.4,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,14.161,1
+IMG_051,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,6,UCL_plate_6.4,gemini-3.5-flash-lite,Peneroplis,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,37.205,2
+IMG_052,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,7,UCL_plate_6.4,gemini-3.5-flash-lite,Idalina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,41.355,2
+IMG_053,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,8,UCL_plate_6.4,gemini-3.5-flash-lite,Lacazinella,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,12.988,1
+IMG_054,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,9,UCL_plate_6.4,gemini-3.5-flash-lite,Peneroplis,CONFIRMED_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,4.27,1
+IMG_055,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,10,UCL_plate_6.4,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,4.909,1
+IMG_056,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.4,11,UCL_plate_6.4,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,8.953,1
+IMG_057,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.5,1,UCL_plate_6.5,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,13.728,1
+IMG_058,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.5,2,UCL_plate_6.5,gemini-3.5-flash-lite,Glomalveolina,CONFIRMED_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,13.955,1
+IMG_059,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.5,3,UCL_plate_6.5,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.0,0,1.0,1.0,1.0,1.0,0.0,14.329,1
+IMG_060,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.5,4,UCL_plate_6.5,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,12.899,1
+IMG_061,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.5,11,UCL_plate_6.5,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.0,0,0.0,0.0,0.0,0.0,1.0,13.003,1
+IMG_062,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.5,13,UCL_plate_6.5,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,12.901,1
+IMG_063,Alveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.5,14,UCL_plate_6.5,gemini-3.5-flash-lite,Lenticulina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.351,1
+IMG_064,Glomalveolina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,1,UCL_plate_6.9,gemini-3.5-flash-lite,Quinqueloculina,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,13.833,1
+IMG_065,Fabularia,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,4,UCL_plate_6.9,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,13.279,1
+IMG_066,Fabularia,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,5,UCL_plate_6.9,gemini-3.5-flash-lite,Articulina,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,13.677,1
+IMG_067,Fabularia,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,6,UCL_plate_6.9,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.019,1
+IMG_068,Fabularia,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,7,UCL_plate_6.9,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,13.107,1
+IMG_069,Lacazina,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,9,UCL_plate_6.9,gemini-3.5-flash-lite,Peneroplis,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,13.696,1
+IMG_070,Lacazinella,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,10,UCL_plate_6.9,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.0,0,0.0,0.0,0.0,0.0,0.0,14.05,1
+IMG_071,Lacazinella,PORCELANEOUS,KB reference book (overlap),BoudagherFadel_2018,6.9,11,UCL_plate_6.9,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,45.231,2
+IMG_072,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.12,2,UCL_plate_6.12,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.05,0,0.0,0.0,0.0,0.0,1.0,14.067,1
+IMG_073,Ranikothalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,3,UCL_plate_6.13,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.14,1
+IMG_074,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,4,UCL_plate_6.13,gemini-3.5-flash-lite,Haplophragmoides,CANDIDATE_GENUS,0.25,2,0.0,0.0,0.0,1.0,0.0,8.526,1
+IMG_075,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,5,UCL_plate_6.13,gemini-3.5-flash-lite,Trochammina,CANDIDATE_GENUS,0.15,1,0.0,0.0,0.0,1.0,0.0,9.3,1
+IMG_076,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,6,UCL_plate_6.13,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,36.122,2
+IMG_077,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,7,UCL_plate_6.13,gemini-3.5-flash-lite,Recurvoides,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,9.342,1
+IMG_078,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,8,UCL_plate_6.13,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.15,1,0.0,0.0,0.0,1.0,0.0,7.604,1
+IMG_079,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,9,UCL_plate_6.13,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,9.038,1
+IMG_080,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,10,UCL_plate_6.13,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,9.992,1
+IMG_081,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,12,UCL_plate_6.13,gemini-3.5-flash-lite,Lockhartia,CANDIDATE_GENUS,0.1,1,0.0,1.0,0.0,1.0,0.0,13.944,1
+IMG_082,Miscellanea,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.13,15,UCL_plate_6.13,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,39.83,2
+IMG_083,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.14,8,UCL_plate_6.14,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,13.082,1
+IMG_084,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.14,9,UCL_plate_6.14,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.1,1,0.0,0.0,0.0,0.0,1.0,12.868,1
+IMG_085,Heterostegina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.14,13,UCL_plate_6.14,gemini-3.5-flash-lite,Lacazinella,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,11.19,1
+IMG_086,Spiroclypeus,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.15,11,UCL_plate_6.15,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.6666666666666666,0.0,1.0,0.0,35.943,2
+IMG_087,Spiroclypeus,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.15,12,UCL_plate_6.15,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.5,0.0,1.0,0.0,6.456,1
+IMG_088,Spiroclypeus,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.15,13,UCL_plate_6.15,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.15,1,0.0,1.0,0.0,1.0,0.0,9.458,1
+IMG_089,Ranikothalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.15,14,UCL_plate_6.15,gemini-3.5-flash-lite,Caudammina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,9.813,1
+IMG_090,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.16,3,UCL_plate_6.16,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.25,2,0.0,0.0,0.0,1.0,1.0,36.036,2
+IMG_091,Nemkovella,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.16,9,UCL_plate_6.16,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,13.187,1
+IMG_092,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.16,11,UCL_plate_6.16,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,9.823,1
+IMG_093,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.16,12,UCL_plate_6.16,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,9.69,1
+IMG_094,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.17,2,UCL_plate_6.17,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,9.32,1
+IMG_095,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.17,4,UCL_plate_6.17,gemini-3.5-flash-lite,Caudammina,CONFIRMED_GENUS,0.2,2,0.0,0.0,0.0,1.0,0.0,13.219,1
+IMG_096,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.17,5,UCL_plate_6.17,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.05,0,0.0,0.0,0.0,0.0,1.0,12.965,1
+IMG_097,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.17,8,UCL_plate_6.17,gemini-3.5-flash-lite,Ammobaculites,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,13.578,1
+IMG_098,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,1,UCL_plate_6.18,gemini-3.5-flash-lite,Haplophragmoides,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,13.115,1
+IMG_099,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,2,UCL_plate_6.18,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.0,0,0.0,0.0,0.0,0.0,1.0,13.376,1
+IMG_100,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,3,UCL_plate_6.18,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,40.35,2
+IMG_101,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,8,UCL_plate_6.18,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,14.085,1
+IMG_102,Operculina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,9,UCL_plate_6.18,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.55,1
+IMG_103,Operculina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,11,UCL_plate_6.18,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.0,0,0.0,0.0,0.0,0.0,1.0,8.063,1
+IMG_104,Operculina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.18,12,UCL_plate_6.18,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.15,1,0.0,0.0,0.0,0.0,1.0,9.036,1
+IMG_105,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.19,5,UCL_plate_6.19,gemini-3.5-flash-lite,Dendritina,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,10.132,1
+IMG_106,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.19,6,UCL_plate_6.19,gemini-3.5-flash-lite,Borelis,CANDIDATE_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,13.706,1
+IMG_107,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.19,7,UCL_plate_6.19,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,14.387,1
+IMG_108,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.19,8,UCL_plate_6.19,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,13.872,1
+IMG_109,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,1,UCL_plate_6.20,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,13.069,1
+IMG_110,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,2,UCL_plate_6.20,gemini-3.5-flash-lite,Lockhartia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,12.49,1
+IMG_111,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,3,UCL_plate_6.20,gemini-3.5-flash-lite,Articulina,CANDIDATE_GENUS,0.15,1,0.0,0.0,0.0,1.0,0.0,13.874,1
+IMG_112,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,4,UCL_plate_6.20,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,44.921,2
+IMG_113,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,5,UCL_plate_6.20,gemini-3.5-flash-lite,Discocyclina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,12.272,1
+IMG_114,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,6,UCL_plate_6.20,gemini-3.5-flash-lite,Caudammina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,12.521,1
+IMG_115,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,9,UCL_plate_6.20,gemini-3.5-flash-lite,Caudammina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,9.505,1
+IMG_116,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,10,UCL_plate_6.20,gemini-3.5-flash-lite,Caudammina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,8.509,1
+IMG_117,Assilina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,11,UCL_plate_6.20,gemini-3.5-flash-lite,Heterostegina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,8.983,1
+IMG_118,Chordoperculinoides,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.20,16,UCL_plate_6.20,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,10.177,1
+IMG_119,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,1,UCL_plate_6.21,gemini-3.5-flash-lite,Lenticulina,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,14.149,1
+IMG_120,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,2,UCL_plate_6.21,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,12.906,1
+IMG_121,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,3,UCL_plate_6.21,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.05,0,0.0,0.0,0.0,0.0,1.0,13.133,1
+IMG_122,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,5,UCL_plate_6.21,gemini-3.5-flash-lite,Operculina,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,39.781,2
+IMG_123,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,7,UCL_plate_6.21,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.2,2,0.0,0.0,0.0,1.0,1.0,13.881,1
+IMG_124,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,10,UCL_plate_6.21,gemini-3.5-flash-lite,Lacazinella,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,14.341,1
+IMG_125,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,12,UCL_plate_6.21,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,9.454,1
+IMG_126,Nummulites,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.21,16,UCL_plate_6.21,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.2,2,0.0,0.0,0.0,1.0,1.0,9.16,1
+IMG_127,Ranikothalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,1,UCL_plate_6.22,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.1,1,0.0,0.0,0.0,0.0,1.0,8.339,1
+IMG_128,Ranikothalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,3,UCL_plate_6.22,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.1,1,0.0,0.0,0.0,0.0,1.0,12.735,1
+IMG_129,Ranikothalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,5,UCL_plate_6.22,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.15,1,1.0,1.0,1.0,1.0,0.0,40.571,2
+IMG_130,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,8,UCL_plate_6.22,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.2,2,0.0,0.0,0.0,0.0,1.0,14.68,1
+IMG_131,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,9,UCL_plate_6.22,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.05,0,0.0,0.0,0.0,1.0,1.0,14.216,1
+IMG_132,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,11,UCL_plate_6.22,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,7.726,1
+IMG_133,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.22,12,UCL_plate_6.22,gemini-3.5-flash-lite,Haplophragmoides,PROBABLE_GENUS,0.15,1,0.0,0.0,0.0,1.0,0.0,8.134,1
+IMG_134,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.24,1,UCL_plate_6.24,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.05,0,0.0,0.0,0.0,0.0,1.0,9.181,1
+IMG_135,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.24,7,UCL_plate_6.24,gemini-3.5-flash-lite,Operculina,CONFIRMED_GENUS,0.05,0,0.0,1.0,0.0,1.0,0.0,14.26,1
+IMG_136,Asterocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.24,9,UCL_plate_6.24,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.0,0,0.0,0.0,0.0,1.0,0.0,14.931,1
+IMG_137,Asterocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.24,10,UCL_plate_6.24,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.15,1,0.0,0.0,0.0,0.0,1.0,14.68,1
+IMG_138,Discocyclina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.25,7,UCL_plate_6.25,gemini-3.5-flash-lite,Ranikothalia,CANDIDATE_GENUS,0.2,2,0.0,0.0,0.0,1.0,1.0,12.973,1
+IMG_139,Laffitteina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.25,11,UCL_plate_6.25,gemini-3.5-flash-lite,Alveolina,CANDIDATE_GENUS,0.05,0,0.0,0.0,0.0,1.0,0.0,11.887,1
+IMG_140,Laffitteina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.25,12,UCL_plate_6.25,gemini-3.5-flash-lite,Lockhartia,CANDIDATE_GENUS,0.05,0,0.3333333333333333,1.0,0.0,1.0,0.0,12.607,1
+IMG_141,Orbitoclypeus,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.27,2,UCL_plate_6.27,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.0,0,0.0,0.0,0.0,1.0,1.0,14.782,1
+IMG_142,Daviesina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.27,13,UCL_plate_6.27,gemini-3.5-flash-lite,Operculina,CANDIDATE_GENUS,0.2,2,0.0,0.0,0.0,1.0,1.0,40.884,2
+IMG_143,Daviesina,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.27,14,UCL_plate_6.27,gemini-3.5-flash-lite,Ranikothalia,CONFIRMED_GENUS,0.15,1,0.0,0.0,0.0,1.0,1.0,13.638,1
+IMG_144,Dictyoconus,AGGLUTINATED,KB reference book (overlap),BoudagherFadel_2018,6.28,5,UCL_plate_6.28,gemini-3.5-flash-lite,Haplophragmoides,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,1.0,12.732,1
+IMG_145,Rotalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,9,UCL_plate_6.28,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,9.031,1
+IMG_146,Rotalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,10,UCL_plate_6.28,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.1,1,0.0,0.0,0.0,1.0,0.0,8.468,1
+IMG_147,Rotalia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,11,UCL_plate_6.28,gemini-3.5-flash-lite,Trochammina,CONFIRMED_GENUS,0.2,2,0.0,0.0,0.0,1.0,0.0,31.189,2
+IMG_148,Lockhartia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,12,UCL_plate_6.28,gemini-3.5-flash-lite,Indeterminate,INDETERMINATE,0.1,1,0.0,0.0,0.0,0.0,1.0,14.082,1
+IMG_149,Lockhartia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,13,UCL_plate_6.28,gemini-3.5-flash-lite,Recurvoides,CONFIRMED_GENUS,0.2,2,0.0,0.0,0.0,1.0,0.0,9.447,1
+IMG_150,Lockhartia,HYALINE,KB reference book (overlap),BoudagherFadel_2018,6.28,14,UCL_plate_6.28,gemini-3.5-flash-lite,Lockhartia,CANDIDATE_GENUS,0.1,1,1.0,1.0,1.0,1.0,0.0,8.833,1

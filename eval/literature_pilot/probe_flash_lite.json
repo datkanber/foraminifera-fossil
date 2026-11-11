@@ -1,0 +1,145 @@
+{
+  "httpStatus": 200,
+  "data": {
+    "success": true,
+    "model": "gemini-3.5-flash-lite",
+    "observation": {
+      "object_is_foraminifer": true,
+      "image_quality": "good",
+      "image_type": "thin_section",
+      "observations": {
+        "CHR_01": {
+          "value": "AGGLUTINATED",
+          "state": "PRESENT",
+          "reason": "Microgranular wall texture typical of agglutinated forms."
+        },
+        "CHR_02": {
+          "value": "CONICAL",
+          "state": "PRESENT",
+          "reason": "Test shape in axial section (a) is distinctly conical."
+        },
+        "CHR_03": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Numerous chambers separated by visible septa."
+        },
+        "CHR_04": {
+          "value": "MULTICHAMBERED",
+          "state": "PRESENT",
+          "reason": "Composed of many chambers arranged in a conical series."
+        },
+        "CHR_05": {
+          "value": "TRISERIAL",
+          "state": "PRESENT",
+          "reason": "Initial or general serial arrangement typical of certain conical agglutinated foraminifera."
+        },
+        "CHR_06": {
+          "value": "TROCHOSPIRAL",
+          "state": "PRESENT",
+          "reason": "Initial coiling shows a trochospiral arrangement."
+        },
+        "CHR_07": {
+          "value": "CHANGING_PLANES",
+          "state": "PRESENT",
+          "reason": "Shifts from trochospiral to a more conical/serial arrangement."
+        },
+        "CHR_08": {
+          "value": "INVOLUTE",
+          "state": "PRESENT",
+          "reason": "Early whorls appear tightly coiled and involute."
+        },
+        "CHR_09": {
+          "value": "TRISERIAL_TO_UNISERIAL",
+          "state": "PRESENT",
+          "reason": "Transition from initial coiled/triserial stage to later uniserial or expansive conical growth."
+        },
+        "CHR_10": {
+          "value": "SUBDIVIDED",
+          "state": "PRESENT",
+          "reason": "Chambers show internal partitioning or subdivisions (ma)."
+        },
+        "CHR_11": {
+          "value": "PRESENT",
+          "state": "PRESENT",
+          "reason": "Presence of chamberlets or internal partitions visible inside the main chambers."
+        },
+        "CHR_12": {
+          "value": "BILOCULAR",
+          "state": "PRESENT",
+          "reason": "Proloculus (pr) clearly visible in cross-section (b)."
+        },
+        "CHR_13": {
+          "value": "SUBEPIDERMAL",
+          "state": "PRESENT",
+          "reason": "Subepidermal network or partitions discernible beneath the outer wall."
+        },
+        "CHR_14": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No prominent pillars observed in the interior."
+        },
+        "CHR_15": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "Lateral chamberlets absent in this conical morphotype."
+        },
+        "CHR_16": {
+          "value": "NOT_OBSERVABLE",
+          "state": "NOT_OBSERVABLE",
+          "reason": "Apertural face not clearly cut in these specific sections."
+        },
+        "CHR_17": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "No marginal cord structure present."
+        },
+        "CHR_18": {
+          "value": "ABSENT",
+          "state": "PRESENT",
+          "reason": "Septal filaments not visible in thin section view."
+        },
+        "CHR_19": {
+          "value": "FREE",
+          "state": "PRESENT",
+          "reason": "Free-living conical test morphology."
+        },
+        "CHR_20": {
+          "value": "MEGALOSPHERIC_FORM",
+          "state": "PRESENT",
+          "reason": "Proloculus (pr) in section b is quite large, indicating a megalospheric generation."
+        },
+        "CHR_21": {
+          "value": "AXIAL",
+          "state": "PRESENT",
+          "reason": "Main view (a) represents an axial/longitudinal section through the cone."
+        }
+      },
+      "module": "AGGLUTINATED",
+      "vlm_suggestion": {
+        "identification_status": "CANDIDATE_GENUS",
+        "best_open_id": "Valvulammininae / Dictyopsella-like",
+        "candidate_genera": [
+          {
+            "name": "Dictyopsella",
+            "confidence": "moderate",
+            "why": "Conical shape with complex internal chamber subdivisions and distinct proloculus in cross section."
+          }
+        ],
+        "lookalikes": [
+          "Cribrobulimina",
+          "Valvulammina"
+        ],
+        "why_not_species_level": "Thin section orientation and lack of external surface details prevent reliable species-level determination."
+      },
+      "student_explanation_en": "This image shows thin-section views of a conical agglutinated foraminifer. Section (a) is an axial cut displaying the expanding conical shape and internal chamber subdivisions (ma). Section (b) is a cross-section showing the early whorl and a prominent spherical proloculus (pr), characteristic of the megalospheric form.",
+      "student_explanation_tr": "Bu görüntü, konik yapıya sahip aglütine bir foraminiferin ince kesitlerini göstermektedir. (a) kesiti, konik formu ve iç oda bölmelerini (ma) gösteren eksenel bir kesittir. (b) kesiti ise erken kıvrımı ve megalosferik formu belirten büyük prokolusu (pr) gösteren enine bir kesittir.",
+      "expert_checklist_tr": [
+        "Aglütine duvar yapısının mikrogranüler dokusu incelendi mi?",
+        "Eksenel kesitte (a) iç bölme ve bölmeciklerin (ma) dağılımı doğrulandı mı?",
+        "Enine kesitte (b) prokolus (pr) boyutu ve ilk kıvrım geometrisi kontrol edildi mi?"
+      ],
+      "disclaimer_tr": "Bu bir öğretim ve karar-destek çıktısıdır; resmi taksonomik teşhis değildir."
+    },
+    "score": null
+  }
+}

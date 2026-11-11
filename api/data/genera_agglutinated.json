@@ -30,7 +30,14 @@
       "closest_comparisons": [
         "Glomospira"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 2,
@@ -60,7 +67,14 @@
       "closest_comparisons": [
         "Ammodiscus"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 3,
@@ -91,7 +105,14 @@
       "closest_comparisons": [
         "Psammosphaera"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 4,
@@ -121,7 +142,14 @@
       "closest_comparisons": [
         "Saccammina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 5,
@@ -152,7 +180,14 @@
       "closest_comparisons": [
         "Rhizammina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 6,
@@ -181,7 +216,14 @@
       "closest_comparisons": [
         "Rhizammina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 7,
@@ -212,7 +254,14 @@
         "Bathysiphon",
         "Rhabdammina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 8,
@@ -244,7 +293,14 @@
       "closest_comparisons": [
         "Hormosina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 9,
@@ -274,7 +330,14 @@
       "closest_comparisons": [
         "Reophax"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 10,
@@ -304,7 +367,14 @@
         "Hormosina",
         "Reophax"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 11,
@@ -337,7 +407,14 @@
         "Ammodiscus",
         "Reticulophragmium"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 12,
@@ -367,7 +444,14 @@
       "closest_comparisons": [
         "Glomospira"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 13,
@@ -396,7 +480,14 @@
       "closest_comparisons": [
         "Spiroplectammina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 14,
@@ -426,7 +517,14 @@
       "closest_comparisons": [
         "Haplophragmoides"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 15,
@@ -455,7 +553,14 @@
         ]
       },
       "closest_comparisons": [],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 16,
@@ -484,7 +589,14 @@
         ]
       },
       "closest_comparisons": [],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 17,
@@ -516,7 +628,14 @@
         "Spiroplectammina",
         "Gaudryina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 18,
@@ -546,7 +665,14 @@
         "Textularia",
         "Ammobaculites"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 19,
@@ -577,7 +703,14 @@
         "Dorothia",
         "Karrerulina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 20,
@@ -607,7 +740,14 @@
       "closest_comparisons": [
         "Gaudryina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 21,
@@ -636,7 +776,14 @@
       "closest_comparisons": [],
       "notes": [
         "Triserial → uniserial = **Clavulina**"
-      ]
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 22,
@@ -667,7 +814,14 @@
         "Gaudryina",
         "Dorothia"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 23,
@@ -699,7 +853,14 @@
       "closest_comparisons": [],
       "notes": [
         "Conical + **no marginal exoskeleton** → strongly supports *Coskinolina*."
-      ]
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 24,
@@ -730,7 +891,14 @@
       "closest_comparisons": [
         "Coskinolina"
       ],
-      "notes": []
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "order": 25,
@@ -761,7 +929,14 @@
         "taxonomicReviewRequired = TRUE",
         "familyAssignment = review",
         "useAsTerminalGenus = conditional"
-      ]
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     }
   ]
 }

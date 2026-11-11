@@ -1,0 +1,41 @@
+[
+  {
+    "id": "Schlagintweit_Hadi_2018",
+    "authors": "Felix Schlagintweit; Mehdi Hadi",
+    "year": 2018,
+    "title": "Coskinolina sistanensis n. sp., a new larger benthic foraminifera from the early Eocene of eastern Iran",
+    "journal": "Acta Palaeontologica Romaniae 14(1):47–55",
+    "doi": "10.5281/zenodo.13190022",
+    "url": "https://zenodo.org/records/13190022",
+    "license": "CC-BY-4.0",
+    "cohort": "Additional articles",
+    "article_figure_pages": "51–52",
+    "local_pdf": "Schlagintweit_Hadi_2018_Coskinolina.pdf"
+  },
+  {
+    "id": "Mattern_2024",
+    "authors": "Frank Mattern et al.",
+    "year": 2024,
+    "title": "Lithostratigraphy and Limestone Microfacies of the Jafnayn Formation (Paleocene to Early Eocene, Al-Khod, Sultanate of Oman): Deposition in a Restricted Lagoon with Intervals of Open Marine Conditions",
+    "journal": "Geosciences 14(12):352",
+    "doi": "10.3390/geosciences14120352",
+    "url": "https://www.mdpi.com/2076-3263/14/12/352",
+    "license": "CC-BY-4.0",
+    "cohort": "Additional articles",
+    "article_figure_pages": "23, Figure 15",
+    "local_pdf": "Mattern_2024_Jafnayn.pdf"
+  },
+  {
+    "id": "BoudagherFadel_2018",
+    "authors": "Marcelle K. BouDagher-Fadel",
+    "year": 2018,
+    "title": "Evolution and Geological Significance of Larger Benthic Foraminifera, Second Edition",
+    "journal": "UCL Press",
+    "doi": "10.14324/111.9781911576938",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10047587/",
+    "license": "CC-BY-4.0",
+    "cohort": "KB reference book (overlap)",
+    "article_figure_pages": "Chapter 6, numbered plate/panel in manifest",
+    "local_pdf": "BoudagherFadel_2018_LBF.pdf"
+  }
+]

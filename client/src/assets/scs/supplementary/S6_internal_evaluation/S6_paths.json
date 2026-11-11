@@ -1,0 +1,3474 @@
+[
+  {
+    "path_id": "PATH_001",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Psammosphaera",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "GLOBULAR",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3A"
+    ]
+  },
+  {
+    "path_id": "PATH_002",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Saccammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "GLOBULAR",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3A"
+    ]
+  },
+  {
+    "path_id": "PATH_003",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Bathysiphon",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "UNCOILED",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3B",
+      "AGG_Q4A"
+    ]
+  },
+  {
+    "path_id": "PATH_004",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Rhizammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "UNCOILED",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3B",
+      "AGG_Q4A"
+    ]
+  },
+  {
+    "path_id": "PATH_005",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Rhabdammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "UNCOILED",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3B",
+      "AGG_Q4B"
+    ]
+  },
+  {
+    "path_id": "PATH_006",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Rhizammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "UNCOILED",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3B",
+      "AGG_Q4B"
+    ]
+  },
+  {
+    "path_id": "PATH_007",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Ammodiscus",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_07": {
+        "value": "SINGLE_PLANE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3C"
+    ]
+  },
+  {
+    "path_id": "PATH_008",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Glomospira",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "TUBULAR",
+        "state": "PRESENT"
+      },
+      "CHR_07": {
+        "value": "CHANGING_PLANES",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2A",
+      "AGG_Q3C"
+    ]
+  },
+  {
+    "path_id": "PATH_009",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Coskinolina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3D"
+    ]
+  },
+  {
+    "path_id": "PATH_010",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Dictyoconus",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "RADIAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "LABYRINTHIC",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3D",
+      "AGG_Q4C"
+    ]
+  },
+  {
+    "path_id": "PATH_011",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Barattolites",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "SUBEPIDERMAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3D",
+      "AGG_Q4C",
+      "AGG_Q5A"
+    ]
+  },
+  {
+    "path_id": "PATH_012",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Hormosina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4D",
+      "AGG_Q5B"
+    ]
+  },
+  {
+    "path_id": "PATH_013",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Caudammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4D",
+      "AGG_Q5B",
+      "AGG_Q6A"
+    ]
+  },
+  {
+    "path_id": "PATH_014",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Reophax",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4D",
+      "AGG_Q5B",
+      "AGG_Q6A"
+    ]
+  },
+  {
+    "path_id": "PATH_015",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Reophax",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4D"
+    ]
+  },
+  {
+    "path_id": "PATH_016",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Haplophragmoides",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4E",
+      "AGG_Q5C"
+    ]
+  },
+  {
+    "path_id": "PATH_017",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Ammobaculites",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "PLANISPIRAL_TO_UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4E",
+      "AGG_Q5C"
+    ]
+  },
+  {
+    "path_id": "PATH_018",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Reticulophragmium",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4E"
+    ]
+  },
+  {
+    "path_id": "PATH_019",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Recurvoides",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4F"
+    ]
+  },
+  {
+    "path_id": "PATH_020",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Glomospira",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4F"
+    ]
+  },
+  {
+    "path_id": "PATH_021",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Trochammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4G"
+    ]
+  },
+  {
+    "path_id": "PATH_022",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Karrerulina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4G",
+      "AGG_Q5D"
+    ]
+  },
+  {
+    "path_id": "PATH_023",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Textularia",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4H"
+    ]
+  },
+  {
+    "path_id": "PATH_024",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Spiroplectammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "PLANISPIRAL_TO_BISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4H",
+      "AGG_Q5E"
+    ]
+  },
+  {
+    "path_id": "PATH_025",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Gaudryina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "ELONGATE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4H",
+      "AGG_Q5E",
+      "AGG_Q6B",
+      "AGG_Q7A"
+    ]
+  },
+  {
+    "path_id": "PATH_026",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Dorothia",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "CONICAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4H",
+      "AGG_Q5E",
+      "AGG_Q6B",
+      "AGG_Q7A"
+    ]
+  },
+  {
+    "path_id": "PATH_027",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Gaudryina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "TRISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "ELONGATE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4I",
+      "AGG_Q5F",
+      "AGG_Q6C"
+    ]
+  },
+  {
+    "path_id": "PATH_028",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Dorothia",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "TRISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "CONICAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4I",
+      "AGG_Q5F",
+      "AGG_Q6C"
+    ]
+  },
+  {
+    "path_id": "PATH_029",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Clavulina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "TRISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4I",
+      "AGG_Q5F"
+    ]
+  },
+  {
+    "path_id": "PATH_030",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Ammobaculites",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "PLANISPIRAL_TO_UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J"
+    ]
+  },
+  {
+    "path_id": "PATH_031",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Spiroplectammina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "PLANISPIRAL_TO_BISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J"
+    ]
+  },
+  {
+    "path_id": "PATH_032",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Gaudryina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "ELONGATE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J",
+      "AGG_Q6C"
+    ]
+  },
+  {
+    "path_id": "PATH_033",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Dorothia",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_BISERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "CONICAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J",
+      "AGG_Q6C"
+    ]
+  },
+  {
+    "path_id": "PATH_034",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Clavulina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "TRISERIAL_TO_UNISERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J"
+    ]
+  },
+  {
+    "path_id": "PATH_035",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Karrerulina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4J"
+    ]
+  },
+  {
+    "path_id": "PATH_036",
+    "module": "AGGLUTINATED",
+    "leaf_genus": "Rzehakina",
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "AGG_Q1",
+      "AGG_Q2B",
+      "AGG_Q3E",
+      "AGG_Q4K"
+    ]
+  },
+  {
+    "path_id": "PATH_037",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Cornuspira",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_19": {
+        "value": "FREE",
+        "state": "PRESENT"
+      },
+      "CHR_07": {
+        "value": "SINGLE_PLANE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q1U"
+    ]
+  },
+  {
+    "path_id": "PATH_038",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Nubecularia",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_19": {
+        "value": "ATTACHED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "IRREGULAR_COILING",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q1U"
+    ]
+  },
+  {
+    "path_id": "PATH_039",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Quinqueloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "QUINQUELOCULINE",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "TERMINAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3A",
+      "PORC_Q3A1"
+    ]
+  },
+  {
+    "path_id": "PATH_040",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Hauerina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "QUINQUELOCULINE",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "MULTIPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3A",
+      "PORC_Q3A1"
+    ]
+  },
+  {
+    "path_id": "PATH_041",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Articulina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "QUINQUELOCULINE",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3A"
+    ]
+  },
+  {
+    "path_id": "PATH_042",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Triloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "TRILOCULINE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3B"
+    ]
+  },
+  {
+    "path_id": "PATH_043",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Miliolinella",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "TRILOCULINE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3B"
+    ]
+  },
+  {
+    "path_id": "PATH_044",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pyrgo",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BILOCULINE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3C"
+    ]
+  },
+  {
+    "path_id": "PATH_045",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pyrgoina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "BILOCULINE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3C"
+    ]
+  },
+  {
+    "path_id": "PATH_046",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Sigmoilina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "IRREGULAR_SERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3"
+    ]
+  },
+  {
+    "path_id": "PATH_047",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Miliola",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3"
+    ]
+  },
+  {
+    "path_id": "PATH_048",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Peneroplis",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "CYCLIC",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "SLIT_LIKE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3F",
+      "PORC_Q3F1"
+    ]
+  },
+  {
+    "path_id": "PATH_049",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Dendritina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "CYCLIC",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3F",
+      "PORC_Q3F1"
+    ]
+  },
+  {
+    "path_id": "PATH_050",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Spirolina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "CYCLIC",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "TERMINAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3F",
+      "PORC_Q3F2"
+    ]
+  },
+  {
+    "path_id": "PATH_051",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Coscinospira",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "CYCLIC",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "CRIBRATE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3F",
+      "PORC_Q3F2"
+    ]
+  },
+  {
+    "path_id": "PATH_052",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Vertebralina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "CYCLIC",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      },
+      "CHR_16": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q3",
+      "PORC_Q3F",
+      "PORC_Q3F2"
+    ]
+  },
+  {
+    "path_id": "PATH_053",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Glomalveolina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "WELL_DEVELOPED",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "COILED_TO_SERIAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4A",
+      "PORC_Q4A2"
+    ]
+  },
+  {
+    "path_id": "PATH_054",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Borelis",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4A",
+      "PORC_Q4A2",
+      "PORC_Q4A3"
+    ]
+  },
+  {
+    "path_id": "PATH_055",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Alveolina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_09": {
+        "value": "NONE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4A",
+      "PORC_Q4A2",
+      "PORC_Q4A3"
+    ]
+  },
+  {
+    "path_id": "PATH_056",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Fabularia",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF"
+    ]
+  },
+  {
+    "path_id": "PATH_057",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Lacazinella",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A"
+    ]
+  },
+  {
+    "path_id": "PATH_058",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_059",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_060",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_061",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Lacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B"
+    ]
+  },
+  {
+    "path_id": "PATH_062",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_063",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_064",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_065",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_066",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_067",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4BF",
+      "PORC_Q4B1",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_068",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Lacazinella",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A"
+    ]
+  },
+  {
+    "path_id": "PATH_069",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_070",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_071",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2A",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_072",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Lacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B"
+    ]
+  },
+  {
+    "path_id": "PATH_073",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_074",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_075",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B2",
+      "PORC_Q4B2B",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_076",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Pseudolacazina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_13": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B3"
+    ]
+  },
+  {
+    "path_id": "PATH_077",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Periloculina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_078",
+    "module": "PORCELANEOUS",
+    "leaf_genus": "Idalina",
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT"
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "STREPTOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "PORC_Q1",
+      "PORC_Q2",
+      "PORC_Q4",
+      "PORC_Q4B",
+      "PORC_Q4B1",
+      "PORC_Q4B3",
+      "PORC_Q4B4"
+    ]
+  },
+  {
+    "path_id": "PATH_079",
+    "module": "HYALINE",
+    "leaf_genus": "Heterostegina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_15": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3A"
+    ]
+  },
+  {
+    "path_id": "PATH_080",
+    "module": "HYALINE",
+    "leaf_genus": "Spiroclypeus",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_15": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3A"
+    ]
+  },
+  {
+    "path_id": "PATH_081",
+    "module": "HYALINE",
+    "leaf_genus": "Lenticulina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B"
+    ]
+  },
+  {
+    "path_id": "PATH_082",
+    "module": "HYALINE",
+    "leaf_genus": "Chordoperculinoides",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "STRONG",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A"
+    ]
+  },
+  {
+    "path_id": "PATH_083",
+    "module": "HYALINE",
+    "leaf_genus": "Operculina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "FLATTENED",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "EVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6A"
+    ]
+  },
+  {
+    "path_id": "PATH_084",
+    "module": "HYALINE",
+    "leaf_genus": "Planocamerinoides",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "FLATTENED",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "SEMI_INVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6A"
+    ]
+  },
+  {
+    "path_id": "PATH_085",
+    "module": "HYALINE",
+    "leaf_genus": "Ranikothalia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "INVOLUTE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "STRONG",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B",
+      "HYA_Q7A"
+    ]
+  },
+  {
+    "path_id": "PATH_086",
+    "module": "HYALINE",
+    "leaf_genus": "Nummulites",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "INVOLUTE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B",
+      "HYA_Q7A"
+    ]
+  },
+  {
+    "path_id": "PATH_087",
+    "module": "HYALINE",
+    "leaf_genus": "Assilina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "FLATTENED",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "SEMI_INVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B",
+      "HYA_Q7B"
+    ]
+  },
+  {
+    "path_id": "PATH_088",
+    "module": "HYALINE",
+    "leaf_genus": "Nummulitoides",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "SEMI_INVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B",
+      "HYA_Q7B",
+      "HYA_Q8A"
+    ]
+  },
+  {
+    "path_id": "PATH_089",
+    "module": "HYALINE",
+    "leaf_genus": "Palaeonummulites",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "SEMI_INVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B",
+      "HYA_Q7B",
+      "HYA_Q8A"
+    ]
+  },
+  {
+    "path_id": "PATH_090",
+    "module": "HYALINE",
+    "leaf_genus": "Operculina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "PLANISPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "ABSENT",
+        "state": "PRESENT"
+      },
+      "CHR_17": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_08": {
+        "value": "EVOLUTE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2A",
+      "HYA_Q3B",
+      "HYA_Q4A",
+      "HYA_Q5A",
+      "HYA_Q6B"
+    ]
+  },
+  {
+    "path_id": "PATH_091",
+    "module": "HYALINE",
+    "leaf_genus": "Lockhartia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "CONICAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3BT"
+    ]
+  },
+  {
+    "path_id": "PATH_092",
+    "module": "HYALINE",
+    "leaf_genus": "Kathina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "STRONG",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3BT",
+      "HYA_Q4BT"
+    ]
+  },
+  {
+    "path_id": "PATH_093",
+    "module": "HYALINE",
+    "leaf_genus": "Daviesina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3BT",
+      "HYA_Q4BT",
+      "HYA_Q5BT"
+    ]
+  },
+  {
+    "path_id": "PATH_094",
+    "module": "HYALINE",
+    "leaf_genus": "Miscellanea",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "STRONG",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3BT",
+      "HYA_Q4BT",
+      "HYA_Q5BT",
+      "HYA_Q6BT"
+    ]
+  },
+  {
+    "path_id": "PATH_095",
+    "module": "HYALINE",
+    "leaf_genus": "Laffitteina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "STRONG",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS"
+    ]
+  },
+  {
+    "path_id": "PATH_096",
+    "module": "HYALINE",
+    "leaf_genus": "Rotalia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS",
+      "HYA_Q4CS"
+    ]
+  },
+  {
+    "path_id": "PATH_097",
+    "module": "HYALINE",
+    "leaf_genus": "Pararotalia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS",
+      "HYA_Q4CS",
+      "HYA_Q5CS"
+    ]
+  },
+  {
+    "path_id": "PATH_098",
+    "module": "HYALINE",
+    "leaf_genus": "Cuvillierina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS",
+      "HYA_Q4CS",
+      "HYA_Q5CS",
+      "HYA_Q6CS"
+    ]
+  },
+  {
+    "path_id": "PATH_099",
+    "module": "HYALINE",
+    "leaf_genus": "Ornatorotalia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS",
+      "HYA_Q4CS",
+      "HYA_Q5CS",
+      "HYA_Q6CS",
+      "HYA_Q7CS"
+    ]
+  },
+  {
+    "path_id": "PATH_100",
+    "module": "HYALINE",
+    "leaf_genus": "Granorotalia",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT"
+      },
+      "CHR_10": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      },
+      "CHR_14": {
+        "value": "WEAK",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "OTHER",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2B",
+      "HYA_Q3CS",
+      "HYA_Q4CS",
+      "HYA_Q5CS",
+      "HYA_Q6CS",
+      "HYA_Q7CS",
+      "HYA_Q8CS"
+    ]
+  },
+  {
+    "path_id": "PATH_101",
+    "module": "HYALINE",
+    "leaf_genus": "Asterocyclina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "STELLATE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2C",
+      "HYA_Q3C"
+    ]
+  },
+  {
+    "path_id": "PATH_102",
+    "module": "HYALINE",
+    "leaf_genus": "Discocyclina",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "DISCOIDAL",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2C",
+      "HYA_Q3C",
+      "HYA_Q4C"
+    ]
+  },
+  {
+    "path_id": "PATH_103",
+    "module": "HYALINE",
+    "leaf_genus": "Orbitoclypeus",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "DISCOIDAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2C",
+      "HYA_Q3C",
+      "HYA_Q4C",
+      "HYA_Q5C"
+    ]
+  },
+  {
+    "path_id": "PATH_104",
+    "module": "HYALINE",
+    "leaf_genus": "Nemkovella",
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT"
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT"
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT"
+      },
+      "CHR_02": {
+        "value": "DISCOIDAL",
+        "state": "PRESENT"
+      },
+      "CHR_12": {
+        "value": "SIMPLE",
+        "state": "PRESENT"
+      }
+    },
+    "trail": [
+      "HYA_Q1",
+      "HYA_Q2C",
+      "HYA_Q3C",
+      "HYA_Q4C",
+      "HYA_Q5C"
+    ]
+  }
+]

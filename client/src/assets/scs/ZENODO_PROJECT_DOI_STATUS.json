@@ -1,0 +1,11 @@
+{
+  "project_doi": null,
+  "project_record_url": null,
+  "reserved": false,
+  "published": false,
+  "github_repository": "https://github.com/datkanber/foraminifera-fossil",
+  "intended_release": "v1.0",
+  "existing_local_tag_at_start": "v1.0-rc1",
+  "source_paper_doi_not_project_doi": "10.5281/zenodo.13190022",
+  "note": "No authenticated Zenodo publication was performed. Do not invent or borrow a DOI for the project."
+}

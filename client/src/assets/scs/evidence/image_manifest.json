@@ -1,0 +1,42 @@
+[
+  {
+    "file": "Figure_10_Excluded_Genera_EN.png",
+    "width_px": 1503,
+    "height_px": 2763,
+    "dpi": 300.0248,
+    "bytes": 392550,
+    "sha256": "4257b84ecc6a7c1accaaf48ea3179c72478cb61caf239acb2ee6d9e9b5956e05",
+    "idat_sha256": "a27f0eaf595762b0da78009ddd121b90e13cf763ca740c67a2b124494915729e",
+    "pixel_data_unchanged_by_dpi_metadata": true
+  },
+  {
+    "file": "Figure_10_Scenario_A_Context_EN.png",
+    "width_px": 1503,
+    "height_px": 5666,
+    "dpi": 300.0248,
+    "bytes": 624744,
+    "sha256": "3b326875c780d6414dcafd28ffd39b7dbe22effbfc486918bd10a657d65f6202",
+    "idat_sha256": "013142b2540a71a1a46bdeaf32615d9001854589f86b1ff3338887c5f58090b5",
+    "pixel_data_unchanged_by_dpi_metadata": true
+  },
+  {
+    "file": "Figure_15_TaxonProfiles_EN.png",
+    "width_px": 2294,
+    "height_px": 1353,
+    "dpi": 300.0248,
+    "bytes": 250296,
+    "sha256": "d7edc49097170391b8d1fc6418350c0fb2cad0f7c14a3d8bfab522ec4f6a2912",
+    "idat_sha256": "889382d444e565799b6b5e6254941b0641677b746de40ad7b4af3dffa54a82e6",
+    "pixel_data_unchanged_by_dpi_metadata": true
+  },
+  {
+    "file": "Figure_15_TaxonProfiles_EN_all18.png",
+    "width_px": 2294,
+    "height_px": 4794,
+    "dpi": 300.0248,
+    "bytes": 1056751,
+    "sha256": "77b96578e9e4d38324fcdb06900fea4419990d5bd6bd8c06255bf0275004f9ad",
+    "idat_sha256": "1a4a1977d951ca54ab1c045b5236cd3da6181a27e3943be5213b57967cb6fb9c",
+    "pixel_data_unchanged_by_dpi_metadata": true
+  }
+]

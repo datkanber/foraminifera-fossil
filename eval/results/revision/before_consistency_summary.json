@@ -1,0 +1,156 @@
+{
+ "agglutinated|R": [
+  {
+   "paths": 36,
+   "top3": 28,
+   "rank1_unique": 12,
+   "conf_total": 24,
+   "conf_correct": 10,
+   "excluded": 1,
+   "rank1_tied": 4
+  },
+  {
+   "PROBABLE": 7,
+   "CONFIRMED": 24,
+   "CANDIDATE": 5
+  }
+ ],
+ "agglutinated|M": [
+  {
+   "paths": 36,
+   "top3": 28,
+   "rank1_unique": 12,
+   "conf_total": 14,
+   "conf_correct": 4,
+   "excluded": 1,
+   "rank1_tied": 3
+  },
+  {
+   "CANDIDATE": 14,
+   "CONFIRMED": 14,
+   "INDETERMINATE": 8
+  }
+ ],
+ "agglutinated|meta": {
+  "questions": 29,
+  "paths": 36,
+  "genera": 25,
+  "maxdepth": 7,
+  "oov": [
+   [
+    "AGG_Q3E",
+    "CHR_05",
+    "FLATTENED_SIGMOID"
+   ]
+  ]
+ },
+ "porcelaneous|R": [
+  {
+   "paths": 42,
+   "rank1_unique": 7,
+   "top3": 22,
+   "conf_total": 22,
+   "conf_correct": 7,
+   "rank1_tied": 4,
+   "excluded": 13
+  },
+  {
+   "CONFIRMED": 22,
+   "CANDIDATE": 5,
+   "PROBABLE": 15
+  }
+ ],
+ "porcelaneous|M": [
+  {
+   "paths": 42,
+   "rank1_unique": 7,
+   "top3": 22,
+   "conf_total": 20,
+   "conf_correct": 5,
+   "rank1_tied": 4,
+   "excluded": 13
+  },
+  {
+   "INDETERMINATE": 2,
+   "CONFIRMED": 20,
+   "CANDIDATE": 20
+  }
+ ],
+ "porcelaneous|meta": {
+  "questions": 23,
+  "paths": 42,
+  "genera": 25,
+  "maxdepth": 10,
+  "oov": [
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ],
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ],
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ],
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ],
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ],
+   [
+    "PORC_Q4B3",
+    "CHR_13",
+    "SPECIALISED"
+   ]
+  ]
+ },
+ "hyaline|R": [
+  {
+   "paths": 26,
+   "rank1_unique": 5,
+   "top3": 14,
+   "conf_total": 14,
+   "conf_correct": 5,
+   "rank1_tied": 3,
+   "excluded": 3
+  },
+  {
+   "CONFIRMED": 14,
+   "CANDIDATE": 11,
+   "PROBABLE": 1
+  }
+ ],
+ "hyaline|M": [
+  {
+   "paths": 26,
+   "rank1_unique": 5,
+   "top3": 14,
+   "conf_total": 14,
+   "conf_correct": 5,
+   "rank1_tied": 3,
+   "excluded": 3
+  },
+  {
+   "CONFIRMED": 14,
+   "CANDIDATE": 11,
+   "INDETERMINATE": 1
+  }
+ ],
+ "hyaline|meta": {
+  "questions": 26,
+  "paths": 26,
+  "genera": 25,
+  "maxdepth": 8,
+  "oov": []
+ }
+}

@@ -1,0 +1,107 @@
+"""Summarize the paired replays and matched-cluster percentile intervals."""
+import collections
+import csv
+import json
+from pathlib import Path
+
+import numpy as np
+
+root = Path(__file__).resolve().parent.parent
+supplement = root / "supplementary"
+data = supplement / "S9_revision_checks" / "data"
+panels = json.loads((data / "S9_panel_replays.json").read_bytes())
+paths = json.loads((data / "S9_path_traces.json").read_bytes())
+archived = json.loads((supplement / "S7_image_results" / "S7_summary.json").read_bytes())
+metrics = ("acc1", "acc3", "coverage", "reference_excluded", "displayed_correct", "module_omitted", "phi")
+seed = 20261109
+resamples = 2000
+
+def summarize(label, rows):
+    groups = collections.defaultdict(list)
+    for row in rows:
+        groups[row["cluster"]].append(row)
+    counts = np.array([len(cluster) for cluster in groups.values()])
+    rng = np.random.default_rng(seed)
+    draws = rng.integers(0, len(groups), size=(resamples, len(groups))) if len(groups) >= 2 else None
+    result = {
+        "group": label,
+        "panels": len(rows),
+        "clusters": len(groups),
+        "affected_panels": sum(bool(r["reverted"]) for r in rows),
+        "module_changes": sum(r["released"]["module"] != r["preserved"]["module"] for r in rows),
+        "state_changes": sum(r["released"]["status"] != r["preserved"]["status"] for r in rows),
+        "display_changes": sum(r["released"]["displayed_genus"] != r["preserved"]["displayed_genus"] for r in rows),
+    }
+    for mode in ("released", "preserved"):
+        states = collections.Counter(row[mode]["status"] for row in rows)
+        confirmed = [r for r in rows if r[mode]["status"] == "CONFIRMED_GENUS"]
+        result[mode + "_states"] = dict(states)
+        result[mode + "_confirmed_correct"] = sum(r[mode]["displayed_correct"] for r in confirmed)
+        result[mode + "_confirmed_total"] = len(confirmed)
+    for metric in metrics:
+        sums = {mode: np.array([sum(r[mode][metric] for r in c) for c in groups.values()])
+                for mode in ("released", "preserved")}
+        a, b = sums["released"], sums["preserved"]
+        point = float((b - a).sum() / counts.sum())
+        low = high = None
+        if draws is not None:
+            dist = (b - a)[draws].sum(axis=1) / counts[draws].sum(axis=1)
+            low, high = map(float, np.quantile(dist, (.025, .975)))
+        result[metric] = {
+            "released": float(a.sum() / counts.sum()),
+            "preserved": float(b.sum() / counts.sum()),
+            "delta": point, "low": low, "high": high,
+        }
+    return result
+
+def path_totals(rows, field):
+    return {
+        "n": len(rows),
+        "excluded": sum(r[field]["excluded"] for r in rows),
+        "shared_top3": sum(r[field]["score_rank"] in (1, 2, 3) for r in rows),
+        "confirmed": sum(r[field]["status"] == "CONFIRMED_GENUS" for r in rows),
+        "confirmed_correct": sum(r[field]["status"] == "CONFIRMED_GENUS" and
+                                 r[field]["displayed_genus"] == r["leaf_genus"] for r in rows),
+        "acc1": sum(r[field]["acc1"] for r in rows) / len(rows),
+        "acc3": sum(r[field]["acc3"] for r in rows) / len(rows),
+    }
+
+cohorts = ["Additional articles", "KB reference book (overlap)"]
+panel_groups = [summarize(label, [r for r in panels if r["cohort"] == label]) for label in cohorts]
+panel_groups.append(summarize("All panels", panels))
+for result, baseline in zip(panel_groups, [*archived["cohorts"], archived["overall"]]):
+    for key, old in (("acc1", "acc1"), ("acc3", "acc3"), ("coverage", "coverage"),
+                     ("reference_excluded", "reference_exclusion"), ("displayed_correct", "displayed_top1_accuracy")):
+        assert abs(result[key]["released"] - baseline[old]["mean"]) < 1e-12, (result["group"], key)
+
+porc = [r for r in paths if r["module"] == "PORCELANEOUS"]
+excluded = [r for r in paths if r["released"]["excluded"]]
+path_summary = {
+    "paths": len(paths),
+    "excluded": len(excluded),
+    "mandatory": sum(bool(r["trigger"]["mandatory"]) for r in excluded),
+    "strong_contradiction_only": sum(not r["trigger"]["mandatory"] for r in excluded),
+    "porcelaneous_chr10_simple_exclusions": [
+        r["path_id"] for r in excluded if r["module"] == "PORCELANEOUS" and
+        any(g["character"] == "CHR_10" and "SIMPLE" in g["observed"]
+            for rule in r["trigger"]["mandatory"] for g in rule["mismatches"])
+    ],
+    "masked_porcelaneous_paths": sum(r["chr10_masked"] for r in porc),
+    "porcelaneous_released": path_totals(porc, "released"),
+    "porcelaneous_masking": path_totals(porc, "masking"),
+    "all_released": path_totals(paths, "released"),
+    "all_masking": path_totals(paths, "masking"),
+}
+summary = {
+    "seed": seed, "cluster_bootstrap_resamples": resamples,
+    "panel_groups": panel_groups, "path_summary": path_summary,
+}
+(data / "S9_replay_summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+with (data / "S9_paired_panel_metrics.csv").open("w", encoding="utf-8", newline="") as f:
+    fields = ("group", "panels", "clusters", "metric", "released", "preserved", "delta", "low", "high")
+    writer = csv.DictWriter(f, fieldnames=fields)
+    writer.writeheader()
+    for group in panel_groups:
+        for key in metrics:
+            writer.writerow({**{k: group[k] for k in fields[:3]}, "metric": key, **group[key]})
+print(json.dumps(summary, indent=2))

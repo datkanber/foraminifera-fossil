@@ -1,0 +1,21 @@
+﻿cohort,bin,phi_lower,phi_upper,n,acc1_mean,acc1_low,acc1_high,acc3_mean,acc3_low,acc3_high
+Additional articles,0,0.0,0.1,10,0.0,0.0,0.0,0.5,0.14285714285714285,0.7692307692307693
+Additional articles,1,0.1,0.2,15,0.03333333333333333,0.0,0.06818181818181818,0.4666666666666667,0.0,0.8181818181818182
+Additional articles,2,0.2,0.3,2,0.0,0.0,0.0,0.5,0.0,1.0
+Additional articles,3,0.3,0.4,1,0.0,,,0.0,,
+Additional articles,4,0.4,0.5,0,,,,,,
+Additional articles,5,0.5,0.6,0,,,,,,
+Additional articles,6,0.6,0.7,0,,,,,,
+Additional articles,7,0.7,0.8,0,,,,,,
+Additional articles,8,0.8,0.9,0,,,,,,
+Additional articles,9,0.9,1.0,0,,,,,,
+KB reference book (overlap),0,0.0,0.1,59,0.08192090395480225,0.02468383017163505,0.14444444444444443,0.1864406779661017,0.07142857142857142,0.3200188679245282
+KB reference book (overlap),1,0.1,0.2,51,0.0392156862745098,0.0,0.09305616498464221,0.12091503267973855,0.04079591836734694,0.2098796296296296
+KB reference book (overlap),2,0.2,0.3,11,0.0,0.0,0.0,0.0,0.0,0.0
+KB reference book (overlap),3,0.3,0.4,1,0.0,,,0.0,,
+KB reference book (overlap),4,0.4,0.5,0,,,,,,
+KB reference book (overlap),5,0.5,0.6,0,,,,,,
+KB reference book (overlap),6,0.6,0.7,0,,,,,,
+KB reference book (overlap),7,0.7,0.8,0,,,,,,
+KB reference book (overlap),8,0.8,0.9,0,,,,,,
+KB reference book (overlap),9,0.9,1.0,0,,,,,,

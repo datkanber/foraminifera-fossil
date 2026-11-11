@@ -2,33 +2,34 @@
  "agglutinated|R": [
   {
    "paths": 36,
-   "top3": 28,
-   "rank1_unique": 12,
-   "conf_total": 24,
-   "conf_correct": 10,
-   "excluded": 1,
-   "rank1_tied": 4
+   "rank1_unique": 16,
+   "top3": 29,
+   "excluded": 2,
+   "conf_total": 21,
+   "conf_correct": 14,
+   "rank1_tied": 5
   },
   {
-   "PROBABLE": 7,
-   "CONFIRMED": 24,
+   "PROBABLE": 10,
+   "CONFIRMED": 21,
    "CANDIDATE": 5
   }
  ],
  "agglutinated|M": [
   {
    "paths": 36,
-   "top3": 28,
-   "rank1_unique": 12,
+   "top3": 30,
+   "rank1_unique": 16,
    "conf_total": 14,
-   "conf_correct": 4,
+   "conf_correct": 7,
    "excluded": 1,
-   "rank1_tied": 3
+   "rank1_tied": 5
   },
   {
-   "CANDIDATE": 14,
+   "PROBABLE": 2,
+   "CANDIDATE": 7,
    "CONFIRMED": 14,
-   "INDETERMINATE": 8
+   "INDETERMINATE": 13
   }
  ],
  "agglutinated|meta": {
@@ -47,33 +48,33 @@
  "porcelaneous|R": [
   {
    "paths": 42,
-   "rank1_unique": 7,
-   "top3": 22,
-   "conf_total": 22,
-   "conf_correct": 7,
-   "rank1_tied": 4,
-   "excluded": 13
+   "rank1_unique": 6,
+   "top3": 23,
+   "conf_total": 6,
+   "conf_correct": 6,
+   "rank1_tied": 13,
+   "excluded": 16
   },
   {
-   "CONFIRMED": 22,
-   "CANDIDATE": 5,
-   "PROBABLE": 15
+   "CONFIRMED": 6,
+   "CANDIDATE": 2,
+   "PROBABLE": 34
   }
  ],
  "porcelaneous|M": [
   {
    "paths": 42,
-   "rank1_unique": 7,
-   "top3": 22,
-   "conf_total": 20,
-   "conf_correct": 5,
-   "rank1_tied": 4,
-   "excluded": 13
+   "rank1_unique": 6,
+   "top3": 23,
+   "conf_total": 4,
+   "conf_correct": 4,
+   "rank1_tied": 13,
+   "excluded": 16
   },
   {
    "INDETERMINATE": 2,
-   "CONFIRMED": 20,
-   "CANDIDATE": 20
+   "CONFIRMED": 4,
+   "CANDIDATE": 36
   }
  ],
  "porcelaneous|meta": {
@@ -117,33 +118,33 @@
  "hyaline|R": [
   {
    "paths": 26,
-   "rank1_unique": 5,
+   "rank1_unique": 7,
    "top3": 14,
-   "conf_total": 14,
-   "conf_correct": 5,
-   "rank1_tied": 3,
+   "conf_total": 12,
+   "conf_correct": 7,
+   "rank1_tied": 4,
    "excluded": 3
   },
   {
-   "CONFIRMED": 14,
+   "CONFIRMED": 12,
    "CANDIDATE": 11,
-   "PROBABLE": 1
+   "PROBABLE": 3
   }
  ],
  "hyaline|M": [
   {
    "paths": 26,
-   "rank1_unique": 5,
-   "top3": 14,
-   "conf_total": 14,
-   "conf_correct": 5,
-   "rank1_tied": 3,
-   "excluded": 3
+   "rank1_unique": 8,
+   "top3": 15,
+   "conf_total": 11,
+   "conf_correct": 6,
+   "rank1_tied": 4,
+   "excluded": 2
   },
   {
-   "CONFIRMED": 14,
-   "CANDIDATE": 11,
-   "INDETERMINATE": 1
+   "CONFIRMED": 11,
+   "CANDIDATE": 14,
+   "PROBABLE": 1
   }
  ],
  "hyaline|meta": {

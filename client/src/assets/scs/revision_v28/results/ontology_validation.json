@@ -1,0 +1,38 @@
+{
+  "reasoner": "HermiT via Owlready2",
+  "java": "C:\\Users\\burak\\AppData\\Local\\Programs\\Neo4j Desktop 2\\resources\\offline\\runtime\\zulu21.50.19-ca-jre21.0.11-win_x64\\bin\\java.exe",
+  "probes": [
+    {
+      "probe": "base",
+      "consistent": true,
+      "expected_consistent": true,
+      "unsatisfiable_named_classes": []
+    },
+    {
+      "probe": "disjoint_category",
+      "consistent": false,
+      "expected_consistent": false,
+      "unsatisfiable_named_classes": null
+    },
+    {
+      "probe": "two_distinct_modules",
+      "consistent": false,
+      "expected_consistent": false,
+      "unsatisfiable_named_classes": null
+    },
+    {
+      "probe": "invalid_evidence_level",
+      "consistent": false,
+      "expected_consistent": false,
+      "unsatisfiable_named_classes": null
+    },
+    {
+      "probe": "min2_vs_max1",
+      "consistent": false,
+      "expected_consistent": false,
+      "unsatisfiable_named_classes": null
+    }
+  ],
+  "closed_world_json_cardinality_checks_passed": true,
+  "note": "Negative controls are isolated in-memory worlds. Missing OWL assertions alone do not establish inconsistency under open-world semantics."
+}

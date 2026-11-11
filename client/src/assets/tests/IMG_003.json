@@ -1,0 +1,8 @@
+{
+  "planned": 150,
+  "completed": 10,
+  "failed": 3,
+  "pending": 137,
+  "stopReason": "Provider daily quota reached; pending images have no inferred result.",
+  "updatedAt": "2026-11-09T09:15:35.593Z"
+}

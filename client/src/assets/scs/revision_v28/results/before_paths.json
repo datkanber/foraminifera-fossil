@@ -1,0 +1,834 @@
+[
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Psammosphaera",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=GLOBULAR; CHR_03=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Saccammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Saccammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=GLOBULAR; CHR_03=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Saccammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Bathysiphon",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_06=UNCOILED",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Rhizammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_06=UNCOILED",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Rhabdammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_06=UNCOILED",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Rhizammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_06=UNCOILED",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Ammodiscus",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_07=SINGLE_PLANE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Glomospira",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=TUBULAR; CHR_03=ABSENT; CHR_07=CHANGING_PLANES",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Bathysiphon",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Coskinolina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_13=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Reophax",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Dictyoconus",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_10=LABYRINTHIC; CHR_13=RADIAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Reophax",
+    "expected_excluded": true
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Barattolites",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_10=SUBDIVIDED; CHR_13=SUBEPIDERMAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Hormosina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=UNISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Caudammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=UNISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Reophax",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=UNISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Reophax",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=UNISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Haplophragmoides",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_09=NONE; CHR_11=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Haplophragmoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Ammobaculites",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_09=PLANISPIRAL_TO_UNISERIAL; CHR_11=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Haplophragmoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Reticulophragmium",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_11=PRESENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Haplophragmoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Recurvoides",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Recurvoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Glomospira",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=ABSENT; CHR_06=STREPTOSPIRAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Rhabdammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Trochammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=TROCHOSPIRAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Trochammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Karrerulina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_06=TROCHOSPIRAL; CHR_09=COILED_TO_SERIAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Trochammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Textularia",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=BISERIAL; CHR_09=NONE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Textularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Spiroplectammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=BISERIAL; CHR_09=PLANISPIRAL_TO_BISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Spiroplectammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Gaudryina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=ELONGATE; CHR_03=PRESENT; CHR_05=BISERIAL; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Dorothia",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=CONICAL; CHR_03=PRESENT; CHR_05=BISERIAL; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Gaudryina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=ELONGATE; CHR_03=PRESENT; CHR_05=TRISERIAL; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Dorothia",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=CONICAL; CHR_03=PRESENT; CHR_05=TRISERIAL; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Clavulina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_05=TRISERIAL; CHR_09=TRISERIAL_TO_UNISERIAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Ammobaculites",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_09=PLANISPIRAL_TO_UNISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Haplophragmoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Spiroplectammina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_09=PLANISPIRAL_TO_BISERIAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Spiroplectammina",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Gaudryina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=ELONGATE; CHR_03=PRESENT; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Dorothia",
+    "observations": "CHR_01=AGGLUTINATED; CHR_02=CONICAL; CHR_03=PRESENT; CHR_09=TRISERIAL_TO_BISERIAL",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Clavulina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_09=TRISERIAL_TO_UNISERIAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Ammobaculites",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Karrerulina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT; CHR_09=COILED_TO_SERIAL",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Reophax",
+    "expected_excluded": false
+  },
+  {
+    "module": "agglutinated",
+    "leaf_genus": "Rzehakina",
+    "observations": "CHR_01=AGGLUTINATED; CHR_03=PRESENT",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Cornuspira",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=ABSENT; CHR_07=SINGLE_PLANE; CHR_19=FREE",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Nubecularia",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=ABSENT; CHR_06=IRREGULAR_COILING; CHR_19=ATTACHED",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Quinqueloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=QUINQUELOCULINE; CHR_09=NONE; CHR_10=SIMPLE; CHR_16=TERMINAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Quinqueloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Hauerina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=QUINQUELOCULINE; CHR_09=NONE; CHR_10=SIMPLE; CHR_16=MULTIPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Miliola",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Articulina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=QUINQUELOCULINE; CHR_09=COILED_TO_SERIAL; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Miliola",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Triloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=TRILOCULINE; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Miliolinella",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=TRILOCULINE; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pyrgo",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=BILOCULINE; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Pyrgo",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pyrgoina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=BILOCULINE; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Pyrgo",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Sigmoilina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=IRREGULAR_SERIAL; CHR_10=SIMPLE",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Sigmoilina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Miliola",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=OTHER; CHR_10=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Sigmoilina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Peneroplis",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=CYCLIC; CHR_06=PLANISPIRAL; CHR_09=NONE; CHR_10=SIMPLE; CHR_16=SLIT_LIKE",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Dendritina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=CYCLIC; CHR_06=PLANISPIRAL; CHR_09=NONE; CHR_10=SIMPLE; CHR_16=OTHER",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Spirolina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=CYCLIC; CHR_06=PLANISPIRAL; CHR_09=COILED_TO_SERIAL; CHR_10=SIMPLE; CHR_16=TERMINAL",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Coscinospira",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=CYCLIC; CHR_06=PLANISPIRAL; CHR_09=COILED_TO_SERIAL; CHR_10=SIMPLE; CHR_16=CRIBRATE",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Vertebralina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_05=CYCLIC; CHR_06=PLANISPIRAL; CHR_09=COILED_TO_SERIAL; CHR_10=SIMPLE; CHR_16=OTHER",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Glomalveolina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_09=COILED_TO_SERIAL; CHR_10=SUBDIVIDED; CHR_11=WELL_DEVELOPED",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Alveolina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Borelis",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_09=NONE; CHR_10=SUBDIVIDED; CHR_11=PRESENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Alveolina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Alveolina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=PLANISPIRAL; CHR_09=NONE; CHR_10=SUBDIVIDED; CHR_11=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Peneroplis",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Fabularia",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Lacazinella",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_13=OTHER",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_13=OTHER",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=COMPLEX; CHR_13=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=SIMPLE; CHR_13=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Lacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_14=PRESENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_13=OTHER; CHR_14=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=COMPLEX; CHR_14=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=SIMPLE; CHR_14=ABSENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_13=OTHER",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=COMPLEX",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SIMPLE; CHR_12=SIMPLE",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Triloculina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Lacazinella",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_13=OTHER",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_13=OTHER",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=COMPLEX; CHR_13=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=SIMPLE; CHR_13=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Lacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_14=PRESENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Lacazina",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_13=OTHER; CHR_14=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": true
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=COMPLEX; CHR_14=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=SIMPLE; CHR_14=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Pseudolacazina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_13=OTHER",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Periloculina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=COMPLEX",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "porcelaneous",
+    "leaf_genus": "Idalina",
+    "observations": "CHR_01=PORCELANEOUS; CHR_03=PRESENT; CHR_06=STREPTOSPIRAL; CHR_10=SUBDIVIDED; CHR_12=SIMPLE",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Fabularia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Heterostegina",
+    "observations": "CHR_01=HYALINE; CHR_06=PLANISPIRAL; CHR_11=PRESENT; CHR_15=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Heterostegina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Spiroclypeus",
+    "observations": "CHR_01=HYALINE; CHR_06=PLANISPIRAL; CHR_11=PRESENT; CHR_15=PRESENT",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Heterostegina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Lenticulina",
+    "observations": "CHR_01=HYALINE; CHR_06=PLANISPIRAL; CHR_11=ABSENT; CHR_17=ABSENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Lenticulina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Chordoperculinoides",
+    "observations": "CHR_01=HYALINE; CHR_06=PLANISPIRAL; CHR_11=ABSENT; CHR_17=STRONG",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Nummulitoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Operculina",
+    "observations": "CHR_01=HYALINE; CHR_02=FLATTENED; CHR_06=PLANISPIRAL; CHR_08=EVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Planocamerinoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Planocamerinoides",
+    "observations": "CHR_01=HYALINE; CHR_02=FLATTENED; CHR_06=PLANISPIRAL; CHR_08=SEMI_INVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Planocamerinoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Ranikothalia",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=PLANISPIRAL; CHR_08=INVOLUTE; CHR_11=ABSENT; CHR_14=STRONG; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Ranikothalia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Nummulites",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=PLANISPIRAL; CHR_08=INVOLUTE; CHR_11=ABSENT; CHR_14=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Palaeonummulites",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Assilina",
+    "observations": "CHR_01=HYALINE; CHR_02=FLATTENED; CHR_06=PLANISPIRAL; CHR_08=SEMI_INVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Planocamerinoides",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Nummulitoides",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=PLANISPIRAL; CHR_08=SEMI_INVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Lenticulina",
+    "expected_excluded": true
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Palaeonummulites",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=PLANISPIRAL; CHR_08=SEMI_INVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Lenticulina",
+    "expected_excluded": true
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Operculina",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=PLANISPIRAL; CHR_08=EVOLUTE; CHR_11=ABSENT; CHR_17=WEAK",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Assilina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Lockhartia",
+    "observations": "CHR_01=HYALINE; CHR_02=CONICAL; CHR_06=TROCHOSPIRAL; CHR_10=COMPLEX",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Kathina",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=TROCHOSPIRAL; CHR_10=COMPLEX; CHR_14=STRONG",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Daviesina",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=TROCHOSPIRAL; CHR_10=COMPLEX; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Miscellanea",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=TROCHOSPIRAL; CHR_10=COMPLEX; CHR_14=STRONG",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Laffitteina",
+    "observations": "CHR_01=HYALINE; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=STRONG",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Rotalia",
+    "observations": "CHR_01=HYALINE; CHR_02=LENTICULAR; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Pararotalia",
+    "observations": "CHR_01=HYALINE; CHR_02=OTHER; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Cuvillierina",
+    "observations": "CHR_01=HYALINE; CHR_02=OTHER; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Ornatorotalia",
+    "observations": "CHR_01=HYALINE; CHR_02=OTHER; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Granorotalia",
+    "observations": "CHR_01=HYALINE; CHR_02=OTHER; CHR_06=TROCHOSPIRAL; CHR_10=SIMPLE; CHR_14=WEAK",
+    "expected_state": "CANDIDATE",
+    "expected_top": "Lockhartia",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Asterocyclina",
+    "observations": "CHR_01=HYALINE; CHR_02=STELLATE; CHR_05=ANNULAR; CHR_11=PRESENT",
+    "expected_state": "INDETERMINATE",
+    "expected_top": "",
+    "expected_excluded": true
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Discocyclina",
+    "observations": "CHR_01=HYALINE; CHR_02=DISCOIDAL; CHR_05=ANNULAR; CHR_11=PRESENT",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Discocyclina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Orbitoclypeus",
+    "observations": "CHR_01=HYALINE; CHR_02=DISCOIDAL; CHR_05=ANNULAR; CHR_11=PRESENT; CHR_12=COMPLEX",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Discocyclina",
+    "expected_excluded": false
+  },
+  {
+    "module": "hyaline",
+    "leaf_genus": "Nemkovella",
+    "observations": "CHR_01=HYALINE; CHR_02=DISCOIDAL; CHR_05=ANNULAR; CHR_11=PRESENT; CHR_12=SIMPLE",
+    "expected_state": "CONFIRMED",
+    "expected_top": "Discocyclina",
+    "expected_excluded": false
+  }
+]

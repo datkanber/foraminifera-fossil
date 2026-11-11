@@ -1,0 +1,19 @@
+{
+  "all_150_successful": true,
+  "single_model": "gemini-3.5-flash-lite",
+  "image_hashes_match_freeze": true,
+  "acc1_never_exceeds_acc3": true,
+  "same_config_hash": true,
+  "confusion_counts_sum_to_150": true,
+  "n_genera": 24,
+  "module_counts": {
+    "AGGLUTINATED": 33,
+    "PORCELANEOUS": 37,
+    "HYALINE": 80
+  },
+  "cohort_counts": {
+    "Additional articles": 28,
+    "KB reference book (overlap)": 122
+  },
+  "no_expert_labels_created": true
+}

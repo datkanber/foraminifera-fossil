@@ -1,0 +1,19 @@
+{
+  "status": "PREPARATION_ONLY_NO_REAL_OBSERVATIONS",
+  "observer_codes": [
+    "E1",
+    "E2"
+  ],
+  "confirmatory_target": 60,
+  "module_target_recommendation": {
+    "AGGLUTINATED": 20,
+    "PORCELANEOUS": 20,
+    "HYALINE": 20
+  },
+  "seed": 20261112,
+  "bootstrap_resamples": 5000,
+  "primary": "Specimen-averaged paired A0-minus-B1 fractional top-1 credit",
+  "protocol_finalized": false,
+  "pilot_review_completed": false,
+  "sampling_plan": "8–10 pilot fossils; 60 different confirmatory fossils; no pilot reuse. No formal power calculation yet."
+}

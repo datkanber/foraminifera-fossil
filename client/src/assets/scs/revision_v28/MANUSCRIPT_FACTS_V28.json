@@ -1,0 +1,379 @@
+{
+  "date": "2026-11-11",
+  "project_doi": null,
+  "external_expert_validation_performed": false,
+  "original_18_missing_diagnostics_completed": 3,
+  "original_18_remaining": 15,
+  "current_total_genera_without_scoring_D": 28,
+  "audit_target_before_after": {
+    "positive_C_overlap": [
+      17,
+      0
+    ],
+    "M_D_conflicts": [
+      10,
+      0
+    ],
+    "duplicate_scoring_pairs": [
+      25,
+      0
+    ]
+  },
+  "mapping_edits": 67,
+  "n_paths": 104,
+  "n_panels": 150,
+  "n_panel_genera": 24,
+  "source_overlapping_panels": 122,
+  "n_sensitivity_configurations": 33,
+  "threshold_grid_size": 27,
+  "monte_carlo": {
+    "genera": 75,
+    "repeats": 20,
+    "requested_masking": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "requested_noise": 0.05,
+    "seed": 20261111,
+    "inputs_including_controls": 12000,
+    "model_evaluations": 24000
+  },
+  "before_after_overall": [
+    {
+      "version": "before",
+      "dataset": "paths",
+      "module": "ALL",
+      "n": 104,
+      "acc1": 0.1997863247863248,
+      "acc3": 0.45993589743589747,
+      "coverage": 0.8942307692307693,
+      "reference_exclusion": 0.16346153846153846,
+      "reference_omission": 0.0,
+      "rank1_unique": 24,
+      "rank1_tied": 10,
+      "top3_shared_rank": 64,
+      "confirmed_correct": 14,
+      "states": {
+        "CANDIDATE_GENUS": 45,
+        "CONFIRMED_GENUS": 48,
+        "INDETERMINATE": 11
+      }
+    },
+    {
+      "version": "after",
+      "dataset": "paths",
+      "module": "ALL",
+      "n": 104,
+      "acc1": 0.2512286324786325,
+      "acc3": 0.46682692307692303,
+      "coverage": 0.8557692307692307,
+      "reference_exclusion": 0.18269230769230768,
+      "reference_omission": 0.0,
+      "rank1_unique": 30,
+      "rank1_tied": 22,
+      "top3_shared_rank": 68,
+      "confirmed_correct": 17,
+      "states": {
+        "PROBABLE_GENUS": 3,
+        "CANDIDATE_GENUS": 57,
+        "CONFIRMED_GENUS": 29,
+        "INDETERMINATE": 15
+      }
+    },
+    {
+      "version": "before",
+      "dataset": "panels",
+      "module": "ALL",
+      "n": 150,
+      "acc1": 0.048888888888888885,
+      "acc3": 0.20111111111111113,
+      "coverage": 0.8866666666666667,
+      "reference_exclusion": 0.4533333333333333,
+      "reference_omission": 0.2866666666666667,
+      "rank1_unique": 6,
+      "rank1_tied": 3,
+      "top3_shared_rank": 31,
+      "confirmed_correct": 1,
+      "states": {
+        "CONFIRMED_GENUS": 74,
+        "CANDIDATE_GENUS": 58,
+        "INDETERMINATE": 17,
+        "PROBABLE_GENUS": 1
+      }
+    },
+    {
+      "version": "after",
+      "dataset": "panels",
+      "module": "ALL",
+      "n": 150,
+      "acc1": 0.03222222222222222,
+      "acc3": 0.11444444444444445,
+      "coverage": 0.88,
+      "reference_exclusion": 0.44666666666666666,
+      "reference_omission": 0.2866666666666667,
+      "rank1_unique": 3,
+      "rank1_tied": 4,
+      "top3_shared_rank": 18,
+      "confirmed_correct": 1,
+      "states": {
+        "CONFIRMED_GENUS": 79,
+        "CANDIDATE_GENUS": 53,
+        "INDETERMINATE": 18
+      }
+    },
+    {
+      "version": "before",
+      "dataset": "panels_raw_neutral",
+      "module": "ALL",
+      "n": 150,
+      "acc1": 0.08888888888888889,
+      "acc3": 0.20777777777777778,
+      "coverage": 0.8933333333333333,
+      "reference_exclusion": 0.4533333333333333,
+      "reference_omission": 0.28,
+      "rank1_unique": 12,
+      "rank1_tied": 3,
+      "top3_shared_rank": 32,
+      "confirmed_correct": 4,
+      "states": {
+        "CANDIDATE_GENUS": 64,
+        "CONFIRMED_GENUS": 69,
+        "INDETERMINATE": 16,
+        "PROBABLE_GENUS": 1
+      }
+    },
+    {
+      "version": "after",
+      "dataset": "panels_raw_neutral",
+      "module": "ALL",
+      "n": 150,
+      "acc1": 0.03888888888888889,
+      "acc3": 0.12370370370370372,
+      "coverage": 0.8866666666666667,
+      "reference_exclusion": 0.44666666666666666,
+      "reference_omission": 0.28,
+      "rank1_unique": 4,
+      "rank1_tied": 4,
+      "top3_shared_rank": 22,
+      "confirmed_correct": 2,
+      "states": {
+        "CANDIDATE_GENUS": 61,
+        "CONFIRMED_GENUS": 72,
+        "INDETERMINATE": 17
+      }
+    }
+  ],
+  "owl": {
+    "classes": 9,
+    "object_properties": 13,
+    "datatype_properties": 17,
+    "named_individuals": 1048,
+    "class_restrictions": 3,
+    "disjointness_axioms": 1,
+    "pairwise_disjoint_class_relations": 15,
+    "all_different_axioms": [
+      {
+        "kind": "Module",
+        "individuals": 3
+      },
+      {
+        "kind": "CharacterValue",
+        "individuals": 148
+      }
+    ],
+    "rules": 706,
+    "sha256": "90819c1dce04b01e654817816c9b1a88b118d22a3da96424a75c5da0364a92fd",
+    "semantics": "OWL open-world restrictions are not closed-world data validation. The JSON cardinality checks run separately.",
+    "specification": "https://www.w3.org/TR/owl2-syntax/"
+  },
+  "monte_carlo_requested_results": [
+    {
+      "model": "A0",
+      "missing_requested": 0.1,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.6235259259259259,
+      "acc3": 0.7765111111111112,
+      "coverage": 0.886,
+      "reference_exclusion": 0.10333333333333333,
+      "reference_omission": 0.0,
+      "rank1_unique": 831,
+      "rank1_tied": 363,
+      "top3_shared_rank": 1297,
+      "confirmed_correct": 628,
+      "states": {
+        "CONFIRMED_GENUS": 715,
+        "NO_MATCH_WITHIN_CORE_TAXA": 11,
+        "CANDIDATE_GENUS": 576,
+        "PROBABLE_GENUS": 38,
+        "INDETERMINATE": 160
+      },
+      "mask_fraction_realized": 0.058823529411764705,
+      "noise_fraction_realized": 0.051171875,
+      "paired_delta_acc1": {
+        "mean": 0.5077456773761727,
+        "low": 0.4305703046981685,
+        "high": 0.5798532088826206,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      },
+      "paired_delta_acc3": {
+        "mean": 0.4578370321285182,
+        "low": 0.39735429877140405,
+        "high": 0.517098076192813,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      }
+    },
+    {
+      "model": "B1",
+      "missing_requested": 0.1,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.11578024854975319,
+      "acc3": 0.3186740789825929,
+      "coverage": 0.92,
+      "reference_exclusion": 0.156,
+      "reference_omission": 0.0,
+      "rank1_unique": 10,
+      "rank1_tied": 1256,
+      "top3_shared_rank": 1266,
+      "confirmed_correct": 0,
+      "states": {
+        "CANDIDATE_GENUS": 1380,
+        "INDETERMINATE": 120
+      },
+      "mask_fraction_realized": 0.058823529411764705,
+      "noise_fraction_realized": 0.051171875
+    },
+    {
+      "model": "A0",
+      "missing_requested": 0.3,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.43694629629629633,
+      "acc3": 0.6095136591478697,
+      "coverage": 0.7106666666666667,
+      "reference_exclusion": 0.07733333333333334,
+      "reference_omission": 0.0,
+      "rank1_unique": 644,
+      "rank1_tied": 436,
+      "top3_shared_rank": 1321,
+      "confirmed_correct": 401,
+      "states": {
+        "CONFIRMED_GENUS": 510,
+        "PROBABLE_GENUS": 48,
+        "CANDIDATE_GENUS": 508,
+        "NO_MATCH_WITHIN_CORE_TAXA": 3,
+        "INDETERMINATE": 431
+      },
+      "mask_fraction_realized": 0.3161764705882353,
+      "noise_fraction_realized": 0.051881720430107525,
+      "paired_delta_acc1": {
+        "mean": 0.36406522150593357,
+        "low": 0.2961091926964218,
+        "high": 0.42785626085587386,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      },
+      "paired_delta_acc3": {
+        "mean": 0.39753710144344817,
+        "low": 0.33808523139227475,
+        "high": 0.44997534352472435,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      }
+    },
+    {
+      "model": "B1",
+      "missing_requested": 0.3,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.07288107479036271,
+      "acc3": 0.2119765577044215,
+      "coverage": 0.7833333333333333,
+      "reference_exclusion": 0.128,
+      "reference_omission": 0.0,
+      "rank1_unique": 2,
+      "rank1_tied": 1306,
+      "top3_shared_rank": 1308,
+      "confirmed_correct": 0,
+      "states": {
+        "CANDIDATE_GENUS": 1175,
+        "INDETERMINATE": 325
+      },
+      "mask_fraction_realized": 0.3161764705882353,
+      "noise_fraction_realized": 0.051881720430107525
+    },
+    {
+      "model": "A0",
+      "missing_requested": 0.5,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.22614285714285715,
+      "acc3": 0.3573079365079365,
+      "coverage": 0.41733333333333333,
+      "reference_exclusion": 0.05333333333333334,
+      "reference_omission": 0.0,
+      "rank1_unique": 437,
+      "rank1_tied": 451,
+      "top3_shared_rank": 1348,
+      "confirmed_correct": 191,
+      "states": {
+        "CONFIRMED_GENUS": 276,
+        "CANDIDATE_GENUS": 305,
+        "PROBABLE_GENUS": 45,
+        "INDETERMINATE": 872,
+        "NO_MATCH_WITHIN_CORE_TAXA": 2
+      },
+      "mask_fraction_realized": 0.5588235294117647,
+      "noise_fraction_realized": 0.05,
+      "paired_delta_acc1": {
+        "mean": 0.1840521319837439,
+        "low": 0.12909221943459392,
+        "high": 0.24332871613616935,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      },
+      "paired_delta_acc3": {
+        "mean": 0.2330357610305968,
+        "low": 0.17391949360648176,
+        "high": 0.29067087710893674,
+        "resampling_unit": "genus",
+        "n_genera": 75,
+        "resamples": 2000
+      }
+    },
+    {
+      "model": "B1",
+      "missing_requested": 0.5,
+      "noise_requested": 0.05,
+      "n": 1500,
+      "acc1": 0.04209072515911323,
+      "acc3": 0.1242721754773397,
+      "coverage": 0.518,
+      "reference_exclusion": 0.08466666666666667,
+      "reference_omission": 0.0,
+      "rank1_unique": 0,
+      "rank1_tied": 1373,
+      "top3_shared_rank": 1373,
+      "confirmed_correct": 0,
+      "states": {
+        "CANDIDATE_GENUS": 777,
+        "INDETERMINATE": 723
+      },
+      "mask_fraction_realized": 0.5588235294117647,
+      "noise_fraction_realized": 0.05
+    }
+  ],
+  "numbering": "Internal consistency: V27/V28 Table VIII (legacy Table XIV); ontology metrics: S10.4 (legacy Table VII); new sensitivity Table XII, synthetic comparison Table XIII.",
+  "live_database_updated": false,
+  "pdf_page_layout_verified": false,
+  "limitations": "Structural encoding repairs and KB-derived development analyses; 15 original diagnostic gaps remain, panel accuracy decreases, and synthetic superiority is not external validation."
+}

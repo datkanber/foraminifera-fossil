@@ -69,6 +69,8 @@ test('consistency.test.js - Check 104 paths against Engine M', (t) => {
     
     // Convert status to v18 format for matching string in output
     let st = res.status.replace('_GENUS', '').replace('_WITHIN_CORE_TAXA', '');
+    assert.strictEqual(st, p.expected_state, p.module + ': ' + p.leaf_genus + ' Python/JS state');
+    assert.strictEqual(res.identification, p.expected_top || null, p.module + ': ' + p.leaf_genus + ' Python/JS first output');
     
     totals[res.status]++;
     
@@ -94,14 +96,16 @@ test('consistency.test.js - Check 104 paths against Engine M', (t) => {
     }
   }
 
-  assert.strictEqual(totals.CONFIRMED_GENUS, 48);
-  assert.strictEqual(totals.conf_correct, 14);
-  assert.strictEqual(totals.CANDIDATE_GENUS, 45);
-  assert.strictEqual(totals.INDETERMINATE, 11);
-  assert.strictEqual(totals.PROBABLE_GENUS, 0);
+  // Independently reproduced by the Python Engine M after the 2026-11-11
+  // mapping audit. Frozen pre-revision inputs/results remain under eval/archive.
+  assert.strictEqual(totals.CONFIRMED_GENUS, 29);
+  assert.strictEqual(totals.conf_correct, 17);
+  assert.strictEqual(totals.CANDIDATE_GENUS, 57);
+  assert.strictEqual(totals.INDETERMINATE, 15);
+  assert.strictEqual(totals.PROBABLE_GENUS, 3);
   assert.strictEqual(totals.NO_MATCH_WITHIN_CORE_TAXA, 0);
-  assert.strictEqual(totals.leaf_excluded, 17);
-  assert.strictEqual(totals.rank1_unique, 24);
-  assert.strictEqual(totals.rank1_tied, 10);
-  assert.strictEqual(totals.top3, 64);
+  assert.strictEqual(totals.leaf_excluded, 19);
+  assert.strictEqual(totals.rank1_unique, 30);
+  assert.strictEqual(totals.rank1_tied, 22);
+  assert.strictEqual(totals.top3, 68);
 });

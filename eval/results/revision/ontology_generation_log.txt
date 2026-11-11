@@ -1,0 +1,23 @@
+{
+  "classes": 9,
+  "object_properties": 13,
+  "datatype_properties": 17,
+  "named_individuals": 1048,
+  "class_restrictions": 3,
+  "disjointness_axioms": 1,
+  "pairwise_disjoint_class_relations": 15,
+  "all_different_axioms": [
+    {
+      "kind": "Module",
+      "individuals": 3
+    },
+    {
+      "kind": "CharacterValue",
+      "individuals": 148
+    }
+  ],
+  "rules": 706,
+  "sha256": "90819c1dce04b01e654817816c9b1a88b118d22a3da96424a75c5da0364a92fd",
+  "semantics": "OWL open-world restrictions are not closed-world data validation. The JSON cardinality checks run separately.",
+  "specification": "https://www.w3.org/TR/owl2-syntax/"
+}

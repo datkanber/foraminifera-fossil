@@ -50,8 +50,9 @@ test('scoring.table13.test.js - Tablo XIII A', (t) => {
   assert.strictEqual(ammodiscus.score, 19);
   
   const saccammina = result.ranking.find(r => r.genus === "Saccammina");
-  assert.strictEqual(saccammina.score, 9);
-  assert.strictEqual(result.ranking[1].genus, "Saccammina");
+  assert.strictEqual(saccammina.score, 4);
+  assert.strictEqual(result.ranking[1].genus, "Rhizammina");
+  assert.strictEqual(result.ranking[1].score, 7);
   
   const glomospira = result.ranking.find(r => r.genus === "Glomospira");
   assert.ok(glomospira !== undefined, "Glomospira should not be excluded");
@@ -74,7 +75,7 @@ test('scoring.table13.test.js - Tablo XIII B', (t) => {
   assert.strictEqual(ammodiscus.score, 14);
   
   const saccammina = result.ranking.find(r => r.genus === "Saccammina");
-  assert.strictEqual(saccammina.score, 9);
+  assert.strictEqual(saccammina.score, 4);
   
   const glomospira = result.ranking.find(r => r.genus === "Glomospira");
   assert.strictEqual(glomospira.score, 4);

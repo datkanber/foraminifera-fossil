@@ -67,7 +67,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Assilina",
@@ -118,7 +125,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Operculina",
@@ -165,7 +179,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Ranikothalia",
@@ -213,7 +234,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Heterostegina",
@@ -252,7 +280,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Spiroclypeus",
@@ -295,7 +330,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Lockhartia",
@@ -333,7 +375,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Kathina",
@@ -371,7 +420,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Daviesina",
@@ -405,7 +461,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Miscellanea",
@@ -439,7 +502,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 3,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Laffitteina",
@@ -473,7 +543,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 3,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Rotalia",
@@ -499,7 +576,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 2,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Pararotalia",
@@ -525,7 +609,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 2,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Cuvillierina",
@@ -555,7 +646,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 2,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Ornatorotalia",
@@ -581,7 +679,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 2,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Granorotalia",
@@ -611,7 +716,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 2,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Asterocyclina",
@@ -649,7 +761,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 3,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Discocyclina",
@@ -696,7 +815,14 @@
         ]
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Orbitoclypeus",
@@ -738,7 +864,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Nemkovella",
@@ -776,7 +909,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Lenticulina",
@@ -818,7 +958,14 @@
         "C": []
       },
       "notes": [],
-      "closest_comparisons": []
+      "closest_comparisons": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Palaeonummulites",
@@ -925,7 +1072,14 @@
         "Nummulitoides"
       ],
       "best_differentiating_observation": "A relatively simple **involute + tight/moderately tight coil + fine/moderate marginal cord** favors *Palaeonummulites* over the massively cordate Paleocene genera.",
-      "section_note": null
+      "section_note": null,
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 13,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Nummulitoides",
@@ -1031,7 +1185,14 @@
         "Chordoperculinoides"
       ],
       "best_differentiating_observation": "The most useful combination is:",
-      "section_note": "Where this distinction is critical, both axial and equatorial information may be needed; the literature specifically warns that these early nummulitid genera can be misidentified when only one section orientation is available."
+      "section_note": "Where this distinction is critical, both axial and equatorial information may be needed; the literature specifically warns that these early nummulitid genera can be misidentified when only one section orientation is available.",
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 13,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Planocamerinoides",
@@ -1145,7 +1306,14 @@
         "Palaeonummulites"
       ],
       "best_differentiating_observation": "The strongest combination is:",
-      "section_note": null
+      "section_note": null,
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 12,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     },
     {
       "genus": "Chordoperculinoides",
@@ -1259,7 +1427,14 @@
         "Palaeonummulites"
       ],
       "best_differentiating_observation": "The strongest diagnostic combination is:",
-      "section_note": "Reliable separation from *Ranikothalia* and *Nummulitoides* may require axial as well as equatorial information; diagnosis should not be forced from a single unsuitable random section."
+      "section_note": "Reliable separation from *Ranikothalia* and *Nummulitoides* may require axial as well as equatorial information; diagnosis should not be forced from a single unsuitable random section.",
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 10,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
     }
   ]
 }

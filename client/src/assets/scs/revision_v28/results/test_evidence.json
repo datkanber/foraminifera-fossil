@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-11",
+  "checks": [
+    {
+      "name": "api_tests",
+      "command": [
+        "npm.cmd",
+        "test"
+      ],
+      "cwd": "api",
+      "exit_code": 0,
+      "tests": 47
+    },
+    {
+      "name": "scientific_tests",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "eval",
+        "-p",
+        "test_revision.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "tests": 7
+    }
+  ]
+}

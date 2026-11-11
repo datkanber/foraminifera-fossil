@@ -1,0 +1,20 @@
+{
+  "title": "Foraminifera Fossil: ontology and genus-identification decision support — v1.0 release candidate",
+  "upload_type": "software",
+  "version": "1.0-DRAFT",
+  "creators": [
+    {
+      "name": "Yayan, Kübra",
+      "affiliation": "Eskişehir Osmangazi University"
+    }
+  ],
+  "description": "Local review candidate. Code MIT; ontology/data CC BY 4.0. Source image attribution and experimental scope are supplied in S5. Creator/contributor list requires author confirmation before publication.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/datkanber/foraminifera-fossil",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Base commit 1e12fb5fc2c32e5d042f4f322c823c50dcda59b6; additional uncommitted research artifacts included. No project DOI exists and this draft has not been published. Author portrait excluded."
+}

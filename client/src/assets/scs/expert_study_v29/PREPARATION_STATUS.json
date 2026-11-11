@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "status": "PREPARATION_ONLY",
+  "actual_specimens_assigned": 0,
+  "confirmed_observers": 0,
+  "completed_human_forms": 0,
+  "pilot_slots": 10,
+  "confirmatory_planning_target": 60,
+  "human_experiment_conducted": false,
+  "manuscript_source_unchanged": "d2115550a44ca34c7ebbd432d6adc66615987b167e7a29236913b52e4320f0c4",
+  "missing": [
+    "real independent thin-section material",
+    "two confirmed micropaleontologists",
+    "separate documented reference verification"
+  ]
+}
