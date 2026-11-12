@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P005",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "865d77ea056afc932c4dcc71f8fb0e7fb2fb3bacb8593eb2579ef9263f2365c7",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "AGGLUTINATED",
+      "state": "PRESENT",
+      "reason": "The wall appears dark and granular, typical of agglutinated test composition in thin section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "CONICAL",
+      "state": "PRESENT",
+      "reason": "Overall test shape is expanding and conical from the initial small end.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Internal divisions and chambers are clearly separated by septa.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are visible throughout the test.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Initial portion shows spiral arrangement transitioning into a series of complex internal chambers, not fitting standard simple serial categories.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "TROCHOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Initial part of the test shows a coiled whorl structure.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "Coiling transitions from an initial coiled section to an expanding uncoiled or irregularly arranged conical structure.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "NOT_APPLICABLE",
+      "state": "PRESENT",
+      "reason": "Coiling is not the primary adult feature across the whole test.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "COILED_TO_SERIAL",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled stage to an expanding series of chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "LABYRINTHIC",
+      "state": "PRESENT",
+      "reason": "Chambers show complex internal subdivision and branching structures resembling a labyrinthic interior.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Secondary chamberlets are not clearly resolved at this scale.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber is small and simple, but obscured by orientation.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "SUBEPIDERMAL",
+      "state": "PRESENT",
+      "reason": "Subepidermal partitions or beam-like structures are visible lining the outer wall.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct pillars are visible in the interior.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets are visible.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not visible in this section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord is present.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Septal filaments are not applicable or visible on this agglutinated test cross-section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Test appears isolated in the matrix without an attachment surface.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Dimorphism cannot be determined from a single random section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "OBLIQUE",
+      "state": "PRESENT",
+      "reason": "The section passes somewhat obliquely through the conical test axis.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

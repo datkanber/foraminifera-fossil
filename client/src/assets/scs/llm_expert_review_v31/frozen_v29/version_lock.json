@@ -1,0 +1,22 @@
+{
+  "status": "PILOT_CANDIDATE_SNAPSHOT_NOT_A_COMPLETED_TRIAL",
+  "source_manuscript": "Foraminifer_Manuscript_v29.docx",
+  "source_manuscript_sha256": "d2115550a44ca34c7ebbd432d6adc66615987b167e7a29236913b52e4320f0c4",
+  "source_archive": "Foraminifera_v28_Final_Package.zip",
+  "source_archive_sha256": "728133fc9b3e780d8ea76286b4e320fdb42977e38309ab6c5803cfdc52227e89",
+  "files": {
+    "api/src/services/scoring.js": "443d8058fdc9e7dcb80702ffb4a3d6edb1fd452d5644f3bd54f8915dd52ed994",
+    "api/data/characters.json": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "api/data/rule_chr_mapping.json": "ffaf13dd5ee384d01cd1b30380a314c615e5d3c3d846c4191037630eb7c3a309",
+    "eval/engine_bridge.cjs": "3f41959a60776b3e63c3d06c6fb148373644eeb270fe20ef561d1cc666a99a3d"
+  },
+  "matches_current_repo": {
+    "api/src/services/scoring.js": true,
+    "api/data/characters.json": true,
+    "api/data/rule_chr_mapping.json": true,
+    "eval/engine_bridge.cjs": true
+  },
+  "A0": "Exactly archived default scoreGenera; weights +3,+5,+1,-5; tauObs=2, tauNoMatch=3, delta=1.",
+  "B1": "Exactly archived engine_bridge.cjs b1; same implication closure and CV, any M/D mismatch eliminates, survivors tied, no supporting/contradictory weighting.",
+  "live_service_used": false
+}

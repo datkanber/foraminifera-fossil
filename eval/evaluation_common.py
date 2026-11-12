@@ -1,9 +1,10 @@
 """Shared offline inputs/metrics. No provider calls; no test-set model fitting."""
 from pathlib import Path
-import json, subprocess, csv, collections, random, hashlib
+import json, subprocess, csv, collections, random, hashlib,os
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'eval/results/revision'
+V32=os.environ.get('FORAM_EVAL_RELEASE')=='v32'
+OUT=ROOT/'eval/results'/('v32' if V32 else 'revision')
 PANEL=ROOT/'client/src/assets/scs/evaluation'
 ABSTAIN={'INDETERMINATE','NO_MATCH_WITHIN_CORE_TAXA'}
 
@@ -32,7 +33,7 @@ def credit(result,truth,k,abstentions=True):
     return max(0.,min(1.,(k-above)/ties))
 
 def path_cases():
-    paths=read(OUT/'before_paths.json')
+    paths=read(ROOT/'eval/results/paths.json') if V32 else read(OUT/'before_paths.json')
     cases=[]
     for i,p in enumerate(paths):
         obs=dict(x.split('=',1) for x in p['observations'].split('; ') if x)
@@ -41,8 +42,9 @@ def path_cases():
     assert len(cases)==104
     return cases
 
-def panel_cases(preserve_uncertainty=False):
-    result=[]
+def panel_cases(preserve_uncertainty=None):
+    if preserve_uncertainty is None:preserve_uncertainty=V32
+    result=[];provider_observations=[]
     for p in read(PANEL/'panel_manifest.json'):
         raw=read(PANEL/'raw'/f"{p['image_id']}.json")
         assert raw['success']
@@ -62,16 +64,26 @@ def panel_cases(preserve_uncertainty=False):
             parsed=json.loads(text)
             original=parsed.get('observations',parsed.get('observation',{}).get('observations',{}))
             assert original, 'Cannot find raw observations in provider receipt'
+            provider_observations.append(original)
             for c,o in original.items():
                 if c in obs and o.get('state') in ['NOT_OBSERVABLE','UNCERTAIN'] and obs[c].get('state') not in ['NOT_OBSERVABLE','UNCERTAIN']:
                     obs[c]['state']=o['state']
         o=obs.get('CHR_01',{})
         module=o.get('value') if o.get('state') not in ['UNCERTAIN','NOT_OBSERVABLE'] else None
         if module not in ['AGGLUTINATED','PORCELANEOUS','HYALINE']:module=None
-        result.append({'case_id':p['image_id'],'dataset':'panels_raw_neutral' if preserve_uncertainty else 'panels',
+        dataset=('panels' if preserve_uncertainty else 'panels_legacy_normalized') if V32 else ('panels_raw_neutral' if preserve_uncertainty else 'panels')
+        result.append({'case_id':p['image_id'],'dataset':dataset,
             'reference_genus':p['reference_genus'],'reference_module':p['module'],'module':module,
             'cohort':p['cohort'],'cluster':p.get('cluster_id',p.get('cluster',p.get('source_cluster'))),'observations':obs})
     assert len(result)==150
+    if V32 and preserve_uncertainty:
+        # Use the exact production normalizer on original provider receipts;
+        # never send labels or image metadata into normalization or scoring.
+        script="const fs=require('fs');const {normalizeObservations}=require('./api/src/services/observationNormalization');process.stdout.write(JSON.stringify(JSON.parse(fs.readFileSync(0,'utf8')).map(normalizeObservations)));"
+        run=subprocess.run(['node','-e',script],cwd=ROOT,input=json.dumps(provider_observations),capture_output=True,text=True,encoding='utf-8')
+        if run.returncode:raise RuntimeError(run.stderr)
+        for c,obs in zip(result,json.loads(run.stdout)):
+            c['observations']=obs;o=obs['CHR_01'];c['module']=o['value'] if o['state'] not in ['NOT_OBSERVABLE','UNCERTAIN'] and o['value'] in ['AGGLUTINATED','PORCELANEOUS','HYALINE'] else None
     return result
 
 def metrics(cases,results):

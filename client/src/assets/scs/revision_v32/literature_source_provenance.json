@@ -1,0 +1,99 @@
+[
+  {
+    "record_file": "Ozcan2001_article.html.provenance.json",
+    "url": "https://open.metu.edu.tr/handle/11511/67625",
+    "retrieved_at": "2026-11-12T14:25:16.826434+00:00",
+    "sha256": "48bd4bf420dffad6dd4c9333de2bfff2901597e65083d1ec97559da7f5b6c1bf"
+  },
+  {
+    "record_file": "PBDB_Idalina.json.provenance.json",
+    "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Idalina&show=attr,ref,app&vocab=pbdb",
+    "retrieved_at": "2026-11-12T14:18:22.480888+00:00",
+    "sha256": "a22f013f45b2bbf5bbb7d615f2a15af42efe02c02d271cd97ae7ced668f81fff"
+  },
+  {
+    "record_file": "Schlagintweit2021_Karsella.pdf.provenance.json",
+    "url": "https://actapalrom.geo-paleontologica.org/APR_v_17_1/Schlagintweit_Orbitolina%20daviesi.pdf",
+    "retrieved_at": "2026-11-12T14:25:16.528485+00:00",
+    "sha256": "e4e5d6f40ed4baafc2d30a29e132b74959cf4eb13743f2d6ecdab11d23dc06c3"
+  },
+  {
+    "record_file": "SerraKiel2020_Pyrenean.source.json",
+    "url": "https://revistes.ub.edu/index.php/GEOACTA/article/download/GeologicaActa2020.18.8/31478",
+    "doi": "10.1344/GeologicaActa2020.18.8",
+    "sha256": "e973352a1de2cf45d8bff2cd778cc7945b213586825cf853cf3b0b1c2b9fe3d3",
+    "retrieved_at": "2026-11-12T14:34:42.556538+00:00"
+  },
+  {
+    "record_file": "Sirel1976_Alveolina.pdf.provenance.json",
+    "url": "https://www.jmo.org.tr/resimler/ekler/9de10adbaa1b2ee_ek.pdf",
+    "retrieved_at": "2026-11-12T14:17:13.837665+00:00",
+    "sha256": "2172055de5167fb31e4dd467ced26e3fdc6e6d45cde09b3de6c837d84a8f5199"
+  },
+  {
+    "record_file": "Sirel1986_Pseudolacazina.html.provenance.json",
+    "url": "https://dergipark.org.tr/en/search?q=LACAZINA+OEZTEMUERI&section=articles",
+    "retrieved_at": "2026-11-12T14:17:15.414054+00:00",
+    "sha256": "b834a4a66cb38f0e8064465e6b08bf9a72305ecae851372c0f43857f98403a4a"
+  },
+  {
+    "record_file": "Sirel1986_Pseudolacazina.pdf.provenance.json",
+    "url": "https://dergipark.org.tr/en/download/article-file/44549",
+    "retrieved_at": "2026-11-12T14:25:21.914322+00:00",
+    "sha256": "fddfb5532a8ce3063c66f59a7fa128f075ed80dd3f8fd6bdf2314594b828e652"
+  },
+  {
+    "record_file": "Sirel1986_Pseudolacazina_article.html.provenance.json",
+    "url": "https://dergipark.org.tr/en/pub/bulletinofmre/article/52243",
+    "retrieved_at": "2026-11-12T14:25:15.610136+00:00",
+    "sha256": "4f3d1f5eda0cd1b597c4fa43e84ec3caf13ed4b6a904e5b68156eacaa28840b5"
+  },
+  {
+    "record_file": "Sirel1994_Laffitteina.html.provenance.json",
+    "url": "https://dergipark.org.tr/en/pub/bulletinofmre/article/52316",
+    "retrieved_at": "2026-11-12T14:17:14.251877+00:00",
+    "sha256": "586f180269e7fd6d57498e4584739a05060163261e17cce412b05638c732e314"
+  },
+  {
+    "record_file": "Sirel1994_Laffitteina.pdf.provenance.json",
+    "url": "https://dergipark.org.tr/en/download/article-file/44622",
+    "retrieved_at": "2026-11-12T14:18:22.664731+00:00",
+    "sha256": "80d5d9abf2e0ab2b8c0b9b852e0ff01fc4187e9d2e2ffcdaf33a7582b43b371e"
+  },
+  {
+    "record_file": "Sirel2018_Ranikothalia.pdf.provenance.json",
+    "url": "https://www.palaeontologicalsociety.in/vol63_1/2.%20Sirel-Deveciler.pdf",
+    "retrieved_at": "2026-11-12T14:25:19.408265+00:00",
+    "sha256": "fb48af77e8381be2a69b0a59dc4653af671501cdddcfb8c0ad54bb14c364c514"
+  },
+  {
+    "record_file": "Treatise_Asterocyclina.html.provenance.json",
+    "url": "https://forams.treatise.geolex.org/displayInfo.php?genera=Asterocyclina",
+    "retrieved_at": "2026-11-12T14:17:13.952683+00:00",
+    "sha256": "9d1ae8da236168ea99c70bed340f41384f8da7f7c90a9e4382f786a2d4969634"
+  },
+  {
+    "record_file": "Treatise_Idalina.html.provenance.json",
+    "url": "https://forams.treatise.geolex.org/displayInfo.php?genera=Idalina",
+    "retrieved_at": "2026-11-12T14:18:22.461310+00:00",
+    "sha256": "8d852f0bc3a210fff7c1f3905d6ac2bf9233709be237858be38d0d1ebb63f1f2"
+  },
+  {
+    "record_file": "Treatise_Miliola.html.provenance.json",
+    "url": "https://forams.treatise.geolex.org/displayInfo.php?genera=Miliola",
+    "retrieved_at": "2026-11-12T14:17:13.204260+00:00",
+    "sha256": "d41f3d8f0e548ba1a185ecb946b5c1fcc73568e28968f59b1f93a36ed873aae5"
+  },
+  {
+    "record_file": "worms_Idalina.json.provenance.json",
+    "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Idalina?like=false&marine_only=false",
+    "retrieved_at": "2026-11-12T14:17:12.823617+00:00",
+    "sha256": "571af9dd839d9aebb698455b09b05e0235136043e7da865a395366e739cc2023"
+  },
+  {
+    "record_file": "worms_Planocamerinoides.json.provenance.json",
+    "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Planocamerinoides?like=false&marine_only=false",
+    "retrieved_at": "2026-11-12T14:17:12.765666+00:00",
+    "sha256": "a18bfd03d722fac9ca667e3623e0611682b68963947cf3910a1ac51cba0fe38d"
+  }
+]

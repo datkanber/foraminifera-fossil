@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P010",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "PORCELANEOUS",
+      "state": "PRESENT",
+      "reason": "The wall is uniformly light-colored and microcrystalline under transmitted light, characteristic of porcelaneous composition."
+    },
+    "CHR_02": {
+      "value": "OVOID",
+      "state": "PRESENT",
+      "reason": "The overall shape of the test section is broadly ovoid to elliptical."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Clear partitions are visible dividing the interior space into chambers."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Multiple chambers are clearly visible arranged in whorls."
+    },
+    "CHR_05": {
+      "value": "QUINQUELOCULINE",
+      "state": "PRESENT",
+      "reason": "Chambers are added in planes roughly 72 degrees apart, characteristic of quinqueloculine arrangement."
+    },
+    "CHR_06": {
+      "value": "STREPTOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Coiling changes planes successively through ontogeny in a streptospiral pattern."
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "The coiling axis shifts noticeably between successive chambers/whorls."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later chambers embrace and cover earlier whorls entirely."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Coiling arrangement remains consistent throughout the visible ontogeny."
+    },
+    "CHR_10": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Chamber interiors are undivided without complex internal structures."
+    },
+    "CHR_11": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No secondary chamberlets or partitions subdividing the chambers are present."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "A single central proloculus-like initial chamber is visible in the center."
+    },
+    "CHR_13": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Internal radial or vertical partitions are absent."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No pillars are observed in the test."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamberlets are not present."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly visible in this specific cross-section."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord is present along the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface features such as septal filaments are not visible or applicable in internal section view."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The test is completely isolated in the matrix with no attachment structures."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient comparative specimens to determine dimorphism conclusively from this single view."
+    },
+    "CHR_21": {
+      "value": "OBLIQUE",
+      "state": "PRESENT",
+      "reason": "The section cuts across the multiple changing planes of the streptospiral test, indicating an oblique orientation."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:43:10.278460+00:00",
+    "received_at": "2026-11-12T10:43:17.678255+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P010/view01.png",
+        "sha256": "4dec10be97b4868013c0abaf496d55486ace5bc0558f090bf62f6a54f174ffdd",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "7a4b429411b0613be3be48a77c201d3aecd9d60671823afc2339a747acfd90ce"
+  },
+  "expert_approval": null
+}

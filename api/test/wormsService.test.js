@@ -51,10 +51,18 @@ const {
   normalizeBool,
   extractClassification,
   extractFunctionalGroups,
+  isForaminiferRecord,
 } = require("../src/services/wormsService");
 
 // Restore original _resolveFilename
 Module._resolveFilename = originalResolveFilename;
+
+describe('Foraminifer domain guard',()=>{
+  it('rejects the documented Idalina molluscan homonym',()=>{
+    assert.equal(isForaminiferRecord({scientificname:'Idalina',AphiaID:761200,phylum:'Mollusca',class:'Gastropoda'}),false);
+    assert.equal(isForaminiferRecord({phylum:'Foraminifera',class:'Tubothalamea'}),true);
+  });
+});
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TEST SUITES

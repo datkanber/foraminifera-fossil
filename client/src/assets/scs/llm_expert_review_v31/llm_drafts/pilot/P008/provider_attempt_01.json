@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"HYALINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Clear microcrystalline/fibrous wall structure visible in transmitted light.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"LENTICULAR\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test outline in section is biconvex/lenticular.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers are visibly partitioned by septa.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Numerous chambers are clearly visible throughout the section.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"ANNULAR\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Chambers appear arranged in concentric annular series, but preservation makes strict determination difficult.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"PLANISPIRAL\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Possible early whorls are visible near the center, but overall section view is complex.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"SINGLE_PLANE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Symmetrical arrangement centered around the equatorial plane.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Whorls appear tightly enveloped, but internal details are partially obscured.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No major shift in arrangement mode is directly observed from initial to later stages.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"COMPLEX\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Presence of multiple internal structural elements including partitions and chamberlets.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Smaller internal divisions within chambers (chamberlets) are visible in peripheral zones.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"BILOCULAR\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Central area shows rounded chambers, but exact embryonic structure is unclear.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"RADIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Radial partitions/beams are visible traversing the chambers.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Distinct robust vertical pillars are not visible in this section view.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Lateral chamber layers outside the main equatorial plane are not clearly differentiated.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertural details are not visible in this thin section orientation.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No distinct marginal cord structure is visible along the periphery.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Surface septal filaments cannot be observed in internal thin-section view.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test is isolated in the matrix with no sign of attachment surface.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Insufficient comparative specimens to assess dimorphism directly.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"EQUATORIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section passes through the center showing symmetrical chamber arrangement.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0T+/OaI0EiqvoWki0GNndW+SZypbthDTjwKdONRJnkAaZGCLeJlFxAjdQXNAK4aLTlvPtdi7QsqtkHrkDtAkuA3ZFpd5ul7+bwdie9TFeapUQrNbg7VMZmFiU="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3718,
+    "candidatesTokenCount": 1047,
+    "totalTokenCount": 4765,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      },
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1073
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Jpj1atHwA7Tuxs0Pl_zsyAg"
+}

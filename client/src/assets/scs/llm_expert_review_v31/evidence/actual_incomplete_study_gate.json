@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scope": "Actual unfilled study records, not synthetic participants",
+  "checks": [
+    {
+      "command": "check",
+      "exit_code": 2,
+      "reason": "Not ready: Observer is not recruited/verified/independent: EXP01",
+      "performance_results_created": false
+    },
+    {
+      "command": "analyze",
+      "exit_code": 2,
+      "reason": "Not ready: Seal the real, complete forms before any scoring",
+      "performance_results_created": false
+    }
+  ]
+}

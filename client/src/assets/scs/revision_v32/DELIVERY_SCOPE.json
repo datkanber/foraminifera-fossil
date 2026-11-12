@@ -1,0 +1,7 @@
+{
+  "source_manuscripts_modified": false,
+  "v31_source_sha256": "18931c6f9977bece45b4052ae316b13f1a8aa1859f07ec5e57810d925dd60614",
+  "tracked_draft_sha256": "c90e72e2e7c0022591fb6ac701f6f87859827bc7f6b004bdca1a998b96dcdc23",
+  "scope": "Numeric outputs and read-only TBD/comment mapping; no DOCX edits.",
+  "validation": "55 API tests, 7 regression tests, 10 actual Cypher CQ checks, HermiT base plus 4 negative controls, actual browser/API/database flow."
+}

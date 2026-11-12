@@ -1,7 +1,19 @@
+# Davet taslağı — gönderilmedi
+
 Sayın Hocam,
 
-Paleosen–Eosen bentik foraminiferlerin ince kesitlerde cins düzeyinde tanımlanması için hazırlanan GeoKnow motorunu, klasik eleme anahtarıyla aynı uzman gözlemleri üzerinde karşılaştırmak istiyoruz. İlk aşamada 8–10 kodlanmış, bilgi tabanının hazırlanmasında kullanılmamış fosil için 21 karakterlik formun bağımsız doldurulmasını ve anlaşılmayan terimlerin belirtilmesini rica ediyoruz. Gözlem süresini pilotta ölçeceğiz; henüz bir süre veya katılım taahhüdü varsaymıyoruz.
+GeoKnow için 21 karakterlik ince kesit gözlem formunun kullanımını pilot olarak
+değerlendirmek istiyoruz. Bu hazırlık turunda daha önce yayımlanmış ve sistemin
+önceki görüntü değerlendirmesinde yer almış 10 kesit görüntüsü kodlandı. Amaç,
+formdaki terimlerin açıklığını, gözlem süresini ve gözlenemeyen özellikleri
+belirlemektir; bu tur bağımsız tanısal doğrulama olarak sunulmayacaktır.
 
-Referans cinsler, diğer gözlemcinin formu ve motor çıktıları form tamamlanana kadar kapalı olacaktır. Pilot sonrası kesinleşecek protokolle ayrı 60 fosillik çalışma planlanmaktadır. Bu konuda ince kesit deneyiminiz, uygunluğunuz ve kural kartlarının geliştirilmesiyle ilişkiniz hakkında bilgi verebilir misiniz?
+EXP01 ve EXP02 iki gözlemci rolünün kodlarıdır; isim ve katılım henüz atanmadı.
+Referans yayın etiketleri ayrı tutulacak, REF01 rolündeki uzman tarafından
+doğrulama bekleyecektir. Gözlemciler diğer formu ve motor çıktısını görmeden
+bağımsız çalışacaktır. Bu konuda uygunluğunuz ve Paleosen–Eosen bentik foraminifer
+ince kesit deneyiminiz hakkında bilgi verebilir misiniz?
 
-Bu metin yalnız davet TASLAĞIDIR; kimseye gönderilmemiştir.
+Hazırlık sonrasında, yeni ve kaynak bağımsız 60 fiziksel fosille ayrı bir çalışma
+planlanmaktadır. Süre ve katılım taahhüdü varsayılmamaktadır. Bu metin yalnız
+yerel taslaktır; herhangi bir kişiye iletilmemiştir.

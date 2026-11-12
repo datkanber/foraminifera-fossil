@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "status": "PREPARATION_ONLY",
+  "status": "PREPARATION_PILOT_IMAGES_IMPORTED_ROLES_UNCONFIRMED",
   "actual_specimens_assigned": 0,
   "confirmed_observers": 0,
   "completed_human_forms": 0,
@@ -9,8 +9,31 @@
   "human_experiment_conducted": false,
   "manuscript_source_unchanged": "d2115550a44ca34c7ebbd432d6adc66615987b167e7a29236913b52e4320f0c4",
   "missing": [
-    "real independent thin-section material",
-    "two confirmed micropaleontologists",
-    "separate documented reference verification"
-  ]
+    "confirmed EXP01/EXP02 participants",
+    "REF01 reference review",
+    "human observation forms",
+    "new independent material for confirmatory validation"
+  ],
+  "observer_codes": [
+    "EXP01",
+    "EXP02"
+  ],
+  "reference_verifier_code": "REF01",
+  "pilot_image_cases_prepared": 10,
+  "independent_physical_specimens_verified": 0,
+  "source_inventory_summary": {
+    "scope": "Source inventory, not an independent human dataset",
+    "image_extension_files": 149,
+    "readable_images": 148,
+    "unreadable_files": [
+      "IMG_001.png"
+    ],
+    "exact_matches_to_previous_published_panels": 148,
+    "new_readable_images": 0,
+    "filename_identity_mismatches": 148,
+    "selection_basis": "10 cases, 3 agglutinated/3 porcelaneous/4 hyaline; 10 source clusters; source metadata and visual review only, no score-based selection.",
+    "physical_specimen_independence_verified": false,
+    "confirmatory_use_allowed": false,
+    "label_join": "Exact image SHA-256 to the existing provenance manifest; never basename-to-sidecar joins."
+  }
 }

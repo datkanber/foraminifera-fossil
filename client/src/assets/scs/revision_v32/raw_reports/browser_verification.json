@@ -1,0 +1,14 @@
+{
+  "story": "21-character UI to actual HTTP API to isolated current-master Neo4j to scoring response and rendered evidence/exclusions",
+  "passed": true,
+  "character_rows": 21,
+  "HTTP_status": 200,
+  "identification": "Ammodiscus",
+  "score": 19,
+  "excluded_count": 18,
+  "section_warning_rendered": true,
+  "section_warning_changes_ranking": false,
+  "page_errors": [],
+  "device_scale_factor": 3,
+  "production_modified": false
+}

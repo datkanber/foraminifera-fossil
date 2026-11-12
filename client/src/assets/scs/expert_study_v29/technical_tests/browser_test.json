@@ -1,10 +1,12 @@
 {
-  "test": "automated browser fixture only",
+  "scope": "Automated UI exercise only; no human observations",
+  "observer_code_tested": "EXP01",
+  "gallery_images_loaded": 10,
   "character_rows": 21,
-  "incomplete_form_blocked": true,
+  "wrong_case_image_blocked": true,
+  "correct_image_hash_accepted": true,
   "neutral_state_preserved": true,
-  "json_download_valid": true,
   "external_network_requests": 0,
   "browser_errors": [],
-  "real_expert_forms_collected": 0
+  "actual_human_forms": 0
 }

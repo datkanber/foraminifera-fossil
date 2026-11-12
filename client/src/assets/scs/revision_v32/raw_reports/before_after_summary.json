@@ -1,0 +1,490 @@
+[
+  {
+    "version": "before",
+    "dataset": "paths",
+    "module": "ALL",
+    "n": 104,
+    "acc1": 0.22863247863247865,
+    "acc3": 0.4983974358974359,
+    "coverage": 0.9038461538461539,
+    "reference_exclusion": 0.07692307692307693,
+    "reference_omission": 0.0,
+    "rank1_unique": 25,
+    "rank1_tied": 9,
+    "top3_shared_rank": 69,
+    "confirmed_correct": 14,
+    "states": {
+      "CANDIDATE_GENUS": 41,
+      "CONFIRMED_GENUS": 53,
+      "INDETERMINATE": 10
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "paths",
+    "module": "AGGLUTINATED",
+    "n": 36,
+    "acc1": 0.2222222222222222,
+    "acc3": 0.49537037037037035,
+    "coverage": 0.8055555555555556,
+    "reference_exclusion": 0.027777777777777776,
+    "reference_omission": 0.0,
+    "rank1_unique": 10,
+    "rank1_tied": 2,
+    "top3_shared_rank": 26,
+    "confirmed_correct": 3,
+    "states": {
+      "CANDIDATE_GENUS": 15,
+      "CONFIRMED_GENUS": 14,
+      "INDETERMINATE": 7
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "paths",
+    "module": "HYALINE",
+    "n": 26,
+    "acc1": 0.2735042735042735,
+    "acc3": 0.5256410256410257,
+    "coverage": 0.9615384615384616,
+    "reference_exclusion": 0.07692307692307693,
+    "reference_omission": 0.0,
+    "rank1_unique": 6,
+    "rank1_tied": 3,
+    "top3_shared_rank": 15,
+    "confirmed_correct": 6,
+    "states": {
+      "CONFIRMED_GENUS": 14,
+      "CANDIDATE_GENUS": 11,
+      "INDETERMINATE": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "paths",
+    "module": "PORCELANEOUS",
+    "n": 42,
+    "acc1": 0.20634920634920634,
+    "acc3": 0.4841269841269841,
+    "coverage": 0.9523809523809523,
+    "reference_exclusion": 0.11904761904761904,
+    "reference_omission": 0.0,
+    "rank1_unique": 9,
+    "rank1_tied": 4,
+    "top3_shared_rank": 28,
+    "confirmed_correct": 5,
+    "states": {
+      "INDETERMINATE": 2,
+      "CONFIRMED_GENUS": 25,
+      "CANDIDATE_GENUS": 15
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "paths",
+    "module": "ALL",
+    "n": 104,
+    "acc1": 0.34161324786324787,
+    "acc3": 0.5844551282051282,
+    "coverage": 0.9038461538461539,
+    "reference_exclusion": 0.0,
+    "reference_omission": 0.0,
+    "rank1_unique": 32,
+    "rank1_tied": 31,
+    "top3_shared_rank": 79,
+    "confirmed_correct": 19,
+    "states": {
+      "PROBABLE_GENUS": 11,
+      "CONFIRMED_GENUS": 27,
+      "INDETERMINATE": 10,
+      "CANDIDATE_GENUS": 56
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "paths",
+    "module": "AGGLUTINATED",
+    "n": 36,
+    "acc1": 0.3472222222222222,
+    "acc3": 0.6027777777777777,
+    "coverage": 0.8333333333333334,
+    "reference_exclusion": 0.0,
+    "reference_omission": 0.0,
+    "rank1_unique": 11,
+    "rank1_tied": 10,
+    "top3_shared_rank": 29,
+    "confirmed_correct": 7,
+    "states": {
+      "PROBABLE_GENUS": 6,
+      "CONFIRMED_GENUS": 12,
+      "INDETERMINATE": 6,
+      "CANDIDATE_GENUS": 12
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "paths",
+    "module": "HYALINE",
+    "n": 26,
+    "acc1": 0.3985042735042735,
+    "acc3": 0.5673076923076923,
+    "coverage": 1.0,
+    "reference_exclusion": 0.0,
+    "reference_omission": 0.0,
+    "rank1_unique": 9,
+    "rank1_tied": 4,
+    "top3_shared_rank": 16,
+    "confirmed_correct": 5,
+    "states": {
+      "CONFIRMED_GENUS": 7,
+      "CANDIDATE_GENUS": 18,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "paths",
+    "module": "PORCELANEOUS",
+    "n": 42,
+    "acc1": 0.30158730158730157,
+    "acc3": 0.5793650793650793,
+    "coverage": 0.9047619047619048,
+    "reference_exclusion": 0.0,
+    "reference_omission": 0.0,
+    "rank1_unique": 12,
+    "rank1_tied": 17,
+    "top3_shared_rank": 34,
+    "confirmed_correct": 7,
+    "states": {
+      "INDETERMINATE": 4,
+      "CONFIRMED_GENUS": 8,
+      "PROBABLE_GENUS": 4,
+      "CANDIDATE_GENUS": 26
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels_legacy_normalized",
+    "module": "ALL",
+    "n": 150,
+    "acc1": 0.048888888888888885,
+    "acc3": 0.20111111111111113,
+    "coverage": 0.8866666666666667,
+    "reference_exclusion": 0.4533333333333333,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 6,
+    "rank1_tied": 3,
+    "top3_shared_rank": 31,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 74,
+      "CANDIDATE_GENUS": 58,
+      "INDETERMINATE": 17,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels_legacy_normalized",
+    "module": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.030303030303030304,
+    "acc3": 0.5454545454545454,
+    "coverage": 0.9696969696969697,
+    "reference_exclusion": 0.36363636363636365,
+    "reference_omission": 0.06060606060606061,
+    "rank1_unique": 0,
+    "rank1_tied": 2,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 11,
+      "CANDIDATE_GENUS": 21,
+      "INDETERMINATE": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels_legacy_normalized",
+    "module": "HYALINE",
+    "n": 80,
+    "acc1": 0.029166666666666667,
+    "acc3": 0.08958333333333333,
+    "coverage": 0.825,
+    "reference_exclusion": 0.5375,
+    "reference_omission": 0.2875,
+    "rank1_unique": 2,
+    "rank1_tied": 1,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 1,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 41,
+      "CANDIDATE_GENUS": 24,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels_legacy_normalized",
+    "module": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.10810810810810811,
+    "acc3": 0.13513513513513514,
+    "coverage": 0.9459459459459459,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 4,
+    "rank1_tied": 0,
+    "top3_shared_rank": 5,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 22,
+      "INDETERMINATE": 2,
+      "CANDIDATE_GENUS": 13
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels_legacy_normalized",
+    "module": "ALL",
+    "n": 150,
+    "acc1": 0.02666666666666667,
+    "acc3": 0.11666666666666667,
+    "coverage": 0.88,
+    "reference_exclusion": 0.43333333333333335,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 3,
+    "top3_shared_rank": 20,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 83,
+      "CANDIDATE_GENUS": 49,
+      "INDETERMINATE": 18
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels_legacy_normalized",
+    "module": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.0505050505050505,
+    "acc3": 0.21212121212121213,
+    "coverage": 0.9696969696969697,
+    "reference_exclusion": 0.2727272727272727,
+    "reference_omission": 0.06060606060606061,
+    "rank1_unique": 1,
+    "rank1_tied": 2,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 19,
+      "CANDIDATE_GENUS": 13,
+      "INDETERMINATE": 1
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels_legacy_normalized",
+    "module": "HYALINE",
+    "n": 80,
+    "acc1": 0.029166666666666667,
+    "acc3": 0.08125,
+    "coverage": 0.825,
+    "reference_exclusion": 0.5375,
+    "reference_omission": 0.2875,
+    "rank1_unique": 2,
+    "rank1_tied": 1,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 1,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 41,
+      "CANDIDATE_GENUS": 25
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels_legacy_normalized",
+    "module": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.0,
+    "acc3": 0.10810810810810811,
+    "coverage": 0.918918918918919,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 0,
+    "rank1_tied": 0,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 11,
+      "INDETERMINATE": 3,
+      "CONFIRMED_GENUS": 23
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels",
+    "module": "ALL",
+    "n": 150,
+    "acc1": 0.08888888888888889,
+    "acc3": 0.20777777777777778,
+    "coverage": 0.8933333333333333,
+    "reference_exclusion": 0.4533333333333333,
+    "reference_omission": 0.28,
+    "rank1_unique": 12,
+    "rank1_tied": 3,
+    "top3_shared_rank": 32,
+    "confirmed_correct": 4,
+    "states": {
+      "CANDIDATE_GENUS": 64,
+      "CONFIRMED_GENUS": 69,
+      "INDETERMINATE": 16,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels",
+    "module": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.18181818181818182,
+    "acc3": 0.5454545454545454,
+    "coverage": 1.0,
+    "reference_exclusion": 0.3939393939393939,
+    "reference_omission": 0.030303030303030304,
+    "rank1_unique": 5,
+    "rank1_tied": 2,
+    "top3_shared_rank": 18,
+    "confirmed_correct": 2,
+    "states": {
+      "CANDIDATE_GENUS": 25,
+      "CONFIRMED_GENUS": 8
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels",
+    "module": "HYALINE",
+    "n": 80,
+    "acc1": 0.04166666666666667,
+    "acc3": 0.10208333333333333,
+    "coverage": 0.825,
+    "reference_exclusion": 0.525,
+    "reference_omission": 0.2875,
+    "rank1_unique": 3,
+    "rank1_tied": 1,
+    "top3_shared_rank": 9,
+    "confirmed_correct": 2,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 39,
+      "CANDIDATE_GENUS": 26,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "before",
+    "dataset": "panels",
+    "module": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.10810810810810811,
+    "acc3": 0.13513513513513514,
+    "coverage": 0.9459459459459459,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 4,
+    "rank1_tied": 0,
+    "top3_shared_rank": 5,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 22,
+      "INDETERMINATE": 2,
+      "CANDIDATE_GENUS": 13
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels",
+    "module": "ALL",
+    "n": 150,
+    "acc1": 0.03333333333333333,
+    "acc3": 0.12333333333333334,
+    "coverage": 0.8866666666666667,
+    "reference_exclusion": 0.43333333333333335,
+    "reference_omission": 0.28,
+    "rank1_unique": 4,
+    "rank1_tied": 3,
+    "top3_shared_rank": 21,
+    "confirmed_correct": 2,
+    "states": {
+      "CANDIDATE_GENUS": 51,
+      "CONFIRMED_GENUS": 80,
+      "PROBABLE_GENUS": 2,
+      "INDETERMINATE": 17
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels",
+    "module": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.0505050505050505,
+    "acc3": 0.21212121212121213,
+    "coverage": 1.0,
+    "reference_exclusion": 0.30303030303030304,
+    "reference_omission": 0.030303030303030304,
+    "rank1_unique": 1,
+    "rank1_tied": 2,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 15,
+      "CONFIRMED_GENUS": 17,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels",
+    "module": "HYALINE",
+    "n": 80,
+    "acc1": 0.04166666666666667,
+    "acc3": 0.09375,
+    "coverage": 0.825,
+    "reference_exclusion": 0.525,
+    "reference_omission": 0.2875,
+    "rank1_unique": 3,
+    "rank1_tied": 1,
+    "top3_shared_rank": 9,
+    "confirmed_correct": 2,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 42,
+      "CANDIDATE_GENUS": 23,
+      "PROBABLE_GENUS": 1
+    }
+  },
+  {
+    "version": "after",
+    "dataset": "panels",
+    "module": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.0,
+    "acc3": 0.10810810810810811,
+    "coverage": 0.918918918918919,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 0,
+    "rank1_tied": 0,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 13,
+      "INDETERMINATE": 3,
+      "CONFIRMED_GENUS": 21
+    }
+  }
+]

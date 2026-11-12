@@ -1,0 +1,35 @@
+{
+  "v31_snapshot": {
+    "a": 0,
+    "b": 0,
+    "c": 3,
+    "d": 0,
+    "e": 28,
+    "f": 28,
+    "g": 7,
+    "h": 11,
+    "i": 0
+  },
+  "v32": {
+    "a": 0,
+    "b": 0,
+    "c": 4,
+    "d": 0,
+    "e": 20,
+    "f": 2,
+    "g": 0,
+    "h": 0,
+    "i": 0
+  },
+  "labels": {
+    "a": "C repeats positive",
+    "b": "M conflicts M/D",
+    "c": "polarity screen, requires interpretation",
+    "d": "duplicated positive evidence",
+    "e": "unmapped M",
+    "f": "genera without scored D",
+    "g": "off-vocabulary tree answers",
+    "h": "repeated character questions",
+    "i": "nonunique genus module"
+  }
+}

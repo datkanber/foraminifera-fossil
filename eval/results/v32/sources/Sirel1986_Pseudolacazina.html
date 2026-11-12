@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>Search Verification &raquo; DergiPark</title>
+    <base href="/"/>
+    <meta name="generator" content="uds"/>
+
+            
+    
+                                
+                        <link rel="stylesheet" href="/zollu/css/katex/katex.min.css">
+        <link rel="stylesheet" href="/zollu/css/pages/zollu-backend.css">
+        <link rel="stylesheet" href="/zollu/keen/vendors/custom/fullcalendar/fullcalendar.bundle.css">
+        <link rel="stylesheet" href="/zollu/keen/css/demo3/pages/custom/general/user/profile-v1.css">
+        <link rel="stylesheet" href="/zollu/keen/vendors/global/vendors.bundle.css">
+        <link rel="stylesheet" href="/zollu/keen/css/demo3/style.bundle.css">
+        <link rel="stylesheet" href="/zollu/keen/css/demo3/pages/custom/general/blog/grid-v2.css">
+        <link rel="stylesheet" href="/zollu/keen/css/demo3/pages/custom/general/blog/post.css">
+        <link rel="stylesheet" href="/zollu/keen/css/demo3/pages/custom/general/blog/list.css">
+        <link rel="stylesheet" href="/zollu/keen/vendors/custom/datatables/datatables.bundle.css">
+        <link rel="stylesheet"
+              href="/zollu/js/jbfileuploader/lib/jquery-file-upload/css/jquery.fileupload.css">
+        <link rel="stylesheet"
+              href="/zollu/js/jbfileuploader/lib/jquery-file-upload/css/jquery.fileupload-ui.css">
+        <link rel="stylesheet" href="/zollu/js/jbfileuploader/css/jbfileupload.css">
+        <link rel="stylesheet" href="/zollu/css/site.css">
+        <link rel="stylesheet" href="/zollu/css/pages/home.css">
+        <link rel="stylesheet" href="/zollu/css/select2/select2.min.css">
+        <link rel="stylesheet" href="/zollu/css/select2/select2-bootstrap.min.css">
+        <link rel="stylesheet" href="/zollu/css/pages/feedback.css">
+        <link rel="stylesheet" href="/zollu/css/pages/user_project_modal.css">
+        <link rel="stylesheet" href="/zollu/css/pages/picker/nano.min.css">
+        <link rel="stylesheet" href="/zollu/css/ckeditor/ckeditor.css">
+    
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google.com.tr">
+    <link rel="preconnect" href="https://www.google.com.tr" crossorigin>
+    <link rel="dns-prefetch" href="https://stats.g.doubleclick.net">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com">
+    <link rel="preconnect" href="http://fonts.googleapis.com" crossorigin>
+
+    <script type="text/javascript">
+        const current_language = 'en';
+
+        function changeLocale(langCode) {
+            window.location.href = $('#link-alternate-' + langCode).attr('href');
+        }
+    </script>
+
+    <script type="text/javascript" src="/zollu/js/zollu_user_session_info.js"></script>
+
+    <script type="text/javascript" src="/en/dp-feature-data.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-694ZECXSSZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-694ZECXSSZ');
+        let dpUserCookie = getDpUserCookie();
+        if (dpUserCookie !== undefined && dpUserCookie !== null && (userId = dpUserCookie.user_id) !== null) {
+            gtag('set', {'user_id': userId});
+        }
+    </script>
+</head>
+
+
+<body class="kt-page--fixed kt-subheader--enabled kt-subheader--transparent zollu zollu-padded "
+      >
+
+        
+    
+
+    
+    
+
+<nav id="header"
+     class="navbar fixed-top navbar-fixed-top navbar-expand-lg navbar-light scrolled ">
+        <div class="kt-header" style="width: 100%;padding: 8px 0;">
+        <div class="kt-header__top" style="height: inherit;">
+            <div class="kt-container" id="header-container">
+                                <div id="powered-by">
+                                                            <a class="navbar-brand" href="//dergipark.org.tr/en/">
+                        <img src="/zollu/images/dergipark_header.png"
+                             alt="DergiPark logo"/>
+                    </a>
+                </div>
+
+
+                <a href="/en/user/notification"
+                   class="no-notification hide d-none "
+                   id="mobile-notification-count-wrapper">
+                    <i class="flaticon2-notification" id="mobile-notification-icon"></i>
+                    <span class="kt-badge" id="mobile-notification-badge"></span>
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarToggler"
+                        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                     id="navbarToggler">
+                                            <ul class="navbar-nav  mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle color-black" href="#" id="aboutDropDown"
+                                   data-toggle="dropdown" aria-haspopup="false"
+                                   aria-expanded="false">About</a>
+                                <div class="dropdown-menu rounded-0" aria-labelledby="aboutDropDown">
+                                    <a class="dropdown-item"
+                                       href="/en/pub/page/hakkinda">About</a>
+                                    <a class="dropdown-item"
+                                       href="/en/pub/trends">Trends</a>
+                                    <a class="dropdown-item"
+                                       href="/en/pub/page/doi-hizmeti">DOI Service</a>
+                                    <a class="dropdown-item"
+                                       href="/en/pub/subjects">Subjects</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color-black"
+                                   href="/en/search?section=journal">
+                                    Journals
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle color-black"
+                                   href="/en/search?section=publisher"
+                                   id="publisherTypeDropDown" data-toggle="dropdown" aria-haspopup="false"
+                                   aria-expanded="false">Publishers</a>
+                                <div class="dropdown-menu rounded-0" aria-labelledby="publisherTypeDropDown">
+                                    <a class="dropdown-item"
+                                       href="/en/search?section=publisher">All</a>
+                                    <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=6">University</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=7">Government</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=8">Association</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=9">Foundation</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=11">Trade Association</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=18">Person</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=19">Union</a>
+                                                                            <a class="dropdown-item"
+                                           href="/en/search?section=publisher&amp;filter%5BpublisherType.id%5D%5B0%5D=12">Company</a>
+                                                                    </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color-black"
+                                   href="/en/search?section=user">
+                                    Researchers
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color-black" href="/en/journal-wizard">
+                                    Journal Wizard
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link color-black" href="https://confluence.ulakbim.gov.tr/display/DYM"
+                                   target="_blank">Help</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle color-black" href="javascript:"
+                                   id="announcementsDropDown" data-toggle="dropdown" aria-haspopup="false"
+                                   aria-expanded="false">Announcements</a>
+                                <div class="dropdown-menu rounded-0" aria-labelledby="announcementsDropDown">
+                                    <a class="dropdown-item"
+                                       href="/en/pub/announcement">Developments
+                                        <span id="total_active_announcement"
+                                              class="badge badge-dergipark kt-margin-l-5 kt-font-bold kt-hidden"></span></a>
+                                    <a class="dropdown-item"
+                                       href="/en/pub/page/yol-haritasi">Roadmap</a>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                    <div >
+                        <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item hide d-none "
+                                    id="header-user-notification">
+                                    <a id="user-notification-count" class="nav-link"
+                                       href="/en/user/notification"><span
+                                                class="flaticon2-notification"></span><label
+                                                id="notification-count-aria-label"></label></a>
+                                </li>
+                                                                                        <li class="nav-item dropdown language_selector">
+                                    <a class="nav-link dropdown-toggle" id="langDropDown" aria-haspopup="true"
+                                       aria-expanded="false" data-toggle="dropdown" href="#" style="color: black">
+                                        English                                        <span class="caret"></span></a>
+                                    <div class="dropdown-menu rounded-0 dropdown-menu-right"
+                                         aria-labelledby="langDropDown">
+                                                                                                                                <a class="dropdown-item" href="/tr/search/verification">
+                                                Turkish
+                                            </a>
+                                                                                                                                <a class="dropdown-item" href="/en/search/verification">
+                                                English
+                                            </a>
+                                                                            </div>
+                                </li>
+                                                                                        <li class="nav-item dropdown hide d-none" id="header-user-box-user-menu">
+                                    <a class="nav-link dropdown-toggle color-black" href="#" id="userDropDown"
+                                       data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span id="userDropDown-user-avatar"></span>
+                                        <span id="userDropDown-user-name"></span>
+                                        <span id="userDropDown-user-badge"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right rounded-0"
+                                         aria-labelledby="userDropDown">
+                                        <a class="dropdown-item color-dergipark d-none"
+                                           href="//dergipark.org.tr/en/admin/panel"
+                                           id="header-dashboard-item">
+                                            <i class="icon-wrench symbol flaticon-grid-menu mr-1 mt-1 pr-1 color-dergipark"></i> Admin Panel
+                                        </a>
+
+                                        <a class="dropdown-item"
+                                           href="//dergipark.org.tr/en/user/panel"
+                                           id="header-user-panel-item">
+                                            <i class="icon-wrench symbol flaticon-grid-menu mr-1 mt-1 pr-1"></i> User Panel
+                                        </a>
+
+                                        <a class="dropdown-item d-none"
+                                           href="//dergipark.org.tr/en/user/publisher/panel"
+                                           id="header-user-coordinator-panel-item">
+                                            <i class="icon-wrench symbol flaticon-grid-menu mr-1 mt-1 pr-1"></i> Coordinator of Scientific Publishing Panel
+                                        </a>
+
+                                        <a class="dropdown-item"
+                                           href="/en/journal/my">
+                                            <i class="icon-docs symbol flaticon2-open-text-book mr-1 mt-1 pr-1"></i> My Journals
+                                        </a>
+
+                                        <a class="dropdown-item d-none"
+                                           href="//dergipark.org.tr/en/user-project"
+                                           id="header-user-project-item">
+                                            <i class="icon-rocket symbol flaticon-folder-4 mr-1 mt-1 pr-1"></i> My Research
+                                        </a>
+
+                                        <a class="dropdown-item d-none" id="menu-follower-item"
+                                           href="//dergipark.org.tr/en/user/user-followers">
+                                            <i class="symbol flaticon2-speaker mr-1 mt-1 pr-1"></i> My Followers
+                                        </a>
+
+                                        <a class="dropdown-item" href="#" id="header-user-box-profile-link">
+                                            <i class="icon-user symbol flaticon2-calendar-3 mr-1 mt-1 pr-1"></i> Profile
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item" href="https://dergipark.org.tr/en/logout">
+                                            <i class="icon-logout symbol flaticon2-lock mr-1 mt-1 pr-1"></i> Logout
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item hide d-none" id="header-user-box-guest-menu">
+                                    <a class="nav-link color-black"
+                                       href="https://dergipark.org.tr/en/login">Login</a>
+                                </li>
+                                                    </ul>
+                                                    <script type="text/javascript">
+                                function showUserBoxBlock(elemId) {
+                                    document.getElementById(elemId).className =
+                                        document.getElementById(elemId).className.replace(/d-none/, '');
+                                    document.getElementById(elemId).className =
+                                        document.getElementById(elemId).className.replace(/hide/, '');
+                                }
+
+                                if (isUserLoggedIn()) {
+
+                                    // Substitute user data
+                                    let userAvatar = getUserAvatar();
+
+                                    document.getElementById('userDropDown-user-name').innerHTML = getUserFullNameFormatted();
+                                    document.getElementById('header-user-box-profile-link').setAttribute('href', getUserProfileLink());
+
+                                    // user dropdown alanındaki rozet kontrolü
+                                    if (isApproved()) {
+                                        document.getElementById('userDropDown-user-badge').innerHTML = "<img style='margin-top: -2px;' src='/zollu/images/dergipark-verified-badge.svg' width='20' height='20'/>";
+                                    }
+
+                                    if (userAvatar.length === 0) {
+                                        userAvatar = '/zollu/images/default-avatar.png';
+                                    }
+
+                                    document.getElementById('userDropDown-user-avatar').innerHTML = '<img src="' + userAvatar + '" onerror="this.onerror=null;this.src=\'/zollu/images/default-avatar.png\';">';
+
+                                    // User menu ready, it's show time!
+                                    showUserBoxBlock('header-user-box-user-menu');
+                                    showUserBoxBlock('header-user-notification');
+                                    showUserBoxBlock('mobile-notification-count-wrapper');
+
+                                    const userInfo = getUserInfo();
+                                    if (canUseFollowerFeature(userInfo.username)) {
+                                        document.getElementById('menu-follower-item').classList.remove("d-none");
+                                        document.getElementById('header-user-project-item').classList.remove("d-none");
+                                    }
+                                    if (userInfo.is_admin == 1) {
+                                        document.getElementById('header-dashboard-item').classList.remove("d-none");
+                                    }
+                                } else {
+                                    // User is not logged in, display guest block right away!
+                                    showUserBoxBlock('header-user-box-guest-menu');
+                                }
+
+                                var userDropDownElement = document.getElementById("userDropDown");
+                                var userNavbar = document.getElementById("navbarToggler");
+                                userDropDownElement.addEventListener('click', function () {
+                                    if (!document.getElementById('header-user-box-user-menu').classList.contains('show')) {
+                                        userNavbar.classList.add('sensitive-height');
+                                    } else {
+                                        userNavbar.classList.remove('sensitive-height');
+                                    }
+                                });
+                                document.querySelector('[data-target="#navbarToggler"]').addEventListener('click', function () {
+                                    if (document.getElementById('header-user-box-user-menu').classList.contains('show')) {
+                                        userNavbar.classList.remove('sensitive-height');
+                                    }
+                                });
+                            </script>
+                                            </div>
+                </div>
+                            </div>
+        </div>
+    </div>
+    </nav>        <div id="body-push-down">
+            <div class="kt-grid kt-grid--hor kt-grid--root">
+                <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+                    <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+                        <div class="kt-container  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch"
+                             id="kt_padder">
+                            <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch"
+                                 id="kt_body">
+                                <div class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor"
+                                     id="kt_content">
+
+                                                                            <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+                                            <div class="kt-container ">
+                                                <div class="kt-subheader__main">
+                                                                                                            <h3 class="kt-subheader__title"></h3>
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                                <div class="kt-subheader__toolbar">
+                                                    <div class="kt-subheader__wrapper">
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+                                        <div style="display:none;">
+    </div>
+
+<div id="dp-flash-container"></div>
+                                            <div class="kt-portlet" style="margin-top: -30px;">
+        <div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--break-sm">
+            <div class="kt-portlet__head-label">
+                <h4 class="kt-portlet__head-title">Please verify that you are a human in order to continue searching.</h4>
+            </div>
+        </div>
+        <form name="search_verification"        method="post" id="verification_form">
+        <div class="kt-portlet__body d-flex justify-content-center">
+            <div class="form-group">
+                    <script src='https://challenges.cloudflare.com/turnstile/v0/api.js' async defer></script>
+    <div class="cf-turnstile"
+         data-sitekey="0x4AAAAAAB1i-4iNnWG1Enwf"
+         data-theme="light" data-size="normal"
+         data-language="en"
+         data-callback="turnstileCallbackSuccess"
+         data-error-callback="turnstileCallbackError"
+         data-expired-callback="turnstileCallbackExpired"
+    ></div>
+
+                
+            </div>
+            <div class="form-group">
+                <button id="submit_form" class="btn btn-primary btn-bold kt-hidden" type="submit">
+                    <i class="fa fa-check" aria-hidden="true"></i> Continue
+                </button>
+            </div>
+        </div>
+        <input type="hidden" id="search_verification__token" name="search_verification[_token]" data-controller="csrf-protection" value="b99a30dd800.ai8xyIOOSTMlMl_8Y2tmde8ONGh5Ad3Qgkat01oLp_8.AXtr-NDePnxSQDTKVTMARLtZYx0hU5TpxA7nsD5T8Kk4Gnqlyv4wZWZ_Dg" /></form>
+    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+<!-- begin:: Footer -->
+<footer class="kt-footer kt-grid__item" id="page-footer" aria-label="DergiPark footer menu">
+    <div class="kt-container">
+                    <div class="kt-footer__top">
+                <div class="row footer-section-layout">
+                    <div class="col-lg-5">
+                        <div class="kt-footer__section">
+                            <div class="kt-footer__title">
+                                <img src="/zollu/images/agreement-dergipark-logo.png" width="210"
+                                     alt="DergiPark logo">
+                            </div>
+                            <div class="kt-footer__about">
+                                <p>DergiPark is ranked number 1 by academic community in reaching knowledge in Türkiye.</p>
+                            </div>
+                            <div class="kt-padding-t-30">
+                                                                    <a href="https://ulakbim.tubitak.gov.tr/en" target="_blank" aria-label="Republic of Türkiye Ministry of Foreign Affairs link">
+                                        <img src="/zollu/images/stb-ulakbim-dikey-en.png" class="corporate-logo corporate-logo-sanayi" alt="Republic of Türkiye Ministry of Foreign Affairs logo">
+                                    </a>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="kt-footer__section">
+                            <h3 class="kt-footer__title">
+                                Quick Links
+                            </h3>
+                            <div class="col">
+                                <ul class="kt-footer__nav">
+                                    <li>
+                                        <a href="//dergipark.org.tr/en/pub/explore/journals"
+                                           class="kt-link kt-link--dark">Journals</a>
+                                    </li>
+                                    <li>
+                                        <a href="//dergipark.org.tr/en/pub/subjects"
+                                           class="kt-link kt-link--dark">Subjects</a>
+                                    </li>
+                                    <li>
+                                        <a href="//dergipark.org.tr/en/pub/page/egitim-dokumanlari"
+                                           class="kt-link kt-link--dark">Training and How-to Videos</a>
+                                    </li>
+                                    <li>
+                                        <a href="//dergipark.org.tr/en/pub/page/faq"
+                                           class="kt-link kt-link--dark">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="//dergipark.org.tr/en/pub/page/iletisim"
+                                           class="kt-link v">Contact</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/en/pub/privacy-terms"
+                                           class="kt-link v">KVKK</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/en/mobil"
+                                           class="kt-link v">Our Mobile Applications</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="kt-footer__section">
+                            <div class="kt-footer__content_nav mb-3">
+                                <div class="kt-footer__title mb-3">
+                                    Our Mobile Applications
+                                </div>
+                                <div class="google-play-badge">
+    <a href="https://play.google.com/store/apps/details?id=tr.org.dergipark.mobile&pcampaignid=web_share">
+        <img src="/zollu/images/google-play-dp-badge-en.png"
+             alt="Google Play Store link"
+             width=170>
+    </a>
+</div>
+<div>
+    <a href="https://apps.apple.com/us/app/dergipark-akademik/id6462056500?itsct=apps_box_link&itscg=30200">
+        <img src="/zollu/images/app-store-dp-badge-en.png"
+             alt="App Store link"
+             width=170>
+    </a>
+</div>
+                            </div>
+                            <div class="kt-footer__title mb-0">
+                                Follow us
+                            </div>
+                            <div class="kt-footer__social footer-section-social-media">
+
+                                <ul class="kt-footer__social-nav">
+                                                                            <li aria-label="facebook">
+                                            <a href="https://facebook.com/dergipark"><i
+                                                        class="flaticon-facebook-logo-button fa-3x"
+                                                        aria-hidden="true"></i></a>
+                                        </li>
+                                                                                                                <li aria-label="twitter">
+                                            <a href="https://twitter.com/dergipark">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="53">
+                                                    <ellipse stroke="null" ry="18.99283" rx="18.99283" id="svg_2"
+                                                             cy="24.78058" cx="21.5" fill="#676885"></ellipse>
+                                                    <path stroke="null"
+                                                          d="m27.31766,15.63699l3.1021,0l-6.77733,7.74638l7.97327,10.54079l-6.24321,0l-4.88956,-6.39311l-5.59494,6.39311l-3.10414,0l7.24904,-8.28552l-7.64858,-10.00165l6.40128,0l4.4199,5.84338l5.11218,-5.84338zm-1.08886,16.43023l1.71911,0l-11.09627,-14.67082l-1.84449,0l11.22165,14.67082z"
+                                                          fill-rule="nonzero" fill="#e8e8ef"></path>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                                                                                                <li aria-label="instagram">
+                                            <a href="https://www.instagram.com/dergipark"><i
+                                                        class="flaticon-instagram-logo fa-3x"
+                                                        aria-hidden="true"></i></a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <div class="kt-footer__bottom">
+            <div class="kt-footer__copyright">
+                                    ULAKBİM Journal Systems&nbsp;&copy; 2026 All Rights Reserved.
+                
+                            </div>
+            <div class="kt-footer__menu">
+                
+<p class="footer-deploy-info">Version: 261110.4e0f789f3 · 10.11.2026</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end:: Footer -->
+
+
+    
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": [
+                    "Poppins:300,400,500,600,700"]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+        <script src="/zollu/js/jquery.min.js"></script>
+    <script src="/zollu/keen/vendors/global/vendors.bundle.js"></script>
+    <script src="/zollu/keen/js/demo3/scripts.bundle.js"></script>
+    <script src="/zollu/keen/vendors/custom/datatables/datatables.bundle.js"></script>
+    <script src="/zollu/js/katex/katex.min.js"></script>
+    <script src="/zollu/js/katex/auto-render.min.js"></script>
+    <script src="/zollu/js/flashbag.js"></script>
+    <script src="/zollu/js/navbar-top.js"></script>
+    <script src="/zollu/bundles/fosjsrouting/js/router.js"></script>
+    <script src="/zollu/bundles/jbfileuploader/lib/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="/zollu/js/jbfileuploader/lib/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="/zollu/js/jbfileuploader/lib/jquery-file-upload/js/jquery.fileupload.js"></script>
+    <script src="/zollu/js/jbfileuploader/js/jbfileupload.js"></script>
+    <script src="/zollu/js/jbfileuploader/lib/jcrop/js/jquery.Jcrop.js"></script>
+    <script src="/zollu/js/jquery-ui.min.js"></script>
+    <script src="/zollu/js/pages/zollu-backend.js"></script>
+    <script src="/zollu/js/select2/select2.min.js"></script>
+    <script src="/zollu/bundles/ojscore/js/select2_sortable.js"></script>
+    <script src="/zollu/bundles/ojscore/js/remote_selection.js"></script>
+    <script src="/zollu/bundles/ojscore/js/ucfirst.js"></script>
+    <script src="/zollu/bundles/bazingajstranslation/js/translator.min.js"></script>
+    <script src="/zollu/js/common.js"></script>
+    <script src="/zollu/js/format-user-name.js"></script>
+    <script src="/zollu/js/diplab.js"></script>
+    <script src="/zollu/bundles/ojscore/js/alert_util.js"></script>
+    <script src="/zollu/js/chartjs-plugin-labels.js"></script>
+    <script src="/zollu/js/multiple_mail.js"></script>
+    <script src="/zollu/bundles/ojscore/js/mask_platforms.js"></script>
+    <script src="/zollu/js/confirmation.js"></script>
+    <script src="/zollu/js/prevent-double-submit.js"></script>
+    <script src="/en/pub/translations?locale=en"></script>
+    <script src="/zollu/js/subject/subject_selector.js"></script>
+    <script src="/zollu/js/pages/article/zollu_star.js"></script>
+    <script src="/zollu/js/pages/picker/pickr.min.js"></script>
+    <script src="/pub/js/routing?callback=fos.Router.setData&amp;lang=en"></script>
+
+    <script type="text/javascript" src="/zollu/js/copy_clipboard.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                 inlineMath: [['$','$'], ['\\(','\\)']],
+                 ignoreClass: "no-latex",
+                 processClass: "latex"
+            },
+            displayAlign: "center"
+        });
+    </script>
+    <script type="text/javascript" src="/zollu/js/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- CKEditör -->
+    <script src="/zollu/js/ckeditor/ck-editor-conf.js"></script>
+    <script>window.CKEditorPresets = {"none":{"toolbar":[],"minHeight":150,"heading":false,"headingOptions":[],"image":false},"simple":{"toolbar":["heading","|","bold","italic","|","alignment","|","fontColor","|","link","|","bulletedList","numberedList","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[],"image":false},"standard":{"toolbar":["heading","|","bold","italic","|","alignment","|","link","|","fontColor","|","bulletedList","numberedList","|","imageUpload","customFileButton","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading1","view":"h1","title":"Heading 1","class":"ck-heading_heading1"},{"model":"heading2","view":"h2","title":"Heading 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Heading 3","class":"ck-heading_heading3"}],"image":true},"full":{"toolbar":["heading","|","bold","italic","|","alignment","|","link","|","fontColor","|","bulletedList","numberedList","|","imageUpload","customFileButton","insertTable","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading1","view":"h1","title":"Heading 1","class":"ck-heading_heading1"},{"model":"heading2","view":"h2","title":"Heading 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Heading 3","class":"ck-heading_heading3"}],"image":true},"advanced":{"toolbar":["undo","redo","|","heading","|","fontSize","fontFamily","fontColor","fontBackgroundColor","|","bold","italic","underline","strikethrough","subscript","superscript","code","|","link","|","alignment","|","outdent","indent","|","bulletedList","numberedList","todoList","|","imageUpload","customFileButton","insertTable","mediaEmbed","|","blockQuote","codeBlock","horizontalLine","pageBreak","specialCharacters","|","removeFormat","|","sourceEditing"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading1","view":"h1","title":"Heading 1","class":"ck-heading_heading1"},{"model":"heading2","view":"h2","title":"Heading 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Heading 3","class":"ck-heading_heading3"}],"image":true},"blog":{"toolbar":["heading","|","bold","italic","|","alignment","|","link","|","bulletedList","numberedList","|","imageUpload","customFileButton","|","blockQuote","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading2","view":"h2","title":"Ba\u015fl\u0131k 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Ba\u015fl\u0131k 3","class":"ck-heading_heading3"}],"image":true},"email":{"toolbar":["heading","|","bold","italic","|","alignment","|","link","|","fontColor","|","bulletedList","numberedList","|","imageUpload","customFileButton","|","undo","redo","sourceEditing"],"minHeight":150,"heading":true,"headingOptions":[],"image":true},"bas\u0131c":{"toolbar":["heading","|","bold","italic","|","alignment","|","link","|","fontColor","|","bulletedList","numberedList","|","customFileButton","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading1","view":"h1","title":"Heading 1","class":"ck-heading_heading1"},{"model":"heading2","view":"h2","title":"Heading 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Heading 3","class":"ck-heading_heading3"}],"image":false},"full_announcement":{"toolbar":["heading","|","bold","italic","|","link","|","fontColor","|","bulletedList","numberedList","|","imageUpload","customFileButton","mediaEmbed","insertTable","|","undo","redo"],"minHeight":150,"heading":true,"headingOptions":[{"model":"paragraph","title":"Paragraph","class":"ck-heading_paragraph"},{"model":"heading1","view":"h1","title":"Heading 1","class":"ck-heading_heading1"},{"model":"heading2","view":"h2","title":"Heading 2","class":"ck-heading_heading2"},{"model":"heading3","view":"h3","title":"Heading 3","class":"ck-heading_heading3"}],"image":true}};
+
+(function () {
+    'use strict';
+
+    const trans = (key, params = {}, domain = 'messages') => {
+        if (typeof Translator !== 'undefined' && typeof Translator.trans === 'function') {
+            return Translator.trans(key, params, domain);
+        }
+        return key.split('.').pop();
+    };
+
+    const HIDE_LICENSE_NOTIFICATION_CSS = `
+        .ck-body-wrapper > .ck.ck-notification__message { display: none !important; }
+        .ck-powered-by { display: none !important; }
+        .ck-color-selector__color-picker{ display: none !important; }
+        .ck-editor__editable_inline { min-height: 150px !important; }
+    `;
+
+    function injectLicenseHideCSS() {
+        if (!document.querySelector('#ckeditor-hide-license-style')) {
+            const style = document.createElement('style');
+            style.id = 'ckeditor-hide-license-style';
+            style.textContent = HIDE_LICENSE_NOTIFICATION_CSS;
+            document.head.append(style);
+        }
+    }
+
+    injectLicenseHideCSS();
+
+    function injectCKEditorTranslations() {
+        const labelMap = {
+            // Toolbar butonları
+            'Font Color': trans('ckeditor.buttons.font_color'),
+            'Bulleted List': trans('ckeditor.buttons.bulleted_list'),
+            'Numbered List': trans('ckeditor.buttons.numbered_list'),
+            'Upload image from computer': trans('ckeditor.buttons.upload_image'),
+            'Bold': trans('ckeditor.buttons.bold'),
+            'Italic': trans('ckeditor.buttons.italic'),
+            'Link': trans('ckeditor.buttons.link'),
+            'Undo': trans('ckeditor.buttons.undo'),
+            'Redo': trans('ckeditor.buttons.redo'),
+            'Heading': trans('ckeditor.buttons.heading'),
+            'Bold (Ctrl+B)': trans('ckeditor.buttons.bold'),
+            'Italic (Ctrl+I)': trans('ckeditor.buttons.italic'),
+            'Link (Ctrl+K)': trans('ckeditor.buttons.link'),
+            'Undo (Ctrl+Z)': trans('ckeditor.buttons.undo'),
+            'Redo (Ctrl+Y)': trans('ckeditor.buttons.redo'),
+            // YENİ EKLENEN: Text Alignment Çevirileri
+            'Text alignment': trans('ckeditor.alignment.title'),
+            'Align left': trans('ckeditor.alignment.left'),
+            'Align center': trans('ckeditor.alignment.center'),
+            'Align right': trans('ckeditor.alignment.right'),
+            'Justify': trans('ckeditor.alignment.justify'),
+            // Image
+            'Wrap text': trans('ckeditor.image.wrap_text'),
+            'Break text': trans('ckeditor.image.break_text'),
+            'In line': trans('ckeditor.image.inline'),
+            'Left aligned image': trans('ckeditor.image.left_align'),
+            'Centered image': trans('ckeditor.image.center'),
+            'Right aligned image': trans('ckeditor.image.right_align'),
+            'Resize image': trans('ckeditor.image.resize'),
+            'Original': trans('ckeditor.image.original'),
+            'Change image text alternative': trans('ckeditor.image.alt_text'),
+            'Insert image': trans('ckeditor.buttons.upload_image'),
+            // Table
+            'Insert table': trans('ckeditor.table.insert'),
+            'Column': trans('ckeditor.table.column'),
+            'Row': trans('ckeditor.table.row'),
+            'Merge cells': trans('ckeditor.table.merge_cells'),
+            'Insert column left': trans('ckeditor.table.insert_column_left'),
+            'Insert column right': trans('ckeditor.table.insert_column_right'),
+            'Delete column': trans('ckeditor.table.delete_column'),
+            'Insert row above': trans('ckeditor.table.insert_row_above'),
+            'Insert row below': trans('ckeditor.table.insert_row_below'),
+            'Delete row': trans('ckeditor.table.delete_row'),
+            'Merge cell up': trans('ckeditor.table.merge_cell_up'),
+            'Merge cell down': trans('ckeditor.table.merge_cell_down'),
+            'Merge cell left': trans('ckeditor.table.merge_cell_left'),
+            'Merge cell right': trans('ckeditor.table.merge_cell_right'),
+            'Split cell vertically': trans('ckeditor.table.split_vertical'),
+            'Split cell horizontally': trans('ckeditor.table.split_horizontal'),
+        };
+
+        // CKEDITOR_TRANSLATIONS dictionary'sine yaz
+        if (!window.CKEDITOR_TRANSLATIONS) window.CKEDITOR_TRANSLATIONS = {};
+        ['en', 'tr'].forEach(lang => {
+            if (!window.CKEDITOR_TRANSLATIONS[lang]) {
+                window.CKEDITOR_TRANSLATIONS[lang] = {dictionary: {}, getPluralForm: null};
+            }
+            Object.entries(labelMap).forEach(([k, v]) => {
+                if (v && v !== k.split('.').pop()) {
+                    window.CKEDITOR_TRANSLATIONS[lang].dictionary[k] = v;
+                }
+            });
+        });
+
+        // DOM override — create()'den önce çağrılamayan butonlar için
+        window._ckLabelMap = labelMap;
+    }
+
+    injectCKEditorTranslations();
+
+    function getFileIcon(fileName) {
+        const ext = fileName.split('.').pop().toLowerCase();
+        const icons = {
+            'pdf': '📄', 'doc': '📝', 'docx': '📝', 'xls': '📊', 'xlsx': '📊',
+            'ppt': '📽️', 'pptx': '📽️', 'txt': '📋', 'odt': '📝', 'rtf': '📝',
+            'tex': '📐', 'latex': '📐'
+        };
+        return icons[ext] || '📎';
+    }
+
+    let alertUtil = new AlertUtil();
+
+    function createCustomButtonPlugin(uploadRoute) {
+        return function (editor) {
+            editor.ui.componentFactory.add('customFileButton', () => {
+                const boldButton = editor.ui.componentFactory.create('bold');
+                const ButtonClass = boldButton.constructor;
+                const button = new ButtonClass();
+
+                const uploadLabel = trans('ckeditor.buttons.upload_file');
+
+                button.set({
+                    label: uploadLabel,
+                    icon: '<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 8.5V3h-3v5.5H3v3h5.5V17h3v-5.5H17v-3z"/></svg>',
+                    tooltip: true
+                });
+
+                button.on('execute', () => {
+                    if (!uploadRoute) return;
+
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.style.display = 'none';
+                    document.body.appendChild(input);
+
+                    input.onchange = function () {
+                        const file = input.files[0];
+                        if (!file) {
+                            document.body.removeChild(input);
+                            return;
+                        }
+                        const formData = new FormData();
+                        formData.append('upload', file);
+
+                        button.isEnabled = false;
+
+                        fetch(uploadRoute, {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => response.text())
+                            .then(text => {
+                                if (text.startsWith('{')) {
+                                    const jsonResponse = JSON.parse(text);
+                                    if (jsonResponse.files && jsonResponse.files[0] && jsonResponse.files[0].error) {
+                                        let errorMessage = jsonResponse.files[0].error;
+                                        errorMessage = decodeUnicodeString(errorMessage);
+                                        throw new Error(errorMessage);
+                                    }
+                                    if (jsonResponse.filepath) return jsonResponse;
+                                }
+                                return {filepath: text.trim()};
+                            })
+                            .then(result => {
+                                const fileUrl = result.filepath || result.url || result.file || result.path ||
+                                    (result.files && result.files[0] && result.files[0].url);
+
+                                if (fileUrl) {
+                                    const fileName = file.name;
+                                    const icon = getFileIcon(fileName);
+                                    const linkHtml = `<a href="${fileUrl}" target="_blank">${icon} ${fileName}</a>&nbsp;`;
+
+                                    const viewFragment = editor.data.processor.toView(linkHtml);
+                                    const modelFragment = editor.data.toModel(viewFragment);
+                                    editor.model.insertContent(modelFragment);
+                                }
+                            })
+                            .catch((error) => {
+                                alertUtil.showErrorSwal(error.message);
+                            })
+                            .finally(() => {
+                                button.set('label', uploadLabel);
+                                button.isEnabled = true;
+                                document.body.removeChild(input);
+                            });
+                    };
+                    input.click();
+                });
+
+                return button;
+            });
+        };
+    }
+
+    function createTableWithoutFigurePlugin() {
+        return function (editor) {
+            editor.conversion.for('dataDowncast').add(dispatcher => {
+                dispatcher.on('insert:table', (evt, data, conversionApi) => {
+                    const viewWriter = conversionApi.writer;
+                    const tableElement = conversionApi.mapper.toViewElement(data.item);
+
+                    if (tableElement) {
+                        viewWriter.addClass(['table', 'content-table'], tableElement);
+                    }
+                }, {priority: 'low'});
+            });
+
+            editor.data.on('get', (evt) => {
+                let data = evt.return;
+                if (data && typeof data === 'string') {
+                    data = data.replace(
+                        /<figure[^>]*class="[^"]*table[^"]*"[^>]*>\s*(<table[^>]*>[\s\S]*?<\/table>)\s*<\/figure>/gi,
+                        function (match, tableContent) {
+                            if (!tableContent.includes('class=')) {
+                                return tableContent.replace('<table', '<table class="table content-table"');
+                            }
+                            return tableContent;
+                        }
+                    );
+                    evt.return = data;
+                }
+            }, {priority: 'low'});
+        };
+    }
+
+    function createPasteColorStripperPlugin() {
+        return function (editor) {
+            editor.editing.view.document.on('clipboardInput', (evt, data) => {
+                const dataTransfer = data.dataTransfer;
+                const html = dataTransfer.getData('text/html');
+
+                if (html) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+
+                    const elements = tempDiv.querySelectorAll('*');
+                    elements.forEach(el => {
+                        el.removeAttribute('style');
+                        el.removeAttribute('color');
+                        el.removeAttribute('bgcolor');
+                        el.removeAttribute('background');
+                        if (el.className && el.className.indexOf('Mso') !== -1) {
+                            el.removeAttribute('class');
+                        }
+                    });
+
+                    data.content = editor.data.processor.toView(tempDiv.innerHTML);
+                }
+            }, {priority: 'high'});
+        };
+    }
+
+    function decodeUnicodeString(str) {
+        try {
+            let decoded = str.replace(/\\u([0-9a-fA-F]{4})/g, function (match, grp) {
+                return String.fromCharCode(parseInt(grp, 16));
+            });
+            return decoded.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+        } catch (e) {
+            return str;
+        }
+    }
+
+    const YOUTUBE_MEDIA_MIN_WIDTH_PX = 240;
+    const YOUTUBE_MEDIA_MAX_WIDTH_PX = 2000;
+
+    function getYoutubeMediaEditableRoot(editor) {
+        return editor.ui && editor.ui.view && editor.ui.view.editable
+            ? editor.ui.view.editable.element
+            : null;
+    }
+
+    function clampYoutubeMediaWidth(width) {
+        return Math.max(YOUTUBE_MEDIA_MIN_WIDTH_PX, Math.min(YOUTUBE_MEDIA_MAX_WIDTH_PX, Math.round(width)));
+    }
+
+    function parsePxWidth(value) {
+        if (!value || typeof value !== 'string') {
+            return null;
+        }
+        const match = value.match(/(\d+(?:\.\d+)?)px/i);
+        if (!match) {
+            return null;
+        }
+        return clampYoutubeMediaWidth(Number(match[1]));
+    }
+
+    function normalizeFigureStyleWithYoutubeWidth(styleText, width) {
+        let cleaned = (styleText || '')
+            .replace(/\bmax-width\s*:\s*[^;]+;?/gi, '')
+            .replace(/\bwidth\s*:\s*[^;]+;?/gi, '')
+            .replace(/\bheight\s*:\s*[^;]+;?/gi, '')
+            .trim();
+        cleaned = cleaned.replace(/^;+|;+$/g, '').replace(/;;+/g, ';');
+
+        const declarations = [];
+        if (cleaned) {
+            declarations.push(cleaned);
+        }
+        declarations.push('width:' + clampYoutubeMediaWidth(width) + 'px');
+        declarations.push('max-width:100%');
+
+        return declarations.join('; ');
+    }
+
+    function extractYoutubeMediaWidthsFromHtml(html) {
+        if (!html || typeof html !== 'string') {
+            return [];
+        }
+
+        const container = document.createElement('div');
+        container.innerHTML = html;
+
+        return Array.from(container.querySelectorAll('figure.media')).map(figure => {
+            return parsePxWidth(figure.getAttribute('style') || '');
+        });
+    }
+
+    function hydrateYoutubeMediaWrappers(editor, sourceHtml) {
+        const root = getYoutubeMediaEditableRoot(editor);
+        if (!root) {
+            return;
+        }
+
+        const savedWidths = extractYoutubeMediaWidthsFromHtml(sourceHtml);
+
+        root.querySelectorAll('figure.media').forEach((figure, index) => {
+            const wrapper = figure.querySelector('.ck-media__wrapper');
+            if (!wrapper) {
+                return;
+            }
+
+            wrapper.style.maxWidth = '100%';
+            let savedWidth = parsePxWidth(wrapper.dataset.youtubeSavedWidth || '');
+            if (savedWidth === null) {
+                savedWidth = savedWidths[index] ?? parsePxWidth(figure.style.width || '');
+            }
+
+            if (savedWidth !== null) {
+                wrapper.dataset.youtubeSavedWidth = savedWidth + 'px';
+            }
+
+            if (savedWidth !== null && !parsePxWidth(wrapper.style.width || '')) {
+                wrapper.style.width = savedWidth + 'px';
+            }
+        });
+    }
+
+    function collectYoutubeMediaWidths(editor) {
+        const root = getYoutubeMediaEditableRoot(editor);
+        if (!root) {
+            return [];
+        }
+
+        return Array.from(root.querySelectorAll('figure.media')).map(figure => {
+            const wrapper = figure.querySelector('.ck-media__wrapper');
+            if (!wrapper) {
+                return null;
+            }
+
+            const wrapperWidth = parsePxWidth(wrapper.style.width || '');
+            if (wrapperWidth !== null) {
+                wrapper.dataset.youtubeSavedWidth = wrapperWidth + 'px';
+                return wrapperWidth;
+            }
+
+            const datasetWidth = parsePxWidth(wrapper.dataset.youtubeSavedWidth || '');
+            if (datasetWidth !== null) {
+                return datasetWidth;
+            }
+
+            return parsePxWidth(figure.style.width || '');
+        });
+    }
+
+    /**
+     * CKEditor media embed serializes as <figure class="media"><oembed>; DOM uses .ck-media__wrapper.
+     * Merge explicit resize width back into figure[style] so save/load preserves user resizing.
+     * Does not call getData — pass the serialized HTML string (used from DataController#get listener too).
+     */
+    function injectYoutubeMediaFigureDimensionsIntoHtml(html, editor) {
+        if (!html || typeof html !== 'string') {
+            return html;
+        }
+
+        hydrateYoutubeMediaWrappers(editor);
+        const widths = collectYoutubeMediaWidths(editor);
+        let idx = 0;
+
+        return html.replace(/<figure\b([^>]*)>/gi, (full, attrs) => {
+            if (!/\bclass\s*=\s*["'][^"']*\bmedia\b/si.test(attrs)) {
+                return full;
+            }
+
+            const width = widths[idx++];
+            if (width === null) {
+                return full;
+            }
+
+            if (/style\s*=/i.test(attrs)) {
+                const newAttrs = attrs.replace(/style\s*=\s*(["'])([^"']*)\1/i, (m, q, st) => {
+                    return 'style=' + q + normalizeFigureStyleWithYoutubeWidth(st, width) + q;
+                });
+                return '<figure' + newAttrs + '>';
+            }
+
+            return '<figure' + attrs + ' style="width:' + width + 'px;max-width:100%">';
+        });
+    }
+
+    function getEditorDataWithYoutubeMediaDimensions(editor) {
+        hydrateYoutubeMediaWrappers(editor);
+        return editor.getData();
+    }
+
+    function bindYoutubeMediaResizeSync(editor, textarea) {
+        const root = getYoutubeMediaEditableRoot(editor);
+        if (!root || typeof ResizeObserver === 'undefined') {
+            return;
+        }
+
+        let rafId = 0;
+        const syncTextarea = function () {
+            window.cancelAnimationFrame(rafId);
+            rafId = window.requestAnimationFrame(function () {
+                try {
+                    textarea.value = getEditorDataWithYoutubeMediaDimensions(editor);
+                } catch (e) {
+                }
+            });
+        };
+
+        const resizeObserver = new ResizeObserver(function () {
+            syncTextarea();
+        });
+
+        const observeMediaWrappers = function () {
+            hydrateYoutubeMediaWrappers(editor);
+            root.querySelectorAll('figure.media .ck-media__wrapper').forEach(wrapper => {
+                if (wrapper.dataset.youtubeResizeObserved === 'true') {
+                    return;
+                }
+                resizeObserver.observe(wrapper);
+                wrapper.dataset.youtubeResizeObserved = 'true';
+            });
+        };
+
+        observeMediaWrappers();
+        editor.model.document.on('change:data', observeMediaWrappers);
+    }
+
+    function buildEditorConfig(presetName) {
+        const preset = window.CKEditorPresets[presetName] || window.CKEditorPresets.standard;
+
+        const accessibleColors = [
+            {color: '#B91C1C', label: trans('ckeditor.colors.red')},
+            {color: '#B45309', label: trans('ckeditor.colors.orange')},
+            {color: '#6D28D9', label: trans('ckeditor.colors.purple')},
+            {color: '#1D4ED8', label: trans('ckeditor.colors.blue')},
+            {color: '#065F46', label: trans('ckeditor.colors.green')},
+            {color: '#1E3A5F', label: trans('ckeditor.colors.navy')},
+            {color: '#831843', label: trans('ckeditor.colors.pink')},
+            {color: '#78350F', label: trans('ckeditor.colors.brown')},
+            {color: '#374151', label: trans('ckeditor.colors.gray')},
+            {color: '#111827', label: trans('ckeditor.colors.dark_gray')},
+            {color: '#000000', label: trans('ckeditor.colors.black')},
+            {color: '#0F766E', label: trans('ckeditor.colors.teal')},
+            {color: '#172554', label: trans('ckeditor.colors.very_dark_blue')},
+            {color: '#312E81', label: trans('ckeditor.colors.indigo')},
+            {color: '#4C1D95', label: trans('ckeditor.colors.deep_violet')},
+            {color: '#701A75', label: trans('ckeditor.colors.dark_fuchsia')},
+            {color: '#4A044E', label: trans('ckeditor.colors.very_dark_pink')},
+            {color: '#7F1D1D', label: trans('ckeditor.colors.dark_red')},
+            {color: '#800000', label: trans('ckeditor.colors.maroon')},
+            {color: '#9A3412', label: trans('ckeditor.colors.rust')},
+            {color: '#556B2F', label: trans('ckeditor.colors.dark_olive')},
+            {color: '#14532D', label: trans('ckeditor.colors.dark_green')},
+            {color: '#164E63', label: trans('ckeditor.colors.dark_cyan')},
+            {color: '#2F4F4F', label: trans('ckeditor.colors.dark_slate')},
+            {color: '#DC2626', label: trans('ckeditor.colors.medium_red')},
+            {color: '#C2410C', label: trans('ckeditor.colors.burnt_orange')},
+            {color: '#0284C7', label: trans('ckeditor.colors.sky_blue')},
+            {color: '#2563EB', label: trans('ckeditor.colors.medium_blue')},
+            {color: '#4F46E5', label: trans('ckeditor.colors.medium_indigo')},
+            {color: '#9333EA', label: trans('ckeditor.colors.medium_purple')},
+            {color: '#A21CAF', label: trans('ckeditor.colors.fuchsia')},
+            {color: '#DB2777', label: trans('ckeditor.colors.medium_pink')},
+            {color: '#BE123C', label: trans('ckeditor.colors.rose')},
+            {color: '#15803D', label: trans('ckeditor.colors.medium_green')},
+            {color: '#0D9488', label: trans('ckeditor.colors.medium_teal')},
+            {color: '#475569', label: trans('ckeditor.colors.slate_gray')}
+        ];
+
+        const config = {
+            placeholder: '',
+            toolbar: {items: preset.toolbar},
+            fontColor: {
+                colors: accessibleColors,
+                columns: 6,
+                documentColors: 0
+            },
+            fontBackgroundColor: {
+                colors: accessibleColors,
+                columns: 6,
+                documentColors: 0
+            },
+            alignment: {
+                options: [ 'left', 'center', 'right', 'justify' ]
+            },
+            removePlugins: [
+                'RealTimeCollaborativeComments', 'RealTimeCollaborativeTrackChanges',
+                'RealTimeCollaborativeRevisionHistory', 'PresenceList', 'Comments',
+                'TrackChanges', 'TrackChangesData', 'RevisionHistory', 'WProofreader',
+                'DocumentOutline', 'MathType', 'AIAssistant', 'CKBox', 'CKFinder',
+                'EasyImage', 'MultiLevelList', 'Pagination', 'PasteFromOfficeEnhanced',
+                'SlashCommand', 'TableOfContents', 'Template', 'FormatPainter',
+                'CaseChange', 'Base64UploadAdapter',
+                'LicenseNotification', 'ListProperties', 'PasteFromOffice'
+            ]
+        };
+        if (preset.heading && preset.headingOptions && preset.headingOptions.length > 0) {
+            config.heading = {options: preset.headingOptions};
+        }
+        if (preset.image) {
+            config.image = {
+                toolbar: [
+                    'imageStyle:inline',
+                    'imageStyle:wrapText',
+                    'imageTextAlternative',
+                    '|',
+                    'resizeImage'
+                ],
+                insert: {
+                    type: 'inline'
+                }
+            };
+        }
+        config.table = {
+            contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
+            tableProperties: {
+                defaultProperties: {
+                    borderStyle: 'solid', borderColor: '#ddd', borderWidth: '1px'
+                }
+            },
+            tableCellProperties: {
+                defaultProperties: {padding: '10px'}
+            }
+        };
+        return config;
+    }
+
+    const createUploadPlugin = function (uploadRoute) {
+        return function (editor) {
+            editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+                return {
+                    upload() {
+                        return loader.file.then(file => new Promise((resolve, reject) => {
+                            const data = new FormData();
+                            data.append('upload', file);
+
+                            fetch(uploadRoute, {
+                                method: 'POST',
+                                body: data
+                            })
+                                .then(response => {
+                                    if (!response.ok) {
+                                        return response.text().then(text => {
+                                            throw new Error(text);
+                                        });
+                                    }
+                                    return response.json();
+                                })
+                                .then(result => {
+                                    if (result.filepath) resolve({default: result.filepath});
+                                    else if (result.url) resolve({default: result.url});
+                                    else reject('No URL in response');
+                                })
+                                .catch(error => reject(error.message));
+                        }));
+                    },
+                    abort() {
+                    }
+                };
+            };
+
+            editor.model.document.on('change:data', () => {
+                const changes = editor.model.document.differ.getChanges();
+                for (const change of changes) {
+                    if (change.type === 'insert' && change.name === 'imageBlock') {
+                        const imageBlock = change.position.nodeAfter;
+                        if (!imageBlock) continue;
+
+                        const src = imageBlock.getAttribute('src');
+                        if (!src) continue;
+
+                        editor.model.change(writer => {
+                            const imageInline = writer.createElement('imageInline', {
+                                src: src,
+                                alt: imageBlock.getAttribute('alt') || ''
+                            });
+
+                            const insertPosition = writer.createPositionBefore(imageBlock);
+                            const parent = imageBlock.parent;
+
+                            if (parent.name === '$root' || parent.name === 'blockQuote') {
+                                const paragraph = writer.createElement('paragraph');
+                                writer.insert(paragraph, insertPosition);
+                                writer.insert(imageInline, writer.createPositionAt(paragraph, 0));
+                            } else {
+                                writer.insert(imageInline, insertPosition);
+                            }
+
+                            writer.remove(imageBlock);
+                        });
+                        break;
+                    }
+                }
+            });
+        };
+    };
+
+    function initCKEditorInContainer(container) {
+        container = container || document;
+        if (typeof CKEDITOR === 'undefined' || typeof CKEDITOR.ClassicEditor === 'undefined') {
+            return;
+        }
+
+        const textareas = container.querySelectorAll('textarea.ckeditor-field');
+        if (textareas.length === 0) return;
+
+        const routeMap = {};
+        textareas.forEach(textarea => {
+            const uploadType = textarea.dataset.uploadRoute;
+            if (uploadType && !routeMap[uploadType]) {
+                const locale = document.documentElement.lang || 'tr';
+                routeMap[uploadType] = `/${locale}/_uploader/${uploadType}/upload`;
+            }
+        });
+
+        const allEditors = [];
+        textareas.forEach((textarea, index) => {
+            if (textarea.dataset.ckeditorInitialized === 'true') return;
+
+            const presetName = textarea.dataset.editorPreset || 'standard';
+            const preset = window.CKEditorPresets[presetName];
+            if (!preset) return;
+
+            const uploadType = textarea.dataset.uploadRoute;
+            const uploadRoute = uploadType ? routeMap[uploadType] : null;
+            const hasImageUpload = preset.image && uploadRoute;
+
+            const editorId = 'ckeditor-field-' + index + '-' + Date.now();
+            const editorDiv = document.createElement('div');
+            editorDiv.id = editorId;
+            editorDiv.innerHTML = textarea.value || '';
+
+            textarea.style.display = 'none';
+            textarea.dataset.ckeditorInitialized = 'true';
+            textarea.parentNode.insertBefore(editorDiv, textarea);
+
+            const editorConfig = buildEditorConfig(presetName);
+            editorConfig.extraPlugins = [];
+
+            if (hasImageUpload) {
+                editorConfig.extraPlugins.push(createUploadPlugin(uploadRoute));
+                editorConfig.simpleUpload = {uploadUrl: uploadRoute};
+            }
+
+            if (uploadRoute) {
+                editorConfig.extraPlugins.push(createCustomButtonPlugin(uploadRoute));
+            }
+
+            editorConfig.extraPlugins.push(createTableWithoutFigurePlugin());
+            editorConfig.extraPlugins.push(createPasteColorStripperPlugin());
+
+            CKEDITOR.ClassicEditor.create(editorDiv, editorConfig)
+                .then(editor => {
+                    allEditors.push({editor, textarea});
+                    textarea.ckeditorInstance = editor;
+
+                    const editable = editor.ui.view.editable.element;
+                    const minHeight = preset.minHeight + 'px';
+
+                    editable.style.minHeight = minHeight;
+                    editable.style.setProperty('min-height', minHeight, 'important');
+
+                    editor.editing.view.document.on('focus', () => editable.style.setProperty('min-height', minHeight, 'important'));
+                    editor.editing.view.document.on('blur', () => editable.style.setProperty('min-height', minHeight, 'important'));
+
+                    const removeColorPicker = () => {
+                        const pickers = document.querySelectorAll('.ck-color-selector__color-picker, .ck-color-selector__remove-color');
+                        pickers.forEach(picker => picker.remove());
+                    };
+                    setTimeout(removeColorPicker, 100);
+
+                    const colorButtons = editor.ui.view.element.querySelectorAll('.ck-button[class*="fontcolor"], .ck-button[class*="fontbackgroundcolor"]');
+                    colorButtons.forEach(btn => {
+                        btn.addEventListener('mousedown', () => setTimeout(removeColorPicker, 50));
+                    });
+
+                    hydrateYoutubeMediaWrappers(editor, textarea.value);
+                    bindYoutubeMediaResizeSync(editor, textarea);
+
+                    editor.model.document.on('change:data', () => {
+                        textarea.value = getEditorDataWithYoutubeMediaDimensions(editor);
+                        editable.style.setProperty('min-height', minHeight, 'important');
+                    });
+
+                    editor.data.on('get', (evt) => {
+                        if (typeof evt.return === 'string' && evt.return.length > 0) {
+                            evt.return = injectYoutubeMediaFigureDimensionsIntoHtml(evt.return, editor);
+                        }
+                    }, {priority: 'low'});
+                })
+                .catch(() => {
+                    textarea.style.display = 'block';
+                    editorDiv.remove();
+                    textarea.dataset.ckeditorInitialized = 'false';
+                });
+        });
+
+        const forms = container.querySelectorAll('form');
+        forms.forEach(form => {
+            if (form.dataset.ckeditorFieldSyncAttached === 'true') return;
+            form.addEventListener('submit', function () {
+                allEditors.forEach(({editor, textarea}) => {
+                    try {
+                        textarea.value = getEditorDataWithYoutubeMediaDimensions(editor);
+                    } catch (error) {
+                    }
+                });
+            }, false);
+            form.dataset.ckeditorFieldSyncAttached = 'true';
+        });
+    }
+
+    window.initCKEditorInContainer = initCKEditorInContainer;
+
+    window.initCKEditorFields = function () {
+        window.addEventListener('load', function () {
+            initCKEditorInContainer(document);
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        initCKEditorFields();
+    });
+})(); </script>
+
+
+    <script>
+        (function() {
+
+            function showFallbackButton() {
+                document.getElementById('submit_form').classList.remove('kt-hidden');
+            }
+
+            window.turnstileCallbackSuccess = function (token) {
+                try {
+
+                   document.getElementById('verification_form').submit();
+                    swal.fire({
+                        title: 'Verification completed. You are being redirected to the search page...',
+                        type: 'info',
+                        onOpen: function() {
+                            swal.showLoading();
+                        }
+                    });
+
+                }catch (error){
+                    showFallbackButton();
+                }
+            }
+
+            window.turnstileCallbackError = function(error) {
+                showFallbackButton();
+            };
+
+            window.turnstileCallbackExpired = function() {
+                showFallbackButton();
+            };
+
+        })();
+    </script>
+</body>
+
+</html>

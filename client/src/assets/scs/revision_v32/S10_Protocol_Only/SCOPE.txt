@@ -1,0 +1,1 @@
+Prospective expert-review protocol only. No participant identities, reference labels, raw drafts/images or approved expert forms are included. The historical planned protocol targets frozen V29; v32 evaluation outputs in this package must not be substituted for that lock. A prospective study adopting v32 needs a separately documented pre-data version lock.

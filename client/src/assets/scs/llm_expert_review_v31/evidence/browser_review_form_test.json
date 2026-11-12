@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "SYNTHETIC SOFTWARE TEST ONLY: automated checkbox/signature interactions are not human approval and cannot be used as study data.",
+  "checks": [
+    "21 character rows",
+    "wrong image and missing image blocked",
+    "per-row decisions mandatory",
+    "blinding attestations mandatory",
+    "explicit human declaration mandatory",
+    "unchanged draft values and neutral states preserved",
+    "JSON download binding",
+    "no page errors"
+  ],
+  "real_expert_submissions_created": 0
+}

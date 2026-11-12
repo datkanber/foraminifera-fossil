@@ -36,6 +36,8 @@ def check_version(study):
     return version
 
 def validate_sheet(sheet,characters,specimen,observer,phase):
+    require(sheet.get('status') not in ['LLM_DRAFT','EXPERT_REVIEW_PENDING','AWAITING_LLM_DRAFT'],
+            'Unapproved model drafts and pending templates are not expert observations')
     require(sheet.get('specimen_id')==specimen and sheet.get('observer_code')==observer and sheet.get('phase')==phase,
             'Wrong specimen/observer/phase on sheet: '+specimen+'/'+observer)
     obs=sheet.get('observations',{})
@@ -61,6 +63,31 @@ def validate_sheet(sheet,characters,specimen,observer,phase):
     # normalization, inferred values, or reference-derived module assignment.
     return {c:{'value':o.get('value') or None,'state':o['state']} for c,o in obs.items()}
 
+def validate_expert_review(study,sheet):
+    """An LLM receipt, copied draft or incomplete review is never an approved form."""
+    require(sheet.get('status')=='EXPERT_VERIFIED','An LLM_DRAFT or pending review is not an expert-verified form')
+    sid=sheet['specimen_id'];phase=sheet['phase']
+    draft_path=study/'llm_drafts'/phase/sid/'draft.json'
+    require(draft_path.exists(),'The original shared LLM draft is missing')
+    require(digest(draft_path)==read(draft_path.parent/'draft_seal.json')['sha256'],'Original LLM draft changed')
+    draft=read(draft_path)
+    require(draft.get('status')=='LLM_DRAFT','Original source must remain LLM_DRAFT')
+    require(sheet.get('source_draft_sha256')==digest(draft_path),'Experts must review the same immutable raw draft')
+    approval=sheet.get('expert_approval') or {}
+    require(approval.get('completed_by_human') is True and approval.get('reviewer_code')==sheet['observer_code'], 'Actual reviewer completion and approval are required')
+    approved=datetime.fromisoformat(str(approval.get('approved_at','')).replace('Z','+00:00'))
+    require(approved.tzinfo is not None,'Approval timestamp must include timezone')
+    for c,original in draft['observations'].items():
+        o=sheet.get('observations',{}).get(c,{})
+        require(isinstance(o.get('reason'),str) and bool(o['reason'].strip()),'Every reviewed row needs a visual reason: '+c)
+        action=o.get('review_action')
+        require(action in ['APPROVE','CORRECT','NEUTRAL'],'Every character needs an explicit human review action: '+c)
+        same=all(o.get(k)==original.get(k) for k in ['value','state','reason'])
+        if action=='APPROVE':require(same,'Approved row differs from its raw draft: '+c)
+        if action=='CORRECT':require(not same and bool(str(o.get('review_note','')).strip()),'Corrections require a change and human explanation: '+c)
+        if action=='NEUTRAL':require(o.get('state') in NEUTRAL and bool(str(o.get('review_note','')).strip()),'Neutral markings require neutral state and human explanation: '+c)
+    return True
+
 def collect(study,phase):
     check_version(study);config=read(study/'study_config.json')
     roster=csvread(study/'coordinator_private/roster.csv')
@@ -81,7 +108,11 @@ def collect(study,phase):
     if phase=='confirmatory':
         require(not pilot_units & {r['independence_unit_id'] for r in enrolled},'Pilot specimens cannot enter the confirmatory set')
         require(config.get('protocol_finalized') is True and config.get('pilot_review_completed') is True,'Review the pilot and finalize the protocol before the confirmatory lock')
-        require((study/'results/pilot/summary.json').exists(),'Complete and review the separately sealed pilot before the confirmatory lock')
+        independent_pilot=(study/'results/pilot/summary.json').exists()
+        usability_path=study/'results/pilot_usability/summary.json'
+        usability=read(usability_path) if usability_path.exists() else {}
+        require(independent_pilot or (usability.get('status')=='REAL_FORM_USABILITY_RESULT' and usability.get('completed_observer_pairs',0)>=8),
+                'Complete and review an 8–10-case pilot before the confirmatory lock')
     data=read(study/'frozen_v29/api/data/characters.json');characters={c['id']:c for c in data['characters']}
     genera={r['genus']:r['module'] for r in read(study/'frozen_v29/api/data/rule_chr_mapping.json')}
     files={};cases=[];references={};timings=[]
@@ -95,6 +126,8 @@ def collect(study,phase):
     for r in enrolled:
         sid=r['specimen_id']
         require(r['source_collection'] and r['archive_record_id'] and r['reference_evidence'],'Missing archive/source/reference provenance: '+sid)
+        if config.get('requires_llm_expert_review'):
+            require(r.get('bootstrap_cluster_id'),'Document the source cluster; do not assume that fossils from the same source are independent: '+sid)
         require(r['used_in_rule_construction']=='no' and r['independence_verified']=='yes','Source independence not verified: '+sid)
         require(r['reference_status']=='verified' and r['reference_genus'] in genera,'Reference must be verified and in the frozen core before enrollment: '+sid)
         verifier=people.get(r['reference_verifier_code'],{})
@@ -111,12 +144,23 @@ def collect(study,phase):
                 require(re.fullmatch(r'view\d{2}\.(png|jpg|jpeg|tif|tiff|webp)',p.name,re.I),'Use neutral view01/view02 filenames, not archive/taxon names: '+p.name)
                 files[p.relative_to(study).as_posix()]=p
         material_hashes=sorted(digest(p) for p in materials)
+        prior=study/'coordinator_private/excluded_prior_panel_hashes.json'
+        if phase=='confirmatory' and prior.exists():
+            require(not set(material_hashes)&set(read(prior)['sha256']), 'Previously evaluated published images are not eligible confirmatory material: '+sid)
         references[sid]={'genus':r['reference_genus'],'module':r['reference_module'],'unit':r['independence_unit_id'],
                          'bootstrap_cluster':r.get('bootstrap_cluster_id') or r['independence_unit_id']}
         for observer in observers:
             path=study/'submissions'/phase/observer/(sid+'.json')
             require(path.exists(),'Missing real observer submission: '+str(path.relative_to(study)))
             sheet=read(path);obs=validate_sheet(sheet,characters,sid,observer,phase)
+            if config.get('requires_llm_expert_review'):validate_expert_review(study,sheet)
+            if config.get('requires_llm_expert_review'):
+                draft_path=study/'llm_drafts'/phase/sid/'draft.json'
+                for p in [draft_path,draft_path.parent/'draft_seal.json']:
+                    files[p.relative_to(study).as_posix()]=p
+                provider=read(draft_path).get('provenance',{}).get('raw_provider_file')
+                if provider:
+                    p=draft_path.parent/provider;files[p.relative_to(study).as_posix()]=p
             require(sheet.get('material_mode')==r['material_mode'],'Sheet and registry material modes differ: '+sid)
             if materials:
                 require(sorted(x['sha256'] for x in sheet.get('materials',[]))==material_hashes,'Observers must inspect exactly the same registered image set: '+sid+'/'+observer)
@@ -126,6 +170,10 @@ def collect(study,phase):
             timings.append({'specimen_id':sid,'observer_code':observer,'active_seconds':sheet['timing']['active_seconds']})
             files[path.relative_to(study).as_posix()]=path
     if phase=='confirmatory':require(set(r['reference_module'] for r in enrolled)=={'AGGLUTINATED','PORCELANEOUS','HYALINE'},'Confirmatory specimens must span all three wall modules')
+    if config.get('requires_llm_expert_review'):
+        for name in ['prompt.txt','generation_config.json','model_availability_amendment.json']:
+            p=study/'llm_drafts'/name
+            if p.exists():files[p.relative_to(study).as_posix()]=p
     return config,cases,references,timings,files
 
 def lock(study,phase):
@@ -149,6 +197,41 @@ def credit(result,truth,k):
     if target is None:return 0.
     above=sum(r['score']>target['score'] for r in ranking);ties=sum(r['score']==target['score'] for r in ranking)
     return max(0.,min(1.,(k-above)/ties))
+
+def usability_report(study):
+    """Pilot form/timing only: no reference labels and no algorithm scoring."""
+    config=read(study/'study_config.json');observers=config['observer_codes']
+    registry=[r for r in csvread(study/'coordinator_private/specimen_registry.csv') if r['phase']=='pilot' and r['enrolled']=='yes']
+    roster={r['person_code']:r for r in csvread(study/'coordinator_private/roster.csv')}
+    chars={c['id']:c for c in read(study/'frozen_v29/api/data/characters.json')['characters']}
+    records=[];counts=defaultdict(int);neutral=defaultdict(lambda:[0,0])
+    for r in registry:
+        sid=r['specimen_id']
+        expected=sorted(digest(p) for p in (study/'public/pilot/materials'/sid).glob('*') if p.is_file())
+        for observer in observers:
+            path=study/'submissions/pilot'/observer/(sid+'.json')
+            if not path.exists():continue
+            person=roster.get(observer,{})
+            require(person.get('participation_confirmed')=='yes' and person.get('expertise_verified')=='yes','Participant not confirmed for actual usability data: '+observer)
+            sheet=read(path);obs=validate_sheet(sheet,chars,sid,observer,'pilot')
+            if config.get('requires_llm_expert_review'):validate_expert_review(study,sheet)
+            require(sheet.get('material_mode')==r['material_mode'],'Wrong pilot material mode')
+            if expected:require(sorted(x['sha256'] for x in sheet.get('materials',[]))==expected,'Wrong preparation image set: '+sid)
+            elif r['material_mode']=='physical':require(sheet.get('physical_material_code')==sid,'Wrong physical preparation code: '+sid)
+            records.append({'specimen_id':sid,'observer_code':observer,'active_seconds':sheet['timing']['active_seconds'],'feedback':sheet.get('pilot_feedback','')})
+            counts[sid]+=1
+            for c,o in obs.items():neutral[(observer,c)][0]+=int(o['state'] in NEUTRAL);neutral[(observer,c)][1]+=1
+    result={'status':'REAL_FORM_USABILITY_RESULT' if records else 'PREPARATION_NO_SUBMISSIONS',
+      'scope':'Form usability on preparation image cases only; no genus accuracy or independent specimen validation.',
+      'image_cases_prepared':len(registry),'expected_forms':2*len(registry),'actual_human_forms':len(records),
+      'completed_observer_pairs':sum(n==2 for n in counts.values()),'independent_validation_performed':False,'timing_summary':[]}
+    for observer in observers:
+        ts=[r['active_seconds']/60 for r in records if r['observer_code']==observer]
+        if ts:result['timing_summary'].append({'observer_code':observer,'n':len(ts),'median_minutes':statistics.median(ts),'min_minutes':min(ts),'max_minutes':max(ts)})
+    if records:
+        folder=study/'results/pilot_usability';save(folder/'summary.json',result);csvwrite(folder/'form_timing.csv',records)
+        csvwrite(folder/'character_missingness.csv',[{'observer_code':o,'character_id':c,'neutral':v[0],'completed':v[1]} for (o,c),v in neutral.items()])
+    return result
 
 def aggregate(form_rows):
     groups=defaultdict(list)
@@ -235,7 +318,7 @@ def analyze(study,phase):
     return summary
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('command',choices=['check','receive','lock','analyze']);p.add_argument('--study',type=Path,default=DEFAULT);p.add_argument('--phase',choices=['pilot','confirmatory'],default='pilot');p.add_argument('--file',type=Path);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('command',choices=['check','receive','usability','lock','analyze']);p.add_argument('--study',type=Path,default=DEFAULT);p.add_argument('--phase',choices=['pilot','confirmatory'],default='pilot');p.add_argument('--file',type=Path);a=p.parse_args()
     try:
         if a.command=='check':
             _,cases,refs,_,_=collect(a.study,a.phase);result={'status':'REAL_INPUTS_VALIDATED','specimens':len(refs),'forms':len(cases)}
@@ -247,9 +330,15 @@ def main():
             require(observer in config['observer_codes'],'Unknown observer code')
             chars={c['id']:c for c in read(a.study/'frozen_v29/api/data/characters.json')['characters']}
             validate_sheet(sheet,chars,sid,observer,a.phase)
+            if config.get('requires_llm_expert_review'):
+                people={r['person_code']:r for r in csvread(a.study/'coordinator_private/roster.csv')}
+                person=people.get(observer,{})
+                require(person.get('participation_confirmed')=='yes' and person.get('expertise_verified')=='yes','Coordinator must first confirm the actual expert behind this role code')
+                validate_expert_review(a.study,sheet)
             dest=a.study/'submissions'/a.phase/observer/(sid+'.json');require(not dest.exists(),'Submission already exists; do not overwrite observer data')
             dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(a.file,dest)
             result={'status':'RECEIVED_UNSCORED','sha256':digest(dest),'specimen_id':sid,'observer_code':observer}
+        elif a.command=='usability':result=usability_report(a.study)
         elif a.command=='lock':result=lock(a.study,a.phase)
         else:result=analyze(a.study,a.phase)
         print(json.dumps(result,ensure_ascii=True,indent=2))

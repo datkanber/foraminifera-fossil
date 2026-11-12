@@ -1,0 +1,1566 @@
+{
+  "scope": "Source-derived development probes only; no independently observed thin sections or EXPERT_VERIFIED forms. Missing wall composition remains neutral and is not recovered from the reference label.",
+  "requested_taxa": 7,
+  "scored_profiles": 6,
+  "core_profiles": 5,
+  "out_of_core": [
+    "Karsella"
+  ],
+  "unresolved": [
+    "Ranikothalia sindensis: reference-description conflict"
+  ],
+  "methods": {
+    "A0": {
+      "n": 5,
+      "acc1": 0.0,
+      "acc3": 0.5,
+      "coverage": 0.6,
+      "reference_exclusion": 0.4,
+      "reference_omission": 0.0,
+      "rank1_unique": 0,
+      "rank1_tied": 0,
+      "top3_shared_rank": 3,
+      "confirmed_correct": 0,
+      "states": {
+        "CONFIRMED_GENUS": 2,
+        "INDETERMINATE": 2,
+        "CANDIDATE_GENUS": 1
+      }
+    },
+    "B1": {
+      "n": 5,
+      "acc1": 0.0515527950310559,
+      "acc3": 0.1546583850931677,
+      "coverage": 1.0,
+      "reference_exclusion": 0.4,
+      "reference_omission": 0.0,
+      "rank1_unique": 0,
+      "rank1_tied": 3,
+      "top3_shared_rank": 3,
+      "confirmed_correct": 0,
+      "states": {
+        "CANDIDATE_GENUS": 5
+      }
+    }
+  },
+  "calibration_descriptive_only": [
+    {
+      "status": "CONFIRMED_GENUS",
+      "n": 2,
+      "fractional_top1_agreement": 0.0
+    },
+    {
+      "status": "PROBABLE_GENUS",
+      "n": 0,
+      "fractional_top1_agreement": null
+    },
+    {
+      "status": "CANDIDATE_GENUS",
+      "n": 1,
+      "fractional_top1_agreement": 0.0
+    }
+  ],
+  "rows": [
+    {
+      "case_id": "LIT_01",
+      "dataset": "literature_descriptions",
+      "module": null,
+      "cohort": "Written-description development probes",
+      "reference_genus": "Karsella",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Ammobaculites",
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": false,
+      "reference_omitted": true,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": false,
+      "reference_species": "Karsella hottingeri"
+    },
+    {
+      "case_id": "LIT_02",
+      "dataset": "literature_descriptions",
+      "module": "PORCELANEOUS",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Pseudolacazina",
+      "status": "CONFIRMED_GENUS",
+      "prediction": "Borelis",
+      "acc1": 0.0,
+      "acc3": 1.0,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": true,
+      "reference_species": "Pseudolacazina oeztemueri"
+    },
+    {
+      "case_id": "LIT_03",
+      "dataset": "literature_descriptions",
+      "module": "PORCELANEOUS",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Alveolina",
+      "status": "CONFIRMED_GENUS",
+      "prediction": "Borelis",
+      "acc1": 0.0,
+      "acc3": 1.0,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": true,
+      "reference_species": "Alveolina haymanaensis"
+    },
+    {
+      "case_id": "LIT_04",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Discocyclina",
+      "status": "INDETERMINATE",
+      "prediction": null,
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": true,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": true,
+      "reference_species": "Discocyclina seunesi"
+    },
+    {
+      "case_id": "LIT_05",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Laffitteina",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Lockhartia",
+      "acc1": 0.0,
+      "acc3": 0.5,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": true,
+      "reference_species": "Laffitteina erki"
+    },
+    {
+      "case_id": "LIT_06",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Orbitoclypeus",
+      "status": "INDETERMINATE",
+      "prediction": null,
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": true,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "A0",
+      "in_core": true,
+      "reference_species": "Orbitoclypeus haymanaensis"
+    },
+    {
+      "case_id": "LIT_01",
+      "dataset": "literature_descriptions",
+      "module": null,
+      "cohort": "Written-description development probes",
+      "reference_genus": "Karsella",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Ammobaculites",
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": false,
+      "reference_omitted": true,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": false,
+      "reference_species": "Karsella hottingeri"
+    },
+    {
+      "case_id": "LIT_02",
+      "dataset": "literature_descriptions",
+      "module": "PORCELANEOUS",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Pseudolacazina",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Alveolina",
+      "acc1": 0.14285714285714285,
+      "acc3": 0.42857142857142855,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": true,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": true,
+      "reference_species": "Pseudolacazina oeztemueri"
+    },
+    {
+      "case_id": "LIT_03",
+      "dataset": "literature_descriptions",
+      "module": "PORCELANEOUS",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Alveolina",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Alveolina",
+      "acc1": 0.043478260869565216,
+      "acc3": 0.13043478260869565,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": true,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": true,
+      "reference_species": "Alveolina haymanaensis"
+    },
+    {
+      "case_id": "LIT_04",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Discocyclina",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Cuvillierina",
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": true,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": true,
+      "reference_species": "Discocyclina seunesi"
+    },
+    {
+      "case_id": "LIT_05",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Laffitteina",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Asterocyclina",
+      "acc1": 0.07142857142857142,
+      "acc3": 0.21428571428571427,
+      "reference_excluded": false,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": true,
+      "top3_shared_rank": true,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": true,
+      "reference_species": "Laffitteina erki"
+    },
+    {
+      "case_id": "LIT_06",
+      "dataset": "literature_descriptions",
+      "module": "HYALINE",
+      "cohort": "Written-description development probes",
+      "reference_genus": "Orbitoclypeus",
+      "status": "CANDIDATE_GENUS",
+      "prediction": "Alveolina",
+      "acc1": 0.0,
+      "acc3": 0.0,
+      "reference_excluded": true,
+      "reference_omitted": false,
+      "rank1_unique": false,
+      "rank1_tied": false,
+      "top3_shared_rank": false,
+      "confirmed_correct": false,
+      "method": "B1",
+      "in_core": true,
+      "reference_species": "Orbitoclypeus haymanaensis"
+    }
+  ],
+  "scoring_receipts": [
+    {
+      "case_id": "LIT_01",
+      "configuration": "A0",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Ammobaculites",
+      "ranking": [
+        {
+          "genus": "Ammobaculites",
+          "score": 11
+        },
+        {
+          "genus": "Clavulina",
+          "score": 11
+        },
+        {
+          "genus": "Caudammina",
+          "score": 10
+        },
+        {
+          "genus": "Reophax",
+          "score": 9
+        },
+        {
+          "genus": "Hormosina",
+          "score": 9
+        },
+        {
+          "genus": "Karrerulina",
+          "score": 7
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 6
+        },
+        {
+          "genus": "Trochammina",
+          "score": 6
+        },
+        {
+          "genus": "Spiroplectammina",
+          "score": 6
+        },
+        {
+          "genus": "Barattolites",
+          "score": 6
+        },
+        {
+          "genus": "Haplophragmoides",
+          "score": 1
+        },
+        {
+          "genus": "Rzehakina",
+          "score": 1
+        },
+        {
+          "genus": "Gaudryina",
+          "score": 1
+        },
+        {
+          "genus": "Dorothia",
+          "score": 1
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Reticulophragmium",
+        "Textularia",
+        "Coskinolina",
+        "Dictyoconus"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_02",
+      "configuration": "A0",
+      "status": "CONFIRMED_GENUS",
+      "identification": "Borelis",
+      "ranking": [
+        {
+          "genus": "Borelis",
+          "score": 14
+        },
+        {
+          "genus": "Pseudolacazina",
+          "score": 13
+        },
+        {
+          "genus": "Glomalveolina",
+          "score": 12
+        },
+        {
+          "genus": "Fabularia",
+          "score": 12
+        },
+        {
+          "genus": "Lacazinella",
+          "score": 10
+        },
+        {
+          "genus": "Alveolina",
+          "score": 9
+        },
+        {
+          "genus": "Pyrgoina",
+          "score": 9
+        },
+        {
+          "genus": "Periloculina",
+          "score": 9
+        },
+        {
+          "genus": "Lacazina",
+          "score": 7
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 6
+        },
+        {
+          "genus": "Dendritina",
+          "score": 6
+        },
+        {
+          "genus": "Vertebralina",
+          "score": 6
+        },
+        {
+          "genus": "Pyrgo",
+          "score": 4
+        },
+        {
+          "genus": "Spirolina",
+          "score": 1
+        }
+      ],
+      "excluded": [
+        "Quinqueloculina",
+        "Hauerina",
+        "Articulina",
+        "Triloculina",
+        "Miliolinella",
+        "Sigmoilina",
+        "Coscinospira",
+        "Cornuspira",
+        "Nubecularia",
+        "Idalina",
+        "Miliola"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_03",
+      "configuration": "A0",
+      "status": "CONFIRMED_GENUS",
+      "identification": "Borelis",
+      "ranking": [
+        {
+          "genus": "Borelis",
+          "score": 8
+        },
+        {
+          "genus": "Alveolina",
+          "score": 6
+        },
+        {
+          "genus": "Glomalveolina",
+          "score": 6
+        },
+        {
+          "genus": "Heterostegina",
+          "score": 5
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 5
+        },
+        {
+          "genus": "Pseudolacazina",
+          "score": 4
+        },
+        {
+          "genus": "Lacazinella",
+          "score": 4
+        },
+        {
+          "genus": "Reticulophragmium",
+          "score": 3
+        },
+        {
+          "genus": "Fabularia",
+          "score": 3
+        },
+        {
+          "genus": "Lacazina",
+          "score": 3
+        },
+        {
+          "genus": "Periloculina",
+          "score": 3
+        },
+        {
+          "genus": "Reophax",
+          "score": 0
+        },
+        {
+          "genus": "Hormosina",
+          "score": 0
+        },
+        {
+          "genus": "Caudammina",
+          "score": 0
+        },
+        {
+          "genus": "Haplophragmoides",
+          "score": 0
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 0
+        },
+        {
+          "genus": "Ammobaculites",
+          "score": 0
+        },
+        {
+          "genus": "Trochammina",
+          "score": 0
+        },
+        {
+          "genus": "Rzehakina",
+          "score": 0
+        },
+        {
+          "genus": "Textularia",
+          "score": 0
+        },
+        {
+          "genus": "Spiroplectammina",
+          "score": 0
+        },
+        {
+          "genus": "Gaudryina",
+          "score": 0
+        },
+        {
+          "genus": "Dorothia",
+          "score": 0
+        },
+        {
+          "genus": "Clavulina",
+          "score": 0
+        },
+        {
+          "genus": "Karrerulina",
+          "score": 0
+        },
+        {
+          "genus": "Articulina",
+          "score": 0
+        },
+        {
+          "genus": "Pyrgoina",
+          "score": 0
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 0
+        },
+        {
+          "genus": "Spirolina",
+          "score": 0
+        },
+        {
+          "genus": "Coscinospira",
+          "score": 0
+        },
+        {
+          "genus": "Dendritina",
+          "score": 0
+        },
+        {
+          "genus": "Vertebralina",
+          "score": 0
+        },
+        {
+          "genus": "Idalina",
+          "score": 0
+        },
+        {
+          "genus": "Operculina",
+          "score": 0
+        },
+        {
+          "genus": "Ranikothalia",
+          "score": 0
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 0
+        },
+        {
+          "genus": "Kathina",
+          "score": 0
+        },
+        {
+          "genus": "Daviesina",
+          "score": 0
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 0
+        },
+        {
+          "genus": "Laffitteina",
+          "score": 0
+        },
+        {
+          "genus": "Rotalia",
+          "score": 0
+        },
+        {
+          "genus": "Pararotalia",
+          "score": 0
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 0
+        },
+        {
+          "genus": "Ornatorotalia",
+          "score": 0
+        },
+        {
+          "genus": "Granorotalia",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Coskinolina",
+        "Dictyoconus",
+        "Barattolites",
+        "Quinqueloculina",
+        "Hauerina",
+        "Triloculina",
+        "Miliolinella",
+        "Pyrgo",
+        "Sigmoilina",
+        "Cornuspira",
+        "Nubecularia",
+        "Miliola",
+        "Nummulites",
+        "Assilina",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_04",
+      "configuration": "A0",
+      "status": "INDETERMINATE",
+      "identification": null,
+      "ranking": [
+        {
+          "genus": "Ranikothalia",
+          "score": 8
+        },
+        {
+          "genus": "Heterostegina",
+          "score": 8
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 8
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 8
+        },
+        {
+          "genus": "Kathina",
+          "score": 8
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 8
+        },
+        {
+          "genus": "Lenticulina",
+          "score": 6
+        },
+        {
+          "genus": "Operculina",
+          "score": 3
+        },
+        {
+          "genus": "Daviesina",
+          "score": 3
+        },
+        {
+          "genus": "Laffitteina",
+          "score": 3
+        },
+        {
+          "genus": "Rotalia",
+          "score": 3
+        },
+        {
+          "genus": "Pararotalia",
+          "score": 3
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 3
+        },
+        {
+          "genus": "Ornatorotalia",
+          "score": 3
+        },
+        {
+          "genus": "Granorotalia",
+          "score": 3
+        }
+      ],
+      "excluded": [
+        "Nummulites",
+        "Assilina",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_05",
+      "configuration": "A0",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Lockhartia",
+      "ranking": [
+        {
+          "genus": "Lockhartia",
+          "score": 14
+        },
+        {
+          "genus": "Kathina",
+          "score": 11
+        },
+        {
+          "genus": "Daviesina",
+          "score": 9
+        },
+        {
+          "genus": "Laffitteina",
+          "score": 9
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 8
+        },
+        {
+          "genus": "Rotalia",
+          "score": 6
+        },
+        {
+          "genus": "Pararotalia",
+          "score": 6
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 6
+        },
+        {
+          "genus": "Ornatorotalia",
+          "score": 6
+        },
+        {
+          "genus": "Granorotalia",
+          "score": 6
+        },
+        {
+          "genus": "Asterocyclina",
+          "score": 3
+        },
+        {
+          "genus": "Discocyclina",
+          "score": 3
+        },
+        {
+          "genus": "Orbitoclypeus",
+          "score": 3
+        },
+        {
+          "genus": "Nemkovella",
+          "score": 3
+        }
+      ],
+      "excluded": [
+        "Nummulites",
+        "Assilina",
+        "Operculina",
+        "Ranikothalia",
+        "Heterostegina",
+        "Spiroclypeus",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_06",
+      "configuration": "A0",
+      "status": "INDETERMINATE",
+      "identification": null,
+      "ranking": [
+        {
+          "genus": "Ranikothalia",
+          "score": 10
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 10
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 10
+        },
+        {
+          "genus": "Kathina",
+          "score": 10
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 10
+        },
+        {
+          "genus": "Borelis",
+          "score": 5
+        },
+        {
+          "genus": "Lacazina",
+          "score": 5
+        },
+        {
+          "genus": "Heterostegina",
+          "score": 5
+        },
+        {
+          "genus": "Alveolina",
+          "score": 3
+        },
+        {
+          "genus": "Glomalveolina",
+          "score": 3
+        },
+        {
+          "genus": "Pseudolacazina",
+          "score": 3
+        },
+        {
+          "genus": "Lenticulina",
+          "score": 3
+        },
+        {
+          "genus": "Haplophragmoides",
+          "score": 0
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 0
+        },
+        {
+          "genus": "Ammobaculites",
+          "score": 0
+        },
+        {
+          "genus": "Reticulophragmium",
+          "score": 0
+        },
+        {
+          "genus": "Trochammina",
+          "score": 0
+        },
+        {
+          "genus": "Rzehakina",
+          "score": 0
+        },
+        {
+          "genus": "Spiroplectammina",
+          "score": 0
+        },
+        {
+          "genus": "Gaudryina",
+          "score": 0
+        },
+        {
+          "genus": "Dorothia",
+          "score": 0
+        },
+        {
+          "genus": "Clavulina",
+          "score": 0
+        },
+        {
+          "genus": "Karrerulina",
+          "score": 0
+        },
+        {
+          "genus": "Sigmoilina",
+          "score": 0
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 0
+        },
+        {
+          "genus": "Spirolina",
+          "score": 0
+        },
+        {
+          "genus": "Dendritina",
+          "score": 0
+        },
+        {
+          "genus": "Vertebralina",
+          "score": 0
+        },
+        {
+          "genus": "Periloculina",
+          "score": 0
+        },
+        {
+          "genus": "Operculina",
+          "score": 0
+        },
+        {
+          "genus": "Daviesina",
+          "score": 0
+        },
+        {
+          "genus": "Laffitteina",
+          "score": 0
+        },
+        {
+          "genus": "Rotalia",
+          "score": 0
+        },
+        {
+          "genus": "Pararotalia",
+          "score": 0
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 0
+        },
+        {
+          "genus": "Ornatorotalia",
+          "score": 0
+        },
+        {
+          "genus": "Granorotalia",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Reophax",
+        "Hormosina",
+        "Caudammina",
+        "Textularia",
+        "Coskinolina",
+        "Dictyoconus",
+        "Barattolites",
+        "Quinqueloculina",
+        "Hauerina",
+        "Articulina",
+        "Triloculina",
+        "Miliolinella",
+        "Pyrgo",
+        "Pyrgoina",
+        "Coscinospira",
+        "Cornuspira",
+        "Nubecularia",
+        "Fabularia",
+        "Lacazinella",
+        "Idalina",
+        "Miliola",
+        "Nummulites",
+        "Assilina",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_01",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Ammobaculites",
+      "ranking": [
+        {
+          "genus": "Ammobaculites",
+          "score": 0
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 0
+        },
+        {
+          "genus": "Trochammina",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Reophax",
+        "Hormosina",
+        "Caudammina",
+        "Haplophragmoides",
+        "Reticulophragmium",
+        "Rzehakina",
+        "Textularia",
+        "Spiroplectammina",
+        "Gaudryina",
+        "Dorothia",
+        "Clavulina",
+        "Karrerulina",
+        "Coskinolina",
+        "Dictyoconus",
+        "Barattolites"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_02",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Alveolina",
+      "ranking": [
+        {
+          "genus": "Alveolina",
+          "score": 0
+        },
+        {
+          "genus": "Borelis",
+          "score": 0
+        },
+        {
+          "genus": "Fabularia",
+          "score": 0
+        },
+        {
+          "genus": "Lacazina",
+          "score": 0
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 0
+        },
+        {
+          "genus": "Periloculina",
+          "score": 0
+        },
+        {
+          "genus": "Pseudolacazina",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Glomalveolina",
+        "Quinqueloculina",
+        "Hauerina",
+        "Articulina",
+        "Triloculina",
+        "Miliolinella",
+        "Pyrgo",
+        "Pyrgoina",
+        "Sigmoilina",
+        "Spirolina",
+        "Coscinospira",
+        "Dendritina",
+        "Vertebralina",
+        "Cornuspira",
+        "Nubecularia",
+        "Lacazinella",
+        "Idalina",
+        "Miliola"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_03",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Alveolina",
+      "ranking": [
+        {
+          "genus": "Alveolina",
+          "score": 0
+        },
+        {
+          "genus": "Ammobaculites",
+          "score": 0
+        },
+        {
+          "genus": "Borelis",
+          "score": 0
+        },
+        {
+          "genus": "Clavulina",
+          "score": 0
+        },
+        {
+          "genus": "Coscinospira",
+          "score": 0
+        },
+        {
+          "genus": "Dendritina",
+          "score": 0
+        },
+        {
+          "genus": "Fabularia",
+          "score": 0
+        },
+        {
+          "genus": "Gaudryina",
+          "score": 0
+        },
+        {
+          "genus": "Glomalveolina",
+          "score": 0
+        },
+        {
+          "genus": "Heterostegina",
+          "score": 0
+        },
+        {
+          "genus": "Lacazina",
+          "score": 0
+        },
+        {
+          "genus": "Lacazinella",
+          "score": 0
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 0
+        },
+        {
+          "genus": "Periloculina",
+          "score": 0
+        },
+        {
+          "genus": "Pseudolacazina",
+          "score": 0
+        },
+        {
+          "genus": "Pyrgoina",
+          "score": 0
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 0
+        },
+        {
+          "genus": "Reticulophragmium",
+          "score": 0
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 0
+        },
+        {
+          "genus": "Spirolina",
+          "score": 0
+        },
+        {
+          "genus": "Spiroplectammina",
+          "score": 0
+        },
+        {
+          "genus": "Textularia",
+          "score": 0
+        },
+        {
+          "genus": "Trochammina",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Reophax",
+        "Hormosina",
+        "Caudammina",
+        "Haplophragmoides",
+        "Rzehakina",
+        "Dorothia",
+        "Karrerulina",
+        "Coskinolina",
+        "Dictyoconus",
+        "Barattolites",
+        "Quinqueloculina",
+        "Hauerina",
+        "Articulina",
+        "Triloculina",
+        "Miliolinella",
+        "Pyrgo",
+        "Sigmoilina",
+        "Vertebralina",
+        "Cornuspira",
+        "Nubecularia",
+        "Idalina",
+        "Miliola",
+        "Nummulites",
+        "Assilina",
+        "Operculina",
+        "Ranikothalia",
+        "Lockhartia",
+        "Kathina",
+        "Daviesina",
+        "Miscellanea",
+        "Laffitteina",
+        "Rotalia",
+        "Pararotalia",
+        "Cuvillierina",
+        "Ornatorotalia",
+        "Granorotalia",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_04",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Cuvillierina",
+      "ranking": [
+        {
+          "genus": "Cuvillierina",
+          "score": 0
+        },
+        {
+          "genus": "Heterostegina",
+          "score": 0
+        },
+        {
+          "genus": "Kathina",
+          "score": 0
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 0
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 0
+        },
+        {
+          "genus": "Ranikothalia",
+          "score": 0
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Nummulites",
+        "Assilina",
+        "Operculina",
+        "Daviesina",
+        "Laffitteina",
+        "Rotalia",
+        "Pararotalia",
+        "Ornatorotalia",
+        "Granorotalia",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_05",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Asterocyclina",
+      "ranking": [
+        {
+          "genus": "Asterocyclina",
+          "score": 0
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 0
+        },
+        {
+          "genus": "Daviesina",
+          "score": 0
+        },
+        {
+          "genus": "Discocyclina",
+          "score": 0
+        },
+        {
+          "genus": "Granorotalia",
+          "score": 0
+        },
+        {
+          "genus": "Kathina",
+          "score": 0
+        },
+        {
+          "genus": "Laffitteina",
+          "score": 0
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 0
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 0
+        },
+        {
+          "genus": "Nemkovella",
+          "score": 0
+        },
+        {
+          "genus": "Orbitoclypeus",
+          "score": 0
+        },
+        {
+          "genus": "Ornatorotalia",
+          "score": 0
+        },
+        {
+          "genus": "Pararotalia",
+          "score": 0
+        },
+        {
+          "genus": "Rotalia",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Nummulites",
+        "Assilina",
+        "Operculina",
+        "Ranikothalia",
+        "Heterostegina",
+        "Spiroclypeus",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    },
+    {
+      "case_id": "LIT_06",
+      "configuration": "B1",
+      "status": "CANDIDATE_GENUS",
+      "identification": "Alveolina",
+      "ranking": [
+        {
+          "genus": "Alveolina",
+          "score": 0
+        },
+        {
+          "genus": "Borelis",
+          "score": 0
+        },
+        {
+          "genus": "Cuvillierina",
+          "score": 0
+        },
+        {
+          "genus": "Dendritina",
+          "score": 0
+        },
+        {
+          "genus": "Haplophragmoides",
+          "score": 0
+        },
+        {
+          "genus": "Kathina",
+          "score": 0
+        },
+        {
+          "genus": "Lacazina",
+          "score": 0
+        },
+        {
+          "genus": "Lacazinella",
+          "score": 0
+        },
+        {
+          "genus": "Lockhartia",
+          "score": 0
+        },
+        {
+          "genus": "Miscellanea",
+          "score": 0
+        },
+        {
+          "genus": "Peneroplis",
+          "score": 0
+        },
+        {
+          "genus": "Ranikothalia",
+          "score": 0
+        },
+        {
+          "genus": "Recurvoides",
+          "score": 0
+        },
+        {
+          "genus": "Reticulophragmium",
+          "score": 0
+        },
+        {
+          "genus": "Spiroclypeus",
+          "score": 0
+        },
+        {
+          "genus": "Trochammina",
+          "score": 0
+        }
+      ],
+      "excluded": [
+        "Ammodiscus",
+        "Glomospira",
+        "Saccammina",
+        "Psammosphaera",
+        "Bathysiphon",
+        "Rhabdammina",
+        "Rhizammina",
+        "Reophax",
+        "Hormosina",
+        "Caudammina",
+        "Ammobaculites",
+        "Rzehakina",
+        "Textularia",
+        "Spiroplectammina",
+        "Gaudryina",
+        "Dorothia",
+        "Clavulina",
+        "Karrerulina",
+        "Coskinolina",
+        "Dictyoconus",
+        "Barattolites",
+        "Glomalveolina",
+        "Quinqueloculina",
+        "Hauerina",
+        "Articulina",
+        "Triloculina",
+        "Miliolinella",
+        "Pyrgo",
+        "Pyrgoina",
+        "Sigmoilina",
+        "Spirolina",
+        "Coscinospira",
+        "Vertebralina",
+        "Cornuspira",
+        "Nubecularia",
+        "Fabularia",
+        "Pseudolacazina",
+        "Periloculina",
+        "Idalina",
+        "Miliola",
+        "Nummulites",
+        "Assilina",
+        "Operculina",
+        "Heterostegina",
+        "Daviesina",
+        "Laffitteina",
+        "Rotalia",
+        "Pararotalia",
+        "Ornatorotalia",
+        "Granorotalia",
+        "Asterocyclina",
+        "Discocyclina",
+        "Orbitoclypeus",
+        "Nemkovella",
+        "Lenticulina",
+        "Palaeonummulites",
+        "Nummulitoides",
+        "Planocamerinoides",
+        "Chordoperculinoides"
+      ],
+      "sectionWarning": null
+    }
+  ]
+}

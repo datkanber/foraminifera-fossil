@@ -1,0 +1,558 @@
+[
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "ALL",
+    "group": "ALL",
+    "n": 150,
+    "acc1": 0.02666666666666667,
+    "acc3": 0.11666666666666667,
+    "coverage": 0.88,
+    "reference_exclusion": 0.43333333333333335,
+    "reference_omission": 0.2866666666666667,
+    "rank1_unique": 3,
+    "rank1_tied": 3,
+    "top3_shared_rank": 20,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 83,
+      "CANDIDATE_GENUS": 49,
+      "INDETERMINATE": 18
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.026666666666666665,
+        "low": 0.007142857142857143,
+        "high": 0.04946236559139785,
+        "clusters": 30
+      },
+      "acc3": {
+        "mean": 0.11666666666666667,
+        "low": 0.06349206349206349,
+        "high": 0.17324561403508773,
+        "clusters": 30
+      },
+      "reference_excluded": {
+        "mean": 0.43333333333333335,
+        "low": 0.3108108108108108,
+        "high": 0.5608108108108109,
+        "clusters": 30
+      },
+      "coverage": {
+        "mean": 0.88,
+        "low": 0.8110236220472441,
+        "high": 0.9371069182389937,
+        "clusters": 30
+      }
+    }
+  },
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "cohort",
+    "group": "Additional articles",
+    "n": 28,
+    "acc1": 0.011904761904761904,
+    "acc3": 0.10714285714285714,
+    "coverage": 0.9642857142857143,
+    "reference_exclusion": 0.35714285714285715,
+    "reference_omission": 0.14285714285714285,
+    "rank1_unique": 0,
+    "rank1_tied": 1,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 14,
+      "CANDIDATE_GENUS": 13,
+      "INDETERMINATE": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.011904761904761904,
+        "low": 0.0,
+        "high": 0.027027027027027025,
+        "clusters": 9
+      },
+      "acc3": {
+        "mean": 0.10714285714285714,
+        "low": 0.0,
+        "high": 0.15447154471544716,
+        "clusters": 9
+      },
+      "reference_excluded": {
+        "mean": 0.35714285714285715,
+        "low": 0.16666666666666666,
+        "high": 0.5555555555555556,
+        "clusters": 9
+      },
+      "coverage": {
+        "mean": 0.9642857142857143,
+        "low": 0.8125,
+        "high": 1.0,
+        "clusters": 9
+      }
+    }
+  },
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "cohort",
+    "group": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.030054644808743168,
+    "acc3": 0.11885245901639344,
+    "coverage": 0.860655737704918,
+    "reference_exclusion": 0.45081967213114754,
+    "reference_omission": 0.319672131147541,
+    "rank1_unique": 3,
+    "rank1_tied": 2,
+    "top3_shared_rank": 16,
+    "confirmed_correct": 1,
+    "states": {
+      "CONFIRMED_GENUS": 69,
+      "INDETERMINATE": 17,
+      "CANDIDATE_GENUS": 36
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.030054644808743168,
+        "low": 0.007407407407407408,
+        "high": 0.056022408963585436,
+        "clusters": 21
+      },
+      "acc3": {
+        "mean": 0.11885245901639344,
+        "low": 0.058394160583941604,
+        "high": 0.1848184818481848,
+        "clusters": 21
+      },
+      "reference_excluded": {
+        "mean": 0.45081967213114754,
+        "low": 0.3025210084033613,
+        "high": 0.5961538461538461,
+        "clusters": 21
+      },
+      "coverage": {
+        "mean": 0.860655737704918,
+        "low": 0.7786885245901639,
+        "high": 0.927710843373494,
+        "clusters": 21
+      }
+    }
+  },
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "module",
+    "group": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.0505050505050505,
+    "acc3": 0.21212121212121213,
+    "coverage": 0.9696969696969697,
+    "reference_exclusion": 0.2727272727272727,
+    "reference_omission": 0.06060606060606061,
+    "rank1_unique": 1,
+    "rank1_tied": 2,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 0,
+    "states": {
+      "CONFIRMED_GENUS": 19,
+      "CANDIDATE_GENUS": 13,
+      "INDETERMINATE": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.050505050505050504,
+        "low": 0.008547008547008546,
+        "high": 0.1111111111111111,
+        "clusters": 7
+      },
+      "acc3": {
+        "mean": 0.21212121212121213,
+        "low": 0.08695652173913043,
+        "high": 0.3484848484848485,
+        "clusters": 7
+      },
+      "reference_excluded": {
+        "mean": 0.2727272727272727,
+        "low": 0.0967741935483871,
+        "high": 0.5,
+        "clusters": 7
+      },
+      "coverage": {
+        "mean": 0.9696969696969697,
+        "low": 0.88,
+        "high": 1.0,
+        "clusters": 7
+      }
+    }
+  },
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "module",
+    "group": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.0,
+    "acc3": 0.10810810810810811,
+    "coverage": 0.918918918918919,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 0,
+    "rank1_tied": 0,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 11,
+      "INDETERMINATE": 3,
+      "CONFIRMED_GENUS": 23
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "clusters": 10
+      },
+      "acc3": {
+        "mean": 0.10810810810810811,
+        "low": 0.03571428571428571,
+        "high": 0.16666666666666666,
+        "clusters": 10
+      },
+      "reference_excluded": {
+        "mean": 0.35135135135135137,
+        "low": 0.13157894736842105,
+        "high": 0.5172413793103449,
+        "clusters": 10
+      },
+      "coverage": {
+        "mean": 0.918918918918919,
+        "low": 0.8333333333333334,
+        "high": 1.0,
+        "clusters": 10
+      }
+    }
+  },
+  {
+    "dataset": "panels_legacy_normalized",
+    "group_type": "module",
+    "group": "HYALINE",
+    "n": 80,
+    "acc1": 0.029166666666666667,
+    "acc3": 0.08125,
+    "coverage": 0.825,
+    "reference_exclusion": 0.5375,
+    "reference_omission": 0.2875,
+    "rank1_unique": 2,
+    "rank1_tied": 1,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 1,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 41,
+      "CANDIDATE_GENUS": 25
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.029166666666666667,
+        "low": 0.0,
+        "high": 0.06578947368421052,
+        "clusters": 16
+      },
+      "acc3": {
+        "mean": 0.08125,
+        "low": 0.027450980392156862,
+        "high": 0.1518987341772152,
+        "clusters": 16
+      },
+      "reference_excluded": {
+        "mean": 0.5375,
+        "low": 0.35064935064935066,
+        "high": 0.7105263157894737,
+        "clusters": 16
+      },
+      "coverage": {
+        "mean": 0.825,
+        "low": 0.7108433734939759,
+        "high": 0.92,
+        "clusters": 16
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "ALL",
+    "group": "ALL",
+    "n": 150,
+    "acc1": 0.03333333333333333,
+    "acc3": 0.12333333333333334,
+    "coverage": 0.8866666666666667,
+    "reference_exclusion": 0.43333333333333335,
+    "reference_omission": 0.28,
+    "rank1_unique": 4,
+    "rank1_tied": 3,
+    "top3_shared_rank": 21,
+    "confirmed_correct": 2,
+    "states": {
+      "CANDIDATE_GENUS": 51,
+      "CONFIRMED_GENUS": 80,
+      "PROBABLE_GENUS": 2,
+      "INDETERMINATE": 17
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.03333333333333333,
+        "low": 0.010582010582010581,
+        "high": 0.05945945945945946,
+        "clusters": 30
+      },
+      "acc3": {
+        "mean": 0.12333333333333334,
+        "low": 0.07123655913978495,
+        "high": 0.17976190476190476,
+        "clusters": 30
+      },
+      "reference_excluded": {
+        "mean": 0.43333333333333335,
+        "low": 0.31543624161073824,
+        "high": 0.5570469798657718,
+        "clusters": 30
+      },
+      "coverage": {
+        "mean": 0.8866666666666667,
+        "low": 0.8206896551724138,
+        "high": 0.94375,
+        "clusters": 30
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "cohort",
+    "group": "Additional articles",
+    "n": 28,
+    "acc1": 0.011904761904761904,
+    "acc3": 0.10714285714285714,
+    "coverage": 0.9642857142857143,
+    "reference_exclusion": 0.35714285714285715,
+    "reference_omission": 0.14285714285714285,
+    "rank1_unique": 0,
+    "rank1_tied": 1,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 15,
+      "CONFIRMED_GENUS": 11,
+      "PROBABLE_GENUS": 1,
+      "INDETERMINATE": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.011904761904761904,
+        "low": 0.0,
+        "high": 0.027027027027027025,
+        "clusters": 9
+      },
+      "acc3": {
+        "mean": 0.10714285714285714,
+        "low": 0.0,
+        "high": 0.15447154471544716,
+        "clusters": 9
+      },
+      "reference_excluded": {
+        "mean": 0.35714285714285715,
+        "low": 0.16666666666666666,
+        "high": 0.5555555555555556,
+        "clusters": 9
+      },
+      "coverage": {
+        "mean": 0.9642857142857143,
+        "low": 0.8125,
+        "high": 1.0,
+        "clusters": 9
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "cohort",
+    "group": "KB reference book (overlap)",
+    "n": 122,
+    "acc1": 0.03825136612021858,
+    "acc3": 0.12704918032786885,
+    "coverage": 0.8688524590163934,
+    "reference_exclusion": 0.45081967213114754,
+    "reference_omission": 0.3114754098360656,
+    "rank1_unique": 4,
+    "rank1_tied": 2,
+    "top3_shared_rank": 17,
+    "confirmed_correct": 2,
+    "states": {
+      "CONFIRMED_GENUS": 69,
+      "CANDIDATE_GENUS": 36,
+      "INDETERMINATE": 16,
+      "PROBABLE_GENUS": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.03825136612021858,
+        "low": 0.01075268817204301,
+        "high": 0.06837606837606838,
+        "clusters": 21
+      },
+      "acc3": {
+        "mean": 0.12704918032786885,
+        "low": 0.06538461538461539,
+        "high": 0.1921921921921922,
+        "clusters": 21
+      },
+      "reference_excluded": {
+        "mean": 0.45081967213114754,
+        "low": 0.3114754098360656,
+        "high": 0.5929203539823009,
+        "clusters": 21
+      },
+      "coverage": {
+        "mean": 0.8688524590163934,
+        "low": 0.7878787878787878,
+        "high": 0.9349593495934959,
+        "clusters": 21
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "module",
+    "group": "AGGLUTINATED",
+    "n": 33,
+    "acc1": 0.0505050505050505,
+    "acc3": 0.21212121212121213,
+    "coverage": 1.0,
+    "reference_exclusion": 0.30303030303030304,
+    "reference_omission": 0.030303030303030304,
+    "rank1_unique": 1,
+    "rank1_tied": 2,
+    "top3_shared_rank": 8,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 15,
+      "CONFIRMED_GENUS": 17,
+      "PROBABLE_GENUS": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.050505050505050504,
+        "low": 0.008547008547008546,
+        "high": 0.1111111111111111,
+        "clusters": 7
+      },
+      "acc3": {
+        "mean": 0.21212121212121213,
+        "low": 0.08695652173913043,
+        "high": 0.3484848484848485,
+        "clusters": 7
+      },
+      "reference_excluded": {
+        "mean": 0.30303030303030304,
+        "low": 0.13636363636363635,
+        "high": 0.5217391304347826,
+        "clusters": 7
+      },
+      "coverage": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "clusters": 7
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "module",
+    "group": "PORCELANEOUS",
+    "n": 37,
+    "acc1": 0.0,
+    "acc3": 0.10810810810810811,
+    "coverage": 0.918918918918919,
+    "reference_exclusion": 0.35135135135135137,
+    "reference_omission": 0.4864864864864865,
+    "rank1_unique": 0,
+    "rank1_tied": 0,
+    "top3_shared_rank": 4,
+    "confirmed_correct": 0,
+    "states": {
+      "CANDIDATE_GENUS": 13,
+      "INDETERMINATE": 3,
+      "CONFIRMED_GENUS": 21
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "clusters": 10
+      },
+      "acc3": {
+        "mean": 0.10810810810810811,
+        "low": 0.03571428571428571,
+        "high": 0.16666666666666666,
+        "clusters": 10
+      },
+      "reference_excluded": {
+        "mean": 0.35135135135135137,
+        "low": 0.13157894736842105,
+        "high": 0.5172413793103449,
+        "clusters": 10
+      },
+      "coverage": {
+        "mean": 0.918918918918919,
+        "low": 0.8333333333333334,
+        "high": 1.0,
+        "clusters": 10
+      }
+    }
+  },
+  {
+    "dataset": "panels",
+    "group_type": "module",
+    "group": "HYALINE",
+    "n": 80,
+    "acc1": 0.04166666666666667,
+    "acc3": 0.09375,
+    "coverage": 0.825,
+    "reference_exclusion": 0.525,
+    "reference_omission": 0.2875,
+    "rank1_unique": 3,
+    "rank1_tied": 1,
+    "top3_shared_rank": 9,
+    "confirmed_correct": 2,
+    "states": {
+      "INDETERMINATE": 14,
+      "CONFIRMED_GENUS": 42,
+      "CANDIDATE_GENUS": 23,
+      "PROBABLE_GENUS": 1
+    },
+    "intervals": {
+      "acc1": {
+        "mean": 0.041666666666666664,
+        "low": 0.007168458781362007,
+        "high": 0.0875,
+        "clusters": 16
+      },
+      "acc3": {
+        "mean": 0.09375,
+        "low": 0.03819444444444445,
+        "high": 0.17269076305220885,
+        "clusters": 16
+      },
+      "reference_excluded": {
+        "mean": 0.525,
+        "low": 0.34,
+        "high": 0.6923076923076923,
+        "clusters": 16
+      },
+      "coverage": {
+        "mean": 0.825,
+        "low": 0.7108433734939759,
+        "high": 0.92,
+        "clusters": 16
+      }
+    }
+  }
+]

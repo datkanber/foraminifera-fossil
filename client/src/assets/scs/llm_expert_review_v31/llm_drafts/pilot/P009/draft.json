@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P009",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Clear microgranular or hyaline-appearing wall structure visible in the thin-section view."
+    },
+    "CHR_02": {
+      "value": "DISCOIDAL",
+      "state": "PRESENT",
+      "reason": "The overall specimen outline appears flattened to disc-like in this section view."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Chambers are visibly divided by septa throughout the test."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are clearly visible arranged in a pattern around the center."
+    },
+    "CHR_05": {
+      "value": "CYCLIC",
+      "state": "PRESENT",
+      "reason": "Chambers appear arranged in annular or cyclic series expanding outward from the center."
+    },
+    "CHR_06": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Coiling pattern cannot be clearly distinguished due to the cyclic/annular chamber arrangement in this plane."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Chambers and structures are displayed within a single main section plane."
+    },
+    "CHR_08": {
+      "value": "NOT_APPLICABLE",
+      "state": "PRESENT",
+      "reason": "Coiling involution/evolution is not applicable given the cyclic or annular growth pattern."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No distinct ontogenetic change in chamber arrangement is observed from center to periphery."
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Internal subdivision into chamberlets and partitions indicates internal complexity."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets are visible within the main chambers."
+    },
+    "CHR_12": {
+      "value": "MULTILOCULAR",
+      "state": "PRESENT",
+      "reason": "The central embryonic region appears composed of multiple chambers/locules."
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Radial partitions/walls are visible subdividing the chamber space."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct solid pillars are observed in the section."
+    },
+    "CHR_15": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Lateral chamberlets cannot be reliably identified in this sectional view."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly visible in the provided section view."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct marginal cord structure is visible along the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No surficial septal filaments are visible in this internal thin-section view."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The specimen is isolated in the matrix without indication of being attached."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Dimorphism cannot be determined from a single random section lacking paired megalospheric/microspheric comparisons."
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "The section passes through the central plane displaying the cyclic chamber arrangement."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:42:57.763613+00:00",
+    "received_at": "2026-11-12T10:43:07.505277+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P009/view01.png",
+        "sha256": "db24155dbc54151efa72d5cef5036333cb9e34a92d58178efdc7dd091ecbb628",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "f4b6f437036e6835744c73effa9cff78e367c487d6c557e9fd49944071e0fa10"
+  },
+  "expert_approval": null
+}

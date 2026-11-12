@@ -1,0 +1,6306 @@
+[
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.0,
+    "n": 2,
+    "clusters": 2,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.1,
+    "n": 10,
+    "clusters": 6,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.2,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.3,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.06666666666666667,
+    "low": 0.0,
+    "high": 0.16666666666666666
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.4,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc1",
+    "bin_low": 0.5,
+    "n": 1,
+    "clusters": 1,
+    "mean": 0.0,
+    "low": null,
+    "high": null
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.0,
+    "n": 2,
+    "clusters": 2,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.1,
+    "n": 10,
+    "clusters": 6,
+    "mean": 0.19999999999999998,
+    "low": 0.0,
+    "high": 0.3333333333333333
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.2,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.3,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.2,
+    "low": 0.0,
+    "high": 0.5
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.4,
+    "n": 5,
+    "clusters": 3,
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  {
+    "figure": 5,
+    "cohort": "Additional articles",
+    "metric": "acc3",
+    "bin_low": 0.5,
+    "n": 1,
+    "clusters": 1,
+    "mean": 0.0,
+    "low": null,
+    "high": null
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc1",
+    "bin_low": 0.0,
+    "n": 40,
+    "clusters": 16,
+    "mean": 0.008333333333333333,
+    "low": 0.0,
+    "high": 0.0303030303030303
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc1",
+    "bin_low": 0.1,
+    "n": 53,
+    "clusters": 20,
+    "mean": 0.006289308176100628,
+    "low": 0.0,
+    "high": 0.023255813953488372
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc1",
+    "bin_low": 0.2,
+    "n": 19,
+    "clusters": 12,
+    "mean": 0.10526315789473684,
+    "low": 0.0,
+    "high": 0.2222222222222222
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc1",
+    "bin_low": 0.3,
+    "n": 7,
+    "clusters": 6,
+    "mean": 0.14285714285714285,
+    "low": 0.0,
+    "high": 0.5
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc1",
+    "bin_low": 0.4,
+    "n": 3,
+    "clusters": 2,
+    "mean": 0.3333333333333333,
+    "low": 0.0,
+    "high": 0.5
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc3",
+    "bin_low": 0.0,
+    "n": 40,
+    "clusters": 16,
+    "mean": 0.125,
+    "low": 0.044444444444444446,
+    "high": 0.21739130434782608
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc3",
+    "bin_low": 0.1,
+    "n": 53,
+    "clusters": 20,
+    "mean": 0.08490566037735849,
+    "low": 0.006802721088435374,
+    "high": 0.19811320754716982
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc3",
+    "bin_low": 0.2,
+    "n": 19,
+    "clusters": 12,
+    "mean": 0.21052631578947367,
+    "low": 0.0,
+    "high": 0.38095238095238093
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc3",
+    "bin_low": 0.3,
+    "n": 7,
+    "clusters": 6,
+    "mean": 0.14285714285714285,
+    "low": 0.0,
+    "high": 0.5
+  },
+  {
+    "figure": 5,
+    "cohort": "KB reference book (overlap)",
+    "metric": "acc3",
+    "bin_low": 0.4,
+    "n": 3,
+    "clusters": 2,
+    "mean": 0.3333333333333333,
+    "low": 0.0,
+    "high": 0.5
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Hauerina",
+    "n": 2,
+    "within_reference_percent": 40.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "INDETERMINATE",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Lockhartia",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Alveolina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Ammobaculites",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Dictyoconus",
+    "n": 8,
+    "within_reference_percent": 34.78260869565217
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Karrerulina",
+    "n": 3,
+    "within_reference_percent": 13.043478260869565
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Recurvoides",
+    "n": 2,
+    "within_reference_percent": 8.695652173913043
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Reophax",
+    "n": 3,
+    "within_reference_percent": 13.043478260869565
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Spiroplectammina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Textularia",
+    "n": 3,
+    "within_reference_percent": 13.043478260869565
+  },
+  {
+    "figure": 6,
+    "cohort": "Additional articles",
+    "reference": "Coskinolina",
+    "displayed": "Trochammina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Borelis",
+    "n": 4,
+    "within_reference_percent": 17.391304347826086
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Dendritina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Fabularia",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Glomalveolina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Hauerina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Heterostegina",
+    "n": 2,
+    "within_reference_percent": 8.695652173913043
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "INDETERMINATE",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Lacazinella",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Lenticulina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Nemkovella",
+    "n": 2,
+    "within_reference_percent": 8.695652173913043
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Peneroplis",
+    "n": 3,
+    "within_reference_percent": 13.043478260869565
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Pseudolacazina",
+    "n": 1,
+    "within_reference_percent": 4.3478260869565215
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Ranikothalia",
+    "n": 4,
+    "within_reference_percent": 17.391304347826086
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Alveolina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Caudammina",
+    "n": 4,
+    "within_reference_percent": 28.571428571428573
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Clavulina",
+    "n": 1,
+    "within_reference_percent": 7.142857142857143
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Heterostegina",
+    "n": 1,
+    "within_reference_percent": 7.142857142857143
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "INDETERMINATE",
+    "n": 3,
+    "within_reference_percent": 21.428571428571427
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Operculina",
+    "n": 1,
+    "within_reference_percent": 7.142857142857143
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Ranikothalia",
+    "n": 3,
+    "within_reference_percent": 21.428571428571427
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Spiroplectammina",
+    "n": 1,
+    "within_reference_percent": 7.142857142857143
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Assilina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "INDETERMINATE",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Asterocyclina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Clavulina",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Barattolites",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Chordoperculinoides",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Ammobaculites",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Dictyoconus",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Reophax",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Spiroplectammina",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Textularia",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Coskinolina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Daviesina",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Daviesina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Dictyoconus",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Karrerulina",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Textularia",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Dictyoconus",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Haplophragmoides",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "INDETERMINATE",
+    "n": 2,
+    "within_reference_percent": 22.22222222222222
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Operculina",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Ranikothalia",
+    "n": 5,
+    "within_reference_percent": 55.55555555555556
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Discocyclina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Heterostegina",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Orbitoclypeus",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Pyrgo",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 25.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Fabularia",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Hauerina",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Glomalveolina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Lacazinella",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Heterostegina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Peneroplis",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Borelis",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "INDETERMINATE",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lacazinella",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Borelis",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Lockhartia",
+    "n": 1,
+    "within_reference_percent": 50.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Laffitteina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "INDETERMINATE",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Lockhartia",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Reticulophragmium",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Lockhartia",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Borelis",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Lockhartia",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Nemkovella",
+    "n": 2,
+    "within_reference_percent": 22.22222222222222
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Ranikothalia",
+    "n": 2,
+    "within_reference_percent": 22.22222222222222
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Recurvoides",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Spiroplectammina",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Textularia",
+    "n": 1,
+    "within_reference_percent": 11.11111111111111
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Miscellanea",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nemkovella",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Borelis",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Dendritina",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "INDETERMINATE",
+    "n": 3,
+    "within_reference_percent": 14.285714285714286
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Lenticulina",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Lockhartia",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Nemkovella",
+    "n": 3,
+    "within_reference_percent": 14.285714285714286
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Operculina",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Pseudolacazina",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Pyrgo",
+    "n": 1,
+    "within_reference_percent": 4.761904761904762
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Ranikothalia",
+    "n": 8,
+    "within_reference_percent": 38.095238095238095
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Nummulites",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "INDETERMINATE",
+    "n": 2,
+    "within_reference_percent": 66.66666666666667
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Operculina",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 100.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Orbitoclypeus",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Borelis",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Caudammina",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "INDETERMINATE",
+    "n": 2,
+    "within_reference_percent": 40.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Ranikothalia",
+    "n": 1,
+    "within_reference_percent": 20.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Ranikothalia",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Dictyoconus",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Nemkovella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Ranikothalia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Textularia",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Rotalia",
+    "displayed": "Trochammina",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Ammobaculites",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Borelis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Caudammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Clavulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Daviesina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Dendritina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Dictyoconus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Fabularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Glomalveolina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Haplophragmoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Hauerina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Heterostegina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "INDETERMINATE",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Karrerulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Lacazinella",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Lenticulina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Lockhartia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Nemkovella",
+    "n": 1,
+    "within_reference_percent": 33.333333333333336
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Operculina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Orbitoclypeus",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Peneroplis",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Pseudolacazina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Pyrgo",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Ranikothalia",
+    "n": 2,
+    "within_reference_percent": 66.66666666666667
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Recurvoides",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Reophax",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Reticulophragmium",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Spiroplectammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Textularia",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 6,
+    "cohort": "KB reference book (overlap)",
+    "reference": "Spiroclypeus",
+    "displayed": "Trochammina",
+    "n": 0,
+    "within_reference_percent": 0.0
+  },
+  {
+    "figure": 7,
+    "cohort": "Additional articles",
+    "state": "CONFIRMED_GENUS",
+    "n": 11,
+    "frequency_percent": 39.285714285714285,
+    "precision_fractional_top1": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "clusters": 4
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "Additional articles",
+    "state": "PROBABLE_GENUS",
+    "n": 1,
+    "frequency_percent": 3.5714285714285716,
+    "precision_fractional_top1": {
+      "mean": 0.0,
+      "low": null,
+      "high": null,
+      "clusters": 1
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "Additional articles",
+    "state": "CANDIDATE_GENUS",
+    "n": 15,
+    "frequency_percent": 53.57142857142857,
+    "precision_fractional_top1": {
+      "mean": 0.02222222222222222,
+      "low": 0.0,
+      "high": 0.06666666666666667,
+      "clusters": 8
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "Additional articles",
+    "state": "INDETERMINATE",
+    "n": 1,
+    "frequency_percent": 3.5714285714285716,
+    "precision_fractional_top1": null
+  },
+  {
+    "figure": 7,
+    "cohort": "Additional articles",
+    "state": "NO_MATCH_WITHIN_CORE_TAXA",
+    "n": 0,
+    "frequency_percent": 0.0,
+    "precision_fractional_top1": null
+  },
+  {
+    "figure": 7,
+    "cohort": "KB reference book (overlap)",
+    "state": "CONFIRMED_GENUS",
+    "n": 69,
+    "frequency_percent": 56.557377049180324,
+    "precision_fractional_top1": {
+      "mean": 0.028985507246376812,
+      "low": 0.0,
+      "high": 0.07575757575757576,
+      "clusters": 20
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "KB reference book (overlap)",
+    "state": "PROBABLE_GENUS",
+    "n": 1,
+    "frequency_percent": 0.819672131147541,
+    "precision_fractional_top1": {
+      "mean": 0.0,
+      "low": null,
+      "high": null,
+      "clusters": 1
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "KB reference book (overlap)",
+    "state": "CANDIDATE_GENUS",
+    "n": 36,
+    "frequency_percent": 29.508196721311474,
+    "precision_fractional_top1": {
+      "mean": 0.07407407407407407,
+      "low": 0.0101010101010101,
+      "high": 0.16091954022988506,
+      "clusters": 17
+    }
+  },
+  {
+    "figure": 7,
+    "cohort": "KB reference book (overlap)",
+    "state": "INDETERMINATE",
+    "n": 16,
+    "frequency_percent": 13.114754098360656,
+    "precision_fractional_top1": null
+  },
+  {
+    "figure": 7,
+    "cohort": "KB reference book (overlap)",
+    "state": "NO_MATCH_WITHIN_CORE_TAXA",
+    "n": 0,
+    "frequency_percent": 0.0,
+    "precision_fractional_top1": null
+  }
+]

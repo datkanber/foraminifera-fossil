@@ -1,0 +1,118 @@
+{
+ "agglutinated|R": [
+  {
+   "paths": 36,
+   "rank1_unique": 11,
+   "top3": 27,
+   "excluded": 2,
+   "conf_total": 14,
+   "conf_correct": 9,
+   "rank1_tied": 9
+  },
+  {
+   "PROBABLE": 10,
+   "CONFIRMED": 14,
+   "CANDIDATE": 12
+  }
+ ],
+ "agglutinated|M": [
+  {
+   "paths": 36,
+   "top3": 29,
+   "rank1_unique": 11,
+   "conf_total": 12,
+   "conf_correct": 7,
+   "rank1_tied": 10
+  },
+  {
+   "PROBABLE": 6,
+   "CONFIRMED": 12,
+   "INDETERMINATE": 6,
+   "CANDIDATE": 12
+  }
+ ],
+ "agglutinated|meta": {
+  "questions": 29,
+  "paths": 36,
+  "genera": 25,
+  "maxdepth": 7,
+  "oov": []
+ },
+ "porcelaneous|R": [
+  {
+   "paths": 42,
+   "rank1_unique": 11,
+   "top3": 29,
+   "conf_total": 12,
+   "conf_correct": 10,
+   "rank1_tied": 16,
+   "excluded": 5
+  },
+  {
+   "CONFIRMED": 12,
+   "PROBABLE": 29,
+   "CANDIDATE": 1
+  }
+ ],
+ "porcelaneous|M": [
+  {
+   "paths": 42,
+   "rank1_unique": 12,
+   "top3": 34,
+   "conf_total": 8,
+   "conf_correct": 7,
+   "rank1_tied": 17
+  },
+  {
+   "INDETERMINATE": 4,
+   "CONFIRMED": 8,
+   "PROBABLE": 4,
+   "CANDIDATE": 26
+  }
+ ],
+ "porcelaneous|meta": {
+  "questions": 23,
+  "paths": 42,
+  "genera": 25,
+  "maxdepth": 10,
+  "oov": []
+ },
+ "hyaline|R": [
+  {
+   "paths": 26,
+   "rank1_unique": 7,
+   "top3": 15,
+   "conf_total": 12,
+   "conf_correct": 7,
+   "rank1_tied": 4,
+   "excluded": 2
+  },
+  {
+   "CONFIRMED": 12,
+   "CANDIDATE": 11,
+   "PROBABLE": 3
+  }
+ ],
+ "hyaline|M": [
+  {
+   "paths": 26,
+   "rank1_unique": 9,
+   "top3": 16,
+   "conf_total": 7,
+   "conf_correct": 5,
+   "rank1_tied": 4
+  },
+  {
+   "CONFIRMED": 7,
+   "CANDIDATE": 18,
+   "PROBABLE": 1
+  }
+ ],
+ "hyaline|meta": {
+  "questions": 26,
+  "paths": 26,
+  "genera": 25,
+  "maxdepth": 8,
+  "oov": []
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"HYALINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Clear translucent/calcitic wall structure visible in the thin-section image.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"LENTICULAR\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The overall shape of the sectioned test appears circular to slightly lenticular.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Septa and chambers are clearly visible throughout the interior and peripheral zones.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Multiple chambers are clearly visible arranged in concentric or spiral series.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"CYCLIC\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers and partitions show a ring-like or cyclic arrangement surrounding the center.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"PLANISPIRAL\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Coiling pattern is partially obscured by complex internal partitions, but appears planispiral or annular-cyclic.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"SINGLE_PLANE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section passes symmetrically through a single median/equatorial plane.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Whorls appear tightly enveloped, but inner details are dense and complex.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"No major ontogenetic arrangement shift is apparent within the section.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"COMPLEX\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Interior shows intricate network of partitions and structural elements.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Secondary chamberlets or subdivided spaces are visible in the peripheral and internal regions.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Central area is visible but heavily intersected by internal structures, making the exact embryonic apparatus uncertain.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"RETICULATE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Internal partitions form a reticulate or net-like pattern across the chambers.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Pillar-like structures or dense vertical supports are visible among the partitions.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Lateral chamberlets cannot be clearly distinguished in this sectional view orientation.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertures are not clearly resolved in this internal section view.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No distinct marginal cord is observed along the periphery.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"External surface features like septal filaments are not visible in internal thin section.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test appears isolated and unattached in the matrix.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Proloculus size variation / dimorphism cannot be confirmed without multiple specimens or clear megalospheric/microspheric comparison.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"EQUATORIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The view is centered symmetrically showing internal chamber arrangements and partitions across a median plane.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0TREjhqCC1nCN9f5OD3pyyKXx+7AwXk0JiF9r/Ug/VVUcJw8YwfSK3t8AgBMGn+oB9OvXwuT+kXBa54EcR+mTQzcUTlLly7Q/QFwN13xthyGkhyFV6rP8OtuE="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3733,
+    "candidatesTokenCount": 1091,
+    "totalTokenCount": 4824,
+    "promptTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1088
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "SJf1apaIHKme28oP5qSq4AQ"
+}

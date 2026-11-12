@@ -7,6 +7,7 @@ body{font:16px/1.5 system-ui,sans-serif;color:#172b3a;background:#f0f4f7;margin:
 <main>
 <h1>21 karakterlik bağımsız gözlem formu</h1>
 <p>Gözlemci: <strong>@@OBSERVER@@</strong> · Aşama: <strong>@@PHASE@@</strong></p>
+<p id="materialNotice"></p>
 <div class="note">Bu form çevrimdışı çalışır. Sunucuya veri göndermez; referans cinsi, diğer gözlemcinin yanıtlarını veya motor sonuçlarını içermez. Her boş satır doldurulmalıdır. <b>Gözlenemiyor ≠ yok.</b> Olumsuz bir değer de güvenilir biçimde gözlenebilir: örneğin <code>ABSENT</code> değeri + <code>PRESENT</code> gözlem durumu. <code>UNCERTAIN</code> veya <code>NOT_OBSERVABLE</code> her zaman nötr kalır. CHR_21 bağlam içindir ve puanlanmaz.</div>
 <label>Örnek kodu <select id="specimen"></select></label>
 <label>Materyal <select id="mode"><option value="">Seçin</option><option value="digital">Dijital görüntü seti</option><option value="physical">Kodlanmış fiziksel ince kesit</option></select></label>
@@ -25,9 +26,12 @@ body{font:16px/1.5 system-ui,sans-serif;color:#172b3a;background:#f0f4f7;margin:
 </main>
 <script>
 'use strict';
-const observer=@@OBSERVER_JSON@@,phase=@@PHASE_JSON@@,order=@@ORDER@@,characters=@@CHARACTERS@@;
+const observer=@@OBSERVER_JSON@@,phase=@@PHASE_JSON@@,order=@@ORDER@@,characters=@@CHARACTERS@@,expectedMaterials=@@MATERIALS@@;
 const $=id=>document.getElementById(id);let started=null,startTick=null,active=0,paused=false,finished=false,materials=[];
 for(const sid of order){const opt=document.createElement('option');opt.value=sid;opt.textContent=sid;$('specimen').append(opt);}
+function materialMatches(){const expected=expectedMaterials[$('specimen').value]||[];return !expected.length||(expected.length===materials.length&&expected.every(e=>materials.some(m=>m.sha256===e.sha256&&m.name===e.name)));}
+function selectCase(){materials=[];$('images').value='';$('previews').replaceChildren();const expected=expectedMaterials[$('specimen').value]||[];if(expected.length){$('mode').value='digital';$('mode').querySelector('[value="physical"]').disabled=true;$('materialNotice').textContent='Bu kod için '+expected.length+' görüntü kayıtlı. Pilot_Gallery.html dosyasından aynı kodu açın; view01 dosyasını kendi kod klasöründen seçin. Bu materyal hazırlık/form denemesidir.';}else{$('mode').querySelector('[value="physical"]').disabled=false;$('materialNotice').textContent='Materyal atanmamış rezerv kod. Koordinatörün atadığı gerçek materyal olmadan gözlem doldurmayın.';}}
+$('specimen').onchange=selectCase;selectCase();
 for(const c of characters){
  const tr=document.createElement('tr');tr.dataset.character=c.id;
  const name=document.createElement('td');name.textContent=c.id+' — '+c.name_tr;const sub=document.createElement('small');sub.textContent=c.name_en;name.append(sub);
@@ -40,14 +44,14 @@ for(const c of characters){
 }
 function elapsed(){return active+(startTick===null?0:(performance.now()-startTick)/1000);}
 setInterval(()=>{if(started)$('timer').textContent='Aktif gözlem: '+Math.floor(elapsed()/60)+' dk '+Math.floor(elapsed()%60)+' sn'+(paused?' (mola)':'');},500);
-$('start').onclick=()=>{if(started)return;if(!$('mode').value){$('message').textContent='Önce materyal türünü seçin.';return;}started=new Date().toISOString();startTick=performance.now();$('start').disabled=true;$('pause').disabled=false;$('specimen').disabled=true;$('mode').disabled=true;};
+$('start').onclick=()=>{if(started)return;if(!$('mode').value){$('message').textContent='Önce materyal türünü seçin.';return;}if(!materialMatches()){$('message').textContent='Önce seçili örnek koduna ait kayıtlı görüntü setini seçin.';return;}started=new Date().toISOString();startTick=performance.now();$('start').disabled=true;$('pause').disabled=false;$('specimen').disabled=true;$('mode').disabled=true;};
 $('pause').onclick=()=>{if(finished)return;if(!paused){active=elapsed();startTick=null;$('pause').textContent='Devam et';}else{startTick=performance.now();$('pause').textContent='Molaya al';}paused=!paused;};
 $('images').onchange=async()=>{
  try{materials=[];$('previews').replaceChildren();for(const f of $('images').files){
    if(!/^view\d{2}\.(png|jpe?g|tiff?|webp)$/i.test(f.name))throw Error('Koordinatör dosyaları view01.jpg gibi kör adlarla hazırlamalı.');
    const hash=await crypto.subtle.digest('SHA-256',await f.arrayBuffer());const sha=Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('');
    materials.push({name:f.name,sha256:sha});const im=document.createElement('img');im.src=URL.createObjectURL(f);im.alt=f.name;$('previews').append(im);
- }$('message').textContent='Seçilen görüntü sayısı: '+materials.length;
+ }$('message').textContent=materialMatches()?'Kayıtlı kodla eşleşen görüntü sayısı: '+materials.length:'Görüntü seçili örnek koduyla eşleşmiyor. Doğru P kodunun klasörünü seçin.';
  }catch(e){materials=[];$('message').textContent=e.message;}
 };
 $('print').onclick=()=>window.print();
@@ -57,6 +61,7 @@ $('export').onclick=()=>{
   if(!started||elapsed()<=0)throw Error('Önce gözleme başla düğmesini kullanın.');
   const mode=$('mode').value;if(!['digital','physical'].includes(mode))throw Error('Materyal türünü seçin.');
   if(mode==='digital'&&!materials.length)throw Error('Bu örneğin kodlanmış görüntülerini seçin.');
+  if(!materialMatches())throw Error('Görüntüler seçili örnek kodunun hash kaydıyla eşleşmiyor.');
   const observations={};for(const c of characters){const state=$(c.id+'_state').value,value=$(c.id+'_value').value;
     if(!state)throw Error(c.id+': gözlem durumunu seçin.');
     if(!['NOT_OBSERVABLE','UNCERTAIN'].includes(state)&&!value)throw Error(c.id+': gözlenen değeri seçin.');

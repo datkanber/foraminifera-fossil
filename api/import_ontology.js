@@ -265,12 +265,13 @@ async function step7_createRules(session) {
         // RuleItem node
         stmts.push({
           cypher: `MERGE (r:RuleItem {key: $key})
-                   SET r.text = $text, r.level = $level
+                   SET r.text = $text, r.level = $level, r.matchMode = $matchMode
                    ${code ? ", r.code = $code" : ""}`,
           params: {
             key,
             text,
             level: levelName,
+            matchMode: item.match_mode || 'ALL',
             ...(code ? { code } : {}),
           },
         });
@@ -341,11 +342,11 @@ async function step9_createDecisionTrees(session) {
       });
 
       // ASKS_ABOUT -> Character
-      if (node.chr_id) {
+      for (const boundCharacter of new Set([node.chr_id,...node.answers.flatMap(a=>Object.keys(a.maps_to||{}))].filter(Boolean))) {
         stmts.push({
           cypher: `MATCH (q:Question {id: $qId}), (c:Character {id: $chrId})
                    MERGE (q)-[:ASKS_ABOUT]->(c)`,
-          params: { qId: node.id, chrId: node.chr_id },
+          params: { qId: node.id, chrId: boundCharacter },
         });
       }
     }
@@ -551,7 +552,9 @@ async function verify(session) {
     Character: 21,
     Status: 5,
     ObservationState: 4,
-    Question: 78,
+    Question: trees.reduce((n,t)=>n+t.nodes.length,0),
+    Value: chars.characters.reduce((n,c)=>n+c.values.length,0),
+    RuleItem: ruleMap.length,
     TaxonProfile: 18,
   };
 

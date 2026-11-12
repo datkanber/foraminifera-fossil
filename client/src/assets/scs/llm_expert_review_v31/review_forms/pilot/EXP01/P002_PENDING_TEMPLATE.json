@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P002",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "d58e474d7aad11a062d1358c2783f44211e87b8355da8cd373ae491e391d0a47",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Microcrystalline wall structure visible in transmitted light.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "FUSIFORM",
+      "state": "PRESENT",
+      "reason": "Test is elongated with tapered ends along the coiling axis.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Septa dividing chambers are clearly visible along the whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers arranged in whorls are visible.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Whorled coiled test with multiple chambers per whorl, not matching standard simple serial types.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "Symmetrical coiled whorls visible around the central axis.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling proceeds within a single median plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later whorls envelop earlier ones completely along the axis.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Coiling pattern remains consistent throughout ontogeny.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Presence of multiple internal structural elements like septula and axial fillings.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary subdivisions within chambers (chamberlets) are visible.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Central proloculus is a single rounded chamber.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "VERTICAL",
+      "state": "PRESENT",
+      "reason": "Vertical partitions subdividing chambers are visible.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Distinct vertical pillars running through multiple whorls are absent.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets outside the main whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly resolved in this cross-section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No differentiated marginal cord structure along the periphery.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External septal filaments are not visible in internal thin section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Entire test is isolated in matrix without attachment scars.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "UNCERTAIN",
+      "state": "UNCERTAIN",
+      "reason": "Central proloculus size cannot be definitively categorized as megalospheric or microspheric without scale/comparison.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "AXIAL",
+      "state": "PRESENT",
+      "reason": "Section passes through the axis of coiling, showing symmetric elongate profile.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

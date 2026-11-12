@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P004",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "AGGLUTINATED",
+      "state": "PRESENT",
+      "reason": "Test wall appears granular and dark, typical of agglutinated composition."
+    },
+    "CHR_02": {
+      "value": "HIGH_CONICAL",
+      "state": "PRESENT",
+      "reason": "The main test shape is distinctly conical with a high profile expanding toward the base."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Clearly visible partitions dividing the interior into multiple chambers."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are clearly visible throughout the specimen."
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Initial coiled or trochospiral arrangement followed by expanding series."
+    },
+    "CHR_06": {
+      "value": "TROCHOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Initial portion exhibits a small coiled spiral arrangement."
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled arrangement to an expanding conical serial stage."
+    },
+    "CHR_08": {
+      "value": "EVOLUTE",
+      "state": "UNCERTAIN",
+      "reason": "Early whorls appear exposed, but details are partially obscured."
+    },
+    "CHR_09": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled section to an expanding multichambered conical series."
+    },
+    "CHR_10": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Chambers appear generally simple without complex internal labyrinthic subdivision."
+    },
+    "CHR_11": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No secondary chamberlets are visible within the main chambers."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber area is visible near the apex but lacks clear detail."
+    },
+    "CHR_13": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No radial or vertical internal partitions visible spanning chambers."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct pillars observed in the interior."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets visible along the flanks."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural region is not clearly preserved or visible in this section plane."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord structure is visible."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No septal filaments discernible on the outer surface."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The entire test outline is completely isolated and shows no attachment structures."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Dimorphism cannot be determined from the single random section shown."
+    },
+    "CHR_21": {
+      "value": "AXIAL",
+      "state": "PRESENT",
+      "reason": "Section cuts through the apex and symmetrical axis of the conical test."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:41:55.156740+00:00",
+    "received_at": "2026-11-12T10:42:02.392668+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P004/view01.png",
+        "sha256": "4dac34aca97477617cdf8185948004c41ad4cdb757582fbc9179b64d9fae5f75",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "e930043529f693ebc8cdf3ab103d4cc10a3fee98a3114422bd6a77f58b8df98d"
+  },
+  "expert_approval": null
+}

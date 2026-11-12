@@ -1,0 +1,56 @@
+[
+  {
+    "cohort": "ALL",
+    "changed_panels": 130,
+    "display_changed": 14,
+    "state_changed": 12,
+    "delta_acc1": {
+      "mean": 0.006666666666666667,
+      "low": 0.0,
+      "high": 0.022727272727272728,
+      "clusters": 30
+    },
+    "delta_acc3": {
+      "mean": 0.006666666666666667,
+      "low": 0.0,
+      "high": 0.022727272727272728,
+      "clusters": 30
+    }
+  },
+  {
+    "cohort": "Additional articles",
+    "changed_panels": 23,
+    "display_changed": 6,
+    "state_changed": 4,
+    "delta_acc1": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "clusters": 9
+    },
+    "delta_acc3": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "clusters": 9
+    }
+  },
+  {
+    "cohort": "KB reference book (overlap)",
+    "changed_panels": 107,
+    "display_changed": 8,
+    "state_changed": 8,
+    "delta_acc1": {
+      "mean": 0.00819672131147541,
+      "low": 0.0,
+      "high": 0.02857142857142857,
+      "clusters": 21
+    },
+    "delta_acc3": {
+      "mean": 0.00819672131147541,
+      "low": 0.0,
+      "high": 0.02857142857142857,
+      "clusters": 21
+    }
+  }
+]

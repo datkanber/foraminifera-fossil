@@ -1,0 +1,880 @@
+[
+  {
+    "case_id": "LIT_01",
+    "dataset": "literature_descriptions",
+    "reference_species": "Karsella hottingeri",
+    "reference_genus": "Karsella",
+    "reference_module": null,
+    "module": "AGGLUTINATED",
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://doi.org/10.35463/j.apr.2021.01.04",
+      "file": "Schlagintweit2021_Karsella.pdf",
+      "anchor": "p. 46, redescription and conclusions",
+      "kind": "PUBLISHED_REVISION_NOT_ORIGINAL_1997",
+      "note": "K. hottingeri is treated as a junior synonym of K. daviesi in this revision. Karsella is outside the 75-genus core.",
+      "sha256": "e4e5d6f40ed4baafc2d30a29e132b74959cf4eb13743f2d6ecdab11d23dc06c3"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": "AGGLUTINATED",
+        "state": "PRESENT",
+        "reason": "Wall described as agglutinated."
+      },
+      "CHR_02": {
+        "value": "HIGH_CONICAL",
+        "state": "PRESENT",
+        "reason": "Tall conical form in redescription."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": "MULTICHAMBERED",
+        "state": "PRESENT",
+        "reason": "Serial chambers explicitly counted."
+      },
+      "CHR_05": {
+        "value": "UNISERIAL",
+        "state": "PRESENT",
+        "reason": "Neanic chambers form a single series."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": "COMPLEX",
+        "state": "PRESENT",
+        "reason": "Several orders of internal skeletal divisions."
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Numerous internal compartments described."
+      },
+      "CHR_12": {
+        "value": "COMPLEX",
+        "state": "PRESENT",
+        "reason": "Partitioned deuteroconch and periembryonic chambers."
+      },
+      "CHR_13": {
+        "value": "VERTICAL",
+        "state": "PRESENT",
+        "reason": "Vertical septula described in sections."
+      },
+      "CHR_14": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": false
+  },
+  {
+    "case_id": "LIT_02",
+    "dataset": "literature_descriptions",
+    "reference_species": "Pseudolacazina oeztemueri",
+    "reference_genus": "Pseudolacazina",
+    "reference_module": "PORCELANEOUS",
+    "module": "PORCELANEOUS",
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://dergipark.org.tr/en/pub/bulletinofmre/article/52243",
+      "file": "Sirel1986_Pseudolacazina.pdf",
+      "anchor": "p. 124, diagnosis; form A",
+      "kind": "PUBLISHED_REDESCRIPTION",
+      "note": "Original 1981 name revised in 1986. Do not combine form-A and form-B arrangement states.",
+      "sha256": "fddfb5532a8ce3063c66f59a7fa128f075ed80dd3f8fd6bdf2314594b828e652"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": "PORCELANEOUS",
+        "state": "PRESENT",
+        "reason": "Imperforate porcelaneous wall specified."
+      },
+      "CHR_02": {
+        "value": "OVOID",
+        "state": "PRESENT",
+        "reason": "Ovoid test stated."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": "MULTICHAMBERED",
+        "state": "PRESENT",
+        "reason": "Successive chamber cycles specified."
+      },
+      "CHR_05": {
+        "value": "BILOCULINE",
+        "state": "PRESENT",
+        "reason": "Use the explicitly biloculine adult of form A."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT",
+        "reason": "Chamber cavities divided by septula."
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Parallel tooth-like chamberlets described."
+      },
+      "CHR_12": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_13": {
+        "value": "LONGITUDINAL_CONTINUOUS",
+        "state": "PRESENT",
+        "reason": "Continuous rows of septula described."
+      },
+      "CHR_14": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": "CRIBRATE",
+        "state": "PRESENT",
+        "reason": "Trematophore aperture normalized to cribrate."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  },
+  {
+    "case_id": "LIT_03",
+    "dataset": "literature_descriptions",
+    "reference_species": "Alveolina haymanaensis",
+    "reference_genus": "Alveolina",
+    "reference_module": "PORCELANEOUS",
+    "module": null,
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://www.jmo.org.tr/resimler/ekler/9de10adbaa1b2ee_ek.pdf",
+      "file": "Sirel1976_Alveolina.pdf",
+      "anchor": "pp. 21-22, A. haymanaensis diagnosis and macrospheric form, plates II-III",
+      "kind": "ORIGINAL_DESCRIPTION",
+      "sha256": "2172055de5167fb31e4dd467ced26e3fdc6e6d45cde09b3de6c837d84a8f5199"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_02": {
+        "value": "OVOID",
+        "state": "PRESENT",
+        "reason": "Oval external outline in diagnosis."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_05": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": "SUBDIVIDED",
+        "state": "PRESENT",
+        "reason": "Multiple chamberlets explicitly described."
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Chamberlet cross-sections documented."
+      },
+      "CHR_12": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_13": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_14": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": "MEGALOSPHERIC_FORM",
+        "state": "PRESENT",
+        "reason": "Selected macrospheric description only."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  },
+  {
+    "case_id": "LIT_04",
+    "dataset": "literature_descriptions",
+    "reference_species": "Discocyclina seunesi",
+    "reference_genus": "Discocyclina",
+    "reference_module": "HYALINE",
+    "module": "HYALINE",
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://doi.org/10.1344/GeologicaActa2020.18.8",
+      "file": "SerraKiel2020_Pyrenean.pdf",
+      "anchor": "p. 53, D. seunesi; Fig. 27 A-B",
+      "kind": "PUBLISHED_REDESCRIPTION",
+      "sha256": "e973352a1de2cf45d8bff2cd778cc7945b213586825cf853cf3b0b1c2b9fe3d3"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT",
+        "reason": "Lamellar perforate test stated."
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT",
+        "reason": "Lenticular morphology explicitly stated."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT",
+        "reason": "Thirty to thirty-five annuli described."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Equatorial chamberlets described."
+      },
+      "CHR_12": {
+        "value": "BILOCULAR",
+        "state": "PRESENT",
+        "reason": "Protoconch and deuteroconch named as the embryo."
+      },
+      "CHR_13": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_14": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  },
+  {
+    "case_id": "LIT_05",
+    "dataset": "literature_descriptions",
+    "reference_species": "Laffitteina erki",
+    "reference_genus": "Laffitteina",
+    "reference_module": "HYALINE",
+    "module": "HYALINE",
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://dergipark.org.tr/en/pub/bulletinofmre/article/52316",
+      "file": "Sirel1994_Laffitteina.pdf",
+      "anchor": "pp. 47-48, systematic description, plates I-II",
+      "kind": "PUBLISHED_REDESCRIPTION",
+      "sha256": "80d5d9abf2e0ab2b8c0b9b852e0ff01fc4187e9d2e2ffcdaf33a7582b43b371e"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": "HYALINE",
+        "state": "PRESENT",
+        "reason": "Perforate calcareous hyaline wall stated."
+      },
+      "CHR_02": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_03": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Double septa described."
+      },
+      "CHR_04": {
+        "value": "MULTICHAMBERED",
+        "state": "PRESENT",
+        "reason": "Thirty-five chambers counted in a whorl."
+      },
+      "CHR_05": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_06": {
+        "value": "TROCHOSPIRAL",
+        "state": "PRESENT",
+        "reason": "High trochospiral test specified."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_11": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_12": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_13": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_14": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Umbilical pillars explicitly present."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": "INTERIOMARGINAL",
+        "state": "PRESENT",
+        "reason": "Interiomarginal slit aperture stated."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  },
+  {
+    "case_id": "LIT_06",
+    "dataset": "literature_descriptions",
+    "reference_species": "Orbitoclypeus haymanaensis",
+    "reference_genus": "Orbitoclypeus",
+    "reference_module": "HYALINE",
+    "module": null,
+    "cohort": "Written-description development probes",
+    "status": "LITERATURE_EXTRACTED_NOT_EXPERT_VERIFIED",
+    "source": {
+      "url": "https://www.researchgate.net/publication/250084944_Late_Paleocene_Orthophragminae_Foraminifera_from_the_Haymana-Polatli_Basin_central_Turkey_and_description_of_a_new_taxon_Orbitoclypeus_haymanaensis",
+      "doi": "10.2113/47.4.339",
+      "anchor": "pp. 344-345, O. haymanaensis diagnosis and description; holotype KAR.8-9",
+      "kind": "ORIGINAL_DESCRIPTION",
+      "note": "Original paper read through publicly indexed author-uploaded full text; direct PDF access returned 403, no access restriction bypassed."
+    },
+    "observations": {
+      "CHR_01": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_02": {
+        "value": "LENTICULAR",
+        "state": "PRESENT",
+        "reason": "Inflated lenticular form described."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_05": {
+        "value": "ANNULAR",
+        "state": "PRESENT",
+        "reason": "Equatorial chamberlets arranged in annuli."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_11": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Equatorial chamberlets explicitly described."
+      },
+      "CHR_12": {
+        "value": "BILOCULAR",
+        "state": "PRESENT",
+        "reason": "Two embryonic chambers are specified."
+      },
+      "CHR_13": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_14": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Central pillars explicitly described."
+      },
+      "CHR_15": {
+        "value": "PRESENT",
+        "state": "PRESENT",
+        "reason": "Lateral chamberlets surround the pillars."
+      },
+      "CHR_16": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  },
+  {
+    "case_id": "LIT_07",
+    "dataset": "literature_descriptions",
+    "reference_species": "Ranikothalia sindensis",
+    "reference_genus": "Ranikothalia",
+    "reference_module": "HYALINE",
+    "module": null,
+    "cohort": "Written-description development probes",
+    "status": "REFERENCE_CONFLICT_NOT_SCORED",
+    "source": {
+      "url": "https://doi.org/10.1344/GeologicaActa2020.18.8",
+      "file": "SerraKiel2020_Pyrenean.pdf",
+      "anchor": "p. 53, remarks and Fig. 26 N-Q; compare Sirel and Deveciler 2018 p. 25",
+      "kind": "REFERENCE_CONFLICT_UNRESOLVED",
+      "note": "The p.53 morphological description belongs to R. soldadensis; R. sindensis appears in comparisons. Turkish 1998 R. sindensis material is reassigned to R. polatliensis in 2018. Neither description can be silently used as the requested R. sindensis type profile.",
+      "sha256": "e973352a1de2cf45d8bff2cd778cc7945b213586825cf853cf3b0b1c2b9fe3d3"
+    },
+    "observations": {
+      "CHR_01": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_02": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_03": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_04": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_05": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_06": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_07": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_08": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_09": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_10": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_11": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_12": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_13": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_14": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_15": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_16": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_17": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_18": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_19": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_20": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      },
+      "CHR_21": {
+        "value": null,
+        "state": "NOT_OBSERVABLE",
+        "reason": "Not stated unambiguously in selected description; this is textual missingness, not an image visibility assessment."
+      }
+    },
+    "in_core": true
+  }
+]

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import TaxonProfileCard from "../components/TaxonProfileCard";
 import "../styles/pages/geology.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -28,6 +30,14 @@ const EN_TRANSLATIONS = {
 
 function Geology() {
   const { lang } = useLanguage();
+  const [params] = useSearchParams();
+  const selectedTaxon = (params.get("taxon") || "").trim().slice(0, 100);
+
+  useEffect(() => {
+    if (!selectedTaxon) return;
+    const frame = requestAnimationFrame(() => document.getElementById("taxon-profile")?.scrollIntoView({ block: "start" }));
+    return () => cancelAnimationFrame(frame);
+  }, [selectedTaxon]);
   return (
     <section id="geology" className="geology-page">
       <div className="geology-content">
@@ -55,20 +65,28 @@ function Geology() {
           </div>
         </div>
 
-        <TaxonEnvironmentSection />
+        {selectedTaxon && (
+          <section id="taxon-profile" className="taxon-search-selection" aria-labelledby="selected-taxon-heading">
+            <h3 id="selected-taxon-heading"><em>{selectedTaxon}</em></h3>
+            <TaxonProfileCard scientificName={selectedTaxon} />
+          </section>
+        )}
+        <TaxonEnvironmentSection query={selectedTaxon || params.get("q") || ""} />
       </div>
     </section>
   );
 }
 
 // ─── TAXON ENVIRONMENT SECTION ──────────────────────────────────────────
-function TaxonEnvironmentSection() {
+function TaxonEnvironmentSection({ query = "" }) {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(query);
   const [rankFilter, setRankFilter] = useState("");
   const { lang } = useLanguage();
+
+  useEffect(() => { setSearchTerm(query); }, [query]);
 
   // Fetch all profiles on mount
   useEffect(() => {

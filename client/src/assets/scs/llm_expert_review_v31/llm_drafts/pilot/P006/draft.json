@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P006",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Clear microgranular or hyaline-appearing calcareous wall structure visible under light microscopy."
+    },
+    "CHR_02": {
+      "value": "OVOID",
+      "state": "PRESENT",
+      "reason": "Overall test outline in the section is rounded/ovoid."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Septa separating chambers are clearly visible throughout the coils."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers arranged in multiple whorls are visible."
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Coiling pattern does not fit standard uniserial/biserial/triserial categories; appears spirally coiled with complex turns."
+    },
+    "CHR_06": {
+      "value": "STREPTOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Coils shift axis during growth, characteristic of streptospiral arrangement."
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "Inner whorls are oriented at angles to outer whorls, indicating changing coiling planes."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later whorls envelop earlier ones completely."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No major ontogenetic shift from coiled to uncoiled serial chambers."
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Presence of multiple internal partitions and chamber subdivisions indicating structural complexity."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary subdivisions or chamberlets are visible within the peripheral chambers."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Central proloculus region appears as a simple initial chamber."
+    },
+    "CHR_13": {
+      "value": "SUBEPIDERMAL",
+      "state": "PRESENT",
+      "reason": "Subepidermal partitions or beam-and-rafter-like network visible along the outer wall."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct central pillars are observed in this section."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets observed along the flanks."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly intersected or visible in this plane of section."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord structure is discernible."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Surface septal filaments not visible in internal thin section view."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Entire isolated test is surrounded by matrix, showing no attachment surface."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient comparative section data to determine dimorphism conclusively."
+    },
+    "CHR_21": {
+      "value": "OBLIQUE",
+      "state": "PRESENT",
+      "reason": "The section cuts the test at an angle to the main coiling axes, showing shifting internal whorls."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:56:31.388525+00:00",
+    "received_at": "2026-11-12T10:56:35.993709+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P006/view01.png",
+        "sha256": "bd89f5c4a5c847a99d83f6f4b0061c15b5f53a203778ce634de0a1fffc58c113",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_04.json",
+    "raw_provider_sha256": "e1c8be80858af708d8bf1873fedb0b233299ec6e8cdd9e82452a2a62bd888e3a"
+  },
+  "expert_approval": null
+}

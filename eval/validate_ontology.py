@@ -38,7 +38,7 @@ def main():
     rules=json.loads((ROOT/'api/data/rule_chr_mapping.json').read_text('utf-8'))
     assert all(len(set(c['values']))>=2 for c in data)
     assert all(r['level'] in ['M','D','S','C'] for r in rules)
-    (ROOT/'eval/results/revision/ontology_validation.json').write_text(json.dumps({'reasoner':'HermiT via Owlready2','java':java,
+    (ROOT/'eval/results'/('v32' if os.environ.get('FORAM_EVAL_RELEASE')=='v32' else 'revision')/'ontology_validation.json').write_text(json.dumps({'reasoner':'HermiT via Owlready2','java':java,
         'probes':results,'closed_world_json_cardinality_checks_passed':True,
         'note':'Negative controls are isolated in-memory worlds. Missing OWL assertions alone do not establish inconsistency under open-world semantics.'},indent=2)+'\n',encoding='utf-8')
 

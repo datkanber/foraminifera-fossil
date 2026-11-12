@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fossil Information</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <style>
+    .small-header{
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+
+    .green-text{
+      color: green;
+      font-weight: 500;
+    }
+
+    .blue-text {
+      color: blue;
+    }
+
+    .left-align{
+      text-align: left;
+    }
+
+    .horiz {
+      display: flex;
+      flex-direction: row;
+    }
+
+    </style>
+</head>
+<body>
+
+  <div class="main-container">
+      <div class="topnav">
+      <div class="country-logo">
+        <img src="/noun_Earth_2199992.svg" alt="Logo" style="height: auto; max-height: 45px;">
+        <h5 class="region-name"><a href="https://treatise.geolex.org/" style="color: orange; text-decoration: none;">Treatise</a></h5>
+      </div>
+      <a href="index.php">Home</a>
+      <a href="plotOrderDiversity.php">Plot Diversity Curves</a>
+      <a href="tree.php"> Tree of Life</a>
+      <a href="aboutPageTreatise.php">About</a>
+      <a style="margin-left: auto; padding-right: 10px;" href="/login.php">Admin Login</a>
+    </div>
+  <div class="container mt-5">
+	<div class="row justify-content-center">
+    	<div class="col-md-8">
+		  <div class="title-section text-center mb-4">
+				<h2>Welcome to the <strong>Forams</strong> subsite on Invertebrate Paleontology!</h2>
+        <p>Please enter a genera name to retrieve more information.</p>
+      </div>
+			<form id='form' action="index.php" method="GET" class="form-inline">
+  				<div class="searchbar-container d-flex align-items-center justify-content-center">
+					<input
+						id="searchbar"
+						type="text"
+						class="form-control mb-2 mr-sm-2"
+						name="search"
+						placeholder="Search Genus Name..."
+						value="">
+
+					<button id="submitbtn" value="filter" type="submit" class="btn btn-primary mb-2">Submit</button>
+				</div>
+				<div class="filter-container d-flex flex-wrap align-items-center justify-content-center w-100">
+					<h6 style="white-space: nowrap;">Search By:</h6>
+
+					<div class="form-group mx-sm-3 mb-2">
+						<select id="searchtype-select" class="form-select" name="searchtype" onchange="changeFilter()">
+							<option value="Period" >Period</option>
+							<option value="Date" >Date</option>
+							<option value="Date Range" >Date Range</option>
+						</select>
+					</div>
+					
+					<div class="form-group mx-sm-3 mb-2">
+						<div id="selected-filter"></div>
+					</div>
+					
+					<h6 style="white-space: nowrap;">and Class</h6>
+
+					<div class="form-group mx-sm-3 mb-2 ml-0">
+						<select id="classSearch" class="form-select" name="classSearch" onchange="setOrder()">
+							<!-- The logic makes it so that if no option picked, or if all is chosen(looking at URL via $_GET), no filtering is done
+							Otherwise the next set of lines after starts filtering everything except selected classtype -->
+							<option value="All" selected>All</option>
+							<option value='Rhizopodea' >Rhizopodea</option><option value='Reticularea' >Reticularea</option>						</select>
+					</div>
+
+					<script>
+						var classesWithOrders = {"Rhizopodea":["Arcellinida","Amoebida","Mycetozoida"],"Reticularea":["Aconchulinida","Gromida","Athalamida","Foraminiferida","Re\u00c3\u00adtlingerellida","Xenophyophorida","Labryinthulida"]};
+    					var allOrders = ["Aconchulinida","Amoebida","Arcellinida","Athalamida","Foraminiferida","Gromida","Labryinthulida","Mycetozoida","Re\u00c3\u00adtlingerellida","Xenophyophorida"];
+						function setOrder() {
+							var box = document.getElementById("classSearch");
+							if (!box) {
+								return;
+							}
+							var chosen = box.options[box.selectedIndex].value;
+							var orderSearch = document.getElementById("orderSearch");
+							orderSearch.disabled = false;
+							var orders = (chosen == "All") ? allOrders : (classesWithOrders[chosen] || []);
+
+							var currentVal = "All";
+							var html = "<option value='All'>All</option>";
+							orders.forEach(function(order) {
+								var selected = (order === currentVal) ? " selected" : "";
+								html += "<option value='" + order + "'" + selected + ">" + order + "</option>";
+							});
+							orderSearch.innerHTML = html;
+						}
+					</script>
+
+					<h6 style="white-space: nowrap;">and Order</h6>
+
+					<div class="form-group mx-sm-3 mb-2 ml-0">
+						<select id="orderSearch" class="form-select" name="orderSearch">
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Form to toggle sorting -->
+	
+	<div id="image-container" style="text-align: center; margin-top: 5px;">
+		<img src="./logo.png" style="width: 300px;">
+	</div>
+
+	<script>
+		function changeFilter() {
+			var box = document.getElementById("searchtype-select");
+			if (!box) {
+				return;
+			}
+			var chosen = box.options[box.selectedIndex].value;
+			var searchForm = document.getElementById("selected-filter");
+			if (chosen == "Date Range") {
+				var rangeHTML = 
+				"Beginning Date: <input id='begDate' type='number' step='0.01' style='width: 90px' class='form-control' name='agefilterstart' min='0' value=''> \
+				Ending Date: <input id='endDate' type='number' style='width: 90px' class='form-control' name='agefilterend' min='0' value=''> \
+				<input id='selectPeriod' name='filterperiod' type='hidden' value='All'>";
+				searchForm.innerHTML = rangeHTML;
+			} else if (chosen == "Date") {
+				var dateHTML = 
+				"Enter Date: <input id='begDate' type='number' step='0.01' class='form-control' style='width: 90px' name='agefilterstart' min='0' value=''> \
+				<input id='selectPeriod' name='filterperiod' type='hidden' value='All'>";
+				searchForm.innerHTML = dateHTML;
+			} else {
+				var periodHTML = 
+					`<div class="d-flex flex-row align-items-center gap-1 justify-content-center">
+					<select id='selectPeriod' name='filterperiod' class="form-select" onchange='changePeriod()'>
+						<option value='All' >All</option>
+												<option value='Quaternary' >Quaternary  (2.58-0)</option> 							<option value='Neogene' >Neogene  (23.04-2.58)</option> 							<option value='Paleogene' >Paleogene  (66.04-23.04)</option> 							<option value='Cretaceous' >Cretaceous  (143.1-66.04)</option> 							<option value='Jurassic' >Jurassic  (201.36-143.1)</option> 							<option value='Triassic' >Triassic  (251.9-201.36)</option> 							<option value='Permian' >Permian  (298.89-251.9)</option> 							<option value='Carboniferous' >Carboniferous  (359.3-298.89)</option> 							<option value='Devonian' >Devonian  (419-359.3)</option> 							<option value='Silurian' >Silurian  (443.07-419)</option> 							<option value='Ordovician' >Ordovician  (486.85-443.07)</option> 							<option value='Cambrian' >Cambrian  (538.8-486.85)</option> 							<option value='Ediacaran' >Ediacaran  (635-538.8)</option> 							<option value='Cryogenian' >Cryogenian  (720-635)</option> 							<option value='Tonian' >Tonian  (1000-720)</option> 							<option value='Stenian' >Stenian  (1200-1000)</option> 							<option value='Ectasian' >Ectasian  (1400-1200)</option> 							<option value='Calymmian' >Calymmian  (1600-1400)</option> 							<option value='Statherian' >Statherian  (1800-1600)</option> 							<option value='Orosirian' >Orosirian  (2050-1800)</option> 							<option value='Rhyacian' >Rhyacian  (2300-2050)</option> 							<option value='Siderian' >Siderian  (2500-2300)</option> 							<option value='Unkown' >Unkown  (4600-2500)</option> 					</select>
+					<h6 style="white-space: nowrap;" class="m-0">and Stage</h6>
+					<select id='filterstage' name='filterstage' disabled class="form-select" onchange=stageToDate()>
+						<option value='All'>--Select Period First--</option>
+					</select>
+					<input id='begDate' name='agefilterstart' type='hidden' value=''>
+					<input id='endDate' name='agefilterend' type='hidden' value=''>
+					</div>`;
+				changePeriod();
+				searchForm.innerHTML = periodHTML;
+			}
+		}
+
+		function changePeriod() {
+			var box = document.getElementById("selectPeriod");
+			if (!box || box.type === "hidden") {
+				return;
+			}
+			var chosen = box.options[box.selectedIndex].value;
+			var stageSelect = document.getElementById("filterstage");
+
+			/* Period Array */
+			var periods = {"Quaternary":{"stages":{"Holocene":{"base":0.01,"top":0,"date_range":" (0.01-0)"},"Lt. Pleist.":{"base":0.13,"top":0.01,"date_range":" (0.13-0.01)"},"Chibanian":{"base":0.77,"top":0.13,"date_range":" (0.77-0.13)"},"Calabrian":{"base":1.8,"top":0.77,"date_range":" (1.8-0.77)"},"Gelasian":{"base":2.58,"top":1.8,"date_range":" (2.58-1.8)"}},"begDate":2.58,"endDate":0,"date_range":" (2.58-0)"},"Neogene":{"stages":{"Piacenzian":{"base":3.6,"top":2.58,"date_range":" (3.6-2.58)"},"Zanclean":{"base":5.34,"top":3.6,"date_range":" (5.34-3.6)"},"Messinian":{"base":7.25,"top":5.34,"date_range":" (7.25-5.34)"},"Tortonian":{"base":11.63,"top":7.25,"date_range":" (11.63-7.25)"},"Serravallian":{"base":13.82,"top":11.63,"date_range":" (13.82-11.63)"},"Langhian":{"base":15.99,"top":13.82,"date_range":" (15.99-13.82)"},"Burdigalian":{"base":20.45,"top":15.99,"date_range":" (20.45-15.99)"},"Aquitanian":{"base":23.04,"top":20.45,"date_range":" (23.04-20.45)"}},"begDate":23.04,"endDate":2.58,"date_range":" (23.04-2.58)"},"Paleogene":{"stages":{"Chattian":{"base":27.29,"top":23.04,"date_range":" (27.29-23.04)"},"Rupelian":{"base":33.9,"top":27.29,"date_range":" (33.9-27.29)"},"Priabonian":{"base":37.71,"top":33.9,"date_range":" (37.71-33.9)"},"Bartonian":{"base":41.03,"top":37.71,"date_range":" (41.03-37.71)"},"Lutetian":{"base":48.07,"top":41.03,"date_range":" (48.07-41.03)"},"Ypresian":{"base":56,"top":48.07,"date_range":" (56-48.07)"},"Thanetian":{"base":59.24,"top":56,"date_range":" (59.24-56)"},"Selandian":{"base":61.66,"top":59.24,"date_range":" (61.66-59.24)"},"Danian":{"base":66.04,"top":61.66,"date_range":" (66.04-61.66)"}},"begDate":66.04,"endDate":23.04,"date_range":" (66.04-23.04)"},"Cretaceous":{"stages":{"Maastrichtian":{"base":72.17,"top":66.04,"date_range":" (72.17-66.04)"},"Campanian":{"base":83.65,"top":72.17,"date_range":" (83.65-72.17)"},"Santonian":{"base":85.7,"top":83.65,"date_range":" (85.7-83.65)"},"Coniacian":{"base":89.39,"top":85.7,"date_range":" (89.39-85.7)"},"Turonian":{"base":93.9,"top":89.39,"date_range":" (93.9-89.39)"},"Cenomanian":{"base":100.5,"top":93.9,"date_range":" (100.5-93.9)"},"Albian":{"base":113.2,"top":100.5,"date_range":" (113.2-100.5)"},"Aptian":{"base":121.4,"top":113.2,"date_range":" (121.4-113.2)"},"Barremian":{"base":126.5,"top":121.4,"date_range":" (126.5-121.4)"},"Hauterivian":{"base":132.6,"top":126.5,"date_range":" (132.6-126.5)"},"Valanginian":{"base":137.7,"top":132.6,"date_range":" (137.7-132.6)"},"Berriasian":{"base":143.1,"top":137.7,"date_range":" (143.1-137.7)"}},"begDate":143.1,"endDate":66.04,"date_range":" (143.1-66.04)"},"Jurassic":{"stages":{"Tithonian":{"base":149.24,"top":143.1,"date_range":" (149.24-143.1)"},"Kimmeridgian":{"base":154.78,"top":149.24,"date_range":" (154.78-149.24)"},"Oxfordian":{"base":161.53,"top":154.78,"date_range":" (161.53-154.78)"},"Callovian":{"base":165.29,"top":161.53,"date_range":" (165.29-161.53)"},"Bathonian":{"base":168.17,"top":165.29,"date_range":" (168.17-165.29)"},"Bajocian":{"base":170.9,"top":168.17,"date_range":" (170.9-168.17)"},"Aalenian":{"base":174.7,"top":170.9,"date_range":" (174.7-170.9)"},"Toarcian":{"base":184.2,"top":174.7,"date_range":" (184.2-174.7)"},"Pliensbachian":{"base":192.9,"top":184.2,"date_range":" (192.9-184.2)"},"Sinemurian":{"base":199.46,"top":192.9,"date_range":" (199.46-192.9)"},"Hettangian":{"base":201.36,"top":199.46,"date_range":" (201.36-199.46)"}},"begDate":201.36,"endDate":143.1,"date_range":" (201.36-143.1)"},"Triassic":{"stages":{"Rhaetian":{"base":205.74,"top":201.36,"date_range":" (205.74-201.36)"},"Norian":{"base":227.3,"top":205.74,"date_range":" (227.3-205.74)"},"Carnian":{"base":237,"top":227.3,"date_range":" (237-227.3)"},"Ladinian":{"base":241.46,"top":237,"date_range":" (241.46-237)"},"Anisian":{"base":246.7,"top":241.46,"date_range":" (246.7-241.46)"},"Olenekian":{"base":249.88,"top":246.7,"date_range":" (249.88-246.7)"},"Induan":{"base":251.9,"top":249.88,"date_range":" (251.9-249.88)"}},"begDate":251.9,"endDate":201.36,"date_range":" (251.9-201.36)"},"Permian":{"stages":{"Changhsingian":{"base":254.24,"top":251.9,"date_range":" (254.24-251.9)"},"Wuchiapingian":{"base":259.55,"top":254.24,"date_range":" (259.55-254.24)"},"Capitanian":{"base":264.34,"top":259.55,"date_range":" (264.34-259.55)"},"Wordian":{"base":269.21,"top":264.34,"date_range":" (269.21-264.34)"},"Roadian":{"base":274.37,"top":269.21,"date_range":" (274.37-269.21)"},"Kungurian":{"base":283.3,"top":274.37,"date_range":" (283.3-274.37)"},"Artinskian":{"base":290.51,"top":283.3,"date_range":" (290.51-283.3)"},"Sakmarian":{"base":293.52,"top":290.51,"date_range":" (293.52-290.51)"},"Asselian":{"base":298.89,"top":293.52,"date_range":" (298.89-293.52)"}},"begDate":298.89,"endDate":251.9,"date_range":" (298.89-251.9)"},"Carboniferous":{"stages":{"Gzhelian":{"base":303.68,"top":298.89,"date_range":" (303.68-298.89)"},"Kasimovian":{"base":307.02,"top":303.68,"date_range":" (307.02-303.68)"},"Moscovian":{"base":315.15,"top":307.02,"date_range":" (315.15-307.02)"},"Bashkirian":{"base":323.4,"top":315.15,"date_range":" (323.4-315.15)"},"Serpukhovian":{"base":330.34,"top":323.4,"date_range":" (330.34-323.4)"},"Visean":{"base":346.73,"top":330.34,"date_range":" (346.73-330.34)"},"Tournaisian":{"base":359.3,"top":346.73,"date_range":" (359.3-346.73)"}},"begDate":359.3,"endDate":298.89,"date_range":" (359.3-298.89)"},"Devonian":{"stages":{"Famennian":{"base":371.1,"top":359.3,"date_range":" (371.1-359.3)"},"Frasnian":{"base":378.9,"top":371.1,"date_range":" (378.9-371.1)"},"Givetian":{"base":385.3,"top":378.9,"date_range":" (385.3-378.9)"},"Eifelian":{"base":394.3,"top":385.3,"date_range":" (394.3-385.3)"},"Emsian":{"base":410.51,"top":394.3,"date_range":" (410.51-394.3)"},"Pragian":{"base":412.4,"top":410.51,"date_range":" (412.4-410.51)"},"Lochkovian":{"base":419,"top":412.4,"date_range":" (419-412.4)"}},"begDate":419,"endDate":359.3,"date_range":" (419-359.3)"},"Silurian":{"stages":{"Pridoli":{"base":422.73,"top":419,"date_range":" (422.73-419)"},"Ludfordian":{"base":425.01,"top":422.73,"date_range":" (425.01-422.73)"},"Gorstian":{"base":426.74,"top":425.01,"date_range":" (426.74-425.01)"},"Homerian":{"base":430.62,"top":426.74,"date_range":" (430.62-426.74)"},"Sheinwoodian":{"base":432.93,"top":430.62,"date_range":" (432.93-430.62)"},"Telychian":{"base":438.59,"top":432.93,"date_range":" (438.59-432.93)"},"Aeronian":{"base":440.49,"top":438.59,"date_range":" (440.49-438.59)"},"Rhuddanian":{"base":443.07,"top":440.49,"date_range":" (443.07-440.49)"}},"begDate":443.07,"endDate":419,"date_range":" (443.07-419)"},"Ordovician":{"stages":{"Hirnantian":{"base":445.21,"top":443.07,"date_range":" (445.21-443.07)"},"Katian":{"base":452.75,"top":445.21,"date_range":" (452.75-445.21)"},"Sandbian":{"base":458.18,"top":452.75,"date_range":" (458.18-452.75)"},"Darriwilian":{"base":469.42,"top":458.18,"date_range":" (469.42-458.18)"},"Dapingian":{"base":471.26,"top":469.42,"date_range":" (471.26-469.42)"},"Floian":{"base":477.08,"top":471.26,"date_range":" (477.08-471.26)"},"Tremadocian":{"base":486.85,"top":477.08,"date_range":" (486.85-477.08)"}},"begDate":486.85,"endDate":443.07,"date_range":" (486.85-443.07)"},"Cambrian":{"stages":{"Cambrian Stage 10":{"base":491,"top":486.85,"date_range":" (491-486.85)"},"Jiangshanian":{"base":494.2,"top":491,"date_range":" (494.2-491)"},"Paibian":{"base":497,"top":494.2,"date_range":" (497-494.2)"},"Guzhangian":{"base":500.5,"top":497,"date_range":" (500.5-497)"},"Drumian":{"base":504.5,"top":500.5,"date_range":" (504.5-500.5)"},"Wuliuan":{"base":509,"top":504.5,"date_range":" (509-504.5)"},"Cambrian Stage 4":{"base":514.5,"top":509,"date_range":" (514.5-509)"},"Cambrian Stage 3":{"base":521,"top":514.5,"date_range":" (521-514.5)"},"Cambrian Stage 2":{"base":529,"top":521,"date_range":" (529-521)"},"Fortunian":{"base":538.8,"top":529,"date_range":" (538.8-529)"}},"begDate":538.8,"endDate":486.85,"date_range":" (538.8-486.85)"},"Ediacaran":{"stages":{"Ediacaran":{"base":635,"top":538.8,"date_range":" (635-538.8)"}},"begDate":635,"endDate":538.8,"date_range":" (635-538.8)"},"Cryogenian":{"stages":{"Cryogenian":{"base":720,"top":635,"date_range":" (720-635)"}},"begDate":720,"endDate":635,"date_range":" (720-635)"},"Tonian":{"stages":{"Tonian":{"base":1000,"top":720,"date_range":" (1000-720)"}},"begDate":1000,"endDate":720,"date_range":" (1000-720)"},"Stenian":{"stages":{"Stenian":{"base":1200,"top":1000,"date_range":" (1200-1000)"}},"begDate":1200,"endDate":1000,"date_range":" (1200-1000)"},"Ectasian":{"stages":{"Ectasian":{"base":1400,"top":1200,"date_range":" (1400-1200)"}},"begDate":1400,"endDate":1200,"date_range":" (1400-1200)"},"Calymmian":{"stages":{"Calymmian":{"base":1600,"top":1400,"date_range":" (1600-1400)"}},"begDate":1600,"endDate":1400,"date_range":" (1600-1400)"},"Statherian":{"stages":{"Statherian":{"base":1800,"top":1600,"date_range":" (1800-1600)"}},"begDate":1800,"endDate":1600,"date_range":" (1800-1600)"},"Orosirian":{"stages":{"Orosirian":{"base":2050,"top":1800,"date_range":" (2050-1800)"}},"begDate":2050,"endDate":1800,"date_range":" (2050-1800)"},"Rhyacian":{"stages":{"Rhyacian":{"base":2300,"top":2050,"date_range":" (2300-2050)"}},"begDate":2300,"endDate":2050,"date_range":" (2300-2050)"},"Siderian":{"stages":{"Siderian":{"base":2500,"top":2300,"date_range":" (2500-2300)"}},"begDate":2500,"endDate":2300,"date_range":" (2500-2300)"},"Unkown":{"stages":{"Neoarchean":{"base":2800,"top":2500,"date_range":" (2800-2500)"},"Mesoarchean":{"base":3200,"top":2800,"date_range":" (3200-2800)"},"Paleoarchean":{"base":3600,"top":3200,"date_range":" (3600-3200)"},"Eoarchean":{"base":4000,"top":3600,"date_range":" (4000-3600)"},"Hadean":{"base":4600,"top":4000,"date_range":" (4600-4000)"}},"begDate":4600,"endDate":2500,"date_range":" (4600-2500)"}};
+
+			/* When Period = All, Stage has nothing */
+			if (chosen == "All") {
+				var AllHTML = "<option value='All'>--Select Period First--</option>";
+				stageSelect.innerHTML = AllHTML;
+				stageSelect.disabled = true;
+				/* Since Stage filter is not used, both Dates are set to empty. */
+				var begDate = document.getElementById("begDate");
+				begDate.value = '';
+				var endDate = document.getElementById("endDate");
+				endDate.value = '';
+			} else { // When a Period is selected
+				var stageHTML = "";
+				var rowIdx;
+				stageSelect.disabled = false;
+				stageHTML = stageHTML + "<option value='All'>All</option>";
+				let stages = periods[chosen]["stages"];         
+				for (const [key, value] of Object.entries(stages)) {
+					var cur_stage = key;                                           
+					const stageSelected = !!(cur_stage.toLowerCase().trim() === "".toLowerCase().trim());
+					stageHTML += "<option value='" + cur_stage + "'"
+					+ (stageSelected ? ' selected' : '') 
+					+ ">" 
+					+ cur_stage 
+					+ value["date_range"]
+					+ "</option>";
+				}
+				stageSelect.innerHTML = stageHTML;
+
+				// To make sure that the initial selection of "All" takes effect in URL as well
+				stageToDate();
+			}
+		}
+
+		function stageToDate() {
+			var input = document.getElementById("filterstage").value;
+			/* Period Date lookup table */
+			var periods = {"Quaternary":{"stages":{"Holocene":{"base":0.01,"top":0,"date_range":" (0.01-0)"},"Lt. Pleist.":{"base":0.13,"top":0.01,"date_range":" (0.13-0.01)"},"Chibanian":{"base":0.77,"top":0.13,"date_range":" (0.77-0.13)"},"Calabrian":{"base":1.8,"top":0.77,"date_range":" (1.8-0.77)"},"Gelasian":{"base":2.58,"top":1.8,"date_range":" (2.58-1.8)"}},"begDate":2.58,"endDate":0,"date_range":" (2.58-0)"},"Neogene":{"stages":{"Piacenzian":{"base":3.6,"top":2.58,"date_range":" (3.6-2.58)"},"Zanclean":{"base":5.34,"top":3.6,"date_range":" (5.34-3.6)"},"Messinian":{"base":7.25,"top":5.34,"date_range":" (7.25-5.34)"},"Tortonian":{"base":11.63,"top":7.25,"date_range":" (11.63-7.25)"},"Serravallian":{"base":13.82,"top":11.63,"date_range":" (13.82-11.63)"},"Langhian":{"base":15.99,"top":13.82,"date_range":" (15.99-13.82)"},"Burdigalian":{"base":20.45,"top":15.99,"date_range":" (20.45-15.99)"},"Aquitanian":{"base":23.04,"top":20.45,"date_range":" (23.04-20.45)"}},"begDate":23.04,"endDate":2.58,"date_range":" (23.04-2.58)"},"Paleogene":{"stages":{"Chattian":{"base":27.29,"top":23.04,"date_range":" (27.29-23.04)"},"Rupelian":{"base":33.9,"top":27.29,"date_range":" (33.9-27.29)"},"Priabonian":{"base":37.71,"top":33.9,"date_range":" (37.71-33.9)"},"Bartonian":{"base":41.03,"top":37.71,"date_range":" (41.03-37.71)"},"Lutetian":{"base":48.07,"top":41.03,"date_range":" (48.07-41.03)"},"Ypresian":{"base":56,"top":48.07,"date_range":" (56-48.07)"},"Thanetian":{"base":59.24,"top":56,"date_range":" (59.24-56)"},"Selandian":{"base":61.66,"top":59.24,"date_range":" (61.66-59.24)"},"Danian":{"base":66.04,"top":61.66,"date_range":" (66.04-61.66)"}},"begDate":66.04,"endDate":23.04,"date_range":" (66.04-23.04)"},"Cretaceous":{"stages":{"Maastrichtian":{"base":72.17,"top":66.04,"date_range":" (72.17-66.04)"},"Campanian":{"base":83.65,"top":72.17,"date_range":" (83.65-72.17)"},"Santonian":{"base":85.7,"top":83.65,"date_range":" (85.7-83.65)"},"Coniacian":{"base":89.39,"top":85.7,"date_range":" (89.39-85.7)"},"Turonian":{"base":93.9,"top":89.39,"date_range":" (93.9-89.39)"},"Cenomanian":{"base":100.5,"top":93.9,"date_range":" (100.5-93.9)"},"Albian":{"base":113.2,"top":100.5,"date_range":" (113.2-100.5)"},"Aptian":{"base":121.4,"top":113.2,"date_range":" (121.4-113.2)"},"Barremian":{"base":126.5,"top":121.4,"date_range":" (126.5-121.4)"},"Hauterivian":{"base":132.6,"top":126.5,"date_range":" (132.6-126.5)"},"Valanginian":{"base":137.7,"top":132.6,"date_range":" (137.7-132.6)"},"Berriasian":{"base":143.1,"top":137.7,"date_range":" (143.1-137.7)"}},"begDate":143.1,"endDate":66.04,"date_range":" (143.1-66.04)"},"Jurassic":{"stages":{"Tithonian":{"base":149.24,"top":143.1,"date_range":" (149.24-143.1)"},"Kimmeridgian":{"base":154.78,"top":149.24,"date_range":" (154.78-149.24)"},"Oxfordian":{"base":161.53,"top":154.78,"date_range":" (161.53-154.78)"},"Callovian":{"base":165.29,"top":161.53,"date_range":" (165.29-161.53)"},"Bathonian":{"base":168.17,"top":165.29,"date_range":" (168.17-165.29)"},"Bajocian":{"base":170.9,"top":168.17,"date_range":" (170.9-168.17)"},"Aalenian":{"base":174.7,"top":170.9,"date_range":" (174.7-170.9)"},"Toarcian":{"base":184.2,"top":174.7,"date_range":" (184.2-174.7)"},"Pliensbachian":{"base":192.9,"top":184.2,"date_range":" (192.9-184.2)"},"Sinemurian":{"base":199.46,"top":192.9,"date_range":" (199.46-192.9)"},"Hettangian":{"base":201.36,"top":199.46,"date_range":" (201.36-199.46)"}},"begDate":201.36,"endDate":143.1,"date_range":" (201.36-143.1)"},"Triassic":{"stages":{"Rhaetian":{"base":205.74,"top":201.36,"date_range":" (205.74-201.36)"},"Norian":{"base":227.3,"top":205.74,"date_range":" (227.3-205.74)"},"Carnian":{"base":237,"top":227.3,"date_range":" (237-227.3)"},"Ladinian":{"base":241.46,"top":237,"date_range":" (241.46-237)"},"Anisian":{"base":246.7,"top":241.46,"date_range":" (246.7-241.46)"},"Olenekian":{"base":249.88,"top":246.7,"date_range":" (249.88-246.7)"},"Induan":{"base":251.9,"top":249.88,"date_range":" (251.9-249.88)"}},"begDate":251.9,"endDate":201.36,"date_range":" (251.9-201.36)"},"Permian":{"stages":{"Changhsingian":{"base":254.24,"top":251.9,"date_range":" (254.24-251.9)"},"Wuchiapingian":{"base":259.55,"top":254.24,"date_range":" (259.55-254.24)"},"Capitanian":{"base":264.34,"top":259.55,"date_range":" (264.34-259.55)"},"Wordian":{"base":269.21,"top":264.34,"date_range":" (269.21-264.34)"},"Roadian":{"base":274.37,"top":269.21,"date_range":" (274.37-269.21)"},"Kungurian":{"base":283.3,"top":274.37,"date_range":" (283.3-274.37)"},"Artinskian":{"base":290.51,"top":283.3,"date_range":" (290.51-283.3)"},"Sakmarian":{"base":293.52,"top":290.51,"date_range":" (293.52-290.51)"},"Asselian":{"base":298.89,"top":293.52,"date_range":" (298.89-293.52)"}},"begDate":298.89,"endDate":251.9,"date_range":" (298.89-251.9)"},"Carboniferous":{"stages":{"Gzhelian":{"base":303.68,"top":298.89,"date_range":" (303.68-298.89)"},"Kasimovian":{"base":307.02,"top":303.68,"date_range":" (307.02-303.68)"},"Moscovian":{"base":315.15,"top":307.02,"date_range":" (315.15-307.02)"},"Bashkirian":{"base":323.4,"top":315.15,"date_range":" (323.4-315.15)"},"Serpukhovian":{"base":330.34,"top":323.4,"date_range":" (330.34-323.4)"},"Visean":{"base":346.73,"top":330.34,"date_range":" (346.73-330.34)"},"Tournaisian":{"base":359.3,"top":346.73,"date_range":" (359.3-346.73)"}},"begDate":359.3,"endDate":298.89,"date_range":" (359.3-298.89)"},"Devonian":{"stages":{"Famennian":{"base":371.1,"top":359.3,"date_range":" (371.1-359.3)"},"Frasnian":{"base":378.9,"top":371.1,"date_range":" (378.9-371.1)"},"Givetian":{"base":385.3,"top":378.9,"date_range":" (385.3-378.9)"},"Eifelian":{"base":394.3,"top":385.3,"date_range":" (394.3-385.3)"},"Emsian":{"base":410.51,"top":394.3,"date_range":" (410.51-394.3)"},"Pragian":{"base":412.4,"top":410.51,"date_range":" (412.4-410.51)"},"Lochkovian":{"base":419,"top":412.4,"date_range":" (419-412.4)"}},"begDate":419,"endDate":359.3,"date_range":" (419-359.3)"},"Silurian":{"stages":{"Pridoli":{"base":422.73,"top":419,"date_range":" (422.73-419)"},"Ludfordian":{"base":425.01,"top":422.73,"date_range":" (425.01-422.73)"},"Gorstian":{"base":426.74,"top":425.01,"date_range":" (426.74-425.01)"},"Homerian":{"base":430.62,"top":426.74,"date_range":" (430.62-426.74)"},"Sheinwoodian":{"base":432.93,"top":430.62,"date_range":" (432.93-430.62)"},"Telychian":{"base":438.59,"top":432.93,"date_range":" (438.59-432.93)"},"Aeronian":{"base":440.49,"top":438.59,"date_range":" (440.49-438.59)"},"Rhuddanian":{"base":443.07,"top":440.49,"date_range":" (443.07-440.49)"}},"begDate":443.07,"endDate":419,"date_range":" (443.07-419)"},"Ordovician":{"stages":{"Hirnantian":{"base":445.21,"top":443.07,"date_range":" (445.21-443.07)"},"Katian":{"base":452.75,"top":445.21,"date_range":" (452.75-445.21)"},"Sandbian":{"base":458.18,"top":452.75,"date_range":" (458.18-452.75)"},"Darriwilian":{"base":469.42,"top":458.18,"date_range":" (469.42-458.18)"},"Dapingian":{"base":471.26,"top":469.42,"date_range":" (471.26-469.42)"},"Floian":{"base":477.08,"top":471.26,"date_range":" (477.08-471.26)"},"Tremadocian":{"base":486.85,"top":477.08,"date_range":" (486.85-477.08)"}},"begDate":486.85,"endDate":443.07,"date_range":" (486.85-443.07)"},"Cambrian":{"stages":{"Cambrian Stage 10":{"base":491,"top":486.85,"date_range":" (491-486.85)"},"Jiangshanian":{"base":494.2,"top":491,"date_range":" (494.2-491)"},"Paibian":{"base":497,"top":494.2,"date_range":" (497-494.2)"},"Guzhangian":{"base":500.5,"top":497,"date_range":" (500.5-497)"},"Drumian":{"base":504.5,"top":500.5,"date_range":" (504.5-500.5)"},"Wuliuan":{"base":509,"top":504.5,"date_range":" (509-504.5)"},"Cambrian Stage 4":{"base":514.5,"top":509,"date_range":" (514.5-509)"},"Cambrian Stage 3":{"base":521,"top":514.5,"date_range":" (521-514.5)"},"Cambrian Stage 2":{"base":529,"top":521,"date_range":" (529-521)"},"Fortunian":{"base":538.8,"top":529,"date_range":" (538.8-529)"}},"begDate":538.8,"endDate":486.85,"date_range":" (538.8-486.85)"},"Ediacaran":{"stages":{"Ediacaran":{"base":635,"top":538.8,"date_range":" (635-538.8)"}},"begDate":635,"endDate":538.8,"date_range":" (635-538.8)"},"Cryogenian":{"stages":{"Cryogenian":{"base":720,"top":635,"date_range":" (720-635)"}},"begDate":720,"endDate":635,"date_range":" (720-635)"},"Tonian":{"stages":{"Tonian":{"base":1000,"top":720,"date_range":" (1000-720)"}},"begDate":1000,"endDate":720,"date_range":" (1000-720)"},"Stenian":{"stages":{"Stenian":{"base":1200,"top":1000,"date_range":" (1200-1000)"}},"begDate":1200,"endDate":1000,"date_range":" (1200-1000)"},"Ectasian":{"stages":{"Ectasian":{"base":1400,"top":1200,"date_range":" (1400-1200)"}},"begDate":1400,"endDate":1200,"date_range":" (1400-1200)"},"Calymmian":{"stages":{"Calymmian":{"base":1600,"top":1400,"date_range":" (1600-1400)"}},"begDate":1600,"endDate":1400,"date_range":" (1600-1400)"},"Statherian":{"stages":{"Statherian":{"base":1800,"top":1600,"date_range":" (1800-1600)"}},"begDate":1800,"endDate":1600,"date_range":" (1800-1600)"},"Orosirian":{"stages":{"Orosirian":{"base":2050,"top":1800,"date_range":" (2050-1800)"}},"begDate":2050,"endDate":1800,"date_range":" (2050-1800)"},"Rhyacian":{"stages":{"Rhyacian":{"base":2300,"top":2050,"date_range":" (2300-2050)"}},"begDate":2300,"endDate":2050,"date_range":" (2300-2050)"},"Siderian":{"stages":{"Siderian":{"base":2500,"top":2300,"date_range":" (2500-2300)"}},"begDate":2500,"endDate":2300,"date_range":" (2500-2300)"},"Unkown":{"stages":{"Neoarchean":{"base":2800,"top":2500,"date_range":" (2800-2500)"},"Mesoarchean":{"base":3200,"top":2800,"date_range":" (3200-2800)"},"Paleoarchean":{"base":3600,"top":3200,"date_range":" (3600-3200)"},"Eoarchean":{"base":4000,"top":3600,"date_range":" (4000-3600)"},"Hadean":{"base":4600,"top":4000,"date_range":" (4600-4000)"}},"begDate":4600,"endDate":2500,"date_range":" (4600-2500)"}};
+			var periodChosen = document.getElementById("selectPeriod").value;
+			/* If user selected option All for stage, we use the begDate and endDate of the period selected */
+			if (input === "All") {
+				var begDate = document.getElementById("begDate");
+				begDate.value = periods[periodChosen]["begDate"];
+				var endDate = document.getElementById("endDate");
+				endDate.value = periods[periodChosen]["endDate"];
+				return;
+			}
+			var begDate = document.getElementById("begDate");
+			begDate.value = periods[periodChosen]["stages"][input]["base"];
+			var endDate = document.getElementById("endDate");
+			endDate.value = periods[periodChosen]["stages"][input]["top"];
+		}
+		
+		window.onload = function() {
+			changeFilter();
+			changePeriod();
+			setOrder();
+		};
+	</script>
+</div>    <div class="formation-container mt-5">
+            <div class="card">
+        <div class="card-body">
+          <h2 class="card-title editable-text" id="Genus">Idalina</h5>
+          <div class="card-body">
+            <h2 class="small-header">Classification</h2>
+            <div id="Phylum" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Phylum: &nbsp;</b>
+              <div id="Phylum" class="editable-text" 
+                   data-taxonomy-level="Phylum" 
+                   data-taxonomy-name="Protista">
+                Protista              </div>
+            </div>
+                        <div id="Subphylum" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Subphylum: &nbsp;</b>
+              <div id="Subphylum" class="editable-text"
+                  data-taxonomy-level="Subphylum"
+                  data-taxonomy-name="Sarcodina">
+                Sarcodina              </div>
+            </div>
+                        <div id="Class" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Class: &nbsp;</b>
+              <div id="Class" class="editable-text"
+                   data-taxonomy-level="Class"
+                   data-taxonomy-name="Reticularea">
+                Reticularea              </div>
+            </div>
+                        <div id="Subclass" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Subclass: &nbsp;</b>
+              <div id="Subclass" class="editable-text"
+                  data-taxonomy-level="Subclass"
+                  data-taxonomy-name="Granuloreticulosia">
+                Granuloreticulosia              </div>
+            </div>
+                                    <div id="Order" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Order: &nbsp;</b>
+              <div id="Order" class="editable-text"
+                   data-taxonomy-level="Order"
+                   data-taxonomy-name="Foraminiferida">
+                Foraminiferida              </div>
+            </div>
+                                    <div id="Suborder" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Suborder: &nbsp;</b>
+              <div id="Suborder" class="editable-text"
+                  data-taxonomy-level="Suborder"
+                  data-taxonomy-name="Miliolina">
+                Miliolina              </div>
+            </div>
+                                                <div id="Superfamily" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Superfamily: &nbsp;</b>
+              <div id="Superfamily" class="editable-text"
+                   data-taxonomy-level="Superfamily"
+                   data-taxonomy-name="Miliolacea">
+                Miliolacea              </div>
+            </div>
+                                    <div id="Family" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Family: &nbsp;</b>
+              <div id="Family" class="editable-text"
+                   data-taxonomy-level="Family"
+                   data-taxonomy-name="Miliolidae">
+                Miliolidae              </div>
+            </div>
+                                    <div id="Subfamily" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Subfamily: &nbsp;</b>
+              <div id="Subfamily" class="editable-text"
+                  data-taxonomy-level="Subfamily"
+                  data-taxonomy-name="Miliolinae">
+                Miliolinae              </div>
+            </div>
+                        <div id="Genus" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Formal Genus Name and Reference: &nbsp;</b>
+              <div id="Genus" class="editable-text">
+                Idalina Schlumberger & MUNIER-CHALMAS, 1884, *1668, p. 629 (non NORMAN, 1890)              </div>
+            </div>
+            <div id="Type_species" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Type Species: &nbsp;</b>
+              <div id="Type_species" class="editable-text">
+                I. antiqua, SCHLUMBERGER & MUNIER-CHALMAS, 1884, =Biloculina antiqua O'ORBIGNY, 1850, *1397b, p. 210 (nom. nud.), =Trilomlilla cretacea O'ORBIGNY, 1850, *1397b, p. 210 (nom. mid.) (non Bilomlina antiqua KARRER, 1867); OD (M).              </div>
+              <br><br>
+            </div>
+            <h2 class="small-header">Images</h2>
+                        <b class="green-text">(Click to enlarge in a new window)</b>
+            <div id="Figure_Image" class="horiz">
+              <div id="Figure_Image"> 
+                <br><a href="./uploads/Idalina/Figure_Caption/Idalina_fig_359_miliolidae_miliolinae_15_idalina_68_nevillina_911_polysegmentina_1214_intolvohauerina_p_c470c472.jpg" target="_blank"><img style="max-width: 200px; max-height: 200px;" src="./uploads/Idalina/Figure_Caption/Idalina_fig_359_miliolidae_miliolinae_15_idalina_68_nevillina_911_polysegmentina_1214_intolvohauerina_p_c470c472.jpg" alt="Fossil Image"></a>              </div>
+            </div>
+            <div id="Figure_captions" class="horiz" style="text-align: left;">
+                <div id="Figure_captions" class="editable-text">
+                  Fig. 359,1-5. *I. antiqua, topotypes, Fr.; 1, young quinqueloculine specimen with simple tooth, X17 (*1330); 2, triloculine specimen with crenulate apertural border, X 11 (*1330); 3a,b, biloculine specimen, side and top views showing dendritic aperture, X15 (*2117); 4a,b, side, top views of adult with completely overlapping chambers and complex apert. trematophore, X8 (*2117); 5, horiz. sec. of adult showing chamber development, X16 (*1330).                </div>
+            </div>
+            <br><br>
+            <h2 class="small-header">Synonyms</h2>
+            <div id="Synonyms" class="horiz" style="text-align: left;">
+              <div id="Synonyms" class="editable-text">
+                              </div>
+            </div>
+            <br><br>
+            <h2 class="small-header">Geographic Distribution</h2>
+            <div id="Geography" class="horiz" style="text-align: left;">
+              <div id="Geography" class="editable-text">
+                Eu.              </div>
+              <br><br>
+            </div>
+            <h2 class="small-header">Age Range</h2>
+            <div id="beginning_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Beginning Stage in Treatise Usage: &nbsp;</b>
+              <div id="beginning_stage" class="editable-text">
+                U.Cret.(Senon.)              </div>
+            </div>
+            <div id="beginning_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Beginning International Stage: &nbsp;</b>
+              <div id="beginning_stage" class="editable-text">
+                Coniacian              </div>
+            </div>
+            <div id="fraction_up_beginning_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Fraction Up In Beginning Stage: &nbsp;</b>
+              <div id="fraction_up_beginning_stage" class="editable-text">
+                0              </div>
+            </div>
+            <div id="beginning_date" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Beginning Date: &nbsp;</b>
+              <div id="beginning_date" class="editable-text">
+                89.39              </div>
+            </div>
+            <div id="beginning_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Ending Stage in Treatise Usage: &nbsp;</b>
+              <div id="beginning_stage" class="editable-text">
+                U.Cret.(Senon.)              </div>
+            </div>
+            <div id="ending_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Ending International Stage: &nbsp;</b>
+              <div id="ending_stage" class="editable-text">
+                Maastrichtian              </div>
+            </div>
+            <div id="fraction_up_ending_stage" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Fraction Up In Ending Stage: &nbsp;</b>
+              <div id="fraction_up_ending_stage" class="editable-text">
+                100              </div>
+            </div>
+            <div id="ending_date" class="horiz" style="text-align: left;">
+              <b>&nbsp;&nbsp;&nbsp;&nbsp;Ending Date: &nbsp;</b>
+              <div id="ending_date" class="editable-text">
+                66.04              </div>
+              <br><br>
+            </div>
+            <h2 class="small-header">Description</h2>
+            <div id="Distinguishing_characteristics" class="horiz" style="text-align: left;">
+              <div id="Distinguishing_characteristics" class="editable-text">
+                Test free, ovoid, initial stage quinqueloculine followed successively by triloculine and biloculine stages and finally with completely en"eloping chambers in adult, one or more of early stages may be lacking in some specimens; aperture in quinqueloculine stage with simple tooth, in triloculine stage with crenulate border in addition to tooth, in biloculine stage with more strongly marked crenulations and adult with raised trematophore pierced by numerous irregular openings.              </div>
+              <br><br>
+            </div>
+            <br><br>
+            <h2 class="small-header">References</h2>
+            <div id="Reference_information" class="horiz" style="text-align: left;">
+              <div id="Reference_information" class="editable-text">
+                Schlumberger, Charles, , \& Munier-Chalmas, E., 1884, Note sur les MiliolidÃ©es trÃ©matophorÃ©es: Soc. gÃ©ol. France, Bull., ser. 3, v. 12(1883-1884), pt. 8, p. 629-630.              </div>
+            </div>
+            <br><br>
+            <h2 class="small-header">Museum or Author Information</h2>
+            <div id="Museum_or_author_information" class="horiz" style="text-align: left;">
+              <div id="Museum_or_author_information" class="editable-text">
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // For all elements with data-taxonomy-level 
+        const baseUrl = window.location.origin;
+        const taxonomyElements = document.querySelectorAll('[data-taxonomy-level]');
+        
+        // Substitute all plain text with links
+        taxonomyElements.forEach(function(element) {
+          const level = element.getAttribute('data-taxonomy-level');
+          const name = element.getAttribute('data-taxonomy-name');
+          
+          // Skip empty ones
+          if (!name || name.trim() === '') {
+            return;
+          }
+          
+          // Get PDF link
+          fetch(`getTaxonomyLink.php?level=${encodeURIComponent(level)}&name=${encodeURIComponent(name)}`)
+            .then(response => response.json())
+            .then(data => {
+              if (data.link) {
+                // Substitute plain text with links
+                const fullLink = `${baseUrl}${data.link.startsWith('/') ? '' : '/'}${data.link}`;
+                const currentText = element.textContent;
+                element.innerHTML = `<a href="${fullLink}" target="_blank">${currentText}</a>`;
+              }
+              // Link not found. Remain plain text.
+            })
+            .catch(error => {
+              console.error('Error fetching taxonomy link:', error);
+            });
+        });
+      });
+    </script>
+    </div> 
+</body>
+</html>

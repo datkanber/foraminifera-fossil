@@ -1,0 +1,771 @@
+
+=== PDF PAGE 1 ===
+ 
+ 
+https://doi.org/10.35463/j.apr.2021.01.04                                                                       ACTA  PALAEONTOLOGICA  ROMANIAE  (2021) V. 17(1), P. 41-48 
+ 
+ 
+ 
+________________________________ 
+Lerchenauerstr. 167, 80935 Munich, Germany, felix.schlagintweit@gmx.de                                                                                                                  41                              
+ORBITOLINA DAVIESI HOFKER, 1966: A FORGOTTEN ORBITOLINIDAE FROM THE 
+THANETIAN OF PAKISTAN AND ITS TAXONOMIC STATUS 
+ 
+Felix Schlagintweit 
+ 
+ 
+Received: 3 September 2020 / Accepted:  16 November 2020 / Published online: 23 November 2020 
+ 
+Abstract Orbitolina daviesi Hofker, 1966 (family Orbitolinidae) was validly described and thoroughly illustrated 
+from Thanetian limestones of Pakistan. Although its attribution to the genus Orbitolina d’Orbigny and any phyloge-
+netic relationships with the Cretaceous taxa have been refuted shortly afterwards, the species has not been taxonomi-
+cally revised since then. Karsella hottingeri Sirel, 1999 was established as new genus and new species from the 
+Thanetian of Turkey, without taking into account J. Hofker’s publication. The original description and genus diagno-
+sis of Karsella has meanwhile been emended to include the occurrence of a radial zone with septula that follow a zig-
+zag pattern and associated linear arrangement of the foramina, as well as a complex embryo. Orbitolina daviesi clear-
+ly displays these features and is here considered a species of the genus Karsella Sirel. Karsella hottingeri is regarded 
+as a subjective junior synonym of O. daviesi Hofker and therefore, the only species of the genus is given as a new 
+combination: Karsella daviesi (Hofker). From a suprageneric viewpoint, the two Paleogene genera Karsella Sirel and 
+Cushmania Silvestri display a complex embryo and might belong to a new subfamily of the Orbitolinidae, phyloge-
+netically different and unrelated to the lower-mid Cretaceous Orbitolininae. 
+ 
+Keywords: Foraminifera, Orbitolinidae, taxonomy, phylogeny, Cretaceous, Paleogene. 
+ 
+INTRODUCTION 
+ 
+In his “Studies on the family Orbitolinidae”, Hofker 
+(1966) described a new species as Orbitolina daviesi 
+from the Thanetian Harnai Limestone (~ Dungan For-
+mation) of Pakistan (Davies, 1941). As holotype, Hofker 
+designated the megalospheric axial section illustrated in 
+plate 3, figure 3, which is deposited at the Natural History 
+Museum, London. Orbitolina daviesi has been thorough-
+ly illustrated showing all the characteristic features for a 
+structural analysis, and an accurate description. The taxo-
+nomic position of the Pakistani species within the genus 
+Orbitolina d’Orbigny (upper Albian-middle Cenomanian, 
+see Schroeder and Neumann, 1985) and any relationship 
+with the mid-Cretaceous taxa of the Orbitolinidae have 
+been refuted by Schroeder (1975, p. 128). Nonetheless, 
+O. daviesi has not been taxonomically revised so far. In 
+1997, Sirel described "a new complex orbitolinid" as 
+Karsella hottingeri n. gen., n. sp. from the Thanetian of 
+the Van region, East Turkey without taking into account 
+the publication of Hofker in which Orbitolina daviesi has 
+been described. Cruz-Abad (2018, p. 85) noted the simi-
+larities between O. daviesi and K. hottingeri but refrained 
+from formulating conclusions due to the lack of well-
+preserved material which was described as “few and bad-
+ly preserved sections” provided by E. Sirel. Instead, 
+Cruz-Abad (2018, fig. 78F-H) illustrated three specimens 
+of “Orbitolina” daviesi from the Thanetian of Pakistan 
+provided by L. Hottinger. In his "Illustrated glossary of 
+terms used in foraminiferal research", Hottinger (2006, 
+fig. 41) illustrated two specimens of Karsella from the 
+upper Paleocene of Pakistan exhibiting "an architecture 
+strikingly similar to the one of Mid-Cretaceous orbito-
+linids" including the sub- and supraembryonic zones. It 
+appears that L. Hottinger’s material from Pakistan has 
+been illustrated (with different specimens) as both 
+Karsella hottingeri by Hottinger (2006) and “Orbitolina” 
+daviesi Hofker by Cruz-Abad (2018). Karsella hottingeri 
+has been recently revised by Schlagintweit (2020), there-
+by including Karsella within the subfamily Orbitolininae 
+(orbitolinids with a complex embryo), the only post-
+Cretaceous taxon attributed to this subfamily so far. In 
+the present contribution, the Pakistani (O. daviesi) and 
+the Turkish (K. hottingeri) taxa are compared and the 
+taxonomic status (generic and suprageneric) of the former 
+is reassessed. In addition, the suprageneric classification 
+of Orbitolinidae displaying a complex embryo is shortly 
+discussed. 
+ 
+DISCUSSION 
+ 
+Taxonomic status of Orbitolina daviesi Hofker, 1966 
+ 
+Embryonic apparatus 
+ 
+The genus Orbitolina d’Orbigny is characterized by an 
+embryonic apparatus subdivided into three parts, prolocu-
+lus, subdivided supraembryonic zone (spz), and subdivid-
+ed subembryonic zone (sbz) (Henson, 1948; Douglass, 
+1960; Schroeder, 1962; Schroeder and Neumann, 1985). 
+The sbz (below the proloculus) is weakly developed with 
+respect to the spz (above the proloculus) (Schroeder, 
+1962, p. 185). Directly above the proloculus and in the 
+middle portion, the spz is comparably thin, becoming 
+thicker laterally. Both zones are in planar lateral contact 
+about the middle part of the proloculus, one setting that is 
+also due to the flat-discoidal test morphology (e.g., 
+Schroeder, 1962, fig. 4B). As stated by Schroeder (1962, 
+
+
+=== PDF PAGE 2 ===
+Felix Schlagintweit 
+42 
+ 
+p. 179), the proloculus and the subembryonic zone are not 
+in contact by means of an opening or pore. The embryo 
+of “O.” daviesi is different from that of the Cenomanian 
+orbitolinas and according to Schroeder (1975, p. 128) the 
+Pakistani species can therefore not be assigned to the 
+genus Orbitolina. Instead, the embryos of “O.” daviesi 
+and K. hottingeri display the same structure. Due to the 
+rounded apex, the spz envelops laterally the proloculus 
+and displays equal thickness. It consists of numerous, 
+close-set partitions of equal length that are discernible in 
+axial sections (Fig. 1b, d). Both the upper side of the spz 
+and the lower side of the zone below the embryo are con-
+vex. The latter is loosely subdivided and surrounds the 
+protoconch at the base, laterally reaching up to the test 
+surface; it is herein interpreted as a peri-embryonic zone 
+(pz) according to the definition of Berthou and Schroeder 
+(1978, p. 72) for the Mid-Cretaceous Neoiraqia Danilova, 
+1963 (Fig 1i). The pz is distinctly thicker than the spz and 
+subdivided only by a few partitions. A pore opening be-
+tween the proloculus and the pz is visisble in some illus-
+trated specimens (e.g., pl. 2, fig. 10, pl. 3, fig. 5 in 
+Hofker, 1966 for O. daviesi; pl. 1, fig. 9 in Sirel, 1997, 
+and fig. 41L in Hottinger, 2006 for K. hottingeri). Con-
+nections between the megalosphere and the pz (here: pe-
+ri-embryonic ring; epi-embryonic chambers in Hofker, 
+1966) by means of several pores is also known from the 
+Lower Cretaceous Palorbitolina (see Schroeder, 1963). 
+The subdivision of the large embryonic chamber into a 
+smaller protoconch and a distinctly larger deuteroconch 
+by a thin basal ridge/projection is equally recognizable in 
+O. daviesi (e.g., Hofker, 1966, pl. 3, fig. 7) and K. hot-
+tingeri (e.g., Hottinger, 2006, fig. 41K-L). Referring to 
+Schroeder and Neumann (1985, fig. 7: for Neorbitolinop-
+sis conulus), the basal ridge can represent a subdivision 
+of the proloculus, whereas the deuteroconch comprises 
+the upper part of the embryonic chamber and its parti-
+tions. The embryo of Karsella was described by Sirel 
+(1997, p. 208) as consisting of a subspherical megalo-
+sphere and "periembryonic chambers [….] arranged in a 
+trochoid spire" (Fig. 1A-C). This can be indicative for a 
+reduced juvenile spiral stage. In his "Illustrated glossary 
+of terms used in foraminiferal research", Hottinger (2006, 
+fig. 41) illustrated two specimens of Karsella from the 
+Upper Paleocene of Pakistan exhibiting "an architecture 
+strikingly similar to the one of Mid-Cretaceous orbito-
+linids" including both sub- and supraembryonic zones 
+(Fig. 1d-e). The terminology used by this author for the 
+embryonic apparatus of Karsella is not compatible with 
+the general one used by Schroeder (1962), for example in 
+the upper Albian-lower Cenomanian Neoiraqia (Moul-
+lade et al., 1979; Schroeder in Schroeder and Neumann, 
+1985) (Fig. 1i). The embryo of this genus like that of the 
+Eocene Cushmania Silvestri, 1925 (Fig. 1e-h, Fig. 3f) 
+show resemblances to that of Karsella as already noted 
+by Butterlin and Moullade (1968, p. 10). It is worth men-
+tioning here that M. Moullade, who erected the subfamily 
+Dictyoconinae, assigned Heterodictyoconus (= junior 
+synonym of Cushmania, e.g. Hottinger and Drobne, 
+1980) to the Orbitolininae due to its complex embryo 
+(Butterlin and Moullade, 1968). This view was not fol-
+lowed by subsequent authors assigning Cushmania to the 
+Dictyoconinae (Hottinger and Drobne, 1980; Loeblich 
+and Tappan, 1987; Kaminski, 2014). The “apical wall” 
+displaying a “subepidermal network” (Hottinger and 
+Drobne, 1980) of Cushmania however is well comparable 
+to Rectodictyoconus Schroeder, 1964 that on the other 
+hand is included in the Orbitolininae (Loeblich and Tap-
+pan, 1987; Kaminski, 2014) (Fig. 3d). 
+Referring to the chambers enveloping the large embryon-
+ic chamber (proloculus-deuteroconch) at its lower side 
+and laterally, these can be ascribed either to the subem-
+bryonic or peri-embryonic zone (or chambers). The next 
+chamber following below in growth direction is the first 
+post-embryonic one (e.g., Fig. 1i). In L. Hottinger’s 
+(2006) image (Fig. 1d), the subembryonic zone is correct-
+ly placed below the large embryonic chamber (prolocu-
+lus-deuteroconch) but the first chamber following the 
+subz is questionable assigned to the peri-embryonic zone. 
+No orbitolinid posseses both sub- and periembryonic 
+zones: it is always one or the other. In some sections, the 
+chambers below the embryonic chamber in Karsella ap-
+pear to be arranged in a trochospire as also indicated by 
+Sirel (1997) (e.g., Fig. 1b–c). In conclusion, the embryo 
+of Karsella appears a complex set of structures in which 
+some details are still not fully understood, which is also 
+reflected in a less precise terminology.  
+ 
+Exoskeleton 
+ 
+Both K. hottingeri and O. daviesi display a thin epiderm 
+and a complex subepidermal network consisting of sever-
+al orders of horizontal and vertical partitions. The exo-
+skeleton of Karsella consists of "several generations of 
+beams and rafters" (Sirel, 1997, p. 208). There may be up 
+to four rafters in adult chambers, and up to three orders of 
+beams, forming a subepidermal network that can be de-
+duced from the original illustrations, which are not of 
+very good quality (Sirel, 1997, pl. 1, fig. 8). Several or-
+ders of both horizontal (Fig. 2d) and vertical partitions 
+(Fig. 2c) are conspicuous in “Orbitolina” daviesi, but no 
+details were included in the original description provided 
+by Hofker (1966). 
+ 
+Endoskeleton 
+ 
+According to Hottinger and Drobne (1980, p. 8), Paleo-
+gene Orbitolinidae comprise only two types of endoskele-
+tons: continuous chamber partitions (e.g., Verseyella 
+Robinson, 1977, needing suprageneric revision) and sepa-
+rated isolated pillars (e.g., Dictyoconus Blanckenhorn). 
+As has already been noted by Schlagintweit (2020), 
+Karsella hottingeri does not have pillars in the central 
+zone as indicated in the original description. Instead, 
+Karsella is characterized by the presence of a radial zone 
+with radial passages (sensu Henson, 1948) and septula in  
+ 
+
+
+=== PDF PAGE 3 ===
+Orbitolina Daviesi Hofker, 1966: A forgotten orbitolinidae from the Thanetian of Pakistan and its taxonomic status  
+ 
+43 
+ 
+ 
+ 
+ 
+ 
+Fig. 1 Paleogene (Thanetian) Orbitolinidae from Turkey (a–b), Pakistan (c–d), and Eocene of Mexico (f), and 
+Florida (e, h). a–d, Karsella daviesi (Hofker, 1966) comb. nov., axial sections of megalospheric specimens (a 
+and b from Sirel, 1997, pl. 1, figs. 2, 4 = holotype of K. hottingeri; C from from Hofker, 1966, pl. 3, fig. 9 as 
+Orbitolina daviesi n. sp.; d from Hottinger, 2006, fig. 41K as K. hottingeri). e–h, Cushmania americana 
+(Cushman, 1919), oblique-transverse and oblique sections of the megalospheric embryo (e–f), axial sections of 
+megalospheric specimens (g–h) (e and h from Cole and Applin, 1964, pl. 2, figs. 3, 6; f–g from Butterlin and 
+Moullade, 1968, pl. 1, figs. 7 and 5). i) Schematic drawing of the megalospheric embryo of Neoiraqia Danilova 
+(upper Albian-lower Cenomanian) (modified from Moullade and Peybernès, 1979, fig. 1). Abbreviations: b = 
+beam, d = deuteroconch, pi = pillar, pr = proloculus, p.z. = periembryonic zone (or chamberlets), r = rafter, s = 
+septum, sl = septulum, sub.z. = subembryonic zone, supra = supraembryonic zone. Arrow in d: supraembryonic 
+chamber fide Hottinger (2006). 
+
+
+=== PDF PAGE 4 ===
+Felix Schlagintweit 
+44 
+ 
+ 
+a zig-zag pattern associated with a linear arrangement of 
+foramina   as  a  characteristic feature. This pattern is also  
+found in Orbitolina (Davies, 1939: Fig. 5; Henson, 1948: 
+Fig. 7; Hofker, 1966: Fig. 1), leading Butterlin and Moul-
+lade (1968, p. 10) to conclude that “Orbitolina” daviesi 
+Hofker displays a structure “curieusement orbito-
+liniforme”. All other Paleogene Orbitolinidae display 
+pillars in the central zone: Cushmania Silvestri, Da-
+viesiconus Hottinger & Drobne, Dictyoconus Blancken-
+horn, and Fallotella Mangin (Hottinger and Drobne, 
+1980; Loeblich and Tappan, 1987). The radial zone with 
+septula in zig-zag pattern is evident in O. daviesi (Hofker, 
+1966, pl. 2, fig. 11, 14) and K. hottingeri (Sirel, 1997, pl. 
+2, fig. 3; Afzal, 2010, pl. 14, fig. 6) (see also 2a, c). These 
+undulating main partitions (septula) are alternating in 
+position between subsequent chambers (Fig. 2d). They 
+reach into the central test part where they are anasto-
+mosed and from a distinct network of reduced width. In  
+ 
+ 
+shallow tangential sections, the chamber passages be-
+tween the septula display a rounded outline (Hofker, 
+1966, pl. 3, fig. 2 for O. daviesi). Let us remember that if 
+the septula of Orbitolinidae “would be simple, vertical 
+walls, their alternating position [Remark: between  subse- 
+quent chambers!] would obstruct the rows of forami-
+na......therefore, the radial partition must undulate at its 
+foot...” (Hottinger and Drobne, 1980, p. 210). The axes of 
+the foramina are obliquely arranged and visible in axial 
+sections as round pores (Fig. 2b and d). The presence of a 
+well-developed radial zone reaching far into the central 
+test part is obvious in “Orbitolina” daviesi (Fig. 2c). In 
+the legend of an oblique section (Hofker, 1966, pl. 2, fig. 
+14),  which  is re-illustrated  here  as  Figure 2c,   Hofker 
+states the occurrence of “radial chamber passages”. In 
+conclusion, Karsella Sirel is the only Paleogene taxon 
+displaying a radial zone, a feature that is widely spread 
+among many Lower-middle Cretaceous genera. 
+ 
+ 
+ 
+Fig. 2 Karsella daviesi (Hofker, 1966) comb. nov., Thanetian of Turkey (a–b) and Pakistan (c–d). a, slightly oblique 
+transverse section showing radial zone (from Sirel, 1997, pl. 2, fig. 3). b, Axial section (from Sirel, 1997, pl. 1, fig. 9). c, 
+Oblique section showing radial zone with undulating (zig-zag-like) septula and associated foramina arranged in radial 
+lines (from Hofker, 1966, pl. 2, fig. 14). d, Subaxial section (from Hofker, 1966, pl. 2, fig. 13). Abbrevations: f = fora-
+men, sl = septulum. 
+
+
+=== PDF PAGE 5 ===
+Orbitolina Daviesi Hofker, 1966: A forgotten orbitolinidae from the Thanetian of Pakistan and its taxonomic status  
+ 
+45 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dimensions 
+ 
+Except for the test diameter, the dimensions of O. daviesi 
+and K. hottingeri do not differ significantly (see Table 1). 
+In the absence of consistent biometrical data it can be 
+rather speculated whether the Pakistani species seems to 
+reach larger test diameters. One distinct possibility is that 
+Hofker (1966) based his maximum value on a micro-
+spheric specimen that is usually characterized by less 
+conical and therefore broader tests. For the specimen 
+from Turkey (2a), which has a test diameter of ~2.0 mm, 
+there are about 8-9 septula per quadrant. The much larger 
+specimen from Pakistan shows ~14-15 septula per quad-
+rant at a test diameter of ~3.6 mm (2c). The heights indi-
+cated by Hofker (1966) and Sirel (1997) are identical. 
+The diameter of the large apical embryonic chamber is 
+comparable too.  
+ 
+Remarks on suprageneric classification 
+ 
+ 
+ 
+ 
+Because of its complex embryo, Karsella Sirel has been 
+removed from the Dictyoconinae and assigned to the Or-
+bitolininae by Schlagintweit (2020). Cretaceous orbito-
+linids with complex embryo have been reported from the 
+upper Hauterivian-lower upper Cenomanian (Clavel et 
+al., 2014; Schroeder and Neumann, 1985; Yazdi-
+Moghdam and  Schlagintweit,  2020)  with  more  than 10  
+ 
+ 
+ 
+ 
+genera (Kaminski, 2014) (Fig. 3). There is no record of 
+Upper Cretaceous (Coniacian-Maastrichtian) Orbitolini-
+nae 
+following 
+the 
+end-Cenomanian 
+extinction 
+(Schlagintweit et al., 2016; Cruz-Abad, 2018). Only two 
+Paleogene genera present a complex embryo: Karsella 
+Sirel (Thanetian) and Cushmania Silvestri (middle Eo-
+cene-Rupelian). From a phylogenetic viewpoint, it ap-
+pears reasonable inferring that both groups were not di-
+ 
+ 
+Fig. 3 Comparing concept of Cretaceous (subfamily Orbitolininae) and Paleogene Orbitolinidae (new subfamily?) 
+with complex embryo. Examples (without scale): a, genus Palorbitolina Schroeder (lower Aptian of Croatia), b, 
+genus Mesorbitolina Schroeder, upper Aptian of Iran, c, genus Rectodictyoconus Schroeder, lower Aptian of Iran, 
+d, genus Persiconus Yazdi-Moghadam & Schlagintweit, middle Cenomanian of Iran, e, genus Praeorbitolina 
+Schroeder, lower Aptian of Iran, f, genus Karsella Sirel, Thanetian of Turkey (from Sirel, 1997, pl. 1, fig. 4), g, 
+genus Cushmania Silvestri, middle Eocene of Florida (from Cole, 1942, pl. 6, fig. 2, and detail in 9). 
+Table 1. Dimensions of Orbitolina daviesi Hofker (Thanetian of Pakistan) and Karsella hottingeri Sirel 
+(Thanetian of Turkey). Data as indicated in the original descriptions. * measured from the original illus-
+trations,  **measured from Hottinger (2006). 
+ 
+dimensions            species 
+Orbitolina daviesi Hofker 
+Karsella hottingeri Sirel 
+test diameter 
+up to 5.0 mm 
+up to 3.4 mm 
+test height 
+up to 5.0 mm 
+up to 4.9 mm 
+diameter embryonic chamber 
+~0.5 mm 
+0.23-0.4 mm* (~0.48 mm **) 
+ 
+
+
+=== PDF PAGE 6 ===
+Felix Schlagintweit 
+46 
+ 
+rectly related to each other because they appear separated 
+by two mass extinctions, namely those from the Cenoma- 
+nian-Turonian and Maastrichtian-Danian boundaries. In 
+addition, some structural details of the embryos of 
+Karsella and Cushmania require a further comparative 
+study and clarification with equivalent structures of the 
+Cretaceous orbitolinid counterparts. Despite this, the em-
+bryonic structures of the two Paleogene genera appear 
+very similar, and both can belong to a new subfamily, 
+different from the Cretaceous Orbitolininae. 
+ 
+Systematic Description 
+ 
+Phylum Foraminifera d’Orbigny, 1826 
+Class Globothalamea Pawlowski et al., 2013 
+Order Loftusiida Kaminski and Mikhalevich, 2004 
+Suborder Loftusiina Kaminski and Mikhalevich, 2004 
+Superfamily Orbitolinoidea Martin, 1890 nomen transla-
+tum Loeblich and Tappan, 1982 [Orbitolinacea] nomen 
+correctum Kaminski, 2014 
+Family Orbitolinidae Martin, 1890 
+?Subfamily Orbitolininae Martin, 1890 nomen translatum 
+Cushman in Eastman, 1913  
+Genus Karsella Sirel, 1997 
+Type-species Karsella hottingeri Sirel, 1989 by original 
+designation.  
+Karsella daviesi (Hofker, 1966) comb. nov. 
+ 
+1941 Orbitolina sp. – Davies, p. 317 (fide Hofker, 1966). 
+1966 Orbitolina daviesi n. sp. – Hofker, p. 12, pl. 2, figs. 
+10-14, pl. 3. 
+1997 Karsella hottingeri n. gen., n. sp. – Sirel, p. 210, pl. 
+1, figs. 1-10, pl. 2, figs. 1-4. 
+Non 2005 Karsella sp.  – Tentor and Venturini, fig. 8, 9?, 
+10-12 [Schroedericonus turriculus (Hottinger & Drob-
+ne)]. 
+2006 Karsella hottingeri Sirel – Hottinger, fig. 41K-L. 
+2010 Karsella hottingeri Sirel – Afzal, p. 115, pl. 14, 
+figs. 5-10, ?11-13?, 14. 
+2014 “Orbitolina” daviesi J. Hofker jun. – Hottinger, p. 
+51, pl. 4.9, fig. 2. 
+2018 Karsella hottingeri Sirel – Cruz-Abad, p. 84, fig. 
+78A-E (reproduction of Sirel, 1997). 
+2018 “Orbitolina” daviesi Hofker – Cruz-Abad, fig. 78F-
+H. 
+2020 Karsella hottingeri Sirel – Schlagintweit,  figs. 1, 
+2A-B (reproductions of Sirel, 1997, Hottinger, 2006, and 
+Afzal, 2010). 
+ 
+Description: Test large, high-conical to slightly cylin-
+droconical with moderately convex base. The megalo-
+spheric embryo is situated in a central position at the 
+rounded apex and presents a diameter of up to 0.5 mm. It 
+consists of an irregular ellpisoidal proloculus, a large 
+deuteroconch with partitions (supraembryonic zone) and 
+a few broad peri-embryonic chambers (“subembryonic 
+zone”) that are sporadically subdivided. The neanic stage 
+consists of up to 27 uniserial chambers subdivided into 
+marginal, broad radial, and reduced central zones. There 
+are 5-7 chambers per the last millimeter of the axial cone 
+length. The marginal zone is complex, displaying several 
+orders of beams and rafters. The main partitions (septula), 
+are triangular in axial section, increase in thickeness to-
+wards the cone centre and alternate in position between 
+subsequent chambers. In transverse sections, the septula 
+display a zig-zag pattern with associated radially arranged 
+foramina piercing  the  septa  obliquely. The septula form 
+an irregular network displaying oblique stolon axes in the 
+reduced central zone. Wall agglutinated. 
+ 
+Occurrences: Karsella daviesi (Hofker) comb. nov. is 
+known from the Thanetian of Turkey (Sirel, 1997), 
+and Pakistan (Hofker, 1966; Hottinger, 2006; Afzal, 
+2010).  
+ 
+CONCLUSIONS 
+ 
+Based on comparison of the embryonic apparatuses, the 
+presence of a radial zone (an exception in Paleogene Or-
+bitolinidae exhibiting pillars) and a complex exoskeleton, 
+Karsella hottingeri Sirel, 1997 is considered a junior 
+synonym of Orbitolina daviesi Hofker, 1966. The Paki-
+stani taxon, however, is not a species of Orbitolina 
+Orbigny but is assigned herein to Karsella leading to the 
+new combination Karsella daviesi (Hofker). Both, the 
+Thanetian Karsella Sirel, 1997 and Eocene Cushmania 
+Silvestri, 1925 might, in accordance with current supra-
+generic classification of the Orbitolinidae, be removed 
+from the Dictyoconinae and assigned to a group (new 
+subfamily?) of Paleogene Orbitolinidae that display a 
+complex embryo and are phylogenetically separated from 
+the Cretaceous (upper Hauterivian-Cenomanian) Orbito-
+lininae. 
+ 
+ACKNOWLEDGEMENTS 
+ 
+Marius (Dan) Georgescu (Calgary) is thanked for assis-
+tance with the English. The two reviewers Lorenzo Con-
+sorti (Trieste) and Johannes Pignatti (Rome) are thanked 
+for helpful suggestions. 
+ 
+REFERENCES 
+ 
+Afzal, J., 2010. Evolution of Larger Benthic Foraminifera 
+during the Paleocene-Early Eocene interval in the 
+East Tethys (Indus Basin, Pakistan). PhD Thesis Uni-
+versity 
+of 
+Leicester: 
+1-291. 
+https://core.ac. 
+uk/display/2796424 
+Berthou, P.Y., Schroeder, R., 1978. Les Orbitolinidae et 
+Alveolinidae de l'Albien supérieur-Cénomanien infé-
+rieur dans le Sud-Ouest de la region de Lisbonne 
+(Portugal). Cahiers de Micropaléontologie, 3: 51-103.  
+Blanckenhorn, M., 1900. Neues zur Geologie und Paläon-
+tologie Ägyptens. Zeitschrift der Deutschen Geolo-
+gischen Gesellschaft, 52: 403-479. 
+
+
+=== PDF PAGE 7 ===
+Orbitolina Daviesi Hofker, 1966: A forgotten orbitolinidae from the Thanetian of Pakistan and its taxonomic status  
+ 
+47 
+ 
+Butterlin, J., Moullade, M., 1968. Les Orbitolinidae de 
+l’Eocène de la région es Caraïbes. Archives des 
+Sciences, 21 (1), 5-20. 
+Clavel, B., Charollais, J., Busnardo, J., Granier, B., Con-
+rad, M.,  
+Desjacques, P., Metzger, J., 
+2014. La plate-forme carbonatée urgonienne (Haute-
+rivien supérieur - Aptien inférieur) dans le Sud-est de 
+la France et en Suisse: synthèse. Archives des 
+Sciences, 67, 1-100. 
+Cole, W.S., 1942. Stratigraphic and paleontologic studies 
+of wells in Florida-No. 2. Suwannee Petroleum Cor-
+poration’s Sholtz no. 1, Florida Oil Discovery Com-
+pany’s Cedar Keys no. 2. Florida Geological Survey 
+Bulletin, 20, 1-90. 
+Cole, W.S.,  Applin, E.E., 1964. Problem of the geogra-
+phic and stratigraphic distribution of American 
+Middle Eocene Larger Foraminifera. Bulletins of 
+American Paleontology, 47, 1-48. 
+Cruz-Abad, E., 2018. Textura y Arquitectura de los Orbi-
+tolinoideos (Superfamilia  
+Orbitolinoidea): Re-
+visión y Caracterización. PhD Thesis University of 
+Barcelona, 154 p. Online: https://www. tesisen-
+red.net/handle/10803/665998#page=1 
+Cushman, J.A., 1919. Fossil Foraminifera from the West 
+Indies. In: Vaughan T.W., Contributions to the geolo-
+gy and paleontology of the West Indies. Publications 
+Carnegie Institution, 291, 21-71. 
+Danilova, A. 1963. Neoiraqia convexa, nav. foraminifer 
+iz cenomanturona Kosova polja - Neoiraqia convexa, 
+a new foraminifer from the Cenomanian-Turonian of 
+Kosovo Polje. Vesnik. Zavada za Geoloska i Geofizi-
+ka Istra ivanja, Nr. Srbije, ser. a, 20 (1962): 223-226. 
+Davies, L.M., 1939. An early Dictyoconus, and the genus 
+Orbitolina: their contemporaneity, structural distinc-
+tion, and respective natural allies. Transactions of the 
+Royal Society of Edinburgh, 59, 773-790. 
+Davies, L.M., 1941. The “Dunghan” limestone, and 
+Ranikot Beds in Baluchistan. Geological Magazine, 
+128 (4), 316-317. 
+Douglass, R.C., 1960. The foraminiferal genus Orbitolina 
+in North America. Geological  Survey 
+Professional 
+Papers, 333: 1-52. 
+Eastman, C.R., 1913. Text-book of Paleontology. Mac-
+millan and Co., London, 1-839. 
+Henson, F.R.S., 1948. Larger imperforate Foraminifera of 
+south-western Asia. Families  
+Lituolidae, Orbitolin-
+idae and Meandropsinidae. London, Monograph Brit-
+ish Museum  (Natural History): 127 p. 
+Hofker, J. Jr., 1966. Studies on the family Orbitolinidae. 
+Palaeontographica, Abt. A, 126: 1-34. 
+Hottinger, L., 2006. Illustrated glossary of terms used in 
+foraminiferal research. Carnets de  
+Géologie 
+/ 
+Notebooks 
+on 
+Geology, 
+Memoir 
+2006/02 
+(CG2006_M02). 
+Hottinger, L., 2014. Paleogene larger rotaliid foraminif-
+era from the Western and Central Neotethys. Spring-
+er, Heidelberg, 1-196. 
+Hottinger, L., Drobne, K., 1980. Early Tertiary conical 
+imperforate foraminifera.  
+Razprave IV. razr. 
+SAZU, 22: 188-276. 
+Kaminski, M.A., 2004. The new and reinstated genera of 
+agglutinated foraminifera published between 1996 
+and 2000. In: Bubík, M., Kaminski, M.A., (Eds.); 
+Proccedings of the Sixth Workshop on Agglutinated 
+Foraminifera. Grzybowski Foundation Special Publi-
+cation, 8: 257-271. 
+Kaminski, M.A., 2014. The year 2010 classification of 
+the agglutinated Foraminifera.  Micropaleontology, 
+60 (1): 89-108. 
+Loeblich A.R. Jr., Tappan H. (1987). Foraminiferal gene-
+ra and their classification, Van  Nostrand 
+Reinhold, 
+New York, 2 vol., 970 p., 847 pls. 
+Moullade, M., 1965. Contribution au problème de la clas-
+sification des Orbitolinidae  
+(Foraminiferida, Li-
+tuolacea). Comptes rendus de l' Académie des 
+Sciences, 260:  
+4031- 
+4034. 
+Moullade, M., Peybernès, B., Rey, J., 1979. Révision et 
+intérêt stratigraphique du genre Neoiraqia Danilova, 
+1962, 
+Orbitolinidé 
+du 
+Mésocrétacé 
+mésogéen. 
+Comptes Rendus de l’Académie des Sciences, Sér D 
+288: 939-942. 
+Orbigny, A.D.d'., 1849-1852. Prodrome de paléontologie 
+stratigraphique universelle des  animaux mollusques 
+et rayonnés faisant suite au cours élémentaire de pa-
+léontologie et de géologie stratigraphiques. Paris, 
+Masson. vol. 1 (1849), lx + 394 pp.; vol. 2 (1850), 
+427 pp.; vol. 3 (1852), 389 pp. 
+Robinson, E., 1977. Larger imperforate foraminiferal 
+zones of the Eocene of central Jamaica. Memoria Se-
+gundo Congreso Latinoamericano de Geologia, Cara-
+cas, Venezuela, 11 al 16 de Noviembre de 1973, 3: 
+1413-1421. 
+Schlagintweit, F., Rashidi, K., Babadipour, M., 2016. 
+Orbitolinid foraminifera from the Late Maastrichtian 
+of the Tarbur Formation (Zagros Zone, SW Iran). Ac-
+ta Palaeontologica Romaniae, 12 (2), 29-46. 
+Schlagintweit, F., 2020. Karsella hottingeri, Sirel, 1997 
+(Thanetian of Turkey): The first Paleogene "Orbito-
+lininae". Iranian Journal of Geoscience Museum, 1 
+(2): 97-102 
+Schroeder, R., 1962. Orbitolinen des Cenomans Sdw est -
+europas. Paläontologische Zeitschrift, 36 (3-4): 171-
+202. 
+Schroeder, R., 1963. Palorbitolina, ein neues Subgenus 
+der Gattung Orbitolina (Foram.). Neues Jahrbuch für 
+Geologie und Paläontologie Abhandlungen, 117: 346-
+359. 
+Schroeder, R., 1964. Orbitoliniden-Biostratigraphie des 
+Urgons nordöstlich von Teruel (Spanien). Neues 
+Jahrbuch 
+für 
+Geologie 
+und 
+Paläontologie, 
+Monatshefte, 8: 462-474. 
+Schroeder, R., 1965. Neorbitolinopsis n. gen. und ihre 
+systematische Position innerhalb der Orbitoliniden. 
+Eclogae Geologicae Helvetiae, 58 (1), 579-589.  
+
+
+=== PDF PAGE 8 ===
+Felix Schlagintweit 
+48 
+ 
+Schroeder, R., 1975. General evolutionary trends in or-
+bitolinas. Revista Española de  Micropaleontologia, 
+Num. esp. 1975: 117-128. 
+Schroeder, R., Neumann, M., 1985 (coords.). Les grands 
+Foraminifères du Crétacé Moyen de la région Médite-
+rranénne. Geobios, Mémoire Spécial, 7: 1-160. 
+Silvestri, A., 1925. Sulla diffusione stratigrafica del gene-
+re "Chapmania" Silv. e Prev. Memorie della Pontifi-
+cia Accademia della Scienze, Nuovi Lincei, ser. 2, 8: 
+31-60. 
+Sirel, E., 997. Karsella, a new complex Orbitolinid 
+(Foraminiferida) from the Thanetian  
+limestone of 
+the Van region (East Turkey). Micropaleontology, 43 
+(2): 206-210. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tentor, M. Venturini S., 2005. Karsella e Keramosp-
+haerina (Foraminiferi): Primo  rinvenimento in un 
+incluso Paleocenico nel Flysch Eocenico presso Vi-
+gant (Nimis, Udine, NE Italy). Natura Nascosta, 31: 
+1-14. 
+Yazdi-Moghadam, M., Schlagintweit, F., 2020. Persi-
+conus sarvaki gen. et sp. nov., a new complex orbito-
+linid (Foraminifera) from the Cenomanian of the Sar-
+vak Formation (SW Iran, Zagros Zone). Cretaceous 
+Research. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

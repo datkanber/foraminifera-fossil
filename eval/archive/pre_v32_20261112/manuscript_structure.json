@@ -1,0 +1,1572 @@
+[
+  {
+    "index": 0,
+    "style": "normal",
+    "text": "Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000."
+  },
+  {
+    "index": 1,
+    "style": "normal",
+    "text": "Digital Object Identifier 10.1109/ACCESS.2024.Doi Number"
+  },
+  {
+    "index": 2,
+    "style": "normal",
+    "text": "An Ontology-Based Genus Identification and Decision-Support Model for Paleocene–Eocene Benthic Foraminifera"
+  },
+  {
+    "index": 3,
+    "style": "normal",
+    "text": "KÜBRA YAYAN1"
+  },
+  {
+    "index": 4,
+    "style": "normal",
+    "text": "1Department of Geological Engineering, Faculty of Engineering and Architecture, Eskişehir Osmangazi University, 26480 Eskişehir, Türkiye"
+  },
+  {
+    "index": 5,
+    "style": "normal",
+    "text": "Corresponding author: Kübra Yayan (e-mail: kokur@ogu.edu.tr)."
+  },
+  {
+    "index": 6,
+    "style": "normal",
+    "text": "This work was carried out within the benthic foraminiferal taxonomy and numerical identification research line of the Department of Geological Engineering, Eskişehir Osmangazi University, without external funding."
+  },
+  {
+    "index": 7,
+    "style": "normal",
+    "text": "ABSTRACT Genus-level identification of Paleocene–Eocene benthic foraminifera in thin section relies on expert morphological interpretation that is difficult to reproduce. This study presents an ontology-based decision-support model that encodes this expertise as an auditable knowledge base: 21 controlled morphological characters with 108 states and 75 genera in three wall-composition modules, described by 706 rule cards graded into mandatory, diagnostic, supporting, and contradictory evidence. The knowledge base is published as an OWL 2 ontology with cardinality and disjointness axioms, verified with HermiT, and as a property graph. A deterministic engine treats unobservable characters as neutral rather than absent and returns a ranked list of genera with one of five graded confidence states; a decision-tree walk and a World Register of Marine Species check complete the workflow. After an automated integrity audit and repair, the engine ranks the leaf genus first on 53 of 104 decision paths, and 17 of its 29 CONFIRMED_GENUS outputs are correct, compared with 14 of 48 before repair. In a Monte Carlo simulation on rule-derived profiles with about 30% of the characters masked and 5% state noise, the graded engine reaches 43.7% top-1 and 61.0% top-3 agreement, against 7.3% and 21.2% for a classical eliminative multi-access key, and its rankings remain stable under alternative weightings (rank-biased overlap 0.93–0.99). A zero-shot stress test of a general-purpose vision-language model on 150 published image panels yields 3.2% top-1 agreement with overconfident states, showing that such models can draft observations for expert review but cannot replace the expert-supervised ontology layer."
+  },
+  {
+    "index": 8,
+    "style": "normal",
+    "text": "INDEX TERMS Agglutinated foraminifera, benthic foraminifera, biostratigraphy, decision support systems, decision trees, hyaline foraminifera, morphological characters, ontology, porcelaneous foraminifera, taxonomic identification."
+  },
+  {
+    "index": 9,
+    "style": "normal",
+    "text": "INTRODUCTION"
+  },
+  {
+    "index": 10,
+    "style": "normal",
+    "text": "Foraminifera are predominantly marine unicellular eukaryotes whose tests may be organic, agglutinated from sediment particles, or secreted as calcium carbonate with a porcelaneous or hyaline wall [1]. Their readily preserved tests make them one of the main tools of biostratigraphy, relative dating, paleoenvironmental interpretation, and paleobathymetry [2], [3]. Paleocene–Eocene benthic assemblages, and larger benthic foraminifera (LBF) in particular, have been described in detail from many regions of Türkiye (Van, Ordu, Ankara–Polatlı, Malatya, Aksaray, Kayseri, Sivas, and others), introducing numerous new genera and species [4]–[22]."
+  },
+  {
+    "index": 11,
+    "style": "normal",
+    "text": "Several of the taxa treated in this literature are encoded as genus nodes in the present ontology, among them Ranikothalia [6], Laffitteina [13], Pseudolacazina [11], [15], Alveolina [17], Fabularia and Kathina [18], Cuvillierina [19], Miscellanea [22], Ornatorotalia and Granorotalia [5], and Orbitoclypeus and Discocyclina [21]. Other genera from the same body of work, including Karsella [12], Orduina [8], Malatyna [10], [14], Vania [16], and Haymanella, Kayseriella, Elazigella, and Orduella [9], informed the design of the character vocabulary but are not yet encoded as genus nodes; their inclusion is planned for the next release (Section X)."
+  },
+  {
+    "index": 12,
+    "style": "normal",
+    "text": "Despite this knowledge, genus-level identification in thin section still depends largely on the experience of a specialist and is slowed and made subjective by inconsistent terminology, critical characters hidden by section orientation or preservation, and limited reproducibility between specialists. Deep-learning image classifiers have accelerated identification [23]–[25] but generally act as black boxes: they do not state the morphological evidence of a decision, their class set is fixed by the training data, and they do not map onto the dichotomous keys of the paleontological literature [26]."
+  },
+  {
+    "index": 13,
+    "style": "normal",
+    "text": "This study proposes an ontology-based decision-support model whose primary contribution is the knowledge model and its deterministic inference, not image recognition. It covers agglutinated, porcelaneous, and hyaline genera and is built on 21 controlled morphological characters (CHR_01–CHR_21), designed from the original descriptions of seven pilot taxa, Karsella hottingeri [12], Pseudolacazina oeztemueri [15], Alveolina haymanaensis [17], Discocyclina seunesi [21], Laffitteina erki [13], Orbitoclypeus haymanaensis [21], and Ranikothalia sindensis [6], and extended to 75 genera by literature synthesis. The system narrows the candidate set, shows the character matches and the evidence behind each result, and leaves the taxonomic decision to the specialist."
+  },
+  {
+    "index": 14,
+    "style": "normal",
+    "text": "The contributions of this article are: (1) a formal genus-level identification ontology for Paleocene–Eocene benthic foraminifera with OWL 2 cardinality and disjointness axioms; (2) a deterministic inference framework that maps an observation set, through 706 rule cards graded by evidence level, onto one of five confidence states, formalized in equations and pseudocode; (3) an evaluation logic that never equates unobservable characters with absence; (4) linkage of the output to taxonomic validity (WoRMS) and paleoenvironmental records; (5) an open-access Web implementation on a graph database with a scripted integrity audit and repair; and (6) a reproducible evaluation comprising an internal consistency test, a Monte Carlo comparison with an eliminative multi-access key, counterfactual ablations, a weight and threshold sensitivity analysis, and a zero-shot vision-language-model stress test."
+  },
+  {
+    "index": 15,
+    "style": "normal",
+    "text": "Section II reviews related work, Section III the model design, Section IV the ontology and knowledge base, Section V the decision-tree walk, Section VI the scoring engine, and Section VII the optional image layer; Section VIII reports the evaluation, Section IX discusses limitations, and Section X concludes."
+  },
+  {
+    "index": 16,
+    "style": "normal",
+    "text": "RELATED WORK"
+  },
+  {
+    "index": 17,
+    "style": "normal",
+    "text": "Four lines of work bear on accelerating foraminiferal identification: deep-learning image classification, ontology- and rule-based taxonomic expert systems, interactive multi-access identification keys, and general-purpose vision-language models (VLMs) applied to scientific images; this section reviews each and positions the proposed model."
+  },
+  {
+    "index": 18,
+    "style": "normal",
+    "text": "A. DEEP-LEARNING-BASED FORAMINIFERAL CLASSIFICATION"
+  },
+  {
+    "index": 19,
+    "style": "normal",
+    "text": "Hsiang et al. assembled the Endless Forams data set of more than 34,000 images of planktonic foraminifera and reached near-expert accuracy with a VGG architecture [23]; Mitra et al. compared convolutional neural network (CNN) identification of planktic species with human performance [24], and Marchant et al. built a CNN workflow that counts and classifies foraminifera in sediment cores [25]. Earlier work by the author and colleagues addressed CNN classification [27] and multi-label identification [28] of benthic foraminifera. Post-hoc explanations such as Grad-CAM [29] highlight image regions but name no morphological character, so inherently interpretable models are preferable for high-stakes decisions [26]. These studies achieve high accuracy, but they state no morphological evidence, fix the class set by the training data, and do not follow the step-wise logic of classical keys."
+  },
+  {
+    "index": 20,
+    "style": "normal",
+    "text": "B. ONTOLOGY- AND RULE-BASED TAXONOMIC EXPERT SYSTEMS"
+  },
+  {
+    "index": 21,
+    "style": "normal",
+    "text": "Rule-based taxonomic expert systems are not new: Heymans et al. separated Opuntia (Cactaceae) species from family to species level with a CLIPS rule base [30], and Gerber et al. modeled Afrotropical bee taxonomy as a description-logic ontology with automated reasoning in a Web application [31]. Phenotype ontologies such as PATO (entity–quality pairs) and the OBO Foundry principles offer reusable patterns for morphological characters [32]–[34]. Such systems are transparent, but character entry is manual and the rules are usually binary, without evidence-weighted scoring or multi-level confidence states."
+  },
+  {
+    "index": 22,
+    "style": "normal",
+    "text": "C. INTERACTIVE AND MULTI-ACCESS IDENTIFICATION KEYS"
+  },
+  {
+    "index": 23,
+    "style": "normal",
+    "text": "The closest functional predecessors of the proposed model are multi-access (free-access) identification keys. DELTA introduced a general format for coding taxonomic descriptions as character matrices from which conventional and interactive keys (Intkey) are generated [35]; Lucid [36] and Xper2/Xper3 [37], [38] let the user enter any available character in any order and discard taxa incompatible with the entered states. Such keys already cope with characters missing from a specimen and are widely used in biodiversity informatics."
+  },
+  {
+    "index": 24,
+    "style": "normal",
+    "text": "The proposed model differs from these tools in five respects. First, each genus–character statement carries one of four evidence levels with distinct roles (mandatory statements gate the candidate set, diagnostic ones discriminate, supporting ones add weak evidence, contradictory ones penalize), whereas classical keys treat all characters as equally eliminatory, optionally with a mismatch tolerance. Second, NOT_OBSERVABLE (region not visible) is separated from ABSENT (region visible, feature missing) and UNCERTAIN, which is critical for orientation-dependent characters. Third, the output is one of five graded confidence states rather than a residual list of taxa. Fourth, the genus is checked against its accepted name in WoRMS [39]. Fifth, the knowledge base is an OWL 2 ontology [40] and a queryable property graph rather than a closed matrix format."
+  },
+  {
+    "index": 25,
+    "style": "normal",
+    "text": "D. VISION-LANGUAGE MODELS IN SCIENTIFIC IMAGE ANALYSIS"
+  },
+  {
+    "index": 26,
+    "style": "normal",
+    "text": "General-purpose VLMs have recently been evaluated on scientific images: the VLM4Bio benchmark of Maruf et al. found substantial inconsistency and a risk of hallucination when 12 VLMs extracted fine-grained traits from fish, bird, and butterfly images [41], and Verma et al. judged the reliability of large VLMs on microscopy images limited without domain-specific grounding [42]. VLM output should therefore be confined to a structured, auditable intermediate step rather than used as a taxonomic decision."
+  },
+  {
+    "index": 27,
+    "style": "normal",
+    "text": "E. POSITIONING OF THE PRESENT WORK"
+  },
+  {
+    "index": 28,
+    "style": "normal",
+    "text": "Table I compares the proposed model with these approaches. Its main contribution is the explicit knowledge model and the deterministic inference over it: a controlled character ontology, graded rule cards, and a scoring engine whose every decision can be traced to morphological statements; the optional VLM layer only drafts an observation sheet in the same vocabulary, which the specialist reviews and the engine evaluates like manual input. To the author’s knowledge, this combination has not previously been implemented for Paleocene–Eocene benthic foraminifera."
+  },
+  {
+    "index": 29,
+    "style": "normal",
+    "text": "TABLE I"
+  },
+  {
+    "index": 30,
+    "style": "normal",
+    "text": "Comparison of the proposed model with existing approaches to taxonomic identification"
+  },
+  {
+    "index": 31,
+    "style": "normal",
+    "text": "Transp. = transparency of the decision; Missing obs. = explicit support for unobservable characters; Graded conf. = graded confidence output; Tax. valid. = link to a taxonomic register."
+  },
+  {
+    "index": 32,
+    "style": "normal",
+    "text": "MODEL DESIGN AND KNOWLEDGE LAYERS"
+  },
+  {
+    "index": 33,
+    "style": "normal",
+    "text": "The model consists of four stacked knowledge layers. The character model defines the features observable in thin section through a controlled vocabulary, removing terminological ambiguity. The rule base defines each genus by these characters and grades every criterion by evidence level. The inference layer uses this knowledge in two forms: a step-wise decision-tree walk corresponding to classical identification keys and a scoring engine that evaluates all available observations at once. The context layer links the resulting genus to its current taxonomic validity and known paleoenvironmental preference. The layers follow the paleontologist’s workflow: describe what is seen, test which genera it fits, and place the result in its taxonomic and environmental context."
+  },
+  {
+    "index": 34,
+    "style": "normal",
+    "text": "Fig. 1 shows how the layers are connected: observations entered by the user, or drafted by the optional image pre-extraction layer and reviewed by the user, are converted into the 21 controlled characters, which feed both inference paths over one rule base. The scoring engine returns a ranked list of genera with one of five confidence states; the decision-tree walk returns the leaf genus or, after a “Not observable” answer, the genera that remain reachable (Section V). Both results are linked to taxonomic validity and paleoenvironmental context."
+  },
+  {
+    "index": 35,
+    "style": "normal",
+    "text": "A. TWO MODES OF THE IDENTIFICATION PROCESS"
+  },
+  {
+    "index": 36,
+    "style": "normal",
+    "text": "The step-wise interrogation imitates a classical identification key, asking one morphological question per stage, and is fast for well-preserved sections; the direct entry of every visible character, in any order, evaluates all genera of the module at once and suits oblique or partial sections. The genus reached is checked against the current taxonomic register and, where available, shown with paleoenvironmental information; if the register cannot be reached, identification continues without this context."
+  },
+  {
+    "index": 37,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 38,
+    "style": "normal",
+    "text": "Architecture of the model. Observations entered by the specialist, or drafted by the optional image pre-extraction layer and reviewed by the user, are expressed in the 21 controlled characters (layer 1). The decision-tree walk and the scoring engine share one rule base (layers 2–3); only the scoring engine assigns a confidence state. Both results are linked to taxonomic validity and paleoenvironmental context (layer 4)."
+  },
+  {
+    "index": 39,
+    "style": "normal",
+    "text": "ONTOLOGY AND CHARACTER MODEL"
+  },
+  {
+    "index": 40,
+    "style": "normal",
+    "text": "The core of the ontology is a single observation pattern in which every morphological character has a unique identifier: Specimen → Character ID → Observed Value → Observation State. The observation state is PRESENT (clearly observable), ABSENT (clearly missing in a section in which it should be visible), NOT_OBSERVABLE (not evaluable because of section orientation, preservation, or image quality; not equivalent to ABSENT), or UNCERTAIN (visible but not determinable with confidence); this distinction underlies the neutral-evidence mechanism of the scoring engine (Section VI)."
+  },
+  {
+    "index": 41,
+    "style": "normal",
+    "text": "The 21 characters form four functional groups (Table II): Core (wall composition, test shape, and chamber organization), Internal Architecture (internal structure, embryonic apparatus, and chamberlets), Additional Diagnostic (e.g., aperture, marginal cord, and dimorphism), and Section (CHR_21, which records section orientation as context for the other observations and is not itself scored; see Section VI-A). The vocabulary has 108 substantive character states; with 40 response tokens (NOT_OBSERVABLE and UNCERTAIN for CHR_02–CHR_20, UNCERTAIN only for the entry character CHR_01, and UNKNOWN for CHR_21) it contains 148 coded values, shared by the three composition modules."
+  },
+  {
+    "index": 42,
+    "style": "normal",
+    "text": "TABLE II"
+  },
+  {
+    "index": 43,
+    "style": "normal",
+    "text": "The 21 morphological characters of the ontology: functional group, number of substantive states, and example state"
+  },
+  {
+    "index": 44,
+    "style": "normal",
+    "text": "*Substantive states (all coded values, including NOT_OBSERVABLE, UNCERTAIN, and UNKNOWN, in parentheses)."
+  },
+  {
+    "index": 45,
+    "style": "normal",
+    "text": "TABLE III"
+  },
+  {
+    "index": 46,
+    "style": "normal",
+    "text": "The 75 genera of the ontology by wall-composition module"
+  },
+  {
+    "index": 47,
+    "style": "normal",
+    "text": "† Barattolites is flagged in the ontology as “taxonomic review required” because its family assignment is disputed. Supplementary Material S1 lists the genera, rules, and mappings together with a live WoRMS lookup of authorities and AphiaIDs; stratigraphic ranges and some authority fields are not yet curated and are flagged as incomplete in the inventory."
+  },
+  {
+    "index": 48,
+    "style": "normal",
+    "text": "At genus level the ontology covers 75 genera, 25 in each module (Table III); because wall composition (CHR_01) is the entry character, answering it reduces the candidate set from 75 to 25 genera. Each genus is defined by rule cards graded by evidence level, each linked to one or more characters and their expected states, so that a free-text description becomes a set of individually testable statements. The ontology is stored as an OWL 2 file for reuse and queried at run time through a property graph in which the relations among characters, genera, and rules can be traced directly (Sections IV-B and IV-C)."
+  },
+  {
+    "index": 49,
+    "style": "normal",
+    "text": "The genera were selected because they (i) are recorded from Paleocene–Eocene Tethyan shallow-marine or associated assemblages in the reference classifications [1], [2] or the Turkish literature [4]–[22], (ii) can be recognized in thin section with the vocabulary of Table II, and (iii) are frequent in routine biostratigraphic work or commonly confused with such genera. The equal module size is a design choice, not a statement about diversity, and the list is not exhaustive: common Tethyan Eocene genera such as Orbitolites, Opertorbitolites, Asterigerina, Fabiania, Halkyardia, and Sphaerogypsina will be added with the Turkish genera of Section I. Agglutinated genera more often identified from washed deep-water residues (e.g., Rhabdammina, Rhizammina, Bathysiphon, Caudammina, Rzehakina, Karrerulina) are retained because they occur in thin sections of hemipelagic and deep-shelf intervals at Paleogene platform margins and must be separated from shallow-water tubular and coiled forms."
+  },
+  {
+    "index": 50,
+    "style": "normal",
+    "text": "The 75 genera are encoded by 706 rule items (Table IV): 460 (65.2%) are mapped to at least one character–state pair and can contribute to a score, 14 reference a character without a state, and 232 express compound situations not reducible to one pair (e.g., “wall conspicuously constructed from relatively coarse sediment grains”); the 246 rules without a pair are shown as observation hints with zero score (Section VI). The 500 rule-to-character mappings carry a mapping confidence (HIGH, MEDIUM, or LOW for 365, 108, and 27). As CONFIRMED_GENUS requires a matched diagnostic rule (Section VI-C), a genus without a scoring diagnostic rule can reach at most PROBABLE_GENUS; after the repair of Section IV-B this applies to 28 genera whose diagnostic statements rely on qualifiers not yet in the vocabulary (e.g., branching, surface ornament, canal systems, chamber proportions). These statements are kept as hints rather than mapped to a generic proxy state, and extending the vocabulary for them is the first target of the next rule-card revision."
+  },
+  {
+    "index": 51,
+    "style": "normal",
+    "text": "TABLE IV"
+  },
+  {
+    "index": 52,
+    "style": "normal",
+    "text": "Distribution of the rule cards by evidence level (706 rules)"
+  },
+  {
+    "index": 53,
+    "style": "normal",
+    "text": "A. KNOWLEDGE ACQUISITION PROTOCOL"
+  },
+  {
+    "index": 54,
+    "style": "normal",
+    "text": "The rule cards were built with the following protocol, which is also the procedure to be followed when the ontology is extended."
+  },
+  {
+    "index": 55,
+    "style": "normal",
+    "text": "Source selection: For every genus, the original description and the most recent emended diagnosis were collected, supplemented by the reference classifications of Loeblich and Tappan [1] and BouDagher-Fadel [2] and by the Turkish Paleocene–Eocene literature [4]–[22]. Sources had to provide a genus-level diagnosis and thin-section illustrations; the terminology was normalized against [43]."
+  },
+  {
+    "index": 56,
+    "style": "normal",
+    "text": "Statement extraction: Each diagnosis was split into atomic morphological statements, each concerning a single structure (e.g., “secondary chamberlets absent”)."
+  },
+  {
+    "index": 57,
+    "style": "normal",
+    "text": "Terminological normalization: Each statement was mapped onto the controlled vocabulary with the illustrated glossary of Hottinger [43] as reference. Synonyms are merged (e.g., “alveoles” and “secondary chamberlets” both map to CHR_11), whereas different structures are kept apart even when often confused (e.g., STREPTOSPIRAL and GLOMOSPIRAL in CHR_06, or serial arrangement in CHR_05 versus coiling in CHR_06)."
+  },
+  {
+    "index": 58,
+    "style": "normal",
+    "text": "Evidence-level assignment: Each statement was assigned an evidence level according to the criteria in Table V."
+  },
+  {
+    "index": 59,
+    "style": "normal",
+    "text": "TABLE V"
+  },
+  {
+    "index": 60,
+    "style": "normal",
+    "text": "Criteria for assigning evidence levels to rule statements"
+  },
+  {
+    "index": 61,
+    "style": "normal",
+    "text": "Character–state mapping: Each rule was mapped to one or more character–state pairs with a mapping confidence; statements that cannot be reduced to such pairs were retained as observation hints."
+  },
+  {
+    "index": 62,
+    "style": "normal",
+    "text": "Conflict resolution: Where sources disagree, the most recent emended diagnosis is followed and the genus concept accepted in WoRMS [39] is used; statements that remain disputed are downgraded to supporting level or recorded as notes, and genera whose placement is disputed are flagged (e.g., Barattolites)."
+  },
+  {
+    "index": 63,
+    "style": "normal",
+    "text": "Table VI traces this protocol for Nummulites and shows how implication interacts with the audit of Section IV-B: CHR_17 = STRONG satisfies M4 through the implication CHR_17 = STRONG ⇒ CHR_17 = PRESENT (Table X), so mapping D2 to the same state would count one observation twice, and D2 is kept as an observation hint."
+  },
+  {
+    "index": 64,
+    "style": "normal",
+    "text": "The character and rule sets originate from the seven pilot taxa and were extended to the 75 genera by literature synthesis; their internal consistency is controlled by the integrity audit and logged repair of Section IV-B, which are rerun before every release."
+  },
+  {
+    "index": 65,
+    "style": "normal",
+    "text": "B. ONTOLOGY ENGINEERING AND QUALITY EVALUATION"
+  },
+  {
+    "index": 66,
+    "style": "normal",
+    "text": "Methodology: Development followed METHONTOLOGY [44] with the requirements specification of NeOn [45]: (i) specification of scope and competency questions (CQs) [46]; (ii) conceptualization of characters, states, genera, rules, and decision questions from the reference document of the project; (iii) formalization of the vocabulary and rule structure; (iv) implementation as a JSON master data set from which the OWL 2 file and the property graph are generated; and (v) evaluation by reasoning, CQ answering, and a knowledge-base integrity audit."
+  },
+  {
+    "index": 67,
+    "style": "normal",
+    "text": "TABLE VI"
+  },
+  {
+    "index": 68,
+    "style": "normal",
+    "text": "Rule card of Nummulites as encoded in the knowledge base"
+  },
+  {
+    "index": 69,
+    "style": "normal",
+    "text": "Rules without a state are non-scoring observation hints. D2 is kept as a hint because CHR_17 = STRONG implies the mandatory pair of M4 (audit item (d), Section IV-B)."
+  },
+  {
+    "index": 70,
+    "style": "normal",
+    "text": "OWL structure: The ontology (file foram_ontology_v1.owl, Supplementary Material S3) is a lightweight OWL 2 schema with a large assertional component (Table VII); its nine classes and their properties are shown in Fig. 2, and rule items reference characters with the expected state and mapping confidence as data values. Runtime observations are not persisted. Because rules are individuals, identification is computed by the scoring engine rather than by a description-logic reasoner. Besides property hierarchies, domain and range restrictions, and functional datatype properties, the generator (eval/generate_ontology.py) emits the constraining axioms of the listing below, plus two DifferentIndividuals axioms that make the 3 modules and the 148 character values pairwise distinct, since OWL makes no unique-name assumption."
+  },
+  {
+    "index": 71,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 72,
+    "style": "normal",
+    "text": "Schema of the ontology and of the property graph in UML class notation: classes (node labels) with instance counts, object properties (relationship types) with multiplicities, and the sub-property hierarchy of hasRule (hollow triangles). Genus, Module, MorphologicalCharacter, CharacterValue, RuleItem, and DecisionQuestion are pairwise disjoint. Observation (dashed) exists only at run time; TaxonProfile exists only in the property graph."
+  },
+  {
+    "index": 73,
+    "style": "normal",
+    "text": "TABLE VII"
+  },
+  {
+    "index": 74,
+    "style": "normal",
+    "text": "Metrics of the ontology file (foram_ontology_v1.owl)"
+  },
+  {
+    "index": 75,
+    "style": "normal",
+    "text": "†Reported by the OWL API 5.1.9 expressivity checker; O stems only from the two DifferentIndividuals axioms, and the TBox alone is ALCHQ(D). Counts refer to the file regenerated from the repaired master files (Section IV-B); RDF triples counted with rdflib."
+  },
+  {
+    "index": 76,
+    "style": "normal",
+    "text": "Reasoning and validation: HermiT [47], run through Owlready2 and through the OWL API underlying Protégé [48], finds the regenerated ontology consistent with no unsatisfiable classes. Because the disjointness, cardinality, and enumeration axioms constrain its models and address the missing-disjointness pitfall catalogued by OOPS! [49], consistency is a discriminating test: four deliberately corrupted variants (an individual in two disjoint categories, a genus in two modules, an evidence level outside the enumeration, and a character restricted to one allowed value) were each rejected (eval/validate_ontology.py). Closed-world completeness (e.g., exactly one module per genus, at least two states per character), which open-world OWL semantics cannot enforce, is checked on the JSON master files by the same script and by the audit below. The provisional base IRI (http://example.org/foram-ontology) was replaced by the persistent IRI https://w3id.org/foram-ontology."
+  },
+  {
+    "index": 77,
+    "style": "normal",
+    "text": "Competency questions: Ten CQs, each answered by a Cypher query [50] over the property graph, are summarized in Table VIII; Supplementary Material S2 lists the full queries, parameter values, the answers of read-only executions on the graph of release 1e12fb5, and the expected answers derived independently from the JSON master files, all ten of which were matched."
+  },
+  {
+    "index": 78,
+    "style": "normal",
+    "text": "TABLE VIII"
+  },
+  {
+    "index": 79,
+    "style": "normal",
+    "text": "Competency questions and Cypher graph patterns (all 10/10 validated)"
+  },
+  {
+    "index": 80,
+    "style": "normal",
+    "text": "Validation status from the read-only executions recorded in Supplementary Material S2; full queries and parameters are given there."
+  },
+  {
+    "index": 81,
+    "style": "normal",
+    "text": "Knowledge-base integrity audit and repair: OWL consistency does not guarantee that the rule cards are free of domain errors, so an automated audit (eval/audit.py) checks for: (a) contradictory rules equal to a positive rule of the same genus; (b) mandatory rules conflicting with another mandatory or diagnostic rule on the same character; (c) negated rule texts with positive mappings (polarity screen); (d) character–state pairs counted more than once within a genus, directly or through implication (by two diagnostic or supporting rules, or by a mandatory and a diagnostic rule); (e) unmapped mandatory rules; (f) genera without a scoring diagnostic rule; (g) tree answers outside the controlled vocabulary; (h) characters queried again along one path; and (i) genera not assigned to exactly one module. Two logged scripts that operate only on rule texts and trees, never on evaluation outcomes, repaired the findings (eval/apply_audit_fixes.py, 67 mapping edits; eval/bind_tree_vocabulary.py, 7 answer bindings): each rule is re-mapped to the state its text states or, where the vocabulary cannot express a qualifier (e.g., “low trochospiral” or “Lacazina-type pillar pattern absent”), returned to a non-scoring hint instead of a misleading proxy; five off-vocabulary tree answers were bound to controlled states (e.g., “flattened/sigmoid serial organization” to the state used for the same concept in the rule card of Rzehakina), and two complement answers became routing answers resolved by the next character-bound question. Across the nine categories, the audit counts changed from 17, 10, 4, 25, 27, 18, 7, 11, and 0 to 0, 0, 3, 0, 28, 28, 0, 11, and 0. The three remaining polarity flags are not inverted mappings on inspection; the additional unmapped mandatory rule (Pseudolacazina M4, “partitions and/or pillars”) is a disjunction across two characters that the evaluator does not support; and the increase in (f) reflects removed diagnostic mappings that only repeated a mandatory pair or misrepresented the text. Three of the 18 genera originally lacking a scoring diagnostic rule received a literal mapping (Hauerina; Orbitoclypeus and Nemkovella, via the embryonic-apparatus state of the corresponding tree answer). The repaired master files, every edit with its textual basis, and the item-by-item audit listings before and after repair are given in Supplementary Material S9."
+  },
+  {
+    "index": 82,
+    "style": "normal",
+    "text": "C. GRAPH DATABASE LAYER"
+  },
+  {
+    "index": 83,
+    "style": "normal",
+    "text": "At run time the knowledge base is held in a Neo4j v5 property graph [51] that mirrors the OWL schema (Fig. 2), with node labels Module, Genus, Character, Value, RuleItem, Question, Outcome, ObservationState, Status, and TaxonProfile and relationship types BELONGS_TO, HAS_RULE (with the evidence level), REFERS_TO (with expected state and mapping confidence), ALLOWS, CLOSEST_COMPARISON, TREE_ENTRY, ASKS_ABOUT, ANSWER, and HAS_REFERENCE_SPECIES/HAS_ENVIRONMENT_PROFILE. TaxonProfile nodes, which hold the paleoenvironmental records described below, and WormsCache nodes are operational data without an OWL counterpart. Eleven uniqueness constraints guard the identifiers. Graph and OWL file are generated from the same JSON master files, so they cannot drift apart, and the import script verifies the expected node counts. WoRMS responses are cached (WormsCache) for seven days with a 3-s timeout, so identification does not depend on the external service."
+  },
+  {
+    "index": 84,
+    "style": "normal",
+    "text": "In the application, the Taxon Environment Records section of the Geological Context page presents 18 paleoenvironmental records (seven at species and eleven at genus level) compiled from the project literature, with depth, habitat, and source displayed in English. Six of them are linked to genera of the identification ontology; for the other twelve (e.g., Karsella hottingeri, Orbitolites, and Opertorbitolites) the system states explicitly that the record is “Not yet linked to diagnostic ontology,” so that the gap is reported rather than hidden. Species-level records are not automatically generalized to the entire genus."
+  },
+  {
+    "index": 85,
+    "style": "normal",
+    "text": "D. RELATION TO EXISTING PHENOTYPE ONTOLOGIES"
+  },
+  {
+    "index": 86,
+    "style": "normal",
+    "text": "The observation pattern corresponds to the entity–quality pattern of phenotype ontologies: a character such as CHR_17 (marginal cord) is an anatomical entity and its states (PRESENT, WEAK, STRONG) are qualities [32], [33]. As the OBO Foundry has no foraminiferal anatomy ontology [34] and unicellular tests do not map onto metazoan anatomy, the characters are defined locally, annotated with their definition and page in the Hottinger glossary [43] (skos:definition [52], dcterms:source [53]); qualities with a general counterpart (e.g., presence, absence, relative size) will be linked to PATO with skos:closeMatch in the next release."
+  },
+  {
+    "index": 87,
+    "style": "normal",
+    "text": "E. STRATIGRAPHIC SCOPE AND GEOLOGICAL CONTEXT"
+  },
+  {
+    "index": 88,
+    "style": "normal",
+    "text": "The ontology targets the Paleocene–Eocene, chiefly the Thanetian–Priabonian (≈59.2–33.9 Ma; SBZ 3–20, with the regional Ilerdian–Cuisian equivalent to the Ypresian) [2], [54]–[56]. Middle–Late Eocene genera (e.g., Lacazinella, Spiroclypeus) and the Turkish Lutetian–Priabonian literature [7], [14], [20] are in scope; the Danian–Selandian (SBZ 1–2) is covered only through genera ranging into it."
+  },
+  {
+    "index": 89,
+    "style": "normal",
+    "text": "The genus list also contains long-ranging smaller benthic genera (e.g., Ammodiscus, Quinqueloculina, and Lenticulina) that are not restricted to the Paleocene–Eocene but must be separated from the larger forms in practice. Zone equivalents follow [55], [56]; absolute ages are approximate. Geological age is not an identification criterion: stratigraphic information is shown only as context, and, once curated (the corresponding field of Supplementary Material S1 is not yet complete), the stratigraphic range of each genus will only be used to warn the user when an identification is inconsistent with the stated age of the sample."
+  },
+  {
+    "index": 90,
+    "style": "normal",
+    "text": "DECISION-TREE WALK"
+  },
+  {
+    "index": 91,
+    "style": "normal",
+    "text": "Each composition module has its own question–answer tree, transcribed from the identification key of the project’s reference document (Paleocene–Eocene Benthic Foraminifera Genus Identification Ontology v1.0; Supplementary Material S3 provides the OWL file and the three JSON trees but not this document). Question nodes refer to morphological characters where possible and answers to their states; leaves are genera or explicit outcomes (INDETERMINATE or a redirection to another branch). The walk starts with the wall-composition question, which selects the module, and follows the branch of each answer."
+  },
+  {
+    "index": 92,
+    "style": "normal",
+    "text": "The trees follow four design principles: (i) they start with characters robust to section orientation (wall composition and septation); (ii) they proceed from gross architecture (test shape, chamber organization, coiling) to internal architecture (chamberlets, pillars, embryonic apparatus); (iii) orientation-dependent characters are asked as late as possible, and five such nodes carry a section-sensitivity flag that the interface can display as a warning; and (iv) where the literature keys rely on a gestalt that the vocabulary cannot express, a composite question with an observation hint is kept; 22 of the 78 nodes are of this type and are not bound to a character, which limits the agreement between the two inference paths (Section VIII-B)."
+  },
+  {
+    "index": 93,
+    "style": "normal",
+    "text": "Table IX summarizes the trees: 78 question nodes lead through 104 root-to-leaf paths to all 75 genera (15 genera reachable by more than one path). The deepest path needs ten questions in the porcelaneous module, where lacazinid and complex milioline genera require multi-stage interrogation of internal structure, and seven in the agglutinated module, where early questions on septation and test shape narrow the candidates quickly. Every answer of a character-bound question carries a controlled state or an explicit binding to a state of another character, or is a routing answer resolved by the next character-bound question (Section IV-B)."
+  },
+  {
+    "index": 94,
+    "style": "normal",
+    "text": "TABLE IX"
+  },
+  {
+    "index": 95,
+    "style": "normal",
+    "text": "Size of the decision trees by module"
+  },
+  {
+    "index": 96,
+    "style": "normal",
+    "text": "Depth = number of questions answered within the module, excluding the wall-composition entry question. Other leaves = INDETERMINATE or redirection outcomes."
+  },
+  {
+    "index": 97,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 98,
+    "style": "normal",
+    "text": "Output of the running application (screenshots, cropped). (a) Decision-tree walk reaching Rhabdammina after five answers; the path is shown in the breadcrumb and in the left panel, and the mandatory and diagnostic rule cards are listed. (b) Online taxonomic validation of Rhabdammina through WoRMS (order Astrorhizida, family Rhabdamminidae, accepted, AphiaID 112315) below the closest comparison genus. (c) Character scoring of scenario A (left; four evaluated observations, 19 points) and scenario B (right; CHR_07 not observable, three evaluated observations, 14 points) of Table XI, with Ammodiscus reported as CONFIRMED_GENUS in both; the taxon-profile block is omitted (dashed line), and rows below the leader are cropped because the ranking of the repaired release is given in Table XI. (d) The 18 genera excluded in scenario A, each with the mandatory rule responsible (list set in two columns)."
+  },
+  {
+    "index": 99,
+    "style": "normal",
+    "text": "In Fig. 3(a), five answers (wall composition → septation → general test form → branching of the tube → radiation of robust branches from a central area) lead to Rhabdammina, whose mandatory (M), diagnostic (D), supporting (S), and contradictory (C) rule cards are displayed with their evidence; Rhizammina is proposed as the closest comparison genus, and the genus is validated online against WoRMS (Fig. 3(b))."
+  },
+  {
+    "index": 100,
+    "style": "normal",
+    "text": "When the user selects “Not observable / Not sure,” the walk does not stop but returns all genera reachable from that node and the remaining branches, so that a single unobservable character does not end the identification; this is the decision-tree counterpart of the neutral-evidence mechanism of the engine. The walk assigns no confidence state: it returns the leaf genus, an explicit outcome, or the reachable set. Confidence states are produced only by the scoring engine, to which the observations of each path are passed in the consistency test of Section VIII-B."
+  },
+  {
+    "index": 101,
+    "style": "normal",
+    "text": "RULE-BASED SCORING ENGINE"
+  },
+  {
+    "index": 102,
+    "style": "normal",
+    "text": "Whereas the decision-tree walk follows one path, the scoring engine evaluates all genera of a module in parallel against the same observation set. The definitions below correspond one-to-one to the implementation in api/src/services/scoring.js of the evaluated version, which is used by the API and the test suite; an independent Python implementation (eval/consistency_and_audit.py) reproduces its results on all decision-tree paths (Section VIII-B)."
+  },
+  {
+    "index": 103,
+    "style": "normal",
+    "text": "A. OBSERVATIONS AND RULE EVALUATION"
+  },
+  {
+    "index": 104,
+    "style": "normal",
+    "text": "Let 𝒞 be the set of 21 characters and Vc the controlled states of character c. An observation set O assigns to each character an observation state sc ∈ {PRESENT, ABSENT, NOT_OBSERVABLE, UNCERTAIN} and, where applicable, a state vc ∈ Vc; characters not entered are treated as NOT_OBSERVABLE. The observation state only decides whether c is evaluable; whether a rule holds is decided by the recorded state vc. The absence of a structure is therefore recorded as the state vc = ABSENT of an evaluable character (e.g., CHR_03, CHR_11, or CHR_17), which is why ABSENT occurs both as an observation state and as a controlled state. The set of evaluable characters is"
+  },
+  {
+    "index": 105,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 106,
+    "style": "normal",
+    "text": "\t(1)"
+  },
+  {
+    "index": 107,
+    "style": "normal",
+    "text": "and n(O) = |E(O) ∖ {CHR_01}| is the number of evaluable characters besides the entry character, which is fixed by the choice of module; characters that are determined only through implication (see below) are not treated as evaluable in n(O) or in φi in (8), so that a single entered observation adds at most one to n(O). If CHR_01 itself is recorded as NOT_OBSERVABLE or UNCERTAIN, no module is selected and all 75 genera are evaluated. CHR_21 is excluded from E(O) because it describes the section rather than the specimen; in the evaluated version it is kept in the observation record but does not affect any rule verdict, and its use to flag orientation-sensitive characters is planned (Section IX). Logical dependencies between characters are represented by a set I of 13 implication mappings (Table X); for example, CHR_09 = PLANISPIRAL_TO_BISERIAL implies CHR_06 = PLANISPIRAL and CHR_05 = BISERIAL, and a graded state such as CHR_14 = STRONG implies CHR_14 = PRESENT. Let Hc(O) be the set of states of c that hold: vc if c ∈ E(O), together with every state of c implied through I by an observation in E(O). A character–state pair (c, v) holds, h(c, v) = 1, if v ∈ Hc(O); it is violated, h(c, v) = 0, if Hc(O) ≠ ∅ and v ∉ Hc(O); otherwise, when Hc(O) = ∅, it is undetermined, h(c, v) = ⊥. Implication can therefore determine a character that was not entered, so the user need not enter the same information twice, and a mapping such as CHR_09 = BISERIAL_TO_UNISERIAL, which implies two states of CHR_05, is handled without conflict."
+  },
+  {
+    "index": 108,
+    "style": "normal",
+    "text": "TABLE X"
+  },
+  {
+    "index": 109,
+    "style": "normal",
+    "text": "Implication mappings between character states"
+  },
+  {
+    "index": 110,
+    "style": "normal",
+    "text": "Each rule r has an evidence level ℓr ∈ {M, D, S, C} and a set Pr of character–state pairs, which is empty for the 246 non-scoring rules. The pairs of Pr are grouped by character, Pr,c = {v : (c, v) ∈ Pr}, so that alternative states of one character (e.g., “lenticular or discoidal test”) form a single group. A group holds, h(r, c) = 1, if some v ∈ Pr,c holds; it is violated, h(r, c) = 0, if every v ∈ Pr,c is violated; otherwise it is undetermined. The verdict of r is"
+  },
+  {
+    "index": 111,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 112,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 113,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 114,
+    "style": "normal",
+    "text": "\t(2)"
+  },
+  {
+    "index": 115,
+    "style": "normal",
+    "text": "so that a rule is satisfied when at least one of its characters holds and none is violated, and alternative states of the same character are read disjunctively; for rules whose pairs all refer to distinct characters, the grouping has no effect. NOT_OBSERVABLE and UNCERTAIN never produce a violation: they neither confirm nor eliminate a genus."
+  },
+  {
+    "index": 116,
+    "style": "normal",
+    "text": "B. SCORE, EXCLUSION, AND RANKING"
+  },
+  {
+    "index": 117,
+    "style": "normal",
+    "text": "With the weights of Table V, wM = 3, wD = 5, wS = 1, and wC = 5, the score of genus g is"
+  },
+  {
+    "index": 118,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 119,
+    "style": "normal",
+    "text": "\t(3)"
+  },
+  {
+    "index": 120,
+    "style": "normal",
+    "text": "where R⁺(g) are the mandatory, diagnostic, and supporting rules of g and nC(g|O) is the number of its contradictory rules with verdict MATCH. A genus is excluded if a mandatory rule is violated or if a contradiction drives its score below zero (“strong contradiction”):"
+  },
+  {
+    "index": 121,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 122,
+    "style": "normal",
+    "text": "\t(4)"
+  },
+  {
+    "index": 123,
+    "style": "normal",
+    "text": "Non-excluded genera form the active set A(O), which is sorted by score and, for equal scores, by the number nD of matched diagnostic rules. For the first- and second-ranked genera g1 and g2, the margin and the separation condition are"
+  },
+  {
+    "index": 124,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 125,
+    "style": "normal",
+    "text": "\t(5)"
+  },
+  {
+    "index": 126,
+    "style": "normal",
+    "text": "where 𝒟(g) is the set of character–state pairs that hold in the matched diagnostic rules of g, so that diagnostic evidence is compared through the morphology it refers to rather than through rule identity; that is, the leading genus must be ahead by at least one point and must be supported by at least one diagnostic character–state pair that the runner-up does not also match diagnostically. If A(O) contains a single genus, sep holds by definition."
+  },
+  {
+    "index": 127,
+    "style": "normal",
+    "text": "C. CONFIDENCE STATES"
+  },
+  {
+    "index": 128,
+    "style": "normal",
+    "text": "The engine reports one of five confidence states (Algorithm 1). The thresholds are fixed a priori: at least τobs = 2 evaluable characters besides CHR_01 for any genus-level state and τNM = 3 for NO_MATCH_WITHIN_CORE_TAXA, so that a single observation never yields a positive or negative verdict (Section VIII-E). CHR_01 is excluded from n(O) and from the mandatory test of line 8 because every genus of the selected module matches its wall-composition rule, which would otherwise meet both safeguards. The graded report conveys the strength of the evidence; NO_MATCH_WITHIN_CORE_TAXA is a valid, informative result rather than a forced match."
+  },
+  {
+    "index": 129,
+    "style": "normal",
+    "text": "Operationally, CONFIRMED_GENUS requires at least τobs evaluable characters besides CHR_01, a matched and no violated mandatory rule on another character, a matched diagnostic rule, no matched contradiction, and separation from the runner-up by at least δ = 1 point and by a diagnostic character–state pair that the runner-up does not match diagnostically (line 10). PROBABLE_GENUS marks an uncontradicted leader whose mapped diagnostic rules are not observable (line 12) or the only active genus (line 14); CANDIDATE_GENUS marks tied scores (line 11), a leader not separated from the runner-up (line 13), or a contradicted leader. INDETERMINATE results from fewer than τobs such characters, no matched mandatory rule beyond CHR_01 (line 8), or exclusion of every genus with fewer than τNM evaluable characters (line 6), and NO_MATCH_WITHIN_CORE_TAXA from exclusion of every genus with at least τNM evaluable characters (line 6)."
+  },
+  {
+    "index": 130,
+    "style": "normal",
+    "text": "Algorithm 1: Ranking and confidence-state assignment"
+  },
+  {
+    "index": 131,
+    "style": "normal",
+    "text": "1:\tInput: observation set O, module m;  Output: ranked active set A, state σ"
+  },
+  {
+    "index": 132,
+    "style": "normal",
+    "text": "2:\tn ← n(O)   ▷ (1)"
+  },
+  {
+    "index": 133,
+    "style": "normal",
+    "text": "3:\tfor each genus g of module m do"
+  },
+  {
+    "index": 134,
+    "style": "normal",
+    "text": "4:\t\tcompute μ(r) ▷ (2);  S(g) ▷ (3);  X(g) ▷ (4)"
+  },
+  {
+    "index": 135,
+    "style": "normal",
+    "text": "5:\tA ← {g : ¬X(g)} sorted by S, then by nD"
+  },
+  {
+    "index": 136,
+    "style": "normal",
+    "text": "6:\tif A = ∅ then return NO_MATCH_WITHIN_CORE_TAXA if n ≥ τNM else INDETERMINATE"
+  },
+  {
+    "index": 137,
+    "style": "normal",
+    "text": "7:\tg1 ← A[1];  g2 ← A[2] (if it exists; otherwise sep = true)"
+  },
+  {
+    "index": 138,
+    "style": "normal",
+    "text": "8:\tif n < τobs or no mandatory rule of g1 on a character other than CHR_01 is matched then return INDETERMINATE"
+  },
+  {
+    "index": 139,
+    "style": "normal",
+    "text": "9:\thasD ← 𝒟(g1) ≠ ∅;  noC ← nC(g1) = 0;  sep by (5)"
+  },
+  {
+    "index": 140,
+    "style": "normal",
+    "text": "10:\tif hasD ∧ noC ∧ sep then return CONFIRMED_GENUS(g1)"
+  },
+  {
+    "index": 141,
+    "style": "normal",
+    "text": "11:\tif S(g1) = S(g2) then return CANDIDATE_GENUS({g ∈ A : S(g) = S(g1)})"
+  },
+  {
+    "index": 142,
+    "style": "normal",
+    "text": "12:\tif noC ∧ ¬hasD ∧ a mapped diagnostic rule of g1 is NEUTRAL then return PROBABLE_GENUS(g1)"
+  },
+  {
+    "index": 143,
+    "style": "normal",
+    "text": "13:\tif noC ∧ ¬sep then return CANDIDATE_GENUS(g1, g2)"
+  },
+  {
+    "index": 144,
+    "style": "normal",
+    "text": "14:\treturn PROBABLE_GENUS(g1) if noC else CANDIDATE_GENUS(g1)"
+  },
+  {
+    "index": 145,
+    "style": "normal",
+    "text": "The PROBABLE test (line 12) deliberately precedes the separation test (line 13): without a matched diagnostic rule, 𝒟(g1) is empty and sep cannot hold when a runner-up exists, so in the opposite order a leader whose diagnostic characters are merely unobservable could never be PROBABLE_GENUS. The price is that PROBABLE_GENUS may be issued with a one-point margin, e.g., from a single supporting rule; the stricter variant requiring Δ ≥ wM = 3 at line 12 is ablation A6 (Section VIII-D)."
+  },
+  {
+    "index": 146,
+    "style": "normal",
+    "text": "D. RATIONALE FOR THE EVIDENCE WEIGHTS"
+  },
+  {
+    "index": 147,
+    "style": "normal",
+    "text": "The mandatory weight (+3) is deliberately lower than the diagnostic weight (+5). Mandatory rules act mainly as an eligibility gate, whose violation excludes a genus (4), and are by construction shared by many genera of a module (e.g., agglutinated wall, multichambered test), so a high weight would reward genera merely for having many generic mandatory rules. Diagnostic rules encode the features that separate a genus from its closest comparison genera and must dominate the ranking among the genera that pass the gate. Supporting rules (+1) only break near-ties, and contradictory rules (−5) are weighted like diagnostic rules because they are diagnostic of a confusable genus; the sensitivity to these choices is quantified in Section VIII-E."
+  },
+  {
+    "index": 148,
+    "style": "normal",
+    "text": "E. WORKED EXAMPLE"
+  },
+  {
+    "index": 149,
+    "style": "normal",
+    "text": "The discriminating role of the diagnostic rules is illustrated by Ammodiscus and Glomospira, which share the mandatory rules on agglutinated wall, undivided tubular chamber, and absence of septa (Table XI). With coiling type (CHR_06) and coiling plane (CHR_07) both observed (scenario A), Ammodiscus matches both diagnostic rules and scores 19, whereas Glomospira matches none and triggers its contradictory rule on regular planispiral coiling (score 4); the runner-up is Rhizammina (7), and Ammodiscus is reported as CONFIRMED_GENUS with Δ = 12. When the coiling plane cannot be judged in a tangential section (scenario B), D2 becomes NEUTRAL instead of counting against either genus: Ammodiscus falls to 14 and the margin to 7, but it remains CONFIRMED_GENUS because D1 still separates it. Treating unobservable characters as ABSENT (ablation A1) would instead violate a mandatory rule of every agglutinated genus in both scenarios, since unentered characters such as CHR_02 in rule M2 would count as absent, and the engine would return NO_MATCH_WITHIN_CORE_TAXA, the failure the neutral state prevents."
+  },
+  {
+    "index": 150,
+    "style": "normal",
+    "text": "TABLE XI"
+  },
+  {
+    "index": 151,
+    "style": "normal",
+    "text": "Scoring of Ammodiscus and Glomospira for two observation sets"
+  },
+  {
+    "index": 152,
+    "style": "normal",
+    "text": "Observations: CHR_01 = AGGLUTINATED, CHR_03 = ABSENT, CHR_04 = UNDIVIDED, CHR_06 = PLANISPIRAL; scenario A adds CHR_07 = SINGLE_PLANE, scenario B has CHR_07 = NOT_OBSERVABLE. Unlisted rules are NEUTRAL or unmapped. N = NEUTRAL, X = MISMATCH, CONF. = CONFIRMED_GENUS. Rules with several pairs (braces) match when at least one of their characters holds and none is violated (2); Ammodiscus M4 (coiled test) has no mapping and is NEUTRAL. Values computed with the engine of the repaired release and reproduced by api/test/scoring.table13.test.js; the values of the leader agree with the running application (Fig. 3(c))."
+  },
+  {
+    "index": 153,
+    "style": "normal",
+    "text": "F. OUTPUT IN THE APPLICATION"
+  },
+  {
+    "index": 154,
+    "style": "normal",
+    "text": "In the “Character Scoring” mode the user enters all observed characters at once, and the displayed number of evaluated observations is n(O) of (1). Fig. 3(c) shows this mode for scenarios A (CHR_01, CHR_03, CHR_04, CHR_06, and CHR_07 entered; n(O) = 4) and B (CHR_07 recorded as NOT_OBSERVABLE; n(O) = 3) of Table XI, which reproduce the scores, margins, and CONFIRMED_GENUS states of Section VI-E. For every genus the ranking lists the matched mandatory (M.), diagnostic (D.), and contradictory (C.) rules, which can be checked against Table XI: Ammodiscus matches three of its four mandatory rules (M4 is unmapped) and two diagnostic rules in scenario A but only one in scenario B."
+  },
+  {
+    "index": 155,
+    "style": "normal",
+    "text": "In scenario A, 18 genera of the module were excluded automatically, all because a mandatory rule was violated and none primarily because of a strong contradiction, and the responsible rule is reported for each (Fig. 3(d)). Reophax and 16 further genera are excluded because their mandatory multichambered test (CHR_04 = MULTICHAMBERED) is violated by the observation CHR_04 = UNDIVIDED, and Bathysiphon because its mandatory uncoiled test (CHR_06 = UNCOILED) is violated by CHR_06 = PLANISPIRAL. This transparency is the fundamental difference from the black-box CNN classifiers of Section II: the user sees not only the result but also why it was reached."
+  },
+  {
+    "index": 156,
+    "style": "normal",
+    "text": "OPTIONAL AUXILIARY LAYER: CHARACTER PRE-EXTRACTION FROM IMAGES"
+  },
+  {
+    "index": 157,
+    "style": "normal",
+    "text": "So far, the observations are assumed to be entered by a specialist. To speed up data entry, an optional auxiliary layer (called Vision Observer in the software) drafts the observation sheet from a thin-section image with optional context (locality, age, optical conditions, scale, and views), proposing a value for each of the 21 characters and leaving every character it cannot interpret as NOT_OBSERVABLE. The draft is not an identification: after review by the user it enters the rule base exactly like manual input and is evaluated by the deterministic logic of Section VI. When the layer is disabled, the ontology, the decision tree, and the engine work unchanged; the taxonomic claim of the study rests on the morphological rule base, not on image interpretation."
+  },
+  {
+    "index": 158,
+    "style": "normal",
+    "text": "A. CONFIGURATION"
+  },
+  {
+    "index": 159,
+    "style": "normal",
+    "text": "The layer calls the Gemini API [57] (generateContent endpoint) with the model set by the environment variable GEMINI_MODEL, temperature 0.2, and JSON output mode (responseMimeType = application/json), sending one image (JPEG, PNG, WebP, or GIF, at most ≈9 MB) per request; an OpenAI-compatible endpoint can be configured instead. The evaluation of Section VIII-F used the Gemini endpoint with gemini-3.5-flash-lite, one request per panel, run on November 9, 2026, with the frozen configuration in Supplementary Material S4; the pixel dimensions of every panel are listed in the panel manifest (S5)."
+  },
+  {
+    "index": 160,
+    "style": "normal",
+    "text": "B. PROMPT DESIGN"
+  },
+  {
+    "index": 161,
+    "style": "normal",
+    "text": "The system prompt defines the role (“vision observer, not a taxonomic authority”) and ten hard rules, among them: observe first and identify only tentatively; never invent a character; use NOT_OBSERVABLE for characters not clearly visible and UNCERTAIN for visible but ambiguous ones; never mark ABSENT unless the region is exposed; keep serial arrangement (CHR_05) and coiling (CHR_06) separate; prefer genus or morphogroup to species; and reply with valid JSON only. It then lists the controlled states of Table II for each character and prescribes the output schema, abridged below (full prompt in Supplementary Material S4)."
+  },
+  {
+    "index": 162,
+    "style": "normal",
+    "text": "C. VALIDATION BEFORE SCORING"
+  },
+  {
+    "index": 163,
+    "style": "normal",
+    "text": "The VLM response is validated before it reaches the engine: (i) a response without a valid JSON object is rejected; (ii) every character missing from the response is set to NOT_OBSERVABLE; (iii) every state outside {PRESENT, ABSENT, NOT_OBSERVABLE, UNCERTAIN}, every value outside the controlled states of the character, and every PRESENT or ABSENT state without a value are replaced by NOT_OBSERVABLE and logged; (iv) the free-text suggestion (vlm_suggestion) is displayed but never passed to the engine, and the module proposed by the VLM is ignored, the module being derived from CHR_01 as for manual input; and (v) the user reviews and may edit every draft value before scoring."
+  },
+  {
+    "index": 164,
+    "style": "normal",
+    "text": "D. EXAMPLE RUN"
+  },
+  {
+    "index": 165,
+    "style": "normal",
+    "text": "Fig. 4 shows a real run with the pre-repair rule base: the free-text suggestion of the VLM was “Textulariida (e.g., Textularia or similar),” although its own draft describes chambers in a single plane, an evolute test, and a complex, reticulate interior with secondary chamberlets, none of which fits a biserial textulariid. From the validated draft, the engine proposed Recurvoides as CANDIDATE_GENUS. The discrepancy is not resolved silently: both interpretations are displayed side by side, and the final decision rests on the explicit rule evidence."
+  },
+  {
+    "index": 166,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 167,
+    "style": "normal",
+    "text": "Real run with the pre-repair rule base (screenshot, cropped): the free-text suggestion of the VLM is “Textulariida (e.g., Textularia or similar),” whereas the engine, given the validated character draft, proposes Recurvoides as CANDIDATE_GENUS."
+  },
+  {
+    "index": 168,
+    "style": "normal",
+    "text": "The example also shows a structural property of the model: under a closed-world assumption the engine can only rank its 75 genera, and for an unencoded genus, such as a Paleogene cyclamminid, it proposes the morphologically closest encoded genus (e.g., the Recurvoides output when an unencoded lituolid or cyclamminid is evaluated). Two mechanisms limit forced matches: if the observations violate the mandatory rules of every encoded genus, the engine returns NO_MATCH_WITHIN_CORE_TAXA; and a PROBABLE or CANDIDATE state signals incomplete evidence, while a VLM suggestion that disagrees with the engine warns that the specimen may belong to a taxon not yet encoded. Adding Cyclammina and other Paleogene cyclamminids to the agglutinated module would close this particular gap."
+  },
+  {
+    "index": 169,
+    "style": "normal",
+    "text": "The layer is evaluated end to end in Section VIII-F as a zero-shot stress test of the combined pipeline at genus level; agreement of the drafted character values with expert observation sheets is part of the planned multi-expert study (Section X)."
+  },
+  {
+    "index": 170,
+    "style": "normal",
+    "text": "EXPERIMENTAL EVALUATION"
+  },
+  {
+    "index": 171,
+    "style": "normal",
+    "text": "The evaluation separates the contribution of the knowledge model from that of image interpretation. The knowledge model and the engine are first tested on inputs whose ground truth is defined by the knowledge base itself (Sections VIII-B to VIII-E: internal consistency over all decision paths, a Monte Carlo comparison with an eliminative multi-access key, seven counterfactual ablations, and a weight and threshold sensitivity analysis); the complete pipeline, including the image layer, is then stress-tested zero-shot on 150 published image panels (Section VIII-F). All analyses are offline and deterministic; scripts, frozen inputs, and raw outputs are provided in the repository and in Supplementary Materials S2 and S4–S9."
+  },
+  {
+    "index": 172,
+    "style": "normal",
+    "text": "A. EVALUATION DESIGN AND METRICS"
+  },
+  {
+    "index": 173,
+    "style": "normal",
+    "text": "For a case i with reference genus yi (the leaf genus of a decision path, the generating genus of a synthetic profile, or the published genus of an image panel), let ai genera rank above yi and ti genera, including yi, share its score. The tie-fractional credit of the case and the top-k agreement over N cases are"
+  },
+  {
+    "index": 174,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 175,
+    "style": "normal",
+    "text": "\t(6)"
+  },
+  {
+    "index": 176,
+    "style": "normal",
+    "text": "where qi(k) is the expected credit under uniform random tie-breaking and qi(k) = 0 if yi is absent from the ranked output (e.g., excluded) or the method abstains (INDETERMINATE or NO_MATCH_WITHIN_CORE_TAXA). Abstentions are also reported through the coverage, i.e., the share of cases receiving a genus-level state, and the reference-exclusion (false-exclusion) rate is the share of cases whose reference genus is excluded by (4). The confidence states are assessed by the precision of each state s, the mean top-1 credit over the cases Is that receive s,"
+  },
+  {
+    "index": 177,
+    "style": "normal",
+    "text": "\t(7)"
+  },
+  {
+    "index": 178,
+    "style": "normal",
+    "text": "together with the share of cases that receive each state; a CANDIDATE_GENUS set of m genera containing yi thus contributes 1/m. Precision is undefined for the abstaining states and for states that receive no case and is reported as N/A rather than as zero. A well-calibrated engine should show Prec(CONFIRMED) > Prec(PROBABLE) > Prec(CANDIDATE). To relate agreement to incomplete observation, the fraction of unobservable characters of case i is"
+  },
+  {
+    "index": 179,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 180,
+    "style": "normal",
+    "text": "\t(8)"
+  },
+  {
+    "index": 181,
+    "style": "normal",
+    "text": "Ranking stability between configurations is measured by the extrapolated rank-biased overlap (RBO) of Webber et al. [60] with persistence p = 0.9 on the ranked active sets, using the deterministic tie order of the engine (1 = identical, 0 = disjoint), together with the share of unchanged top-1 genera. Descriptive 95% intervals are percentile intervals from 2000 bootstrap resamples (seed 20261111) of the unit of dependence (genera for synthetic profiles, source/section clusters for image panels); none is given for fewer than two clusters."
+  },
+  {
+    "index": 182,
+    "style": "normal",
+    "text": "B. INTERNAL CONSISTENCY BETWEEN THE TWO INFERENCE PATHS"
+  },
+  {
+    "index": 183,
+    "style": "normal",
+    "text": "The decision tree and the scoring engine are two views of the same knowledge and should agree. For each of the 104 root-to-leaf paths, every character-bound answer sets its character to the answered state or to the state of its explicit binding (with any implied states), CHR_01 is set to the module, and every other character is NOT_OBSERVABLE; Algorithm 1 then scores this set, recording the rank of the leaf genus (ties sharing the rank), its exclusion, and the confidence state. As the 22 composite questions contribute no observation, the test is conservative: it measures how much discriminating information of each path the rule cards express. A leaf excluded by its own path indicates a tree–rule contradiction; CONFIRMED_GENUS for another genus indicates overconfidence. Table XII gives the results after the repair of Section IV-B."
+  },
+  {
+    "index": 184,
+    "style": "normal",
+    "text": "TABLE XII"
+  },
+  {
+    "index": 185,
+    "style": "normal",
+    "text": "Internal consistency test: engine result for the observation sets of all decision-tree paths"
+  },
+  {
+    "index": 186,
+    "style": "normal",
+    "text": "Counts of paths; ties share the rank. CONF. = CONFIRMED_GENUS outputs whose top genus is the leaf genus (correct) and all CONFIRMED_GENUS outputs (total). Values of the repaired release; the last row replays the paths through the pre-repair release (commit 1e12fb5). Reproduced by api/test/consistency.test.js and by the independent Python implementation, and listed per path with the rule responsible for every exclusion in Supplementary Material S9. These are shared-rank retrieval counts, not the tie-fractional, abstention-aware agreement of Section VIII-A."
+  },
+  {
+    "index": 187,
+    "style": "normal",
+    "text": "The repair mainly removed overconfidence (Table XII): CONFIRMED_GENUS outputs fell from 48 to 29 while the share identifying the leaf genus rose from 29% to 59%; unique first ranks rose from 24 to 31 and tied ones from 10 to 22, because genera previously separated only by diagnostic proxies now share their mandatory evidence and are reported as CANDIDATE_GENUS sets. The 19 excluded leaves (17 before repair) concentrate in the porcelaneous module, where 11 of the 16 exclusions trace to one node: the lacazinid and complex milioline branch is reached through the answer “simple chambers” (CHR_10 = SIMPLE) at question PORC_Q2, whereas the rule cards of Lacazina, Lacazinella, Pseudolacazina, Periloculina, and Idalina require internal subdivision or contradict simple chambers. The test thus localizes the remaining disagreements to identifiable tree nodes and rule cards, which form the work list of the next release."
+  },
+  {
+    "index": 188,
+    "style": "normal",
+    "text": "Implementation checks: All ten competency queries matched the independently derived answers (Section IV-B), and the 47 API tests, including the reproduction of Tables XI and XII, and seven regression tests of the evaluation scripts (RBO properties, tie credit, frozen-input checksums, audit targets, pairing of the simulation, threshold invariance of the rankings, and equivalence of the offline and application scorers) pass on the repaired release, establishing the internal consistency of the implementation."
+  },
+  {
+    "index": 189,
+    "style": "normal",
+    "text": "C. ROBUSTNESS TO INCOMPLETE OBSERVATION: COMPARISON WITH A MULTI-ACCESS KEY"
+  },
+  {
+    "index": 190,
+    "style": "normal",
+    "text": "Baseline: Classical multi-access keys of the DELTA/Intkey family [35]–[38] discard every taxon whose coded state differs from an entered observation. The comparator B1 implements this logic on the same knowledge base: every observed mismatch of a mandatory or diagnostic rule eliminates the genus, supporting and contradictory rules are not used, and all surviving genera are tied, so that no ordering advantage is introduced. Both B1 and the proposed engine (A0) take the module from CHR_01, so the 25 genera of the module compete in every case."
+  },
+  {
+    "index": 191,
+    "style": "normal",
+    "text": "Simulation: Each of the 75 genera received a synthetic profile from its mapped mandatory and diagnostic pairs (unmapped anatomy unknown; every profile satisfies its own mapped constraints), degraded 20 times (seed 20261111) by masking a requested 10%, 30%, or 50% of its characters as NOT_OBSERVABLE (realized 5.9%, 31.6%, and 55.9% on sparse profiles) and by replacing each retained state, with probability 0.05, by another controlled state of the same character that it does not imply; clean, mask-only, and noise-only controls complete the design (12,000 inputs, 24,000 paired evaluations). Metrics follow Section VIII-A; paired differences have 95% percentile intervals from 2000 bootstrap resamples of genera."
+  },
+  {
+    "index": 192,
+    "style": "normal",
+    "text": "TABLE XIII"
+  },
+  {
+    "index": 193,
+    "style": "normal",
+    "text": "Paired Monte Carlo comparison of the graded engine (A0) with an eliminative multi-access key (B1) on rule-derived profiles (75 genera × 20 repeats per condition)"
+  },
+  {
+    "index": 194,
+    "style": "normal",
+    "text": "Percentages; 1500 cases per row. Masking = requested fraction of characters set to NOT_OBSERVABLE (realized 5.9%, 31.6%, and 55.9%); noise = probability that a retained state is replaced. False excl. = reference genus eliminated. ΔAcc@1 = A0 − B1 in percentage points with a 95% paired bootstrap interval over genera. Mask-only controls and all per-case records in Supplementary Material S9."
+  },
+  {
+    "index": 195,
+    "style": "normal",
+    "text": "Results: With 5% noise, A0 outperformed B1 at every level of masking (Table XIII), by 50.8, 36.4, and 18.4 percentage points in Acc@1 at 10%, 30%, and 50% masking, with differences of similar size in Acc@3. Because B1 cannot order its survivors, its Acc@1 approximates the reciprocal of their number, whereas the graded weights let A0 separate merely compatible genera from genera with matched diagnostic evidence. A0 also excluded the reference genus less often, because a corrupted state that violates a diagnostic rule only withholds points; without noise, A0 never excluded the reference genus, whereas B1 did in 0.7%–1.7% of the masked cases. Coverage fell with masking because the engine returns INDETERMINATE rather than guessing when too few characters remain. These results characterize the inference on rule-consistent inputs, not accuracy on real specimens."
+  },
+  {
+    "index": 196,
+    "style": "normal",
+    "text": "D. COUNTERFACTUAL ABLATIONS"
+  },
+  {
+    "index": 197,
+    "style": "normal",
+    "text": "Seven prespecified counterfactuals (Table XIV) each change one mechanism. A1 sets every rule group referring to an unobserved character to MISMATCH, i.e., “unobservable treated as absent,” without claiming that ABSENT is a valid state of every character; n(O) remains the number of observed characters. A2 removes the 13 implication mappings, and A3 the contradictory rules. A4 makes multi-pair rules strictly conjunctive (MATCH only if every mapped character group is observed and holds; an observed mismatch still takes precedence). A5 evaluates the tie test (line 11 of Algorithm 1) after the PROBABLE test (line 12); A6 additionally requires Δ ≥ wM = 3 for the PROBABLE test, a missing runner-up counting as an infinite margin; and A7 divides S(g|O) by the total positive weight of the rules of g whose verdict is not NEUTRAL, keeping the released thresholds, whose scale no longer matches the normalized scores, so that it yields no CONFIRMED_GENUS output. All were evaluated on the 104 decision paths (Section VIII-B) and the 150 drafted sheets (Section VIII-F)."
+  },
+  {
+    "index": 198,
+    "style": "normal",
+    "text": "TABLE XIV"
+  },
+  {
+    "index": 199,
+    "style": "normal",
+    "text": "Counterfactual ablations on the decision paths (n = 104) and on the drafted observation sheets of the stress test (n = 150)"
+  },
+  {
+    "index": 200,
+    "style": "normal",
+    "text": "Percentages. Path = decision paths (n = 104); Panel = drafted observation sheets of the stress test (n = 150). Acc@k uses expected uniform tie-breaking and counts abstentions as errors. Leaf excl. / Ref. excl. = share of paths (panels) whose leaf (published) genus is excluded. CONF. corr./total = correct and total CONFIRMED_GENUS outputs on the paths. †A7 keeps the released confidence thresholds, which do not match the scale of the normalized scores, and therefore produces no CONFIRMED_GENUS output. Repaired release; per-module and per-cohort values in Supplementary Material S9."
+  },
+  {
+    "index": 201,
+    "style": "normal",
+    "text": "TABLE XV"
+  },
+  {
+    "index": 202,
+    "style": "normal",
+    "text": "Sensitivity of the rankings to the evidence weights and the confidence thresholds on the decision paths (n = 104) and on the drafted observation sheets (n = 150)"
+  },
+  {
+    "index": 203,
+    "style": "normal",
+    "text": "Percentages except RBO (extrapolated rank-biased overlap with the A0 ranking, p = 0.9). S5 sweeps τobs ∈ {1, 2, 3}, τNM ∈ {2, 3, 4}, and δ ∈ {1, 2, 3} with default weights; ranges over the 27 settings. Path = decision paths; Panel = drafted sheets of the stress test. Results for all 33 configurations, also for the sheets with the raw uncertainty flags of the model preserved, in Supplementary Material S9."
+  },
+  {
+    "index": 204,
+    "style": "normal",
+    "text": "On the decision paths, A1 had by far the largest effect (Table XIV): the leaf genus was excluded on 81.7% of the paths instead of 18.3%, and tie-aware Acc@3 fell from 46.7% to 14.2%, so treating unobservable characters as absent would defeat the neutral-evidence mechanism. A7 reduced Acc@1 and Acc@3 to 9.8% and 26.0%; A2–A4 changed Acc@1 by −1.1 to +2.4 points, A2 raising leaf exclusions to 22.1% and A4 raising Acc@1 to 27.5% with fewer correct confirmations (16 of 24); A5 and A6 left all path results unchanged. On the drafted sheets every configuration remained low (Acc@1 3.2%–4.2%, Acc@3 8.7%–11.4%), and A1 changed little, consistent with the small fraction of unobservable characters after normalization (Fig. 5)."
+  },
+  {
+    "index": 205,
+    "style": "normal",
+    "text": "E. WEIGHT AND THRESHOLD SENSITIVITY"
+  },
+  {
+    "index": 206,
+    "style": "normal",
+    "text": "The weights and thresholds of Section VI were fixed a priori, so their influence was examined around the default A0, w = (wM, wD, wS, wC) = (+3, +5, +1, −5) with τobs = 2, τNM = 3, and δ = 1 (Table XV): unit weights (S1); a reversed hierarchy in which mandatory evidence outweighs diagnostic evidence (S2); no supporting evidence (S3); weak and strong contradiction penalties (S4a, S4b); and the full threshold grid τobs ∈ {1, 2, 3}, τNM ∈ {2, 3, 4}, and δ ∈ {1, 2, 3} with default weights (S5, 27 settings). Each of the 33 configurations was applied to the 104 decision paths and the 150 drafted sheets, and its ranking was compared with that of A0 by RBO and by the share of unchanged top-1 genera (Section VIII-A)."
+  },
+  {
+    "index": 207,
+    "style": "normal",
+    "text": "The rankings were stable (Table XV): no weight variant reduced the path RBO below 0.93 or changed Acc@1 by more than 2.4 points. The reversed hierarchy (S2) changed the top-1 genus most often and raised Acc@3 at the expense of Acc@1, whereas S1 and S2 issued far fewer CONFIRMED_GENUS outputs with a higher share of correct ones, i.e., a more conservative but less informative engine. The thresholds do not alter scores and leave every ranking unchanged (RBO = 1 for all 27 settings); they act only on the confidence states: τNM had no effect because no path reached NO_MATCH_WITHIN_CORE_TAXA, δ = 2 and δ = 3 reduced the CONFIRMED_GENUS outputs from 29 to 25 and 14, and τobs = 3 reduced the coverage from 85.6% to 75.0% and Acc@1 to 21.3%. On the drafted sheets, Acc@1 stayed between 3.2% and 3.6% under every setting. No setting dominated the default, which was therefore retained; selecting weights on these development data would overfit them."
+  },
+  {
+    "index": 208,
+    "style": "normal",
+    "text": "F. ZERO-SHOT VISION-LANGUAGE MODEL STRESS TEST"
+  },
+  {
+    "index": 209,
+    "style": "normal",
+    "text": "Panel: The stress test uses 150 published image panels of 24 core genera of the ontology: 33 agglutinated, 37 porcelaneous, and 80 hyaline panels from 30 source/section clusters (Table XVI). Twenty-eight panels came from two additional articles (23 Coskinolina panels from [58] and five Alveolina panels from [59]) and 122 from BouDagher-Fadel [2], a book that is also a knowledge-base reference (Section IV-A), so the two cohorts are reported separately. The unit of analysis is an image panel, not a verified independent specimen: panels from the same plate or section can be correlated, and some crops include parts of adjacent sections of the same genus. All sources are published under CC BY 4.0; the panels are reproduced with attribution and a statement of modification in Supplementary Material S5."
+  },
+  {
+    "index": 210,
+    "style": "normal",
+    "text": "Model run: The setting is deliberately zero-shot: a general-purpose model without fine-tuning, exemplars, or calibration. Panel identities and crop coordinates were frozen before the run; taxon-name labels were cropped from the panels of [59], while structural annotations and scale bars within the crops remain and may provide cues; no image was synthesized or enhanced. One pass of gemini-3.5-flash-lite (temperature 0.2) was run per panel (IMG_001–IMG_150) with the prompt and normalization routine of the application, without reference labels, file names, or module assignments. The archived sheets were scored offline by the repaired engine, with the module derived from the drafted CHR_01 and without review or correction. An initial gemini-3.6-flash run, stopped after ten responses at the daily free-tier quota of the provider, is archived separately and excluded from all figures and metrics."
+  },
+  {
+    "index": 211,
+    "style": "normal",
+    "text": "Normalization: The validation step of Section VII-C changed 497 raw character entries without manual correction; in 184 of them, a raw UNCERTAIN (153) or NOT_OBSERVABLE (31) state with a value became an evaluable state that entered the scoring (raw and normalized states in Supplementary Material S7). This is an implementation property, not an expert validation of the drafts."
+  },
+  {
+    "index": 212,
+    "style": "normal",
+    "text": "Connection test: Before the panel was frozen, a connection test used a larger development crop around Fig. 4a of [58] that also contained the adjacent Fig. 4b, which reappears as panel IMG_001. Nothing was tuned on accuracy, but the stress test is not an untouched, independent test set."
+  },
+  {
+    "index": 213,
+    "style": "normal",
+    "text": "TABLE XVI"
+  },
+  {
+    "index": 214,
+    "style": "normal",
+    "text": "Zero-shot VLM stress test: agreement of the pipeline with published genus labels (gemini-3.5-flash-lite, one pass per panel, unreviewed drafts)"
+  },
+  {
+    "index": 215,
+    "style": "normal",
+    "text": "Percentages with 95% source/section-cluster bootstrap intervals (2000 resamples, seed 20261111) in brackets. Acc@k uses expected uniform tie-breaking; abstentions count as errors. Coverage = share of panels with a genus-level state; Ref. excl. = share of panels whose published genus is excluded. Additional articles: 23 agglutinated and 5 porcelaneous panels of two genera (Coskinolina, Alveolina), both also represented in the book cohort; book: 10, 32, and 80 panels of 24 genera. Module rows pool both cohorts by reference module; all hyaline panels come from the book. Panel-level records in Supplementary Materials S5, S7, and S9."
+  },
+  {
+    "index": 216,
+    "style": "normal",
+    "text": "Results: Agreement of the zero-shot pipeline with the published genus labels was low in both cohorts (Table XVI): over all 150 panels, Acc@1 was 3.2% (1.2%–5.4%) and Acc@3 11.4% (6.6%–16.3%) at 88.0% coverage, and the published genus was excluded in 44.7% (33.8%–56.4%) of the panels. For the same archived sheets, the pre-repair release gave Acc@1 4.9% and Acc@3 20.1% (Supplementary Material S9); the repair was derived from the rule texts and was not tuned on panel agreement. By contrast, the same engine reached 62.5% Acc@1 when 5% of the states of rule-derived profiles were corrupted at random (Table XIII) and excluded the reference genus in only 11.1% of those cases."
+  },
+  {
+    "index": 217,
+    "style": "normal",
+    "text": "The model declared few characters unobservable: after normalization every panel had φ ≤ 0.35, i.e., at most seven of the 20 scored characters were NOT_OBSERVABLE or UNCERTAIN (Fig. 5). Acc@3 decreased with φ in both cohorts, and both measures were zero for φ ≥ 0.2, although the upper bins contain few panels. Keeping the raw UNCERTAIN and NOT_OBSERVABLE flags of the model instead of the normalization of the application changed 76 sheets but only 12 displayed genera (Acc@1 = 3.9%; Supplementary Material S9). The frequent exclusion of the published genus, which requires a drafted state that violates one of its mandatory rules, thus indicates that the low agreement stems from confidently drafted but wrong states (misreadings of the model, rule-card errors, or both) rather than from missing observations."
+  },
+  {
+    "index": 218,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 219,
+    "style": "normal",
+    "text": "Tie-aware top-1 and top-3 agreement with published genus labels as a function of the fraction φ of unobservable characters in the zero-shot stress test (gemini-3.5-flash-lite, one pass per panel, unreviewed drafts, repaired rule base), by cohort. Fractions are binned in intervals of 0.1, n gives the panels per bin, and whiskers are 95% percentile intervals from 2000 bootstrap resamples of source/section clusters."
+  },
+  {
+    "index": 220,
+    "style": "normal",
+    "text": "The errors were systematic rather than scattered (Fig. 6). In the book cohort, Ranikothalia was displayed first for 34 of the 122 panels, across 15 reference genera, and 17 panels received INDETERMINATE; in the additional articles, 11 of the 23 Coskinolina panels were displayed as Karrerulina. The genus displayed first matched the published label in none of the 28 additional-article panels and in 3 of the 122 book panels."
+  },
+  {
+    "index": 221,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 222,
+    "style": "normal",
+    "text": "Confusion matrices of the published reference genus against the genus displayed first by the engine (or the abstention), separately for the additional-article and the knowledge-base reference-book cohorts. Numbers are panel counts, shading gives the percentage within each reference genus, and framed cells mark the reference genus where it occurs as an output. The displayed genus is the first-ranked output of the engine, whereas the agreement measures use expected uniform breaking of score ties."
+  },
+  {
+    "index": 223,
+    "style": "normal",
+    "text": ""
+  },
+  {
+    "index": 224,
+    "style": "normal",
+    "text": "Share of panels (white) and top-1 precision (gray, with 95% source/section-cluster bootstrap intervals) of the five confidence states in the zero-shot stress test, by cohort. Precision is undefined for abstentions and for states that receive no panel (N/A)."
+  },
+  {
+    "index": 225,
+    "style": "normal",
+    "text": "The confidence states were not calibrated on unreviewed drafts (Fig. 7). CONFIRMED_GENUS was the most frequent state in the book cohort (66 of 122 panels) and was assigned to 13 of the 28 additional-article panels, yet only one of its 79 outputs agreed with the published label (precision 1.5% [0.0%–5.1%] and 0.0%), against 7.3% (1.2%–14.1%) and 7.1% (0.0%–13.6%) for CANDIDATE_GENUS; no panel received PROBABLE_GENUS or NO_MATCH_WITHIN_CORE_TAXA, and 18 received INDETERMINATE (precision N/A). The ordering Prec(CONFIRMED) > Prec(CANDIDATE) expected of a calibrated engine was thus reversed: confidently wrong drafted states meet the separation condition (5) with spurious diagnostic evidence, so CONFIRMED_GENUS cannot indicate correctness for unreviewed model input (on the decision paths, 17 of 29 identified the leaf genus; Table XII)."
+  },
+  {
+    "index": 226,
+    "style": "normal",
+    "text": "Interpretation: The stress test isolates the failure mode that motivates the architecture: randomly masked or corrupted rule-consistent inputs degrade the engine gracefully (Sections VIII-C to VIII-E), whereas systematic misreadings of thin-section morphology by an uncalibrated zero-shot model drive the same engine to wrong exclusions and spurious confirmations. Separating misreadings from rule-card errors requires the planned review with expert-approved character sheets (Section VIII-G). General-purpose vision-language models can therefore serve at most as drafting assistants whose output a specialist reviews, while the taxonomic decision rests on the expert-supervised, deterministic ontology layer, in line with the evidence on fine-grained traits [41], [42]."
+  },
+  {
+    "index": 227,
+    "style": "normal",
+    "text": "G. PLANNED BLINDED EXPERT REVIEW OF LLM-DRAFTED OBSERVATIONS"
+  },
+  {
+    "index": 228,
+    "style": "normal",
+    "text": "Design: The expert-input evaluation is designed as blinded expert review of LLM-drafted observations, not as unaided expert character extraction. For each case, gemini-3.5-flash-lite [57] (temperature 0.2) receives only the coded views and the frozen 21-character vocabulary, with a morphology-only prompt that requests no genus; no reference genus, publication identity, earlier prediction, rule card, or A0/B1 result is supplied. It returns controlled values, observation states, and short visual reasons, kept with the raw provider response as an immutable LLM_DRAFT record with model version, prompt digest, image checksums, and timestamps. CHR_21 records orientation and is not scored, and, unlike the normalization of Section VII-C, NOT_OBSERVABLE and UNCERTAIN are never promoted automatically. Two reviewers not involved in rule development (EXP01, EXP02) will review the same raw draft independently, approving, correcting, or neutralizing every character and documenting each correction; the draft, each final sheet, and the change trail remain separate, and only a completed form approved by its reviewer (EXPERT_VERIFIED) can enter the comparison. Reference labels, the other reviewer’s changes, and algorithm outputs are withheld during review, and a separate expert (REF01) will verify the reference genera from collection documentation and specimen examination. Because a shared draft can anchor both reviewers, the design does not measure unaided expert performance, and two fixed reviewers do not represent the wider specialist population."
+  },
+  {
+    "index": 229,
+    "style": "normal",
+    "text": "Preparation status: P001–P010 are ten previously evaluated published image panels prepared for a form-usability exercise, taken from the 150 panels of Section VIII-F as archived in the historical V27 evaluation package; they are not independent specimens, and the pilot tests only drafting, form use, review time, and correction recording. One successful generation per case, without selection, yielded 10 LLM_DRAFT records with 210 character entries; the configured gemini-3.6-flash returned HTTP 503 twice before any draft existed, so gemini-3.5-flash-lite was used for availability, and the failed attempts are retained. The drafts assign 133 PRESENT, 41 ABSENT, 23 NOT_OBSERVABLE, and 13 UNCERTAIN states; these are unverified model outputs, not estimates of observation correctness. Twenty review forms (two per case) await completion; no expert-approved form, REF01 verification, or assignment of persons to the role codes exists yet, and F001–F060 remain unassigned. Software tests on synthetic fixtures and a browser test of the review form passed as technical checks, and the analysis gate rejects the incomplete study."
+  },
+  {
+    "index": 230,
+    "style": "normal",
+    "text": "Planned confirmatory study: After the pilot review and the protocol lock, the planning target, not the result of a power calculation, is 60 new documented Paleocene–Eocene fossils of the three wall-composition modules, unused in rule development and in the earlier evaluation; multiple views of a fossil remain one specimen, and pilot images are excluded. The two approved sheets of each fossil will be passed unchanged to the frozen V29 A0 engine and the eliminative comparator B1 (Section VIII-C), identified by the checksums of their four files (S10) and distinct from the V27 package; the CHR_01 entry of each sheet, not the reference module, routes the case, and references are joined only after scoring. The primary estimand is the paired A0 − B1 difference in tie-fractional top-1 agreement (6), averaging the two reviewers’ credits within each fossil and then across fossils; its 95% percentile interval will come from 5000 paired cluster-bootstrap resamples (seed 20261112) that keep the fossils of one source cluster, both reviewers, and both methods together. Secondary endpoints are top-3 agreement, coverage, rule-based reference exclusion, and module-based reference omission. The 120 forms count as 60 specimens, and no result table will be reported before new material, both approved forms, and verified references are available."
+  },
+  {
+    "index": 231,
+    "style": "normal",
+    "text": "DISCUSSION AND LIMITATIONS"
+  },
+  {
+    "index": 232,
+    "style": "normal",
+    "text": "Scope: The ontology covers 75 Paleocene–Eocene genera; Mesozoic or Miocene assemblages will require new rule cards and possibly new character identifiers. First candidates for addition are the unencoded Turkish genera of Section I (Karsella, Orduina, Malatyna, Vania, Haymanella, Kayseriella, Elazigella, Orduella), the missing Tethyan Eocene genera named in Section IV, and the Paleogene cyclamminids."
+  },
+  {
+    "index": 233,
+    "style": "normal",
+    "text": "Closed-world assumption: An unencoded genus is either excluded everywhere (NO_MATCH_WITHIN_CORE_TAXA) or assigned to the closest encoded genus (Section VII-D); graded states mitigate but do not remove this risk. Planned extensions are a display of the module’s genus list with every result and an “out-of-scope” check against genera recorded in the literature but not encoded."
+  },
+  {
+    "index": 234,
+    "style": "normal",
+    "text": "Section orientation (CHR_21): An oblique section can be mislabeled by the user or by the VLM (e.g., as GLOBULAR), so the specialist remains the final arbiter. Early nummulitid genera such as Nummulitoides may not be identifiable from one section, because involution (CHR_08) and marginal-cord thickness (CHR_17) must be judged together from axial and equatorial information; until sections of one specimen can be combined, such cases remain PROBABLE or CANDIDATE. Using CHR_21 to flag orientation-sensitive characters is planned."
+  },
+  {
+    "index": 235,
+    "style": "normal",
+    "text": "Knowledge-base maintenance: Rule cards, trees, and mappings are kept in versioned JSON master files from which the OWL file and the graph are regenerated; each release is to receive a semantic version, an archived DOI, and a change log. The audit, repair scripts, consistency test (api/test/consistency.test.js, eval/consistency_and_audit.py), and ontology validator are rerun before every release; running them as continuous integration and recording the release in each identification report are planned."
+  },
+  {
+    "index": 236,
+    "style": "normal",
+    "text": "Taxonomic revision and synonymy: Genus concepts change through revision and synonymization under the International Code of Zoological Nomenclature [61]. The WoRMS check, run on the stored AphiaID, flags names that are no longer accepted and gives the accepted name. After a synonymy, the junior name becomes an alias of the senior genus node, the curator merges or revises the rule cards, and the release notes record the change; genera are never renamed automatically. A live WoRMS lookup (Supplementary Material S1) returned records for 42 of the 75 names and none for 33; a missing record does not invalidate a fossil genus name, but these 33 names, the record returned for Idalina (a molluscan junior homonym), and Planocamerinoides (returned as unaccepted) require curator verification."
+  },
+  {
+    "index": 237,
+    "style": "normal",
+    "text": "User bias: Decision-support systems can induce automation bias [62]. The workflow counters it by recording observations before any ranking is shown, showing the supporting and contradicting evidence of every genus, and avoiding a single forced answer; the overconfident outputs on unreviewed drafts (Section VIII-F) show why every draft needs specialist review. Recording the sheet first limits, but cannot remove, the influence of the expert’s expectations, because a specialist may recognize a genus while describing it; a shared model draft can likewise anchor the reviewers of Section VIII-G."
+  },
+  {
+    "index": 238,
+    "style": "normal",
+    "text": "Prompt and image quality in the VLM layer: Even with a consistent prompt, image resolution, optics, and preservation affect the VLM output; thin-section fine-tuning or a segmentation model (e.g., YOLO-based [63]) is planned."
+  },
+  {
+    "index": 239,
+    "style": "normal",
+    "text": "Threats to validity: (i) The rule cards were extended from seven pilot taxa to 75 genera by single-author literature synthesis; the audit secures internal consistency, not taxonomic correctness, and 28 genera still lack a scoring diagnostic rule (Section IV-B). (ii) Decision paths and synthetic profiles derive from the knowledge base itself, so Tables XII–XV characterize inference on rule-consistent inputs, not accuracy on independent specimens. (iii) The 150 panels of Section VIII-F are correlated published images, 122 from a knowledge-base reference, that the model may have seen in training. (iv) The published reference genus may itself be disputed. Points (ii)–(iv) motivate the study planned in Section VIII-G, not yet conducted; point (i) is addressed in Section X."
+  },
+  {
+    "index": 240,
+    "style": "normal",
+    "text": "Genus level only: All rule cards are defined at genus level. Species discrimination in larger benthic foraminifera often relies on numerical parameters (number of whorls, chamber expansion rate, embryonic-apparatus size, diameter/thickness ratio), which will require measured values and interval criteria in the character model."
+  },
+  {
+    "index": 241,
+    "style": "normal",
+    "text": "CONCLUSION AND FUTURE WORK"
+  },
+  {
+    "index": 242,
+    "style": "normal",
+    "text": "This study presented a transparent and extensible genus identification ontology for Paleocene–Eocene benthic foraminifera and a decision-support model built on it, whose deterministic, evidence-weighted inference over 21 controlled characters and 706 graded rule cards for 75 genera is traceable to morphological statements and is published as an OWL 2 ontology verified by HermiT. After a logged audit-driven repair, the engine ranks the leaf genus first on 53 of 104 decision paths, and 17 of its 29 CONFIRMED_GENUS outputs are correct (14 of 48 before). Graded evidence outperformed an eliminative multi-access key at every level of missingness, the rankings were stable under alternative weightings, and treating unobservable characters as absent was the most damaging design alternative. Unreviewed zero-shot vision-language-model drafts drove the engine to wrong exclusions and spurious confirmations, supporting the confinement of such models to drafting observations for expert review."
+  },
+  {
+    "index": 243,
+    "style": "normal",
+    "text": "The system is a working end-to-end prototype that supports, rather than replaces, the specialist. Future priorities are: (i) the blinded expert review of LLM-drafted observations planned in Section VIII-G, followed by a comparison of drafted character values with expert sheets and an open-set, multi-institutional evaluation with and without the system; (ii) per-rule bibliographic provenance, vocabulary extensions for the 28 genera without a scoring diagnostic rule, correction of the tree–rule conflicts of Section VIII-B, and community review of the rule cards; (iii) the Turkish genera of Section I and Paleogene cyclamminids such as Cyclammina; (iv) an image layer fine-tuned on thin sections or supported by segmentation [63]; (v) other intervals; and (vi) multi-section analysis of differently oriented sections of one specimen, critical for separating nummulitid genera."
+  },
+  {
+    "index": 244,
+    "style": "normal",
+    "text": "CODE AND DATA AVAILABILITY"
+  },
+  {
+    "index": 245,
+    "style": "normal",
+    "text": "The ontology file, character definitions, decision trees, rule cards, evaluation scripts, and application code are available at https://github.com/datkanber/foraminifera-fossil under the MIT License (code) and CC BY 4.0 (ontology and data). The results were computed on the repaired release in Supplementary Material S9, which supersedes commit 1e12fb5fc2c32e5d042f4f322c823c50dcda59b6 and records SHA-256 checksums of all master files, scripts, and outputs; npm test in the api directory runs the 47 unit and regression tests (including the reproduction of Tables XI and XII), and the scripts listed in S9 reproduce the offline evaluation without calling an external model. No project DOI is given because the v1.0 release and its Zenodo archive are not yet published. The ontology uses the persistent IRI https://w3id.org/foram-ontology (version IRI https://w3id.org/foram-ontology/1.0), in line with the FAIR principles [64]. The running system is available at https://geoknow.asrlab.cloud/. WoRMS records are subject to the terms of that service [39]. Supplementary Materials S1–S8 contain the knowledge-base inventory, WoRMS lookup, and pre-repair audit (S1); competency-query executions (S2); the OWL file and JSON trees (S3); the VLM prompt, controller, scoring snapshot, and frozen configuration (S4); panel sources, crop coordinates, checksums, and licenses (S5); pre-repair internal paths and ablations (S6); panel-level VLM responses and metrics (S7); and stratified results (S8). S9 holds the repaired master files, audit and repair logs, and all present results; S10 holds the shareable records of the review planned in Section VIII-G (drafting prompt and configuration, per-case state counts of the pilot drafts, archived A0 and B1 code with checksums, and test logs) but no observations, reference labels, or participant data; the pilot images and raw drafts are withheld until the pilot review is locked. The panels are crops of CC BY 4.0 publications [2], [58], [59], redistributed with attribution and a statement of modification; the author portrait is not covered by this license. The screenshots of Figs. 3 and 4 were only cropped."
+  },
+  {
+    "index": 246,
+    "style": "normal",
+    "text": "ACKNOWLEDGMENT"
+  },
+  {
+    "index": 247,
+    "style": "normal",
+    "text": "The author thanks the researchers whose comprehensive literature on Paleocene–Eocene benthic foraminiferal taxonomy of Türkiye forms the ontological basis of this work, and the members of the Department of Geological Engineering, Eskişehir Osmangazi University, for their feedback during development. Claude (Anthropic) was used to check the consistency of the manuscript with the code, data, and evaluation outputs, to propose revisions of the English text, to draft parts of the Abstract and of Sections IV and VI–X, to implement and run the offline audit-repair, sensitivity, and simulation scripts, to redraw Figs. 1 and 2, and to integrate the figures and results of the evaluation; all AI-assisted text, code, and results were reviewed, edited, and verified by the author, who takes full responsibility for the content."
+  },
+  {
+    "index": 248,
+    "style": "normal",
+    "text": "REFERENCES"
+  },
+  {
+    "index": 249,
+    "style": "normal",
+    "text": "A. R. Loeblich Jr. and H. Tappan, Foraminiferal Genera and Their Classification. New York, NY, USA: Van Nostrand Reinhold, 1987."
+  },
+  {
+    "index": 250,
+    "style": "normal",
+    "text": "M. K. BouDagher-Fadel, Evolution and Geological Significance of Larger Benthic Foraminifera, 2nd ed. London, U.K.: UCL Press, 2018, doi: 10.14324/111.9781911576938."
+  },
+  {
+    "index": 251,
+    "style": "normal",
+    "text": "P. Hallock and E. C. Glenn, “Larger foraminifera: A tool for paleoenvironmental analysis of Cenozoic carbonate depositional facies,” PALAIOS, vol. 1, no. 1, pp. 55–64, 1986."
+  },
+  {
+    "index": 252,
+    "style": "normal",
+    "text": "E. Sirel, “Descriptions of two new families, three new species and re-description of four known genera and one subfamily from the larger benthic foraminifera of Paleocene in Turkey,” Bull. Mineral Res. Explor., no. 146, pp. 27–53, 2013."
+  },
+  {
+    "index": 253,
+    "style": "normal",
+    "text": "E. Sirel and A. Deveciler, “A new late Ypresian species of Asterigerina and the first records of Ornatorotalia and Granorotalia from the Thanetian and upper Ypresian of Turkey,” Riv. Ital. Paleontol. Stratigr., vol. 123, no. 1, pp. 65–78, 2017, doi: 10.13130/2039-4942/8038."
+  },
+  {
+    "index": 254,
+    "style": "normal",
+    "text": "E. Sirel and A. Deveciler, “Diagnostic structural elements of Ranikothalia Caudri and re-description of its six species from Thanetian–Ilerdian of Turkey,” J. Palaeontol. Soc. India, vol. 63, no. 1, pp. 19–36, 2018."
+  },
+  {
+    "index": 255,
+    "style": "normal",
+    "text": "E. Sirel, T. Ayyıldız, and A. Deveciler, “Description of the very shallow water marine Priabonian and shallow early Oligocene benthic foraminifera and their environmental characteristics in the new Kazandere Member of the Soğucak Formation, northeastern part of the Thrace Basin, Turkey,” Geologica Acta, vol. 18, no. 1, art. no. 2, 2020."
+  },
+  {
+    "index": 256,
+    "style": "normal",
+    "text": "E. Sirel, “On the discovery of Orduina n. gen., a new genus of the family Rotaliidae,” Bull. Mineral Res. Explor. (foreign ed.), no. 73, pp. 145–147, 1969 [Digital ed.: Bull. Mineral Res. Explor., vol. 1969, no. 73, art. 9, 2023]."
+  },
+  {
+    "index": 257,
+    "style": "normal",
+    "text": "E. Sirel, “Four new genera (Haymanella, Kayseriella, Elazigella and Orduella) and one new species of Hottingerina from the Paleocene of Turkey,” Micropaleontology, vol. 45, no. 2, pp. 113–137, 1999."
+  },
+  {
+    "index": 258,
+    "style": "normal",
+    "text": "E. Sirel and S. Acar, “Malatyna vicensis, a new foraminiferal species from the Bartonian of Vic region (northeastern Spain),” Rev. Paléobiol., vol. 17, pp. 373–379, 1998."
+  },
+  {
+    "index": 259,
+    "style": "normal",
+    "text": "E. Sirel, “Revision on the species of Pseudolacazina Caus 1979 (Foraminiferida) from the different localities of Turkey,” Bull. Mineral Res. Explor., no. 120, pp. 63–68, 1998."
+  },
+  {
+    "index": 260,
+    "style": "normal",
+    "text": "E. Sirel, “Karsella, a new complex orbitolinid (Foraminiferida) from the Thanetian limestone of the Van region (East Turkey),” Micropaleontology, vol. 43, no. 2, pp. 206–210, 1997."
+  },
+  {
+    "index": 261,
+    "style": "normal",
+    "text": "E. Sirel, “Orduina erki Sirel 1969 renamed as Laffitteina erki (Sirel) from the Thanetian of Ordu and Burdur (Turkey),” Bull. Mineral Res. Explor., no. 116, p. 46, 1994."
+  },
+  {
+    "index": 262,
+    "style": "normal",
+    "text": "E. Sirel and S. Acar, “Malatyna, a new foraminiferal genus from the Lutetian of Malatya region (East Turkey),” Geol. Croatica, vol. 46, no. 2, pp. 181–188, 1993."
+  },
+  {
+    "index": 263,
+    "style": "normal",
+    "text": "E. Sirel, “Lacazina oeztemueri Sirel 1981 renamed as Pseudolacazina oeztemueri (Sirel) from the Thanetian limestone (central Turkey),” Bull. Mineral Res. Explor., no. 105–106, pp. 133–144, 1986."
+  },
+  {
+    "index": 264,
+    "style": "normal",
+    "text": "E. Sirel and H. Gündüz, “Vania, a new foraminiferal genus from the Thanetian of the Van region (East Turkey),” Bull. Mineral Res. Explor., no. 101–102, pp. 20–24, 1984."
+  },
+  {
+    "index": 265,
+    "style": "normal",
+    "text": "E. Sirel, “Description of six new species of the Alveolina found in the south of Polatlı (SW Ankara) region,” Bull. Geol. Soc. Turkey, vol. 19, no. 1, pp. 19–22, 1976."
+  },
+  {
+    "index": 266,
+    "style": "normal",
+    "text": "E. Sirel, “Systematic study of new species of the genera Fabularia and Kathina from Paleocene,” Bull. Geol. Soc. Turkey, vol. 15, no. 2, pp. 277–294, 1972."
+  },
+  {
+    "index": 267,
+    "style": "normal",
+    "text": "E. Sirel, “Description of a new Cuvillierina species from the Maestrichtian of Cide (northern Turkey),” Bull. Geol. Soc. Turkey, vol. 16, no. 2, pp. 69–76, 1973."
+  },
+  {
+    "index": 268,
+    "style": "normal",
+    "text": "E. Sirel, “Eoannularia conica n. sp. türünün tanımı ve Darende–Gürün (batı Malatya) yöresindeki Üst Lütesiyen–Alt Priaboniyen kireçtaşlarına ilişkin yeni görüşler [Description of Eoannularia conica n. sp. and new observations on the upper Lutetian–lower Priabonian limestones of the Darende–Gürün (western Malatya) area],” Bull. Geol. Soc. Turkey, vol. 19, no. 1, pp. 79–82, 1976 (in Turkish)."
+  },
+  {
+    "index": 269,
+    "style": "normal",
+    "text": "E. Özcan, E. Sirel, S. Özkan-Altıner, and S. Çolakoğlu, “Late Paleocene Orthophragminae (Foraminifera) from the Haymana–Polatlı Basin, central Turkey, and description of a new taxon, Orbitoclypeus haymanaensis,” Micropaleontology, vol. 47, no. 4, pp. 339–357, 2001, doi: 10.2113/47.4.339."
+  },
+  {
+    "index": 270,
+    "style": "normal",
+    "text": "E. Sirel and Ö. Aksoy, “Miscellanea meandrina (Carter)’in Türkiye’de zuhuru ve yaşı [Occurrence and age of Miscellanea meandrina (Carter) in Turkey],” Bull. Geol. Soc. Turkey, vol. 18, no. 2, pp. 193–198, 1975 (in Turkish)."
+  },
+  {
+    "index": 271,
+    "style": "normal",
+    "text": "A. Y. Hsiang et al., “Endless Forams: >34,000 modern planktonic foraminiferal images for taxonomic training and automated species recognition using convolutional neural networks,” Paleoceanogr. Paleoclimatol., vol. 34, no. 7, pp. 1157–1177, 2019, doi: 10.1029/2019PA003612."
+  },
+  {
+    "index": 272,
+    "style": "normal",
+    "text": "R. Mitra et al., “Automated species-level identification of planktic foraminifera using convolutional neural networks, with comparison to human performance,” Mar. Micropaleontol., vol. 147, pp. 16–24, 2019."
+  },
+  {
+    "index": 273,
+    "style": "normal",
+    "text": "R. Marchant, M. Tetard, A. Pratiwi, M. Adebayo, and T. de Garidel-Thoron, “Automated analysis of foraminifera fossil records by image classification using a convolutional neural network,” J. Micropalaeontol., vol. 39, no. 2, pp. 183–202, 2020, doi: 10.5194/jm-39-183-2020."
+  },
+  {
+    "index": 274,
+    "style": "normal",
+    "text": "C. Rudin, “Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead,” Nature Mach. Intell., vol. 1, no. 5, pp. 206–215, 2019, doi: 10.1038/s42256-019-0048-x."
+  },
+  {
+    "index": 275,
+    "style": "normal",
+    "text": "K. Okur and U. Yayan, “A new model on benthic foraminifer image classification and definitions based on convolutional neural network (CNN),” Eskişehir Osmangazi Üniv. Mühendislik ve Mimarlık Fakültesi Dergisi, vol. 31, no. 1, pp. 481–490, 2023, doi: 10.31796/ogummf.1096951."
+  },
+  {
+    "index": 276,
+    "style": "normal",
+    "text": "K. Yayan, C. Baglum, and U. Yayan, “Multi-label benthic foraminifera identification with convolutional neural networks,” IEEE Access, vol. 12, pp. 196769–196785, 2024, doi: 10.1109/ACCESS.2024.3520633."
+  },
+  {
+    "index": 277,
+    "style": "normal",
+    "text": "R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh, and D. Batra, “Grad-CAM: Visual explanations from deep networks via gradient-based localization,” in Proc. IEEE Int. Conf. Comput. Vis. (ICCV), 2017, pp. 618–626, doi: 10.1109/ICCV.2017.74."
+  },
+  {
+    "index": 278,
+    "style": "normal",
+    "text": "B. C. Heymans, J. P. Onema, and J. O. Kuti, “Application of a rule-based knowledge system using CLIPS for the taxonomy of selected Opuntia species,” in Proc. 2nd CLIPS Conf., vol. 2, Houston, TX, USA, Sep. 1991, pp. 505–510. [Online]. Available: https://ntrs.nasa.gov/citations/19920007396. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 279,
+    "style": "normal",
+    "text": "A. Gerber, N. Morar, T. Meyer, and C. Eardley, “Ontology-based support for taxonomic functions,” Ecol. Informat., vol. 41, pp. 11–23, 2017, doi: 10.1016/j.ecoinf.2017.06.003."
+  },
+  {
+    "index": 280,
+    "style": "normal",
+    "text": "G. V. Gkoutos, E. C. J. Green, A.-M. Mallon, J. M. Hancock, and D. Davidson, “Using ontologies to describe mouse phenotypes,” Genome Biol., vol. 6, no. 1, art. no. R8, 2005, doi: 10.1186/gb-2004-6-1-r8."
+  },
+  {
+    "index": 281,
+    "style": "normal",
+    "text": "P. M. Mabee, M. Ashburner, Q. Cronk, G. V. Gkoutos, M. Haendel, E. Segerdell, C. Mungall, and M. Westerfield, “Phenotype ontologies: The bridge between genomics and evolution,” Trends Ecol. Evol., vol. 22, no. 7, pp. 345–350, 2007, doi: 10.1016/j.tree.2007.03.013."
+  },
+  {
+    "index": 282,
+    "style": "normal",
+    "text": "B. Smith et al., “The OBO Foundry: Coordinated evolution of ontologies to support biomedical data integration,” Nature Biotechnol., vol. 25, no. 11, pp. 1251–1255, 2007, doi: 10.1038/nbt1346."
+  },
+  {
+    "index": 283,
+    "style": "normal",
+    "text": "M. J. Dallwitz, “A general system for coding taxonomic descriptions,” Taxon, vol. 29, no. 1, pp. 41–46, 1980."
+  },
+  {
+    "index": 284,
+    "style": "normal",
+    "text": "Identic Pty Ltd, “Lucid: Software for identification keys.” [Online]. Available: https://www.lucidcentral.org. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 285,
+    "style": "normal",
+    "text": "V. Ung, G. Dubus, R. Zaragüeta-Bagils, and R. Vignes-Lebbe, “Xper2: Introducing e-taxonomy,” Bioinformatics, vol. 26, no. 5, pp. 703–704, 2010."
+  },
+  {
+    "index": 286,
+    "style": "normal",
+    "text": "R. Vignes-Lebbe et al., “Xper3: Collaborative platform for taxonomic descriptions and identification keys.” [Online]. Available: https://www.xper3.fr. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 287,
+    "style": "normal",
+    "text": "WoRMS Editorial Board, “World Register of Marine Species.” [Online]. Available: https://www.marinespecies.org, doi: 10.14284/170. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 288,
+    "style": "normal",
+    "text": "W3C OWL Working Group, “OWL 2 Web Ontology Language document overview (second edition),” W3C Recommendation, Dec. 2012. [Online]. Available: https://www.w3.org/TR/owl2-overview/. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 289,
+    "style": "normal",
+    "text": "M. Maruf et al., “VLM4Bio: A benchmark dataset to evaluate pretrained vision-language models for trait discovery from biological images,” in Proc. NeurIPS Datasets Benchmarks Track, 2024."
+  },
+  {
+    "index": 290,
+    "style": "normal",
+    "text": "P. Verma, M.-H. Van, and X. Wu, “Beyond human vision: The role of large vision language models in microscope image analysis,” 2024, arXiv:2405.00876."
+  },
+  {
+    "index": 291,
+    "style": "normal",
+    "text": "L. Hottinger, “Illustrated glossary of terms used in foraminiferal research,” Carnets de Géologie / Notebooks on Geology, Memoir 2006/02, 2006."
+  },
+  {
+    "index": 292,
+    "style": "normal",
+    "text": "M. Fernández-López, A. Gómez-Pérez, and N. Juristo, “METHONTOLOGY: From ontological art towards ontological engineering,” in Proc. AAAI Spring Symp. Ontol. Eng., 1997, pp. 33–40."
+  },
+  {
+    "index": 293,
+    "style": "normal",
+    "text": "M. C. Suárez-Figueroa, A. Gómez-Pérez, and M. Fernández-López, “The NeOn methodology for ontology engineering,” in Ontology Engineering in a Networked World. Berlin, Germany: Springer, 2012, pp. 9–34."
+  },
+  {
+    "index": 294,
+    "style": "normal",
+    "text": "M. Grüninger and M. S. Fox, “Methodology for the design and evaluation of ontologies,” in Proc. IJCAI Workshop Basic Ontol. Issues Knowl. Sharing, 1995."
+  },
+  {
+    "index": 295,
+    "style": "normal",
+    "text": "B. Glimm, I. Horrocks, B. Motik, G. Stoilos, and Z. Wang, “HermiT: An OWL 2 reasoner,” J. Automat. Reason., vol. 53, no. 3, pp. 245–269, 2014, doi: 10.1007/s10817-014-9305-1."
+  },
+  {
+    "index": 296,
+    "style": "normal",
+    "text": "M. A. Musen, “The Protégé project: A look back and a look forward,” AI Matters, vol. 1, no. 4, pp. 4–12, 2015, doi: 10.1145/2757001.2757003."
+  },
+  {
+    "index": 297,
+    "style": "normal",
+    "text": "M. Poveda-Villalón, A. Gómez-Pérez, and M. C. Suárez-Figueroa, “OOPS! (OntOlogy Pitfall Scanner!): An on-line tool for ontology evaluation,” Int. J. Semantic Web Inf. Syst., vol. 10, no. 2, pp. 7–34, 2014."
+  },
+  {
+    "index": 298,
+    "style": "normal",
+    "text": "N. Francis et al., “Cypher: An evolving query language for property graphs,” in Proc. ACM SIGMOD Int. Conf. Manage. Data, 2018, pp. 1433–1445, doi: 10.1145/3183713.3190657."
+  },
+  {
+    "index": 299,
+    "style": "normal",
+    "text": "Neo4j, Inc., “Neo4j graph database.” [Online]. Available: https://neo4j.com. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 300,
+    "style": "normal",
+    "text": "A. Miles and S. Bechhofer, Eds., “SKOS Simple Knowledge Organization System reference,” W3C Recommendation, Aug. 2009. [Online]. Available: https://www.w3.org/TR/skos-reference/. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 301,
+    "style": "normal",
+    "text": "DCMI Usage Board, “DCMI metadata terms,” Dublin Core Metadata Initiative, 2020. [Online]. Available: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 302,
+    "style": "normal",
+    "text": "F. M. Gradstein, J. G. Ogg, M. D. Schmitz, and G. M. Ogg, Eds., Geologic Time Scale 2020. Amsterdam, The Netherlands: Elsevier, 2020."
+  },
+  {
+    "index": 303,
+    "style": "normal",
+    "text": "J. Serra-Kiel et al., “Larger foraminiferal biostratigraphy of the Tethyan Paleocene and Eocene,” Bull. Soc. Géol. France, vol. 169, no. 2, pp. 281–299, 1998."
+  },
+  {
+    "index": 304,
+    "style": "normal",
+    "text": "A. Briguglio, A. Benedetti, and C. A. Papazzoni, “A compendium of updated Shallow Benthic Zones for the Paleogene and the Miocene,” Micropaleontology, vol. 72, no. 4, pp. 329–336, 2026, doi: 10.47894/mpal.72.4.02."
+  },
+  {
+    "index": 305,
+    "style": "normal",
+    "text": "Google, “Gemini API documentation.” [Online]. Available: https://ai.google.dev. Model used in the evaluation: gemini-3.5-flash-lite. Accessed: Nov. 9, 2026."
+  },
+  {
+    "index": 306,
+    "style": "normal",
+    "text": "F. Schlagintweit and M. Hadi, “Coskinolina sistanensis n. sp., a new larger benthic foraminifera from the early Eocene of eastern Iran,” Acta Palaeontol. Romaniae, vol. 14, no. 1, pp. 47–55, 2018, doi: 10.5281/zenodo.13190022."
+  },
+  {
+    "index": 307,
+    "style": "normal",
+    "text": "F. Mattern et al., “Lithostratigraphy and limestone microfacies of the Jafnayn Formation (Paleocene to Early Eocene, Al-Khod, Sultanate of Oman): Deposition in a restricted lagoon with intervals of open marine conditions,” Geosciences, vol. 14, no. 12, art. no. 352, 2024, doi: 10.3390/geosciences14120352."
+  },
+  {
+    "index": 308,
+    "style": "normal",
+    "text": "W. Webber, A. Moffat, and J. Zobel, “A similarity measure for indefinite rankings,” ACM Trans. Inf. Syst., vol. 28, no. 4, art. no. 20, 2010, doi: 10.1145/1852102.1852106."
+  },
+  {
+    "index": 309,
+    "style": "normal",
+    "text": "International Commission on Zoological Nomenclature, International Code of Zoological Nomenclature, 4th ed. London, U.K.: Int. Trust Zool. Nomencl., 1999."
+  },
+  {
+    "index": 310,
+    "style": "normal",
+    "text": "K. Goddard, A. Roudsari, and J. C. Wyatt, “Automation bias: A systematic review of frequency, effect mediators, and mitigators,” J. Amer. Med. Inform. Assoc., vol. 19, no. 1, pp. 121–127, 2012, doi: 10.1136/amiajnl-2011-000089."
+  },
+  {
+    "index": 311,
+    "style": "normal",
+    "text": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, “You only look once: Unified, real-time object detection,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), 2016, pp. 779–788, doi: 10.1109/CVPR.2016.91."
+  },
+  {
+    "index": 312,
+    "style": "normal",
+    "text": "M. D. Wilkinson et al., “The FAIR guiding principles for scientific data management and stewardship,” Sci. Data, vol. 3, art. no. 160018, 2016, doi: 10.1038/sdata.2016.18."
+  },
+  {
+    "index": 313,
+    "style": "normal",
+    "text": "KÜBRA YAYAN received the B.Sc. degree in Geological Engineering from Ankara University, Ankara, Türkiye, and the M.Sc. (2014; thesis on Eocene alveolinids of the Safranbolu Basin) and Ph.D. (2020; thesis on the foraminiferal micropaleontology and biostratigraphy of the Triassic sedimentary succession of the Kocaeli Peninsula) degrees from the Graduate School of Natural and Applied Sciences, Eskişehir Osmangazi University, Eskişehir, Türkiye. Since 2011 she has been with the Department of Geological Engineering, Faculty of Engineering and Architecture, Eskişehir Osmangazi University, where she is currently a Research Assistant (Dr.) and teaches paleontology, principles of stratigraphy, and general geology. Her research interests include benthic foraminiferal taxonomy, micropaleontology, biostratigraphy, and machine-learning-based classification of foraminiferal images; her earlier work on convolutional neural networks for benthic foraminiferal image classification appeared in IEEE Access and in the Journal of the Faculty of Engineering and Architecture of Eskişehir Osmangazi University. ORCID: 0000-0001-7003-6437."
+  }
+]

@@ -1,0 +1,5 @@
+Figure 5. Tie-fractional Acc@1 and Acc@3 by neutral-observation fraction in the corrected v32 replay of 150 archived, unreviewed VLM panels. The fraction counts NOT_OBSERVABLE/UNCERTAIN among CHR_01–CHR_20 and excludes CHR_21. Bins have width 0.1; n labels give panel counts. Intervals use 2,000 source/section-cluster bootstrap resamples (seed 20261111); intervals are omitted when a bin contains fewer than two clusters. This is descriptive development-set analysis.
+
+Figure 6. Published reference genus versus displayed first output or abstention, separated by source cohort. Integers are panel counts and shading gives the percentage within the published reference genus. Framed cells indicate matching genus labels. Displayed first outputs use deterministic tie order; the agreement metrics elsewhere use fractional score ties.
+
+Figure 7. Output frequency (white) and conditional tie-fractional top-one agreement (gray), with 95% source/section-cluster bootstrap intervals, for the corrected v32 replay. Precision is N/A for abstentions and empty states; a missing interval also reflects fewer than two source clusters. Confidence labels are not calibrated probabilities.

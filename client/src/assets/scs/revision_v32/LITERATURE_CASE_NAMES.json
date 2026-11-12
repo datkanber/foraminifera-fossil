@@ -1,0 +1,12 @@
+{
+  "core_five": [
+    "Pseudolacazina oeztemueri",
+    "Alveolina haymanaensis",
+    "Discocyclina seunesi",
+    "Laffitteina erki",
+    "Orbitoclypeus haymanaensis"
+  ],
+  "outside_core": "Karsella hottingeri",
+  "reference_conflict_not_scored": "Ranikothalia sindensis",
+  "warning": "Published original descriptions and accessible redescriptions are mixed; do not call every source an original type description, and do not call these EXPERT_VERIFIED observations."
+}

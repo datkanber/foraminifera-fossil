@@ -3,7 +3,7 @@ import unittest,tempfile,copy,json,shutil
 from pathlib import Path
 from expert_comparison import *
 
-STUDY=DEFAULT
+STUDY=DEFAULT if (DEFAULT/'frozen_v29').exists() else ROOT/'client/src/assets/scs/llm_expert_review_v31'
 def characters():return {c['id']:c for c in read(STUDY/'frozen_v29/api/data/characters.json')['characters']}
 def fake_sheet(sid='P001',observer='E1'):
     return {'fixture':'SYNTHETIC_SOFTWARE_TEST_NOT_HUMAN_OBSERVATION','specimen_id':sid,'observer_code':observer,'phase':'pilot',
@@ -67,8 +67,8 @@ class ExpertComparisonTests(unittest.TestCase):
 
     def fixture_study(self,s):
         shutil.copytree(STUDY/'frozen_v29',s/'frozen_v29')
-        config=read(STUDY/'study_config.json');config['bootstrap_resamples']=100;save(s/'study_config.json',config)
-        roster=csvread(STUDY/'coordinator_private/roster.csv')
+        config=read(STUDY/'study_config.json');config.pop('requires_llm_expert_review',None);config['observer_codes']=['E1','E2'];config['bootstrap_resamples']=100;save(s/'study_config.json',config)
+        roster=[{'person_code':code,'role':role,'participation_confirmed':'','expertise_verified':'','independent_of_rule_development':'','notes':''} for code,role in [('E1','OBSERVER'),('E2','OBSERVER'),('R1','REFERENCE_VERIFIER')]]
         for p in roster:
             for k in ['participation_confirmed','expertise_verified','independent_of_rule_development']:p[k]='yes'
             p['notes']='SYNTHETIC_SOFTWARE_FIXTURE'
@@ -121,5 +121,32 @@ class ExpertComparisonTests(unittest.TestCase):
                 r=dict(rows[0]);r.update(specimen_id=f'F{i:03}',phase='confirmatory',independence_unit_id=rows[0]['independence_unit_id'] if i==1 else f'SYNTHETIC_CONFIRM_UNIT_{i}');rows.append(r)
             csvwrite(s/'coordinator_private/specimen_registry.csv',rows)
             with self.assertRaisesRegex(ValueError,'Pilot specimens'):collect(s,'confirmatory')
+
+    def test_usability_does_not_generate_genus_accuracy(self):
+        with tempfile.TemporaryDirectory(prefix='foram_synthetic_test_') as temp:
+            s=Path(temp);self.fixture_study(s);result=usability_report(s)
+            self.assertEqual(result['actual_human_forms'],16)
+            self.assertEqual(result['completed_observer_pairs'],8)
+            self.assertNotIn('metrics',result);self.assertNotIn('acc1',str(result))
+            self.assertFalse(result['independent_validation_performed'])
+
+    def test_no_submissions_means_no_timing_or_accuracy_estimate(self):
+        with tempfile.TemporaryDirectory(prefix='foram_synthetic_test_') as temp:
+            s=Path(temp);self.fixture_study(s);shutil.rmtree(s/'submissions')
+            result=usability_report(s)
+            self.assertEqual(result['actual_human_forms'],0);self.assertEqual(result['timing_summary'],[])
+            self.assertFalse((s/'results/pilot_usability/summary.json').exists())
+
+    def test_prior_published_material_cannot_enter_confirmatory_test(self):
+        with tempfile.TemporaryDirectory(prefix='foram_synthetic_test_') as temp:
+            s=Path(temp);self.fixture_study(s);config=read(s/'study_config.json');config.update(pilot_review_completed=True,protocol_finalized=True);save(s/'study_config.json',config)
+            save(s/'results/pilot/summary.json',{'fixture':'SYNTHETIC_TEST_ONLY'})
+            rows=csvread(s/'coordinator_private/specimen_registry.csv')
+            for i in range(1,61):
+                r=dict(rows[0]);r.update(specimen_id=f'F{i:03}',phase='confirmatory',independence_unit_id=f'SYNTHETIC_CONFIRM_UNIT_{i}',material_mode='digital' if i==1 else 'physical');rows.append(r)
+            csvwrite(s/'coordinator_private/specimen_registry.csv',rows)
+            image=s/'public/confirmatory/materials/F001/view01.png';image.parent.mkdir(parents=True);image.write_bytes(b'SYNTHETIC_HASH_GUARD_TEST_PAYLOAD')
+            save(s/'coordinator_private/excluded_prior_panel_hashes.json',{'sha256':[digest(image)]})
+            with self.assertRaisesRegex(ValueError,'Previously evaluated'):collect(s,'confirmatory')
 
 if __name__=='__main__':unittest.main()

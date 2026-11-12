@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"HYALINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Microcrystalline wall structure visible in transmitted light.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"FUSIFORM\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test is elongated with tapered ends along the coiling axis.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Septa dividing chambers are clearly visible along the whorls.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Numerous chambers arranged in whorls are visible.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"OTHER\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Whorled coiled test with multiple chambers per whorl, not matching standard simple serial types.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"PLANISPIRAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Symmetrical coiled whorls visible around the central axis.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"SINGLE_PLANE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling proceeds within a single median plane.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Later whorls envelop earlier ones completely along the axis.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling pattern remains consistent throughout ontogeny.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"COMPLEX\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Presence of multiple internal structural elements like septula and axial fillings.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Secondary subdivisions within chambers (chamberlets) are visible.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Central proloculus is a single rounded chamber.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"VERTICAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Vertical partitions subdividing chambers are visible.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Distinct vertical pillars running through multiple whorls are absent.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No lateral chamberlets outside the main whorls.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertures are not clearly resolved in this cross-section view.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No differentiated marginal cord structure along the periphery.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"External septal filaments are not visible in internal thin section.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Entire test is isolated in matrix without attachment scars.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"UNCERTAIN\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Central proloculus size cannot be definitively categorized as megalospheric or microspheric without scale/comparison.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"AXIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section passes through the axis of coiling, showing symmetric elongate profile.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0Tn5TfAYc//7QKcRigebMkr4Dn3+pK0ujIaZ2zLosH3K4vvvSV5yav1v7g9EeXTHje5Qw+zIcijm/xBmIwBXNmQ6mODqgLrNoU/2i+sNn1i/CxlzXJK+BDyPA="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3716,
+    "candidatesTokenCount": 1008,
+    "totalTokenCount": 4724,
+    "promptTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1071
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "VJf1aoLaN6epnsEP-r79uAw"
+}

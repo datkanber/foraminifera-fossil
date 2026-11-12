@@ -1,0 +1,32 @@
+{
+  "definition": "Changed raw character entry means its (value,state) tuple differs from the current production-normalized tuple; textual reason is excluded.",
+  "raw_character_entries_changed_by_v32": 2,
+  "legacy_neutral_promotions": {
+    "UNCERTAIN": 153,
+    "NOT_OBSERVABLE": 31
+  },
+  "v32_neutral_promotions": 0,
+  "character_entries_differing_legacy_vs_v32": 496,
+  "panels_with_value_or_state_changes": 130,
+  "full_sheet_or_metadata_changes": {
+    "cohort": "ALL",
+    "changed_panels": 130,
+    "display_changed": 14,
+    "state_changed": 12,
+    "delta_acc1": {
+      "mean": 0.006666666666666667,
+      "low": 0.0,
+      "high": 0.022727272727272728,
+      "clusters": 30
+    },
+    "delta_acc3": {
+      "mean": 0.006666666666666667,
+      "low": 0.0,
+      "high": 0.022727272727272728,
+      "clusters": 30
+    }
+  },
+  "phi_definition": "Neutral states among CHR_01 through CHR_20 divided by 20; CHR_21 excluded. Active morphological n(O) separately excludes CHR_01.",
+  "phi_min": 0.0,
+  "phi_max": 0.5
+}

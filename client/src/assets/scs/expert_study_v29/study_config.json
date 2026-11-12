@@ -1,8 +1,8 @@
 {
-  "status": "PREPARATION_ONLY_NO_REAL_OBSERVATIONS",
+  "status": "PREPARATION_IMAGE_CASES_IMPORTED_NO_HUMAN_RESPONSES",
   "observer_codes": [
-    "E1",
-    "E2"
+    "EXP01",
+    "EXP02"
   ],
   "confirmatory_target": 60,
   "module_target_recommendation": {
@@ -15,5 +15,8 @@
   "primary": "Specimen-averaged paired A0-minus-B1 fractional top-1 credit",
   "protocol_finalized": false,
   "pilot_review_completed": false,
-  "sampling_plan": "8–10 pilot fossils; 60 different confirmatory fossils; no pilot reuse. No formal power calculation yet."
+  "sampling_plan": "10 preparation image cases; no independent physical specimens verified. Later confirmatory target remains 60 new source-independent fossils.",
+  "reference_verifier_code": "REF01",
+  "pilot_purpose": "FORM_USABILITY_ON_PREVIOUSLY_EVALUATED_PUBLISHED_IMAGES",
+  "pilot_independent_validation": false
 }

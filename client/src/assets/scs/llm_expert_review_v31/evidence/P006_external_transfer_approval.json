@@ -1,0 +1,14 @@
+{
+  "case_id": "P006",
+  "recorded_at": "2026-11-12T10:54:09Z",
+  "external_destination": "Gemini API at generativelanguage.googleapis.com",
+  "proposed_transfer": "Coded P006 image pixels, frozen 21-character controlled vocabulary and morphology-only extraction instruction",
+  "latest_retry_executed": true,
+  "prior_automatic_approval_review": "REJECTED_BEFORE_USER_APPROVAL",
+  "prior_stated_reason": "Explicit authorization for transfer of this specific image to the external Gemini service was required.",
+  "user_approval": "EXPLICITLY_APPROVED",
+  "user_approval_text": "Evet, P006 Gemini API’sine gönderilsin",
+  "prior_provider_outcome": "HTTP 503 high demand; no valid P006 draft",
+  "current_outcome": "After explicit user approval, the retry succeeded and a 21-character LLM_DRAFT was saved. Expert approval remains absent.",
+  "missing_reason": null
+}

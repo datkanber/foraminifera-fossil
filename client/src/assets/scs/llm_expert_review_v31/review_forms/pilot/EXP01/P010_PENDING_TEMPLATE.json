@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P010",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "44384ffafc328d9ef8e52f2893a05f8f827f0ba2a0c9e0c7c6ef99f2ff6016de",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "PORCELANEOUS",
+      "state": "PRESENT",
+      "reason": "The wall is uniformly light-colored and microcrystalline under transmitted light, characteristic of porcelaneous composition.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "OVOID",
+      "state": "PRESENT",
+      "reason": "The overall shape of the test section is broadly ovoid to elliptical.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Clear partitions are visible dividing the interior space into chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Multiple chambers are clearly visible arranged in whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "QUINQUELOCULINE",
+      "state": "PRESENT",
+      "reason": "Chambers are added in planes roughly 72 degrees apart, characteristic of quinqueloculine arrangement.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "STREPTOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Coiling changes planes successively through ontogeny in a streptospiral pattern.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "The coiling axis shifts noticeably between successive chambers/whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later chambers embrace and cover earlier whorls entirely.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Coiling arrangement remains consistent throughout the visible ontogeny.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Chamber interiors are undivided without complex internal structures.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No secondary chamberlets or partitions subdividing the chambers are present.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "A single central proloculus-like initial chamber is visible in the center.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Internal radial or vertical partitions are absent.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No pillars are observed in the test.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamberlets are not present.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly visible in this specific cross-section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord is present along the periphery.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface features such as septal filaments are not visible or applicable in internal section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The test is completely isolated in the matrix with no attachment structures.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient comparative specimens to determine dimorphism conclusively from this single view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "OBLIQUE",
+      "state": "PRESENT",
+      "reason": "The section cuts across the multiple changing planes of the streptospiral test, indicating an oblique orientation.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

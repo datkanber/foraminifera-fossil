@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P005",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "AGGLUTINATED",
+      "state": "PRESENT",
+      "reason": "The wall appears dark and granular, typical of agglutinated test composition in thin section."
+    },
+    "CHR_02": {
+      "value": "CONICAL",
+      "state": "PRESENT",
+      "reason": "Overall test shape is expanding and conical from the initial small end."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Internal divisions and chambers are clearly separated by septa."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are visible throughout the test."
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Initial portion shows spiral arrangement transitioning into a series of complex internal chambers, not fitting standard simple serial categories."
+    },
+    "CHR_06": {
+      "value": "TROCHOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Initial part of the test shows a coiled whorl structure."
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "Coiling transitions from an initial coiled section to an expanding uncoiled or irregularly arranged conical structure."
+    },
+    "CHR_08": {
+      "value": "NOT_APPLICABLE",
+      "state": "PRESENT",
+      "reason": "Coiling is not the primary adult feature across the whole test."
+    },
+    "CHR_09": {
+      "value": "COILED_TO_SERIAL",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled stage to an expanding series of chambers."
+    },
+    "CHR_10": {
+      "value": "LABYRINTHIC",
+      "state": "PRESENT",
+      "reason": "Chambers show complex internal subdivision and branching structures resembling a labyrinthic interior."
+    },
+    "CHR_11": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Secondary chamberlets are not clearly resolved at this scale."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber is small and simple, but obscured by orientation."
+    },
+    "CHR_13": {
+      "value": "SUBEPIDERMAL",
+      "state": "PRESENT",
+      "reason": "Subepidermal partitions or beam-like structures are visible lining the outer wall."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct pillars are visible in the interior."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets are visible."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not visible in this section view."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord is present."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Septal filaments are not applicable or visible on this agglutinated test cross-section."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Test appears isolated in the matrix without an attachment surface."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Dimorphism cannot be determined from a single random section."
+    },
+    "CHR_21": {
+      "value": "OBLIQUE",
+      "state": "PRESENT",
+      "reason": "The section passes somewhat obliquely through the conical test axis."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:42:07.655735+00:00",
+    "received_at": "2026-11-12T10:42:12.044715+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P005/view01.png",
+        "sha256": "b22b53cbd0a2a860bf6b85889af27c47176bfc4a7724bbf6b1be6afc30f1c1c6",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "ac4cfb5713401e982bd40f374defe1e722113d5afe50824cb073015bb7b03c92"
+  },
+  "expert_approval": null
+}

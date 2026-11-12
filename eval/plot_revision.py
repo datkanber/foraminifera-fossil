@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-DEST=ROOT/'client/src/assets/scs/revision_v28'
+DEST=ROOT/'client/src/assets/scs'/('revision_v32' if V32 else 'revision_v28')
 
 def save(fig,name):
     fig.savefig(DEST/(name+'.png'),dpi=450,bbox_inches='tight')

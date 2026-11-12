@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"HYALINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The wall structure appears translucent and microgranular/hyaline in thin-section view.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"LENTICULAR\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Overall outline in this section is circular to slightly compressed disc-like/lenticular.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Numerous clearly defined septa divide the whorls into individual chambers.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test is composed of numerous chambers arranged in spiral whorls.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"ANNULAR\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Coiling is tightly spiraled, but outer chambers approach annular arrangement.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"PLANISPIRAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Symmetrical spiral growth expanding regularly outward from a central point in one plane.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"SINGLE_PLANE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling is restricted to a single equatorial plane.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Whorls embrace tightly and completely cover previous whorls.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Consistent planispiral coiling throughout ontogeny without sudden structural shifts.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"SUBDIVIDED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers show internal partitioning and subdivision visible in the later whorls.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Secondary chamberlets or partitions are visible within the larger chamber cavities.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Central proloculus is a simple, small rounded initial chamber.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"RADIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Regular radial partitions are clearly visible traversing the chamber interiors.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No distinct vertical pillars intersecting the chamber layers are observed.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Lateral chamber layers outside the main spiral whorls are absent.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertural details are not clearly exposed in this equatorial thin-section plane.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No specialized peripheral marginal cord structure is visible along the rim.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Surface septal filaments cannot be observed in internal equatorial thin-section view.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The entire specimen outline is symmetrical and isolated within the matrix.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Insufficient data on multiple specimens to determine sexual dimorphism reliably.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"EQUATORIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section passes through the center and displays the full spiral whorls symmetrically.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0TdL7lSp+0/N+ElY2/0jgOwVAX/l3kgibf6dRP26VjCw9a2MQ0mjf2hG+eeC7vxI/+9iP1Jxf2esoloCyspjJIqNDA6MSjkDbvnzNEs0g5EPirVYuNfbJYAF8="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3755,
+    "candidatesTokenCount": 1054,
+    "totalTokenCount": 4809,
+    "promptTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1110
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "X5j1aomhELLOvdIPxcu7oAg"
+}

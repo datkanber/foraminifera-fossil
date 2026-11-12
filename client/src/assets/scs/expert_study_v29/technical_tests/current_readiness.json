@@ -1,0 +1,10 @@
+{
+  "status": "PREPARATION_NO_SUBMISSIONS",
+  "scope": "Form usability on preparation image cases only; no genus accuracy or independent specimen validation.",
+  "image_cases_prepared": 10,
+  "expected_forms": 20,
+  "actual_human_forms": 0,
+  "completed_observer_pairs": 0,
+  "independent_validation_performed": false,
+  "timing_summary": []
+}

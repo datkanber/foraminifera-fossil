@@ -2,7 +2,7 @@
 from evaluation_common import *
 import statistics, random, subprocess
 
-DELIVERY=ROOT/'client/src/assets/scs/revision_v28'
+DELIVERY=ROOT/'client/src/assets/scs'/('revision_v32' if V32 else 'revision_v28')
 
 def interval(cases,values,seed=20261111):
     clusters=collections.defaultdict(list)
@@ -29,7 +29,7 @@ def main():
             ablations.append({'dataset':name,'configuration':config['id'],**summary(rows)})
     write('current_ablations.json',ablations);csvwrite('current_ablations.csv',ablations)
     stats=[]
-    for name in ['panels','panels_raw_neutral']:
+    for name in (['panels_legacy_normalized','panels'] if V32 else ['panels','panels_raw_neutral']):
         group=byname[name];cases=group['cases'];rows=metrics(cases,group['results'])
         for kind,label in [('ALL','ALL')]+[('cohort',x) for x in sorted(set(c['cohort'] for c in cases))]+[('module',x) for x in ['AGGLUTINATED','PORCELANEOUS','HYALINE']]:
             selected=[(c,r) for c,r in zip(cases,rows) if kind=='ALL' or (c['cohort'] if kind=='cohort' else c['reference_module'])==label]
@@ -39,7 +39,7 @@ def main():
             result['intervals']['coverage']=interval(cs,[float(r['status'] not in ABSTAIN) for r in rs])
             stats.append(result)
     write('panel_stratified_results.json',stats)
-    original=byname['panels'];neutral=byname['panels_raw_neutral'];diff=[]
+    original=byname['panels_legacy_normalized' if V32 else 'panels'];neutral=byname['panels' if V32 else 'panels_raw_neutral'];diff=[]
     a=metrics(original['cases'],original['results']);b=metrics(neutral['cases'],neutral['results'])
     for cohort in ['ALL','Additional articles','KB reference book (overlap)']:
         ids=[i for i,c in enumerate(original['cases']) if cohort=='ALL' or c['cohort']==cohort]

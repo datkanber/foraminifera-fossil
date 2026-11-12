@@ -1,0 +1,111 @@
+{
+  "status": "PREPARATION_ONLY_NO_PERFORMANCE_TABLE",
+  "pilot_image_cases": 10,
+  "LLM_DRAFT_count": 10,
+  "actual_expert_verified_forms": 0,
+  "actual_REF01_verifications": 0,
+  "main_specimens_assigned": 0,
+  "main_planning_target": 60,
+  "manuscript_editing_requested": false,
+  "manuscript_integration": "USER_WILL_INTEGRATE_STANDALONE_OUTPUTS",
+  "V31_source_required_for_delivery": false,
+  "missing_main_data": [
+    "60 source-documented new fossils, not used in rule development or previous evaluation",
+    "two actual approved reviewer forms per main specimen",
+    "separate verified references",
+    "pilot review and protocol/version lock"
+  ],
+  "pilot": [
+    {
+      "case_id": "P001",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P002",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P003",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P004",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P005",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P006",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P007",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P008",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P009",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    },
+    {
+      "case_id": "P010",
+      "raw_llm_draft": "LLM_DRAFT",
+      "draft_missing_reason": null,
+      "EXP01": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "EXP02": "MISSING_ACTUAL_EXPERT_REVIEW",
+      "REF01": "MISSING_ACTUAL_REFERENCE_VERIFICATION",
+      "independent_confirmatory_eligible": false
+    }
+  ],
+  "human_results_produced": false
+}

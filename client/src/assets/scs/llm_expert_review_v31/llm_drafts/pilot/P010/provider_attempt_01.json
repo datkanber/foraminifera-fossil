@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"PORCELANEOUS\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The wall is uniformly light-colored and microcrystalline under transmitted light, characteristic of porcelaneous composition.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"OVOID\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The overall shape of the test section is broadly ovoid to elliptical.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Clear partitions are visible dividing the interior space into chambers.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Multiple chambers are clearly visible arranged in whorls.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"QUINQUELOCULINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers are added in planes roughly 72 degrees apart, characteristic of quinqueloculine arrangement.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"STREPTOSPIRAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling changes planes successively through ontogeny in a streptospiral pattern.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"CHANGING_PLANES\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The coiling axis shifts noticeably between successive chambers/whorls.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Later chambers embrace and cover earlier whorls entirely.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling arrangement remains consistent throughout the visible ontogeny.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chamber interiors are undivided without complex internal structures.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No secondary chamberlets or partitions subdividing the chambers are present.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"A single central proloculus-like initial chamber is visible in the center.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Internal radial or vertical partitions are absent.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No pillars are observed in the test.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Lateral chamberlets are not present.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertural details are not clearly visible in this specific cross-section.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No marginal cord is present along the periphery.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"External surface features such as septal filaments are not visible or applicable in internal section view.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The test is completely isolated in the matrix with no attachment structures.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Insufficient comparative specimens to determine dimorphism conclusively from this single view.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"OBLIQUE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The section cuts across the multiple changing planes of the streptospiral test, indicating an oblique orientation.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0Tf+PKVDRiOjwNRn0IUvSNK9wb8t9XTkFoDwebBpB+qyjx2Z/o1w/IQ1iet6rNcmaBY5TqglYv8tMiWi3YvaMJVn8SmcsePpUo/zlMa/7H6LqCBgPyJb07tYM="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3749,
+    "candidatesTokenCount": 1055,
+    "totalTokenCount": 4804,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      },
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1104
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "P5j1asP1DI-JxN8PjYzGyQQ"
+}

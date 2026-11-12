@@ -1,0 +1,22 @@
+﻿id,character,substantive_states,all_coded_values,group
+CHR_01,Test composition,3,4,CORE
+CHR_02,Test form and external architecture,22,24,CORE
+CHR_03,Septation,2,4,CORE
+CHR_04,Chamber number organization,2,4,CORE
+CHR_05,Chamber arrangement,11,13,CORE
+CHR_06,Coiling pattern,6,8,CORE
+CHR_07,Spatial organization of coiling or branches,8,10,CORE
+CHR_08,Involution and chamber embracement,5,7,CORE
+CHR_09,Ontogenetic arrangement change,8,10,CORE
+CHR_10,Internal complexity,6,8,INTERNAL_ARCHITECTURE
+CHR_11,Secondary chamberlets and connectivity,6,8,INTERNAL_ARCHITECTURE
+CHR_12,Embryonic apparatus,5,7,INTERNAL_ARCHITECTURE
+CHR_13,Radial / internal partitions,8,10,INTERNAL_ARCHITECTURE
+CHR_14,Pillars and their arrangement,5,7,INTERNAL_ARCHITECTURE
+CHR_15,Lateral chamberlets,4,6,INTERNAL_ARCHITECTURE
+CHR_16,Aperture type,9,11,ADDITIONAL_DIAGNOSTIC
+CHR_17,Marginal cord,4,6,ADDITIONAL_DIAGNOSTIC
+CHR_18,Septal filaments and canal architecture,7,9,ADDITIONAL_DIAGNOSTIC
+CHR_19,Attachment mode,2,4,ADDITIONAL_DIAGNOSTIC
+CHR_20,Dimorphism,4,6,ADDITIONAL_DIAGNOSTIC
+CHR_21,Section orientation,4,5,SECTION

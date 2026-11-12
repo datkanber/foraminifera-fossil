@@ -1,0 +1,28 @@
+{
+  "genera": 75,
+  "characters": 21,
+  "controlled_values": 171,
+  "substantive_values": 131,
+  "response_tokens": 40,
+  "rule_items": 708,
+  "scoring_rules": 494,
+  "scoring_share_percent": 69.774,
+  "non_scoring_rules": 214,
+  "character_only_rules": 10,
+  "rules_without_any_mapping": 204,
+  "mapping_records": 540,
+  "mapping_records_with_value": 527,
+  "mapping_confidence": {
+    "HIGH": 363,
+    "MEDIUM": 155,
+    "LOW": 22
+  },
+  "genera_without_scored_D": [
+    "Alveolina",
+    "Psammosphaera"
+  ],
+  "remaining_qualifiers": {
+    "Alveolina": "The absence of a second chamberlet tier and detailed early-growth architecture are not safely expressible as independent scalar states without reusing mandatory evidence.",
+    "Psammosphaera": "Wall grain coarseness is not an independent attribute of the present 21-character scalar model."
+  }
+}

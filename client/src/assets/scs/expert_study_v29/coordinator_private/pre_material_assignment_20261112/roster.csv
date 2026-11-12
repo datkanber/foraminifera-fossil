@@ -1,0 +1,4 @@
+﻿person_code,role,name_or_private_registry_reference,participation_confirmed,expertise_verified,independent_of_rule_development,notes
+E1,OBSERVER,,,,,
+E2,OBSERVER,,,,,
+R1,REFERENCE_VERIFIER,,,,,

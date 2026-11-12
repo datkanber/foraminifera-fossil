@@ -1,0 +1,65 @@
+<!doctype html><html lang="tr"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM taslağı uzman incelemesi</title>
+<style>body{font:15px/1.5 system-ui;background:#eef3f6;color:#163143;margin:0}main{max-width:1400px;margin:auto;background:white;padding:25px}h1{font-size:25px}.notice{padding:15px;border-left:5px solid #b8751c;background:#fff6e7}select,textarea,input,button{font:inherit;padding:7px;max-width:100%}textarea{width:95%;min-height:70px}button{background:#176b87;color:white;border:0;border-radius:5px;cursor:pointer;margin:5px}.toolbar{position:sticky;top:0;background:white;padding:10px;border-bottom:1px solid #bbb;z-index:3}table{border-collapse:collapse;width:100%}td,th{padding:9px;vertical-align:top;text-align:left;border-bottom:1px solid #ccd6dc}td:first-child{width:14%}td:nth-child(2){width:22%}td:nth-child(3){width:23%}td:nth-child(4){width:20%}.pictures{display:flex;gap:12px;flex-wrap:wrap}.pictures img{max-width:600px;max-height:500px;object-fit:contain}label{display:block;margin:10px 0}#message{font-weight:bold;color:#9b291f}small{display:block;color:#526b78}code{overflow-wrap:anywhere}button:disabled{opacity:.5}@media(max-width:800px){main{padding:10px}td,th{padding:4px;font-size:12px}}@media print{.toolbar{position:static}.pictures img{max-width:250px}}</style>
+<main><h1>Blinded expert review of LLM-drafted observations</h1>
+<p>Gözlemci rol kodu: <strong id="role"></strong> · <span id="phase"></span></p>
+<div class="notice">Görülen değerler <b>LLM_DRAFT</b> durumunda bir model taslağıdır; uzman onayı taşımaz. Her satırı görüntüden kendiniz inceleyin. Model önerisi yanlışsa düzeltin veya nötr işaretleyin. Referans cins, yayın kimliği, diğer gözlemcinin düzenlemeleri ve A0/B1 sonuçları bu formda bulunmaz. <span id="pilot_notice"></span></div>
+<label>Örnek kodu <select id="specimen"></select></label><p id="provenance"></p>
+<p>Aynı kodun materials klasöründeki görüntüleri seçin. Yanlış kodun görüntüsü kabul edilmez.</p><input id="images" type="file" multiple accept="image/png,image/jpeg,image/webp"><div id="pictures" class="pictures"></div>
+<div class="toolbar"><button id="start">Uzman incelemesine başla</button><button id="pause" disabled>Mola</button><span id="timer">Başlatılmadı</span></div>
+<table><thead><tr><th>Karakter</th><th>Ham LLM önerisi ve görsel gerekçe</th><th>Uzmanın son değeri / durumu</th><th>Son görsel gerekçe</th><th>İnceleme kararı / açıklama</th></tr></thead><tbody id="rows"></tbody></table>
+<h2>Gerçek uzman onayı</h2>
+<label><input type="checkbox" id="reference_label_hidden"> Referans cinsi görmedim.</label><label><input type="checkbox" id="other_observer_hidden"> Diğer uzmanın düzenlemelerini görmedim.</label>
+<label><input type="checkbox" id="system_outputs_hidden"> A0/B1 çıktısını görmedim.</label><label><input type="checkbox" id="independent_completion"> Her karakteri kendim, bağımsız inceledim.</label>
+<label>İncelemeyi yapan uzman rol kodunu yazın: <input id="signature" autocomplete="off"></label>
+<label><input type="checkbox" id="human_approval"> Bu formu ilgili uzman olarak gerçekten tamamladım ve son gözlemleri onaylıyorum.</label>
+<button id="export">Onaylı uzman formunu JSON olarak kaydet</button><p id="message" role="status"></p>
+<p><small>Rol kodu tek başına kişi/uzmanlık teyidi sağlamaz. Koordinatör, gerçek katılım ve uzmanlık kaydını ayrıca doğrular. Eksik form kayıp veri olarak kalır. Sayfada diğer gözlemcinin verisi veya sunucu bağlantısı yoktur; tamamlanan dosyayı kaydetmeden kapatmayın.</small></p></main>
+<script>
+'use strict';
+const observer=@@OBSERVER@@,characters=@@CHARACTERS@@,drafts=@@DRAFTS@@,hashes=@@HASHES@@,order=@@ORDER@@,phase=@@PHASE@@;
+const $=id=>document.getElementById(id);let materials=[],started=null,tick=null,active=0,paused=false,finished=false;
+$('role').textContent=observer;
+$('phase').textContent=phase==='pilot'?'Hazırlık pilotu':'Ana deney';
+$('pilot_notice').textContent=phase==='pilot'?'Bu pilotun görüntüleri önceden değerlendirilmiş yayın panelleridir; bağımsız doğrulama grubu sayılmaz.':'';
+for(const sid of order){const o=document.createElement('option');o.value=sid;o.textContent=sid;$('specimen').append(o);}
+function current(){return drafts[$('specimen').value];}
+function materialMatches(){const expected=current().provenance.images;return expected.length===materials.length&&expected.every(e=>materials.some(m=>m.sha256===e.sha256));}
+function seconds(){return active+(tick===null?0:(performance.now()-tick)/1000);}
+function select(options,id,value){const el=document.createElement('select');el.id=id;for(const [code,label]of options){const o=document.createElement('option');o.value=code;o.textContent=label;el.append(o);}el.value=value??'';return el;}
+function render(){
+ materials=[];$('images').value='';$('pictures').replaceChildren();$('rows').replaceChildren();const d=current();
+ $('provenance').textContent='Taslak: LLM_DRAFT | Model: '+d.provenance.model_version_returned+' | Taslak SHA-256: '+hashes[$('specimen').value];
+ for(const c of characters){const original=d.observations[c.id],tr=document.createElement('tr');
+  const name=document.createElement('td');name.textContent=c.id+' — '+c.name_tr;
+  const raw=document.createElement('td');raw.textContent=(original.value??'null')+' / '+original.state;const reason=document.createElement('p');reason.textContent=original.reason;raw.append(reason);
+  const edit=document.createElement('td');edit.append(select([['','null'],...c.values.map(v=>[v,v])],c.id+'_value',original.value));edit.append(select(['PRESENT','ABSENT','NOT_OBSERVABLE','UNCERTAIN'].map(v=>[v,v]),c.id+'_state',original.state));
+  const finalReason=document.createElement('td'),ta=document.createElement('textarea');ta.id=c.id+'_reason';ta.value=original.reason;finalReason.append(ta);
+  const action=document.createElement('td');action.append(select([['','Karar seçin'],['APPROVE','Görüntüden doğruladım'],['CORRECT','Düzelttim'],['NEUTRAL','Nötr işaretledim']],c.id+'_action',''));
+  const note=document.createElement('textarea');note.id=c.id+'_note';note.placeholder='Düzeltme/nötr işaretleme gerekçesi';action.append(note);tr.append(name,raw,edit,finalReason,action);$('rows').append(tr);
+ }
+}
+$('specimen').onchange=render;render();
+$('images').onchange=async()=>{try{materials=[];$('pictures').replaceChildren();for(const file of $('images').files){const hash=await crypto.subtle.digest('SHA-256',await file.arrayBuffer());materials.push({name:file.name,sha256:Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('')});const im=document.createElement('img');im.src=URL.createObjectURL(file);im.alt=file.name;$('pictures').append(im);}$('message').textContent=materialMatches()?'Doğru kodun görüntüleri seçildi.':'Görüntüler bu kodun kayıtlı hash setiyle eşleşmiyor.';}catch(e){$('message').textContent=e.message;}};
+$('start').onclick=()=>{if(started)return;if(!materialMatches()){$('message').textContent='Önce doğru kodun görüntülerini seçin.';return;}started=new Date().toISOString();tick=performance.now();$('start').disabled=true;$('pause').disabled=false;$('specimen').disabled=true;};
+$('pause').onclick=()=>{if(!paused){active=seconds();tick=null;$('pause').textContent='Devam';}else{tick=performance.now();$('pause').textContent='Mola';}paused=!paused;};
+setInterval(()=>{if(started)$('timer').textContent='Aktif inceleme: '+Math.floor(seconds()/60)+' dk '+Math.floor(seconds()%60)+' sn';},500);
+$('export').onclick=()=>{try{
+ if(finished)throw Error('Form kaydedildi. Yeni örnek için yeniden açın.');if(!started||!materialMatches())throw Error('Gerçek incelemeyi başlatın ve kodlu görüntüleri doğrulayın.');
+ const observations={},d=current();for(const c of characters){const original=d.observations[c.id],value=$(c.id+'_value').value||null,state=$(c.id+'_state').value,reason=$(c.id+'_reason').value,review_action=$(c.id+'_action').value,review_note=$(c.id+'_note').value.trim();
+  if(!review_action)throw Error(c.id+': Her satır için inceleme kararı gerekli.');
+  if(!['NOT_OBSERVABLE','UNCERTAIN'].includes(state)&&(!value||['NOT_OBSERVABLE','UNCERTAIN','UNKNOWN'].includes(value)))throw Error(c.id+': Gözlenen durum için geçerli değer gerekir.');
+  if(state==='ABSENT'&&!['ABSENT','NONE'].includes(value))throw Error(c.id+': Yokluk yalnız izin verilen negatif değerle kaydedilir.');
+  const same=value===original.value&&state===original.state&&reason===original.reason;
+  if(review_action==='APPROVE'&&!same)throw Error(c.id+': Ham öneri değişti; Düzeltme veya Nötr kararını kullanın.');
+  if(review_action==='CORRECT'&&(same||!review_note))throw Error(c.id+': Düzeltme gerçek değişiklik ve açıklama gerektirir.');
+  if(review_action==='NEUTRAL'&&(!['NOT_OBSERVABLE','UNCERTAIN'].includes(state)||!review_note))throw Error(c.id+': Nötr durum ve açıklama gerekir.');
+  if(!reason.trim())throw Error(c.id+': Görsel gerekçeyi boş bırakmayın.');observations[c.id]={value,state,reason,review_action,review_note};
+ }
+ const attestations={};for(const key of ['reference_label_hidden','other_observer_hidden','system_outputs_hidden','independent_completion']){attestations[key]=$(key).checked;if(!attestations[key])throw Error('Körleme ve bağımsızlık beyanlarını tamamlayın.');}
+ if(!$('human_approval').checked||$('signature').value.trim()!==observer)throw Error('İlgili uzman rol kodunu yazıp gerçek tamamlanma/onay beyanını işaretleyin.');
+ const now=new Date().toISOString(),duration=seconds();const result={status:'EXPERT_VERIFIED',design:'blinded expert review of LLM-drafted observations',specimen_id:$('specimen').value,observer_code:observer,phase,source_draft_sha256:hashes[$('specimen').value],observations,material_mode:'digital',materials,attestations,
+ timing:{method:'offline_expert_review_manual_pause',started_at:started,completed_at:now,active_seconds:duration},expert_approval:{completed_by_human:true,reviewer_code:observer,approved_at:now}};
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:'application/json'}));a.download=result.specimen_id+'_'+observer+'_EXPERT_VERIFIED.json';a.click();active=duration;tick=null;finished=true;$('pause').disabled=true;$('export').disabled=true;$('message').textContent='Uzmanın onay beyanıyla kaydedildi. Koordinatöre teslim edin; gerçek kişi/katılım ve referans teyidi ayrı tutulur.';
+ }catch(e){$('message').textContent=e.message;}};
+</script></html>

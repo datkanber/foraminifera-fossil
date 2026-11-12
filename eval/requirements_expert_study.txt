@@ -1,3 +1,5 @@
 # Analysis uses Python's standard library and the frozen Node scorer only.
 # This dependency generates the printable Word forms and protocol.
 python-docx==1.2.0
+# Read/verify source image formats for the preparation import; no pixel editing.
+Pillow==12.3.0

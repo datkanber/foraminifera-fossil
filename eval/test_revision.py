@@ -28,14 +28,17 @@ class RevisionTests(unittest.TestCase):
         self.assertEqual(len(manifest),150)
         for row in manifest:
             self.assertEqual(hashlib.sha256((PANEL/row['file']).read_bytes()).hexdigest(),row['sha256'])
-        before=read(OUT/'before_paths.json');now=read(ROOT/'eval/results/paths.json')
-        self.assertEqual([(x['module'],x['leaf_genus'],x['observations']) for x in before],[(x['module'],x['leaf_genus'],x['observations']) for x in now])
+        before=read(ROOT/'eval/results/revision/before_paths.json');now=read(ROOT/'eval/results/paths.json')
+        self.assertEqual(len(before),104);self.assertEqual(len(now),104)
+        self.assertEqual({(x['module'],x['leaf_genus']) for x in before},{(x['module'],x['leaf_genus']) for x in now})
+        # v32 intentionally repairs paths. Historical observation strings and
+        # provider/image receipts stay frozen; repaired strings are separate.
 
     def test_no_target_audit_findings(self):
         out=subprocess.check_output(['python',str(ROOT/'eval/audit.py')],cwd=ROOT,text=True,encoding='utf-8')
-        for category in ['a','b','d']:
+        for category in ['a','b','d','g','h','i']:
             line=next(x for x in out.splitlines() if x.startswith('('+category+')'))
-            self.assertEqual(int(re.search(r'\s(\d+)\s+(?:rules|rule pairs|pairs)$',line).group(1)),0,line)
+            self.assertEqual(int(re.search(r'\s(\d+)\s+(?:rules|rule pairs|pairs|answers|nodes|genera)$',line).group(1)),0,line)
 
     def test_synthetic_pairing_and_controls(self):
         profiles=read(OUT/'synthetic_profiles.json');cases=read(OUT/'synthetic_cases.json');details=read(OUT/'synthetic_corruptions.json')
@@ -56,10 +59,15 @@ class RevisionTests(unittest.TestCase):
             if x['configuration'].startswith('S5_'):
                 self.assertAlmostEqual(x['rbo'],1);self.assertEqual(x['top1_same'],1);self.assertEqual(x['top3_set_same'],1)
 
-    def test_default_scorer_preserves_frozen_algorithm_on_same_data(self):
-        cases=path_cases()+panel_cases()
-        actual=engine(cases)
-        original_algorithm=engine(cases,frozen=True,dataDir='api/data')
-        self.assertEqual(actual,original_algorithm)
+    def test_raw_uncertain_and_not_observable_are_not_promoted(self):
+        if not V32:self.skipTest('Current-release normalizer replay is enabled with FORAM_EVAL_RELEASE=v32')
+        cases=panel_cases(True)
+        for case in cases:
+            raw=read(PANEL/'raw'/(case['case_id']+'.json'))
+            data=next((a.get('providerResponse') for a in reversed(raw.get('attempts',[])) if a.get('providerResponse',{}).get('candidates')),None) or raw.get('raw',{})
+            text=''.join(p.get('text','') for p in data['candidates'][0]['content']['parts']).strip().removeprefix('```json').removeprefix('```').removesuffix('```').strip()
+            parsed=json.loads(text);original=parsed.get('observations',parsed.get('observation',{}).get('observations',{}))
+            for c,o in original.items():
+                if o.get('state') in ['UNCERTAIN','NOT_OBSERVABLE']:self.assertEqual(case['observations'][c]['state'],o['state'])
 
 if __name__=='__main__':unittest.main()

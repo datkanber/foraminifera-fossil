@@ -1,0 +1,33 @@
+{
+  "release": "v32",
+  "verification_date": "2026-11-12",
+  "records": [
+    {
+      "local_genus": "Idalina",
+      "authority": "Schlumberger & Munier-Chalmas, 1884",
+      "taxonomic_group": "Foraminifera",
+      "verified_foraminifer_AphiaID": null,
+      "rejected_homonym_AphiaID": 761200,
+      "rejected_homonym_authority": "A. M. Norman, 1890",
+      "rejected_homonym_phylum": "Mollusca",
+      "PBDB_taxon_no": 1662,
+      "PBDB_url": "https://paleobiodb.org/classic/basicTaxonInfo?taxon_no=1662",
+      "diagnosis_source": "https://forams.treatise.geolex.org/displayInfo.php?genera=Idalina",
+      "status": "FORAMINIFER_AUTHORITY_VERIFIED_WORMS_ID_UNRESOLVED",
+      "note": "The exact-name WoRMS response contains only the molluscan junior homonym. Neither 761200 nor its accepted molluscan target Okenia (138042) identifies the foraminifer. A foraminifer AphiaID is not invented."
+    },
+    {
+      "local_genus": "Planocamerinoides",
+      "authority": "Cole, 1958",
+      "taxonomic_group": "Foraminifera",
+      "queried_AphiaID": 848836,
+      "queried_status": "unaccepted",
+      "accepted_name": "Nummulites",
+      "accepted_authority": "Lamarck, 1801",
+      "accepted_AphiaID": 520941,
+      "source_url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=848836",
+      "accepted_url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=520941",
+      "note": "WoRMS treats this historical name as a subjective junior synonym. It remains an explicitly flagged historical local concept; the registry context does not silently rename the 75-genus development set."
+    }
+  ]
+}

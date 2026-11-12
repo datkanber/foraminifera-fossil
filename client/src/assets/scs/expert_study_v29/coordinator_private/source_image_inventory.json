@@ -1,0 +1,1654 @@
+{
+  "scope": "Source inventory, not an independent human dataset",
+  "source_directory": "C:\\Users\\burak\\Desktop\\esogu\\foraminifera-fossil\\client\\src\\assets\\tests",
+  "image_extension_files": 149,
+  "readable_images": 148,
+  "unreadable_files": [
+    "IMG_001.png"
+  ],
+  "exact_matches_to_previous_published_panels": 148,
+  "new_readable_images": 0,
+  "filename_identity_mismatches": 148,
+  "selection_basis": "10 cases, 3 agglutinated/3 porcelaneous/4 hyaline; 10 source clusters; source metadata and visual review only, no score-based selection.",
+  "physical_specimen_independence_verified": false,
+  "confirmatory_use_allowed": false,
+  "label_join": "Exact image SHA-256 to the existing provenance manifest; never basename-to-sidecar joins.",
+  "images": [
+    {
+      "relative_source_file": "IMG_001.png",
+      "sha256": "d129330ad58d847e122a0b8d0e4d800e84b13b4b3217bec2a29c8fe2d65c606e",
+      "readable": false,
+      "previous_panel_id": "",
+      "size": null,
+      "error": "UnidentifiedImageError"
+    },
+    {
+      "relative_source_file": "IMG_003.png",
+      "sha256": "e29a21e0ec254455606e4b58539e7f518bc97cfa6b5e41ef9cfbbff63b89f422",
+      "readable": true,
+      "previous_panel_id": "IMG_001",
+      "size": [
+        172,
+        211
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_004.png",
+      "sha256": "30f33ff693c9e766067a13f19c597be1cd1d7ada7e4eec0bab92318b57b77a24",
+      "readable": true,
+      "previous_panel_id": "IMG_002",
+      "size": [
+        140,
+        241
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_005.png",
+      "sha256": "4dac34aca97477617cdf8185948004c41ad4cdb757582fbc9179b64d9fae5f75",
+      "readable": true,
+      "previous_panel_id": "IMG_003",
+      "size": [
+        583,
+        526
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_006.png",
+      "sha256": "7c1418a6aaa65e763244931f9c4917229ceef0c6791d60a255be60827b57b219",
+      "readable": true,
+      "previous_panel_id": "IMG_004",
+      "size": [
+        494,
+        440
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_007.png",
+      "sha256": "ed21308f37191b9eb2ba9bcabe1724b2633018d358d8822c3290aec06bca7b5b",
+      "readable": true,
+      "previous_panel_id": "IMG_005",
+      "size": [
+        206,
+        273
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_008.png",
+      "sha256": "a3e64d3aab4deb68910b183600eb97765ead552d03a1ef1fb992c298fa96d6a4",
+      "readable": true,
+      "previous_panel_id": "IMG_006",
+      "size": [
+        516,
+        543
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_009.png",
+      "sha256": "d915cb3e3b83fafad8f4ce2f5bf7a12163b37cef36fc00232eaa3228ccafcf7b",
+      "readable": true,
+      "previous_panel_id": "IMG_007",
+      "size": [
+        254,
+        437
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_010.png",
+      "sha256": "14b7bd20c3baf6ce27456e52881bab6cfbbb1927d6a9d3c3266861a8ddeb04d2",
+      "readable": true,
+      "previous_panel_id": "IMG_008",
+      "size": [
+        303,
+        320
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_011.png",
+      "sha256": "84293e7387997d2d5e7974b9ca6f843f4997bbe79091688e3fad822b081f6145",
+      "readable": true,
+      "previous_panel_id": "IMG_009",
+      "size": [
+        274,
+        296
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_012.png",
+      "sha256": "074c441bef5a2d00ec6b3d1f4ded2977a9de351d58dfe1865097ee8549ba25d8",
+      "readable": true,
+      "previous_panel_id": "IMG_010",
+      "size": [
+        285,
+        248
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_013.png",
+      "sha256": "b984df907a257adb332fd4dadd279f8f0328f7f1967f18ee94e0fd2d80562768",
+      "readable": true,
+      "previous_panel_id": "IMG_011",
+      "size": [
+        429,
+        670
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_014.png",
+      "sha256": "35db8658491c2a5a8c616defb69afe6ad959b7222de4721a455916304905f7bc",
+      "readable": true,
+      "previous_panel_id": "IMG_012",
+      "size": [
+        550,
+        321
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_015.png",
+      "sha256": "6a5029a17d46fabf07bb918543f7b40a7584aee91513019c28d03e4fc7ab5b32",
+      "readable": true,
+      "previous_panel_id": "IMG_013",
+      "size": [
+        213,
+        214
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_016.png",
+      "sha256": "a09886d526d4cd1b104684b069d3636f93818bb0e53efb4b5279e8942e609292",
+      "readable": true,
+      "previous_panel_id": "IMG_014",
+      "size": [
+        462,
+        445
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_017.png",
+      "sha256": "f7c68d60b59caf6e21841b008437811af8efead719ac52f316b76bc5f98ee021",
+      "readable": true,
+      "previous_panel_id": "IMG_015",
+      "size": [
+        371,
+        357
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_018.png",
+      "sha256": "337a615f6615aeec409ffe85a1c4563e461c1197d4dfb4d55c8c3e0d7d555c2e",
+      "readable": true,
+      "previous_panel_id": "IMG_016",
+      "size": [
+        415,
+        308
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_019.png",
+      "sha256": "6c467a311449daa1680ded5fa1157ac345f2bdbe5d9b5b58fd201f2e04975ffa",
+      "readable": true,
+      "previous_panel_id": "IMG_017",
+      "size": [
+        278,
+        332
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_020.png",
+      "sha256": "9e62056ee1424499818bae5a0b388f57ea7d67d96150ba6ed5b0abd70db827c8",
+      "readable": true,
+      "previous_panel_id": "IMG_018",
+      "size": [
+        407,
+        325
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_021.png",
+      "sha256": "d36b89dafada302ecb963d4a5f5355c1fa323e35e46223e8744812a11e6af270",
+      "readable": true,
+      "previous_panel_id": "IMG_019",
+      "size": [
+        454,
+        385
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_022.png",
+      "sha256": "ee176dce41d8d3c651deac0b3cafc2057c295b40080a1bd365a6177be67a45d9",
+      "readable": true,
+      "previous_panel_id": "IMG_020",
+      "size": [
+        292,
+        346
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_023.png",
+      "sha256": "2d5bd80657ce7e134d42623b6b326685bf8eee638b7741b206ff8082e0f0963f",
+      "readable": true,
+      "previous_panel_id": "IMG_021",
+      "size": [
+        470,
+        457
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_024.png",
+      "sha256": "89a69603c6fd2d76aecca91dcea41444449555c84262f249588336825098b574",
+      "readable": true,
+      "previous_panel_id": "IMG_022",
+      "size": [
+        369,
+        375
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_025.png",
+      "sha256": "44623a9602d40b1da9b788fb6c06b08cf6abd026cfbd32e48a7e1740209dde0a",
+      "readable": true,
+      "previous_panel_id": "IMG_023",
+      "size": [
+        300,
+        315
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_026.png",
+      "sha256": "4a93d63ca90c98072710ae539597cc2ccafdba4f411089f069bcb7799ea2b1a2",
+      "readable": true,
+      "previous_panel_id": "IMG_024",
+      "size": [
+        880,
+        280
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_027.png",
+      "sha256": "285ab97ab73f2c042c8f37089c9360ba04f10461a2bf8f6c2dc838470ad0fab1",
+      "readable": true,
+      "previous_panel_id": "IMG_025",
+      "size": [
+        820,
+        445
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_028.png",
+      "sha256": "2d5b127e7ba62761b55a4b02f7c89c91d2645387c887b252d58547eb2ca151c3",
+      "readable": true,
+      "previous_panel_id": "IMG_026",
+      "size": [
+        700,
+        710
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_029.png",
+      "sha256": "a5d67abf5fc51b567bb424762dea79683c49ee99e51750edcb5623fa591db786",
+      "readable": true,
+      "previous_panel_id": "IMG_027",
+      "size": [
+        1050,
+        690
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_030.png",
+      "sha256": "4dec10be97b4868013c0abaf496d55486ace5bc0558f090bf62f6a54f174ffdd",
+      "readable": true,
+      "previous_panel_id": "IMG_028",
+      "size": [
+        1330,
+        700
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_031.png",
+      "sha256": "b22b53cbd0a2a860bf6b85889af27c47176bfc4a7724bbf6b1be6afc30f1c1c6",
+      "readable": true,
+      "previous_panel_id": "IMG_029",
+      "size": [
+        171,
+        215
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_032.png",
+      "sha256": "3bcf070cd3e23e6b714c8498f4d1ad260928c23946bd5686700677a52ce08b93",
+      "readable": true,
+      "previous_panel_id": "IMG_030",
+      "size": [
+        230,
+        251
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_033.png",
+      "sha256": "8edb0e5731e1d9f312dce5f2cf075ff870d5e7a2856b9419504bf6c84d37c407",
+      "readable": true,
+      "previous_panel_id": "IMG_031",
+      "size": [
+        166,
+        222
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_034.png",
+      "sha256": "233790b0bbd556cce859909dcd31c0b4cae5c0f3c199029ab87d7c1e5cf13c8c",
+      "readable": true,
+      "previous_panel_id": "IMG_032",
+      "size": [
+        179,
+        228
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_035.png",
+      "sha256": "f53182ae0fae82d8c5e1550016447c121aedd887fd8cf74a7225994a441f55f2",
+      "readable": true,
+      "previous_panel_id": "IMG_033",
+      "size": [
+        190,
+        228
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_036.png",
+      "sha256": "f66a2cd664817f1ddd2538b92cc17b030fda96118ebae26a3e7b71e3507f8a71",
+      "readable": true,
+      "previous_panel_id": "IMG_034",
+      "size": [
+        189,
+        224
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_037.png",
+      "sha256": "76c7783b998777c4fe2337dcb4abbda1f7101746f55258074895ad1ee8ddb1cf",
+      "readable": true,
+      "previous_panel_id": "IMG_035",
+      "size": [
+        159,
+        226
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_038.png",
+      "sha256": "65c89418ee8ae16ce6a5fc86b33831758a763ed1019c2dff180553d55efb4400",
+      "readable": true,
+      "previous_panel_id": "IMG_036",
+      "size": [
+        201,
+        224
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_039.png",
+      "sha256": "f69a867adf374a42b687afa66cc8262b1cfff15294a37c3f95cc9d60d0ec1f4f",
+      "readable": true,
+      "previous_panel_id": "IMG_037",
+      "size": [
+        179,
+        220
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_040.png",
+      "sha256": "ac2b6f63e66727ffbcf1b132d8695fdb76141241b19fc6e12c2170d2e2176d84",
+      "readable": true,
+      "previous_panel_id": "IMG_038",
+      "size": [
+        322,
+        205
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_041.png",
+      "sha256": "b61416249f52e7d915b65c007a903fd869c7d4cbfdcd9ac4ab875095f4c751ed",
+      "readable": true,
+      "previous_panel_id": "IMG_039",
+      "size": [
+        230,
+        257
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_042.png",
+      "sha256": "2e9d932bf08a3c4a872d862ad256c3af76077ca171f4c763293ba51861a599ee",
+      "readable": true,
+      "previous_panel_id": "IMG_040",
+      "size": [
+        548,
+        138
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_043.png",
+      "sha256": "8dd926eb0af77182120fac6f9510785408a7abb86af4dc4074c9b17dd8c33d2d",
+      "readable": true,
+      "previous_panel_id": "IMG_041",
+      "size": [
+        465,
+        129
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_044.png",
+      "sha256": "04399a3e1434e4fe50dfd8a6ff505b2f8f5e943911f57b9e18ea1451cc29baf1",
+      "readable": true,
+      "previous_panel_id": "IMG_042",
+      "size": [
+        313,
+        182
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_045.png",
+      "sha256": "f9cac9b3119a8d6c5829e0d09656e60ac0a6e353d8badbc47d9c7173bd85caa7",
+      "readable": true,
+      "previous_panel_id": "IMG_043",
+      "size": [
+        460,
+        361
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_046.png",
+      "sha256": "a977631b3c64a0056284ee7430ebecec47c2654e77c4ea56f45ac777cf05c816",
+      "readable": true,
+      "previous_panel_id": "IMG_044",
+      "size": [
+        447,
+        337
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_047.png",
+      "sha256": "be4cbae0357c57e5ddd030b06d2f63b5a934da615ab70eb679121dcec676952f",
+      "readable": true,
+      "previous_panel_id": "IMG_045",
+      "size": [
+        329,
+        401
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_048.png",
+      "sha256": "b67a3d4ba4ccf99bd9367d6757280e1fa690781a7a76fc598f2bd8ecca9eecdc",
+      "readable": true,
+      "previous_panel_id": "IMG_046",
+      "size": [
+        342,
+        312
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_049.png",
+      "sha256": "d355e15d93791d56009b19120818c157fe75459ecbfd2496550a574b60417ffe",
+      "readable": true,
+      "previous_panel_id": "IMG_047",
+      "size": [
+        483,
+        245
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_050.png",
+      "sha256": "0bff554990e101542b74b3ec5ec25b7a442222302790f6da5b5ec60c8508728e",
+      "readable": true,
+      "previous_panel_id": "IMG_048",
+      "size": [
+        233,
+        235
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_051.png",
+      "sha256": "1fc98ea4e839ae07ce76856d451046a85e9c1b1af0f3430aea995ab2644c36c4",
+      "readable": true,
+      "previous_panel_id": "IMG_049",
+      "size": [
+        266,
+        230
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_052.png",
+      "sha256": "9752d0e4a1690c0432200bffb35d3bc28b0479bd973fba9393d526d4f317ca6a",
+      "readable": true,
+      "previous_panel_id": "IMG_050",
+      "size": [
+        388,
+        302
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_053.png",
+      "sha256": "2a95fa0a4a8def8ed45adc60724f97d57f7012989a7a32ef5962dba66390a60a",
+      "readable": true,
+      "previous_panel_id": "IMG_051",
+      "size": [
+        389,
+        317
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_054.png",
+      "sha256": "45adff306adc537537e3419b15ce4d1188d72168b16a57423dd21f914971c2fd",
+      "readable": true,
+      "previous_panel_id": "IMG_052",
+      "size": [
+        371,
+        225
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_055.png",
+      "sha256": "e1c6c6cada780f114ba0797c764381b7b875b6b62abc7a0075db93aef6e439f6",
+      "readable": true,
+      "previous_panel_id": "IMG_053",
+      "size": [
+        373,
+        263
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_056.png",
+      "sha256": "ea41b93d487db14c858d1699eb7f55b012b18e97618fb95625d93119f88c910d",
+      "readable": true,
+      "previous_panel_id": "IMG_054",
+      "size": [
+        238,
+        314
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_057.png",
+      "sha256": "2a7e5da030c87f8749f007b6566af9941bee34764922316a95fbaae3316f72ed",
+      "readable": true,
+      "previous_panel_id": "IMG_055",
+      "size": [
+        280,
+        262
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_058.png",
+      "sha256": "14afbfb687c5437c1b2f9d4702cdc33fb95bfaa4dc1391d07ed3c0d575ef0d35",
+      "readable": true,
+      "previous_panel_id": "IMG_056",
+      "size": [
+        252,
+        226
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_059.png",
+      "sha256": "a915d7912e3914b99aee9fe9d64121c6afcc5f3c79db585660d1de9ac0bdb895",
+      "readable": true,
+      "previous_panel_id": "IMG_057",
+      "size": [
+        288,
+        234
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_060.png",
+      "sha256": "8aa59f3b4e334065a4ec2e0892beda0c8f12a98f28a17e52093502a905010ebc",
+      "readable": true,
+      "previous_panel_id": "IMG_058",
+      "size": [
+        467,
+        234
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_061.png",
+      "sha256": "96e0e1fc3ae76fbda133e4866692483f194edf3d7407672d2ba18f4c2512a5c6",
+      "readable": true,
+      "previous_panel_id": "IMG_059",
+      "size": [
+        530,
+        211
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_062.png",
+      "sha256": "daffbd84ec306dea37c05a78ef52b8b8a204b1538207de55112404d4339b6ccf",
+      "readable": true,
+      "previous_panel_id": "IMG_060",
+      "size": [
+        224,
+        213
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_063.png",
+      "sha256": "cc32a9c29718138e0c5331e1c8b7b861c996b79383d7d054e1d5b1444db4f2bb",
+      "readable": true,
+      "previous_panel_id": "IMG_061",
+      "size": [
+        123,
+        212
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_064.png",
+      "sha256": "b67e16f8ca5c664d724dd4657d97055f25a124dc1531d1388ddeb32c5e8c1539",
+      "readable": true,
+      "previous_panel_id": "IMG_062",
+      "size": [
+        217,
+        224
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_065.png",
+      "sha256": "b988652cdd44742dda10680fbbe31fdfd5b2cf4e81fe3d7a674a711a70aa2cef",
+      "readable": true,
+      "previous_panel_id": "IMG_063",
+      "size": [
+        216,
+        222
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_066.png",
+      "sha256": "03ddbae714b0e2cefbf6780fa7a4404d50a9858e614e8d15fbcf86055cbeed0c",
+      "readable": true,
+      "previous_panel_id": "IMG_064",
+      "size": [
+        258,
+        194
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_067.png",
+      "sha256": "62e06c318bd868520340ca996f458875de8e9517424b23b374938252df3e6de9",
+      "readable": true,
+      "previous_panel_id": "IMG_065",
+      "size": [
+        172,
+        196
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_068.png",
+      "sha256": "bd89f5c4a5c847a99d83f6f4b0061c15b5f53a203778ce634de0a1fffc58c113",
+      "readable": true,
+      "previous_panel_id": "IMG_066",
+      "size": [
+        309,
+        193
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_069.png",
+      "sha256": "bce5edce1d7cb355ae5a69905e5fae62ba6913bdbd514493127aac2d29b99555",
+      "readable": true,
+      "previous_panel_id": "IMG_067",
+      "size": [
+        156,
+        199
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_070.png",
+      "sha256": "8d5ce89b2654fd48ae8ee5ba3efd837c970f27f96a37d8af9c01de7c9d58098b",
+      "readable": true,
+      "previous_panel_id": "IMG_068",
+      "size": [
+        120,
+        197
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_071.png",
+      "sha256": "ac261cf7471918cec8a76ec12418fc594c0ddcb034c1fa83d3af571381aaf1b6",
+      "readable": true,
+      "previous_panel_id": "IMG_069",
+      "size": [
+        300,
+        308
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_072.png",
+      "sha256": "07b8fffe34433cd0d57b0a1d13d61e2a3ee0782e19d327716b07d5f29b1afe67",
+      "readable": true,
+      "previous_panel_id": "IMG_070",
+      "size": [
+        170,
+        296
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_073.png",
+      "sha256": "86f1ffb9035de76c086909c0e3d612ff4a7f802ba1ca2ee564213ea8316363cc",
+      "readable": true,
+      "previous_panel_id": "IMG_071",
+      "size": [
+        277,
+        285
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_074.png",
+      "sha256": "4cc396fb4a5516b727f4a3c5251a7ecde107f9e99a94de07062f44728cd609dc",
+      "readable": true,
+      "previous_panel_id": "IMG_072",
+      "size": [
+        415,
+        337
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_075.png",
+      "sha256": "deedc7c8d040f3cb80c7b3e24da396c7a8151448ece366266d48d1199d27d957",
+      "readable": true,
+      "previous_panel_id": "IMG_073",
+      "size": [
+        230,
+        254
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_076.png",
+      "sha256": "015c4fa479f2fd7021e2a0475e15742efdb85a29b538880693ca50de0a635e2c",
+      "readable": true,
+      "previous_panel_id": "IMG_074",
+      "size": [
+        162,
+        246
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_077.png",
+      "sha256": "c5777ccd692bb1b42fba91e441fb74ce69a5d90dfd3891c43c37ffc9a435f264",
+      "readable": true,
+      "previous_panel_id": "IMG_075",
+      "size": [
+        258,
+        262
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_078.png",
+      "sha256": "064efe524094f3bb53a191b535fbe52552049d9ca90d118a697f7882c50ec01c",
+      "readable": true,
+      "previous_panel_id": "IMG_076",
+      "size": [
+        145,
+        261
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_079.png",
+      "sha256": "72fca5c34c67a3665c797cc32cbb9ce2b16a37dc34cd25fa9e174d9925e33703",
+      "readable": true,
+      "previous_panel_id": "IMG_077",
+      "size": [
+        156,
+        252
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_080.png",
+      "sha256": "28ed757826bd2557e3fabb9975a3200cef518cbd7993d1b9cbf38318151f7bfd",
+      "readable": true,
+      "previous_panel_id": "IMG_078",
+      "size": [
+        158,
+        249
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_081.png",
+      "sha256": "9b13b1953a0a566e986a831131e3e9db9aba4d82f99c0fa601b8da34c854886a",
+      "readable": true,
+      "previous_panel_id": "IMG_079",
+      "size": [
+        331,
+        329
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_082.png",
+      "sha256": "6519f15c3c4538983734e59d80f70fd01d2c9d316c49d8de43fb8f1f3db95494",
+      "readable": true,
+      "previous_panel_id": "IMG_080",
+      "size": [
+        297,
+        295
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_083.png",
+      "sha256": "7af858e8958a4590136ef5d9c293ec66219229f34f48aee513554628a528d6f4",
+      "readable": true,
+      "previous_panel_id": "IMG_081",
+      "size": [
+        367,
+        339
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_084.png",
+      "sha256": "ec3d2c7025a82bf85d2f78142562030fff8ab345bb542d13fc66749d1cfb9afa",
+      "readable": true,
+      "previous_panel_id": "IMG_082",
+      "size": [
+        283,
+        345
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_085.png",
+      "sha256": "f9258fef69e60e924bf5456dbfe07e8531c655047794988797018228f5825885",
+      "readable": true,
+      "previous_panel_id": "IMG_083",
+      "size": [
+        291,
+        211
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_086.png",
+      "sha256": "d80a89ab76c1b7a4b23e66c8f171b049206102b5a03e1dc1a9276e8f9bd6e653",
+      "readable": true,
+      "previous_panel_id": "IMG_084",
+      "size": [
+        68,
+        395
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_087.png",
+      "sha256": "0cdb6f137d803b8556293d70fd95930133099cb6f4a261e35364aee9ba5e9796",
+      "readable": true,
+      "previous_panel_id": "IMG_085",
+      "size": [
+        239,
+        216
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_088.png",
+      "sha256": "847c76ab07ae1fa8e109536d883898f58a198cf6153d7bb5492718f2adf0e5bc",
+      "readable": true,
+      "previous_panel_id": "IMG_086",
+      "size": [
+        214,
+        193
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_089.png",
+      "sha256": "db24155dbc54151efa72d5cef5036333cb9e34a92d58178efdc7dd091ecbb628",
+      "readable": true,
+      "previous_panel_id": "IMG_087",
+      "size": [
+        277,
+        195
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_090.png",
+      "sha256": "2b23ec0eb1b3bf13fe5b5459ee01f4376a3ab3c02150858c9990d8b1d337c613",
+      "readable": true,
+      "previous_panel_id": "IMG_088",
+      "size": [
+        220,
+        222
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_091.png",
+      "sha256": "ca7b4766cf7a1ef044c2d4416df2d775e60c6e80b7adb5362efc3f1e24ed5170",
+      "readable": true,
+      "previous_panel_id": "IMG_089",
+      "size": [
+        49,
+        420
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_092.png",
+      "sha256": "02e06ff081dc0cc6c427d59c9bf48ad8570b720cfb66f6a01dd2d74c3751c008",
+      "readable": true,
+      "previous_panel_id": "IMG_090",
+      "size": [
+        249,
+        315
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_093.png",
+      "sha256": "aadb21f61258e10eaf97bb8e271eecc29ab6719e56de77faa6f5ea368ae37a19",
+      "readable": true,
+      "previous_panel_id": "IMG_091",
+      "size": [
+        409,
+        307
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_094.png",
+      "sha256": "d1f32ba5403dd335be12802879b01993c4f218fcd01e766680546b41e4af7f38",
+      "readable": true,
+      "previous_panel_id": "IMG_092",
+      "size": [
+        308,
+        280
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_095.png",
+      "sha256": "baf5d06359b9ce1a7127889f71df3a4650ade260447960e9c6e66bb46e3475b0",
+      "readable": true,
+      "previous_panel_id": "IMG_093",
+      "size": [
+        263,
+        282
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_096.png",
+      "sha256": "888a15e60f1836fb72f8347abe0c76495e2736a481f3da714d66f91940ca7ac2",
+      "readable": true,
+      "previous_panel_id": "IMG_094",
+      "size": [
+        405,
+        326
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_097.png",
+      "sha256": "630772e8f88f6d9b33a1b0443c8e4c3b529972fcaf5eaf2a38ce87646ab29104",
+      "readable": true,
+      "previous_panel_id": "IMG_095",
+      "size": [
+        74,
+        384
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_098.png",
+      "sha256": "46f17ba3226ec19adaf78a371271d8c4272c71c1972ec6ba7938c7fe6b93a8f6",
+      "readable": true,
+      "previous_panel_id": "IMG_096",
+      "size": [
+        129,
+        361
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_099.png",
+      "sha256": "b7cb7cd5af440d7c78aac61919b819dae2978f93a657ef887c6190b5851cef59",
+      "readable": true,
+      "previous_panel_id": "IMG_097",
+      "size": [
+        103,
+        468
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_100.png",
+      "sha256": "07317f350c99aca0603b628e19264dd07b57fa73e49c9cf7354f64a7d4cc4d52",
+      "readable": true,
+      "previous_panel_id": "IMG_098",
+      "size": [
+        320,
+        310
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_101.png",
+      "sha256": "bbb4d401e73a506d6f88aaa489fa5ad7ecb520a7d5dfd101621ce0b4c4855d2e",
+      "readable": true,
+      "previous_panel_id": "IMG_099",
+      "size": [
+        446,
+        219
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_102.png",
+      "sha256": "0cc3abd86769cdd84c978b5f63c7547c8889951b3b7bfb8b94321842e20c484d",
+      "readable": true,
+      "previous_panel_id": "IMG_100",
+      "size": [
+        405,
+        83
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_103.png",
+      "sha256": "373507875a329839ce028ecb59374bd51ee23508427fcb659863c31accec8e84",
+      "readable": true,
+      "previous_panel_id": "IMG_101",
+      "size": [
+        408,
+        278
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_104.png",
+      "sha256": "3cf308ace173cbd707db66073b3b538cc1ec2fa4e02314179865f1a271d53d7f",
+      "readable": true,
+      "previous_panel_id": "IMG_102",
+      "size": [
+        203,
+        238
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_105.png",
+      "sha256": "5add502081d897e952c9e1273a6626c6254e6a3a0c9d817a67f7ca0578170d09",
+      "readable": true,
+      "previous_panel_id": "IMG_103",
+      "size": [
+        487,
+        91
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_106.png",
+      "sha256": "335a279e1b54b00bfe1ca1e0db5f4d4d9ef5cc7485fba6caa25fc03efdb7cf82",
+      "readable": true,
+      "previous_panel_id": "IMG_104",
+      "size": [
+        457,
+        153
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_107.png",
+      "sha256": "5639ea0840e0b8280d5e8d437548678bf87319c9201fdf7b5f45bbc656624555",
+      "readable": true,
+      "previous_panel_id": "IMG_105",
+      "size": [
+        495,
+        209
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_108.png",
+      "sha256": "85a5b616e953117266d76dbf7355659ae980c9b65535779ac2d08787e8e733e2",
+      "readable": true,
+      "previous_panel_id": "IMG_106",
+      "size": [
+        375,
+        375
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_109.png",
+      "sha256": "f4eea280cc734d87ce6a67e2ed63a8bfd0bf5bd7c4a009dd84ac5366d5446fba",
+      "readable": true,
+      "previous_panel_id": "IMG_107",
+      "size": [
+        423,
+        338
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_110.png",
+      "sha256": "bd3b47f204c1cbfcda882a4eec7dfea2990ae9b9614b4bd8c62ea8df3db947b7",
+      "readable": true,
+      "previous_panel_id": "IMG_108",
+      "size": [
+        409,
+        291
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_111.png",
+      "sha256": "27da1fc0a50c1a00fa28942d7e534070cdb9ccbb2dc0d46e87bdc35b55807fbc",
+      "readable": true,
+      "previous_panel_id": "IMG_109",
+      "size": [
+        344,
+        253
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_112.png",
+      "sha256": "1e34cd471f0fcdbdf44c463a57a64fa3c6dabcc669c3c94e95035802c2f04a1a",
+      "readable": true,
+      "previous_panel_id": "IMG_110",
+      "size": [
+        400,
+        254
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_113.png",
+      "sha256": "f3ae76260a170c931a2cf3469bedd254ed890899f6456e01a51112e6593367ef",
+      "readable": true,
+      "previous_panel_id": "IMG_111",
+      "size": [
+        252,
+        218
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_114.png",
+      "sha256": "bea3ec4ae245ef3cea4f29f804b9859b328dd3d6877b2b4bb721a81e3fd9510a",
+      "readable": true,
+      "previous_panel_id": "IMG_112",
+      "size": [
+        245,
+        210
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_115.png",
+      "sha256": "e4d1b24688ca18933fc578bd7572caa024972ac11acd40ef07a96a167f9e456a",
+      "readable": true,
+      "previous_panel_id": "IMG_113",
+      "size": [
+        211,
+        287
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_116.png",
+      "sha256": "8b60fa565f3d331fd5530492d23e24b01885846664279524e6599de63b41fecb",
+      "readable": true,
+      "previous_panel_id": "IMG_114",
+      "size": [
+        68,
+        447
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_117.png",
+      "sha256": "5eb2cdf2422aab5d2cfd80405937b01c68ac1b871f18c2eaabf18e8dc089b7ea",
+      "readable": true,
+      "previous_panel_id": "IMG_115",
+      "size": [
+        70,
+        351
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_118.png",
+      "sha256": "77f383abe0e9bde384aded02278119a76ee41bb88366c4819dcd8f817031d8d3",
+      "readable": true,
+      "previous_panel_id": "IMG_116",
+      "size": [
+        67,
+        354
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_119.png",
+      "sha256": "5a75e78c931d6405449009ad6325b98609bd031c14207599d1715f10a36edea4",
+      "readable": true,
+      "previous_panel_id": "IMG_117",
+      "size": [
+        207,
+        193
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_120.png",
+      "sha256": "b475e83bb553c013fb4ee0218d698473ca9da43d48a427bf956bf87c6422dd5d",
+      "readable": true,
+      "previous_panel_id": "IMG_118",
+      "size": [
+        264,
+        241
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_121.png",
+      "sha256": "6e74844014410917c88e43677077ac0f84a8c14a71aa032346fac5dd5d8123ae",
+      "readable": true,
+      "previous_panel_id": "IMG_119",
+      "size": [
+        238,
+        253
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_122.png",
+      "sha256": "d85292d27edb1338badfeb0ac9efe3728a3b92b362bd7527e5069b8c7046a1fd",
+      "readable": true,
+      "previous_panel_id": "IMG_120",
+      "size": [
+        281,
+        255
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_123.png",
+      "sha256": "041d8980e6bbf36dab4ca9fb4095bc99c8f333b85e560229d82c453b4200ac86",
+      "readable": true,
+      "previous_panel_id": "IMG_121",
+      "size": [
+        110,
+        252
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_124.png",
+      "sha256": "d1ed2fe8095fecfd74201a85cb8a66fe8bde1e237fe6011459d1c5d5887fee88",
+      "readable": true,
+      "previous_panel_id": "IMG_122",
+      "size": [
+        272,
+        195
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_125.png",
+      "sha256": "b4fb5dbe9a5efa00d12586c40dbaf8adae3c02dc04353770edb117a75b07ce03",
+      "readable": true,
+      "previous_panel_id": "IMG_123",
+      "size": [
+        209,
+        208
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_126.png",
+      "sha256": "0c7365913a4551d27eb945280961cab131665ccb8bf59ec3b8b7dc4ebe615990",
+      "readable": true,
+      "previous_panel_id": "IMG_124",
+      "size": [
+        198,
+        287
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_127.png",
+      "sha256": "8b6f549e61476a251c1dfe3004b4ecfd3a391a7ea9e603744f603fdb92881675",
+      "readable": true,
+      "previous_panel_id": "IMG_125",
+      "size": [
+        274,
+        220
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_128.png",
+      "sha256": "815be89bf994f18274d6e346acf7be57f572b80b7f07522a20df3abdd57d0559",
+      "readable": true,
+      "previous_panel_id": "IMG_126",
+      "size": [
+        268,
+        242
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_129.png",
+      "sha256": "dfb2f0ed43ad9fa51739e470846996d451b20de152471334b0ffcb29715efa73",
+      "readable": true,
+      "previous_panel_id": "IMG_127",
+      "size": [
+        195,
+        235
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_130.png",
+      "sha256": "014cb4bbc3b1cee6a9c5b51335f48ec8ce01b44347ce276e7d853d388ea0be26",
+      "readable": true,
+      "previous_panel_id": "IMG_128",
+      "size": [
+        269,
+        215
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_131.png",
+      "sha256": "5307d75bcb8aa96f19b6fc25221a3aceb397288b336bf4c5fb974f45ea3e6bd8",
+      "readable": true,
+      "previous_panel_id": "IMG_129",
+      "size": [
+        354,
+        254
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_132.png",
+      "sha256": "473c7f96afd95f65a77c4ddd1bf0b76eceeb2057dbd4113bacca53dad072b749",
+      "readable": true,
+      "previous_panel_id": "IMG_130",
+      "size": [
+        251,
+        249
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_133.png",
+      "sha256": "139c5fc753196ec4d0a84aff7766106ef90ba1f7fd95ec7b5040d889f3e7bc55",
+      "readable": true,
+      "previous_panel_id": "IMG_131",
+      "size": [
+        362,
+        118
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_134.png",
+      "sha256": "1ef7c4162d99f021474bf50393a5ca97067fe61153e829e89bc1bd708678beb4",
+      "readable": true,
+      "previous_panel_id": "IMG_132",
+      "size": [
+        305,
+        143
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_135.png",
+      "sha256": "e5d51ab57ad5e53e721fca95466ac4ce7c69c9cd5dde5be915b926944f4a78c8",
+      "readable": true,
+      "previous_panel_id": "IMG_133",
+      "size": [
+        242,
+        215
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_136.png",
+      "sha256": "46c98ff75b0c51f1023593e58917eba3c529d444c5d599ad1eac5717dd046656",
+      "readable": true,
+      "previous_panel_id": "IMG_134",
+      "size": [
+        462,
+        117
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_137.png",
+      "sha256": "a6890df3bc672619a214916b70d8a7445fd4fc557dbcf5d866469559f96e27a9",
+      "readable": true,
+      "previous_panel_id": "IMG_135",
+      "size": [
+        380,
+        363
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_138.png",
+      "sha256": "2e4fa9b0e637407dad16b6da99939f96203fdf7a938e36d702ee201d741ea101",
+      "readable": true,
+      "previous_panel_id": "IMG_136",
+      "size": [
+        364,
+        313
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_139.png",
+      "sha256": "6f9f90f4f13f4eef31aecbcf2d3a488f5e98821df47522f5bc614ba1913f1495",
+      "readable": true,
+      "previous_panel_id": "IMG_137",
+      "size": [
+        352,
+        280
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_140.png",
+      "sha256": "104526334be41cdece43d28901e8711401c64653d8a03820f6db70d297d4714a",
+      "readable": true,
+      "previous_panel_id": "IMG_138",
+      "size": [
+        156,
+        427
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_141.png",
+      "sha256": "340e29fb54a149d69d5a77026b843e6bd315ba9207a6918008d36f9c89cdbdf4",
+      "readable": true,
+      "previous_panel_id": "IMG_139",
+      "size": [
+        273,
+        233
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_142.png",
+      "sha256": "3719d2c72a877a8f681036903d81ce0d64dab3ac6bddcba7b84936c598331331",
+      "readable": true,
+      "previous_panel_id": "IMG_140",
+      "size": [
+        167,
+        232
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_143.png",
+      "sha256": "943b6bd03e51a091cf4200e57b3609f4f8a260e2f42131b0d644faec6c1414a1",
+      "readable": true,
+      "previous_panel_id": "IMG_141",
+      "size": [
+        373,
+        120
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_144.png",
+      "sha256": "b407c39beaafbf31941d4ed7806a4e12207df4935b411ca176edf6e0ae350188",
+      "readable": true,
+      "previous_panel_id": "IMG_142",
+      "size": [
+        444,
+        182
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_145.png",
+      "sha256": "41edcc76fc7736a176c2802e7d336c60911fa59506909eaceb67d5f4b9767e34",
+      "readable": true,
+      "previous_panel_id": "IMG_143",
+      "size": [
+        349,
+        329
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_146.png",
+      "sha256": "22979a3b9e6fa80747d53db0ddcb4e4779fa3224a8b2aed2e20a157cabcb3a84",
+      "readable": true,
+      "previous_panel_id": "IMG_144",
+      "size": [
+        164,
+        176
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_147.png",
+      "sha256": "9e28da55681d8aef505e2d6ae39aa94f7403fe03af6ba4bb43f41e80b992c438",
+      "readable": true,
+      "previous_panel_id": "IMG_145",
+      "size": [
+        143,
+        135
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_148.png",
+      "sha256": "81c2056fc8ad7cbd7dd4e19c7445eb829590460059f45c5f0c2fd3e19fed0256",
+      "readable": true,
+      "previous_panel_id": "IMG_146",
+      "size": [
+        237,
+        124
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_149.png",
+      "sha256": "87b875b612d4cac9444a0d1690b6473628c3f50c00b8f4b2e84a39603de35fdc",
+      "readable": true,
+      "previous_panel_id": "IMG_147",
+      "size": [
+        125,
+        124
+      ],
+      "metadata_keys": []
+    },
+    {
+      "relative_source_file": "IMG_150.png",
+      "sha256": "0124f58ef2d7e348689cf87874373654ae1eff2887fb608c986ed6cbc207666c",
+      "readable": true,
+      "previous_panel_id": "IMG_148",
+      "size": [
+        193,
+        154
+      ],
+      "metadata_keys": []
+    }
+  ]
+}

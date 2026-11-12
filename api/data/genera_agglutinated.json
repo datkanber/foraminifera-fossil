@@ -8,23 +8,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Test composition = Agglutinated (Kavkı = Aglütinat)",
-          "Undivided tubular chamber (Bölünmemiş tübüler loca)",
-          "True septa = Absent (Gerçek septa yok)",
-          "Test = Coiled (Kavkı sarılmış)"
+          {
+            "code": "M1",
+            "text": "Test composition = Agglutinated (Kavkı = Aglütinat)"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber (Bölünmemiş tübüler loca)"
+          },
+          {
+            "code": "M3",
+            "text": "True septa = Absent (Gerçek septa yok)"
+          },
+          {
+            "code": "M4",
+            "text": "Test = Coiled (Kavkı sarılmış)"
+          }
         ],
         "D": [
-          "Regular planispiral tubular coiling (Düzenli planispiral tübüler sarılım)",
-          "Coiling remains essentially in one plane (Sarılım esas olarak tek düzlemde)"
+          {
+            "code": "D1",
+            "text": "Regular planispiral tubular coiling (Düzenli planispiral tübüler sarılım)"
+          },
+          {
+            "code": "D2",
+            "text": "Coiling remains essentially in one plane (Sarılım esas olarak tek düzlemde)"
+          }
         ],
         "S": [
-          "Discoidal outline (Diskoidal görünüm)",
-          "Simple internal structure (Basit iç yapı)"
+          {
+            "code": "S1",
+            "text": "Discoidal outline (Diskoidal görünüm)"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal structure (Basit iç yapı)"
+          }
         ],
         "C": [
-          "True septa present",
-          "Multichambered organization",
-          "Irregular multidirectional coiling"
+          {
+            "code": "C1",
+            "text": "True septa present"
+          },
+          {
+            "code": "C2",
+            "text": "Multichambered organization"
+          },
+          {
+            "code": "C3",
+            "text": "Irregular multidirectional coiling"
+          }
         ]
       },
       "closest_comparisons": [
@@ -46,22 +79,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Undivided tubular chamber",
-          "True septa absent",
-          "Coiled tubular test"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "M3",
+            "text": "True septa absent"
+          },
+          {
+            "code": "M4",
+            "text": "Coiled tubular test"
+          }
         ],
         "D": [
-          "Coiling changes planes (Sarılım düzlemleri değişir)",
-          "Irregular/glomospiral three-dimensional appearance"
+          {
+            "code": "D1",
+            "text": "Coiling changes planes (Sarılım düzlemleri değişir)"
+          },
+          {
+            "code": "D2",
+            "text": "Irregular/glomospiral three-dimensional appearance"
+          }
         ],
         "S": [
-          "Compact, tangled or subglobular outline",
-          "Simple internal architecture"
+          {
+            "code": "S1",
+            "text": "Compact, tangled or subglobular outline"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal architecture"
+          }
         ],
         "C": [
-          "Perfectly regular single-plane planispiral coiling",
-          "True chamber septa present"
+          {
+            "code": "C1",
+            "text": "Perfectly regular single-plane planispiral coiling"
+          },
+          {
+            "code": "C2",
+            "text": "True chamber septa present"
+          }
         ]
       },
       "closest_comparisons": [
@@ -83,23 +146,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Undivided single cavity",
-          "Globular/subglobular or sac-like test",
-          "Septa absent"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided single cavity"
+          },
+          {
+            "code": "M3",
+            "text": "Globular/subglobular or sac-like test"
+          },
+          {
+            "code": "M4",
+            "text": "Septa absent"
+          }
         ],
         "D": [
-          "Simple sac-like single chamber",
-          "No tubular coiling"
+          {
+            "code": "D1",
+            "text": "Simple sac-like single chamber"
+          },
+          {
+            "code": "D2",
+            "text": "No tubular coiling"
+          }
         ],
         "S": [
-          "Aperture usually simple",
-          "Wall finer/more coherent than typical coarse *Psammosphaera*"
+          {
+            "code": "S1",
+            "text": "Aperture usually simple"
+          },
+          {
+            "code": "S2",
+            "text": "Wall finer/more coherent than typical coarse *Psammosphaera*"
+          }
         ],
         "C": [
-          "Planispiral tube",
-          "True multichambered organization",
-          "Strong branching"
+          {
+            "code": "C1",
+            "text": "Planispiral tube"
+          },
+          {
+            "code": "C2",
+            "text": "True multichambered organization"
+          },
+          {
+            "code": "C3",
+            "text": "Strong branching"
+          }
         ]
       },
       "closest_comparisons": [
@@ -121,22 +217,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Single undivided cavity",
-          "Globular test"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Single undivided cavity"
+          },
+          {
+            "code": "M3",
+            "text": "Globular test"
+          }
         ],
         "D": [
-          "Wall conspicuously constructed from relatively coarse sediment grains",
-          "Very simple spherical architecture"
+          {
+            "code": "D1",
+            "text": "Wall conspicuously constructed from relatively coarse sediment grains"
+          },
+          {
+            "code": "D2",
+            "text": "Very simple spherical architecture"
+          }
         ],
         "S": [
-          "Irregular external surface",
-          "No coiling"
+          {
+            "code": "S1",
+            "text": "Irregular external surface"
+          },
+          {
+            "code": "S2",
+            "text": "No coiling"
+          }
         ],
         "C": [
-          "Septate chambers",
-          "Planispiral/trochospiral organization",
-          "Elongate tubular test"
+          {
+            "code": "C1",
+            "text": "Septate chambers"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral/trochospiral organization"
+          },
+          {
+            "code": "C3",
+            "text": "Elongate tubular test"
+          }
         ]
       },
       "closest_comparisons": [
@@ -158,23 +284,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Undivided tubular chamber",
-          "Uncoiled",
-          "Septa absent"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "M3",
+            "text": "Uncoiled"
+          },
+          {
+            "code": "M4",
+            "text": "Septa absent"
+          }
         ],
         "D": [
-          "Long, relatively straight or gently curved tube",
-          "Tube comparatively robust and regular"
+          {
+            "code": "D1",
+            "text": "Long, relatively straight or gently curved tube"
+          },
+          {
+            "code": "D2",
+            "text": "Tube comparatively robust and regular"
+          }
         ],
         "S": [
-          "Approximately constant tubular diameter",
-          "Simple internal cavity"
+          {
+            "code": "S1",
+            "text": "Approximately constant tubular diameter"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal cavity"
+          }
         ],
         "C": [
-          "Planispiral coiling",
-          "Multichambered/septate test",
-          "Strong radial branching"
+          {
+            "code": "C1",
+            "text": "Planispiral coiling"
+          },
+          {
+            "code": "C2",
+            "text": "Multichambered/septate test"
+          },
+          {
+            "code": "C3",
+            "text": "Strong radial branching"
+          }
         ]
       },
       "closest_comparisons": [
@@ -196,21 +355,48 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Tubular architecture",
-          "Septa absent or no conventional chamber series"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Tubular architecture"
+          },
+          {
+            "code": "M3",
+            "text": "Septa absent or no conventional chamber series"
+          }
         ],
         "D": [
-          "Strong branching",
-          "Branches commonly radiate from a central area"
+          {
+            "code": "D1",
+            "text": "Strong branching"
+          },
+          {
+            "code": "D2",
+            "text": "Branches commonly radiate from a central area"
+          }
         ],
         "S": [
-          "Coarse agglutinated wall",
-          "Large irregular test"
+          {
+            "code": "S1",
+            "text": "Coarse agglutinated wall"
+          },
+          {
+            "code": "S2",
+            "text": "Large irregular test"
+          }
         ],
         "C": [
-          "Simple unbranched straight tube",
-          "Regular planispiral coiling"
+          {
+            "code": "C1",
+            "text": "Simple unbranched straight tube"
+          },
+          {
+            "code": "C2",
+            "text": "Regular planispiral coiling"
+          }
         ]
       },
       "closest_comparisons": [
@@ -232,22 +418,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Slender tubular architecture",
-          "No conventional multichambered organization"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Slender tubular architecture"
+          },
+          {
+            "code": "M3",
+            "text": "No conventional multichambered organization"
+          }
         ],
         "D": [
-          "Very thin, flexible, irregularly branching/tangled tubes",
-          "Less robust and less radially organized than *Rhabdammina*"
+          {
+            "code": "D1",
+            "text": "Very thin, flexible, irregularly branching/tangled tubes"
+          },
+          {
+            "code": "D2",
+            "text": "Less robust and less radially organized than *Rhabdammina*"
+          }
         ],
         "S": [
-          "Irregular network-like appearance",
-          "Fine agglutinated wall"
+          {
+            "code": "S1",
+            "text": "Irregular network-like appearance"
+          },
+          {
+            "code": "S2",
+            "text": "Fine agglutinated wall"
+          }
         ],
         "C": [
-          "Thick straight regular tube",
-          "Strong central radial branching",
-          "Septate serial chambers"
+          {
+            "code": "C1",
+            "text": "Thick straight regular tube"
+          },
+          {
+            "code": "C2",
+            "text": "Strong central radial branching"
+          },
+          {
+            "code": "C3",
+            "text": "Septate serial chambers"
+          }
         ]
       },
       "closest_comparisons": [
@@ -270,24 +486,60 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present",
-          "Uniserial"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Uniserial"
+          }
         ],
         "D": [
-          "Chambers globular, pyriform or elongate",
-          "Chambers arranged sequentially in a single row",
-          "Connections generally less distinctly necked than in *Hormosina*"
+          {
+            "code": "D1",
+            "text": "Chambers globular, pyriform or elongate"
+          },
+          {
+            "code": "D2",
+            "text": "Chambers arranged sequentially in a single row"
+          },
+          {
+            "code": "D3",
+            "text": "Connections generally less distinctly necked than in *Hormosina*"
+          }
         ],
         "S": [
-          "Irregular chamber enlargement",
-          "Elongate overall form"
+          {
+            "code": "S1",
+            "text": "Irregular chamber enlargement"
+          },
+          {
+            "code": "S2",
+            "text": "Elongate overall form"
+          }
         ],
         "C": [
-          "Biserial/triserial organization",
-          "Planispiral adult growth",
-          "Septa absent"
+          {
+            "code": "C1",
+            "text": "Biserial/triserial organization"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral adult growth"
+          },
+          {
+            "code": "C3",
+            "text": "Septa absent"
+          }
         ]
       },
       "closest_comparisons": [
@@ -309,22 +561,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Uniserial",
-          "Septa present"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Uniserial"
+          },
+          {
+            "code": "M4",
+            "text": "Septa present"
+          }
         ],
         "D": [
-          "Globular/pyriform chambers",
-          "Adjacent chambers linked by conspicuously narrow necks",
-          "Bead- or necklace-like appearance"
+          {
+            "code": "D1",
+            "text": "Globular/pyriform chambers"
+          },
+          {
+            "code": "D2",
+            "text": "Adjacent chambers linked by conspicuously narrow necks"
+          },
+          {
+            "code": "D3",
+            "text": "Bead- or necklace-like appearance"
+          }
         ],
         "S": [
-          "Chambers relatively regular in shape"
+          {
+            "code": "S1",
+            "text": "Chambers relatively regular in shape"
+          }
         ],
         "C": [
-          "Broad direct chamber connections characteristic of many *Reophax*",
-          "Biserial/triserial arrangement"
+          {
+            "code": "C1",
+            "text": "Broad direct chamber connections characteristic of many *Reophax*"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial/triserial arrangement"
+          }
         ]
       },
       "closest_comparisons": [
@@ -346,21 +628,48 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Uniserial/serial organization"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Uniserial/serial organization"
+          }
         ],
         "D": [
-          "Elongate, ovate or bottle-shaped chambers",
-          "Narrow caudate/tubular connections between chambers",
-          "Characteristic elongated chamber profile"
+          {
+            "code": "D1",
+            "text": "Elongate, ovate or bottle-shaped chambers"
+          },
+          {
+            "code": "D2",
+            "text": "Narrow caudate/tubular connections between chambers"
+          },
+          {
+            "code": "D3",
+            "text": "Characteristic elongated chamber profile"
+          }
         ],
         "S": [
-          "Robust deep-water agglutinated morphology"
+          {
+            "code": "S1",
+            "text": "Robust deep-water agglutinated morphology"
+          }
         ],
         "C": [
-          "Compact globular chambers without elongated connections",
-          "Planispiral architecture"
+          {
+            "code": "C1",
+            "text": "Compact globular chambers without elongated connections"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral architecture"
+          }
         ]
       },
       "closest_comparisons": [
@@ -383,24 +692,60 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present",
-          "Planispiral"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Planispiral"
+          }
         ],
         "D": [
-          "Chambers internally simple",
-          "Planispiral growth persists through adult stage",
-          "Commonly involute to semi-involute"
+          {
+            "code": "D1",
+            "text": "Chambers internally simple"
+          },
+          {
+            "code": "D2",
+            "text": "Planispiral growth persists through adult stage"
+          },
+          {
+            "code": "D3",
+            "text": "Commonly involute to semi-involute"
+          }
         ],
         "S": [
-          "Discoidal/subglobular outline",
-          "Rounded peripheral chambers"
+          {
+            "code": "S1",
+            "text": "Discoidal/subglobular outline"
+          },
+          {
+            "code": "S2",
+            "text": "Rounded peripheral chambers"
+          }
         ],
         "C": [
-          "Undivided tubular chamber",
-          "Strong internal reticulation",
-          "Adult uniserial uncoiling"
+          {
+            "code": "C1",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "C2",
+            "text": "Strong internal reticulation"
+          },
+          {
+            "code": "C3",
+            "text": "Adult uniserial uncoiling"
+          }
         ]
       },
       "closest_comparisons": [
@@ -423,22 +768,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present",
-          "Coiled"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Coiled"
+          }
         ],
         "D": [
-          "Coiling axis changes during ontogeny",
-          "Streptospiral/recurvoid arrangement",
-          "Different sections may show different apparent coiling planes"
+          {
+            "code": "D1",
+            "text": "Coiling axis changes during ontogeny"
+          },
+          {
+            "code": "D2",
+            "text": "Streptospiral/recurvoid arrangement"
+          },
+          {
+            "code": "D3",
+            "text": "Different sections may show different apparent coiling planes"
+          }
         ],
         "S": [
-          "Compact/subglobular test"
+          {
+            "code": "S1",
+            "text": "Compact/subglobular test"
+          }
         ],
         "C": [
-          "Perfectly planar planispiral architecture",
-          "Septa absent"
+          {
+            "code": "C1",
+            "text": "Perfectly planar planispiral architecture"
+          },
+          {
+            "code": "C2",
+            "text": "Septa absent"
+          }
         ]
       },
       "closest_comparisons": [
@@ -460,21 +835,48 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          }
         ],
         "D": [
-          "Early part = Planispiral",
-          "Adult part = Uncoiled/uniserial"
+          {
+            "code": "D1",
+            "text": "Early part = Planispiral"
+          },
+          {
+            "code": "D2",
+            "text": "Adult part = Uncoiled/uniserial"
+          }
         ],
         "S": [
-          "Elongated adult test",
-          "Clear transition between coiled and straight portions"
+          {
+            "code": "S1",
+            "text": "Elongated adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Clear transition between coiled and straight portions"
+          }
         ],
         "C": [
-          "Adult remains planispiral throughout",
-          "Planispiral → biserial transition"
+          {
+            "code": "C1",
+            "text": "Adult remains planispiral throughout"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral → biserial transition"
+          }
         ]
       },
       "closest_comparisons": [
@@ -496,22 +898,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Planispiral/recurvoid-related architecture",
-          "Internal subdivision present"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Planispiral/recurvoid-related architecture"
+          },
+          {
+            "code": "M4",
+            "text": "Internal subdivision present"
+          }
         ],
         "D": [
-          "Chambers possess complex reticulate/labyrinthic secondary subdivisions",
-          "Internal structure substantially more complex than *Haplophragmoides*"
+          {
+            "code": "D1",
+            "text": "Chambers possess complex reticulate/labyrinthic secondary subdivisions"
+          },
+          {
+            "code": "D2",
+            "text": "Internal structure substantially more complex than *Haplophragmoides*"
+          }
         ],
         "S": [
-          "Relatively large, compact test",
-          "Involute to semi-involute architecture"
+          {
+            "code": "S1",
+            "text": "Relatively large, compact test"
+          },
+          {
+            "code": "S2",
+            "text": "Involute to semi-involute architecture"
+          }
         ],
         "C": [
-          "Completely simple undivided chamber interiors",
-          "Serial biserial/triserial test"
+          {
+            "code": "C1",
+            "text": "Completely simple undivided chamber interiors"
+          },
+          {
+            "code": "C2",
+            "text": "Serial biserial/triserial test"
+          }
         ]
       },
       "closest_comparisons": [
@@ -533,23 +965,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present",
-          "Trochospiral"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Trochospiral"
+          }
         ],
         "D": [
-          "Low trochospiral chamber arrangement",
-          "Spiral and umbilical sides distinguishable",
-          "Chambers commonly inflated"
+          {
+            "code": "D1",
+            "text": "Low trochospiral chamber arrangement"
+          },
+          {
+            "code": "D2",
+            "text": "Spiral and umbilical sides distinguishable"
+          },
+          {
+            "code": "D3",
+            "text": "Chambers commonly inflated"
+          }
         ],
         "S": [
-          "Umbilical region may be conspicuous",
-          "Relatively simple chamber interiors"
+          {
+            "code": "S1",
+            "text": "Umbilical region may be conspicuous"
+          },
+          {
+            "code": "S2",
+            "text": "Relatively simple chamber interiors"
+          }
         ],
         "C": [
-          "Bilaterally symmetrical planispiral test",
-          "Biserial/triserial serial arrangement"
+          {
+            "code": "C1",
+            "text": "Bilaterally symmetrical planispiral test"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial/triserial serial arrangement"
+          }
         ]
       },
       "closest_comparisons": [],
@@ -569,23 +1034,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septate"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
         ],
         "D": [
-          "Flattened, elongate to oval test",
-          "Characteristic rzehakinid/sigmoid chamber organization",
-          "Arrangement may appear transitional between enrolled and serial organization"
+          {
+            "code": "D1",
+            "text": "Flattened, elongate to oval test"
+          },
+          {
+            "code": "D2",
+            "text": "Characteristic rzehakinid/sigmoid chamber organization"
+          },
+          {
+            "code": "D3",
+            "text": "Arrangement may appear transitional between enrolled and serial organization"
+          }
         ],
         "S": [
-          "Bilateral compression",
-          "Distinctive slit-like terminal apertural organization in suitable material"
+          {
+            "code": "S1",
+            "text": "Bilateral compression"
+          },
+          {
+            "code": "S2",
+            "text": "Distinctive slit-like terminal apertural organization in suitable material"
+          }
         ],
         "C": [
-          "Typical low trochospiral architecture",
-          "Simple uniserial chain",
-          "Septa absent"
+          {
+            "code": "C1",
+            "text": "Typical low trochospiral architecture"
+          },
+          {
+            "code": "C2",
+            "text": "Simple uniserial chain"
+          },
+          {
+            "code": "C3",
+            "text": "Septa absent"
+          }
         ]
       },
       "closest_comparisons": [],
@@ -605,23 +1103,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present",
-          "Biserial adult arrangement"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Biserial adult arrangement"
+          }
         ],
         "D": [
-          "Chambers alternate regularly in two rows",
-          "Biserial arrangement persists through observed adult part"
+          {
+            "code": "D1",
+            "text": "Chambers alternate regularly in two rows"
+          },
+          {
+            "code": "D2",
+            "text": "Biserial arrangement persists through observed adult part"
+          }
         ],
         "S": [
-          "Elongate/tapering test",
-          "Interiomarginal aperture"
+          {
+            "code": "S1",
+            "text": "Elongate/tapering test"
+          },
+          {
+            "code": "S2",
+            "text": "Interiomarginal aperture"
+          }
         ],
         "C": [
-          "Triserial early part clearly changing to biserial",
-          "Biserial → uniserial adult change",
-          "Planispiral initial coil"
+          {
+            "code": "C1",
+            "text": "Triserial early part clearly changing to biserial"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial → uniserial adult change"
+          },
+          {
+            "code": "C3",
+            "text": "Planispiral initial coil"
+          }
         ]
       },
       "closest_comparisons": [
@@ -644,21 +1175,48 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septa present"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          }
         ],
         "D": [
-          "Initial part = Planispiral",
-          "Later/adult part = Biserial"
+          {
+            "code": "D1",
+            "text": "Initial part = Planispiral"
+          },
+          {
+            "code": "D2",
+            "text": "Later/adult part = Biserial"
+          }
         ],
         "S": [
-          "Flattened elongated adult test",
-          "Initial coil visible when preservation/section permits"
+          {
+            "code": "S1",
+            "text": "Flattened elongated adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Initial coil visible when preservation/section permits"
+          }
         ],
         "C": [
-          "No initial coil in a specimen where early growth is clearly preserved",
-          "Planispiral → uniserial transition"
+          {
+            "code": "C1",
+            "text": "No initial coil in a specimen where early growth is clearly preserved"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral → uniserial transition"
+          }
         ]
       },
       "closest_comparisons": [
@@ -681,22 +1239,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septate"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
         ],
         "D": [
-          "Early stage = Triserial",
-          "Later stage = Biserial",
-          "Distinct ontogenetic reduction in number of chamber rows"
+          {
+            "code": "D1",
+            "text": "Early stage = Triserial"
+          },
+          {
+            "code": "D2",
+            "text": "Later stage = Biserial"
+          },
+          {
+            "code": "D3",
+            "text": "Distinct ontogenetic reduction in number of chamber rows"
+          }
         ],
         "S": [
-          "Elongate/tapering test",
-          "Triangular early cross-section"
+          {
+            "code": "S1",
+            "text": "Elongate/tapering test"
+          },
+          {
+            "code": "S2",
+            "text": "Triangular early cross-section"
+          }
         ],
         "C": [
-          "Planispiral initial stage",
-          "Triserial → uniserial transition"
+          {
+            "code": "C1",
+            "text": "Planispiral initial stage"
+          },
+          {
+            "code": "C2",
+            "text": "Triserial → uniserial transition"
+          }
         ]
       },
       "closest_comparisons": [
@@ -719,22 +1307,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Serial chamber arrangement"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Serial chamber arrangement"
+          }
         ],
         "D": [
-          "Early triserial stage generally passing into biserial adult stage",
-          "More robust, commonly conical/tapering architecture than typical slender *Gaudryina*"
+          {
+            "code": "D1",
+            "text": "Early triserial stage generally passing into biserial adult stage"
+          },
+          {
+            "code": "D2",
+            "text": "More robust, commonly conical/tapering architecture than typical slender *Gaudryina*"
+          }
         ],
         "S": [
-          "Comparatively thick test",
-          "Distinct apertural morphology where visible"
+          {
+            "code": "S1",
+            "text": "Comparatively thick test"
+          },
+          {
+            "code": "S2",
+            "text": "Distinct apertural morphology where visible"
+          }
         ],
         "C": [
-          "Planispiral early coil",
-          "Persistently low trochospiral test",
-          "Uniserial adult stage"
+          {
+            "code": "C1",
+            "text": "Planispiral early coil"
+          },
+          {
+            "code": "C2",
+            "text": "Persistently low trochospiral test"
+          },
+          {
+            "code": "C3",
+            "text": "Uniserial adult stage"
+          }
         ]
       },
       "closest_comparisons": [
@@ -756,21 +1374,48 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Septate"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
         ],
         "D": [
-          "Early stage = Triserial",
-          "Adult stage = Uniserial"
+          {
+            "code": "D1",
+            "text": "Early stage = Triserial"
+          },
+          {
+            "code": "D2",
+            "text": "Adult stage = Uniserial"
+          }
         ],
         "S": [
-          "Elongated/clavate adult test",
-          "Uniserial adult chambers conspicuous"
+          {
+            "code": "S1",
+            "text": "Elongated/clavate adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Uniserial adult chambers conspicuous"
+          }
         ],
         "C": [
-          "Triserial → biserial transition",
-          "Biserial → uniserial transition"
+          {
+            "code": "C1",
+            "text": "Triserial → biserial transition"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial → uniserial transition"
+          }
         ]
       },
       "closest_comparisons": [],
@@ -792,22 +1437,52 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Multichambered",
-          "Serial/coiled ontogenetic development"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Serial/coiled ontogenetic development"
+          }
         ],
         "D": [
-          "Early trochospiral/triserial organization",
-          "Later distinctly serial adult growth",
-          "Elongate to conical test with characteristic aperture where preserved"
+          {
+            "code": "D1",
+            "text": "Early trochospiral/triserial organization"
+          },
+          {
+            "code": "D2",
+            "text": "Later distinctly serial adult growth"
+          },
+          {
+            "code": "D3",
+            "text": "Elongate to conical test with characteristic aperture where preserved"
+          }
         ],
         "S": [
-          "Compact early growth",
-          "Fine-grained agglutinated wall"
+          {
+            "code": "S1",
+            "text": "Compact early growth"
+          },
+          {
+            "code": "S2",
+            "text": "Fine-grained agglutinated wall"
+          }
         ],
         "C": [
-          "Entirely simple planispiral adult",
-          "Persistent simple biserial architecture without ontogenetic change"
+          {
+            "code": "C1",
+            "text": "Entirely simple planispiral adult"
+          },
+          {
+            "code": "C2",
+            "text": "Persistent simple biserial architecture without ontogenetic change"
+          }
         ]
       },
       "closest_comparisons": [
@@ -830,24 +1505,60 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Large benthic test",
-          "Conical/orbitoliniform morphology",
-          "Multichambered",
-          "Internal differentiation present"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large benthic test"
+          },
+          {
+            "code": "M3",
+            "text": "Conical/orbitoliniform morphology"
+          },
+          {
+            "code": "M4",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M5",
+            "text": "Internal differentiation present"
+          }
         ],
         "D": [
-          "Marginal chamber zone essentially undivided by an exoskeleton",
-          "**No developed beams/rafters subdividing the marginal chamber lumen**",
-          "Relatively simple conical internal architecture compared with exoskeleton-bearing relatives"
+          {
+            "code": "D1",
+            "text": "Marginal chamber zone essentially undivided by an exoskeleton"
+          },
+          {
+            "code": "D2",
+            "text": "**No developed beams/rafters subdividing the marginal chamber lumen**"
+          },
+          {
+            "code": "D3",
+            "text": "Relatively simple conical internal architecture compared with exoskeleton-bearing relatives"
+          }
         ],
         "S": [
-          "Pseudokeriothecal wall structure",
-          "Large shallow-water benthic morphology"
+          {
+            "code": "S1",
+            "text": "Pseudokeriothecal wall structure"
+          },
+          {
+            "code": "S2",
+            "text": "Large shallow-water benthic morphology"
+          }
         ],
         "C": [
-          "Well-developed vertical exoskeletal partitions throughout marginal chamber zone",
-          "Simple small serial DWAF morphology"
+          {
+            "code": "C1",
+            "text": "Well-developed vertical exoskeletal partitions throughout marginal chamber zone"
+          },
+          {
+            "code": "C2",
+            "text": "Simple small serial DWAF morphology"
+          }
         ]
       },
       "closest_comparisons": [],
@@ -869,23 +1580,56 @@
       "flag": null,
       "rules": {
         "M": [
-          "Agglutinated",
-          "Large conical benthic test",
-          "Multichambered",
-          "Complex internal subdivision"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large conical benthic test"
+          },
+          {
+            "code": "M3",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M4",
+            "text": "Complex internal subdivision"
+          }
         ],
         "D": [
-          "Strongly differentiated internal architecture",
-          "Numerous radial/secondary subdivisions",
-          "Reticulate or highly compartmentalized appearance in appropriate sections"
+          {
+            "code": "D1",
+            "text": "Strongly differentiated internal architecture"
+          },
+          {
+            "code": "D2",
+            "text": "Numerous radial/secondary subdivisions"
+          },
+          {
+            "code": "D3",
+            "text": "Reticulate or highly compartmentalized appearance in appropriate sections"
+          }
         ],
         "S": [
-          "Broad conical test",
-          "Complex marginal and central chamber differentiation"
+          {
+            "code": "S1",
+            "text": "Broad conical test"
+          },
+          {
+            "code": "S2",
+            "text": "Complex marginal and central chamber differentiation"
+          }
         ],
         "C": [
-          "Completely undivided marginal/internal chamber spaces",
-          "Small serial test"
+          {
+            "code": "C1",
+            "text": "Completely undivided marginal/internal chamber spaces"
+          },
+          {
+            "code": "C2",
+            "text": "Small serial test"
+          }
         ]
       },
       "closest_comparisons": [
@@ -907,20 +1651,44 @@
       "flag": "TAXONOMICALLY FLAGGED CARD",
       "rules": {
         "M": [
-          "Agglutinated",
-          "Large conical/orbitoliniform test",
-          "Complex internally partitioned architecture"
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large conical/orbitoliniform test"
+          },
+          {
+            "code": "M3",
+            "text": "Complex internally partitioned architecture"
+          }
         ],
         "D": [
-          "High-conical morphology",
-          "Radial/subepidermal internal partitions reported in the original generic concept"
+          {
+            "code": "D1",
+            "text": "High-conical morphology"
+          },
+          {
+            "code": "D2",
+            "text": "Radial/subepidermal internal partitions reported in the original generic concept"
+          }
         ],
         "S": [
-          "Shallow-water larger benthic architecture"
+          {
+            "code": "S1",
+            "text": "Shallow-water larger benthic architecture"
+          }
         ],
         "C": [
-          "Small DWAF-type morphology",
-          "No internal partitions"
+          {
+            "code": "C1",
+            "text": "Small DWAF-type morphology"
+          },
+          {
+            "code": "C2",
+            "text": "No internal partitions"
+          }
         ]
       },
       "closest_comparisons": [],

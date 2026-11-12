@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P001",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "edae4655c46e906656f240e84010f03cf0e8ee2afb6687f0ca06e227bafb0019",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Clear translucent/calcitic wall structure visible in the thin-section image.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "LENTICULAR",
+      "state": "PRESENT",
+      "reason": "The overall shape of the sectioned test appears circular to slightly lenticular.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Septa and chambers are clearly visible throughout the interior and peripheral zones.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Multiple chambers are clearly visible arranged in concentric or spiral series.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "CYCLIC",
+      "state": "PRESENT",
+      "reason": "Chambers and partitions show a ring-like or cyclic arrangement surrounding the center.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "UNCERTAIN",
+      "reason": "Coiling pattern is partially obscured by complex internal partitions, but appears planispiral or annular-cyclic.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Section passes symmetrically through a single median/equatorial plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "UNCERTAIN",
+      "reason": "Whorls appear tightly enveloped, but inner details are dense and complex.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No major ontogenetic arrangement shift is apparent within the section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Interior shows intricate network of partitions and structural elements.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets or subdivided spaces are visible in the peripheral and internal regions.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Central area is visible but heavily intersected by internal structures, making the exact embryonic apparatus uncertain.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "RETICULATE",
+      "state": "PRESENT",
+      "reason": "Internal partitions form a reticulate or net-like pattern across the chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Pillar-like structures or dense vertical supports are visible among the partitions.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Lateral chamberlets cannot be clearly distinguished in this sectional view orientation.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly resolved in this internal section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct marginal cord is observed along the periphery.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface features like septal filaments are not visible in internal thin section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Test appears isolated and unattached in the matrix.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Proloculus size variation / dimorphism cannot be confirmed without multiple specimens or clear megalospheric/microspheric comparison.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "The view is centered symmetrically showing internal chamber arrangements and partitions across a median plane.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

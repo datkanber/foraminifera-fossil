@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P003",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "b8605d43c70325b3b13ecf7f2165fe9d5542163490487f584cc5b8dc7a78c236",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "The test shows clear calcareous hyaline wall structure under transmitted light.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "DISCOIDAL",
+      "state": "PRESENT",
+      "reason": "The overall test profile in this section is flattened and discoidal.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Numerous curved septa dividing chambers are clearly visible throughout.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "The test consists of numerous chambers arranged in multiple whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "CYCLIC",
+      "state": "PRESENT",
+      "reason": "Chambers form continuous concentric or closely appressed cyclical arrangements in later stages.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "The early portion displays a planispiral coiling pattern around the center.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling occurs within a single median plane as shown by the symmetrical spiral growth.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later whorls deeply embrace and envelop earlier whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No major ontogenetic change in chamber arrangement is observed from early to late stages.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "SUBDIVIDED",
+      "state": "PRESENT",
+      "reason": "Chambers are partitioned internally by secondary partitions or septula.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets are visible as subdivisions within the main chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "The central proloculus is a simple rounded initial chamber.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Radial partitions/septula are clearly visible subdividing the chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Distinct columnar pillars are absent in this equatorial section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamberlets outside the main equatorial layer are not observed in this view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly resolved in this specific section plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "A specialized marginal cord structure is not differentiated at the periphery.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface septal filaments cannot be observed on this internal thin section.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The complete isolated specimen outline indicates a free-living habit.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "UNCERTAIN",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber size allows possible megalospheric form, but insufficient comparative data prevents definitive dimorphism scoring.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "The section passes through the central proloculus and shows the median plane of coiling.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "purpose": "Preparation/provenance checks only; not a performance evaluation",
+  "drafts": [
+    {
+      "case_id": "P001",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "edae4655c46e906656f240e84010f03cf0e8ee2afb6687f0ca06e227bafb0019",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P002",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "d58e474d7aad11a062d1358c2783f44211e87b8355da8cd373ae491e391d0a47",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P003",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "b8605d43c70325b3b13ecf7f2165fe9d5542163490487f584cc5b8dc7a78c236",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P004",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "32b70b61a91bfdad6c3a8a0751259177d8151aa4ef8d31da18f988b15850bdb5",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P005",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "865d77ea056afc932c4dcc71f8fb0e7fb2fb3bacb8593eb2579ef9263f2365c7",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P006",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "faf48010715918485f53a1ed016eca0b2578fe135e5aa61b3e330ed0bb1b3221",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P007",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "b6fffe4dead374db24ab2366d7de45c7bfd5497234d3eef7253517d8a2ddade8",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P008",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "9dc7315201735f37cb945c06e27cad8406b08fa9de3bb74f1f20de2604c66d85",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P009",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "e05c6fc79539ff1fc474371c73419776c480d4c5c27d7bcea82be6f7561d09e0",
+      "model_returned": "gemini-3.5-flash-lite"
+    },
+    {
+      "case_id": "P010",
+      "status": "LLM_DRAFT",
+      "n_characters": 21,
+      "draft_sha256": "44384ffafc328d9ef8e52f2893a05f8f827f0ba2a0c9e0c7c6ef99f2ff6016de",
+      "model_returned": "gemini-3.5-flash-lite"
+    }
+  ],
+  "same_raw_draft_for_both_observers": true,
+  "reviewer_package_privacy_passed": true,
+  "frozen_V29_four_hashes_match": true,
+  "exported_draft_character_records": 210,
+  "actual_human_forms": 0,
+  "actual_verified_references": 0,
+  "main_fossils_assigned": 0,
+  "performance_tables": 0
+}

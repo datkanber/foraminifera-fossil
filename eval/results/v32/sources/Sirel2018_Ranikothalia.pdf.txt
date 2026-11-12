@@ -1,0 +1,724 @@
+
+=== PDF PAGE 1 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+19
+Journal of the Palaeontological Society of India
+Volume 63(1), June 30, 2018: 19-36
+ISSN 0552-9360
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI AND RE-
+DESCRIPTION OF ITS SIX SPECIES FROM THANETIAN-ILERDIAN OF TURKEY
+ERCÜMENT SİREL  AND ALİ DEVECİLER*
+1 DEPARTMENT OF GEOLOGICAL ENGINEERING, ANKARA UNIVERSITY, 06830, ANKARA, TURKEY.
+*Corresponding author e-mail: adeveci@eng.ankara.edu.tr
+ABSTRACT
+The diagnostic structural elements, such as the external ornamentations of the test particularly around the central knob, meshes of marginal canal network 
+in the thickened marginal cord, trabecular system with its canals, basal cover V in shape (like cover plate) and septal flap are important generic characteristics 
+of Ranikothalia Caudri. The known species of Ranikothalia in Turkey, viz Ranikothalia nuttalli (Davies, 1927), Ranikothalia couisensis (d’Archiac, 1866), 
+Ranikothalia daviesi n.sp., Ranikothalia bunyanensis Sirel, 2015, Ranikothalia polatliensis Sirel, 2013 and Ranikothalia solimani Butterlin and Monod, 1969 
+are re-described and figured by means of the foregoing characteristic structural elements. 
+Keywords: Ranikothalia, larger benthic foraminiferal structural elements, Thanetian-Ilerdian, Turkey.
+INTRODUCTION
+Caudri (1944) described the new genus Ranikothalia based 
+on the figures of type species Nummulites nuttalli Davies in 
+Davies (1927, p. 266, pl. XVIII, figs. 3,4; pl. XIX, figs. 7-9) 
+and in Davies and Pinfold (1937, p. 18, pl. III, figs. 1, 2, 9; pl. 
+VI, figs. 19, 20). The purpose of this paper is to illustrate the 
+diagnostic structural elements of Ranikothalia, including its 
+ornamentation around the shapeless central knob (Fig. 4A, Fig. 
+6 A-D, Fig. 7 A,B), marginal canal network in the thickened 
+marginal cord (Fig. 3a A-F, Fig. 4 C-E, Fig. 6 E-G, Fig. 7C, D, 
+Fig. 8 A-E), trabecular system and its canals (Fig. 4A, Fig. 6 A-C, 
+Fig. 7B) and basal cover plate V in shape (Fig. 3b A-F). In this 
+connection, the type species of Ranikothalia nuttalli (Davies), 
+Ranikothalia couisensis (d’Archiac), Ranikothalia daviesi n. 
+sp., Ranikothalia polatliensis Sirel, Ranikothalia bunyanensis 
+Sirel and Ranikothalia solimani Butterlin and Monod have been 
+re-described and figured by the light of foregoing diagnostic 
+structural elements.
+All the thin sections and free specimens described and 
+figured in this paper are deposited in the collection of Ankara 
+University, Department of Gelological Engineering, under the 
+labels shown in Pl. I-VII and Figs. 3a,b; 4, 6-8.
+MATERIAL AND METHODS
+This study is based on the free specimens and orientated 
+equatorial, axial, tangential, and oblique sections of Ranikothalia 
+form the stratigraphic sections (Figs 5-9) and from the spot 
+sample (Fig. 1). 
+Well preserved specimens of R. nuttalli (Davies), R. 
+couisensis (d’ Archiach) and R. daviesi n. sp. are obtained from 
+the soft materials of Thanetian-Cuisian Sakarya succession 
+(Figs., 1, 5). The geological map, lithostratigraphic units and 
+larger foraminiferal species of the Sakarya succession have 
+previously been reported by Sirel (1975, 1976a, b).
+Here re-described Ranikothalia bunyanensis Sirel is 
+reported from the Thanetian-middle Ilerdian sequece referred 
+to as Bünyan section (Fig. 9) is situated at SW Bünyan town, 
+NE Kayseri, eastern part of central Turkey. This interesting 
+succession was chosen as a reference section for Paleocene/ 
+Eocene boundary of the very shallow water marine environment. 
+Ranikothalia bunyanensis Sirel and other species such as 
+Lacazina blumenthali Reichel and Sigal, Glomalveolina cf. levis 
+Hottinger, Elazigina subsphaerica (Sirel), Assilina cf. yvettae 
+Schaub, Thomasella sp., Lockhartia sp., Valvulineria sp., 
+Valvulina triangularis d’Orbigny characterize the Paleocene/
+Eocene boundary. The lithologic units and the very shallow 
+water foraminiferal species of the Bünyan section have been 
+introduced by Sirel (2015, p. 25, Fig. 12). 
+The sandy limestone with R. polatliensis Sirel and exotic 
+limestone block with R. solimani Butterlin and Monod were 
+taken at a spot from the early Ilerdian? of Kuşcu village, SE 
+Polatı town, SW Ankara, central Turkey and from Thanetian 
+exotic limestone block within the ophiolitic melange at 2 km 
+north of Saray town, NE Van, eastern Turkey respectively (Fig. 
+1). 
+SYSTEMATIC  PALEONTOLOGY
+The suprageneric classification follows Loeblich and 
+Tappan (1987). The description of morphological features 
+applied the terms employed Muller-Merz (1980), Loeblich and 
+Tappan (1987) and Hottinger (2006)
+	
+Order	 Foraminiferida Eichwald, 1830
+	
+Suborder	 Rotalina Delage and Herouard, 1896
+	
+Superfamily	 Nummulitacea de Blainville, 1827
+	
+Family	 Nummulitidae de Blainville, 1827
+	
+Genus	 Ranikothalia Caudri, 1944
+	
+Type species	 Nummulites nuttalli (Davies, 1927), 
+	
+	 Eocene, Ranikot beds of Thal, India
+Diagnosis: 
+Thin-inflated 
+lenticular 
+large 
+test 
+has 
+characteristic external ornamentation, namely, pustules (Fig. 
+6, B), thickened septal flament with trabecular canals as a slit 
+(Fig. 7, B) around the amorphous central knob (Fig. 4, A and 
+Fig. 6, A-C). The slightly curved septal flaments become thinner 
+towards the periphery (Fig. 4, A, B; Fig., 6 D; Fig 7, A). The 
+canal system in the thickened marginal cord is the important 
+diagnostic characteristics of Ranikothalia Caudri (Fig.4, B-D; 
+
+
+=== PDF PAGE 2 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+20
+Fig. 6, D-G; Fig.7, D). The horizontal and vertical canals in 
+the marginal cord form the meshes of marginal canal network 
+(Fig. 2; Fig. 3a A-F; Fig. 8 A). The tangential section (Fig.8, A) 
+clearly show that the horizontal and vertical canals of marginal 
+canal network are connected with the intraseptal canals. We 
+belive that the marginal, trabecular and intraseptal canals form a 
+special canal system for Ranikothalia Caudri. The intercameral 
+foramina present, located at the base of the septum (Fig. 2 and 
+Fig. 10, 2). All the species in this study have basal cover plate V 
+in shape (Fig. 3b) probably instead of the typical cover plate in 
+rotaliids forms (Muller-Merz, 1980, pl. 11-14). The septal flap is 
+indistinct (Fig. 14, 1; Fig. 15, 1) and dimorphism is distinct (Fig. 
+10-16). Its staratigraphic range is Thanetian-Ilerdian.
+Differential Diagnosis: The genus Ranikothalia Caudri was 
+derived from Nummulites nuttalli Davies by Caudri (1944) latter 
+author did not illustrate it, while he created the new genus. He 
+made use of the figures of Davies (1927) and Davies and Pinfold 
+(1937) in the establishment of the new genus. The reticulation 
+system in the thickened marginal cord and transvers trabeculae 
+along the septal flaments as described by Davies and Pinfold 
+(1937) are considered distinguishing characteristics by Caudri 
+(1944). 
+Chordoperculinoides Arni (type species Operculina 
+bermudezi Palmer) is identical with Ranikothalia Caudri in 
+possessing external ornamentations of the test, especially 
+around the central knob the meshes of marginal canal network 
+in the marginal cord (Arni, 1966, Fig. 1; pl. I, fig. 4 and pl. II, fig. 
+7). Ranikothalia Caudri is distinguished easily from Nummulites 
+Lamarck, Operulina d’ Orbigny, even Assilina d’ Orbigny by 
+the diagnostic structural elements in (Figs. 2, 3a,b; Fig. 4, 6-8).
+Ranikothalia nuttalli (Davies, 1927) 
+(Fig. 11: 1-10; Fig. 11: 1-7; Figs. 3 b, 4)
+Nummulites nuttalli Davies, 1927, p. 266-269, pl. XVIII, figs. 3,4; pl. 
+XIX, figs. 7-9. - Davies and Pinfold, 1937, p. 18, pl. III, figs. 1, 2, 9; pl. VI. 
+figs. 19, 20. - Daci-Dizer, 1953, p. 242, pl. V, figs. 7-8.
+Fig. 1. Location map, showing the localities of the species of Ranikothalia Caudri: 1: R.nuttalli (Davies), R. couisensis (d’ Archiac) and R. daviesi n.sp. in 
+the Sakarya section (Fig. 5), 2: R. polatliensis (Sirel) from the Kuşcu village, 3: R. bunyanensis SIREL in the Bünyan section (Fig. 9), 4: R. solimani Butterlin 
+and Monod from the Van area.
+Fig. 2. Structural diagram of Ranikothalia Caudri,  compiled from A and B 
+form of here described species  (Fig. 3a,b, 4, 6-8 and Pl. 1-7). Abbreviation: 
+ch: Chamber, icf: Intercameral foramina, isc: Intraseptal canal, mc: Marginal 
+cord, mmc: Meshes of marginal canal network, hc: Horizontal canals, vc: 
+Vertical canals, se: Septum, ck: Central knob, sf; Septal flaments, sfl: Septal 
+flap, tr: Trabeculae, trc: Trabecular canals, pu: Pustule, bcp: Basal cover 
+plate V in shape, (not scale).
+
+
+=== PDF PAGE 3 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+21
+Ranikothalia nuttalli (Davies) Caudri, 1944 p. 351-404. -  Sirel, 1976a, 
+pl. X, figs. 10-13; pl. XI, figs. 1-7, 10. – Hottinger, 1977 non, pl. 17, fig. 1; 
+pl. 18, 1-17.
+Re-description: The microspheric generation has a large 
+thin lenticular test with slightly swollen central part and rounded 
+periphery (Fig. 10: 1, 5; Fig. 11: 1, 3). The external surface of 
+the test is ornamented by the comparatively small central knob, 
+thickened marginal cord, curved septal flaments with trabeculae 
+(Fig. 10: 1; Fig. 11: 1; Fig. 4: A, B, D). The diameter of the test 
+ranges from 10-14.4 mm and thickness from 1.1-1.7 mm. The 
+thickness of marginal cord reaches to 0.130 mm at the first and 
+0.400 mm at the last whorls. The chambers are subrectangular 
+growing gradualy towards the periphery and regularly in height, 
+about twice the width in the all whorls of test (Fig. 10: 2, 6, 
+8; Fig: 11, 2, 7). There are 7 whorls in an equatorial section 
+measuring 14.4 mm in diameter (Fig. 11: 2). Number of septa in 
+the whorl: 1st, 10-14; 2nd, 18-19; 3rd, 28-30; 4th, 38-41.
+The megalospheric generation has a small, thin lenticular test 
+with rounded periphery (Fig. 10: 7, 9). The test ornamentation of 
+this generation is similar to that of the microspheric form (Fig. 
+10: 10). The diameter of the test ranges from 2.7 mm to 4.3 mm 
+and the thickness from 0.6 mm to 0.9 mm. Number of septa in 
+the whorls: 1st, 13-15; 2nd, 20-24; 3rd, 26-34.
+The diagnostic structural elements of the type species 
+Ranikothalia nuttalli (Davies) are given in (Figs. 2, 3a,b, 4; Pl. 
+I, II). 
+Fig. 3a. The meshes of marginal canals network in the species of Ranikothalia 
+Caudri, compiled by the tangential sections of the B form. A: R. couisensis 
+(d’ Archiac), (S. 11). B: R. nuttalli (Davies), from Fig. 4 C, C: R. daviesi 
+n.sp., (R. 13). D: R. polatliensis Sirel, enlarged from Fig. 6D, E: R. solimani 
+Butterlin and Monod, enlarged from Pl. VII, fig.6, F: R. bunyanensis Sirel, 
+enlarged from Pl. VI, fig. 7, Abbreviation: mmc: Meshes of marginal canal 
+network, hc: Horizotal canals, vc: Vertical canals.
+Fig. 4. Structural elements of Ranikothalia nuttalli (Davies), all figs. 
+compiled from Sirel (1976 a, lev. X and XI). A: Polar region on the 
+lateral view, B form, enlarged from (Pl. I, fig 1). B: Marginal cord at the 
+last whorl of lateral view of B form, enlarged from (P. 48). C: Tangential 
+section of B form, (C. 11), D: Trabecular system between last two whorls, 
+B form, enlarged from (Pl. I fig. 6). E: Subaxial section of B form, (R. 13). 
+Abbreviation: ck: Central knob (or umbo, boss):, sf: Septal filaments, 
+tr: Trabeculae, trc: Trabecular canals, mc: Marginal cord, mmc: Meshes 
+of marginal canal network, hc: Horizontal canals, vc: Vertical canals, ch: 
+Chamber.
+Fig. 3b. Showing cover plate V in shape in the equatorial sections of the 
+species of Ranikothalia Caudri. A: R. nuttalli (Davies), A form, enlarged 
+from Pl. I, fig. 6, ( S. 8a). B: R.nuttalli (Davies) B form, enlarged from Pl. II, 
+fig. 2, C: R. couisensi (d’ Archıac), B form, enlarged from Pl. IV, fig. 7, D: 
+R. daviesi n. sp. , B form, enlarged from Pl. IV, fig. 7, E: R. polatliensis Sirel, 
+A form, enlarged from Pl. V, fig. 4, F: R. bunyanensis Sirel, A form, enlarged 
+from Pl. VI, fig. 2, Abbreviation : bcp: Basal cover plates  V in shape.
+
+
+=== PDF PAGE 4 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+22
+Remarks: The type species was first described as Nummuites 
+nuttalli Davies, 1927 from the Ranikot beds of Thal, India by 
+Davies (1927, p. 266, pl. XVIII, figs. 3,4; pl. XIX, figs. 7-9). 
+This species has been described and figured again as N. nuttalli 
+Davies from the Punjab Salt range, although it has meshes of 
+marginal canal network in the thickened marginal cord (Davies 
+and Pinfold, 1937, p. 19, pl. VI, figs. 19-20). Caudri (1944) 
+was transferred it to the new genus Ranikothalia Caudri by the 
+reticulation of the marginal cord and the trabecular system.
+R. nuttalli (Davies) has previously been described and 
+figured from the Ilerdian of Sakarya section (Fig.5), south of 
+Polatlı, central Turkey by Sirel (1976, p. 100, lev. X, şek. 10-13; 
+lev. XI, şek. 1-7,10). This species is here re-described detail by 
+means of the new diagnostic structural elements provided from 
+the new additional material. 
+R.nuttalli (Davies) differs from the co-occurring species 
+R. couisensis (d’ Archiac) in its larger, thin lenticular test with 
+loosely coiled whorls. There are 6-7 whorls in an equatorial 
+section measured 14.1 mm in diameter (Fig. 10: 2), whereas, 
+latter species has 7 whorls in an equatorial section measured 
+8.1 mm in diameter (Fig. 12: 2). Furthermore, R. couisensis 
+(d’Archiac) has different characteristic external ornamentations 
+(Fig. 12: 1) when compared with R.nuttalli (Davies) (Fig. 10: 
+1 and Fig. 11: 1). The second co-occrring species R. daviesi 
+n.sp. differs from the type species in having smaller test, loosely 
+coiled whorls, (Fig. 13: 1, 2, 4-8). 
+Stratigraphic and Geographic Distribution: The last 
+occurrence of Nummulites exilis Douvillé, Alveolina vredenburgi 
+Davies of early Ilerdian age and the first occurrence of 
+Nummulites planulatus (Lamarck), Nummulites leupoldi Schaub 
+and Assilina placentula (Deshayes) of early Cuisian age in the 
+Sakarya section (Fig. 5) defined the biostratigraphic range of R. 
+nuttalli (Davies), R. couisensis (d’ Archiac) and R. daviesi n. sp., 
+that the interval indicates to SBZ 7-9 (middle-late Ilerdian) of 
+Serra-Kiel et al. (1998).
+R. nuttalli (Davies) occurs in the argillaceous limestone of 
+the Sakarya section (Fig. 5), with R. couisensis (d’ Archiac), 
+R. daviesi n. sp., Alveolina polatliensis Sirel, Alveolina 
+sakaryaensis Sirel, Alveolina decipiens Schwager and Alveolina 
+rotundata Hottinger of middle-late Ilerdian age.
+Ranikothalia couisensis (d’Archiac, 1866) 
+(Fig. 12: 1-16; Fig. 6, A-G)
+Nummulites couisensis d’Archiac: in Tchihatcheff, 1866, p. 222. - 
+Schaub, 1960 p. 443-451, pl.1,figs. 1a-b,2-11;pl. 2, figs. 1a-b,2a-b, 3a-b, 4a-
+b, 5a-b,6-8. -  Blondeau, 1972 p, 123, pl. II, figs. 17,19, 20.
+Ranikothalia couisensis (d’Archiac) Sirel, 1976a, p. 100, pl. XI,, figs. 
+8, 9, 11, 12; pl. XII, figs. 1-12; pl. XIII, figs. 1-2.   
+Re-description: The microspheric form has a large, inflated 
+lenticular test with rounded perihery (Fig. 12: 3-5, 16). The 
+external surface of the test is ornamented by the pustules, 
+thickened septal flaments with trabeculae, trabecular canals are 
+occured around the huge, shapeless central knob (Fig. 12: 1, 6, 
+8 14, 15; Fig. 6, A-C). The marginal cord is well seen in the last 
+whorl (Fig. 12: 1, 8, 14). The septal flaments except the central 
+area, become slightly curved towards the perihery (Fig. 12: 1, 
+14, 15). The diameter of the test ranges from 7 mm to 12 mm 
+and the thickness from 2 mm to 2.4 mm. There are 7 whorls in 
+an equatorial section measuring 8.1 mm in diameter (Fig. 12: 2). 
+The chambers are subrectangular growing gradualy towards the 
+periphery and regularly in height, about twice the width in the all 
+whorls of test. R. couisensis consist of all diagnostic structural 
+elements of Ranikothalia. Number of septa in the whorls: 2nd, 
+16; 3rd, 20; 4th, 28; 5th, 36; 6th, 44.
+Macrospheric form has a inflated test with rounded perihery 
+(Fig. 12: 16). The external ornamentation of this generation is 
+similar to that of microspheric form (Fig. 12: 1, 6, 8, 12, 14, 15). 
+The diameter of megalospheric form ranges from 3 mm to 4 mm 
+and thicknes from 1 mm to 1.4 mm. The subspheric protochonch 
+and second chamber (protochonch 0,130 mm- 0,285 mm in 
+diameter; second chamber 0,230 mm- 0,345 mm in diameter) 
+are followed by subrectangular chambers line up in 3-4 whorls 
+(Fig. 12: 11, 13). All the structural elements of the species are 
+given in (Fig. 6 and Fig. 12). Number of septa in the whorls: 1st, 
+14; 2nd, 19; 3rd, 22.
+Remarks: Unfortunately, Nummulites couisensis d’ Archiac 
+was first described and figured inadequately from the early 
+Tertiary of Asie Mineure by d’ Archiac (1866). This species has 
+Fig. 5. Stratigraphic distribution of Ranikothalia nuttalli (Davies), 
+Ranikothalia couisensis (d’ Archıac), and Ranikothalia daviesi n.sp. in the 
+Sakarya section, little modified from Sirel (2015, Fig. 13) (not scale).
+
+
+=== PDF PAGE 5 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+23
+Fig. 6. Structural elements of Ranikothalia couisensis (d’ Archıac). All figs. compiled from Sirel (1976; lev. X and XI). A: Central part of lateral view of 
+B form (C. 12). B: Central part of lateral view, B form, enlarged from Pl. III, fig. 2. C: Central part of lateral view, B form, enlarged from Pl. III, fig. 3. D: 
+Marginal cord in the last whorl, enlarged from Pl. III, fig. 2. E: The meshes of marginal canal network in the tangential srction, B form, enlarged from Pl. 
+III, fig. 6, F: Last three whorls of the incomplete axial section, B form, from Pl. III, fig. 7. G: Marginal canals in the marginal cord of the last whorl, B form, 
+(C.12). Abbreviation: ck: Amarphous, large central knob, sf: Septal filaments, trc: Trabecular canals, mc: Marginal cord, mmc: Meshes of marginal canal 
+network, pu: Pustules, hc: Horizontal canals, vc: Vertical canals.
+been described and figured as N. couisensis (d’ Archiac) from 
+Ilerdian of Coiza (aude), Montazels, Antugnac, Tremp basin by 
+Schaub (1960); Schaub made use of the collection of d’Archiac, 
+while he re-described N. couisensis d’ Archiac Later, this 
+species was transferred to Ranikothalia Caudri by the meshes of 
+marginal cord network in the marginal cord of the axial sections 
+and external ornamentation on the lateral views by Sirel (1976a, 
+pl. XII, figs. 1, 3, 5, 8, 11, 12; pl. XIII, figs. 1,2). This species 
+is here re-described detail by means of the new diagnostic 
+structural elements provided from the new additional material 
+of Sakarya section (Fig. 5). 
+Stratigraphic and Geographic Distribution: It is given in 
+the chapter of co-occurring species R. nuttalli (Davies).
+Ranikothalia daviesi Sirel and Deveciler sp. nov. 
+(Fig. 13: 1-13; Figs. 3, C; Fig. 7)
+Operculina aff. canalifera (d’ Archiac and Haime) Davies and Pinfold, 
+1937, p. 36, pl. V, fig. 20.
+Nummulites murchisoni (Rutimeyer) Sirel, 1976a, p. 99, lev. X, şek. 
+5,7-9. 
+Origin of name: This species is dedicated to L.M. Davies
+Holotype: Lateral view, B form, illustrated in Pl. IV, fig. 1 (label P. 41).
+Paratype: Illustrated in Fig. 13: 2-13; labels are given in Fig. 13.
+Remarks: Because of the existence of external ornamentation 
+particularly around the amorphous central knob, trabecular 
+canals (Fig. 7, B) and meshes of marginal canal network 
+(Fig. 2; Fig. 3a, C), basal cover plate V in shape (Fig. 3b, D), 
+Nummulites murchisoni (Rutimeyer) has been placed in the 
+genus Ranikothalia Davies as a new species. R. daviesi n. sp. is 
+identical with the isolated specimens Operculina aff. canalifera 
+(d’ Archiach) in Davies and Pinfold (1937, p. 36, pl. V, fig. 20) 
+by the operculinoid test and the external ornamentation. The 
+
+
+=== PDF PAGE 6 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+24
+new species differs from the type species R. nuttalli (d’ Archiac) 
+in possessing smaller operculinid test with loosely coiled last 
+two whorls. It is distinguished from R. couisensis (d’ Archiac) in 
+its thin lenticular test, weakly developed external ornamentation 
+around the shapeless small central knob and loosely coiled 
+whorls (Fig. 12 and Fig. 13).
+Material: 32 specimens, free, random and oriented sections 
+from Sakarya section   (Fig. 5).
+Depository: Holotype and paratypes are deposited in the 
+collection of Ankara University, Department of Gelological 
+Engineering, under the labels shown in Fig. 13. 
+Type locality: Sakarya section (Fig. 5) S of Sakarya village, 
+S of Polatlı town, SW Ankara, central Turkey. (map reference 
+J28-a1, coordinate: 19 925-72 800; 19 825-72 374).
+Type level: Early Eocene (middle-late Ilerdian (SBZ 8-9).
+Description: The microspheric generation has a operculinid 
+thin lenticular test with rounded periphery (Fig. 13: 1, 3, 5, 13). 
+Fig. 7. Structural elements of Ranikothalia daviesi Sirel and Deveciler sp. nov. All figs. compiled from (Sirel, 1976, lev. X, şek. 5-9) and topotypes. A: Lateral 
+view, B form, (P. 43), B: Central part of the lateral view, enlarged from the central part of Pl. VII, fig. 1, C: Three whorls of the axial section, enlarged from 
+Pl. VII, fig. 3, D: Lateral view, enlarged from the margial cord of last whorl (P. 43c). Abbreviation: mc: Marginal cord, mmc: Meshes of marginal canal 
+network, hc: Horizontal canals, trc: Trabecular canals, pu: Pustule, ck: Amarphous central knob, sf: Septal flaments.
+The external surface of the test is ornamented by relatively small 
+central knob, developed marginal cord particularly at the last 
+whorl and slightly curved septal filaments (Fig. 13: 1, 5, 10). 
+The septal filaments pass over the marginal cord Fig. 13: 1, 
+5). The trabecular canals are well seen around the amorphous 
+central oknob (Fig. 7, B). The diameter of the test ranges from 
+7.1 mm to 10 mm and the thickness from 1 mm to 1.6 mm. 
+The chambers are subrectangular growing gradualy towards the 
+periphery, the height of the chambers is two fold the width in the 
+all whorls of test (Fig. 13: 1, 4, 6, 7-9, 11, 12). All the structural 
+elements of the species are shown in (Fig. 2; Fig. 3a-b; Fig. 7). 
+Number of septa in the whorls: 1st, 12-15; 2nd, 15-18; 3rd, 21-22; 
+4th, 22-25; 5th, 33-49
+The megalospheric generation has a operculinid thin 
+lenticular test with rounded periphery (Fig. 13: 11-13). The 
+external test ornamentation is similar to that of the microspheric 
+form. The diameter of the test ranges from 3.1 mm to 3.8 mm. 
+
+
+=== PDF PAGE 7 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+25
+Fig. 8. Structural elements of Ranikothalia. polatliensis Sirel, all figs. compiled from (Sirel, 1998, pl. 64-65 and Sirel (2013, pl. V-VI). A: Tangential section 
+of last two incomplete whorls, B form, showing connection between marginal canals and intraseptal canals, (30/5/59), B: Equatorial section, A form, (30/5/8), 
+C. Axial section, A form, showing marginal canals in the marginal cord of upper ultimate whorl, (30/5/4), D: Tangential section, showing meshes of marginal 
+canal network, (30/5/7), E: Subaxial section, B form, showing marginal canals in the marginal cords, (30/12/3). Abbreviation: mc: Marginal cord, mmc: 
+Meshes of marginal canal network. hc: Horizontal canals, vc: Vertical canals, s: Septa, ch: Chamber, pr: Protochonch, isc: Intraseptal canal, sfl: Indistinct 
+septal flap.
+The thickness of the test is about 0.8 mm. The new species 
+contains all the diagnostic structural elements of Ranikothalia 
+Caudri (Fig. 2; Fig. 3a-b; Fig. 7 and Fig. 13: 1-13). Number of 
+septa in the whorls: 1st, 11; 2nd, 18-22.
+Stratigraphic and Geographic Distribution: R. daviesi 
+n.sp. is associated with R. couisensis (d’ Archiac), R. nuttalli 
+(Davies), A. polatliensis Sirel, A. sakaryaensis Sirel, A. decipiens 
+Schwager and A. rotundata Hottinger of middle-late Ilerdian age 
+in the Sakarya section (Fig. 5). 
+Ranikothalia polatliensis Sirel, 2013 
+(Fig. 14: 1-12; Figs. 3a, D; Figs. 3b, E; Fig. 8)
+Ranikothalia sindensis (Davies) Sirel, 1998, p. 105, pl. 64, figs. 1-13; 
+pl. 65, figs. 1-7; pl. 66, fig. 13.
+Ranikothalia polatliensis Sireli, 2013, p. 34-35, pl. V, figs. 6-9; pl. VI, 
+figs. 1-13.
+Re-description: The microspheric generation has a slightly 
+inflated lenticular test with rounded periphery (Fig. 14: 11, 12). 
+The diameter of the test ranges from 3.7 mm to more than 6.5 mm 
+and the thickness from 0.7 mm to 1.1 mm. The subrectangular 
+large chambers are lined up in 4-5 whorls (Fig. 14: 1, 11, 12). 
+The height of the chambers are always greater than width (Fig. 
+14: 1). The interval of the whorl increases toward the last whorl 
+(Fig. 14: 1). The marginal cord is strongly thickened, in which, 
+
+
+=== PDF PAGE 8 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+26
+Fig. 9. Stratigraphic distribution of Ranikothalia bunyanensis Sirel in Bünyan section; compiled from Sirel (2015, Fig. 12), not scale.
+numerous horizontal and vertical canals form the meshes of 
+marginal canal network (Fig. 14: 1, Fig. 3a, D; Fig. 8, A, D, 
+E;); the intraseptal canals are connected with the marginal canals 
+(Fig. 8, A). 
+The megalospheric test is middle sized, inflated lenticular 
+with rounded periphery (Fig. 14: 5, 6, 9, 10 ). The diameter of 
+the test ranges from 2 mm to 3.1 mm and the thickness from 1 
+mm to 1,2 mm. The ovoid megalosphere (0.350-0,450 mm in 
+diameter) is followed by semilunar second chamber (Fig. 14: 7, 
+8 ) and subrectangular chambers. The height of the chambers are 
+greater than width (Fig. 14: 2-4, 7). The interval of the whorls 
+increase gradually from the first to the last whorl. Number of 
+septa in the whorls: 1st, 10-11; 2nd, 19-20; 3rd, 29.
+Remark: The microspheric form of R. polatliensis Sirel 
+differs from Ranikothalia. sindensis (Davies) in its smaller, 
+thinner test, thightly coiled whorls with large chambers and 
+well developed marginal cord with marginal sutural canals (Fig. 
+14: 1). The microspheric form differs from the type species R. 
+nuttalli (Davies) and N. couisensis (d’ Archiac)  in possessing 
+smaller test, thicker marginal cord with developed meshes of 
+marginal canals network (Fig. 8, A, E).
+Stratigraphic and Geographic Distribution: The locality of 
+Ranikothalia polatliensis Sirel is located in the Kuşçu village, 
+SE of Polatlı, SW Ankara, central Turkey, in which the spot 
+sample sandy limestone contains aboundingly Ranikothalia 
+polatliensis Sirel but it is completely devoid of foraminiferal 
+species, so that its age can not be safely fixed. However the 
+sandy limestone with R. polatliensis Sirel comformably ovelies 
+the fluviatile sediments o f the Paleocene Kartal formation 
+near the type locality. Considering the stratigraphic position of 
+this sandy limestone, an Early Eocene age (Ilerdian) has been 
+thought for R. polatliensis Sirel. 
+Ranikothalia bunyanensis Sirel, 2015 
+(Fig. 15: 1-8; Fig. 3a, F: Fig. 3b, F)
+Ranikothalia bunyanensis Sirel, 2015 p. 29, pl. 23, figs. 13-20; pl.31, 
+figs.11,12.
+Re-description: The microspheric generation has a slightly 
+biumbilicate, lenticular test with rounded periphery (Fig. 15: 4, 
+6). The diameter of the test ranges from 3.5 mm to 4.4 mm. and 
+the thickness from 0.7 mm to 0.9 mm. The chambers arranged 
+involute in the early stage but they become evolute in the last 
+two whorl (Fig. 15: 4 ). The marginal cord is thickened and 
+developed, in which, the meshes of marginal canals network 
+recognized best, in the tangential sections (Fig. 15: 6, 7). 
+The diameter of the biumbilicate megalospheric test ranges 
+from 3.2 mm to 3.55 mm and thickness from 0.9 mm to 1 mm. 
+The spheric megalosphere (0. 240 - 0.260 mm in diameter) is 
+followed by second chamber (0.300-0.350 mm in diameter) and 
+subrectangular numerous chambers Fig. 15: 1, 2). The interval 
+of the whorls increase gradually towards the last whorl. The 
+
+
+=== PDF PAGE 9 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+27
+Fig. 10. Ranikothalia nuttalli (Davies, 1927): Middle-Late Ilerdian, all figs. from the Sakarya section (Fig. 5), compiled by Sirel (1976, pl. X, XI), and figs. 
+2,4 from Deveciler 2014; figs. 1-5 B form, figs. 6-10 A form. 1- Lateral view, showing thick marginal cord and slightly curved septal flaments, (P. 51), 2- 
+Incomplete equatorial section, showing basal cover plates V in shape, (Sk. 11/4/14), fig. 3- Axial section, (P. 47),  4- Incomplete axial section, (Sk. 11/1/6), 
+5- Almost axial section, (P. 57), 6- Equatorial section, showing basal cover plates V in shape , (S.8a), 7- Axial section, (D-4),  8- Equatorial section, (S.12a), 
+9- Axial section, (A-1), 10- Lateral view, showing trabecular canals as fissure on the slightly curved septal flaments, (S.19).
+
+
+=== PDF PAGE 10 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+28
+Fig. 11. Rankothalia nuttalli (Davies, 1927): Middle-Late Ilerdian, all the figs. from the Sakarya section (Fig. 5); figs. 1, 3, 4 from Sirel (1976, pl. X. XI), figs. 
+5-7 from the additional material and fig. 2 from Deveciler 2014; figs. 1-5 B form; 6-8 A form. 1- Lateral view, showing slightly curved septal flaments with 
+trabeculae and trabecular canals around the shapeless small central knob and thickened marginal cord, (P. 50), 2- Equatorial section, showing cover plates V 
+in shape, (Sk 11/4/30), 3- Axial section, (P. 54), 4- Axial section, (P. 53), 5- Tangencial sections of two specimens, showing reticulation of the marginal canals, 
+(B-3), 6- Axial section, (G.2), 7- Equatorial section, showing basal cover plates V in shape, (S. 9a).
+
+
+=== PDF PAGE 11 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+29
+Fig. 12. Ranikothalia couisensis (d’ Archiac, 1866): Middle-late Ilerdian, all figs. from the Sakarya section (Fig. 5), figs. 1, 3, 5-9 compiled by Sirel (1976), 
+pl. X, XI; figs. 2,4 from Deveciler (2014) and figs. 10-16 from the additional materials colleted from same locality; figs. 1-10 B form; figs. 11-16 A form. 
+1- Lateral view, showing large pustules and trabecular canals around the large amorphous central knob, slightly curved septal flaments and thick marginal 
+cord, (P. 67), 2- Equatorial section with thightly coiled whorls in accordance with R. nuttalli (DAVIES) and R. daviesi n.sp., showing cover plate V in shaped 
+, (Sk. 11/4/19), 3- Axial section with inflated test (P. 70), 4- Axial section with inflated test, (Sk. 11/4/28), 5- Inflated axial section, (P. 65), 6- Lateral view, 
+(P. 60), 7- Equatorial section, (P. 68), 8- Lateral view, (P. 64), 9- Equatorial section, (P. 66), 10- Equatorial section, (C. 6), 11- Equatorial section, (S. 11 b), 
+12- Lateral view with large amorphous central knob (S. 17), 13- Equatorial section, (S. 8c), 14- Lateral view with large amorphous central knob , (S. 18), 15. 
+Lateral view, (C. 9), 16- Axial section, (D.2). (Scale bar 1 mm and 2 mm)
+
+
+=== PDF PAGE 12 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+30
+Fig. 13. Ranikothalia daviesi Sirel and Deveciler sp. nov.:  Middle-Late Ilerdian, all figs. from the Sakarya section (Fig. 5), figs. 1,3,5 compiled by Sirel 
+(1976, pl. X); the others topotypes, figs. 1-9 B form, 10-13 A form. 1- Lateral view of Operculinid test, showing trabecular canal system as fissure, around the 
+shapeless small central knob and slightly curved septal flaments, (P. 41), 2- Equatorial section, showing basal cover plate V in shape, (S. 2 ), 3- Axial section 
+of thin lenticular test with operculinid whorls, (P. 39), 4- Incomplete equatorial section, (S. 3), 5- Lateral view, showing operculinid test, (P. 42), 6- Equatorial 
+section, (S. 7), 7- Equatorial section, showing thin cover plates V in shaped, enlarged in Fig. 3, (S. 6), 8- Incomplete equatorial section of small specimen, (S. 
+5), 9- Incomplete equatorial section, (S. 1), 10- Lateral view, (S. 15), 11- Equatorial section, (S. 14c), 12- Equatorial section, (S. 13a), 13- Axial section, (A. 2).
+
+
+=== PDF PAGE 13 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+31
+Fig. 14. Ranikothalia polatliensis Sirel, 2013:  Ilerdian, all figs. compiled from Sirel (1998, pl. 64-65), spot sample, collected from the Kuşçu village, S of 
+Polatlı, SW of Ankara, central Turkey (Fig. 1), all figs. megalospheric form except figs. 1, 11,12 microspheric form. 1- Almost equatorial section, showing 
+meshes of marginal canal network and septal flap, (30/5/1), 2- Almost equatorial section, (30/7/2), 3- Equatorial section , (30/5/2), 4- Equatorial section, 
+showing basal cover plate V in shape, (30/5/4)., 5- Axial section, (30/5/10), 6- Axial section, (30/5/9), 7- Incomplete equatorial section, (30/5/5), 8- Equatorial 
+section, (30/5/12), 9- Axial section, (30/5/4), 10- Axial section, (30/5/11), 11- Subaxial section, showing marginal canals, (30/5/13), 12- Almost axial section, 
+(30/7/2).
+
+
+=== PDF PAGE 14 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+32
+Fig. 15. Ranikothalia bunyanensis Sirel, 2015:, Thanetian-Ilerdian boundary, all figs. from Bünyan section (Fig. 9), compiled from Sirel (2015, Fig. 12, 
+pl. 23 and 31, figs 1, 2, 5, 7, 8 A form; figs. 3, 4, 6 B form. 1- Equatorial section, with the marginal canals in the thickened septum, (B. 3/6/6), 2- Equatorial 
+section,  showing basal cover plate V in shape, (B. 3/6/4), 3-Subaxial section of Ranikothalia sp., (B. 2/7/2), 4- Subaxial section, (B. 3/1/7), 5- Axial section, 
+(B. 3/1/6), 6- Tangential section, showing the meshes of marginal canal network inner whorl of the section, (B. 2/1/2), 7- Tangential section, showing the 
+meshes of margianal canal network inner whorl, (B.2/1/2), 8- Centered axial section, (B. 3/2/1).
+
+
+=== PDF PAGE 15 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+33
+Fig. 16. Ranikothalia solimani Butterlin and Monod, 1969: Late Thanetian, all figs. from spot samples, Saray village, NE of Van (Fig. 1); megalospheric 
+form, compiled from Sirel (1998, pl. 66). 1- Equatorial section, showing cover plate and septal flap, (95/1a), 2- Equatorial section, slightly oblique, (28/1), 
+3- Axial section, (15/9), 4- Incomplete equatorial section, (42/1), 5- Incomplete equatorial section, (60/3), 6- Tangential section, showing meshes of marginal 
+canals network inner whorl, (30/1), 7- Axial section, (10/1), 8- Axial section, (30/1), 9- Equatorial section with thick marginal cord, (13/3), 10- Axial section 
+of Ranikothalia sp., (92/2), 11- Badly preserved equatorial section, (18/2), 12- Axial section, (97/3), 13- Axial section, (66/1), 14- Axial section, (94/1).
+
+
+=== PDF PAGE 16 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+34
+height of the chambers are greater than the width. There are 28 
+chambers in the last whorl of the equatorial section measured 
+3.55 mm in diameter (Fig. 15: 2). Number of septa in the whorls: 
+1st, 10-12; 2nd, 18-20; 3rd, 29.
+Remark: The megalospheric form of R. bunyanensis 
+SIREL differs from the R. polatliensis Sirel in its smaller and 
+flattened biumbilical test. In the same way, the microspheric R. 
+polatliensis Sirel is distinguished from the species of B form in 
+possessing larger test and loosely coiled whorls. Megalospheric 
+R. bunyanensis Sirel differs from Ranikothalia solimani Butterlın 
+and Monod, in that R. bunyanensis Sirel has a biumbilicate flat 
+test instead of inflated test (compare with Fig. 15: 4 with Fig. 
+16: 7, 8). 
+Stratigraphic and Geographic Distribution: Ranikothalia 
+bunyanensis Sirel is associated with Lacazina blumenthali 
+Reichel and Sigal, Glomalveolina cf. levis Hottıinger, Elazigina 
+subsphaerica (Sirel), Assilina cf. yvettae Schaub, Thomasella sp., 
+Lockhartia sp., Valvulina triangularis d’ Orbigny, Valvulineria 
+sp. This foraminiferal fauna occurs in the transitional sandy 
+limestone beds (Fig. 9, B.2). It underlies sandy limestone beds 
+(Fig. 5, B. 3) with, Alveolina vredenburgi Davies, Alveolina 
+himalayensis Sheng and Zhang, Nummulites deserti De La 
+Harpe and Opertorbitolites douvilléi (Nuttall) Elazigina 
+subsphaerica (Sirel), Haymanella paleocenica Sirel of early 
+Ilerdian age; and it overlies sandy limestone beds (Fig. 5, B. 
+1) with Nummulites heberti (Munier-Chalmas), Assilina yvettae 
+Schaub, Discocyclina seunesi Douvillé, Elazigina subsphaerica 
+(Sirel), Valvulina triangularis D’ ORBIGNY, Ranikothalia sp. 
+and fabularid species of Thanetian age
+Ranikothalia solimani Butterlin and Monod, 1969 
+(Fig. 16: 1-14; Fig. 3, E)
+Ranikothalia solimani Butterlin and Monod, 1969, p. 598, pl. I, figs. 
+1-4; pl. II, figs. 3-6.
+Ranikothalia sp. 1, Sirel, 1998, p. 107, Pl. 66, figs. 1-12.
+Ranikothalia cf. sindensis (Davies) Sirel, 1998 pl. 66, figs. 14, 15.
+Description: The megalospheric test is small inflated 
+lenticular with rounded perperiphery (Fig. 16: 3, 7, 8, 13, 14). 
+The diameter of the test ranges from 2.5 to 3.5 mm and the 
+thickness from 1 to 1.5 mm. The spheric megalosphere (0.275-
+0.400 mm in diameter) is followed by numerous subrectangular 
+chambers increasing gradually toward the penultimate whorl, 
+but, they increase suddenly in the last whorl (Fig. 16: 1, 2). The 
+interseptal foramen, intraseptal canals, septal flap and cover 
+plate are present (Fig. 16: 1). The one tangential section (Fig. 16: 
+6) shows that the network of the marginal canals are observed in 
+the septum (Fig. 16: 6) The chamber height is greater than the 
+width, There are 30 subrectangular chambers in the last whorl 
+measured 3.1 mm in diameter (Fig. 16: 1). Number of septa in 
+the whorls: 1st, 14; 2nd, 26-28; 3rd, 28.
+Remarks: The test form, course of the whorls, proportion of 
+the test: rates of diameter/thickness and chamber height/width of 
+here described specimens (Fig. 16: 3, 7, 8) are similar to that of 
+R. solimani Butterlin and Monod (1969, pl. I, figs. 1,4). 
+Stratigraphic and Geographic Distribution: It occurs in the 
+Thanetian limestone blocks within the ophiolitic melange, near 
+the Saray village, N of Van (Fig. 1). It is associated in these 
+blocks with Karsella hottingeri SIREL, Miscellanea juliettae 
+Leppig, Miscellanea yvettae Leppig and orthophragminid 
+species.
+This species occurs in the other exotic limestone block 
+located at the Kızıltepe, 2 km north of the Saray village, Van, 
+eastern Turkey with Glomalveolina primaeva (Reichel), Vania 
+anatolica Sirel and Gündüz, Sakesaria cotteri Davies, Sakesaria 
+dukhani Smout, Postbrockinella sarayensis (Sırel, Gündüz, 
+Acar) and Fallotela sp. of Thanetian age. 
+On the contrary, R. solimani Butterlin and Monod has 
+been reported from the Late Paleocene-Early Eocene (Ilerdian) 
+limestone of the, Sülemaniye village, Beyşehir town, N Antalya, 
+S Turkey (type locality) with the Lacazina. blumenthali Reichel 
+and Sigal, Saudia labyrintica (Grimsdale), Lockhartia sp., 
+Discocylina sp., Miscellanea sp. and Alveolina sp. (Butterlin 
+and Monod, 1969, Fig. 2).
+CONCLUSIONS
+Caudri (1944) did not use any photograph to illustrate the 
+structural elements of Ranikothalia Caudri while he created the 
+new genus, and, as a result, the diagnostic structural elements 
+of the genus could not be reliably described in the later 
+paleontological studies. This created misunderstanding in the 
+descriptive paleontological research concerning the species of 
+Ranikothalia Caudri. and the other species of Nummulitidae 
+De Blainville. This study was aimed to describe the structural 
+elements of Ranikothalia Caudri. The diagnostic structural 
+elements of the genus such as external ornamentation, especially 
+around the amorphous central knob the meshes of marginal 
+canal network (Fig. 3a), trabecular canal system and basal cover 
+plate V in shape are described and illustrated from the free 
+specimens, orientiated equatorial, axial sections and random 
+oblique, tangential sections. Ranikothalia nuttalli (Davies), 
+Ranikothalia couisensis (d’ Archiac), Ranikothalia daviesi n.sp., 
+Ranikothalia polatliensis Sirel, Ranikothalia bunyanensis Sirel 
+and Ranikothalia solimani Butterlin and Monod have been re-
+described and re-figured in the light of the above mentioned 
+structural elements.
+ACKNOWLEDGEMENTS
+The authors are grateful to Dr. Pratul Kumar Saraswati for 
+the review of manuscript and linguistic improvement.
+REFERENCES
+Archiac, A. d’ 1866. Faune tertiaire infèrieure. In: de Tchihatcheff. Asie 
+Mineure, Paléontologie.
+Arni, P. 1966. Contribution to the history of growth of the Chordoper-
+culinoides shell. 	Eclogae Geologicae Helvetiae, 59(1): 338-346.
+Blondeaue, A. 1972. Les Nummulites: Science de la Terra, Librairie Vuibert, 
+Paris, 254. 
+Butterlin, J. and Monod, O. 1969. Biostratigraphie (Paléocene a Eocéne 
+moyen) d’une coupe dans le Taurus de Beyşehir (Turquie), Etude des 
+“Nummulites cordelées” et révision de ce group. Eclogae Geologicae 
+Helvetiae, 62(2): 583-604.
+Caudri, C. M. B. 1944. The larger foraminifera from San Juan de los Morros, 
+State of Guarico, Venezuela. Bulletins of American Paleontology, 28: 
+351-404.
+Dacı-Dizer, A. 1953. Contribution à l’Etude Paleontologique du Kastamonu. 
+İstanbul Üniversitesi Fen Fakültesi Mecmuası, serie B, volume 18, no. 
+3-4, 207-299.
+Davies, L. M. 1927. The Ranikot beds of Thal. Quarterly Journal of the 
+Geological Society, 83: 260-290. 
+Davies, L. M. and Pinfold, E. S. 1937. Eocene beds of the Punjab, Salt 
+range. Paleontologia Indica, 24(2): 1-79.
+Deveciler, A. 2014. Haymana-polatlı havzası Nummulites Lamarck ve 
+Assilina d’Orbigny (Nummulitidae familyası) türlerinin tanımlanması 
+
+
+=== PDF PAGE 17 ===
+DIAGNOSTIC STRUCTURAL ELEMENTS OF RANIKOTHALIA CAUDRI FROM THANETIAN-ILERDIAN OF TURKEY
+35
+ve bunların biyostratigrafisi. Unpublished Ph. D Thesis, Ankara 
+Üniversitesi, Ankara. 
+Hottinger, L. 1977. Foraminiféres operculiniformes. Memoire du Muséum 
+National d’Histoire Naturelle, Serie C, 40: 159. 
+Hottinger, L. 2006. Illustrated glossary of terms used in foraminiferal 
+research. Carnets de Géologie – Notebooks on Geology.
+Loeblich, A. and Tappan, H. 1987. Foraminiferal Genera and their 
+Classification. New York (Von Nostrant Reinhold), New York.
+Muller-Merz, E. 1980. Strukturananalyse ausgewahiter rotaloider 
+Foraminiferen. Schweiz Palaontologie Abhanlungen, 101: 5-70.
+Nagappa, Y. 1959. Foraminiferal biostratigraphy of the Cretaceous-Eocene 
+succession in the India-Pakistan-Burma region. Micropaleontology, 
+5(2): 145-192. 
+Schaub, H. 1960. Über einige nummuliten und Assilinen er Monographie 
+und der Sammlung d’ Archiac. Eclogae Geologicae Helvetiae, 53(1): 
+443-45.
+Serra-Kiel, J., Hottinger, L., Caus, E.,  Drobne, K.,  Ferrandez, C., 
+Jauhri, A.K., Less, G., Pavlovec, R.,  Pignatti, J.,  Samso, J. M., 
+Schaub, H., Sirel, E., Strougo, A., Tambareau, Y., Tosquella, J. and 
+Zakrevskaya, E. 1998. Larger foraminiferal biostratigraphy of the 
+Tethyan Paleocene and Eocene. Bulletin de la Société Géologique de 
+France, 169: 281-299.
+Sirel, E. 1975. Polatlı (GB Ankara) Güneyinin Stratigrafisi. Bulletin of the 
+Geological Society of Turkey, 18: 181-192.
+Sirel, E. 1976a. Polatlı (GB Ankara) güneyinde bulunan Alveolina, 
+Nummulites, Ranikothalia and Assilina cinslerinin bazı türlerinin 
+sistematik incelemeleri. Bulletin of the Geological Society of Turkey, 
+19: 89-102.
+Sirel, E. 1976b. Description of six new species of Alveolina found in the 
+south of Polatlı (SW Ankara) region. Bulletin of the Geological Society 
+of Turkey, 19: 19-22.
+Sirel, E. 1998. Foraminiferal description and biostratigraphy of the 
+Paleocene-Lower Eocene shallow-water limestones and discussion on 
+the Cretaceous-Tertiary boundary in Turkey. General Directorate of 
+Mineral Research and Exploration Monography, serie 2, 117.
+Sirel, E. 2013. Descriptions of two new families, three new specıies and re-
+descrıiptıion of four known genera and one subfamily from the larger 
+benthic foraminifera of Paleocene in Turkey. Bulletin of the Mineral 
+Research and Exploration, 146: 27-53.
+Sirel, E. 2015. Reference section and Key localities of the Paleogene stags 
+and discussion on C-T, P-E and E-O Boundaries by the very shallow-
+shallow water Foraminifera in Turkey. Ankara Üniversitesi Basmevi, 
+461.
+Manuscript received April 2017
+Manuscript accepted January 2018
+
+
+=== PDF PAGE 18 ===
+ERCÜMENT SİREL  AND  ALİ DEVECİLER
+36

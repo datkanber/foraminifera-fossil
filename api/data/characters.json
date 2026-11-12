@@ -51,7 +51,7 @@
     },
     {
       "id": "CHR_02",
-      "name_en": "Test shape",
+      "name_en": "Test form and external architecture",
       "name_tr": "Kavkı şekli",
       "group": "CORE",
       "values": [
@@ -71,7 +71,14 @@
         "IRREGULAR",
         "OTHER",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "TRIANGULAR",
+        "COMPACT",
+        "CENTRALLY_THICKENED",
+        "BICONVEX",
+        "ANGULAR_PERIPHERY",
+        "RADIALLY_ORNAMENTED",
+        "GRANULAR_SURFACE"
       ],
       "value_labels_tr": {
         "GLOBULAR": "Küresel",
@@ -110,7 +117,14 @@
         "IRREGULAR": "Irregular",
         "OTHER": "Other",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "TRIANGULAR": "triangular",
+        "COMPACT": "compact",
+        "CENTRALLY_THICKENED": "centrally thickened",
+        "BICONVEX": "biconvex",
+        "ANGULAR_PERIPHERY": "angular periphery",
+        "RADIALLY_ORNAMENTED": "radially ornamented",
+        "GRANULAR_SURFACE": "granular surface"
       }
     },
     {
@@ -172,7 +186,8 @@
         "IRREGULAR_SERIAL",
         "OTHER",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "MILIOLINE_OTHER"
       ],
       "note": "PLANISPIRAL, TROCHOSPIRAL and STREPTOSPIRAL must NOT be stored here; they belong to CHR_06 Coiling Pattern.",
       "value_labels_en": {
@@ -187,7 +202,8 @@
         "IRREGULAR_SERIAL": "Irregular serial",
         "OTHER": "Other",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "MILIOLINE_OTHER": "milioline other"
       }
     },
     {
@@ -218,7 +234,7 @@
     },
     {
       "id": "CHR_07",
-      "name_en": "Coiling plane",
+      "name_en": "Spatial organization of coiling or branches",
       "name_tr": "Sarılım düzlemi",
       "group": "CORE",
       "values": [
@@ -227,7 +243,11 @@
         "MULTIDIRECTIONAL",
         "NOT_APPLICABLE",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "STRAIGHT_OR_GENTLY_CURVED_AXIS",
+        "RADIAL_BRANCHING",
+        "IRREGULAR_TANGLED_BRANCHING",
+        "DISTINCT_SPIRAL_UMBILICAL_SIDES"
       ],
       "note": "Example: Ammodiscus = PLANISPIRAL + SINGLE_PLANE; Glomospira = GLOMOSPIRAL/IRREGULAR_COILING + CHANGING_PLANES.",
       "value_labels_en": {
@@ -236,12 +256,16 @@
         "MULTIDIRECTIONAL": "Multidirectional",
         "NOT_APPLICABLE": "Not applicable",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "STRAIGHT_OR_GENTLY_CURVED_AXIS": "straight or gently curved axis",
+        "RADIAL_BRANCHING": "radial branching",
+        "IRREGULAR_TANGLED_BRANCHING": "irregular tangled branching",
+        "DISTINCT_SPIRAL_UMBILICAL_SIDES": "distinct spiral umbilical sides"
       }
     },
     {
       "id": "CHR_08",
-      "name_en": "Involution / evolution",
+      "name_en": "Involution and chamber embracement",
       "name_tr": "İnvolüt–evolüt sarılım",
       "group": "CORE",
       "values": [
@@ -250,7 +274,8 @@
         "EVOLUTE",
         "NOT_APPLICABLE",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "COMPLETELY_EMBRACING"
       ],
       "note": "Activate only for taxa in which involution/evolution is morphologically meaningful.",
       "value_labels_en": {
@@ -259,7 +284,8 @@
         "EVOLUTE": "Evolute",
         "NOT_APPLICABLE": "Not applicable",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "COMPLETELY_EMBRACING": "completely embracing"
       }
     },
     {
@@ -305,7 +331,8 @@
         "RETICULATE",
         "LABYRINTHIC",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "PERIPHERALLY_DIFFERENTIATED"
       ],
       "value_labels_en": {
         "SIMPLE": "Simple",
@@ -314,12 +341,13 @@
         "RETICULATE": "Reticulate",
         "LABYRINTHIC": "Labyrinthic",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "PERIPHERALLY_DIFFERENTIATED": "peripherally differentiated"
       }
     },
     {
       "id": "CHR_11",
-      "name_en": "Secondary chamberlets",
+      "name_en": "Secondary chamberlets and connectivity",
       "name_tr": "İkincil locacıklar",
       "group": "INTERNAL_ARCHITECTURE",
       "values": [
@@ -328,7 +356,9 @@
         "WEAKLY_DEVELOPED",
         "WELL_DEVELOPED",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "ANNULAR_STOLONS",
+        "RADIALLY_ELONGATE_ZONES"
       ],
       "note": "Particularly important in larger benthic foraminifera.",
       "value_labels_en": {
@@ -337,7 +367,9 @@
         "WEAKLY_DEVELOPED": "Weakly developed",
         "WELL_DEVELOPED": "Well developed",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "ANNULAR_STOLONS": "annular stolons",
+        "RADIALLY_ELONGATE_ZONES": "radially elongate zones"
       }
     },
     {
@@ -351,7 +383,8 @@
         "MULTILOCULAR",
         "COMPLEX",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "PERIEMBRYONIC_COMPLEX"
       ],
       "note": "Detailed taxon-specific embryonic characters remain in genus rule cards.",
       "value_labels_en": {
@@ -360,7 +393,8 @@
         "MULTILOCULAR": "Multilocular",
         "COMPLEX": "Complex",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "PERIEMBRYONIC_COMPLEX": "periembryonic complex"
       }
     },
     {
@@ -376,7 +410,9 @@
         "RETICULATE",
         "OTHER",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "LONGITUDINAL_CONTINUOUS",
+        "LOW_LONGITUDINAL"
       ],
       "note": "Relevant to complex conical agglutinated taxa and some larger benthic groups.",
       "value_labels_en": {
@@ -387,12 +423,14 @@
         "RETICULATE": "Reticulate",
         "OTHER": "Other",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "LONGITUDINAL_CONTINUOUS": "longitudinal continuous",
+        "LOW_LONGITUDINAL": "low longitudinal"
       }
     },
     {
       "id": "CHR_14",
-      "name_en": "Pillars",
+      "name_en": "Pillars and their arrangement",
       "name_tr": "Pillarlar",
       "group": "INTERNAL_ARCHITECTURE",
       "values": [
@@ -401,7 +439,8 @@
         "WEAK",
         "STRONG",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "NON_ALTERNATING_PATTERN"
       ],
       "value_labels_en": {
         "PRESENT": "Present",
@@ -409,7 +448,8 @@
         "WEAK": "Weak",
         "STRONG": "Strong",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "NON_ALTERNATING_PATTERN": "non alternating pattern"
       }
     },
     {
@@ -448,7 +488,9 @@
         "CRIBRATE",
         "OTHER",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "MODIFIED_NECK",
+        "DENDRITIC"
       ],
       "note": "Must not be mandatory when it cannot be reliably observed in thin section.",
       "value_labels_en": {
@@ -460,7 +502,9 @@
         "CRIBRATE": "Cribrate",
         "OTHER": "Other",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "MODIFIED_NECK": "modified neck",
+        "DENDRITIC": "dendritic"
       }
     },
     {
@@ -487,7 +531,7 @@
     },
     {
       "id": "CHR_18",
-      "name_en": "Septal filaments",
+      "name_en": "Septal filaments and canal architecture",
       "name_tr": "Septal filamentler",
       "group": "ADDITIONAL_DIAGNOSTIC",
       "values": [
@@ -498,7 +542,8 @@
         "RETICULATE",
         "COMPLEX",
         "NOT_OBSERVABLE",
-        "UNCERTAIN"
+        "UNCERTAIN",
+        "STRONG_CONNECTED_SEPTAL_CANALS"
       ],
       "value_labels_en": {
         "ABSENT": "Absent",
@@ -508,7 +553,8 @@
         "RETICULATE": "Reticulate",
         "COMPLEX": "Complex",
         "NOT_OBSERVABLE": "Not observable",
-        "UNCERTAIN": "Uncertain"
+        "UNCERTAIN": "Uncertain",
+        "STRONG_CONNECTED_SEPTAL_CANALS": "strong connected septal canals"
       }
     },
     {

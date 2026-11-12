@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P007",
+  "phase": "pilot",
+  "observer_code": "EXP02",
+  "source_draft_sha256": "b6fffe4dead374db24ab2366d7de45c7bfd5497234d3eef7253517d8a2ddade8",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "The wall structure appears translucent and microgranular/hyaline in thin-section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "LENTICULAR",
+      "state": "PRESENT",
+      "reason": "Overall outline in this section is circular to slightly compressed disc-like/lenticular.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Numerous clearly defined septa divide the whorls into individual chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Test is composed of numerous chambers arranged in spiral whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "ANNULAR",
+      "state": "UNCERTAIN",
+      "reason": "Coiling is tightly spiraled, but outer chambers approach annular arrangement.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "Symmetrical spiral growth expanding regularly outward from a central point in one plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling is restricted to a single equatorial plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Whorls embrace tightly and completely cover previous whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Consistent planispiral coiling throughout ontogeny without sudden structural shifts.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "SUBDIVIDED",
+      "state": "PRESENT",
+      "reason": "Chambers show internal partitioning and subdivision visible in the later whorls.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets or partitions are visible within the larger chamber cavities.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Central proloculus is a simple, small rounded initial chamber.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Regular radial partitions are clearly visible traversing the chamber interiors.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct vertical pillars intersecting the chamber layers are observed.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamber layers outside the main spiral whorls are absent.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly exposed in this equatorial thin-section plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No specialized peripheral marginal cord structure is visible along the rim.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Surface septal filaments cannot be observed in internal equatorial thin-section view.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The entire specimen outline is symmetrical and isolated within the matrix.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient data on multiple specimens to determine sexual dimorphism reliably.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "Section passes through the center and displays the full spiral whorls symmetrically.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

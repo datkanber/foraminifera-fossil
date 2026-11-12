@@ -269,7 +269,7 @@ exports.score = async (req, res) => {
          RETURN g.name AS genus, m.name AS module,
                 g.flag AS flag, g.taxonomicReviewRequired AS taxFlag,
                 hr.level AS level,
-                r.key AS ruleKey, r.text AS ruleText,
+                r.key AS ruleKey, r.text AS ruleText, r.matchMode AS matchMode,
                 collect({chrId: c.id, value: ref.suggestedValue, confidence: ref.confidence}) AS mappings`
       : `MATCH (g:Genus)-[:BELONGS_TO]->(m:Module)
          MATCH (g)-[hr:HAS_RULE]->(r:RuleItem)
@@ -277,7 +277,7 @@ exports.score = async (req, res) => {
          RETURN g.name AS genus, m.name AS module,
                 g.flag AS flag, g.taxonomicReviewRequired AS taxFlag,
                 hr.level AS level,
-                r.key AS ruleKey, r.text AS ruleText,
+                r.key AS ruleKey, r.text AS ruleText, r.matchMode AS matchMode,
                 collect({chrId: c.id, value: ref.suggestedValue, confidence: ref.confidence}) AS mappings`;
 
     const result = await session.run(cypher, moduleName ? { module: moduleName } : {});
@@ -299,6 +299,8 @@ exports.score = async (req, res) => {
         (m) => m.chrId !== null && m.value !== null
       );
       generaMap[gname].rules.push({
+        rule_key: rec.get('ruleKey'),
+        matchMode: rec.get('matchMode') || 'ALL',
         level: rec.get("level"),
         text: rec.get("ruleText"),
         mappings,

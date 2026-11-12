@@ -1,3 +1,5 @@
+Current preparation status: ten previously evaluated published image panels have been coded for form usability only. No human forms have been completed and no independent specimen validation has been conducted. The planned 60-specimen comparison below still requires new independent material.
+
 Planned paired expert-input comparison (not yet conducted)
 
 Two micropaleontologists independent of rule-card development will record the frozen 21-character observation sheet without access to reference genus labels, the other observer's sheet, or algorithm outputs. An independently documented archive/reference review will establish the genus before unblinding. Eight to ten pilot fossils will assess form usability and measured observation time. After the protocol and version are finalized, 60 different, source-independent fossils spanning all three wall-composition modules are the planning target; this target is not a formal power calculation. Multiple images of one fossil remain one specimen.

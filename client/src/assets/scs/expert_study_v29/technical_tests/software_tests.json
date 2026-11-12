@@ -1,5 +1,5 @@
 {
-  "tests_passed": 15,
+  "tests_passed": 18,
   "failures": 0,
   "scope": "Synthetic software fixtures only, created in temporary directories and removed; no human dataset or effect-size estimate generated.",
   "command": "python -m unittest discover -s eval -p test_expert_comparison.py"

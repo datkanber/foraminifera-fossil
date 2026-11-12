@@ -98,14 +98,14 @@ test('consistency.test.js - Check 104 paths against Engine M', (t) => {
 
   // Independently reproduced by the Python Engine M after the 2026-11-11
   // mapping audit. Frozen pre-revision inputs/results remain under eval/archive.
-  assert.strictEqual(totals.CONFIRMED_GENUS, 29);
-  assert.strictEqual(totals.conf_correct, 17);
-  assert.strictEqual(totals.CANDIDATE_GENUS, 57);
-  assert.strictEqual(totals.INDETERMINATE, 15);
-  assert.strictEqual(totals.PROBABLE_GENUS, 3);
+  assert.strictEqual(totals.CONFIRMED_GENUS, 27);
+  assert.strictEqual(totals.conf_correct, 19);
+  assert.strictEqual(totals.CANDIDATE_GENUS, 56);
+  assert.strictEqual(totals.INDETERMINATE, 10);
+  assert.strictEqual(totals.PROBABLE_GENUS, 11);
   assert.strictEqual(totals.NO_MATCH_WITHIN_CORE_TAXA, 0);
-  assert.strictEqual(totals.leaf_excluded, 19);
-  assert.strictEqual(totals.rank1_unique, 30);
-  assert.strictEqual(totals.rank1_tied, 22);
-  assert.strictEqual(totals.top3, 68);
+  assert.strictEqual(totals.leaf_excluded, 0);
+  assert.strictEqual(totals.rank1_unique, 32);
+  assert.strictEqual(totals.rank1_tied, 31);
+  assert.strictEqual(totals.top3, 79);
 });

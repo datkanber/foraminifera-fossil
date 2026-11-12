@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"AGGLUTINATED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Test wall appears granular and dark, typical of agglutinated composition.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"HIGH_CONICAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The main test shape is distinctly conical with a high profile expanding toward the base.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Clearly visible partitions dividing the interior into multiple chambers.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Numerous chambers are clearly visible throughout the specimen.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"OTHER\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Initial coiled or trochospiral arrangement followed by expanding series.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"TROCHOSPIRAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Initial portion exhibits a small coiled spiral arrangement.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"CHANGING_PLANES\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Transition from an initial coiled arrangement to an expanding conical serial stage.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"EVOLUTE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Early whorls appear exposed, but details are partially obscured.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"OTHER\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Transition from an initial coiled section to an expanding multichambered conical series.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers appear generally simple without complex internal labyrinthic subdivision.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No secondary chamberlets are visible within the main chambers.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Initial chamber area is visible near the apex but lacks clear detail.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No radial or vertical internal partitions visible spanning chambers.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No distinct pillars observed in the interior.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No lateral chamberlets visible along the flanks.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertural region is not clearly preserved or visible in this section plane.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No marginal cord structure is visible.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"No septal filaments discernible on the outer surface.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The entire test outline is completely isolated and shows no attachment structures.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Dimorphism cannot be determined from the single random section shown.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"AXIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Section cuts through the apex and symmetrical axis of the conical test.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0TXvO1DgS3v6LZp8A0nBrKvsM6uZsynFZcLz3/9jyU+q+VCOL2tB2o3Eb8qewcDxOWUmjtRTIun6zxBhLMrnGVN7a8fmVx70XFaX8DZoa5Aaw1WYgvMN54uGI="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3730,
+    "candidatesTokenCount": 1022,
+    "totalTokenCount": 4752,
+    "promptTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1085
+      },
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9Jf1auOmBsGRvdIP6JLHiQU"
+}

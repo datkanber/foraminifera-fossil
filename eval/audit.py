@@ -72,6 +72,10 @@ for (mod, genus), rs in genera.items():
             if o is r or o['level'] not in 'MD':
                 continue
             go = groups(o)
+            # In a cross-character OR, one incompatible alternative does not
+            # contradict the mandatory rule while another alternative can hold.
+            if r.get('match_mode')=='ANY' and len(gr)>1 and any(c not in go or closure(c,gr[c])&closure(c,go[c]) for c in gr):
+                continue
             if o['level'] == 'M' and o['rule_key'] < r['rule_key']:
                 continue  # count each M-M pair once
             for c in set(gr) & set(go):

@@ -40,7 +40,7 @@ function buildH(obs) {
   return h;
 }
 
-function evaluateRuleM(h, mappings) {
+function evaluateRuleM(h, mappings, matchMode = 'ALL') {
   const validMappings = mappings ? mappings.filter(m => m.value) : [];
   if (validMappings.length === 0) {
     return { verdict: 'NEUTRAL', held: new Set() };
@@ -54,6 +54,18 @@ function evaluateRuleM(h, mappings) {
     groups[c].add(m.value);
   }
   
+  if (matchMode === 'ALL_OBSERVED' && Object.keys(groups).some(c=>!h[c]))
+    return {verdict:'NEUTRAL',held:new Set()};
+  if (matchMode === 'ANY') {
+    const held = new Set(); let observed = 0;
+    for (const [c, values] of Object.entries(groups)) {
+      if (h[c]) { observed++; for (const v of values) if (h[c].has(v)) held.add(`${c}:${v}`); }
+    }
+    // An unknown alternative keeps a disjunction neutral; it cannot establish
+    // either a match or an explicit contradiction.
+    return held.size ? {verdict:'MATCH',held} : {
+      verdict:observed===Object.keys(groups).length?'MISMATCH':'NEUTRAL',held:new Set()};
+  }
   let anyhold = false;
   const held = new Set();
   
@@ -104,7 +116,9 @@ function scoreGenera(observations, generaMap, options = {}) {
   
   let nObserved = 0;
   for (const [chr, o] of Object.entries(observations)) {
-    if (chr !== "CHR_21" && chr !== "CHR_01" && o && o.state !== "NOT_OBSERVABLE" && o.state !== "UNCERTAIN") {
+    if (chr !== "CHR_21" && chr !== "CHR_01" && o && o.value &&
+        !['NOT_OBSERVABLE','UNCERTAIN','UNKNOWN'].includes(o.value) &&
+        o.state !== "NOT_OBSERVABLE" && o.state !== "UNCERTAIN") {
       nObserved++;
     }
   }
@@ -129,7 +143,7 @@ function scoreGenera(observations, generaMap, options = {}) {
     const neutralRules = [];
 
     for (const rule of g.rules) {
-      const { verdict, held } = evaluateRuleM(h, rule.mappings);
+      const { verdict, held } = evaluateRuleM(h, rule.mappings, rule.matchMode || rule.match_mode);
       const L = rule.level;
       
       const text = rule.text;
@@ -263,8 +277,26 @@ function scoreGenera(observations, generaMap, options = {}) {
     identification,
     confidenceNote,
     ranking: active,
-    excluded: excludedArr
+    excluded: excludedArr,
+    sectionWarning: sectionWarning(observations, generaMap)
   };
+}
+
+function sectionWarning(observations, generaMap) {
+  const section=observations.CHR_21;
+  if (!section || ['UNCERTAIN','NOT_OBSERVABLE'].includes(section.state) ||
+      !['OBLIQUE','TANGENTIAL'].includes(section.value)) return null;
+  const sensitive=new Set(['CHR_07','CHR_08','CHR_12','CHR_15','CHR_17']);
+  const affected=[];
+  for (const g of Object.values(generaMap)) for (const rule of g.rules) {
+    const characters=[...new Set((rule.mappings||[]).map(m=>m.chrId||m.chr_id)
+      .filter(c=>sensitive.has(c)&&observations[c]&&observations[c].value&&
+        !['UNCERTAIN','NOT_OBSERVABLE'].includes(observations[c].state)))];
+    if (characters.length) affected.push({genus:g.genus,ruleKey:rule.rule_key||rule.ruleKey||null,characters});
+  }
+  return affected.length ? {code:'SECTION_SENSITIVITY',orientation:section.value,
+    characters:[...new Set(affected.flatMap(x=>x.characters))].sort(),rules:affected,
+    scoringChanged:false,message:'Verify these observations in an appropriate axial or equatorial section; the warning does not alter evidence.'} : null;
 }
 
 module.exports = {
@@ -272,5 +304,6 @@ module.exports = {
   buildH,
   evaluateRuleM,
   SCORES,
-  VALUE_IMPLIES
+  VALUE_IMPLIES,
+  sectionWarning
 };

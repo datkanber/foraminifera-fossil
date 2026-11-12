@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P008",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Clear microcrystalline/fibrous wall structure visible in transmitted light."
+    },
+    "CHR_02": {
+      "value": "LENTICULAR",
+      "state": "PRESENT",
+      "reason": "Test outline in section is biconvex/lenticular."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Chambers are visibly partitioned by septa."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are clearly visible throughout the section."
+    },
+    "CHR_05": {
+      "value": "ANNULAR",
+      "state": "UNCERTAIN",
+      "reason": "Chambers appear arranged in concentric annular series, but preservation makes strict determination difficult."
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "UNCERTAIN",
+      "reason": "Possible early whorls are visible near the center, but overall section view is complex."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Symmetrical arrangement centered around the equatorial plane."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "UNCERTAIN",
+      "reason": "Whorls appear tightly enveloped, but internal details are partially obscured."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "ABSENT",
+      "reason": "No major shift in arrangement mode is directly observed from initial to later stages."
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Presence of multiple internal structural elements including partitions and chamberlets."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Smaller internal divisions within chambers (chamberlets) are visible in peripheral zones."
+    },
+    "CHR_12": {
+      "value": "BILOCULAR",
+      "state": "UNCERTAIN",
+      "reason": "Central area shows rounded chambers, but exact embryonic structure is unclear."
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Radial partitions/beams are visible traversing the chambers."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Distinct robust vertical pillars are not visible in this section view."
+    },
+    "CHR_15": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Lateral chamber layers outside the main equatorial plane are not clearly differentiated."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not visible in this thin section orientation."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct marginal cord structure is visible along the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Surface septal filaments cannot be observed in internal thin-section view."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Test is isolated in the matrix with no sign of attachment surface."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient comparative specimens to assess dimorphism directly."
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "Section passes through the center showing symmetrical chamber arrangement."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:42:45.263985+00:00",
+    "received_at": "2026-11-12T10:42:49.163948+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P008/view01.png",
+        "sha256": "02e06ff081dc0cc6c427d59c9bf48ad8570b720cfb66f6a01dd2d74c3751c008",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "c97cced49a28d3df202009274b4b8264216d101c7ab8290035f606b67a491730"
+  },
+  "expert_approval": null
+}

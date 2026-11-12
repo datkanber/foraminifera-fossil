@@ -1,0 +1,13 @@
+case_id,dataset,module,cohort,reference_genus,status,prediction,acc1,acc3,reference_excluded,reference_omitted,rank1_unique,rank1_tied,top3_shared_rank,confirmed_correct,method,in_core,reference_species
+LIT_01,literature_descriptions,,Written-description development probes,Karsella,CANDIDATE_GENUS,Ammobaculites,0.0,0.0,False,True,False,False,False,False,A0,False,Karsella hottingeri
+LIT_02,literature_descriptions,PORCELANEOUS,Written-description development probes,Pseudolacazina,CONFIRMED_GENUS,Borelis,0.0,1.0,False,False,False,False,True,False,A0,True,Pseudolacazina oeztemueri
+LIT_03,literature_descriptions,PORCELANEOUS,Written-description development probes,Alveolina,CONFIRMED_GENUS,Borelis,0.0,1.0,False,False,False,False,True,False,A0,True,Alveolina haymanaensis
+LIT_04,literature_descriptions,HYALINE,Written-description development probes,Discocyclina,INDETERMINATE,,0.0,0.0,True,False,False,False,False,False,A0,True,Discocyclina seunesi
+LIT_05,literature_descriptions,HYALINE,Written-description development probes,Laffitteina,CANDIDATE_GENUS,Lockhartia,0.0,0.5,False,False,False,False,True,False,A0,True,Laffitteina erki
+LIT_06,literature_descriptions,HYALINE,Written-description development probes,Orbitoclypeus,INDETERMINATE,,0.0,0.0,True,False,False,False,False,False,A0,True,Orbitoclypeus haymanaensis
+LIT_01,literature_descriptions,,Written-description development probes,Karsella,CANDIDATE_GENUS,Ammobaculites,0.0,0.0,False,True,False,False,False,False,B1,False,Karsella hottingeri
+LIT_02,literature_descriptions,PORCELANEOUS,Written-description development probes,Pseudolacazina,CANDIDATE_GENUS,Alveolina,0.14285714285714285,0.42857142857142855,False,False,False,True,True,False,B1,True,Pseudolacazina oeztemueri
+LIT_03,literature_descriptions,PORCELANEOUS,Written-description development probes,Alveolina,CANDIDATE_GENUS,Alveolina,0.043478260869565216,0.13043478260869565,False,False,False,True,True,False,B1,True,Alveolina haymanaensis
+LIT_04,literature_descriptions,HYALINE,Written-description development probes,Discocyclina,CANDIDATE_GENUS,Cuvillierina,0.0,0.0,True,False,False,False,False,False,B1,True,Discocyclina seunesi
+LIT_05,literature_descriptions,HYALINE,Written-description development probes,Laffitteina,CANDIDATE_GENUS,Asterocyclina,0.07142857142857142,0.21428571428571427,False,False,False,True,True,False,B1,True,Laffitteina erki
+LIT_06,literature_descriptions,HYALINE,Written-description development probes,Orbitoclypeus,CANDIDATE_GENUS,Alveolina,0.0,0.0,True,False,False,False,False,False,B1,True,Orbitoclypeus haymanaensis

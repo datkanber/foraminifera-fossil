@@ -1,0 +1,84 @@
+◇ injected env (5) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+════════════════════════════════════════════════════════════
+  FORAM ONTOLOGY v1.0 — NEO4J AURA IMPORT
+  URI: bolt://127.0.0.1:17687
+════════════════════════════════════════════════════════════
+
+[0] Veritabani temizleniyor...
+  Veritabani temizlendi.
+
+[1] Constraint'ler olusturuluyor...
+  11 constraint olusturuldu.
+
+[2] Moduller olusturuluyor...
+  3 modul olusturuldu.
+
+[3] Tani statusleri olusturuluyor...
+  5 status olusturuldu.
+
+[4] Gozlem durumlari olusturuluyor...
+  4 gozlem durumu olusturuldu.
+
+[5] Karakterler ve kontrollu sozluk yukleniyor...
+  Karakterler+Degerler: 50/363  Karakterler+Degerler: 100/363  Karakterler+Degerler: 150/363  Karakterler+Degerler: 200/363  Karakterler+Degerler: 250/363  Karakterler+Degerler: 300/363  Karakterler+Degerler: 350/363  Karakterler+Degerler: 363/363  Karakterler+Degerler: 363/363 — tamamlandi
+
+[6] Cinsler yukleniyor...
+  Cinsler: 50/150  Cinsler: 100/150  Cinsler: 150/150  Cinsler: 150/150 — tamamlandi
+
+[7] Kural kartlari yukleniyor...
+  Kurallar: 50/1416  Kurallar: 100/1416  Kurallar: 150/1416  Kurallar: 200/1416  Kurallar: 250/1416  Kurallar: 300/1416  Kurallar: 350/1416  Kurallar: 400/1416  Kurallar: 450/1416  Kurallar: 500/1416  Kurallar: 550/1416  Kurallar: 600/1416  Kurallar: 650/1416  Kurallar: 700/1416  Kurallar: 750/1416  Kurallar: 800/1416  Kurallar: 850/1416  Kurallar: 900/1416  Kurallar: 950/1416  Kurallar: 1000/1416  Kurallar: 1050/1416  Kurallar: 1100/1416  Kurallar: 1150/1416  Kurallar: 1200/1416  Kurallar: 1250/1416  Kurallar: 1300/1416  Kurallar: 1350/1416  Kurallar: 1400/1416  Kurallar: 1416/1416  Kurallar: 1416/1416 — tamamlandi
+
+[8] Karsilastirma iliskileri yukleniyor...
+  Karsilastirmalar: 39/39  Karsilastirmalar: 39/39 — tamamlandi
+
+[9] Karar agaclari yukleniyor...
+  KararAgaci: 50/313  KararAgaci: 100/313  KararAgaci: 150/313  KararAgaci: 200/313  KararAgaci: 250/313  KararAgaci: 300/313  KararAgaci: 313/313  KararAgaci: 313/313 — tamamlandi
+
+[10] Kural-karakter eslemeleri yukleniyor...
+  KuralEslemeleri: 50/540  KuralEslemeleri: 100/540  KuralEslemeleri: 150/540  KuralEslemeleri: 200/540  KuralEslemeleri: 250/540  KuralEslemeleri: 300/540  KuralEslemeleri: 350/540  KuralEslemeleri: 400/540  KuralEslemeleri: 450/540  KuralEslemeleri: 500/540  KuralEslemeleri: 540/540  KuralEslemeleri: 540/540 — tamamlandi
+
+[11] TaxonProfile kayitlari yukleniyor...
+  TaxonProfiller: 36/36  TaxonProfiller: 36/36 — tamamlandi
+
+[✓] DOGRULAMA SORGULARI
+──────────────────────────────────────────────────
+  Module                   3  ✓
+  Genus                   75  ✓
+  Character               21  ✓
+  Value                  171  ✓
+  RuleItem               708  ✓
+  Status                   5  ✓
+  ObservationState         4  ✓
+  Question                78  ✓
+  Outcome                  9  —
+  TaxonProfile            18  ✓
+
+  BELONGS_TO              75 iliski
+  HAS_RULE               708 iliski
+  ALLOWS                 171 iliski
+  CLOSEST_COMPARISON      39 iliski
+  ANSWER                 173 iliski
+  ASKS_ABOUT              50 iliski
+  TREE_ENTRY               3 iliski
+  REFERS_TO              540 iliski
+  HAS_REFERENCE_SPECIES     6 iliski
+  HAS_ENVIRONMENT_PROFILE     0 iliski
+
+  Modul bazinda cins sayilari:
+    AGGLUTINATED     25  ✓
+    HYALINE          25  ✓
+    PORCELANEOUS     25  ✓
+
+  Karar agaci giris noktalari:
+    AGGLUTINATED     -> AGG_Q1
+    PORCELANEOUS     -> PORC_Q1
+    HYALINE          -> HYA_Q1
+
+  Ornek yol (Spiroplectammina):
+    ✓ AGGLUTINATED -> ... -> Spiroplectammina (derinlik: 5)
+
+══════════════════════════════════════════════════
+  TUM DOGRULAMALAR BASARILI ✓
+══════════════════════════════════════════════════
+
+Toplam sure: 44.9s

@@ -1,0 +1,115 @@
+{
+  "requested_but_not_found": [
+    "Foraminifer_Manuscript_v31.docx",
+    "Foraminifer_Supplementary_Material_S10.zip"
+  ],
+  "requested_S1_S9_parenthetical_copy": "User supplied unsuffixed archive path; this exact file, not an assumed (1) copy, was used.",
+  "archives": {
+    "S10_preparation": {
+      "source": "C:\\Users\\burak\\Desktop\\esogu\\foraminifera-fossil\\client\\src\\assets\\scs\\abc\\S10_Expert_Study_Preparation.zip",
+      "sha256": "d3f10fa95ba818f8d51a066db670bffb9bc7f8953ff0b20e98146ec545445ff5",
+      "crc_passed": true,
+      "checksum_entries": [
+        {
+          "path": "README_S10.md",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP01/Observation_Form.html",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP01/Observation_Form_TR_EN.docx",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP01/START_HERE_TR.txt",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP01/blank_observation_rows.csv",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP01/presentation_order.csv",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP02/Observation_Form.html",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP02/Observation_Form_TR_EN.docx",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP02/START_HERE_TR.txt",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP02/blank_observation_rows.csv",
+          "passed": true
+        },
+        {
+          "path": "forms/EXP02/presentation_order.csv",
+          "passed": true
+        },
+        {
+          "path": "frozen_v29/api/data/characters.json",
+          "passed": true
+        },
+        {
+          "path": "frozen_v29/api/data/rule_chr_mapping.json",
+          "passed": true
+        },
+        {
+          "path": "frozen_v29/api/src/services/scoring.js",
+          "passed": true
+        },
+        {
+          "path": "frozen_v29/eval/engine_bridge.cjs",
+          "passed": true
+        },
+        {
+          "path": "frozen_v29/version_lock.json",
+          "passed": true
+        },
+        {
+          "path": "technical_checks/browser_test.json",
+          "passed": true
+        },
+        {
+          "path": "technical_checks/current_readiness.json",
+          "passed": true
+        },
+        {
+          "path": "technical_checks/empty_actual_study_gate.json",
+          "passed": true
+        },
+        {
+          "path": "technical_checks/software_tests.json",
+          "passed": true
+        },
+        {
+          "path": "technical_checks/software_tests.txt",
+          "passed": true
+        }
+      ],
+      "version_lock_files_verified": 4,
+      "contains_analysis_script": false
+    },
+    "S1_S9": {
+      "classification": "V27_HISTORICAL_EVALUATION_ARCHIVE",
+      "source": "C:\\Users\\burak\\Desktop\\esogu\\foraminifera-fossil\\client\\src\\assets\\scs\\abc\\Foraminifer_Supplementary_Materials_S1-S9.zip",
+      "sha256": "a65384242649d55e76a534ce5135b134dd3229a7fd770d5d881427699974ac17",
+      "crc_passed": true,
+      "n_panels": 150,
+      "all_panel_hashes_verified": true,
+      "historical_scorer_sha256": "c19de11b1b8792850a667de65ef0ae596c252f4d507fab499bcfee71a9a68a67",
+      "historical_rules_sha256": "acb0354cf4a2b1af0ff6609b3b2b858923bb3a1f0bc1632838e84ab7a5229c35",
+      "not_the_repaired_V29_S9": true,
+      "SHA256SUMS_txt_present": false
+    }
+  },
+  "versions_are_distinct": true
+}

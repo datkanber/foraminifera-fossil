@@ -1,0 +1,14 @@
+{
+  "expert_comparison.py": "2c5c6dcbf91b3100de111be879228781885ee2f3624c0b8164055479694d1f1f",
+  "test_expert_comparison.py": "a488e0a0f6dedbedeccc531d74ea7140cc627a3bb5a0340bddf0ed9f7be16128",
+  "llm_observation_drafts.py": "57cb67f1e770fb19d1bfa34cf80919917e1ded27d598e203576c23fe4e306339",
+  "setup_llm_review_study.py": "fa583a3dfbfa88143e2244e18dc75d92456b3249a04d2c6a822a0fbc7d484fe5",
+  "llm_review_form.html": "8ff28b710b84c6306c93c566c19ab6e615a408a1b7f4aba660ee6c3cdd1f0ed1",
+  "build_llm_review_forms.py": "bec0f28e26ab46ac9f81cbd4a66a25bed8035c2144fd39f34d849cd95e95f6c0",
+  "build_llm_review_delivery.py": "b090a003cd185ecb96a300fa1470378d18798ab3e4e2c647ce99be1090fa2160",
+  "test_llm_review_workflow.py": "d44f80861f58902e443e6b1da14ae80c5dfc1e308f23a505c0863e41a2c4a163",
+  "test_llm_review_browser.cjs": "175e9b77a6d8e3ecca1a0bade8d39245968bc5cd3b50c8d5b0a6d7215569ab71",
+  "verify_llm_review_delivery.py": "ac66c16827caed1922c90eb5443d946ebcd28f2f83c35eac0798dff30e787f96",
+  "update_v31_review_design.py": "0c01f0cb8a61a4a35de0aab83ef6613da9b887f7302dfc6786bdc67763c93a65",
+  "requirements_expert_study.txt": "5fa153bfe197000eb2b20da7dd4285467fcea1e3b96ae2335a4de0a18cdd3790"
+}

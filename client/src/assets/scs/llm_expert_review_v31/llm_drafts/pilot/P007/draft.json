@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P007",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "The wall structure appears translucent and microgranular/hyaline in thin-section view."
+    },
+    "CHR_02": {
+      "value": "LENTICULAR",
+      "state": "PRESENT",
+      "reason": "Overall outline in this section is circular to slightly compressed disc-like/lenticular."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Numerous clearly defined septa divide the whorls into individual chambers."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Test is composed of numerous chambers arranged in spiral whorls."
+    },
+    "CHR_05": {
+      "value": "ANNULAR",
+      "state": "UNCERTAIN",
+      "reason": "Coiling is tightly spiraled, but outer chambers approach annular arrangement."
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "Symmetrical spiral growth expanding regularly outward from a central point in one plane."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling is restricted to a single equatorial plane."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Whorls embrace tightly and completely cover previous whorls."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Consistent planispiral coiling throughout ontogeny without sudden structural shifts."
+    },
+    "CHR_10": {
+      "value": "SUBDIVIDED",
+      "state": "PRESENT",
+      "reason": "Chambers show internal partitioning and subdivision visible in the later whorls."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets or partitions are visible within the larger chamber cavities."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Central proloculus is a simple, small rounded initial chamber."
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Regular radial partitions are clearly visible traversing the chamber interiors."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct vertical pillars intersecting the chamber layers are observed."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamber layers outside the main spiral whorls are absent."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly exposed in this equatorial thin-section plane."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No specialized peripheral marginal cord structure is visible along the rim."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Surface septal filaments cannot be observed in internal equatorial thin-section view."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The entire specimen outline is symmetrical and isolated within the matrix."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Insufficient data on multiple specimens to determine sexual dimorphism reliably."
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "Section passes through the center and displays the full spiral whorls symmetrically."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:43:42.445911+00:00",
+    "received_at": "2026-11-12T10:43:52.914987+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P007/view01.png",
+        "sha256": "888a15e60f1836fb72f8347abe0c76495e2736a481f3da714d66f91940ca7ac2",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_02.json",
+    "raw_provider_sha256": "80f006798e774f37eee14dbcaa680d71afda4a3b116b60b36d2e68596efaaf4c"
+  },
+  "expert_approval": null
+}

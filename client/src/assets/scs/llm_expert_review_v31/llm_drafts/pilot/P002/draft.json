@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P002",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Microcrystalline wall structure visible in transmitted light."
+    },
+    "CHR_02": {
+      "value": "FUSIFORM",
+      "state": "PRESENT",
+      "reason": "Test is elongated with tapered ends along the coiling axis."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Septa dividing chambers are clearly visible along the whorls."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers arranged in whorls are visible."
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Whorled coiled test with multiple chambers per whorl, not matching standard simple serial types."
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "Symmetrical coiled whorls visible around the central axis."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling proceeds within a single median plane."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later whorls envelop earlier ones completely along the axis."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "Coiling pattern remains consistent throughout ontogeny."
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Presence of multiple internal structural elements like septula and axial fillings."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary subdivisions within chambers (chamberlets) are visible."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Central proloculus is a single rounded chamber."
+    },
+    "CHR_13": {
+      "value": "VERTICAL",
+      "state": "PRESENT",
+      "reason": "Vertical partitions subdividing chambers are visible."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Distinct vertical pillars running through multiple whorls are absent."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets outside the main whorls."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly resolved in this cross-section view."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No differentiated marginal cord structure along the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External septal filaments are not visible in internal thin section."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Entire test is isolated in matrix without attachment scars."
+    },
+    "CHR_20": {
+      "value": "UNCERTAIN",
+      "state": "UNCERTAIN",
+      "reason": "Central proloculus size cannot be definitively categorized as megalospheric or microspheric without scale/comparison."
+    },
+    "CHR_21": {
+      "value": "AXIAL",
+      "state": "PRESENT",
+      "reason": "Section passes through the axis of coiling, showing symmetric elongate profile."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:39:16.141892+00:00",
+    "received_at": "2026-11-12T10:39:21.842180+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P002/view01.png",
+        "sha256": "8dd926eb0af77182120fac6f9510785408a7abb86af4dc4074c9b17dd8c33d2d",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_01.json",
+    "raw_provider_sha256": "01b71b784d98c166536ac8f4009fa6803cda844e725ec2946b81454042d6fe22"
+  },
+  "expert_approval": null
+}

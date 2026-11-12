@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P001",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "Clear translucent/calcitic wall structure visible in the thin-section image."
+    },
+    "CHR_02": {
+      "value": "LENTICULAR",
+      "state": "PRESENT",
+      "reason": "The overall shape of the sectioned test appears circular to slightly lenticular."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Septa and chambers are clearly visible throughout the interior and peripheral zones."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Multiple chambers are clearly visible arranged in concentric or spiral series."
+    },
+    "CHR_05": {
+      "value": "CYCLIC",
+      "state": "PRESENT",
+      "reason": "Chambers and partitions show a ring-like or cyclic arrangement surrounding the center."
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "UNCERTAIN",
+      "reason": "Coiling pattern is partially obscured by complex internal partitions, but appears planispiral or annular-cyclic."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Section passes symmetrically through a single median/equatorial plane."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "UNCERTAIN",
+      "reason": "Whorls appear tightly enveloped, but inner details are dense and complex."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No major ontogenetic arrangement shift is apparent within the section."
+    },
+    "CHR_10": {
+      "value": "COMPLEX",
+      "state": "PRESENT",
+      "reason": "Interior shows intricate network of partitions and structural elements."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets or subdivided spaces are visible in the peripheral and internal regions."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Central area is visible but heavily intersected by internal structures, making the exact embryonic apparatus uncertain."
+    },
+    "CHR_13": {
+      "value": "RETICULATE",
+      "state": "PRESENT",
+      "reason": "Internal partitions form a reticulate or net-like pattern across the chambers."
+    },
+    "CHR_14": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Pillar-like structures or dense vertical supports are visible among the partitions."
+    },
+    "CHR_15": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Lateral chamberlets cannot be clearly distinguished in this sectional view orientation."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertures are not clearly resolved in this internal section view."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct marginal cord is observed along the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface features like septal filaments are not visible in internal thin section."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "Test appears isolated and unattached in the matrix."
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Proloculus size variation / dimorphism cannot be confirmed without multiple specimens or clear megalospheric/microspheric comparison."
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "The view is centered symmetrically showing internal chamber arrangements and partitions across a median plane."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:39:03.639109+00:00",
+    "received_at": "2026-11-12T10:39:12.026968+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P001/view01.png",
+        "sha256": "22979a3b9e6fa80747d53db0ddcb4e4779fa3224a8b2aed2e20a157cabcb3a84",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_03.json",
+    "raw_provider_sha256": "5bd4e74fd92424c7731dea9c8c2303e1d435d1b5415ec3606e61ec257e420aa7"
+  },
+  "expert_approval": null
+}

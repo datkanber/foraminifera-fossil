@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-12T10:39:03.552824+00:00",
+  "before": {
+    "model": "gemini-3.6-flash",
+    "temperature": 0.2,
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "policy": "one fresh successful generation per case; no score-based selection, no reference/module label, publication identity or previous prediction in input",
+    "allowed_inputs": [
+      "coded image bytes",
+      "controlled vocabulary",
+      "neutral extraction instruction"
+    ]
+  },
+  "after": {
+    "model": "gemini-3.5-flash-lite",
+    "temperature": 0.2,
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "policy": "one fresh successful generation per case; no score-based selection, no reference/module label, publication identity or previous prediction in input",
+    "allowed_inputs": [
+      "coded image bytes",
+      "controlled vocabulary",
+      "neutral extraction instruction"
+    ]
+  },
+  "reason": "Configured model returned HTTP 503 high demand twice; no successful draft existed. Alternate model chosen for availability, not accuracy.",
+  "successful_drafts_before_switch": 0,
+  "preserved_failed_attempts": [
+    "llm_drafts\\pilot\\P001\\provider_attempt_01.json",
+    "llm_drafts\\pilot\\P001\\provider_attempt_02.json"
+  ]
+}

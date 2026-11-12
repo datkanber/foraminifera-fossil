@@ -1,0 +1,2211 @@
+[
+  {
+    "genus": "Ammodiscus",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "TUBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_04": "UNDIVIDED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_07": "SINGLE_PLANE",
+      "CHR_10": "SIMPLE"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Ammodiscus_M1",
+      "Ammodiscus_M2",
+      "Ammodiscus_M3",
+      "Ammodiscus_D1",
+      "Ammodiscus_D2",
+      "Ammodiscus_S1",
+      "Ammodiscus_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": [
+          "Ammodiscus_S1"
+        ]
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Glomospira",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "TUBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_04": "UNDIVIDED",
+      "CHR_06": "GLOMOSPIRAL",
+      "CHR_07": "CHANGING_PLANES",
+      "CHR_10": "SIMPLE"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Glomospira_M1",
+      "Glomospira_M2",
+      "Glomospira_M3",
+      "Glomospira_M4",
+      "Glomospira_D1",
+      "Glomospira_D2",
+      "Glomospira_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Saccammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "GLOBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_04": "UNDIVIDED",
+      "CHR_06": "UNCOILED"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Saccammina_M1",
+      "Saccammina_M2",
+      "Saccammina_M3",
+      "Saccammina_M4",
+      "Saccammina_D2",
+      "Saccammina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Psammosphaera",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "GLOBULAR",
+      "CHR_04": "UNDIVIDED"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Psammosphaera_M1",
+      "Psammosphaera_M2",
+      "Psammosphaera_M3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Bathysiphon",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "TUBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_04": "UNDIVIDED",
+      "CHR_06": "UNCOILED",
+      "CHR_07": "STRAIGHT_OR_GENTLY_CURVED_AXIS"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Bathysiphon_M1",
+      "Bathysiphon_M2",
+      "Bathysiphon_M3",
+      "Bathysiphon_M4",
+      "Bathysiphon_D1",
+      "Bathysiphon_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Rhabdammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "TUBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_07": "RADIAL_BRANCHING"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Rhabdammina_M1",
+      "Rhabdammina_M2",
+      "Rhabdammina_M3",
+      "Rhabdammina_D2",
+      "Rhabdammina_S1",
+      "Rhabdammina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": [
+          "Rhabdammina_S2"
+        ]
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Rhizammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "TUBULAR",
+      "CHR_04": "UNDIVIDED",
+      "CHR_07": "IRREGULAR_TANGLED_BRANCHING"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Rhizammina_M1",
+      "Rhizammina_M2",
+      "Rhizammina_M3",
+      "Rhizammina_D1",
+      "Rhizammina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Reophax",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "GLOBULAR",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Reophax_M1",
+      "Reophax_M2",
+      "Reophax_M3",
+      "Reophax_M4",
+      "Reophax_D1",
+      "Reophax_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": [
+          "Reophax_S2"
+        ]
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Hormosina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "GLOBULAR",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Hormosina_M1",
+      "Hormosina_M2",
+      "Hormosina_M3",
+      "Hormosina_M4",
+      "Hormosina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Caudammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Caudammina_M1",
+      "Caudammina_M2",
+      "Caudammina_M3",
+      "Caudammina_D1",
+      "Caudammina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Haplophragmoides",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "DISCOIDAL",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "SEMI_INVOLUTE",
+      "CHR_10": "SIMPLE"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Haplophragmoides_M1",
+      "Haplophragmoides_M2",
+      "Haplophragmoides_M3",
+      "Haplophragmoides_M4",
+      "Haplophragmoides_D1",
+      "Haplophragmoides_D3",
+      "Haplophragmoides_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Recurvoides",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "STREPTOSPIRAL"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Recurvoides_M1",
+      "Recurvoides_M2",
+      "Recurvoides_M3",
+      "Recurvoides_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Ammobaculites",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL",
+      "CHR_06": "UNCOILED",
+      "CHR_09": "PLANISPIRAL_TO_UNISERIAL"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Ammobaculites_M1",
+      "Ammobaculites_M2",
+      "Ammobaculites_M3",
+      "Ammobaculites_D1",
+      "Ammobaculites_D2",
+      "Ammobaculites_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Reticulophragmium",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "SEMI_INVOLUTE",
+      "CHR_10": "LABYRINTHIC",
+      "CHR_13": "RETICULATE"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Reticulophragmium_M1",
+      "Reticulophragmium_M2",
+      "Reticulophragmium_M3",
+      "Reticulophragmium_M4",
+      "Reticulophragmium_D1",
+      "Reticulophragmium_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Trochammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "TROCHOSPIRAL",
+      "CHR_07": "DISTINCT_SPIRAL_UMBILICAL_SIDES"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Trochammina_M1",
+      "Trochammina_M2",
+      "Trochammina_M3",
+      "Trochammina_M4",
+      "Trochammina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Rzehakina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "IRREGULAR_SERIAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Rzehakina_M1",
+      "Rzehakina_M2",
+      "Rzehakina_M3",
+      "Rzehakina_D1",
+      "Rzehakina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Textularia",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BISERIAL",
+      "CHR_09": "NONE",
+      "CHR_16": "INTERIOMARGINAL"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Textularia_M1",
+      "Textularia_M2",
+      "Textularia_M3",
+      "Textularia_M4",
+      "Textularia_D2",
+      "Textularia_S1",
+      "Textularia_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Spiroplectammina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BISERIAL",
+      "CHR_06": "PLANISPIRAL"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Spiroplectammina_M1",
+      "Spiroplectammina_M2",
+      "Spiroplectammina_M3",
+      "Spiroplectammina_D1",
+      "Spiroplectammina_D2",
+      "Spiroplectammina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Gaudryina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BISERIAL",
+      "CHR_09": "TRISERIAL_TO_BISERIAL"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Gaudryina_M1",
+      "Gaudryina_M2",
+      "Gaudryina_M3",
+      "Gaudryina_D1",
+      "Gaudryina_D2",
+      "Gaudryina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Dorothia",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "CONICAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BISERIAL",
+      "CHR_09": "TRISERIAL_TO_BISERIAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Dorothia_M1",
+      "Dorothia_M2",
+      "Dorothia_D1",
+      "Dorothia_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Clavulina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "ELONGATE",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "TRISERIAL",
+      "CHR_09": "TRISERIAL_TO_UNISERIAL"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Clavulina_M1",
+      "Clavulina_M2",
+      "Clavulina_M3",
+      "Clavulina_D1",
+      "Clavulina_D2",
+      "Clavulina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Karrerulina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "CONICAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "TRISERIAL",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Karrerulina_M1",
+      "Karrerulina_M2",
+      "Karrerulina_D1",
+      "Karrerulina_D3",
+      "Karrerulina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Coskinolina",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "CONICAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_13": "ABSENT"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Coskinolina_M1",
+      "Coskinolina_M3",
+      "Coskinolina_M4",
+      "Coskinolina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Dictyoconus",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "CONICAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_10": "COMPLEX",
+      "CHR_13": "RADIAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Dictyoconus_M1",
+      "Dictyoconus_M2",
+      "Dictyoconus_M3",
+      "Dictyoconus_M4",
+      "Dictyoconus_D2",
+      "Dictyoconus_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 4,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Barattolites",
+    "module": "AGGLUTINATED",
+    "values": {
+      "CHR_01": "AGGLUTINATED",
+      "CHR_02": "CONICAL",
+      "CHR_13": "SUBEPIDERMAL"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Barattolites_M1",
+      "Barattolites_M2",
+      "Barattolites_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Alveolina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "FUSIFORM",
+      "CHR_03": "PRESENT",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_11": "PRESENT"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Alveolina_M1",
+      "Alveolina_M2",
+      "Alveolina_M3",
+      "Alveolina_M4",
+      "Alveolina_M5",
+      "Alveolina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Glomalveolina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "GLOBULAR",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "TRILOCULINE",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_07": "CHANGING_PLANES",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_11": "PRESENT"
+    },
+    "available_morphological_characters": 7,
+    "source_rule_keys": [
+      "Glomalveolina_M1",
+      "Glomalveolina_M2",
+      "Glomalveolina_M3",
+      "Glomalveolina_M4",
+      "Glomalveolina_M5",
+      "Glomalveolina_D1",
+      "Glomalveolina_D2",
+      "Glomalveolina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Borelis",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_11": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Borelis_M1",
+      "Borelis_M2",
+      "Borelis_M3",
+      "Borelis_M4",
+      "Borelis_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Quinqueloculina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_11": "ABSENT",
+      "CHR_16": "TERMINAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Quinqueloculina_M1",
+      "Quinqueloculina_M2",
+      "Quinqueloculina_M3",
+      "Quinqueloculina_M4",
+      "Quinqueloculina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Hauerina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_11": "ABSENT",
+      "CHR_16": "MULTIPLE"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Hauerina_M1",
+      "Hauerina_M2",
+      "Hauerina_M3",
+      "Hauerina_M4",
+      "Hauerina_D2",
+      "Hauerina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Articulina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "ELONGATE",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_06": "UNCOILED"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Articulina_M1",
+      "Articulina_M2",
+      "Articulina_M3",
+      "Articulina_D1",
+      "Articulina_D2",
+      "Articulina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Triloculina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "TRIANGULAR",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "TRILOCULINE",
+      "CHR_10": "SIMPLE",
+      "CHR_16": "TERMINAL"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Triloculina_M1",
+      "Triloculina_M2",
+      "Triloculina_M3",
+      "Triloculina_M4",
+      "Triloculina_D2",
+      "Triloculina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Miliolinella",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "OVOID",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "TRILOCULINE",
+      "CHR_10": "SIMPLE"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Miliolinella_M1",
+      "Miliolinella_M2",
+      "Miliolinella_M3",
+      "Miliolinella_M4",
+      "Miliolinella_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Pyrgo",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "GLOBULAR",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BILOCULINE"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Pyrgo_M1",
+      "Pyrgo_M2",
+      "Pyrgo_M3",
+      "Pyrgo_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Pyrgoina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BILOCULINE",
+      "CHR_16": "MODIFIED_NECK"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Pyrgoina_M1",
+      "Pyrgoina_M2",
+      "Pyrgoina_M3",
+      "Pyrgoina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Sigmoilina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "OVOID",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "IRREGULAR_SERIAL",
+      "CHR_07": "CHANGING_PLANES",
+      "CHR_10": "SIMPLE"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Sigmoilina_M1",
+      "Sigmoilina_M2",
+      "Sigmoilina_M3",
+      "Sigmoilina_D1",
+      "Sigmoilina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Peneroplis",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "DISCOIDAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_09": "NONE"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Peneroplis_M1",
+      "Peneroplis_M2",
+      "Peneroplis_M3",
+      "Peneroplis_D2",
+      "Peneroplis_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Spirolina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL",
+      "CHR_06": "UNCOILED",
+      "CHR_09": "PLANISPIRAL_TO_UNISERIAL",
+      "CHR_16": "TERMINAL"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Spirolina_M1",
+      "Spirolina_M2",
+      "Spirolina_M3",
+      "Spirolina_D1",
+      "Spirolina_D2",
+      "Spirolina_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Coscinospira",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "ELONGATE",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "UNISERIAL",
+      "CHR_09": "PLANISPIRAL_TO_UNISERIAL",
+      "CHR_16": "CRIBRATE"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Coscinospira_M1",
+      "Coscinospira_M2",
+      "Coscinospira_M3",
+      "Coscinospira_M4",
+      "Coscinospira_D2",
+      "Coscinospira_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Dendritina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "DISCOIDAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_16": "DENDRITIC"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Dendritina_M1",
+      "Dendritina_M2",
+      "Dendritina_D1",
+      "Dendritina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Vertebralina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "ELONGATE",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_06": "UNCOILED"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Vertebralina_M1",
+      "Vertebralina_M2",
+      "Vertebralina_D1",
+      "Vertebralina_D2",
+      "Vertebralina_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Cornuspira",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "TUBULAR",
+      "CHR_03": "ABSENT",
+      "CHR_04": "UNDIVIDED",
+      "CHR_06": "PLANISPIRAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Cornuspira_M1",
+      "Cornuspira_M2",
+      "Cornuspira_M3",
+      "Cornuspira_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Nubecularia",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "TUBULAR",
+      "CHR_19": "ATTACHED"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Nubecularia_M1",
+      "Nubecularia_M2",
+      "Nubecularia_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Fabularia",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "FUSIFORM",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "BILOCULINE",
+      "CHR_08": "COMPLETELY_EMBRACING",
+      "CHR_10": "SUBDIVIDED"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Fabularia_M1",
+      "Fabularia_M2",
+      "Fabularia_M3",
+      "Fabularia_M4",
+      "Fabularia_D1",
+      "Fabularia_S1",
+      "Fabularia_S3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Lacazina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "DISCOIDAL",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_14": "PRESENT",
+      "CHR_16": "CRIBRATE"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Lacazina_M1",
+      "Lacazina_M2",
+      "Lacazina_D1",
+      "Lacazina_S1",
+      "Lacazina_S3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Pseudolacazina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "OVOID",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_13": "LONGITUDINAL_CONTINUOUS",
+      "CHR_14": "NON_ALTERNATING_PATTERN"
+    },
+    "available_morphological_characters": 5,
+    "source_rule_keys": [
+      "Pseudolacazina_M1",
+      "Pseudolacazina_M2",
+      "Pseudolacazina_M3",
+      "Pseudolacazina_M4",
+      "Pseudolacazina_D1",
+      "Pseudolacazina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 4,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Lacazinella",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "OVOID",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_13": "LOW_LONGITUDINAL"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Lacazinella_M1",
+      "Lacazinella_M2",
+      "Lacazinella_M3",
+      "Lacazinella_D2",
+      "Lacazinella_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Periloculina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_10": "SUBDIVIDED",
+      "CHR_12": "PERIEMBRYONIC_COMPLEX"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Periloculina_M1",
+      "Periloculina_M2",
+      "Periloculina_M3",
+      "Periloculina_D1",
+      "Periloculina_S1",
+      "Periloculina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Idalina",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_02": "COMPACT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Idalina_M1",
+      "Idalina_M2",
+      "Idalina_M3",
+      "Idalina_M4",
+      "Idalina_D1",
+      "Idalina_D3",
+      "Idalina_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Miliola",
+    "module": "PORCELANEOUS",
+    "values": {
+      "CHR_01": "PORCELANEOUS",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "QUINQUELOCULINE",
+      "CHR_10": "SIMPLE",
+      "CHR_16": "CRIBRATE"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Miliola_M1",
+      "Miliola_M2",
+      "Miliola_M3",
+      "Miliola_M4",
+      "Miliola_S1",
+      "Miliola_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 4,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Nummulites",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "INVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "PRESENT"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Nummulites_M1",
+      "Nummulites_M2",
+      "Nummulites_M3",
+      "Nummulites_M4",
+      "Nummulites_M5",
+      "Nummulites_D1",
+      "Nummulites_D3",
+      "Nummulites_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Assilina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "EVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Assilina_M1",
+      "Assilina_M2",
+      "Assilina_M3",
+      "Assilina_M4",
+      "Assilina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Operculina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "EVOLUTE"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Operculina_M1",
+      "Operculina_M2",
+      "Operculina_D1",
+      "Operculina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Ranikothalia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "INVOLUTE",
+      "CHR_14": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Ranikothalia_M1",
+      "Ranikothalia_M2",
+      "Ranikothalia_D1",
+      "Ranikothalia_D2",
+      "Ranikothalia_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Heterostegina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_11": "PRESENT",
+      "CHR_15": "ABSENT"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Heterostegina_M1",
+      "Heterostegina_M2",
+      "Heterostegina_D1",
+      "Heterostegina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Spiroclypeus",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_11": "PRESENT",
+      "CHR_14": "PRESENT",
+      "CHR_15": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Spiroclypeus_M1",
+      "Spiroclypeus_M2",
+      "Spiroclypeus_D1",
+      "Spiroclypeus_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Lockhartia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "TROCHOSPIRAL",
+      "CHR_14": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Lockhartia_M1",
+      "Lockhartia_M2",
+      "Lockhartia_M3",
+      "Lockhartia_D1",
+      "Lockhartia_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Kathina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_06": "TROCHOSPIRAL",
+      "CHR_14": "PRESENT"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Kathina_M1",
+      "Kathina_M2",
+      "Kathina_D1",
+      "Kathina_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Daviesina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "FLATTENED",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Daviesina_M1",
+      "Daviesina_M2",
+      "Daviesina_M3",
+      "Daviesina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Miscellanea",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_14": "PRESENT"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Miscellanea_M1",
+      "Miscellanea_D1",
+      "Miscellanea_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Laffitteina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "CENTRALLY_THICKENED",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Laffitteina_M1",
+      "Laffitteina_M2",
+      "Laffitteina_M3",
+      "Laffitteina_D2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Rotalia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "BICONVEX",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Rotalia_M1",
+      "Rotalia_M2",
+      "Rotalia_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Pararotalia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "ANGULAR_PERIPHERY",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Pararotalia_M1",
+      "Pararotalia_M2",
+      "Pararotalia_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Cuvillierina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_06": "TROCHOSPIRAL",
+      "CHR_10": "PERIPHERALLY_DIFFERENTIATED"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Cuvillierina_M1",
+      "Cuvillierina_M2",
+      "Cuvillierina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Ornatorotalia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "RADIALLY_ORNAMENTED",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Ornatorotalia_M1",
+      "Ornatorotalia_M2",
+      "Ornatorotalia_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Granorotalia",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "GRANULAR_SURFACE",
+      "CHR_06": "TROCHOSPIRAL"
+    },
+    "available_morphological_characters": 2,
+    "source_rule_keys": [
+      "Granorotalia_M1",
+      "Granorotalia_M2",
+      "Granorotalia_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Asterocyclina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_05": "ANNULAR",
+      "CHR_11": "RADIALLY_ELONGATE_ZONES",
+      "CHR_15": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Asterocyclina_M1",
+      "Asterocyclina_M2",
+      "Asterocyclina_M3",
+      "Asterocyclina_M4",
+      "Asterocyclina_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Discocyclina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_05": "ANNULAR",
+      "CHR_11": "ANNULAR_STOLONS",
+      "CHR_15": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Discocyclina_M1",
+      "Discocyclina_M2",
+      "Discocyclina_M3",
+      "Discocyclina_M5",
+      "Discocyclina_D1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Orbitoclypeus",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_05": "ANNULAR",
+      "CHR_12": "COMPLEX",
+      "CHR_15": "PRESENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Orbitoclypeus_M1",
+      "Orbitoclypeus_M2",
+      "Orbitoclypeus_M3",
+      "Orbitoclypeus_M4",
+      "Orbitoclypeus_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Nemkovella",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_05": "ANNULAR",
+      "CHR_12": "SIMPLE"
+    },
+    "available_morphological_characters": 3,
+    "source_rule_keys": [
+      "Nemkovella_M1",
+      "Nemkovella_M2",
+      "Nemkovella_M3",
+      "Nemkovella_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Lenticulina",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "LENTICULAR",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_11": "ABSENT",
+      "CHR_17": "ABSENT"
+    },
+    "available_morphological_characters": 4,
+    "source_rule_keys": [
+      "Lenticulina_M1",
+      "Lenticulina_M2",
+      "Lenticulina_M3",
+      "Lenticulina_D1",
+      "Lenticulina_D3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Palaeonummulites",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "GLOBULAR",
+      "CHR_03": "PRESENT",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_05": "IRREGULAR_SERIAL",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "INVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "PRESENT"
+    },
+    "available_morphological_characters": 8,
+    "source_rule_keys": [
+      "Palaeonummulites_M1",
+      "Palaeonummulites_M2",
+      "Palaeonummulites_M3",
+      "Palaeonummulites_M4",
+      "Palaeonummulites_M5",
+      "Palaeonummulites_M6",
+      "Palaeonummulites_D1",
+      "Palaeonummulites_D5",
+      "Palaeonummulites_S1"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Nummulitoides",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "DISCOIDAL",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "SEMI_INVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "PRESENT"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Nummulitoides_M1",
+      "Nummulitoides_M2",
+      "Nummulitoides_M3",
+      "Nummulitoides_M4",
+      "Nummulitoides_M5",
+      "Nummulitoides_M6",
+      "Nummulitoides_D1",
+      "Nummulitoides_S2",
+      "Nummulitoides_S3"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 3,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Planocamerinoides",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "FLATTENED",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "SEMI_INVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "PRESENT"
+    },
+    "available_morphological_characters": 6,
+    "source_rule_keys": [
+      "Planocamerinoides_M1",
+      "Planocamerinoides_M2",
+      "Planocamerinoides_M3",
+      "Planocamerinoides_M4",
+      "Planocamerinoides_M5",
+      "Planocamerinoides_M6",
+      "Planocamerinoides_D4",
+      "Planocamerinoides_S3",
+      "Planocamerinoides_S4"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": [
+          "Planocamerinoides_S3"
+        ]
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 2,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  },
+  {
+    "genus": "Chordoperculinoides",
+    "module": "HYALINE",
+    "values": {
+      "CHR_01": "HYALINE",
+      "CHR_02": "FLATTENED",
+      "CHR_04": "MULTICHAMBERED",
+      "CHR_06": "PLANISPIRAL",
+      "CHR_08": "INVOLUTE",
+      "CHR_11": "ABSENT",
+      "CHR_17": "STRONG",
+      "CHR_18": "STRONG_CONNECTED_SEPTAL_CANALS"
+    },
+    "available_morphological_characters": 7,
+    "source_rule_keys": [
+      "Chordoperculinoides_M1",
+      "Chordoperculinoides_M2",
+      "Chordoperculinoides_M3",
+      "Chordoperculinoides_M4",
+      "Chordoperculinoides_M5",
+      "Chordoperculinoides_M6",
+      "Chordoperculinoides_D4",
+      "Chordoperculinoides_S2"
+    ],
+    "constraint_conflicts": {
+      "mismatched_positive": {
+        "M": [],
+        "D": [],
+        "S": []
+      },
+      "matched_C": []
+    },
+    "candidate_assignments": 1,
+    "objective": "Lexicographic minimum M mismatches, D mismatches, C matches, S mismatches; no scorer rank or image labels used."
+  }
+]

@@ -9,7 +9,7 @@ function masters(dir){
  const result={};
  for(const r of JSON.parse(fs.readFileSync(path.join(dir,'rule_chr_mapping.json'),'utf8'))){
   result[r.genus]||={genus:r.genus,module:r.module,rules:[]};
-  result[r.genus].rules.push({level:levels[r.level],text:r.text,rule_key:r.rule_key,
+  result[r.genus].rules.push({level:levels[r.level],text:r.text,rule_key:r.rule_key,matchMode:r.match_mode,
    mappings:r.mappings.map(m=>({chrId:m.chr_id,value:m.value})).filter(m=>m.value)});
  }
  return result;
@@ -19,7 +19,7 @@ function b1(obs,genera,opts={}){
  const n=Object.entries(obs).filter(([c,o])=>!['CHR_01','CHR_21'].includes(c)&&o&&o.value&&!['UNCERTAIN','NOT_OBSERVABLE'].includes(o.state)).length;
  const ranking=[],excluded=[];
  for(const g of Object.values(genera)){
-  const failures=g.rules.filter(r=>['MANDATORY','DIAGNOSTIC'].includes(r.level)&&current.evaluateRuleM(h,r.mappings).verdict==='MISMATCH');
+  const failures=g.rules.filter(r=>['MANDATORY','DIAGNOSTIC'].includes(r.level)&&current.evaluateRuleM(h,r.mappings,r.matchMode).verdict==='MISMATCH');
   (failures.length?excluded:ranking).push({genus:g.genus,score:0,violated:failures.map(r=>r.rule_key)});
  }
  ranking.sort((a,b)=>a.genus.localeCompare(b.genus));
@@ -56,7 +56,7 @@ for(const cfg of input.configurations||[{id:'A0'}]){
   const genera=Object.fromEntries(Object.entries(all).filter(([,g])=>!c.module||g.module===c.module).map(([k,g])=>[k,cfg.counterfactual==='A3'?{...g,rules:g.rules.filter(r=>r.level!=='CONTRADICTORY')}:g]));
   const res=cfg.baseline==='B1'?b1(c.observations,genera,cfg.options):eng.scoreGenera(c.observations,genera,cfg.options);
   output.push({case_id:c.case_id,configuration:cfg.id,status:res.status,identification:res.identification,
-   ranking:res.ranking.map(r=>({genus:r.genus,score:r.score})),excluded:res.excluded.map(r=>r.genus)});
+   ranking:res.ranking.map(r=>({genus:r.genus,score:r.score})),excluded:res.excluded.map(r=>r.genus),sectionWarning:res.sectionWarning||null});
  }
 }
 process.stdout.write(JSON.stringify(output));

@@ -159,13 +159,18 @@ async function searchByName(scientificName) {
   const exactMatches = records.filter(
     (r) => (r.scientificname || "").toLowerCase() === nameLower
   );
-  const pool = exactMatches.length > 0 ? exactMatches : records;
+  const pool = (exactMatches.length > 0 ? exactMatches : records).filter(isForaminiferRecord);
 
   // Prefer accepted
   const accepted = pool.find(
     (r) => (r.status || "").toLowerCase() === "accepted"
   );
-  return accepted || pool[0];
+  return accepted || pool[0] || null;
+}
+
+function isForaminiferRecord(record) {
+  return (record.phylum||'').toLowerCase()==='foraminifera' ||
+    ['tubothalamea','globothalamea','monothalamea'].includes((record.class||'').toLowerCase());
 }
 
 /**
@@ -220,7 +225,8 @@ async function lookupTaxon(scientificName) {
 async function _doLookup(scientificName, normalizedName) {
   // 1. Check cache
   const cached = await getCachedResult(normalizedName).catch(() => null);
-  if (cached && cached.fresh) {
+    if (cached && cached.fresh && !(normalizedName==='idalina' &&
+        [761200,138042].includes(cached.data?.taxonomy?.aphiaId))) {
     return { ...cached.data, availability: { worms: "live" } };
   }
 
@@ -296,7 +302,8 @@ async function _doLookup(scientificName, normalizedName) {
     return { ...result, availability: { worms: "live" } };
   } catch (err) {
     // WoRMS failed — try stale cache
-    if (cached && cached.data) {
+    if (cached && cached.data && !(normalizedName==='idalina' &&
+        [761200,138042].includes(cached.data?.taxonomy?.aphiaId))) {
       return {
         ...cached.data,
         availability: { worms: "stale_cache" },
@@ -325,4 +332,5 @@ module.exports = {
   normalizeBool,
   extractClassification,
   extractFunctionalGroups,
+  isForaminiferRecord,
 };

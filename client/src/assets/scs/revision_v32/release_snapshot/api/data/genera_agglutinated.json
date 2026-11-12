@@ -1,0 +1,1710 @@
+{
+  "module": "AGGLUTINATED",
+  "genera": [
+    {
+      "order": 1,
+      "genus": "Ammodiscus",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Test composition = Agglutinated (Kavkı = Aglütinat)"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber (Bölünmemiş tübüler loca)"
+          },
+          {
+            "code": "M3",
+            "text": "True septa = Absent (Gerçek septa yok)"
+          },
+          {
+            "code": "M4",
+            "text": "Test = Coiled (Kavkı sarılmış)"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Regular planispiral tubular coiling (Düzenli planispiral tübüler sarılım)"
+          },
+          {
+            "code": "D2",
+            "text": "Coiling remains essentially in one plane (Sarılım esas olarak tek düzlemde)"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Discoidal outline (Diskoidal görünüm)"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal structure (Basit iç yapı)"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "True septa present"
+          },
+          {
+            "code": "C2",
+            "text": "Multichambered organization"
+          },
+          {
+            "code": "C3",
+            "text": "Irregular multidirectional coiling"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Glomospira"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 2,
+      "genus": "Glomospira",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "M3",
+            "text": "True septa absent"
+          },
+          {
+            "code": "M4",
+            "text": "Coiled tubular test"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Coiling changes planes (Sarılım düzlemleri değişir)"
+          },
+          {
+            "code": "D2",
+            "text": "Irregular/glomospiral three-dimensional appearance"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Compact, tangled or subglobular outline"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal architecture"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Perfectly regular single-plane planispiral coiling"
+          },
+          {
+            "code": "C2",
+            "text": "True chamber septa present"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Ammodiscus"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 3,
+      "genus": "Saccammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided single cavity"
+          },
+          {
+            "code": "M3",
+            "text": "Globular/subglobular or sac-like test"
+          },
+          {
+            "code": "M4",
+            "text": "Septa absent"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Simple sac-like single chamber"
+          },
+          {
+            "code": "D2",
+            "text": "No tubular coiling"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Aperture usually simple"
+          },
+          {
+            "code": "S2",
+            "text": "Wall finer/more coherent than typical coarse *Psammosphaera*"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Planispiral tube"
+          },
+          {
+            "code": "C2",
+            "text": "True multichambered organization"
+          },
+          {
+            "code": "C3",
+            "text": "Strong branching"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Psammosphaera"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 4,
+      "genus": "Psammosphaera",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Single undivided cavity"
+          },
+          {
+            "code": "M3",
+            "text": "Globular test"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Wall conspicuously constructed from relatively coarse sediment grains"
+          },
+          {
+            "code": "D2",
+            "text": "Very simple spherical architecture"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Irregular external surface"
+          },
+          {
+            "code": "S2",
+            "text": "No coiling"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Septate chambers"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral/trochospiral organization"
+          },
+          {
+            "code": "C3",
+            "text": "Elongate tubular test"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Saccammina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 5,
+      "genus": "Bathysiphon",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "M3",
+            "text": "Uncoiled"
+          },
+          {
+            "code": "M4",
+            "text": "Septa absent"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Long, relatively straight or gently curved tube"
+          },
+          {
+            "code": "D2",
+            "text": "Tube comparatively robust and regular"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Approximately constant tubular diameter"
+          },
+          {
+            "code": "S2",
+            "text": "Simple internal cavity"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Planispiral coiling"
+          },
+          {
+            "code": "C2",
+            "text": "Multichambered/septate test"
+          },
+          {
+            "code": "C3",
+            "text": "Strong radial branching"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Rhizammina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 6,
+      "genus": "Rhabdammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Tubular architecture"
+          },
+          {
+            "code": "M3",
+            "text": "Septa absent or no conventional chamber series"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Strong branching"
+          },
+          {
+            "code": "D2",
+            "text": "Branches commonly radiate from a central area"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Coarse agglutinated wall"
+          },
+          {
+            "code": "S2",
+            "text": "Large irregular test"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Simple unbranched straight tube"
+          },
+          {
+            "code": "C2",
+            "text": "Regular planispiral coiling"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Rhizammina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 7,
+      "genus": "Rhizammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Slender tubular architecture"
+          },
+          {
+            "code": "M3",
+            "text": "No conventional multichambered organization"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Very thin, flexible, irregularly branching/tangled tubes"
+          },
+          {
+            "code": "D2",
+            "text": "Less robust and less radially organized than *Rhabdammina*"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Irregular network-like appearance"
+          },
+          {
+            "code": "S2",
+            "text": "Fine agglutinated wall"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Thick straight regular tube"
+          },
+          {
+            "code": "C2",
+            "text": "Strong central radial branching"
+          },
+          {
+            "code": "C3",
+            "text": "Septate serial chambers"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Bathysiphon",
+        "Rhabdammina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 8,
+      "genus": "Reophax",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Uniserial"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Chambers globular, pyriform or elongate"
+          },
+          {
+            "code": "D2",
+            "text": "Chambers arranged sequentially in a single row"
+          },
+          {
+            "code": "D3",
+            "text": "Connections generally less distinctly necked than in *Hormosina*"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Irregular chamber enlargement"
+          },
+          {
+            "code": "S2",
+            "text": "Elongate overall form"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Biserial/triserial organization"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral adult growth"
+          },
+          {
+            "code": "C3",
+            "text": "Septa absent"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Hormosina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 9,
+      "genus": "Hormosina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Uniserial"
+          },
+          {
+            "code": "M4",
+            "text": "Septa present"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Globular/pyriform chambers"
+          },
+          {
+            "code": "D2",
+            "text": "Adjacent chambers linked by conspicuously narrow necks"
+          },
+          {
+            "code": "D3",
+            "text": "Bead- or necklace-like appearance"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Chambers relatively regular in shape"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Broad direct chamber connections characteristic of many *Reophax*"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial/triserial arrangement"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Reophax"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 10,
+      "genus": "Caudammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Uniserial/serial organization"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Elongate, ovate or bottle-shaped chambers"
+          },
+          {
+            "code": "D2",
+            "text": "Narrow caudate/tubular connections between chambers"
+          },
+          {
+            "code": "D3",
+            "text": "Characteristic elongated chamber profile"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Robust deep-water agglutinated morphology"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Compact globular chambers without elongated connections"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral architecture"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Hormosina",
+        "Reophax"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 11,
+      "genus": "Haplophragmoides",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Planispiral"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Chambers internally simple"
+          },
+          {
+            "code": "D2",
+            "text": "Planispiral growth persists through adult stage"
+          },
+          {
+            "code": "D3",
+            "text": "Commonly involute to semi-involute"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Discoidal/subglobular outline"
+          },
+          {
+            "code": "S2",
+            "text": "Rounded peripheral chambers"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Undivided tubular chamber"
+          },
+          {
+            "code": "C2",
+            "text": "Strong internal reticulation"
+          },
+          {
+            "code": "C3",
+            "text": "Adult uniserial uncoiling"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Ammodiscus",
+        "Reticulophragmium"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 12,
+      "genus": "Recurvoides",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Coiled"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Coiling axis changes during ontogeny"
+          },
+          {
+            "code": "D2",
+            "text": "Streptospiral/recurvoid arrangement"
+          },
+          {
+            "code": "D3",
+            "text": "Different sections may show different apparent coiling planes"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Compact/subglobular test"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Perfectly planar planispiral architecture"
+          },
+          {
+            "code": "C2",
+            "text": "Septa absent"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Glomospira"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 13,
+      "genus": "Ammobaculites",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Early part = Planispiral"
+          },
+          {
+            "code": "D2",
+            "text": "Adult part = Uncoiled/uniserial"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Elongated adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Clear transition between coiled and straight portions"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Adult remains planispiral throughout"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral → biserial transition"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Spiroplectammina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 8,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 14,
+      "genus": "Reticulophragmium",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Planispiral/recurvoid-related architecture"
+          },
+          {
+            "code": "M4",
+            "text": "Internal subdivision present"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Chambers possess complex reticulate/labyrinthic secondary subdivisions"
+          },
+          {
+            "code": "D2",
+            "text": "Internal structure substantially more complex than *Haplophragmoides*"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Relatively large, compact test"
+          },
+          {
+            "code": "S2",
+            "text": "Involute to semi-involute architecture"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Completely simple undivided chamber interiors"
+          },
+          {
+            "code": "C2",
+            "text": "Serial biserial/triserial test"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Haplophragmoides"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 15,
+      "genus": "Trochammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Trochospiral"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Low trochospiral chamber arrangement"
+          },
+          {
+            "code": "D2",
+            "text": "Spiral and umbilical sides distinguishable"
+          },
+          {
+            "code": "D3",
+            "text": "Chambers commonly inflated"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Umbilical region may be conspicuous"
+          },
+          {
+            "code": "S2",
+            "text": "Relatively simple chamber interiors"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Bilaterally symmetrical planispiral test"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial/triserial serial arrangement"
+          }
+        ]
+      },
+      "closest_comparisons": [],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 16,
+      "genus": "Rzehakina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Flattened, elongate to oval test"
+          },
+          {
+            "code": "D2",
+            "text": "Characteristic rzehakinid/sigmoid chamber organization"
+          },
+          {
+            "code": "D3",
+            "text": "Arrangement may appear transitional between enrolled and serial organization"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Bilateral compression"
+          },
+          {
+            "code": "S2",
+            "text": "Distinctive slit-like terminal apertural organization in suitable material"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Typical low trochospiral architecture"
+          },
+          {
+            "code": "C2",
+            "text": "Simple uniserial chain"
+          },
+          {
+            "code": "C3",
+            "text": "Septa absent"
+          }
+        ]
+      },
+      "closest_comparisons": [],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 17,
+      "genus": "Textularia",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          },
+          {
+            "code": "M4",
+            "text": "Biserial adult arrangement"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Chambers alternate regularly in two rows"
+          },
+          {
+            "code": "D2",
+            "text": "Biserial arrangement persists through observed adult part"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Elongate/tapering test"
+          },
+          {
+            "code": "S2",
+            "text": "Interiomarginal aperture"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Triserial early part clearly changing to biserial"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial → uniserial adult change"
+          },
+          {
+            "code": "C3",
+            "text": "Planispiral initial coil"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Spiroplectammina",
+        "Gaudryina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 9,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 18,
+      "genus": "Spiroplectammina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septa present"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Initial part = Planispiral"
+          },
+          {
+            "code": "D2",
+            "text": "Later/adult part = Biserial"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Flattened elongated adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Initial coil visible when preservation/section permits"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "No initial coil in a specimen where early growth is clearly preserved"
+          },
+          {
+            "code": "C2",
+            "text": "Planispiral → uniserial transition"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Textularia",
+        "Ammobaculites"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 19,
+      "genus": "Gaudryina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Early stage = Triserial"
+          },
+          {
+            "code": "D2",
+            "text": "Later stage = Biserial"
+          },
+          {
+            "code": "D3",
+            "text": "Distinct ontogenetic reduction in number of chamber rows"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Elongate/tapering test"
+          },
+          {
+            "code": "S2",
+            "text": "Triangular early cross-section"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Planispiral initial stage"
+          },
+          {
+            "code": "C2",
+            "text": "Triserial → uniserial transition"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Dorothia",
+        "Karrerulina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 20,
+      "genus": "Dorothia",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Serial chamber arrangement"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Early triserial stage generally passing into biserial adult stage"
+          },
+          {
+            "code": "D2",
+            "text": "More robust, commonly conical/tapering architecture than typical slender *Gaudryina*"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Comparatively thick test"
+          },
+          {
+            "code": "S2",
+            "text": "Distinct apertural morphology where visible"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Planispiral early coil"
+          },
+          {
+            "code": "C2",
+            "text": "Persistently low trochospiral test"
+          },
+          {
+            "code": "C3",
+            "text": "Uniserial adult stage"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Gaudryina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 21,
+      "genus": "Clavulina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Septate"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Early stage = Triserial"
+          },
+          {
+            "code": "D2",
+            "text": "Adult stage = Uniserial"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Elongated/clavate adult test"
+          },
+          {
+            "code": "S2",
+            "text": "Uniserial adult chambers conspicuous"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Triserial → biserial transition"
+          },
+          {
+            "code": "C2",
+            "text": "Biserial → uniserial transition"
+          }
+        ]
+      },
+      "closest_comparisons": [],
+      "notes": [
+        "Triserial → uniserial = **Clavulina**"
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 22,
+      "genus": "Karrerulina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M3",
+            "text": "Serial/coiled ontogenetic development"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Early trochospiral/triserial organization"
+          },
+          {
+            "code": "D2",
+            "text": "Later distinctly serial adult growth"
+          },
+          {
+            "code": "D3",
+            "text": "Elongate to conical test with characteristic aperture where preserved"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Compact early growth"
+          },
+          {
+            "code": "S2",
+            "text": "Fine-grained agglutinated wall"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Entirely simple planispiral adult"
+          },
+          {
+            "code": "C2",
+            "text": "Persistent simple biserial architecture without ontogenetic change"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Gaudryina",
+        "Dorothia"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 7,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 23,
+      "genus": "Coskinolina",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large benthic test"
+          },
+          {
+            "code": "M3",
+            "text": "Conical/orbitoliniform morphology"
+          },
+          {
+            "code": "M4",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M5",
+            "text": "Internal differentiation present"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Marginal chamber zone essentially undivided by an exoskeleton"
+          },
+          {
+            "code": "D2",
+            "text": "**No developed beams/rafters subdividing the marginal chamber lumen**"
+          },
+          {
+            "code": "D3",
+            "text": "Relatively simple conical internal architecture compared with exoskeleton-bearing relatives"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Pseudokeriothecal wall structure"
+          },
+          {
+            "code": "S2",
+            "text": "Large shallow-water benthic morphology"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Well-developed vertical exoskeletal partitions throughout marginal chamber zone"
+          },
+          {
+            "code": "C2",
+            "text": "Simple small serial DWAF morphology"
+          }
+        ]
+      },
+      "closest_comparisons": [],
+      "notes": [
+        "Conical + **no marginal exoskeleton** → strongly supports *Coskinolina*."
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 5,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 24,
+      "genus": "Dictyoconus",
+      "module": "AGGLUTINATED",
+      "flag": null,
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large conical benthic test"
+          },
+          {
+            "code": "M3",
+            "text": "Multichambered"
+          },
+          {
+            "code": "M4",
+            "text": "Complex internal subdivision"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "Strongly differentiated internal architecture"
+          },
+          {
+            "code": "D2",
+            "text": "Numerous radial/secondary subdivisions"
+          },
+          {
+            "code": "D3",
+            "text": "Reticulate or highly compartmentalized appearance in appropriate sections"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Broad conical test"
+          },
+          {
+            "code": "S2",
+            "text": "Complex marginal and central chamber differentiation"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Completely undivided marginal/internal chamber spaces"
+          },
+          {
+            "code": "C2",
+            "text": "Small serial test"
+          }
+        ]
+      },
+      "closest_comparisons": [
+        "Coskinolina"
+      ],
+      "notes": [],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 6,
+        "has_scoring_diagnostic": false,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    },
+    {
+      "order": 25,
+      "genus": "Barattolites",
+      "module": "AGGLUTINATED",
+      "flag": "TAXONOMICALLY FLAGGED CARD",
+      "rules": {
+        "M": [
+          {
+            "code": "M1",
+            "text": "Agglutinated"
+          },
+          {
+            "code": "M2",
+            "text": "Large conical/orbitoliniform test"
+          },
+          {
+            "code": "M3",
+            "text": "Complex internally partitioned architecture"
+          }
+        ],
+        "D": [
+          {
+            "code": "D1",
+            "text": "High-conical morphology"
+          },
+          {
+            "code": "D2",
+            "text": "Radial/subepidermal internal partitions reported in the original generic concept"
+          }
+        ],
+        "S": [
+          {
+            "code": "S1",
+            "text": "Shallow-water larger benthic architecture"
+          }
+        ],
+        "C": [
+          {
+            "code": "C1",
+            "text": "Small DWAF-type morphology"
+          },
+          {
+            "code": "C2",
+            "text": "No internal partitions"
+          }
+        ]
+      },
+      "closest_comparisons": [],
+      "notes": [],
+      "system_flags": [
+        "taxonomicReviewRequired = TRUE",
+        "familyAssignment = review",
+        "useAsTerminalGenus = conditional"
+      ],
+      "mapping_curation": {
+        "date": "2026-11-11",
+        "scoring_rules": 4,
+        "has_scoring_diagnostic": true,
+        "independent_expert_validated": false,
+        "mapping_master": "rule_chr_mapping.json"
+      }
+    }
+  ]
+}

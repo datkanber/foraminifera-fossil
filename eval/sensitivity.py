@@ -38,7 +38,7 @@ def configurations():
 def main():
     configs=configurations();write('sensitivity_configurations.json',configs)
     all_summary=[];all_rows=[];case_results=[]
-    for cases in [path_cases(),panel_cases(),panel_cases(True)]:
+    for cases in [path_cases(),panel_cases(False),panel_cases(True)]:
         dataset=cases[0]['dataset'];print('Scoring',dataset,len(cases),'x',len(configs),flush=True)
         results=engine(cases,configs);n=len(cases);baseline=results[:n]
         for i,cfg in enumerate(configs):
@@ -67,7 +67,7 @@ def main():
             for module in ['ALL']+sorted(set(c.get('reference_module',c['module']) or 'UNKNOWN' for c in cases)):
                 chosen=[x for x in rows if module=='ALL' or x['module']==module]
                 before_after.append({'version':label,'dataset':group['dataset'],'module':module,**summary(chosen)})
-        if group['dataset']=='panels':
+        if group['dataset']==('panels_legacy_normalized' if V32 else 'panels'):
             for c,r in zip(cases,before):
                 archived=read(PANEL/'raw'/f"{c['case_id']}.json")['score']
                 assert r['status']==archived['status'] and r['identification']==archived['identification']
@@ -77,7 +77,7 @@ def main():
     write('sensitivity_provenance.json',{'inputs':input_hashes(),'configurations':len(configs),'p':.9,'threshold_grid':27,
       'rbo_source':'https://www.williamwebber.com/research/papers/wmz10_tois.pdf, Eq. 32',
       'ties':'RBO uses actual deterministic service order; Acc@k uses fractional score ties. Empty/empty ranking similarity=1, not a correct identification.',
-      'normalization':'Primary = archived application-normalized sheets; secondary = restore raw UNCERTAIN/NOT_OBSERVABLE only.',
+      'normalization':'v32 primary = original provider receipts through the corrected production normalizer; legacy normalized sheets are a paired historical comparator.' if V32 else 'Primary = archived application-normalized sheets; secondary = restore raw UNCERTAIN/NOT_OBSERVABLE only.',
       'limits':'Development sensitivity, no weight tuning on a held-out set and no new model requests.'})
     print('Sensitivity complete; before/after replays verified against archived originals.',flush=True)
 

@@ -1,0 +1,85 @@
+
+> api@1.0.0 test
+> node --test test/*.test.js
+
+✔ consistency.test.js - Check 104 paths against Engine M (57.1865ms)
+✔ sensitivity options preserve default and do not mutate observations (5.2779ms)
+✔ tauObs affects output state while preserving the ranking (0.6089ms)
+✔ tauNoMatch is applied only when no active candidate remains (1.3939ms)
+✔ weight sign and threshold validation catches invalid experiment settings (11.8029ms)
+✔ scoring.table13.test.js - Tablo XIII A (6.0891ms)
+✔ scoring.table13.test.js - Tablo XIII B (0.9527ms)
+✔ evaluateRuleM - single character unobserved -> NEUTRAL (2.0463ms)
+✔ evaluateRuleM - two characters, one observed and matching, one unobserved -> MATCH (0.4588ms)
+✔ evaluateRuleM - two characters, one matching, one mismatching -> MISMATCH (1.078ms)
+✔ evaluateRuleM - two alternative states, one observed -> MATCH (0.5197ms)
+✔ evaluateRuleM - implication CHR_17 STRONG implies PRESENT (0.5022ms)
+✔ evaluateRuleM - NOT_OBSERVABLE and UNCERTAIN never mismatch (0.2864ms)
+✔ scoreGenera - A=empty => NO_MATCH or INDETERMINATE (2.2143ms)
+✔ scoreGenera - implied characters do not artificially inflate nObserved (0.765ms)
+✔ scoreGenera - nObserved < 2 => INDETERMINATE (11.0004ms)
+✔ scoreGenera - tie -> CANDIDATE_GENUS (1.2415ms)
+✔ Every controlled tentative value stays outside evidence for both neutral states (15.171ms)
+✔ Invalid state or invalid absence never supplies positive evidence (0.4937ms)
+✔ Partitions OR pillars: an unobserved alternative cannot cause exclusion (0.7348ms)
+✔ A compound contradiction requires both adult-ontogeny and coiling observations (0.1956ms)
+✔ Oblique-section warning names affected rules without altering ranking (2.4399ms)
+✔ Idalina rejects the documented molluscan homonym without inventing an AphiaID (3.053ms)
+✔ Historical Planocamerinoides is distinguished from its accepted registry target (0.3935ms)
+▶ Foraminifer domain guard
+  ✔ rejects the documented Idalina molluscan homonym (1.8951ms)
+✔ Foraminifer domain guard (4.5008ms)
+▶ normalizeBool
+  ✔ should normalize 1 to true (0.7199ms)
+  ✔ should normalize "1" to true (0.4126ms)
+  ✔ should normalize true to true (6.1916ms)
+  ✔ should normalize 0 to false (0.6966ms)
+  ✔ should normalize "0" to false (0.1622ms)
+  ✔ should normalize false to false (0.7904ms)
+  ✔ should normalize null to null (0.9242ms)
+  ✔ should normalize undefined to null (0.197ms)
+  ✔ should normalize unknown string to null (0.4708ms)
+  ✔ should normalize empty string to null (0.3272ms)
+✔ normalizeBool (12.2376ms)
+▶ extractClassification
+  ✔ should extract Order, Superfamily, Family, Genus from nested tree (2.0693ms)
+  ✔ should handle case-insensitive rank matching (0.1208ms)
+  ✔ should return all nulls for null input (1.0518ms)
+  ✔ should return all nulls for empty classification (0.0877ms)
+  ✔ should handle partial classification tree (0.0762ms)
+✔ extractClassification (3.7937ms)
+▶ extractFunctionalGroups
+  ✔ should extract functional groups from attributes (0.166ms)
+  ✔ should return empty array for no matching attributes (0.0938ms)
+  ✔ should return empty array for null input (0.0558ms)
+  ✔ should not duplicate values (0.0574ms)
+✔ extractFunctionalGroups (0.4769ms)
+▶ Accepted vs unaccepted name handling
+  ✔ should identify accepted status correctly (0.0796ms)
+  ✔ should preserve both queried and accepted names for unaccepted records (0.0645ms)
+✔ Accepted vs unaccepted name handling (0.207ms)
+▶ Species vs Genus data separation
+  ✔ should not label species records as genus data (0.1763ms)
+  ✔ should allow genus-level records without generalization warning (0.065ms)
+✔ Species vs Genus data separation (0.2985ms)
+▶ Opertorbitolites name preservation
+  ✔ should not silently change Opertorbitolites (0.0614ms)
+  ✔ should flag Opertorbitolites as needing taxonomic review (0.0686ms)
+✔ Opertorbitolites name preservation (0.1887ms)
+▶ Case-insensitive search
+  ✔ should match lowercase search against mixed-case names (0.0893ms)
+  ✔ should match uppercase search against mixed-case names (0.0548ms)
+  ✔ should return all when search is empty (0.052ms)
+✔ Case-insensitive search (0.2761ms)
+▶ WoRMS timeout fallback behavior
+  ✔ should return local data structure when WoRMS is unavailable (0.0749ms)
+  ✔ should return stale cache when WoRMS is unavailable but cache exists (0.0867ms)
+✔ WoRMS timeout fallback behavior (0.2108ms)
+ℹ tests 55
+ℹ suites 9
+ℹ pass 55
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 354.2397

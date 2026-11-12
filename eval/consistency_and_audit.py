@@ -23,6 +23,7 @@ import collections
 import itertools
 import sys
 import os
+from section_context import section_warning
 
 # Force UTF-8 stdout on Windows to handle Turkish characters in rule text
 if sys.stdout.encoding != "utf-8":
@@ -218,6 +219,11 @@ def verdict_M(h, r):
     groups = collections.defaultdict(set)
     for c, v in r["pairs"]:
         groups[c].add(v)
+    if r.get('match_mode') == 'ALL_OBSERVED' and any(not h.get(c) for c in groups):return 'NEUTRAL',set()
+    if r.get('match_mode') == 'ANY':
+        held={(c,v) for c,vs in groups.items() for v in vs if v in h.get(c,set())}
+        if held:return 'MATCH',held
+        return ('MISMATCH' if all(h.get(c) for c in groups) else 'NEUTRAL'),set()
     anyhold = False
     held = set()
     for c, vs in groups.items():
@@ -236,6 +242,7 @@ def engine_M(obs, module):
     Returns (active_ranking, all_results, status, top_genus).
     """
     h = H(obs)
+    section_context=section_warning(obs,[r for r in rules if r['module']==module])
     res = []
     for (m, g), rs in genera.items():
         if m != module:
@@ -270,7 +277,7 @@ def engine_M(obs, module):
         excl = mv or (nc >= 1 and s < 0)
         res.append(dict(
             g=g, s=s, nd=nd, D=Dset, nc=nc,
-            m01=m_non01, dnm=d_neutral_mapped, excl=excl,
+            m01=m_non01, dnm=d_neutral_mapped, excl=excl, sectionWarning=section_context,
         ))
 
     act = sorted(

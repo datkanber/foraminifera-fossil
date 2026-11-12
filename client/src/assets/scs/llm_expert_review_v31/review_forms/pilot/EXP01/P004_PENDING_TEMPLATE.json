@@ -1,0 +1,163 @@
+{
+  "status": "EXPERT_REVIEW_PENDING",
+  "specimen_id": "P004",
+  "phase": "pilot",
+  "observer_code": "EXP01",
+  "source_draft_sha256": "32b70b61a91bfdad6c3a8a0751259177d8151aa4ef8d31da18f988b15850bdb5",
+  "expert_approval": null,
+  "observations": {
+    "CHR_01": {
+      "value": "AGGLUTINATED",
+      "state": "PRESENT",
+      "reason": "Test wall appears granular and dark, typical of agglutinated composition.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_02": {
+      "value": "HIGH_CONICAL",
+      "state": "PRESENT",
+      "reason": "The main test shape is distinctly conical with a high profile expanding toward the base.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Clearly visible partitions dividing the interior into multiple chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "Numerous chambers are clearly visible throughout the specimen.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_05": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Initial coiled or trochospiral arrangement followed by expanding series.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_06": {
+      "value": "TROCHOSPIRAL",
+      "state": "PRESENT",
+      "reason": "Initial portion exhibits a small coiled spiral arrangement.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_07": {
+      "value": "CHANGING_PLANES",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled arrangement to an expanding conical serial stage.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_08": {
+      "value": "EVOLUTE",
+      "state": "UNCERTAIN",
+      "reason": "Early whorls appear exposed, but details are partially obscured.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_09": {
+      "value": "OTHER",
+      "state": "PRESENT",
+      "reason": "Transition from an initial coiled section to an expanding multichambered conical series.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_10": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "Chambers appear generally simple without complex internal labyrinthic subdivision.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_11": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No secondary chamberlets are visible within the main chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber area is visible near the apex but lacks clear detail.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_13": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No radial or vertical internal partitions visible spanning chambers.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No distinct pillars observed in the interior.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No lateral chamberlets visible along the flanks.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural region is not clearly preserved or visible in this section plane.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No marginal cord structure is visible.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "No septal filaments discernible on the outer surface.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The entire test outline is completely isolated and shows no attachment structures.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_20": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Dimorphism cannot be determined from the single random section shown.",
+      "review_action": null,
+      "review_note": ""
+    },
+    "CHR_21": {
+      "value": "AXIAL",
+      "state": "PRESENT",
+      "reason": "Section cuts through the apex and symmetrical axis of the conical test.",
+      "review_action": null,
+      "review_note": ""
+    }
+  },
+  "timing": {
+    "started_at": null,
+    "completed_at": null,
+    "active_seconds": null
+  },
+  "attestations": null
+}

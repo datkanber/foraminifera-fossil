@@ -1,0 +1,35 @@
+(a) contradictory rule repeats a positive pair      0 rules
+(b) mandatory rule conflicts with M/D rule          0 rule pairs
+(c) negated text, positive mapping (screen)         4 rules
+       Caudammina_C1 [C]: "Compact globular chambers without elongated connections" -> [('CHR_02', 'GLOBULAR')]
+       Karrerulina_C2 [C]: "Persistent simple biserial architecture without ontogenetic change" -> [('CHR_05', 'BISERIAL')]
+       Pseudolacazina_D1 [D]: "Lacazina-type regular alternating pillar pattern absent" -> [('CHR_14', 'NON_ALTERNATING_PATTERN')]
+       Nummulitoides_C2 [C]: "Completely evolute adult whorls with no clasping of the previous marginal cord" -> [('CHR_08', 'EVOLUTE')]
+(d) pair counted more than once in a genus          0 pairs
+(e) mandatory rule without mapping                 20 rules
+       Ammodiscus_M4
+       Recurvoides_M4
+       Dorothia_M3
+       Karrerulina_M3
+       Coskinolina_M2
+       Coskinolina_M5
+       Barattolites_M3
+       Dendritina_M3
+       Lacazina_M3
+       Lacazinella_M4
+       Idalina_M4
+       Operculina_M3
+       Ranikothalia_M3
+       Heterostegina_M3
+       Spiroclypeus_M3
+       Kathina_M3
+       Miscellanea_M2
+       Cuvillierina_M3
+       Discocyclina_M4
+       Lenticulina_M4
+(f) genus without scoring diagnostic rule           2 genera
+       Psammosphaera (AGGLUTINATED)
+       Alveolina (PORCELANEOUS)
+(g) tree answer outside vocabulary                  0 answers
+(h) character asked again on a path                 0 nodes
+(i) genus without exactly one module                0 genera

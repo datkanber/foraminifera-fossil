@@ -1,0 +1,35 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"observations\": {\n    \"CHR_01\": {\n      \"value\": \"HYALINE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The test shows clear calcareous hyaline wall structure under transmitted light.\"\n    },\n    \"CHR_02\": {\n      \"value\": \"DISCOIDAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The overall test profile in this section is flattened and discoidal.\"\n    },\n    \"CHR_03\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Numerous curved septa dividing chambers are clearly visible throughout.\"\n    },\n    \"CHR_04\": {\n      \"value\": \"MULTICHAMBERED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The test consists of numerous chambers arranged in multiple whorls.\"\n    },\n    \"CHR_05\": {\n      \"value\": \"CYCLIC\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers form continuous concentric or closely appressed cyclical arrangements in later stages.\"\n    },\n    \"CHR_06\": {\n      \"value\": \"PLANISPIRAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The early portion displays a planispiral coiling pattern around the center.\"\n    },\n    \"CHR_07\": {\n      \"value\": \"SINGLE_PLANE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Coiling occurs within a single median plane as shown by the symmetrical spiral growth.\"\n    },\n    \"CHR_08\": {\n      \"value\": \"INVOLUTE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Later whorls deeply embrace and envelop earlier whorls.\"\n    },\n    \"CHR_09\": {\n      \"value\": \"NONE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"No major ontogenetic change in chamber arrangement is observed from early to late stages.\"\n    },\n    \"CHR_10\": {\n      \"value\": \"SUBDIVIDED\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Chambers are partitioned internally by secondary partitions or septula.\"\n    },\n    \"CHR_11\": {\n      \"value\": \"PRESENT\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Secondary chamberlets are visible as subdivisions within the main chambers.\"\n    },\n    \"CHR_12\": {\n      \"value\": \"SIMPLE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The central proloculus is a simple rounded initial chamber.\"\n    },\n    \"CHR_13\": {\n      \"value\": \"RADIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"Radial partitions/septula are clearly visible subdividing the chambers.\"\n    },\n    \"CHR_14\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Distinct columnar pillars are absent in this equatorial section.\"\n    },\n    \"CHR_15\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"Lateral chamberlets outside the main equatorial layer are not observed in this view.\"\n    },\n    \"CHR_16\": {\n      \"value\": \"NOT_OBSERVABLE\",\n      \"state\": \"NOT_OBSERVABLE\",\n      \"reason\": \"Apertural details are not clearly resolved in this specific section plane.\"\n    },\n    \"CHR_17\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"A specialized marginal cord structure is not differentiated at the periphery.\"\n    },\n    \"CHR_18\": {\n      \"value\": \"ABSENT\",\n      \"state\": \"ABSENT\",\n      \"reason\": \"External surface septal filaments cannot be observed on this internal thin section.\"\n    },\n    \"CHR_19\": {\n      \"value\": \"FREE\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The complete isolated specimen outline indicates a free-living habit.\"\n    },\n    \"CHR_20\": {\n      \"value\": \"UNCERTAIN\",\n      \"state\": \"UNCERTAIN\",\n      \"reason\": \"Initial chamber size allows possible megalospheric form, but insufficient comparative data prevents definitive dimorphism scoring.\"\n    },\n    \"CHR_21\": {\n      \"value\": \"EQUATORIAL\",\n      \"state\": \"PRESENT\",\n      \"reason\": \"The section passes through the central proloculus and shows the median plane of coiling.\"\n    }\n  }\n}",
+            "thoughtSignature": "EmAKXgFpFH0Tmrvk96d2llOFAvIzTYytblt4KY6kx+sL096KOLFyClZBw9vEHC38hWuJWGHx2W22SxTRgJRMcNISbwpbz0aDrh19aK48TqmQFRoZezGaFcHyQwIhQ2srOb4="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3718,
+    "candidatesTokenCount": 1054,
+    "totalTokenCount": 4772,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2645
+      },
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1073
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "55f1aouJJo-qnsEPrafQoAQ"
+}

@@ -28,6 +28,9 @@ def build_profiles():
         for m in r['mappings']:
             if m.get('value'):constraints[m['chr_id']].add(m['value'])
         observed=[bool(h[c]&values) for c,values in constraints.items() if c in h]
+        if r.get('match_mode')=='ALL_OBSERVED' and len(observed)<len(constraints):return 'NEUTRAL'
+        if r.get('match_mode')=='ANY':
+            return 'MATCH' if any(observed) else 'MISMATCH' if len(observed)==len(constraints) else 'NEUTRAL'
         return 'MISMATCH' if False in observed else 'MATCH' if observed else 'NEUTRAL'
     for genus,rs in groups.items():
         domains=collections.defaultdict(set)

@@ -1,0 +1,131 @@
+{
+  "status": "LLM_DRAFT",
+  "specimen_id": "P003",
+  "phase": "pilot",
+  "observations": {
+    "CHR_01": {
+      "value": "HYALINE",
+      "state": "PRESENT",
+      "reason": "The test shows clear calcareous hyaline wall structure under transmitted light."
+    },
+    "CHR_02": {
+      "value": "DISCOIDAL",
+      "state": "PRESENT",
+      "reason": "The overall test profile in this section is flattened and discoidal."
+    },
+    "CHR_03": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Numerous curved septa dividing chambers are clearly visible throughout."
+    },
+    "CHR_04": {
+      "value": "MULTICHAMBERED",
+      "state": "PRESENT",
+      "reason": "The test consists of numerous chambers arranged in multiple whorls."
+    },
+    "CHR_05": {
+      "value": "CYCLIC",
+      "state": "PRESENT",
+      "reason": "Chambers form continuous concentric or closely appressed cyclical arrangements in later stages."
+    },
+    "CHR_06": {
+      "value": "PLANISPIRAL",
+      "state": "PRESENT",
+      "reason": "The early portion displays a planispiral coiling pattern around the center."
+    },
+    "CHR_07": {
+      "value": "SINGLE_PLANE",
+      "state": "PRESENT",
+      "reason": "Coiling occurs within a single median plane as shown by the symmetrical spiral growth."
+    },
+    "CHR_08": {
+      "value": "INVOLUTE",
+      "state": "PRESENT",
+      "reason": "Later whorls deeply embrace and envelop earlier whorls."
+    },
+    "CHR_09": {
+      "value": "NONE",
+      "state": "PRESENT",
+      "reason": "No major ontogenetic change in chamber arrangement is observed from early to late stages."
+    },
+    "CHR_10": {
+      "value": "SUBDIVIDED",
+      "state": "PRESENT",
+      "reason": "Chambers are partitioned internally by secondary partitions or septula."
+    },
+    "CHR_11": {
+      "value": "PRESENT",
+      "state": "PRESENT",
+      "reason": "Secondary chamberlets are visible as subdivisions within the main chambers."
+    },
+    "CHR_12": {
+      "value": "SIMPLE",
+      "state": "PRESENT",
+      "reason": "The central proloculus is a simple rounded initial chamber."
+    },
+    "CHR_13": {
+      "value": "RADIAL",
+      "state": "PRESENT",
+      "reason": "Radial partitions/septula are clearly visible subdividing the chambers."
+    },
+    "CHR_14": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Distinct columnar pillars are absent in this equatorial section."
+    },
+    "CHR_15": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "Lateral chamberlets outside the main equatorial layer are not observed in this view."
+    },
+    "CHR_16": {
+      "value": "NOT_OBSERVABLE",
+      "state": "NOT_OBSERVABLE",
+      "reason": "Apertural details are not clearly resolved in this specific section plane."
+    },
+    "CHR_17": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "A specialized marginal cord structure is not differentiated at the periphery."
+    },
+    "CHR_18": {
+      "value": "ABSENT",
+      "state": "ABSENT",
+      "reason": "External surface septal filaments cannot be observed on this internal thin section."
+    },
+    "CHR_19": {
+      "value": "FREE",
+      "state": "PRESENT",
+      "reason": "The complete isolated specimen outline indicates a free-living habit."
+    },
+    "CHR_20": {
+      "value": "UNCERTAIN",
+      "state": "UNCERTAIN",
+      "reason": "Initial chamber size allows possible megalospheric form, but insufficient comparative data prevents definitive dimorphism scoring."
+    },
+    "CHR_21": {
+      "value": "EQUATORIAL",
+      "state": "PRESENT",
+      "reason": "The section passes through the central proloculus and shows the median plane of coiling."
+    }
+  },
+  "provenance": {
+    "model_requested": "gemini-3.5-flash-lite",
+    "model_version_returned": "gemini-3.5-flash-lite",
+    "generated_at": "2026-11-12T10:41:42.655326+00:00",
+    "received_at": "2026-11-12T10:41:47.590525+00:00",
+    "prompt_summary": "Controlled 21-character visual observation only; no taxonomic prediction or reference context.",
+    "prompt_sha256": "216c1047dc39ebdca310374d8cda05b9bbc9d1bf65687694fa0c6b9830f5bc42",
+    "dictionary_sha256": "3856767f038925140e8535242ce3fb9bfc1073aad930e45631e18797b8ce0158",
+    "images": [
+      {
+        "coded_file": "P003/view01.png",
+        "sha256": "f4eea280cc734d87ce6a67e2ed63a8bfd0bf5bd7c4a009dd84ac5366d5446fba",
+        "mime_type": "image/png"
+      }
+    ],
+    "raw_provider_file": "provider_attempt_02.json",
+    "raw_provider_sha256": "fc1d28c189d471a088d21b9fab51474961b47802e63bfd15c49c6c7138c399be"
+  },
+  "expert_approval": null
+}

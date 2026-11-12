@@ -129,9 +129,10 @@ Makale tanımı: STARD 2015 guidelines for reporting diagnostic accuracy studies
 explanation and elaboration. https://doi.org/10.1136/bmjopen-2016-012799
 '''
 
-def form_doc(path,chars,observer='________'):
+def form_doc(path,chars,observer='________',scope_note=None):
     d=Document();s=d.sections[0];s.top_margin=s.bottom_margin=Cm(1.4)
     d.add_heading('Blinded expert observation sheet / Kör uzman gözlem formu',0)
+    if scope_note:d.add_paragraph(scope_note)
     d.add_paragraph('Observer / Gözlemci: '+observer+'    Specimen / Örnek: ________    Phase / Aşama: ________')
     d.add_paragraph('Start / Başlangıç (saat dilimiyle): __________   End / Bitiş: __________\nActive duration / Mola hariç süre: ______ dakika. Material: physical / digital. View codes: __________')
     d.add_paragraph('No reference genus, other observer sheet or engine output is supplied. Gözlenemiyor yok demek değildir. Choose a controlled value and an observation state for every row. CHR_21 is context only.')
@@ -156,24 +157,43 @@ def observer_materials(study,chars):
     if (study/'coordinator_private/specimen_registry.csv').exists():
         with (study/'coordinator_private/specimen_registry.csv').open(encoding='utf-8-sig',newline='') as f:registry=list(csv.DictReader(f))
     template=(ROOT/'eval/expert_form_template.html').read_text('utf-8')
+    config=read(study/'study_config.json')
+    observers=config.get('observer_codes',['E1','E2'])
+    exposed_chars=[{k:c[k] for k in ['id','name_tr','name_en','values','value_labels_tr','value_labels_en'] if k in c} for c in chars]
     for phase,prefix,count in [('pilot','P',10),('confirmatory','F',60)]:
         enrolled=[r['specimen_id'] for r in registry if r['phase']==phase and r['enrolled']=='yes']
         codes=enrolled or [f'{prefix}{i:03}' for i in range(1,count+1)]
-        for offset,observer in enumerate(['E1','E2']):
+        material_map={sid:[{'name':p.name,'sha256':digest(p)} for p in sorted((study/'public'/phase/'materials'/sid).glob('*')) if p.is_file()] for sid in enrolled}
+        for offset,observer in enumerate(observers):
             folder=study/'public'/phase/observer;folder.mkdir(parents=True,exist_ok=True)
             order=list(codes);random.Random(20261112+offset+(0 if phase=='pilot' else 100)).shuffle(order)
             text=template.replace('@@OBSERVER@@',observer).replace('@@PHASE@@',phase)
-            replacements={'@@OBSERVER_JSON@@':observer,'@@PHASE_JSON@@':phase,'@@ORDER@@':order,'@@CHARACTERS@@':chars}
+            replacements={'@@OBSERVER_JSON@@':observer,'@@PHASE_JSON@@':phase,'@@ORDER@@':order,'@@CHARACTERS@@':exposed_chars,'@@MATERIALS@@':material_map}
             for token,value in replacements.items():text=text.replace(token,json.dumps(value,ensure_ascii=False).replace('</','<\\/'))
             (folder/'Observation_Form.html').write_text(text,encoding='utf-8')
-            form_doc(folder/'Observation_Form_TR_EN.docx',chars,observer)
-            csvwrite(folder/'presentation_order.csv',[{'order':i+1,'specimen_id':sid,'status':'ENROLLED' if enrolled else 'RESERVED_NO_MATERIAL'} for i,sid in enumerate(order)])
+            scope_note='Hazırlık/form kullanım denemesi: kodlar önceki yayın görüntülerine aittir; bağımsız fiziksel fosil sayısını göstermez. Kişi atamaları ve gözlem yanıtları henüz teyit edilmemiştir.' if phase=='pilot' and config.get('pilot_purpose')=='FORM_USABILITY_ON_PREVIOUSLY_EVALUATED_PUBLISHED_IMAGES' else None
+            form_doc(folder/'Observation_Form_TR_EN.docx',chars,observer,scope_note)
+            presentation_status='PREPARATION_IMAGE_CASE' if phase=='pilot' and config.get('pilot_purpose')=='FORM_USABILITY_ON_PREVIOUSLY_EVALUATED_PUBLISHED_IMAGES' else 'ENROLLED' if enrolled else 'RESERVED_NO_MATERIAL'
+            csvwrite(folder/'presentation_order.csv',[{'order':i+1,'specimen_id':sid,'status':presentation_status} for i,sid in enumerate(order)])
             rows=[{'specimen_id':sid,'observer_code':observer,'phase':phase,'character_id':c['id'],'value':'','state':'','comment':''} for sid in order for c in chars]
             csvwrite(folder/'blank_observation_rows.csv',rows)
             (folder/'START_HERE_TR.txt').write_text('Kendi Observation_Form.html dosyanızı tarayıcıda açın; internet gerekmez. Koordinatörün seçtiği kodlu materyalle çalışın. presentation_order sırasını izleyin. Veri satırları boş şablondur; gerçek gözlem yapılmış değildir. Form tamamlanınca JSON dosyasını koordinatöre verin. Diğer gözlemciyle yanıtları veya cins tahminlerini tartışmayın. Kâğıtta doldurulursa gerçek gözlem süresini kaydedin.\n',encoding='utf-8')
+            public_materials=[]
+            for sid in enrolled:
+                for item in material_map[sid]:public_materials.append({'specimen_id':sid,'view_file':'materials/'+sid+'/'+item['name'],'sha256':item['sha256']})
+            if public_materials:
+                csvwrite(folder/'material_manifest.csv',public_materials)
+                cards=[]
+                for sid in order:
+                    views=''.join('<img src="materials/'+sid+'/'+item['name']+'" onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src=\'../materials/'+sid+'/'+item['name']+'\';}" alt="'+sid+' '+item['name']+'">' for item in material_map[sid])
+                    cards.append('<article><h2>'+sid+'</h2>'+views+'<p>Görüntü merkezindeki ana yapıyı değerlendirin; kenardaki kırpılmış parçaları ek örnek olarak saymayın.</p></article>')
+                (folder/'Pilot_Gallery.html').write_text('<!doctype html><html lang="tr"><meta charset="utf-8"><title>Kodlu hazırlık materyali</title><style>body{font:17px system-ui;max-width:1000px;margin:auto;padding:20px}article{border-top:1px solid #ccc;padding:20px}img{max-width:100%;max-height:600px;object-fit:contain}</style><h1>'+observer+' — Kodlu hazırlık materyali</h1><p>Önceden kullanılmış yayın görüntüleriyle form kullanım denemesi. Kodlar, doğrulanmış bağımsız fiziksel fosil sayısı değildir. Kişi atamaları henüz teyit edilmemiştir.</p>'+''.join(cards)+'</html>',encoding='utf-8')
+                attribution=study/'coordinator_private/pilot_global_attribution_public.md'
+                if attribution.exists():shutil.copyfile(attribution,folder/'ATTRIBUTION_AND_SCOPE.md')
             target=study/f'Observer_{observer}_{phase.capitalize()}.zip'
             with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
-                for p in folder.iterdir():z.write(p,p.name)
+                for p in folder.iterdir():
+                    if p.is_file():z.write(p,p.name)
                 materials=study/'public'/phase/'materials'
                 if materials.exists():
                     for sid in enrolled:

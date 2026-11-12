@@ -12,6 +12,7 @@ import Vlm from "./pages/Vlm";
 // page needs.
 const Lab = lazy(() => import("./pages/Lab"));
 const News = lazy(() => import("./pages/News"));
+const Search = lazy(() => import("./pages/Search"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 import "./styles/global.css";
@@ -44,6 +45,7 @@ function App() {
               element={<Suspense fallback={null}><News /></Suspense>}
             />
             <Route path="/news" element={<Suspense fallback={null}><News /></Suspense>} />
+            <Route path="/arama" element={<Suspense fallback={null}><Search /></Suspense>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

@@ -1,3 +1,38 @@
+# 12 Kasım 2026 — bu hazırlık turunun kapsamı
+
+`tests` klasöründeki 149 PNG uzantılı dosyadan 148'i açılıyor ve önceki yayın
+panelleriyle birebir eşleşiyor; IMG_001.png görüntü olarak açılamıyor. Dosya
+adları panel kimliklerine kaydığı için tüm eşleme hash ile yapıldı.
+
+10 görüntü P001–P010 olarak kodlandı. Bunlar önceki veri setinden gelen hazırlık
+görüntü vakalarıdır; 10 bağımsız fiziksel fosil olarak doğrulanmış değildir.
+Gözlemci kodları EXP01 ve EXP02, referans doğrulayıcı kodu REF01'dir. Kişi adları,
+katılım teyitleri ve gözlem yanıtları boştur. Her kaynak kümesinden tek görüntü
+seçildi; fiziksel fosil kimliği ayrıca doğrulanmadan bağımsızlık iddia edilmez.
+
+Bu turda amaç form anlaşılabilirliği, süre ve gözlenemeyen özellikleri ölçmektir.
+İnsan formları gelince `python eval/expert_comparison.py usability` kullanılır;
+bu komut cins doğruluğu hesaplamaz. Asıl 60 örnekli bağımsız test için yeni materyal
+gereklidir. Mevcut görüntüler doğrulama kohortuna alınmaz.
+Eski bağımsız-çalışma komutları check/lock/analyze bu yeniden kullanılan hazırlık
+görüntülerine uygulanmaz; bunlar yeni ve referansı doğrulanmış materyal için korunur.
+
+Yayın cins etiketleri yalnız `coordinator_private/reference_labels.csv` içindedir;
+REF01 tarafından doğrulanmış referanslar olarak işaretlenmedi. `pilot_case_mapping`
+dosyaları eski kaynak/etiket eşlemesini içerir ve gözlemcilere verilmez. Eski JSON
+model yanıtları, skorlar ve S9 sonuçları gözlemci paketlerine eklenmedi.
+
+`Observer_EXP01_Pilot.zip` ve `Observer_EXP02_Pilot.zip` içinde 10 kodlu görüntü,
+etiketsiz galeri, 21 karakterlik Word/HTML formu ve farklı sunum sıraları vardır.
+Form seçilen görüntünün hash'ini örnek koduyla karşılaştırır; yanlış P klasöründen
+seçilen `view01.png` kabul edilmez. Görsel kalite özgün çözünürlükle korunur;
+düşük çözünürlüklü yayın kırpımları büyütülerek yeni ayrıntı üretilmedi. Basılı
+panel işaretleri ve kaynağı tanıma riski nedeniyle körleme insan kontrolü bekler.
+
+---
+
+Aşağıdaki bölüm ilerideki bağımsız çalışma için prospektif plandır; bu hazırlık görüntülerinin bağımsız olduğunu söylemez.
+
 # V29: kör, eşleştirilmiş uzman-girdisi deneyi
 
 Durum: HAZIRLIK. Gerçek kesit atanmadı; gözlemci katılımı ve referans doğrulaması
@@ -7,14 +42,14 @@ V29 kaynak dosyası değiştirilmedi. Bu belge deney tamamlanmış gibi makaleye
 ## Sorumluluklar ve körleme
 
 Koordinatör arşiv kayıtlarına erişir, fiziksel fosilleri kodlar ve özel referans
-tablosunu tutar. E1/E2, Paleosen–Eosen bentik foraminifer ince kesit deneyimi
+tablosunu tutar. EXP01/EXP02, Paleosen–Eosen bentik foraminifer ince kesit deneyimi
 belgelenmiş, bu kural kartlarının geliştirilmesinde yer almamış iki gözlemcidir.
-Katılımları ve bağımsızlıkları roster.csv içinde doğrulanır. R1/ayrı referans kurulu
-arşiv kaydı + mikropaleontolojik incelemeyle cinsi doğrular; gözlemci E1 veya E2
+Katılımları ve bağımsızlıkları roster.csv içinde doğrulanır. REF01/ayrı referans kurulu
+arşiv kaydı + mikropaleontolojik incelemeyle cinsi doğrular; gözlemci EXP01 veya EXP02
 referans doğrulayıcısı olarak kullanılamaz. Gözlemciler aynı materyali bağımsız
 inceler; referans etiketi, diğer form ve iki yöntemin çıktısı formlar kilitlenene
 kadar kapalıdır. S9'un tamamı gözlemcilere verilmez: sonuç ve cins bilgileri içerir.
-Yalnız kendi Observer_E1/Observer_E2 paketini verin. Klasör adları erişim kontrolü
+Yalnız kendi Observer_EXP01/Observer_EXP02 paketini verin. Klasör adları erişim kontrolü
 sağlamaz; özel koordinatör dosyalarının bulunduğu tam paketi gözlemcilere göndermeyin.
 
 ## Materyal ve örnek birimi
@@ -96,7 +131,7 @@ Kayıp bir uzman formu öbürünün kopyasıyla, uzlaşıyla veya yapay zekâyla
 
 ## Uygulama sırası
 
-1. coordinator_private/roster.csv: E1, E2 ve ayrı referans doğrulayıcısını teyit edin.
+1. coordinator_private/roster.csv: EXP01, EXP02 ve ayrı referans doğrulayıcısını teyit edin.
 2. specimen_registry.csv: 8–10 gerçek pilot seçin, enrolled=yes yapın, kaynağı,
    referansı, fiziksel birimi ve körleme kontrolünü belgeleyin. Diğer kodlar rezervdir.
 3. Aynı kodlu materyali iki gözlemciye, farklı atanmış sıralarla verin.

@@ -4,6 +4,7 @@ import ceratiteIcon from "../assets/johnny-automatic-ceratite.svg";
 import foraminiferaIcon from "../assets/foraminifera.svg";
 import TaxonProfileCard from "../components/TaxonProfileCard";
 import { useLanguage } from "../contexts/LanguageContext";
+import characterDictionary from "../../../api/data/characters.json";
 
 const API = process.env.REACT_APP_API_URL + "/api/diagnose";
 
@@ -455,85 +456,13 @@ function ResultCard({ result, onReset, onBack }) {
 // ═══════════════════════════════════════════════════════════════════════════════
 // SCORING MODE
 // ═══════════════════════════════════════════════════════════════════════════════
-const CHR_LIST = [
-  { id: "CHR_01", nameTr: "Kavkı bileşimi", nameEn: "Test composition", values: [
-    { code: "AGGLUTINATED", labelTr: "Aglütinat", labelEn: "Agglutinated" },
-    { code: "PORCELANEOUS", labelTr: "Porselen", labelEn: "Porcelaneous" },
-    { code: "HYALINE",      labelTr: "Hyalin", labelEn: "Hyaline" },
-  ]},
-  { id: "CHR_02", nameTr: "Kavk\u0131 \u015fekli", nameEn: "Test shape", values: [
-    { code: "GLOBULAR",     labelTr: "K\u00fcresel",       labelEn: "Globular" },
-    { code: "SAC_LIKE",     labelTr: "Kese bi\u00e7imli",  labelEn: "Sac-like" },
-    { code: "TUBULAR",      labelTr: "T\u00fcb\u00fcler",        labelEn: "Tubular" },
-    { code: "ELONGATE",     labelTr: "Uzam\u0131\u015f",        labelEn: "Elongate" },
-    { code: "FUSIFORM",     labelTr: "Fusiform",         labelEn: "Fusiform" },
-    { code: "OVOID",        labelTr: "Ovoid",            labelEn: "Ovoid" },
-    { code: "LENTICULAR",   labelTr: "Merceksi",         labelEn: "Lenticular" },
-    { code: "DISCOIDAL",    labelTr: "Diskoidal",        labelEn: "Discoidal" },
-    { code: "FLATTENED",    labelTr: "Bas\u0131k",          labelEn: "Flattened" },
-    { code: "CONICAL",      labelTr: "Konik",            labelEn: "Conical" },
-    { code: "HIGH_CONICAL", labelTr: "Y\u00fcksek konik", labelEn: "High conical" },
-    { code: "STELLATE",     labelTr: "Y\u0131ld\u0131zs\u0131",       labelEn: "Stellate" },
-    { code: "IRREGULAR",    labelTr: "D\u00fczensiz",       labelEn: "Irregular" },
-  ]},
-  { id: "CHR_03", nameTr: "Septalarla bölünme", nameEn: "Septation", values: [
-    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
-  ]},
-  { id: "CHR_04", nameTr: "Loca organizasyonu", nameEn: "Chamber organization", values: [
-    { code: "UNDIVIDED", labelTr: "Septasız", labelEn: "Undivided" }, { code: "MULTICHAMBERED", labelTr: "Çok localı", labelEn: "Multichambered" },
-  ]},
-  { id: "CHR_05", nameTr: "Loca dizilimi", nameEn: "Chamber arrangement", values: [
-    { code: "UNISERIAL", labelTr: "Uniserial", labelEn: "Uniserial" }, { code: "BISERIAL", labelTr: "Biserial", labelEn: "Biserial" },
-    { code: "TRISERIAL", labelTr: "Triserial", labelEn: "Triserial" }, { code: "QUINQUELOCULINE", labelTr: "Quinqueloculine", labelEn: "Quinqueloculine" },
-    { code: "CYCLIC", labelTr: "Siklik", labelEn: "Cyclic" },
-  ]},
-  { id: "CHR_06", nameTr: "Sarılım tipi", nameEn: "Coiling pattern", values: [
-    { code: "PLANISPIRAL", labelTr: "Planispiral", labelEn: "Planispiral" }, { code: "TROCHOSPIRAL", labelTr: "Trokospiral", labelEn: "Trochospiral" },
-    { code: "STREPTOSPIRAL", labelTr: "Streptospiral", labelEn: "Streptospiral" }, { code: "GLOMOSPIRAL", labelTr: "Glomospiral", labelEn: "Glomospiral" },
-    { code: "UNCOILED", labelTr: "Sarılmamış", labelEn: "Uncoiled" },
-  ]},
-  { id: "CHR_07", nameTr: "Sar\u0131l\u0131m d\u00fczlemi", nameEn: "Coiling plane", values: [
-    { code: "SINGLE_PLANE",     labelTr: "Tek d\u00fczlem",        labelEn: "Single plane" },
-    { code: "CHANGING_PLANES",  labelTr: "De\u011fi\u015fen d\u00fczlemler", labelEn: "Changing planes" },
-    { code: "MULTIDIRECTIONAL", labelTr: "\u00c7ok y\u00f6nl\u00fc",          labelEn: "Multidirectional" },
-  ]},
-  { id: "CHR_08", nameTr: "İnvolüt / Evolüt", nameEn: "Involution / Evolution", values: [
-    { code: "INVOLUTE", labelTr: "İnvolüt", labelEn: "Involute" }, { code: "SEMI_INVOLUTE", labelTr: "Yarı involüt", labelEn: "Semi Involute" },
-    { code: "EVOLUTE", labelTr: "Evolüt", labelEn: "Evolute" },
-  ]},
-  { id: "CHR_09", nameTr: "Büyüme sırasında değişim", nameEn: "Ontogenetic change", values: [
-    { code: "NONE", labelTr: "Değişim yok", labelEn: "None" },
-    { code: "PLANISPIRAL_TO_BISERIAL",  labelTr: "Planispiral → Biserial", labelEn: "Planispiral → Biserial" },
-    { code: "PLANISPIRAL_TO_UNISERIAL", labelTr: "Planispiral → Uniserial", labelEn: "Planispiral → Uniserial" },
-    { code: "TRISERIAL_TO_BISERIAL",    labelTr: "Triserial → Biserial", labelEn: "Triserial → Biserial" },
-    { code: "TRISERIAL_TO_UNISERIAL",   labelTr: "Triserial → Uniserial", labelEn: "Triserial → Uniserial" },
-    { code: "COILED_TO_SERIAL",         labelTr: "Sarılı → Seri", labelEn: "Coiled → Serial" },
-  ]},
-  { id: "CHR_10", nameTr: "İç yapı karmaşıklığı", nameEn: "Internal complexity", values: [
-    { code: "SIMPLE", labelTr: "Basit", labelEn: "Simple" }, { code: "SUBDIVIDED", labelTr: "Alt bölmeli", labelEn: "Subdivided" },
-    { code: "COMPLEX", labelTr: "Karmaşık", labelEn: "Complex" }, { code: "LABYRINTHIC", labelTr: "Labirentik", labelEn: "Labyrinthic" },
-  ]},
-  { id: "CHR_11", nameTr: "İkincil locacıklar", nameEn: "Secondary chamberlets", values: [
-    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
-    { code: "WELL_DEVELOPED", labelTr: "İyi gelişmiş", labelEn: "Well Developed" },
-  ]},
-  { id: "CHR_13", nameTr: "İç bölmeler", nameEn: "Internal partitions", values: [
-    { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" }, { code: "RADIAL", labelTr: "Radyal", labelEn: "Radial" },
-    { code: "SUBEPIDERMAL", labelTr: "Subepidermal", labelEn: "Subepidermal" }, { code: "VERTICAL", labelTr: "Düşey", labelEn: "Vertical" },
-  ]},
-  { id: "CHR_14", nameTr: "Pillarlar", nameEn: "Pillars", values: [
-    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
-    { code: "STRONG", labelTr: "Güçlü", labelEn: "Strong" }, { code: "WEAK", labelTr: "Zayıf", labelEn: "Weak" },
-  ]},
-  { id: "CHR_17", nameTr: "Marjinal kord", nameEn: "Marginal cord", values: [
-    { code: "PRESENT", labelTr: "Var", labelEn: "Present" }, { code: "ABSENT", labelTr: "Yok", labelEn: "Absent" },
-    { code: "STRONG", labelTr: "Güçlü", labelEn: "Strong" },
-  ]},
-  { id: "CHR_21", nameTr: "Kesit yönü", nameEn: "Section orientation", values: [
-    { code: "AXIAL", labelTr: "Eksenel", labelEn: "Axial" }, { code: "EQUATORIAL", labelTr: "Ekvatoryal", labelEn: "Equatorial" },
-    { code: "OBLIQUE", labelTr: "Eğik", labelEn: "Oblique" }, { code: "UNKNOWN", labelTr: "Bilinmiyor", labelEn: "Unknown" },
-  ]},
-];
+const CHR_LIST = characterDictionary.characters.map(c=>({
+  id:c.id,nameTr:c.name_tr,nameEn:c.name_en,
+  values:c.values.filter(v=>!['NOT_OBSERVABLE','UNCERTAIN'].includes(v)).map(code=>({
+    code,labelTr:c.value_labels_tr?.[code]||c.value_labels_en?.[code]||code,
+    labelEn:c.value_labels_en?.[code]||code
+  }))
+}));
 
 function ScoringMode({ onBack }) {
   const [observations, setObservations] = useState({});
@@ -545,12 +474,13 @@ function ScoringMode({ onBack }) {
   const toggleObs = (chrId, value) => {
     setObservations((prev) => {
       const cur = prev[chrId];
-      if (value === "__NOT_OBS__") {
+      if (value === "__NOT_OBS__" || value === "__UNCERTAIN__") {
+        const neutralState=value === '__UNCERTAIN__' ? 'UNCERTAIN' : 'NOT_OBSERVABLE';
         // Toggle NOT_OBSERVABLE
-        if (cur?.state === "NOT_OBSERVABLE") {
+        if (cur?.state === neutralState) {
           const next = { ...prev }; delete next[chrId]; return next;
         }
-        return { ...prev, [chrId]: { value: null, state: "NOT_OBSERVABLE" } };
+        return { ...prev, [chrId]: { value: null, state: neutralState } };
       }
       if (cur?.value === value && cur?.state === "PRESENT") {
         const next = { ...prev }; delete next[chrId]; return next;
@@ -621,6 +551,10 @@ function ScoringMode({ onBack }) {
                   >
                     {t("btn.skip")}
                   </button>
+                  <button className={`chr-value-btn not-obs-btn${obs?.state === 'UNCERTAIN' ? ' selected' : ''}`}
+                    onClick={() => toggleObs(chr.id, '__UNCERTAIN__')}>
+                    {lang === 'tr' ? 'Belirsiz' : 'Uncertain'}
+                  </button>
                 </div>
               </div>
             );
@@ -675,6 +609,10 @@ function ScoreResult({ data }) {
       </div>
 
       {confidenceNote && <div className="confidence-note">{t(confidenceNote)}</div>}
+      {data.sectionWarning && <div className="section-warning" role="status">
+        {lang === 'tr' ? 'Kesit yönüne duyarlı gözlemleri uygun eksenel veya ekvatoryal kesitte kontrol edin: ' : 'Verify section-sensitive observations in an appropriate axial or equatorial section: '}
+        {data.sectionWarning.characters.join(', ')}
+      </div>}
       <div className="obs-count">
         {t("score.obs_count")}: <strong>{observedCharacterCount}</strong>
       </div>

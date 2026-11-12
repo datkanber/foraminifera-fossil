@@ -7,7 +7,7 @@ disjointness axioms are generated on every run, so re-export preserves them.
 """
 from pathlib import Path
 import xml.etree.ElementTree as E
-import json, hashlib, itertools
+import json, hashlib, itertools,os
 
 ROOT=Path(__file__).resolve().parents[1]
 NS={'rdf':'http://www.w3.org/1999/02/22-rdf-syntax-ns#','rdfs':'http://www.w3.org/2000/01/rdf-schema#',
@@ -26,10 +26,41 @@ def main():
     rules=json.loads((ROOT/'api/data/rule_chr_mapping.json').read_text('utf-8'))
     byid={e.get(q('rdf','about')):e for e in r.findall(q('owl','NamedIndividual'))}
     classes={e.get(q('rdf','about')):e for e in r.findall(q('owl','Class'))}
+    # Replace every vocabulary and tree assertion from the current masters;
+    # an old OWL template is schema input, never the current data inventory.
+    for identifier,e in list(byid.items()):
+        if any(c.get(q('rdf','resource')) in ['#CharacterValue','#DecisionQuestion'] for c in e.findall(q('rdf','type'))):
+            r.remove(e);del byid[identifier]
+    def individual(identifier,kind):
+        e=E.SubElement(r,q('owl','NamedIndividual'),{q('rdf','about'):'#'+identifier});link(e,'rdf','type','#'+kind);byid['#'+identifier]=e;return e
+    for char in json.loads((ROOT/'api/data/characters.json').read_text('utf-8'))['characters']:
+        e=byid['#'+char['id']]
+        for child in list(e):
+            if child.tag in [q('','allowedValue'),q('rdfs','label')]:e.remove(child)
+        literal(e,'rdfs','label',char['name_en'])
+        for value in char['values']:
+            identifier=char['id']+'_'+value;v=individual(identifier,'CharacterValue')
+            literal(v,'rdfs','label',value);literal(v,'','valueCode',value);link(e,'','allowedValue','#'+identifier)
+    for module in ['agglutinated','porcelaneous','hyaline']:
+        tree_data=json.loads((ROOT/f'api/data/decision_tree_{module}.json').read_text('utf-8'))
+        for node in tree_data['nodes']:
+            e=individual(node['id'],'DecisionQuestion');literal(e,'rdfs','label',node['text_en']);literal(e,'','questionTextEn',node['text_en']);literal(e,'','questionCode',node.get('code',''))
+            bindings=set([node['chr_id']] if node.get('chr_id') else [])
+            for answer in node['answers']:bindings.update(answer.get('maps_to',{}))
+            for cid in sorted(bindings):link(e,'','asksAboutCharacter','#'+cid)
+            for answer in node['answers']:
+                nxt=answer['next'];literal(e,'','answerValue',answer['value']+' -> '+nxt)
+                if not nxt.startswith(('INDETERMINATE:','REDIRECT:')):link(e,'','hasAnswerLeadingTo','#'+nxt.removeprefix('GENUS:'))
+                for cid,value in answer.get('maps_to',{}).items():literal(e,'','answerBinding',answer['value']+':'+cid+'='+value)
+    for name,domain in [('matchMode','RuleItem'),('answerBinding','DecisionQuestion')]:
+        prop=E.SubElement(r,q('owl','DatatypeProperty'),{q('rdf','about'):'#'+name});link(prop,'rdfs','domain','#'+domain);link(prop,'rdfs','range',NS['xsd']+'string')
     for rule in rules:
-        e=byid['#'+rule['rule_key']]
+        e=byid.get('#'+rule['rule_key'])
+        if e is None:
+            e=individual(rule['rule_key'],'RuleItem');literal(e,'','evidenceLevel',{'M':'MANDATORY','D':'DIAGNOSTIC','S':'SUPPORTING','C':'CONTRADICTORY'}[rule['level']]);link(byid['#'+rule['genus']],'','hasDiagnosticRule','#'+rule['rule_key'])
         for c in list(e):
-            if c.tag in [q('','refersToCharacter'),q('','suggestedCharacterValue'),q('','mappingConfidence')]:e.remove(c)
+            if c.tag in [q('','refersToCharacter'),q('','suggestedCharacterValue'),q('','mappingConfidence'),q('','ruleText')]:e.remove(c)
+        literal(e,'','ruleText',rule['text']);literal(e,'','matchMode',rule.get('match_mode','ALL'))
         for c in sorted(set(m['chr_id'] for m in rule['mappings'])):link(e,'','refersToCharacter','#'+c)
         for m in rule['mappings']:
             if m.get('value'):
@@ -82,6 +113,6 @@ def main():
       'sha256':hashlib.sha256(output.read_bytes()).hexdigest(),
       'semantics':'OWL open-world restrictions are not closed-world data validation. The JSON cardinality checks run separately.',
       'specification':'https://www.w3.org/TR/owl2-syntax/'}
-    p=ROOT/'eval/results/revision/ontology_metrics.json';p.parent.mkdir(exist_ok=True,parents=True);p.write_text(json.dumps(stats,indent=2)+'\n',encoding='utf-8')
+    p=ROOT/'eval/results'/('v32' if os.environ.get('FORAM_EVAL_RELEASE')=='v32' else 'revision')/'ontology_metrics.json';p.parent.mkdir(exist_ok=True,parents=True);p.write_text(json.dumps(stats,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(stats,indent=2))
 if __name__=='__main__':main()

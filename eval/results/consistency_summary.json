@@ -2,34 +2,33 @@
  "agglutinated|R": [
   {
    "paths": 36,
-   "rank1_unique": 16,
-   "top3": 29,
+   "rank1_unique": 11,
+   "top3": 27,
    "excluded": 2,
-   "conf_total": 21,
-   "conf_correct": 14,
-   "rank1_tied": 5
+   "conf_total": 14,
+   "conf_correct": 9,
+   "rank1_tied": 9
   },
   {
    "PROBABLE": 10,
-   "CONFIRMED": 21,
-   "CANDIDATE": 5
+   "CONFIRMED": 14,
+   "CANDIDATE": 12
   }
  ],
  "agglutinated|M": [
   {
    "paths": 36,
-   "top3": 30,
-   "rank1_unique": 16,
-   "conf_total": 14,
+   "top3": 29,
+   "rank1_unique": 11,
+   "conf_total": 12,
    "conf_correct": 7,
-   "excluded": 1,
-   "rank1_tied": 5
+   "rank1_tied": 10
   },
   {
-   "PROBABLE": 2,
-   "CANDIDATE": 7,
-   "CONFIRMED": 14,
-   "INDETERMINATE": 13
+   "PROBABLE": 6,
+   "CONFIRMED": 12,
+   "INDETERMINATE": 6,
+   "CANDIDATE": 12
   }
  ],
  "agglutinated|meta": {
@@ -37,44 +36,38 @@
   "paths": 36,
   "genera": 25,
   "maxdepth": 7,
-  "oov": [
-   [
-    "AGG_Q3E",
-    "CHR_05",
-    "FLATTENED_SIGMOID"
-   ]
-  ]
+  "oov": []
  },
  "porcelaneous|R": [
   {
    "paths": 42,
-   "rank1_unique": 6,
-   "top3": 23,
-   "conf_total": 6,
-   "conf_correct": 6,
-   "rank1_tied": 13,
-   "excluded": 16
+   "rank1_unique": 11,
+   "top3": 29,
+   "conf_total": 12,
+   "conf_correct": 10,
+   "rank1_tied": 16,
+   "excluded": 5
   },
   {
-   "CONFIRMED": 6,
-   "CANDIDATE": 2,
-   "PROBABLE": 34
+   "CONFIRMED": 12,
+   "PROBABLE": 29,
+   "CANDIDATE": 1
   }
  ],
  "porcelaneous|M": [
   {
    "paths": 42,
-   "rank1_unique": 6,
-   "top3": 23,
-   "conf_total": 4,
-   "conf_correct": 4,
-   "rank1_tied": 13,
-   "excluded": 16
+   "rank1_unique": 12,
+   "top3": 34,
+   "conf_total": 8,
+   "conf_correct": 7,
+   "rank1_tied": 17
   },
   {
-   "INDETERMINATE": 2,
-   "CONFIRMED": 4,
-   "CANDIDATE": 36
+   "INDETERMINATE": 4,
+   "CONFIRMED": 8,
+   "PROBABLE": 4,
+   "CANDIDATE": 26
   }
  ],
  "porcelaneous|meta": {
@@ -82,48 +75,17 @@
   "paths": 42,
   "genera": 25,
   "maxdepth": 10,
-  "oov": [
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ],
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ],
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ],
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ],
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ],
-   [
-    "PORC_Q4B3",
-    "CHR_13",
-    "SPECIALISED"
-   ]
-  ]
+  "oov": []
  },
  "hyaline|R": [
   {
    "paths": 26,
    "rank1_unique": 7,
-   "top3": 14,
+   "top3": 15,
    "conf_total": 12,
    "conf_correct": 7,
    "rank1_tied": 4,
-   "excluded": 3
+   "excluded": 2
   },
   {
    "CONFIRMED": 12,
@@ -134,16 +96,15 @@
  "hyaline|M": [
   {
    "paths": 26,
-   "rank1_unique": 8,
-   "top3": 15,
-   "conf_total": 11,
-   "conf_correct": 6,
-   "rank1_tied": 4,
-   "excluded": 2
+   "rank1_unique": 9,
+   "top3": 16,
+   "conf_total": 7,
+   "conf_correct": 5,
+   "rank1_tied": 4
   },
   {
-   "CONFIRMED": 11,
-   "CANDIDATE": 14,
+   "CONFIRMED": 7,
+   "CANDIDATE": 18,
    "PROBABLE": 1
   }
  ],

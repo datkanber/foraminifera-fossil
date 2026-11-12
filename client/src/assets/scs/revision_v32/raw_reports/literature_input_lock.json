@@ -1,0 +1,10 @@
+{
+  "input_sha256": "cf66805caf29ab44d2a9b3102e98b1bfa9e9d23f4e5e08c6569c0d8ae4440267",
+  "input_hashes": {
+    "api/data/rule_chr_mapping.json": "047e30593e17d8d656b65405590a6d33eddba1fbb77d653d025b91359fcc4af2",
+    "api/data/characters.json": "b61829b3dfc663dcc9f94c4f88000913feec0609a180f257ec521d9d08d11206",
+    "api/src/services/scoring.js": "7c252bb23144a8419e96ee189ea6596a0c2af989c03ad0fff08c21abdb04c3ea",
+    "client/src/assets/scs/evaluation/panel_manifest.json": "6fb4c75f2d0a095c15262c0e4551507b7ae537b77255218f45791262849b804c"
+  },
+  "scope": "Internal pre-score lock of source-derived development descriptions, not a public preregistration, independent specimens, or expert-reviewed forms."
+}
