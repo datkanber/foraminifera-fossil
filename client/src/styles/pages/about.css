@@ -1,33 +1,106 @@
-.about-page {
-  padding: 40px var(--spacing-medium);
-  background-color: var(--color-background);
-  min-height: 80vh;
+/* ==========================================================================
+   MICROSOFT FLUENT ABOUT PAGE STYLES (GeoKnow)
+   ========================================================================== */
+
+.ms-about-page {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--ms-gray-170);
 }
 
-.about-content {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  background-color: var(--color-surface);
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  text-align: left;
+.ms-about-narrative-section {
+  padding-block: var(--section-space);
+  background-color: #ffffff;
 }
 
-.about-content h2 {
-  color: var(--color-text);
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 12px;
+.ms-about-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
 }
 
-.about-content p {
-  color: var(--color-text);
-  line-height: 1.6;
-  margin-bottom: 16px;
+.ms-about-section-title {
+  margin: 0 0 20px;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ms-gray-170);
+}
+
+.ms-about-text p {
+  margin: 0 0 20px;
   font-size: 16px;
+  line-height: 1.7;
+  color: var(--ms-gray-150);
+}
+
+.ms-about-text strong {
+  color: var(--ms-gray-190);
+}
+
+.ms-about-highlight-card {
+  border: 1px solid var(--color-border-subtle);
+  border-top: 4px solid var(--ms-blue);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-8);
+}
+
+.ms-about-highlight-card .ms-card-body {
+  padding: 32px 28px;
+}
+
+.ms-about-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ms-gray-40);
+}
+
+.ms-about-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-about-stat strong {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ms-blue);
+  line-height: 1.1;
+}
+
+.ms-about-stat span {
+  font-size: 12px;
+  color: var(--ms-gray-130);
+  margin-top: 4px;
+}
+
+.ms-about-features-section {
+  padding-block: var(--section-space);
+  background: var(--ms-gray-30);
+}
+
+.ms-about-card-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ms-blue);
+  margin-bottom: 4px;
+}
+
+.ms-about-cta-section {
+  padding-block: var(--section-space);
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .ms-about-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

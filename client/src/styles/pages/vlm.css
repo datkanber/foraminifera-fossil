@@ -1,31 +1,13 @@
 /* client/src/styles/pages/vlm.css */
-.vlm-page {
-  padding: var(--spacing-medium);
-  background-color: var(--color-background);
-  min-height: 80vh;
+.ms-vlm-page {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--ms-gray-170);
 }
 
-.vlm-content-wrapper {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-}
-
-.vlm-title {
-  color: var(--color-text);
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  margin-top: 0;
-  letter-spacing: -0.02em;
-}
-
-.vlm-desc {
-  margin-bottom: 24px;
-  font-size: 15px;
-  color: var(--color-text-muted);
-  line-height: 1.6;
+.ms-vlm-section {
+  padding-block: var(--section-space);
+  background-color: #ffffff;
 }
 
 .vlm-body {

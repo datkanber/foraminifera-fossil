@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import PageHero from "../components/ms/PageHero";
 import "../styles/pages/vlm.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -139,14 +140,17 @@ function Vlm() {
   };
 
   return (
-    <div className="vlm-page">
-      <div className="vlm-content-wrapper">
-        <h2 className="vlm-title">{t("vlm.title")}</h2>
-        <p className="vlm-desc">
-          {t("vlm.desc")}
-        </p>
+    <main className="ms-vlm-page" lang={lang}>
+      <PageHero
+        eyebrow={lang === "tr" ? "Görsel Yapay Zekâ & Karar Destek" : "Visual AI & Decision Support"}
+        title={t("vlm.title")}
+        text={t("vlm.desc")}
+        tone="gray"
+      />
 
-        <div className="vlm-body">
+      <section className="ms-section ms-vlm-section">
+        <div className="ms-container">
+          <div className="vlm-body">
           {/* Left Side: Upload & Form */}
           <div className="vlm-left">
             <div 
@@ -337,8 +341,9 @@ function Vlm() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </section>
+  </main>
+);
 }
 
 export default Vlm;

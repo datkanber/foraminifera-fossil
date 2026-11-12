@@ -1,231 +1,229 @@
-.geology-page {
-  padding: 40px var(--spacing-medium);
-  background-color: var(--color-background);
-  min-height: 80vh;
+/* ==========================================================================
+   MICROSOFT FLUENT GEOLOGY PAGE STYLES (GeoKnow)
+   ========================================================================== */
+
+.ms-geology-page {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--ms-gray-170);
 }
 
-.geology-content {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  background-color: var(--color-surface);
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  text-align: left;
+/* ── 2. GEOLOGICAL STAGES SECTION ── */
+.ms-geology-stages-section {
+  padding-block: var(--section-space);
+  background-color: #ffffff;
 }
 
-.geology-content h2 {
-  color: var(--color-text);
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 12px;
+.ms-geology-card {
+  border: 1px solid var(--color-border-subtle);
+  border-top: 4px solid var(--ms-blue);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-4);
+  transition: all var(--duration-slow) var(--ease-decelerate-max);
 }
 
-.geology-content > p {
-  color: var(--color-text);
-  line-height: 1.6;
-  margin-bottom: 24px;
-  font-size: 16px;
+.ms-geology-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-16);
 }
 
-.geology-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-medium);
+.ms-geology-card .ms-card-body {
+  padding: 24px;
 }
 
-.geology-card {
-  background-color: var(--color-surface);
-  padding: var(--spacing-medium);
-  border: 1px solid var(--color-border);
-}
-
-.geology-card h3 {
-  color: var(--color-text);
-  margin-bottom: var(--spacing-small);
-}
-
-.geology-card p {
-  color: var(--color-text-muted);
-  line-height: 1.5;
-}
-
-/* ─── TAXON ENVIRONMENT SECTION ────────────────────────────────────────── */
-
-.taxon-env-section {
-  margin-top: var(--spacing-large);
-  padding-top: var(--spacing-medium);
-  border-top: 2px solid var(--color-border);
-  text-align: left;
-}
-
-.taxon-env-title {
-  color: var(--color-primary);
-  font-size: 16px;
+.ms-geology-card .ms-card-title {
+  margin-top: 8px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 8px;
+  color: var(--ms-gray-170);
 }
 
-.taxon-env-desc {
-  color: var(--color-text-muted);
+.ms-geology-card .ms-card-text {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ms-gray-130);
+}
+
+/* ── 3. SELECTED TAXON SECTION ── */
+.ms-geology-taxon-profile-section {
+  padding-block: var(--section-space);
+  background: var(--ms-gray-20);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* ── 4. TAXON ENVIRONMENT RECORDS ── */
+.ms-geology-env-section {
+  padding-block: var(--section-space);
+  background: var(--ms-gray-30);
+}
+
+.taxon-env-badge-count {
   font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 16px;
+  padding: 4px 12px;
 }
 
 .taxon-env-controls {
   display: flex;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.taxon-env-search-wrap {
+  position: relative;
+  flex: 1 1 320px;
+}
+
+.taxon-env-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--ms-gray-110);
+  pointer-events: none;
 }
 
 .taxon-env-search {
-  flex: 1;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  background: var(--color-surface);
-  color: var(--color-text);
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.taxon-env-search:focus {
-  border-color: var(--color-primary);
+  padding-left: 38px !important;
+  min-height: 42px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
 }
 
 .taxon-env-filter {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  background: var(--color-surface);
-  color: var(--color-text);
-  cursor: pointer;
-  min-width: 100px;
+  flex: 0 0 auto;
+  min-width: 180px;
+  min-height: 42px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
 }
 
-.taxon-env-count {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  margin-bottom: 12px;
+.taxon-env-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 20px;
+  color: var(--ms-gray-130);
+  font-size: 15px;
 }
 
-.taxon-env-loading,
-.taxon-env-error,
 .taxon-env-empty {
   text-align: center;
-  padding: 24px;
-  font-size: 14px;
-  color: var(--color-text-muted);
+  padding: 48px 24px;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--ms-gray-130);
 }
 
-.taxon-env-error {
-  color: #721c24;
-  background: #f8d7da;
-  border-radius: 6px;
+.taxon-env-empty p {
+  margin: 0 0 16px;
+  font-size: 15px;
 }
 
 .taxon-env-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
 }
 
 .taxon-env-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  transition: box-shadow 0.2s;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-2);
+  transition: all var(--duration-slow) var(--ease-decelerate-max);
 }
 
 .taxon-env-card:hover {
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-16);
+  border-color: var(--ms-blue-tint-strong);
+}
+
+.taxon-env-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .taxon-env-card-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ms-gray-40);
 }
 
 .taxon-env-name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--color-text);
-}
-
-.taxon-env-rank {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 1px 8px;
-  border-radius: 4px;
-}
-
-.env-rank-species {
-  background: #dbeafe;
-  color: #1e40af;
-}
-
-.env-rank-genus {
-  background: #e0e7ff;
-  color: #3730a3;
+  color: var(--ms-gray-170);
+  font-style: italic;
 }
 
 .taxon-env-review-badge {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: #fef3c7;
-  color: #92400e;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--ms-warning-bg);
+  color: var(--ms-warning);
   display: inline-block;
-  margin-bottom: 6px;
+  align-self: flex-start;
+}
+
+.taxon-env-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .taxon-env-field {
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--color-text);
+  color: var(--ms-gray-170);
 }
 
 .taxon-env-field-label {
-  font-weight: 500;
-  color: var(--color-text-muted);
-  margin-right: 4px;
+  color: var(--ms-gray-130);
+  font-weight: 600;
+  margin-right: 6px;
 }
 
 .taxon-env-source {
   font-size: 12px;
-  color: var(--color-text-muted);
-  font-style: italic;
+  color: var(--ms-gray-110);
+  margin-top: 4px;
 }
 
 .taxon-env-unlinked {
-  margin-top: 8px;
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 4px;
-  background: #e2e8f0;
-  color: #475569;
-  display: inline-block;
+  margin-top: auto;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--ms-gray-30);
+  color: var(--ms-gray-130);
+  align-self: flex-start;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .taxon-env-controls {
     flex-direction: column;
   }
-
+  .taxon-env-filter {
+    width: 100%;
+  }
   .taxon-env-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }

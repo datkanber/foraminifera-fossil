@@ -1,100 +1,131 @@
+/* microsoft.com style footer */
 .site-footer {
   width: 100%;
-
   margin-top: auto;
-
-  background-color: var(--color-surface);
-
-  border-top: 1px solid var(--color-border);
-}
-
-.footer-container {
-  width: 100%;
-  max-width: var(--page-max-width);
-
-  margin: 0 auto;
-  padding: var(--spacing-large);
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  gap: var(--spacing-large);
-}
-
-.footer-summary {
-  max-width: 520px;
-}
-
-.footer-summary strong {
-  color: var(--color-primary);
-
-  font-size: 18px;
-}
-
-.footer-summary p {
-  margin-top: var(--spacing-small);
-  margin-bottom: 0;
-
-  color: var(--color-text-muted);
-
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-
-  gap: var(--spacing-medium);
-}
-
-.footer-links a {
-  color: var(--color-text);
-
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  color: var(--color-primary);
-}
-
-.footer-bottom {
-  width: 100%;
-
-  padding: var(--spacing-medium);
-
-  text-align: center;
-
-  border-top: 1px solid var(--color-border);
-}
-
-.footer-bottom p {
-  margin: 0;
-
-  color: var(--color-text-muted);
-
+  background: var(--ms-gray-30);
+  color: var(--ms-gray-130);
   font-size: 13px;
 }
 
-/* -jr Mobile footer layout starts here */
-@media (max-width: 768px) {
-  .footer-container {
-    padding: var(--spacing-medium);
+.site-footer-inner {
+  width: min(100% - 2 * var(--content-gutter), var(--wide-max-width));
+  margin: 0 auto;
+  padding: clamp(32px, 4vw, 48px) 0 24px;
+}
 
-    flex-direction: column;
-  }
+.site-footer-top {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 3fr);
+  gap: 32px clamp(32px, 5vw, 80px);
+}
 
-  /* -jr Footer links become vertical on small screens */
-  .footer-links {
-    width: 100%;
+.site-footer-brand img {
+  display: block;
+  width: 132px;
+  height: 58px;
+  object-fit: contain;
+  object-position: left center;
+}
 
-    flex-direction: column;
+.site-footer-title {
+  margin: 12px 0 4px;
+  color: var(--ms-gray-170);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
-    gap: var(--spacing-small);
-  }
+.site-footer-meta {
+  margin: 0;
+  line-height: 1.5;
+}
 
-  .footer-links a {
-    width: 100%;
+.site-footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+}
 
-    padding: 4px 0;
-  }
+.site-footer-column h2 {
+  margin: 0 0 12px;
+  color: var(--ms-gray-150);
+  font-family: var(--font-base);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.site-footer-column ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer-column a,
+.site-footer-column span {
+  color: var(--ms-gray-130);
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.site-footer-column a {
+  transition: color var(--duration-faster) var(--ease-easy);
+}
+
+.site-footer-column a:hover {
+  color: var(--ms-gray-170);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 32px;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.site-footer-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 4px 8px;
+  margin-left: -8px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--ms-gray-130);
+  font-size: 13px;
+  transition: background-color var(--duration-faster) var(--ease-easy);
+}
+
+.site-footer-lang:hover { background: var(--ms-gray-40); color: var(--ms-gray-170); }
+.site-footer-lang svg { width: 18px; height: 18px; }
+
+.site-footer-disclaimer {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.site-footer-copy {
+  margin: 0 0 0 auto;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .site-footer-top { grid-template-columns: minmax(0, 1fr); }
+  .site-footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 479px) {
+  .site-footer-columns { grid-template-columns: minmax(0, 1fr); }
+  .site-footer-copy { margin-left: 0; white-space: normal; }
 }

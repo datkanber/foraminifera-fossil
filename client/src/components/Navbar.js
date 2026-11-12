@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import logo from "../assets/images/logo.png";
@@ -45,6 +45,7 @@ function Icon({ name, ...props }) {
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(() => {
     try {
       return sessionStorage.getItem(announcement.id) !== "dismissed";
@@ -83,6 +84,15 @@ export default function Navbar() {
     setIsSearchOpen(false);
     exploreRef.current?.removeAttribute("open");
   }, [location.pathname, location.hash, location.search]);
+
+  useEffect(() => {
+    function onScroll() {
+      setIsScrolled(window.scrollY > 4);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     function onPointerDown(event) {
@@ -143,7 +153,8 @@ export default function Navbar() {
   }
 
   return (
-    <header className="navbar" ref={headerRef} onKeyDown={handleEscape}>
+    <header className={`navbar${isScrolled ? " is-scrolled" : ""}`} ref={headerRef} onKeyDown={handleEscape}>
+      <a className="navbar-skip" href="#main-content">{lang === "tr" ? "Ana içeriğe atla" : "Skip to main content"}</a>
       <div className="navbar-container">
         <button ref={toggleRef} type="button" className="navbar-toggle" onClick={() => setIsMenuOpen(open => !open)} aria-label={lang === "tr" ? (isMenuOpen ? "Menüyü kapat" : "Menüyü aç") : (isMenuOpen ? "Close menu" : "Open menu")} aria-expanded={isMenuOpen} aria-controls="site-navigation">
           <Icon name={isMenuOpen ? "close" : "menu"} />
@@ -160,7 +171,7 @@ export default function Navbar() {
         <div className="navbar-tools">
           <details className="navbar-explore" ref={exploreRef}>
             <summary>{lang === "tr" ? "Tüm GeoKnow" : "All GeoKnow"}<Icon name="chevron" /></summary>
-            <nav className="navbar-explore-panel" aria-label={lang === "tr" ? "Tüm GeoKnow sayfaları" : "All GeoKnow pages"}>
+            <nav className="navbar-explore-panel" data-heading={lang === "tr" ? "GeoKnow sayfaları" : "GeoKnow pages"} aria-label={lang === "tr" ? "Tüm GeoKnow sayfaları" : "All GeoKnow pages"}>
               {navigation.map(navigationLink)}
             </nav>
           </details>

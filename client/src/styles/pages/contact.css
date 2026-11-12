@@ -1,36 +1,145 @@
-.contact-page {
-  padding: 40px var(--spacing-medium);
-  background-color: var(--color-background);
-  min-height: 80vh;
+/* ==========================================================================
+   MICROSOFT FLUENT CONTACT PAGE STYLES (GeoKnow)
+   ========================================================================== */
+
+.ms-contact-page {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--ms-gray-170);
 }
 
-.contact-container {
-  max-width: var(--page-max-width);
-  margin: 0 auto;
-  background-color: var(--color-surface);
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+.ms-contact-cards-section {
+  padding-block: var(--section-space);
+  background-color: #ffffff;
 }
 
-.contact-container h2 {
-  color: var(--color-text);
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 12px;
+.ms-contact-card {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-4);
+  transition: all var(--duration-slow) var(--ease-decelerate-max);
 }
 
-.contact-details {
-  background-color: transparent;
+.ms-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-16);
+  border-color: var(--ms-blue-tint-strong);
 }
 
-.contact-details p {
-  margin: 16px 0;
-  font-size: 16px;
-  color: var(--color-text);
+.ms-contact-card .ms-card-body {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-contact-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue);
+  margin-bottom: 20px;
+  transition: all var(--duration-faster) var(--ease-easy);
+}
+
+.ms-contact-card:hover .ms-contact-icon-wrap {
+  background: var(--ms-blue);
+  color: #ffffff;
+}
+
+.ms-contact-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ms-contact-card .ms-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ms-gray-170);
+  margin-bottom: 8px;
+}
+
+.ms-contact-card .ms-card-text {
+  font-size: 15px;
   line-height: 1.6;
+  color: var(--ms-gray-130);
+  margin-bottom: 20px;
+}
+
+.ms-contact-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ms-gray-40);
+}
+
+.ms-contact-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ms-blue);
+  text-decoration: none;
+  transition: color var(--duration-faster) var(--ease-easy);
+  word-break: break-all;
+}
+
+.ms-contact-link:hover {
+  color: var(--ms-blue-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ms-contact-phone {
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.ms-contact-ext {
+  font-size: 13px;
+  color: var(--ms-gray-130);
+}
+
+/* Institutional card */
+.ms-contact-inst-section {
+  padding-block: var(--section-space);
+  background: var(--ms-gray-30);
+}
+
+.ms-contact-inst-card {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-8);
+}
+
+.ms-contact-inst-body {
+  padding: clamp(32px, 4vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.ms-contact-inst-text {
+  max-width: 760px;
+}
+
+.ms-contact-inst-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .ms-contact-inst-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

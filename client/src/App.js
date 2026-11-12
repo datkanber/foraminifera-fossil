@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PageTransition, { RouteProgress } from "./components/ms/PageTransition";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Geology from "./pages/Geology";
@@ -21,38 +22,32 @@ function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
-      <div className="app-layout">
-        <Navbar />
+        <div className="app-layout">
+          <Navbar />
 
-        <div style={{ flex: 1, paddingBottom: "20px" }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tani" element={<Fossils />} />
-            <Route path="/vlm" element={<Vlm />} />
-            <Route path="/hakkinda" element={<About />} />
-            <Route path="/jeoloji" element={<Geology />} />
-            <Route
-              path="/lab"
-              element={
-                <Suspense fallback={null}>
-                  <Lab />
-                </Suspense>
-              }
-            />
-            <Route path="/iletisim" element={<Contact />} />
-            <Route
-              path="/haberler/:slug?"
-              element={<Suspense fallback={null}><News /></Suspense>}
-            />
-            <Route path="/news" element={<Suspense fallback={null}><News /></Suspense>} />
-            <Route path="/arama" element={<Suspense fallback={null}><Search /></Suspense>} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <div className="app-main" id="main-content" tabIndex={-1}>
+            <PageTransition>
+              <Suspense fallback={<RouteProgress />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/tani" element={<Fossils />} />
+                  <Route path="/vlm" element={<Vlm />} />
+                  <Route path="/hakkinda" element={<About />} />
+                  <Route path="/jeoloji" element={<Geology />} />
+                  <Route path="/lab" element={<Lab />} />
+                  <Route path="/iletisim" element={<Contact />} />
+                  <Route path="/haberler/:slug?" element={<News />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/arama" element={<Search />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
+              </Suspense>
+            </PageTransition>
+          </div>
+
+          <Footer />
         </div>
-
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
     </LanguageProvider>
   );
 }

@@ -1,25 +1,121 @@
+/*
+ * GeoKnow design tokens — modelled on microsoft.com and Fluent 2.
+ * Every page and component should read colours, type, motion and
+ * elevation from here instead of hard-coding values.
+ */
 :root {
-  /* Backgrounds */
-  --color-background: #f8fafc; /* Slate 50 */
-  --color-surface: #ffffff;
-  
-  /* Text */
-  --color-text: #0f172a; /* Slate 900 */
-  --color-text-muted: #64748b; /* Slate 500 */
-  
-  /* Borders */
-  --color-border: #e2e8f0; /* Slate 200 */
-  
-  /* Primary - Emerald/Teal */
-  --color-primary: #0f766e; /* Teal 600 */
-  --color-primary-hover: #0d9488; /* Teal 500 */
-  
-  /* Utilities */
-  --color-sap-bg: #f1f5f9; /* Slate 100 */
+  /* ── Brand ─────────────────────────────────────────── */
+  --ms-blue: #0067b8;            /* microsoft.com primary */
+  --ms-blue-hover: #005da6;
+  --ms-blue-pressed: #004e8c;
+  --ms-blue-tint: #e6f2fb;
+  --ms-blue-tint-strong: #cfe4fa;
+  --ms-blue-bright: #4cc2ff;     /* Windows accent, used on dark surfaces */
+  --ms-navy: #0b2b40;            /* deep brand surface */
+  --ms-navy-2: #10344d;
 
-  /* Layout */
-  --page-max-width: 1000px;
-  --spacing-small: 16px;
+  /* Microsoft logo palette — used sparingly for accents */
+  --ms-red: #f25022;
+  --ms-green: #7fba00;
+  --ms-azure: #00a4ef;
+  --ms-yellow: #ffb900;
+
+  /* ── Neutrals (Fluent 2) ───────────────────────────── */
+  --ms-gray-10: #fafafa;
+  --ms-gray-20: #f5f5f5;
+  --ms-gray-30: #f2f2f2;
+  --ms-gray-40: #ebebeb;
+  --ms-gray-50: #e0e0e0;
+  --ms-gray-60: #d1d1d1;
+  --ms-gray-80: #bdbdbd;
+  --ms-gray-110: #8a8a8a;
+  --ms-gray-130: #616161;
+  --ms-gray-150: #424242;
+  --ms-gray-170: #242424;
+  --ms-gray-190: #1a1a1a;
+
+  /* Semantic status colours */
+  --ms-success: #107c10;
+  --ms-success-bg: #dff6dd;
+  --ms-warning: #8a5300;
+  --ms-warning-bg: #fff4ce;
+  --ms-danger: #c50f1f;
+  --ms-danger-bg: #fde7e9;
+  --ms-info-bg: #ebf3fc;
+
+  /* ── Semantic aliases (kept for existing pages) ────── */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-subtle: var(--ms-gray-30);
+  --color-surface-alt: var(--ms-gray-20);
+  --color-text: var(--ms-gray-170);
+  --color-text-muted: var(--ms-gray-130);
+  --color-border: var(--ms-gray-60);
+  --color-border-subtle: var(--ms-gray-40);
+  --color-primary: var(--ms-blue);
+  --color-primary-hover: var(--ms-blue-hover);
+  --color-primary-soft: var(--ms-blue-tint);
+  --color-sap-bg: var(--ms-gray-30);
+
+  /* ── Typography ────────────────────────────────────── */
+  --font-base: "Segoe UI Variable Text", "Segoe UI", SegoeUI, "GeoKnow Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", SegoeUI, "GeoKnow Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Cascadia Code", Consolas, "Courier New", monospace;
+
+  /* microsoft.com type ramp */
+  --type-display: clamp(34px, 4.2vw, 56px);
+  --type-h1: clamp(30px, 3.3vw, 46px);
+  --type-h2: clamp(26px, 2.6vw, 34px);
+  --type-h3: 24px;
+  --type-h4: 20px;
+  --type-subtitle: 18px;
+  --type-body: 16px;
+  --type-small: 14px;
+  --type-caption: 13px;
+  --type-tiny: 12px;
+
+  /* ── Layout ────────────────────────────────────────── */
+  --wide-max-width: 1600px;      /* full-bleed sections, header, footer */
+  --page-max-width: 1280px;      /* standard content column */
+  --content-max-width: 1280px;
+  --reading-width: 760px;
+  --content-gutter: clamp(16px, 5vw, 64px);
+  --section-space: clamp(40px, 6vw, 80px);
+  --spacing-small: 12px;
   --spacing-medium: 24px;
-  --spacing-large: 32px;
+  --spacing-large: 40px;
+
+  /* ── Shape ─────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  /* ── Elevation (Fluent 2 shadow ramp) ──────────────── */
+  --shadow-2: 0 0 2px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 14%);
+  --shadow-4: 0 0 2px rgb(0 0 0 / 12%), 0 2px 4px rgb(0 0 0 / 14%);
+  --shadow-8: 0 0 2px rgb(0 0 0 / 12%), 0 4px 8px rgb(0 0 0 / 14%);
+  --shadow-16: 0 0 2px rgb(0 0 0 / 12%), 0 8px 16px rgb(0 0 0 / 14%);
+  --shadow-28: 0 0 8px rgb(0 0 0 / 12%), 0 14px 28px rgb(0 0 0 / 14%);
+  --shadow-64: 0 0 8px rgb(0 0 0 / 12%), 0 32px 64px rgb(0 0 0 / 14%);
+  --shadow-card: var(--shadow-4);
+
+  /* ── Motion (Fluent 2) ─────────────────────────────── */
+  --duration-ultra-fast: 50ms;
+  --duration-faster: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-gentle: 250ms;
+  --duration-slow: 300ms;
+  --duration-slower: 400ms;
+  --duration-ultra-slow: 500ms;
+  --ease-decelerate-max: cubic-bezier(0.1, 0.9, 0.2, 1);  /* "fast out, slow in" */
+  --ease-decelerate-mid: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate-mid: cubic-bezier(1, 0, 1, 1);
+  --ease-accelerate-max: cubic-bezier(0.9, 0.1, 1, 0.2);
+  --ease-easy: cubic-bezier(0.33, 0, 0.67, 1);
+  --ease-standard: cubic-bezier(0.8, 0, 0.2, 1);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px #fff, 0 0 0 4px var(--ms-gray-170);
 }

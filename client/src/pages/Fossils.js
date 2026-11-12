@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PageHero from "../components/ms/PageHero";
 import "../styles/pages/fossils.css";
 import ceratiteIcon from "../assets/johnny-automatic-ceratite.svg";
 import foraminiferaIcon from "../assets/foraminifera.svg";
@@ -42,20 +43,25 @@ const MODULE_VALUE_TO_LABEL = {
 // ═══════════════════════════════════════════════════════════════════════════════
 function Fossils() {
   const [mode, setMode] = useState(null);
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
-    <section id="fossils" className="fossils-page">
-      <div className="fossils-content">
-        <h2 className="fossils-title">{t("fossils.title")}</h2>
-        <p className="fossils-desc">
-          {t("fossils.desc")}
-        </p>
-        {mode === null   && <ModeSelector onSelect={setMode} />}
-        {mode === "wizard"  && <WizardMode  onBack={() => setMode(null)} />}
-        {mode === "scoring" && <ScoringMode onBack={() => setMode(null)} />}
-      </div>
-    </section>
+    <main id="fossils" className="ms-fossils-page" lang={lang}>
+      <PageHero
+        eyebrow={lang === "tr" ? "Paleontolojik Tanı ve Karar Destek" : "Paleontological Diagnosis & Decision Support"}
+        title={t("fossils.title")}
+        text={t("fossils.desc")}
+        tone="gray"
+      />
+
+      <section className="ms-section ms-fossils-section">
+        <div className="ms-container">
+          {mode === null   && <ModeSelector onSelect={setMode} />}
+          {mode === "wizard"  && <WizardMode  onBack={() => setMode(null)} />}
+          {mode === "scoring" && <ScoringMode onBack={() => setMode(null)} />}
+        </div>
+      </section>
+    </main>
   );
 }
 

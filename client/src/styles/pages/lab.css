@@ -19,14 +19,12 @@
 
   position: relative;
   width: 100%;
-  /* -jr global.css zooms the whole site to 80%, so 100vh only covers 80% of
-     the screen; 125vh fills it (the same trick as .app-layout). 70px is the
-     navbar in unzoomed pixels. */
-  height: calc(125vh - 70px);
+  height: calc(100vh - 68px);
+  height: calc(100dvh - 68px);
   min-height: 480px;
   overflow: hidden;
   background: #050a08;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-base), system-ui, sans-serif;
   color: var(--lab-text);
 }
 

@@ -1,184 +1,566 @@
-.home-page {
-  padding: 40px var(--spacing-medium);
-  background-color: var(--color-background);
-  min-height: 80vh;
+/* ==========================================================================
+   MICROSOFT FLUENT HOME PAGE STYLES (GeoKnow)
+   ========================================================================== */
+
+.ms-home {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--ms-gray-170);
+  overflow-x: hidden;
 }
 
-.home-content {
-  max-width: var(--page-max-width);
+/* ── 1. HERO SPOTLIGHT BANNER ── */
+.ms-home-hero {
+  position: relative;
+  width: 100%;
+  padding: 0 0 clamp(24px, 4vw, 48px);
+  background: linear-gradient(180deg, #ffffff 0%, var(--ms-gray-20) 100%);
+}
+
+.ms-home-hero-container {
+  width: min(100% - 2 * var(--content-gutter), var(--wide-max-width));
   margin: 0 auto;
-  padding: 40px;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background-color: var(--color-surface);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
-  text-align: left;
 }
 
-.home-title {
-  margin: 0 0 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.home-event {
+.ms-home-banner {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr);
+  min-height: clamp(420px, 46vw, 560px);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--ms-navy);
+  color: #ffffff;
+  box-shadow: var(--shadow-28);
 }
 
-.home-event-gallery {
+.ms-home-banner-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  overflow: hidden;
+  background: #061824;
+}
+
+.ms-home-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  animation: ms-spotlight-fade 500ms var(--ease-decelerate-max) both;
+}
+
+.ms-home-banner-media-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 65%, var(--ms-navy) 100%);
+  pointer-events: none;
+}
+
+.ms-home-banner-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 56px);
+  background: var(--ms-navy);
+}
+
+.ms-home-kicker {
+  color: var(--ms-blue-bright);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.ms-home-hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.8vw, 40px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.ms-home-hero-text {
+  margin: 16px 0 0;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.6;
+  color: #d2e4f0;
+  max-width: 520px;
+}
+
+.ms-home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.ms-home-btn-primary {
+  background: var(--ms-blue);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-8);
+}
+
+.ms-home-btn-primary:hover {
+  background: var(--ms-blue-hover);
+  box-shadow: var(--shadow-16);
+}
+
+.ms-home-arrow {
+  margin-left: 4px;
+  transition: transform var(--duration-normal) var(--ease-decelerate-max);
+}
+
+.ms-home-btn-primary:hover .ms-home-arrow {
+  transform: translateX(4px);
+}
+
+.ms-home-btn-secondary {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+
+.ms-home-btn-secondary:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* Carousel controls */
+.ms-home-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ms-home-control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  transition: all var(--duration-faster) var(--ease-easy);
+}
+
+.ms-home-control-btn:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ms-home-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-home-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-decelerate-max);
+}
+
+.ms-home-dot.is-active {
+  width: 24px;
+  background: var(--ms-blue-bright);
+}
+
+.ms-home-slide-counter {
+  margin-left: auto;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@keyframes ms-spotlight-fade {
+  from {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── 2. QUICK ACCESS CARDS ── */
+.ms-home-quick-section {
+  padding-block: clamp(28px, 4vw, 44px);
+  background: #ffffff;
+}
+
+.ms-home-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ms-home-quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 18px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-2);
+  transition: all var(--duration-slow) var(--ease-decelerate-max);
+  text-decoration: none;
+}
+
+.ms-home-quick-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ms-blue-tint-strong);
+  box-shadow: var(--shadow-16);
+}
+
+.ms-home-quick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue);
+  transition: all var(--duration-faster) var(--ease-easy);
+}
+
+.ms-home-quick-card:hover .ms-home-quick-icon {
+  background: var(--ms-blue);
+  color: #ffffff;
+}
+
+.ms-home-quick-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ms-home-quick-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ms-home-quick-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ms-gray-170);
+  line-height: 1.3;
+}
+
+.ms-home-quick-sub {
+  font-size: 13px;
+  color: var(--ms-gray-130);
+  line-height: 1.4;
+}
+
+/* ── 3. FEATURED EVENT SECTION (STONE ESKİŞEHİR) ── */
+.ms-home-event-section {
+  background: var(--ms-gray-30);
+  padding-block: var(--section-space);
+}
+
+.ms-home-event-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);
+  gap: clamp(24px, 3vw, 36px);
+  align-items: stretch;
+}
+
+.ms-home-event-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.home-event-gallery figure {
-  min-width: 0;
+.ms-home-gallery-item {
   margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-4);
+  background: #ffffff;
+  transition: transform var(--duration-slow) var(--ease-decelerate-max);
 }
 
-.home-event-gallery a,
-.home-event-gallery img {
+.ms-home-gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-16);
+}
+
+.ms-home-gallery-link {
+  position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
 }
 
-.home-event-gallery img {
-  height: auto;
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
+.ms-home-gallery-link img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  transition: transform 600ms var(--ease-decelerate-max);
 }
 
-.home-event-gallery figcaption {
-  margin-top: 6px;
-  color: var(--color-text-muted);
+.ms-home-gallery-item:hover .ms-home-gallery-link img {
+  transform: scale(1.05);
+}
+
+.ms-home-gallery-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px 14px 10px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+  color: #ffffff;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.35;
+  opacity: 0.95;
 }
 
-.home-event-copy {
-  min-width: 0;
+.ms-home-event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-8);
+  border: 1px solid var(--color-border-subtle);
 }
 
-.home-event-copy h2 {
-  margin: 0 0 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 24px;
+.ms-home-event-card .ms-card-body {
+  padding: clamp(28px, 3vw, 40px);
+}
+
+/* ── 4. RESEARCH METRICS SECTION ── */
+.ms-home-metrics-section {
+  padding-block: var(--section-space);
+  background: #ffffff;
+}
+
+.ms-home-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ms-home-metric-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  border: 1px solid var(--color-border-subtle);
+  border-top: 4px solid var(--ms-blue);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-4);
+  transition: all var(--duration-slow) var(--ease-decelerate-max);
+}
+
+.ms-home-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-16);
+}
+
+.ms-home-metric-number {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4vw, 54px);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1;
+  color: var(--ms-blue);
+  letter-spacing: -0.03em;
 }
 
-.home-event-copy p {
-  margin: 16px 0;
-  color: var(--color-text);
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.home-event-copy .home-event-date {
-  color: var(--color-text-muted);
-  font-size: 14px;
-}
-
-.home-news-link {
-  display: inline-block;
-  padding-block: 8px;
-  color: var(--color-primary);
-  font-size: 14px;
+.ms-home-metric-label {
+  margin-top: 10px;
+  font-size: 17px;
   font-weight: 600;
+  color: var(--ms-gray-170);
+  line-height: 1.3;
 }
 
-.home-news-link:hover {
-  text-decoration: underline;
+.ms-home-metric-desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ms-gray-130);
 }
 
-.home-hero {
-  margin-top: var(--spacing-large);
-  padding-top: 24px;
-  border-top: 1px solid var(--color-border);
+/* ── 5. EDUCATIONAL FORAMINIFERA CARDS ── */
+.ms-home-edu-section {
+  background: var(--ms-gray-30);
+  padding-block: var(--section-space);
 }
 
-.hero-content p {
-  margin: 16px 0;
-  color: var(--color-text);
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.hero-content p:last-child {
-  margin-bottom: 0;
-}
-
-.home-information {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-medium);
-  margin-top: var(--spacing-large);
-}
-
-.information-panel {
-  display: grid;
-  grid-template-columns: 40px minmax(0, 1fr);
-  align-content: start;
+.ms-home-edu-media {
+  background: #ffffff;
+  display: flex;
   align-items: center;
-  gap: 16px;
-  min-width: 0;
-  padding: var(--spacing-medium);
-  border: 1px solid var(--color-border);
-  background-color: var(--color-surface);
+  justify-content: center;
+  padding: 24px;
+  aspect-ratio: 16 / 10;
 }
 
-.panel-icon,
-.panel-icon img {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-
-.panel-icon img {
+.ms-home-edu-media img {
+  max-height: 180px;
+  width: auto;
   object-fit: contain;
 }
 
-.information-panel h2 {
+/* ── 6. CALL TO ACTION BLUE BAND ── */
+.ms-home-cta-section {
+  padding-block: var(--section-space);
+  background: #ffffff;
+}
+
+.ms-home-cta-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(36px, 5vw, 64px);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--ms-blue) 0%, var(--ms-navy) 100%);
+  color: #ffffff;
+  box-shadow: var(--shadow-28);
+}
+
+.ms-home-cta-copy {
+  max-width: 640px;
+}
+
+.ms-home-cta-eyebrow {
+  color: var(--ms-blue-bright);
+}
+
+.ms-home-cta-title {
   margin: 0;
-  color: var(--color-text);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #ffffff;
 }
 
-.information-panel p {
-  grid-column: 1 / -1;
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 15px;
-  line-height: 1.5;
+.ms-home-cta-desc {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e3eff8;
 }
 
-.home-page a:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
+.ms-home-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
 }
 
-@media (max-width: 900px) {
-  .home-event {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+.ms-home-cta-btn-white {
+  background: #ffffff;
+  color: var(--ms-navy);
+}
+
+.ms-home-cta-btn-white:hover {
+  background: var(--ms-gray-20);
+  box-shadow: var(--shadow-16);
+}
+
+.ms-home-cta-btn-ghost {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.ms-home-cta-btn-ghost:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── RESPONSIVE ADAPTATIONS ── */
+@media (max-width: 1199px) {
+  .ms-home-quick-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 420px) {
-  .home-event-gallery {
-    gap: 12px;
+@media (max-width: 960px) {
+  .ms-home-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-banner-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .ms-home-banner-media-gradient {
+    background: linear-gradient(180deg, transparent 60%, var(--ms-navy) 100%);
+  }
+
+  .ms-home-event-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .ms-home-quick-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ms-home-quick-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-event-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-metrics-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ms-home-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .ms-home-btn-primary,
+  .ms-home-btn-secondary,
+  .ms-home-cta-btn-white,
+  .ms-home-cta-btn-ghost {
+    width: 100%;
   }
 }

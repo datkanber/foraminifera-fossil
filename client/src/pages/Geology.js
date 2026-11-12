@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import TaxonProfileCard from "../components/TaxonProfileCard";
-import "../styles/pages/geology.css";
 import { useLanguage } from "../contexts/LanguageContext";
+import PageHero from "../components/ms/PageHero";
+import Reveal from "../components/ms/Reveal";
+import heroImg from "../assets/photos/day-2/20261023_145821-1920.jpg";
+import "../styles/pages/geology.css";
 
 const API = process.env.REACT_APP_API_URL + "/api/taxa";
 
@@ -35,45 +38,132 @@ function Geology() {
 
   useEffect(() => {
     if (!selectedTaxon) return;
-    const frame = requestAnimationFrame(() => document.getElementById("taxon-profile")?.scrollIntoView({ block: "start" }));
+    const frame = requestAnimationFrame(() =>
+      document.getElementById("taxon-profile")?.scrollIntoView({ block: "start", behavior: "smooth" })
+    );
     return () => cancelAnimationFrame(frame);
   }, [selectedTaxon]);
+
   return (
-    <section id="geology" className="geology-page">
-      <div className="geology-content">
-        <h2>{lang === 'tr' ? "Jeolojik Bağlam" : "Geological Context"}</h2>
-        <p>
-          {lang === 'tr' ? (
-            <>Mevcut ontoloji, büyük bentik foraminiferler için önemli evrimsel aşamaları temsil eden <strong>Paleosen</strong> ve <strong>Eosen</strong> dönemlerine odaklanmaktadır.</>
-          ) : (
-            <>The current ontology focuses on the <strong>Paleocene</strong> and <strong>Eocene</strong> periods, representing important evolutionary stages for larger benthic foraminifera.</>
-          )}
-        </p>
-        
-        <div className="geology-grid">
-          <div className="geology-card">
-            <h3>{lang === 'tr' ? "Tanesiyen (Thanetian)" : "Thanetian"}</h3>
-            <p>{lang === 'tr' ? "Geç Paleosen katı. Karmaşık formların ilk radyasyonu ve spesifik fauna toplulukları ile karakterizedir." : "Late Paleocene stage. Characterized by the first radiation of complex forms and specific faunal assemblages."}</p>
-          </div>
-          <div className="geology-card">
-            <h3>{lang === 'tr' ? "İlerdiyen (Ilerdian)" : "Ilerdian"}</h3>
-            <p>{lang === 'tr' ? "Tethys bölgesinde önemli bir Erken Eosen katı. Alveolina gibi taksonların hızlı çeşitlenmesine tanık olmuştur." : "Important Early Eocene stage in the Tethys region. Witnessed rapid diversification of taxa such as Alveolina."}</p>
-          </div>
-          <div className="geology-card">
-            <h3>{lang === 'tr' ? "Küiziyen (Cuisian)" : "Cuisian"}</h3>
-            <p>{lang === 'tr' ? "Kavkı morfolojisi ve ekolojik adaptasyonlarda daha ileri uzmanlaşmaların görüldüğü Geç Erken Eosen katı." : "Late Early Eocene stage where further specializations in shell morphology and ecological adaptations are observed."}</p>
+    <main id="geology" className="ms-geology-page" lang={lang}>
+      {/* ── 1. MICROSOFT PAGE HERO BANNER ── */}
+      <PageHero
+        eyebrow={lang === "tr" ? "Paleontolojik Stratigrafi ve Ortam" : "Paleontological Stratigraphy & Environment"}
+        title={lang === "tr" ? "Jeolojik Bağlam ve Paleo-Ortamlar" : "Geological Context & Paleo-Environments"}
+        text={
+          lang === "tr"
+            ? "Mevcut ontoloji, büyük bentik foraminiferler için önemli evrimsel aşamaları temsil eden Paleosen ve Eosen dönemlerine, çökel derinliklerine ve fosil ortam kayıtlarına odaklanmaktadır."
+            : "The current ontology focuses on the Paleocene and Eocene periods, representing key evolutionary radiation stages, depositional depths, and fossil environment records for larger benthic foraminifera."
+        }
+        tone="gray"
+        image={heroImg}
+        imageAlt="Midas Monument and Geological Landscape"
+        imagePosition="center 30%"
+        actions={
+          <Link to="/tani" className="ms-btn">
+            <span>{lang === "tr" ? "Fosil Tanılamaya Geç" : "Go to Identification"}</span>
+            <span aria-hidden="true">→</span>
+          </Link>
+        }
+      />
+
+      {/* ── 2. GEOLOGICAL STAGES SECTION ── */}
+      <section className="ms-section ms-geology-stages-section">
+        <div className="ms-container">
+          <Reveal className="ms-section-header">
+            <div>
+              <span className="ms-eyebrow">
+                {lang === "tr" ? "Stratigrafik Katlar" : "Stratigraphic Stages"}
+              </span>
+              <h2 className="ms-section-title">
+                {lang === "tr" ? "Paleosen ve Eosen Dönemleri" : "Paleocene & Eocene Stages"}
+              </h2>
+              <p className="ms-section-lead">
+                {lang === "tr"
+                  ? "Tethys biyoprovensinde foraminifer faunasının evrimsel çeşitlenişini belirleyen üç kritik zaman aralığı."
+                  : "Three critical time intervals defining the evolutionary diversification of foraminiferal fauna in the Tethyan bioprovince."}
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="ms-grid ms-grid--3">
+            <Reveal as="div" className="ms-card ms-geology-card" delay={0}>
+              <div className="ms-card-body">
+                <span className="ms-badge ms-badge--neutral">
+                  {lang === "tr" ? "Geç Paleosen" : "Late Paleocene"}
+                </span>
+                <h3 className="ms-card-title">
+                  {lang === "tr" ? "Tanesiyen (Thanetian)" : "Thanetian"}
+                </h3>
+                <p className="ms-card-text">
+                  {lang === "tr"
+                    ? "Karmaşık kabuk formlarının ilk radyasyonu ve spesifik bentik fauna toplulukları ile karakterizedir. Karsella ve Laffitteina gibi erken formlar bu dönemde öne çıkar."
+                    : "Characterized by the initial radiation of complex shell forms and specific benthic faunal assemblages, featuring early taxa such as Karsella and Laffitteina."}
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal as="div" className="ms-card ms-geology-card" delay={80}>
+              <div className="ms-card-body">
+                <span className="ms-badge ms-badge--neutral">
+                  {lang === "tr" ? "Erken Eosen" : "Early Eocene"}
+                </span>
+                <h3 className="ms-card-title">
+                  {lang === "tr" ? "İlerdiyen (Ilerdian)" : "Ilerdian"}
+                </h3>
+                <p className="ms-card-text">
+                  {lang === "tr"
+                    ? "Tethys bölgesinde kritik bir Erken Eosen katı. Alveolina, Orbitolites ve Nummulitidae taksonlarının hızlı yayılımına ve sığ karbonat platformlarına tanık olmuştur."
+                    : "A critical Early Eocene stage in the Tethys realm, witnessing explosive diversification of taxa such as Alveolina and shallow carbonate platform communities."}
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal as="div" className="ms-card ms-geology-card" delay={160}>
+              <div className="ms-card-body">
+                <span className="ms-badge ms-badge--neutral">
+                  {lang === "tr" ? "Geç Erken Eosen" : "Late Early Eocene"}
+                </span>
+                <h3 className="ms-card-title">
+                  {lang === "tr" ? "Küiziyen (Cuisian)" : "Cuisian"}
+                </h3>
+                <p className="ms-card-text">
+                  {lang === "tr"
+                    ? "Kavkı morfolojisi, loca dizilimi ve ekolojik adaptasyonlarda daha ileri uzmanlaşmaların görüldüğü; iç rampadan dış havzaya geçiş zonlarını temsil eden kat."
+                    : "Stage characterized by advanced specializations in shell morphology, chamber arrangement, and adaptations from inner ramp to outer basin transition zones."}
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
+      </section>
 
-        {selectedTaxon && (
-          <section id="taxon-profile" className="taxon-search-selection" aria-labelledby="selected-taxon-heading">
-            <h3 id="selected-taxon-heading"><em>{selectedTaxon}</em></h3>
+      {/* ── 3. SELECTED TAXON PROFILE (IF QUERY PARAM) ── */}
+      {selectedTaxon && (
+        <section id="taxon-profile" className="ms-section ms-section--gray ms-geology-taxon-profile-section" aria-labelledby="selected-taxon-heading">
+          <div className="ms-container">
+            <div className="ms-section-header">
+              <div>
+                <span className="ms-eyebrow">
+                  {lang === "tr" ? "Seçilen Takson Detayı" : "Selected Taxon Detail"}
+                </span>
+                <h2 id="selected-taxon-heading" className="ms-section-title">
+                  <em>{selectedTaxon}</em>
+                </h2>
+              </div>
+            </div>
             <TaxonProfileCard scientificName={selectedTaxon} />
-          </section>
-        )}
-        <TaxonEnvironmentSection query={selectedTaxon || params.get("q") || ""} />
-      </div>
-    </section>
+          </div>
+        </section>
+      )}
+
+      {/* ── 4. TAXON ENVIRONMENT RECORDS ── */}
+      <section className="ms-section ms-section--gray ms-geology-env-section">
+        <div className="ms-container">
+          <TaxonEnvironmentSection query={selectedTaxon || params.get("q") || ""} />
+        </div>
+      </section>
+    </main>
   );
 }
 
@@ -107,7 +197,8 @@ function TaxonEnvironmentSection({ query = "" }) {
 
   // Client-side filtering
   const filtered = profiles.filter((p) => {
-    const matchesSearch = !searchTerm ||
+    const matchesSearch =
+      !searchTerm ||
       p.scientificName.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRank = !rankFilter || p.rank === rankFilter;
     return matchesSearch && matchesRank;
@@ -115,87 +206,122 @@ function TaxonEnvironmentSection({ query = "" }) {
 
   return (
     <div className="taxon-env-section">
-      <h3 className="taxon-env-title">{lang === 'tr' ? "Takson Ortam Kayıtları" : "Taxon Environment Records"}</h3>
-      <p className="taxon-env-desc">
-        {lang === 'tr' ? "Proje veri setinden derlenen yerel derinlik ve paleo-ortam bilgileri. Tür düzeyindeki kayıtlar bütün cinse otomatik olarak genellenmez." : "Local depth and paleo-environment information compiled from the project dataset. Species-level records are not automatically generalized to the entire genus."}
-      </p>
+      <div className="ms-section-header">
+        <div>
+          <span className="ms-eyebrow">
+            {lang === "tr" ? "Veritabanı Kayıtları" : "Database Records"}
+          </span>
+          <h2 className="ms-section-title">
+            {lang === "tr" ? "Takson Ortam ve Derinlik Kayıtları" : "Taxon Environment & Depth Records"}
+          </h2>
+          <p className="ms-section-lead">
+            {lang === "tr"
+              ? "Proje veri setinden derlenen yerel derinlik ve paleo-ortam bilgileri. Tür düzeyindeki kayıtlar bütün cinse otomatik olarak genellenmez."
+              : "Local depth and paleo-environment information compiled from the project dataset. Species-level records are not automatically generalized to the entire genus."}
+          </p>
+        </div>
+        {!loading && !error && (
+          <span className="ms-badge ms-badge--neutral taxon-env-badge-count">
+            {filtered.length} / {profiles.length} {lang === "tr" ? "kayıt" : "records"}
+          </span>
+        )}
+      </div>
 
-      {/* Search & Filter */}
+      {/* Search & Filter Toolbar */}
       <div className="taxon-env-controls">
-        <input
-          type="text"
-          className="taxon-env-search"
-          placeholder={lang === 'tr' ? "Bilimsel isme göre ara..." : "Search by scientific name..."}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className="taxon-env-search-wrap">
+          <svg className="taxon-env-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            type="search"
+            className="ms-input taxon-env-search"
+            placeholder={lang === "tr" ? "Bilimsel isme göre ara (örn. Alveolina, Karsella)..." : "Search by scientific name (e.g. Alveolina, Karsella)..."}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
         <select
-          className="taxon-env-filter"
+          className="ms-select taxon-env-filter"
           value={rankFilter}
           onChange={(e) => setRankFilter(e.target.value)}
+          aria-label={lang === "tr" ? "Taksonomik seviye filtresi" : "Taxonomic rank filter"}
         >
-          <option value="">{lang === 'tr' ? "Tümü" : "All"}</option>
-          <option value="SPECIES">{lang === 'tr' ? "Tür" : "Species"}</option>
-          <option value="GENUS">{lang === 'tr' ? "Cins" : "Genus"}</option>
+          <option value="">{lang === "tr" ? "Tüm Seviyeler" : "All Ranks"}</option>
+          <option value="SPECIES">{lang === "tr" ? "Yalnızca Tür (Species)" : "Species Only"}</option>
+          <option value="GENUS">{lang === "tr" ? "Yalnızca Cins (Genus)" : "Genus Only"}</option>
         </select>
       </div>
 
       {/* Content */}
       {loading && (
-        <div className="taxon-env-loading">{lang === 'tr' ? "Yükleniyor..." : "Loading..."}</div>
+        <div className="taxon-env-loading">
+          <div className="ms-spinner" />
+          <span>{lang === "tr" ? "Ortam verileri yükleniyor..." : "Loading environment data..."}</span>
+        </div>
       )}
 
       {error && (
-        <div className="taxon-env-error">{error}</div>
+        <div className="ms-message ms-message--error">
+          {error}
+        </div>
       )}
 
       {!loading && !error && (
         <>
-          <div className="taxon-env-count">
-            {filtered.length} / {profiles.length} {lang === 'tr' ? "kayıt gösteriliyor" : "records showing"}
-          </div>
-
           <div className="taxon-env-grid">
             {filtered.map((p, i) => (
-              <div key={i} className="taxon-env-card">
-                <div className="taxon-env-card-header">
-                  <em className="taxon-env-name">{p.scientificName}</em>
-                  <span className={`taxon-env-rank ${p.rank === "SPECIES" ? "env-rank-species" : "env-rank-genus"}`}>
-                    {p.rank === "SPECIES" ? (lang === 'tr' ? "Tür" : "Species") : (lang === 'tr' ? "Cins" : "Genus")}
-                  </span>
-                </div>
-
-                {p.taxonomicReviewRequired && (
-                  <div className="taxon-env-review-badge">
-                    {lang === 'tr' ? "Taksonomik inceleme gerekli" : "Taxonomic review required"}
+              <Reveal as="div" key={p.scientificName || i} className="ms-card taxon-env-card" delay={(i % 6) * 40}>
+                <div className="ms-card-body taxon-env-card-body">
+                  <div className="taxon-env-card-header">
+                    <em className="taxon-env-name">{p.scientificName}</em>
+                    <span className={`ms-badge ${p.rank === "SPECIES" ? "ms-badge--neutral" : ""}`}>
+                      {p.rank === "SPECIES" ? (lang === "tr" ? "Tür" : "Species") : (lang === "tr" ? "Cins" : "Genus")}
+                    </span>
                   </div>
-                )}
 
-                <div className="taxon-env-field">
-                  <span className="taxon-env-field-label">{lang === 'tr' ? "Derinlik:" : "Depth:"}</span>
-                  <span>{lang === 'tr' ? (p.depthTextTr || "—") : (p.depthTextEn || (EN_TRANSLATIONS[p.scientificName]?.depth) || p.depthTextTr || "—")}</span>
-                </div>
-                <div className="taxon-env-field">
-                  <span className="taxon-env-field-label">{lang === 'tr' ? "Yaşadığı ortam:" : "Habitat:"}</span>
-                  <span>{lang === 'tr' ? (p.habitatTextTr || "—") : (p.habitatTextEn || (EN_TRANSLATIONS[p.scientificName]?.habitat) || p.habitatTextTr || "—")}</span>
-                </div>
-                <div className="taxon-env-field taxon-env-source">
-                  <span className="taxon-env-field-label">{lang === 'tr' ? "Kaynak:" : "Source:"}</span>
-                  <span>{lang === 'tr' ? (p.sourceLabel || "—") : (p.sourceLabelEn || (EN_TRANSLATIONS[p.scientificName]?.source) || p.sourceLabel || "—")}</span>
-                </div>
+                  {p.taxonomicReviewRequired && (
+                    <div className="taxon-env-review-badge">
+                      {lang === "tr" ? "Taksonomik inceleme gerekli" : "Taxonomic review required"}
+                    </div>
+                  )}
 
-                {!p.linkedToOntology && (
-                  <div className="taxon-env-unlinked">
-                    {lang === 'tr' ? "Henüz tanı ontolojisine bağlı değil" : "Not yet linked to diagnostic ontology"}
+                  <div className="taxon-env-fields">
+                    <div className="taxon-env-field">
+                      <strong className="taxon-env-field-label">{lang === "tr" ? "Derinlik:" : "Depth:"}</strong>
+                      <span>{lang === "tr" ? (p.depthTextTr || "—") : (p.depthTextEn || (EN_TRANSLATIONS[p.scientificName]?.depth) || p.depthTextTr || "—")}</span>
+                    </div>
+                    <div className="taxon-env-field">
+                      <strong className="taxon-env-field-label">{lang === "tr" ? "Yaşadığı Ortam:" : "Habitat:"}</strong>
+                      <span>{lang === "tr" ? (p.habitatTextTr || "—") : (p.habitatTextEn || (EN_TRANSLATIONS[p.scientificName]?.habitat) || p.habitatTextTr || "—")}</span>
+                    </div>
+                    <div className="taxon-env-field taxon-env-source">
+                      <strong className="taxon-env-field-label">{lang === "tr" ? "Kaynak:" : "Source:"}</strong>
+                      <span>{lang === "tr" ? (p.sourceLabel || "—") : (p.sourceLabelEn || (EN_TRANSLATIONS[p.scientificName]?.source) || p.sourceLabel || "—")}</span>
+                    </div>
                   </div>
-                )}
-              </div>
+
+                  {!p.linkedToOntology && (
+                    <div className="taxon-env-unlinked">
+                      {lang === "tr" ? "Henüz tanı ontolojisine bağlı değil" : "Not yet linked to diagnostic ontology"}
+                    </div>
+                  )}
+                </div>
+              </Reveal>
             ))}
           </div>
 
           {filtered.length === 0 && (
             <div className="taxon-env-empty">
-              {lang === 'tr' ? "Aramanızla eşleşen kayıt bulunamadı." : "No records found matching your search."}
+              <p>{lang === "tr" ? "Aramanızla eşleşen takson kaydı bulunamadı." : "No taxon records found matching your query."}</p>
+              <button
+                type="button"
+                className="ms-btn ms-btn--secondary ms-btn--sm"
+                onClick={() => { setSearchTerm(""); setRankFilter(""); }}
+              >
+                {lang === "tr" ? "Filtreleri Temizle" : "Clear Filters"}
+              </button>
             </div>
           )}
         </>
