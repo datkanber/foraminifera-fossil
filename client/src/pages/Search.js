@@ -4,6 +4,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import useSiteSearch from "../hooks/useSiteSearch";
 import { searchSite } from "../utils/siteSearch";
 import SiteSearchResults, { SearchFilters, searchCopy } from "../components/SiteSearchResults";
+import PageHero from "../components/ms/PageHero";
 import "../styles/components/site-search.css";
 
 export default function Search() {
@@ -32,16 +33,24 @@ export default function Search() {
   }
 
   return (
-    <main className="site-search-page" lang={lang}>
-      <h1>{text.title}</h1>
-      <form className="site-search-form" role="search" onSubmit={event => { event.preventDefault(); update(draft, type); }}>
-        <label className="site-search-sr-only" htmlFor="search-page-input">{text.placeholder}</label>
-        <input id="search-page-input" type="search" autoComplete="off" maxLength={160} placeholder={text.placeholder} value={draft} onChange={event => setDraft(event.target.value)} />
-        <button type="submit">{text.search}</button>
-      </form>
-      <SearchFilters value={type} onChange={filter => update(query, filter)} text={text} />
-      <SiteSearchResults results={results} status={status} query={query} lang={lang} retry={retry} limit={limit} />
-      {results.length > limit && <button className="site-search-view-all" type="button" onClick={() => setLimit(value => value + 20)}>{text.more}</button>}
+    <main className="ms-page" lang={lang}>
+      <PageHero
+        eyebrow={lang === "tr" ? "Platform Araması" : "Site Search"}
+        title={text.title}
+        tone="gray"
+      />
+      <section className="ms-section">
+        <div className="ms-container site-search-page">
+          <form className="site-search-form" role="search" onSubmit={event => { event.preventDefault(); update(draft, type); }}>
+            <label className="site-search-sr-only" htmlFor="search-page-input">{text.placeholder}</label>
+            <input id="search-page-input" type="search" autoComplete="off" maxLength={160} placeholder={text.placeholder} value={draft} onChange={event => setDraft(event.target.value)} />
+            <button type="submit">{text.search}</button>
+          </form>
+          <SearchFilters value={type} onChange={filter => update(query, filter)} text={text} />
+          <SiteSearchResults results={results} status={status} query={query} lang={lang} retry={retry} limit={limit} />
+          {results.length > limit && <button className="site-search-view-all" type="button" onClick={() => setLimit(value => value + 20)}>{text.more}</button>}
+        </div>
+      </section>
     </main>
   );
 }

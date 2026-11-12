@@ -38,18 +38,18 @@ const renderText = (str, lang) => {
 
 // ─── STATUS / LEVEL META ────────────────────────────────────────────────────
 const getStatusMeta = (t) => ({
-  CONFIRMED_GENUS:          { label: t("status.confirmed"),      color: "#1a7a1a", bg: "#d4edda" },
-  PROBABLE_GENUS:           { label: t("status.probable"),       color: "#856404", bg: "#fff3cd" },
-  CANDIDATE_GENUS:          { label: t("status.candidate"),      color: "#0c5460", bg: "#d1ecf1" },
-  INDETERMINATE:            { label: t("status.indeterminate"),  color: "#721c24", bg: "#f8d7da" },
-  NO_MATCH_WITHIN_CORE_TAXA:{ label: t("status.nomatch"),        color: "#383d41", bg: "#e2e3e5" },
+  CONFIRMED_GENUS:          { label: t("status.confirmed"),      color: "var(--ms-success)",      bg: "var(--ms-success-bg)" },
+  PROBABLE_GENUS:           { label: t("status.probable"),       color: "var(--ms-warning)",      bg: "var(--ms-warning-bg)" },
+  CANDIDATE_GENUS:          { label: t("status.candidate"),      color: "var(--ms-blue-pressed)", bg: "var(--ms-blue-tint)" },
+  INDETERMINATE:            { label: t("status.indeterminate"),  color: "var(--ms-danger)",       bg: "var(--ms-danger-bg)" },
+  NO_MATCH_WITHIN_CORE_TAXA:{ label: t("status.nomatch"),        color: "var(--ms-gray-150)",     bg: "var(--ms-gray-30)" },
 });
 
 const getLevelLabels = (t) => ({
-  M: { label: t("level.m"), color: "#721c24", bg: "#f8d7da" },
-  D: { label: t("level.d"), color: "#0c5460", bg: "#d1ecf1" },
-  S: { label: t("level.s"), color: "#1a7a1a", bg: "#d4edda" },
-  C: { label: t("level.c"), color: "#383d41", bg: "#e2e3e5" },
+  M: { label: t("level.m"), color: "var(--ms-danger)",       bg: "var(--ms-danger-bg)" },
+  D: { label: t("level.d"), color: "var(--ms-blue-pressed)", bg: "var(--ms-blue-tint)" },
+  S: { label: t("level.s"), color: "var(--ms-success)",      bg: "var(--ms-success-bg)" },
+  C: { label: t("level.c"), color: "var(--ms-gray-150)",     bg: "var(--ms-gray-30)" },
 });
 
 // ─── MODULE MAP ──────────────────────────────────────────────────────────────
@@ -356,8 +356,8 @@ function ResultCard({ result, onReset, onBack }) {
         <div
           className="result-status"
           style={{
-            background: isNotObs ? "#fef3c7" : "#fee2e2",
-            color: isNotObs ? "#92400e" : "#991b1b",
+            background: isNotObs ? "var(--ms-warning-bg)" : "var(--ms-danger-bg)",
+            color: isNotObs ? "var(--ms-warning)" : "var(--ms-danger)",
           }}
         >
           {isNotObs ? (lang === 'tr' ? "GÖZLENEMİYOR" : "NOT OBSERVABLE") : isIndet ? (lang === 'tr' ? "BELİRSİZ SONUÇ" : "INDETERMINATE RESULT") : (lang === 'tr' ? "YÖNLENDİRME" : "FORWARDING")}
@@ -389,12 +389,12 @@ function ResultCard({ result, onReset, onBack }) {
                     display: "inline-block",
                     padding: "4px 10px",
                     fontSize: "13px",
-                    background: "#f0fdf4",
-                    border: "1px solid #bbf7d0",
-                    borderRadius: "6px",
-                    color: "#166534",
+                    background: "var(--ms-blue-tint)",
+                    border: "1px solid var(--ms-blue-tint-strong)",
+                    borderRadius: "var(--radius-md)",
+                    color: "var(--ms-blue-pressed)",
                     fontStyle: "italic",
-                    fontWeight: "500",
+                    fontWeight: "600",
                   }}
                 >
                   {g.name}
@@ -407,15 +407,15 @@ function ResultCard({ result, onReset, onBack }) {
         {/* NOT_OBSERVABLE: show available branches for re-selection */}
         {isNotObs && node.availableBranches && node.availableBranches.length > 0 && (
           <div style={{
-            background: "#eff6ff",
-            border: "1px solid #bfdbfe",
-            borderRadius: "8px",
+            background: "var(--ms-info-bg)",
+            border: "1px solid var(--ms-blue-tint-strong)",
+            borderRadius: "var(--radius-lg)",
             padding: "12px 16px",
             marginBottom: "16px",
             fontSize: "14px",
           }}>
-            <strong style={{ color: "#1e3a8a" }}><HintSvg /> {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
-            <span style={{ color: "#1e40af" }}>
+            <strong style={{ color: "var(--ms-navy)" }}><HintSvg /> {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
+            <span style={{ color: "var(--ms-blue-pressed)" }}>
               {lang === 'tr' ? "Geri gidip bu soru için mevcut cevaplardan birini seçebilirsiniz:" : "You can go back and choose one of the available answers for this question:"}{" "}
               {node.availableBranches.map((b) => (lang === 'tr' ? b.labelTr : b.labelEn) || b.value).join(", ")}
             </span>
@@ -435,7 +435,7 @@ function ResultCard({ result, onReset, onBack }) {
 
   return (
     <div className="result-card genus-result">
-      <div className="result-status" style={{ background: "#d4edda", color: "#1a7a1a" }}>
+      <div className="result-status" style={{ background: "var(--ms-success-bg)", color: "var(--ms-success)" }}>
         ✓ {t("genus.found")}
       </div>
       <h3 className="result-genus"><em>{name}</em></h3>
@@ -446,7 +446,7 @@ function ResultCard({ result, onReset, onBack }) {
         <div className="flag-warning"><WarningSvg /> {t("warning.taxonomic")}</div>
       )}
 
-      <div className="flag-warning" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", marginTop: "12px", fontSize: "13px" }}>
+      <div className="flag-warning" style={{ marginTop: "12px" }}>
         <strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer")}
       </div>
 
@@ -646,7 +646,7 @@ function ScoreResult({ data }) {
         {identification && <span className="score-id-name"> — <em>{identification}</em></span>}
       </div>
 
-      <div className="confidence-note" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", padding: "8px 12px", borderRadius: "6px", marginBottom: "12px", fontSize: "13px", marginTop: "12px" }}>
+      <div className="confidence-note">
         <strong>{lang === 'tr' ? "Uyarı:" : "Warning:"}</strong> {t("warning.disclaimer")}
       </div>
 
@@ -680,7 +680,7 @@ function ScoreResult({ data }) {
                   <td><strong>{r.score}</strong></td>
                   <td>{r.mandatoryMatched}/{r.mandatoryTotal}</td>
                   <td>{r.diagnosticMatched?.length || 0}</td>
-                  <td style={{ color: r.contradictions?.length > 0 ? "#721c24" : "inherit" }}>
+                  <td style={{ color: r.contradictions?.length > 0 ? "var(--ms-danger)" : "inherit" }}>
                     {r.contradictions?.length || 0}
                   </td>
                 </tr>
@@ -700,7 +700,7 @@ function ScoreResult({ data }) {
                   <div
                     key={i}
                     className="evidence-item"
-                    style={{ borderLeft: `3px solid ${lm.color || "#ccc"}` }}
+                    style={{ borderLeft: `3px solid ${lm.color || "var(--ms-gray-60)"}` }}
                   >
                     <span
                       className="evidence-level-badge"

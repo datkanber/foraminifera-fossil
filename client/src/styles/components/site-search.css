@@ -180,32 +180,65 @@
   font-size: 14px;
 }
 
+.site-search-status button {
+  margin-left: 8px;
+  padding: 4px 12px;
+  border: 1px solid var(--ms-blue);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--ms-blue);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.site-search-status button:hover {
+  background: var(--ms-blue-tint);
+}
+
 .site-search-results {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.site-search-dialog .site-search-results {
   max-height: 420px;
   overflow-y: auto;
+  padding-right: 4px;
 }
 
 .site-search-results li {
   min-width: 0;
-  border-radius: var(--radius-md);
-  transition: background-color var(--duration-faster) var(--ease-easy);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-2);
+  transition: box-shadow var(--duration-normal) var(--ease-decelerate-max), border-color var(--duration-fast) var(--ease-easy), transform var(--duration-normal) var(--ease-decelerate-max);
+}
+
+.site-search-results li:hover {
+  border-color: var(--ms-blue-tint-strong);
+  box-shadow: var(--shadow-8);
+  transform: translateY(-1px);
 }
 
 .site-search-results a {
   display: block;
-  padding: 12px 14px;
-  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
   color: inherit;
   text-decoration: none;
 }
 
 .site-search-results a:hover {
-  background: var(--ms-gray-20);
+  background: var(--ms-gray-10);
+}
+
+.site-search-results a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 
 .site-search-result-type {
@@ -273,17 +306,18 @@
 
 /* ── SEARCH PAGE (/arama) ── */
 .site-search-page {
-  width: min(100% - 2 * var(--content-gutter), var(--page-max-width));
-  margin: 0 auto;
-  padding: clamp(32px, 5vw, 64px) 0;
+  width: 100%;
+  max-width: 920px;
 }
 
-.site-search-page h1 {
-  margin: 0 0 24px;
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 38px);
-  font-weight: 600;
-  color: var(--ms-gray-190);
+.site-search-page .site-search-form {
+  max-width: 780px;
+}
+
+.site-search-page .site-search-results {
+  max-height: none;
+  overflow: visible;
+  gap: 12px;
 }
 
 .taxon-search-selection {
