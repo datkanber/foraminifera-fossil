@@ -9,36 +9,26 @@
   overflow-x: hidden;
 }
 
-/* ── 1. HERO SPOTLIGHT BANNER ── */
+/* ── 1. FULL-BLEED MICROSOFT ACRYLIC HERO SHOWCASE ── */
 .ms-home-hero {
   position: relative;
   width: 100%;
-  padding: 0 0 clamp(24px, 4vw, 48px);
-  background: linear-gradient(180deg, #ffffff 0%, var(--ms-gray-20) 100%);
-}
-
-.ms-home-hero-container {
-  width: min(100% - 2 * var(--content-gutter), var(--wide-max-width));
-  margin: 0 auto;
+  background: var(--ms-navy);
 }
 
 .ms-home-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr);
-  min-height: clamp(420px, 46vw, 560px);
+  position: relative;
+  min-height: clamp(500px, 44vw, 620px);
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  border-radius: var(--radius-xl);
   background: var(--ms-navy);
   color: #ffffff;
-  box-shadow: var(--shadow-28);
 }
 
 .ms-home-banner-media {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 320px;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
   background: #061824;
 }
@@ -47,28 +37,41 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
-  animation: ms-spotlight-fade 600ms var(--ease-decelerate-max) both, ms-ken-burns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  object-position: center 40%;
+  animation: ms-spotlight-fade 700ms var(--ease-decelerate-max) both, ms-ken-burns 16s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
 }
 
 @keyframes ms-ken-burns {
   0% { transform: scale(1) translate3d(0, 0, 0); }
-  100% { transform: scale(1.05) translate3d(-1%, -1%, 0); }
+  100% { transform: scale(1.06) translate3d(-1%, -1%, 0); }
 }
 
 .ms-home-banner-media-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 65%, var(--ms-navy) 100%);
+  background:
+    linear-gradient(90deg, rgb(7 25 40 / 88%) 0%, rgb(11 43 64 / 64%) 46%, rgb(11 43 64 / 22%) 100%),
+    linear-gradient(180deg, transparent 58%, rgb(6 24 36 / 75%) 100%);
   pointer-events: none;
 }
 
+.ms-home-hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(40px, 5vw, 64px);
+}
+
 .ms-home-banner-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(28px, 4vw, 56px);
-  background: var(--ms-navy);
+  position: relative;
+  max-width: 620px;
+  padding: clamp(28px, 3.4vw, 44px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgb(255 255 255 / 16%);
+  background: linear-gradient(145deg, rgb(11 43 64 / 78%) 0%, rgb(8 29 44 / 68%) 100%);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 22%), var(--shadow-28);
+  animation: ms-hero-copy 620ms var(--ease-decelerate-max) both;
 }
 
 .ms-home-kicker {
@@ -139,25 +142,26 @@
   color: #ffffff;
 }
 
-/* Carousel controls */
+/* Carousel tab controls */
 .ms-home-carousel-controls {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 32px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .ms-home-control-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.25);
+  width: 34px;
+  min-height: 34px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
   font-size: 18px;
   line-height: 1;
@@ -166,42 +170,71 @@
 
 .ms-home-control-btn:hover {
   border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.22);
 }
 
-.ms-home-dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.ms-home-slide-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  flex: 1;
 }
 
-.ms-home-dot {
+.ms-home-slide-tab {
   position: relative;
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 6px 10px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-sans);
+  text-align: left;
   cursor: pointer;
   overflow: hidden;
-  transition: all var(--duration-normal) var(--ease-decelerate-max);
+  transition: background var(--duration-faster) var(--ease-easy), border-color var(--duration-faster) var(--ease-easy), color var(--duration-faster) var(--ease-easy);
 }
 
-.ms-home-dot.is-active {
-  width: 36px;
-  background: rgba(255, 255, 255, 0.25);
+.ms-home-slide-tab:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.ms-home-slide-tab.is-active {
+  border-color: rgba(80, 230, 255, 0.5);
+  background: rgba(0, 103, 184, 0.32);
+  color: #ffffff;
+}
+
+.ms-home-slide-tab-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ms-blue-bright);
+}
+
+.ms-home-slide-tab-label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .ms-home-dot-fill {
   position: absolute;
-  inset: 0 auto 0 0;
+  inset: auto auto 0 0;
+  height: 3px;
   width: 0%;
   background: var(--ms-blue-bright);
-  border-radius: inherit;
 }
 
-.ms-home-dot.is-active .ms-home-dot-fill {
+.ms-home-slide-tab.is-active .ms-home-dot-fill {
   animation: ms-dot-timer 6s linear infinite;
 }
 
@@ -212,12 +245,6 @@
 @keyframes ms-dot-timer {
   from { width: 0%; }
   to { width: 100%; }
-}
-
-.ms-home-slide-counter {
-  margin-left: auto;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
 }
 
 @keyframes ms-spotlight-fade {
@@ -388,24 +415,112 @@
   padding: clamp(28px, 3vw, 40px);
 }
 
-/* ── 4. RESEARCH METRICS SECTION ── */
+/* ── 4. RESEARCH BENTO GRID & METRICS ── */
 .ms-home-metrics-section {
   padding-block: var(--section-space);
   background: #ffffff;
 }
 
-.ms-home-metrics-grid {
+.ms-home-bento {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 24px;
+  align-items: stretch;
+}
+
+.ms-home-bento-feature {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(170px, 0.85fr);
+  gap: 24px;
+  align-items: center;
+  padding: clamp(28px, 3.5vw, 40px);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(65% 90% at 85% 15%, rgb(0 120 212 / 35%) 0%, transparent 70%),
+    linear-gradient(145deg, var(--ms-navy) 0%, #061824 100%);
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%), var(--shadow-28);
+}
+
+.ms-home-bento-feature-copy h3 {
+  margin: 14px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.ms-home-bento-feature-copy p {
+  margin: 12px 0 0;
+  color: rgb(255 255 255 / 80%);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.ms-home-bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.ms-home-bento-tags span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgb(80 230 255 / 35%);
+  background: rgb(80 230 255 / 12%);
+  color: var(--ms-blue-bright);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ms-home-bento-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.ms-home-bento-feature-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-16);
+  aspect-ratio: 1 / 1;
+}
+
+.ms-home-bento-feature-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 600ms var(--ease-decelerate-max);
+}
+
+.ms-home-bento-feature:hover .ms-home-bento-feature-visual img {
+  transform: scale(1.05);
+}
+
+.ms-home-bento-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .ms-home-metric-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 28px 24px;
+  padding: 24px 22px;
   border: 1px solid var(--color-border-subtle);
-  border-top: 4px solid var(--ms-blue);
+  border-top: 3px solid var(--ms-blue);
   border-radius: var(--radius-lg);
   background: #ffffff;
   box-shadow: var(--shadow-4);
@@ -419,7 +534,7 @@
 
 .ms-home-metric-number {
   font-family: var(--font-display);
-  font-size: clamp(38px, 4vw, 54px);
+  font-size: clamp(34px, 3.2vw, 44px);
   font-weight: 700;
   line-height: 1;
   color: var(--ms-blue);
@@ -428,7 +543,7 @@
 
 .ms-home-metric-label {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ms-gray-170);
   line-height: 1.3;
@@ -436,14 +551,87 @@
 
 .ms-home-metric-desc {
   margin: 8px 0 0;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.5;
+  color: var(--ms-gray-130);
+}
+
+/* ── 4.5. TAXON & SPECIMEN SHOWCASE STRIP ── */
+.ms-home-taxa-section {
+  background: var(--ms-gray-30);
+  padding-block: var(--section-space);
+}
+
+.ms-home-taxa-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ms-home-taxon-wrap {
+  display: flex;
+}
+
+.ms-home-taxon-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ms-home-taxon-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.ms-home-taxon-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 350ms var(--ease-decelerate-max);
+}
+
+.ms-home-taxon-card:hover .ms-home-taxon-frame img {
+  transform: scale(1.06);
+}
+
+.ms-home-taxon-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 12px;
+}
+
+.ms-home-taxon-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ms-navy);
+}
+
+.ms-home-taxon-age {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ms-blue);
+}
+
+.ms-home-taxon-zone {
+  font-size: 12px;
   color: var(--ms-gray-130);
 }
 
 /* ── 5. EDUCATIONAL FORAMINIFERA CARDS ── */
 .ms-home-edu-section {
-  background: var(--ms-gray-30);
+  background: #ffffff;
   padding-block: var(--section-space);
 }
 
@@ -465,7 +653,7 @@
 /* ── 6. CALL TO ACTION BLUE BAND ── */
 .ms-home-cta-section {
   padding-block: var(--section-space);
-  background: #ffffff;
+  background: var(--ms-gray-30);
 }
 
 .ms-home-cta-box {
@@ -553,33 +741,71 @@
   .ms-home-quick-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .ms-home-taxa-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ms-home-bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 960px) {
   .ms-home-banner {
+    display: grid;
     grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
   }
 
   .ms-home-banner-media {
-    aspect-ratio: 16 / 10;
+    position: relative;
+    aspect-ratio: 16 / 9;
   }
 
   .ms-home-banner-media-gradient {
     background: linear-gradient(180deg, transparent 60%, var(--ms-navy) 100%);
   }
 
-  .ms-home-event-layout {
-    grid-template-columns: minmax(0, 1fr);
+  .ms-home-hero-overlay {
+    padding-block: 0;
+    padding-inline: 0;
+    width: 100%;
   }
 
-  .ms-home-metrics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .ms-home-banner-copy {
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    background: var(--ms-navy);
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .ms-home-event-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 680px) {
   .ms-home-quick-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ms-home-taxa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ms-home-bento-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ms-home-bento-feature-visual {
+    max-width: 240px;
+  }
+
+  .ms-home-slide-tab-label {
+    display: none;
   }
 }
 
@@ -592,7 +818,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .ms-home-metrics-grid {
+  .ms-home-bento-stats {
     grid-template-columns: minmax(0, 1fr);
   }
 

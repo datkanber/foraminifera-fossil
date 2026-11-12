@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import PageHero from "../components/ms/PageHero";
 import Reveal from "../components/ms/Reveal";
+import heroImg from "../assets/photos/day-2/20261023_144952-1920.jpg";
 import "../styles/pages/contact.css";
 
 function ContactIcon({ name }) {
@@ -57,6 +58,9 @@ function Contact() {
             : "Reach out to our research team for inquiries regarding the paleontological dataset, decision-support model, academic studies, or project collaborations."
         }
         tone="gray"
+        image={heroImg}
+        imageAlt={lang === "tr" ? "ESOGÜ ve STONE saha katılımcıları" : "ESOGÜ and STONE field participants"}
+        imagePosition="center 35%"
       />
 
       {/* ── 2. CONTACT CHANNELS GRID ── */}

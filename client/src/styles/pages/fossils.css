@@ -94,13 +94,50 @@
 .nav-btn:hover { background: var(--color-sap-bg); }
 
 .back-btn { color: var(--color-text); }
-.reset-btn { color: var(--color-primary); border-color: var(--color-primary); }
-.reset-btn:hover { background: #f0fdfa; border-color: var(--color-primary-hover); color: var(--color-primary-hover); }
+.reset-btn { color: var(--ms-blue); border-color: var(--ms-blue); }
+.reset-btn:hover { background: var(--ms-blue-tint); border-color: var(--ms-blue-hover); color: var(--ms-blue-hover); }
 .skip-btn { color: #b45309; border-color: #fcd34d; background: #fffbeb; }
 .skip-btn:hover { background: #fef3c7; border-color: #f59e0b; }
 
+.ms-inline-svg {
+  display: inline-block;
+  vertical-align: -3px;
+  flex-shrink: 0;
+}
+
 /* ─── WIZARD LAYOUT ─────────────────────────────────────────────────────── */
 .wizard-layout { display: flex; flex-direction: column; gap: 16px; }
+
+.wizard-progress {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-2);
+}
+
+.wizard-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ms-gray-130);
+  margin-bottom: 8px;
+}
+
+.wizard-progress-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--ms-gray-40);
+  overflow: hidden;
+}
+
+.wizard-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--ms-blue) 0%, var(--ms-blue-bright) 100%);
+  transition: width var(--duration-slow) var(--ease-decelerate-max);
+}
 
 .wizard-breadcrumb {
   display: flex;

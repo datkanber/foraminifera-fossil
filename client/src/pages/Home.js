@@ -7,13 +7,62 @@ import collectionPhoto from "../assets/photos/1792745403944.jpg";
 import foram1 from "../assets/images/foram1.jpg";
 import foram2 from "../assets/images/foram2.jpg";
 import foram3 from "../assets/images/foram3.jpg";
+import amphisteginaImg from "../assets/hyaline/amphistegina.png";
+import heterosteginaImg from "../assets/hyaline/heterostegina.png";
+import discocyclinaImg from "../assets/hyaline/discocyclina.png";
+import lepidocyclinaImg from "../assets/hyaline/lepidocyclina.png";
+import orbitoclypeusImg from "../assets/hyaline/orbitoclypeus.png";
+import asterocyclinaImg from "../assets/hyaline/asterocyclina.png";
 import Reveal from "../components/ms/Reveal";
 import "../styles/pages/home.css";
+
+const featuredTaxa = [
+  {
+    name: "Amphistegina",
+    img: amphisteginaImg,
+    age: { tr: "İlerdiyen – Küiziyen", en: "Ilerdian – Cuisian" },
+    zone: { tr: "Sığ Karbonat Rampası", en: "Shallow Carbonate Ramp" },
+  },
+  {
+    name: "Heterostegina",
+    img: heterosteginaImg,
+    age: { tr: "Küiziyen – Orta Eosen", en: "Cuisian – Middle Eocene" },
+    zone: { tr: "İç / Orta Şelf", en: "Inner / Middle Shelf" },
+  },
+  {
+    name: "Discocyclina",
+    img: discocyclinaImg,
+    age: { tr: "Tanesiyen – Küiziyen", en: "Thanetian – Cuisian" },
+    zone: { tr: "Orta – Dış Şelf", en: "Middle – Outer Shelf" },
+  },
+  {
+    name: "Orbitoclypeus",
+    img: orbitoclypeusImg,
+    age: { tr: "Tanesiyen – İlerdiyen", en: "Thanetian – Ilerdian" },
+    zone: { tr: "Düşük Enerjili Rampa", en: "Low-Energy Ramp" },
+  },
+  {
+    name: "Asterocyclina",
+    img: asterocyclinaImg,
+    age: { tr: "İlerdiyen – Küiziyen", en: "Ilerdian – Cuisian" },
+    zone: { tr: "Orta Rampa Fasiyesi", en: "Mid-Ramp Facies" },
+  },
+  {
+    name: "Lepidocyclina",
+    img: lepidocyclinaImg,
+    age: { tr: "Eosen Geçiş Zonu", en: "Eocene Transition Zone" },
+    zone: { tr: "Resif Önü / Şelf", en: "Fore-Reef / Shelf" },
+  },
+];
 
 const heroSlides = [
   {
     id: "spotlight-1",
     photo: dayTwoPhotos.find(p => p.id === "20261023_145547") || dayTwoPhotos[3],
+    tabLabel: {
+      tr: "Dijital Keşif",
+      en: "Digital Discovery",
+    },
     eyebrow: {
       tr: "Dijital Jeoloji ve Fosil Keşfi",
       en: "Digital Geology & Fossil Discovery",
@@ -40,6 +89,10 @@ const heroSlides = [
   {
     id: "spotlight-2",
     photo: dayTwoPhotos.find(p => p.id === "20261023_145744") || dayTwoPhotos[5],
+    tabLabel: {
+      tr: "STONE Saha Mirası",
+      en: "STONE Heritage",
+    },
     eyebrow: {
       tr: "Erasmus+ STONE Saha Çalışması",
       en: "Erasmus+ STONE Field Study",
@@ -65,15 +118,10 @@ const heroSlides = [
   },
   {
     id: "spotlight-3",
-    photo: {
-      id: "workshop",
-      src: workshopPhoto,
-      width: 1152,
-      height: 1536,
-      caption: {
-        tr: "ESOGÜ laboratuvarında paleontolojik analiz ve mikroskop incelemeleri",
-        en: "Paleontological analysis and microscopy in ESOGÜ laboratory",
-      },
+    photo: dayTwoPhotos.find(p => p.id === "20261023_145836") || dayTwoPhotos[7],
+    tabLabel: {
+      tr: "Görsel Yapay Zekâ",
+      en: "Visual AI",
     },
     eyebrow: {
       tr: "Görsel Yapay Zekâ & Karar Destek",
@@ -234,28 +282,28 @@ export default function Home() {
 
   return (
     <main className="ms-home" lang={lang}>
-      {/* ── 1. HERO SPOTLIGHT BANNER (FULL WIDTH MICROSOFT HERO) ── */}
+      {/* ── 1. HERO SPOTLIGHT BANNER (FULL-BLEED MICROSOFT ACRYLIC SHOWCASE) ── */}
       <section
         className="ms-home-hero"
         aria-label={lang === "tr" ? "Öne Çıkan Başlıklar" : "Featured Highlights"}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div className="ms-container--wide ms-home-hero-container">
-          <div className="ms-home-banner">
-            <div className="ms-home-banner-media">
-              <img
-                key={activeSlide.photo.id || activeSlide.id}
-                src={activeSlide.photo.src}
-                srcSet={activeSlide.photo.srcSet}
-                sizes="(max-width: 960px) 100vw, 55vw"
-                alt={activeSlide.photo.caption ? activeSlide.photo.caption[lang] : activeSlide.title[lang]}
-                className="ms-home-banner-img"
-              />
-              <div className="ms-home-banner-media-gradient" />
-            </div>
+        <div className="ms-home-banner">
+          <div className="ms-home-banner-media">
+            <img
+              key={activeSlide.photo.id || activeSlide.id}
+              src={activeSlide.photo.src}
+              srcSet={activeSlide.photo.srcSet}
+              sizes="100vw"
+              alt={activeSlide.photo.caption ? activeSlide.photo.caption[lang] : activeSlide.title[lang]}
+              className="ms-home-banner-img"
+            />
+            <div className="ms-home-banner-media-gradient" />
+          </div>
 
-            <div className="ms-home-banner-copy">
+          <div className="ms-container ms-home-hero-overlay">
+            <div className="ms-home-banner-copy" key={activeSlide.id}>
               <span className="ms-eyebrow ms-home-kicker">
                 {activeSlide.eyebrow[lang]}
               </span>
@@ -276,7 +324,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Carousel controls */}
+              {/* Microsoft-style showcase controls */}
               <div className="ms-home-carousel-controls">
                 <button
                   type="button"
@@ -286,17 +334,18 @@ export default function Home() {
                 >
                   ‹
                 </button>
-                <div className="ms-home-dots" role="tablist" aria-label="Slides">
+                <div className="ms-home-slide-tabs" role="tablist" aria-label="Slides">
                   {heroSlides.map((slide, idx) => (
                     <button
                       key={slide.id}
                       type="button"
                       role="tab"
                       aria-selected={idx === slideIndex}
-                      aria-label={`${lang === "tr" ? "Slayt" : "Slide"} ${idx + 1}`}
-                      className={`ms-home-dot${idx === slideIndex ? " is-active" : ""}`}
+                      className={`ms-home-slide-tab${idx === slideIndex ? " is-active" : ""}`}
                       onClick={() => setSlideIndex(idx)}
                     >
+                      <span className="ms-home-slide-tab-num">0{idx + 1}</span>
+                      <span className="ms-home-slide-tab-label">{slide.tabLabel[lang]}</span>
                       <span className="ms-home-dot-fill" />
                     </button>
                   ))}
@@ -309,9 +358,6 @@ export default function Home() {
                 >
                   ›
                 </button>
-                <span className="ms-home-slide-counter" aria-live="polite">
-                  {slideIndex + 1} / {heroSlides.length}
-                </span>
               </div>
             </div>
           </div>
@@ -411,63 +457,161 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. RESEARCH HIGHLIGHTS & KEY STATS (MICROSOFT NUMBERS) ── */}
+      {/* ── 4. RESEARCH BENTO GRID (MICROSOFT SHOWCASE + NUMBERS) ── */}
       <section className="ms-section ms-home-metrics-section">
         <div className="ms-container">
-          <div className="ms-home-metrics-grid">
-            <Reveal className="ms-home-metric-card" delay={0}>
-              <span className="ms-home-metric-number">7</span>
-              <span className="ms-home-metric-label">
-                {lang === "tr" ? "Pilot Takson" : "Pilot Taxa"}
+          <Reveal className="ms-section-header">
+            <div>
+              <span className="ms-eyebrow">
+                {lang === "tr" ? "Platform Mimarisi ve Kapasite" : "Platform Architecture & Capabilities"}
               </span>
-              <p className="ms-home-metric-desc">
-                {lang === "tr"
-                  ? "Paleosen–Eosen dönemlerine ait özgün ontolojik karakter analizi"
-                  : "Original ontological character analysis for Paleocene–Eocene"}
-              </p>
+              <h2 className="ms-section-title">
+                {lang === "tr" ? "Ontoloji, Görsel Yapay Zekâ ve 3D Analiz Tek Yapıda" : "Ontology, Visual AI, and 3D Analysis in One Platform"}
+              </h2>
+            </div>
+            <Link className="ms-link" to="/tani">
+              {lang === "tr" ? "Karar destek aracını aç" : "Open decision support"}
+            </Link>
+          </Reveal>
+
+          <div className="ms-home-bento">
+            <Reveal className="ms-home-bento-feature" delay={0}>
+              <div className="ms-home-bento-feature-copy">
+                <span className="ms-badge ms-badge--accent">
+                  {lang === "tr" ? "Etkileşimli Laboratuvar" : "Interactive Lab"}
+                </span>
+                <h3>
+                  {lang === "tr"
+                    ? "İnce Kesitten 3D Morfolojiye Kesintisiz İş Akışı"
+                    : "Seamless Workflow from Thin Section to 3D Morphology"}
+                </h3>
+                <p>
+                  {lang === "tr"
+                    ? "Görsel YZ ince kesit fotoğrafından duvar ve loca niteliklerini çıkarır; 3D Laboratuvar ise kavkı geometrisini her açıdan incelemenizi sağlar."
+                    : "Visual AI extracts wall and chamber traits from thin-section imagery while the 3D Lab lets you inspect shell geometry from every angle."}
+                </p>
+                <div className="ms-home-bento-tags" aria-hidden="true">
+                  <span>Hiyalin Duvar</span>
+                  <span>Planispiral</span>
+                  <span>Trokoispiral</span>
+                </div>
+                <div className="ms-home-bento-actions">
+                  <Link className="ms-btn ms-home-btn-primary" to="/vlm">
+                    {lang === "tr" ? "Görsel YZ Başlat" : "Launch Visual AI"}
+                  </Link>
+                  <Link className="ms-btn ms-btn--secondary ms-home-btn-secondary" to="/lab">
+                    {lang === "tr" ? "3D Laboratuvar" : "3D Lab"}
+                  </Link>
+                </div>
+              </div>
+              <div className="ms-home-bento-feature-visual">
+                <img
+                  src={foram2}
+                  alt={lang === "tr" ? "Foraminifer kavkı mikroskop illüstrasyonu" : "Foraminifera test illustration"}
+                  loading="lazy"
+                />
+              </div>
             </Reveal>
 
-            <Reveal className="ms-home-metric-card" delay={80}>
-              <span className="ms-home-metric-number">30+</span>
-              <span className="ms-home-metric-label">
-                {lang === "tr" ? "Kural Tabanlı Eşleşme" : "Rule-Based Matches"}
-              </span>
-              <p className="ms-home-metric-desc">
-                {lang === "tr"
-                  ? "Morfolojik ve ölçülebilir niteliklerle aday türleri daraltan karar desteği"
-                  : "Decision support narrowing candidate species via morphological traits"}
-              </p>
-            </Reveal>
+            <div className="ms-home-bento-stats">
+              <Reveal className="ms-home-metric-card" delay={60}>
+                <span className="ms-home-metric-number">7</span>
+                <span className="ms-home-metric-label">
+                  {lang === "tr" ? "Pilot Takson" : "Pilot Taxa"}
+                </span>
+                <p className="ms-home-metric-desc">
+                  {lang === "tr"
+                    ? "Paleosen–Eosen dönemlerine ait özgün ontolojik karakter analizi"
+                    : "Original ontological character analysis for Paleocene–Eocene"}
+                </p>
+              </Reveal>
 
-            <Reveal className="ms-home-metric-card" delay={160}>
-              <span className="ms-home-metric-number">3D</span>
-              <span className="ms-home-metric-label">
-                {lang === "tr" ? "İnteraktif Kavkı Modelleri" : "Interactive Shell Models"}
-              </span>
-              <p className="ms-home-metric-desc">
-                {lang === "tr"
-                  ? "Web tabanlı sanal laboratuvarda üç boyutlu numune inceleme ve test odası"
-                  : "Three-dimensional specimen inspection in a web-based virtual lab"}
-              </p>
-            </Reveal>
+              <Reveal className="ms-home-metric-card" delay={120}>
+                <span className="ms-home-metric-number">30+</span>
+                <span className="ms-home-metric-label">
+                  {lang === "tr" ? "Kural Tabanlı Eşleşme" : "Rule-Based Matches"}
+                </span>
+                <p className="ms-home-metric-desc">
+                  {lang === "tr"
+                    ? "Morfolojik niteliklerle aday türleri daraltan karar desteği"
+                    : "Decision support narrowing candidate species via traits"}
+                </p>
+              </Reveal>
 
-            <Reveal className="ms-home-metric-card" delay={240}>
-              <span className="ms-home-metric-number">AI</span>
-              <span className="ms-home-metric-label">
-                {lang === "tr" ? "Görsel Model Desteği" : "Visual Model Support"}
+              <Reveal className="ms-home-metric-card" delay={180}>
+                <span className="ms-home-metric-number">3D</span>
+                <span className="ms-home-metric-label">
+                  {lang === "tr" ? "İnteraktif Kavkı Modelleri" : "Interactive Shell Models"}
+                </span>
+                <p className="ms-home-metric-desc">
+                  {lang === "tr"
+                    ? "Web tabanlı sanal laboratuvarda üç boyutlu numune inceleme"
+                    : "Three-dimensional specimen inspection in a web-based virtual lab"}
+                </p>
+              </Reveal>
+
+              <Reveal className="ms-home-metric-card" delay={240}>
+                <span className="ms-home-metric-number">AI</span>
+                <span className="ms-home-metric-label">
+                  {lang === "tr" ? "Görsel Model Desteği" : "Visual Model Support"}
+                </span>
+                <p className="ms-home-metric-desc">
+                  {lang === "tr"
+                    ? "İnce kesitlerden otomatik loca ve duvar karakter çıkarımı"
+                    : "Automated chamber and wall extraction from thin sections"}
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4.5. INTERACTIVE TAXON & SPECIMEN SHOWCASE STRIP ── */}
+      <section className="ms-section ms-section--gray ms-home-taxa-section" aria-labelledby="home-taxa-title">
+        <div className="ms-container">
+          <Reveal className="ms-section-header">
+            <div>
+              <span className="ms-eyebrow">
+                {lang === "tr" ? "Takson Vitrini" : "Taxon Showcase"}
               </span>
-              <p className="ms-home-metric-desc">
+              <h2 id="home-taxa-title" className="ms-section-title">
+                {lang === "tr" ? "Öne Çıkan Hiyalin Bentik Cinsler" : "Featured Hyaline Benthic Genera"}
+              </h2>
+              <p className="ms-section-lead">
                 {lang === "tr"
-                  ? "İnce kesit fotoğraflarından otomatik loca ve duvar karakter çıkarımı"
-                  : "Automated extraction of chamber and wall characters from thin sections"}
+                  ? "Paleosen–Eosen karbonat rampalarını karakterize eden seçili cinslerin stratigrafik ve ortamsal profillerine doğrudan erişin."
+                  : "Jump straight into stratigraphic and paleoenvironmental profiles of index genera across Paleocene–Eocene carbonate ramps."}
               </p>
-            </Reveal>
+            </div>
+            <Link className="ms-link" to="/jeoloji">
+              {lang === "tr" ? "Tüm taksonları görüntüle" : "View all taxa"}
+            </Link>
+          </Reveal>
+
+          <div className="ms-home-taxa-grid">
+            {featuredTaxa.map((taxon, index) => (
+              <Reveal key={taxon.name} className="ms-home-taxon-wrap" delay={index * 50}>
+                <Link
+                  to={`/jeoloji?taxon=${encodeURIComponent(taxon.name)}`}
+                  className="ms-card ms-home-taxon-card"
+                >
+                  <div className="ms-home-taxon-frame">
+                    <img src={taxon.img} alt={taxon.name} loading="lazy" />
+                  </div>
+                  <div className="ms-home-taxon-meta">
+                    <span className="ms-home-taxon-name">{taxon.name}</span>
+                    <span className="ms-home-taxon-age">{taxon.age[lang]}</span>
+                    <span className="ms-home-taxon-zone">{taxon.zone[lang]}</span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── 5. EDUCATIONAL CARDS: WHAT ARE FORAMINIFERA? ── */}
-      <section className="ms-section ms-section--gray ms-home-edu-section" id="about">
+      <section className="ms-section ms-home-edu-section" id="about">
         <div className="ms-container">
           <Reveal className="ms-section-header">
             <div>

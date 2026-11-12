@@ -28,6 +28,226 @@
   box-shadow: var(--shadow-16);
 }
 
+.ms-geology-card.is-selected {
+  border-color: var(--ms-blue);
+  box-shadow: 0 12px 30px -6px rgb(0 103 184 / 22%), var(--shadow-8);
+}
+
+/* Interactive Chronostratigraphic Timeline */
+.ms-geo-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background: linear-gradient(180deg, #fafcfe 0%, var(--ms-gray-20) 100%);
+}
+
+.ms-geo-timeline-rail {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 29px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ms-blue-bright) 0%, var(--ms-blue) 50%, var(--ms-navy) 100%);
+  opacity: 0.35;
+}
+
+.ms-geo-timeline-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px 4px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-sans);
+  text-align: center;
+  cursor: pointer;
+}
+
+.ms-geo-node-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background: var(--ms-gray-90);
+  box-shadow: 0 0 0 2px var(--color-border);
+  transition: transform var(--duration-normal) var(--ease-decelerate-max), background var(--duration-fast) var(--ease-easy), box-shadow var(--duration-fast) var(--ease-easy);
+}
+
+.ms-geo-timeline-node:hover .ms-geo-node-dot {
+  background: var(--ms-blue);
+  transform: scale(1.15);
+}
+
+.ms-geo-timeline-node.is-active .ms-geo-node-dot {
+  background: var(--ms-blue);
+  box-shadow: 0 0 0 4px rgb(0 103 184 / 22%);
+  transform: scale(1.2);
+}
+
+.ms-geo-node-age {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ms-blue);
+}
+
+.ms-geo-node-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ms-navy);
+}
+
+.ms-geo-node-epoch {
+  font-size: 12px;
+  color: var(--ms-gray-130);
+}
+
+.ms-geo-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ms-geo-card-age {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ms-gray-110);
+}
+
+.ms-geo-card-taxa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--ms-gray-40);
+}
+
+.ms-geo-taxon-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ms-blue-tint-strong);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue-dark);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--duration-faster) var(--ease-easy), color var(--duration-faster) var(--ease-easy);
+}
+
+.ms-geo-taxon-chip:hover {
+  background: var(--ms-blue);
+  color: #ffffff;
+}
+
+.ms-geo-stage-spotlight {
+  margin-top: 20px;
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--ms-blue);
+  background: var(--ms-navy);
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-8);
+}
+
+.ms-geo-spotlight-meta h3 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ms-geo-spotlight-meta .ms-eyebrow {
+  color: var(--ms-blue-bright);
+  margin: 0;
+}
+
+.ms-geo-spotlight-desc {
+  margin: 0;
+  flex: 1 1 360px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgb(255 255 255 / 86%);
+}
+
+/* Depositional Depth Spectrum Filter */
+.ms-geo-depth-spectrum {
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background: #ffffff;
+  box-shadow: var(--shadow-2);
+}
+
+.ms-geo-depth-bar {
+  height: 8px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #50e6ff 0%, #0078d4 45%, #004e8c 75%, #0b2b40 100%);
+}
+
+.ms-geo-depth-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ms-geo-depth-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--ms-gray-20);
+  color: var(--ms-gray-170);
+  font-family: var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--duration-faster) var(--ease-easy);
+}
+
+.ms-geo-depth-btn:hover {
+  border-color: var(--ms-blue-tint-strong);
+  background: var(--ms-blue-tint);
+}
+
+.ms-geo-depth-btn.is-active {
+  border-color: var(--ms-blue);
+  background: var(--ms-blue);
+  color: #ffffff;
+  box-shadow: var(--shadow-4);
+}
+
+.ms-geo-depth-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ms-geo-depth-range {
+  font-size: 11.5px;
+  opacity: 0.8;
+}
+
 .ms-geology-card .ms-card-body {
   padding: 24px;
 }
@@ -214,6 +434,27 @@
   background: var(--ms-gray-30);
   color: var(--ms-gray-130);
   align-self: flex-start;
+}
+
+@media (max-width: 720px) {
+  .ms-geo-timeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .ms-geo-timeline-rail {
+    display: none;
+  }
+  .ms-geo-timeline-node {
+    flex-direction: row;
+    text-align: left;
+    gap: 10px;
+  }
+  .ms-geo-node-age {
+    margin-top: 0;
+  }
+  .ms-geo-depth-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {

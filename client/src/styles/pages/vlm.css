@@ -70,6 +70,36 @@
   box-shadow: 0 6px 18px rgba(0, 103, 184, 0.12);
 }
 
+.upload-zone.is-scanning {
+  border-color: var(--ms-blue);
+  background: #061824;
+  box-shadow: 0 0 0 3px rgb(80 230 255 / 22%), var(--shadow-16);
+}
+
+.vlm-scan-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(0 103 184 / 12%) 0%, transparent 45%, rgb(0 103 184 / 14%) 100%);
+  overflow: hidden;
+}
+
+.vlm-scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #50e6ff 30%, #ffffff 50%, #50e6ff 70%, transparent 100%);
+  box-shadow: 0 0 18px 4px rgb(80 230 255 / 75%);
+  animation: vlm-scan-sweep 1.8s var(--ease-easy) infinite;
+}
+
+@keyframes vlm-scan-sweep {
+  0% { top: 6%; opacity: 0.7; }
+  50% { top: 92%; opacity: 1; }
+  100% { top: 6%; opacity: 0.7; }
+}
+
 .upload-zone:hover .upload-icon {
   transform: scale(1.15) translateY(-2px);
 }
@@ -158,16 +188,16 @@
   align-items: center;
   gap: 10px;
   margin-top: 20px;
-  padding: 12px;
-  background: #f0fdfa;
-  border-radius: 8px;
-  border: 1px solid #ccfbf1;
+  padding: 12px 14px;
+  background: var(--ms-blue-tint);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--ms-blue-tint-strong);
 }
 
 .checkbox-group input {
   width: 16px;
   height: 16px;
-  accent-color: var(--color-primary);
+  accent-color: var(--ms-blue);
   cursor: pointer;
 }
 
@@ -175,23 +205,23 @@
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--ms-gray-170);
 }
 
 .submit-btn {
   width: 100%;
-  padding: 12px;
-  margin-top: 24px;
-  background: var(--color-primary);
-  color: white;
+  padding: 12px 16px;
+  margin-top: 22px;
+  background: var(--ms-blue);
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.2s;
-  box-shadow: 0 4px 6px -1px rgb(15 118 110 / 0.2);
+  transition: all var(--duration-fast) var(--ease-decelerate-max);
+  box-shadow: var(--shadow-4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +229,9 @@
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: var(--color-primary-hover);
+  background: var(--ms-blue-hover);
+  box-shadow: var(--shadow-8);
+  transform: translateY(-1px);
 }
 
 .submit-btn:disabled {
@@ -307,34 +339,71 @@
 }
 
 .vlm-status {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--ms-blue-dark);
   margin-bottom: 8px;
   display: inline-block;
-  padding: 6px 14px;
-  border-radius: 6px;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--ms-blue-tint);
+  border: 1px solid var(--ms-blue-tint-strong);
+  letter-spacing: 0.04em;
 }
 
 .vlm-id {
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
-  color: var(--color-text);
-  margin: 12px 0;
+  color: var(--ms-navy);
+  margin: 10px 0 12px;
 }
 
 .vlm-explanation {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  background: var(--ms-gray-20);
+  border: 1px solid var(--color-border-subtle);
+  border-left: 3px solid var(--ms-blue);
   padding: 12px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: 14px;
-  color: #1e3a8a;
+  color: var(--ms-gray-170);
   margin-bottom: 16px;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+.vlm-candidates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--ms-gray-130);
+}
+
+.vlm-candidate-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vlm-candidate-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--ms-blue-tint-strong);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue-dark);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--duration-faster) var(--ease-easy), color var(--duration-faster) var(--ease-easy);
+}
+
+.vlm-candidate-chip:hover {
+  background: var(--ms-blue);
+  color: #ffffff;
 }
 
 .spinner {

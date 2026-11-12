@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import PageHero from "../components/ms/PageHero";
+import foram2 from "../assets/images/foram2.jpg";
 import "../styles/pages/vlm.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -146,6 +148,14 @@ function Vlm() {
         title={t("vlm.title")}
         text={t("vlm.desc")}
         tone="gray"
+        image={foram2}
+        imageFit="contain"
+        imageAlt={lang === "tr" ? "Foraminifera ince kesit ve kavkı yapısı" : "Foraminifera thin section and test morphology"}
+        actions={
+          <Link to="/tani" className="ms-btn ms-btn--secondary">
+            <span>{lang === "tr" ? "Kural Tabanlı Tanıya Geç" : "Switch to Rule-Based Diagnosis"}</span>
+          </Link>
+        }
       />
 
       <section className="ms-section ms-vlm-section">
@@ -154,7 +164,7 @@ function Vlm() {
           {/* Left Side: Upload & Form */}
           <div className="vlm-left">
             <div 
-              className={`upload-zone ${base64Image ? 'active' : ''}`}
+              className={`upload-zone ${base64Image ? 'active' : ''}${loading ? ' is-scanning' : ''}`}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
               onClick={() => !base64Image && fileInputRef.current?.click()}
@@ -162,6 +172,11 @@ function Vlm() {
               {base64Image ? (
                 <>
                   <img src={base64Image} alt="Preview" className="image-preview" />
+                  {loading && (
+                    <div className="vlm-scan-overlay" aria-hidden="true">
+                      <div className="vlm-scan-beam" />
+                    </div>
+                  )}
                   <button 
                     className="remove-btn" 
                     onClick={(e) => {
@@ -290,9 +305,24 @@ function Vlm() {
                       </div>
                     )}
 
-                    <div style={{ fontSize: '14px', color: 'var(--color-text-muted)' }}>
+                    <div className="vlm-candidates">
                       <strong>{lang === 'tr' ? "Aday Cinsler: " : "Candidate Genera: "}</strong>
-                      {result.observation.vlm_suggestion.candidate_genera?.map(g => g.name).join(", ") || (lang === 'tr' ? "Bulunamadı" : "None")}
+                      {result.observation.vlm_suggestion.candidate_genera?.length > 0 ? (
+                        <div className="vlm-candidate-chips">
+                          {result.observation.vlm_suggestion.candidate_genera.map((g) => (
+                            <Link
+                              key={g.name}
+                              to={`/jeoloji?taxon=${encodeURIComponent(g.name)}`}
+                              className="vlm-candidate-chip"
+                            >
+                              <em>{g.name}</em>
+                              <span aria-hidden="true">→</span>
+                            </Link>
+                          ))}
+                        </div>
+                      ) : (
+                        <span>{lang === 'tr' ? "Bulunamadı" : "None"}</span>
+                      )}
                     </div>
                   </div>
                 )}

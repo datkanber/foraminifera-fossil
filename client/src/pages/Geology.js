@@ -31,10 +31,63 @@ const EN_TRANSLATIONS = {
   "Frondicularia":                 { depth: "Mostly 50-200 meters; in some species up to the upper bathyal zone, 200-400 meters", habitat: "Clayey limestone, shale, and marl deposits in middle and outer neritic shelf and basin transition areas.", source: "Project environment data table" },
 };
 
+const STAGES = [
+  {
+    id: "thanetian",
+    epoch: { tr: "Geç Paleosen", en: "Late Paleocene" },
+    name: { tr: "Tanesiyen (Thanetian)", en: "Thanetian" },
+    age: "59.2 – 56.0 My",
+    desc: {
+      tr: "Karmaşık kabuk formlarının ilk radyasyonu ve spesifik bentik fauna toplulukları ile karakterizedir. Karsella ve Laffitteina gibi erken formlar bu dönemde öne çıkar.",
+      en: "Characterized by the initial radiation of complex shell forms and specific benthic faunal assemblages, featuring early taxa such as Karsella and Laffitteina.",
+    },
+    taxa: ["Karsella hottingeri", "Laffitteina erki", "Pseudolacazina oeztemueri"],
+  },
+  {
+    id: "ilerdian",
+    epoch: { tr: "Erken Eosen", en: "Early Eocene" },
+    name: { tr: "İlerdiyen (Ilerdian)", en: "Ilerdian" },
+    age: "56.0 – 52.0 My",
+    desc: {
+      tr: "Tethys bölgesinde kritik bir Erken Eosen katı. Alveolina, Orbitolites ve Nummulitidae taksonlarının hızlı yayılımına ve sığ karbonat platformlarına tanık olmuştur.",
+      en: "A critical Early Eocene stage in the Tethys realm, witnessing explosive diversification of taxa such as Alveolina and shallow carbonate platform communities.",
+    },
+    taxa: ["Alveolina haymanaensis", "Orbitolites", "Discocyclina seunesi"],
+  },
+  {
+    id: "cuisian",
+    epoch: { tr: "Geç Erken Eosen", en: "Late Early Eocene" },
+    name: { tr: "Küiziyen (Cuisian)", en: "Cuisian" },
+    age: "52.0 – 47.8 My",
+    desc: {
+      tr: "Kavkı morfolojisi, loca dizilimi ve ekolojik adaptasyonlarda ileri uzmanlaşmaların görüldüğü; iç rampadan dış havzaya geçiş zonlarını temsil eden kat.",
+      en: "Stage characterized by advanced specializations in shell morphology, chamber arrangement, and adaptations from inner ramp to outer basin transition zones.",
+    },
+    taxa: ["Orbitoclypeus haymanaensis", "Ranikothalia polatliensis", "Chapmanina"],
+  },
+];
+
+const DEPTH_ZONES = [
+  { id: "all", label: { tr: "Tüm Zonlar", en: "All Zones" }, range: { tr: "0 – 1000+ m", en: "0 – 1000+ m" } },
+  { id: "shore", label: { tr: "Kıyı & Çok Sığ", en: "Shore & Very Shallow" }, range: "0 – 20 m" },
+  { id: "shelf", label: { tr: "Sığ – Orta Şelf", en: "Shallow – Mid Shelf" }, range: "20 – 150 m" },
+  { id: "bathyal", label: { tr: "Dış Şelf & Batıyal", en: "Outer Shelf & Bathyal" }, range: "150 – 1000+ m" },
+];
+
+function matchDepthZone(profile, zoneId) {
+  if (!zoneId || zoneId === "all") return true;
+  const text = `${profile.depthTextTr || ""} ${profile.depthTextEn || ""} ${profile.habitatTextTr || ""}`.toLowerCase();
+  if (zoneId === "bathyal") return /bat[iı]yal|bathyal|dış.*şelf|outer.*shelf|yamaç|slope|500|1000|2000/.test(text);
+  if (zoneId === "shore") return /çok sığ|very shallow|kıyı|shoreline|lagün|lagoon|delta|iç rampa|inner ramp/.test(text);
+  if (zoneId === "shelf") return /sığ deniz|shallow sea|shallow marine|orta şelf|middle shelf|resif|reef|şelf/.test(text) && !/bat[iı]yal|bathyal/.test(text);
+  return true;
+}
+
 function Geology() {
   const { lang } = useLanguage();
-  const [params] = useSearchParams();
+  const [params, setSearchParams] = useSearchParams();
   const selectedTaxon = (params.get("taxon") || "").trim().slice(0, 100);
+  const [activeStageId, setActiveStageId] = useState("ilerdian");
 
   useEffect(() => {
     if (!selectedTaxon) return;
@@ -43,6 +96,8 @@ function Geology() {
     );
     return () => cancelAnimationFrame(frame);
   }, [selectedTaxon]);
+
+  const activeStage = STAGES.find((s) => s.id === activeStageId) || STAGES[1];
 
   return (
     <main id="geology" className="ms-geology-page" lang={lang}>
@@ -67,7 +122,7 @@ function Geology() {
         }
       />
 
-      {/* ── 2. GEOLOGICAL STAGES SECTION ── */}
+      {/* ── 2. INTERACTIVE STRATIGRAPHIC TIMELINE ── */}
       <section className="ms-section ms-geology-stages-section">
         <div className="ms-container">
           <Reveal className="ms-section-header">
@@ -76,64 +131,84 @@ function Geology() {
                 {lang === "tr" ? "Stratigrafik Katlar" : "Stratigraphic Stages"}
               </span>
               <h2 className="ms-section-title">
-                {lang === "tr" ? "Paleosen ve Eosen Dönemleri" : "Paleocene & Eocene Stages"}
+                {lang === "tr" ? "Paleosen ve Eosen Kronostratigrafisi" : "Paleocene & Eocene Chronostratigraphy"}
               </h2>
               <p className="ms-section-lead">
                 {lang === "tr"
-                  ? "Tethys biyoprovensinde foraminifer faunasının evrimsel çeşitlenişini belirleyen üç kritik zaman aralığı."
-                  : "Three critical time intervals defining the evolutionary diversification of foraminiferal fauna in the Tethyan bioprovince."}
+                  ? "Tethys biyoprovensinde foraminifer faunasının evrimsel çeşitlenişini belirleyen üç kritik katı zaman çizelgesi üzerinden inceleyin."
+                  : "Explore the three critical stages defining the evolutionary diversification of Tethyan foraminiferal fauna along the interactive timeline."}
               </p>
             </div>
           </Reveal>
 
-          <div className="ms-grid ms-grid--3">
-            <Reveal as="div" className="ms-card ms-geology-card" delay={0}>
-              <div className="ms-card-body">
-                <span className="ms-badge ms-badge--neutral">
-                  {lang === "tr" ? "Geç Paleosen" : "Late Paleocene"}
-                </span>
-                <h3 className="ms-card-title">
-                  {lang === "tr" ? "Tanesiyen (Thanetian)" : "Thanetian"}
-                </h3>
-                <p className="ms-card-text">
-                  {lang === "tr"
-                    ? "Karmaşık kabuk formlarının ilk radyasyonu ve spesifik bentik fauna toplulukları ile karakterizedir. Karsella ve Laffitteina gibi erken formlar bu dönemde öne çıkar."
-                    : "Characterized by the initial radiation of complex shell forms and specific benthic faunal assemblages, featuring early taxa such as Karsella and Laffitteina."}
-                </p>
-              </div>
-            </Reveal>
+          <div className="ms-geo-timeline" role="tablist" aria-label={lang === "tr" ? "Jeolojik kat zaman çizelgesi" : "Geological stage timeline"}>
+            <div className="ms-geo-timeline-rail" aria-hidden="true" />
+            {STAGES.map((stage) => {
+              const isSelected = stage.id === activeStageId;
+              return (
+                <button
+                  key={stage.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isSelected}
+                  className={`ms-geo-timeline-node${isSelected ? " is-active" : ""}`}
+                  onClick={() => setActiveStageId(stage.id)}
+                >
+                  <span className="ms-geo-node-dot" aria-hidden="true" />
+                  <span className="ms-geo-node-age">{stage.age}</span>
+                  <strong className="ms-geo-node-name">{stage.name[lang]}</strong>
+                  <span className="ms-geo-node-epoch">{stage.epoch[lang]}</span>
+                </button>
+              );
+            })}
+          </div>
 
-            <Reveal as="div" className="ms-card ms-geology-card" delay={80}>
-              <div className="ms-card-body">
-                <span className="ms-badge ms-badge--neutral">
-                  {lang === "tr" ? "Erken Eosen" : "Early Eocene"}
-                </span>
-                <h3 className="ms-card-title">
-                  {lang === "tr" ? "İlerdiyen (Ilerdian)" : "Ilerdian"}
-                </h3>
-                <p className="ms-card-text">
-                  {lang === "tr"
-                    ? "Tethys bölgesinde kritik bir Erken Eosen katı. Alveolina, Orbitolites ve Nummulitidae taksonlarının hızlı yayılımına ve sığ karbonat platformlarına tanık olmuştur."
-                    : "A critical Early Eocene stage in the Tethys realm, witnessing explosive diversification of taxa such as Alveolina and shallow carbonate platform communities."}
-                </p>
-              </div>
-            </Reveal>
+          <div className="ms-grid ms-grid--3 ms-geo-stage-cards">
+            {STAGES.map((stage, i) => {
+              const isSelected = stage.id === activeStageId;
+              return (
+                <Reveal
+                  as="div"
+                  key={stage.id}
+                  className={`ms-card ms-geology-card${isSelected ? " is-selected" : ""}`}
+                  delay={i * 70}
+                >
+                  <div className="ms-card-body">
+                    <div className="ms-geo-card-top">
+                      <span className={`ms-badge ${isSelected ? "ms-badge--accent" : "ms-badge--neutral"}`}>
+                        {stage.epoch[lang]}
+                      </span>
+                      <span className="ms-geo-card-age">{stage.age}</span>
+                    </div>
+                    <h3 className="ms-card-title">{stage.name[lang]}</h3>
+                    <p className="ms-card-text">{stage.desc[lang]}</p>
+                    <div className="ms-geo-card-taxa">
+                      {stage.taxa.map((taxonName) => (
+                        <button
+                          key={taxonName}
+                          type="button"
+                          className="ms-geo-taxon-chip"
+                          onClick={() => {
+                            setActiveStageId(stage.id);
+                            setSearchParams({ taxon: taxonName });
+                          }}
+                        >
+                          <em>{taxonName}</em>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
 
-            <Reveal as="div" className="ms-card ms-geology-card" delay={160}>
-              <div className="ms-card-body">
-                <span className="ms-badge ms-badge--neutral">
-                  {lang === "tr" ? "Geç Erken Eosen" : "Late Early Eocene"}
-                </span>
-                <h3 className="ms-card-title">
-                  {lang === "tr" ? "Küiziyen (Cuisian)" : "Cuisian"}
-                </h3>
-                <p className="ms-card-text">
-                  {lang === "tr"
-                    ? "Kavkı morfolojisi, loca dizilimi ve ekolojik adaptasyonlarda daha ileri uzmanlaşmaların görüldüğü; iç rampadan dış havzaya geçiş zonlarını temsil eden kat."
-                    : "Stage characterized by advanced specializations in shell morphology, chamber arrangement, and adaptations from inner ramp to outer basin transition zones."}
-                </p>
-              </div>
-            </Reveal>
+          <div className="ms-geo-stage-spotlight" role="tabpanel" aria-label={activeStage.name[lang]}>
+            <div className="ms-geo-spotlight-meta">
+              <span className="ms-eyebrow">{activeStage.epoch[lang]} · {activeStage.age}</span>
+              <h3>{activeStage.name[lang]}</h3>
+            </div>
+            <p className="ms-geo-spotlight-desc">{activeStage.desc[lang]}</p>
           </div>
         </div>
       </section>
@@ -174,6 +249,7 @@ function TaxonEnvironmentSection({ query = "" }) {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState(query);
   const [rankFilter, setRankFilter] = useState("");
+  const [depthZone, setDepthZone] = useState("all");
   const { lang } = useLanguage();
 
   useEffect(() => { setSearchTerm(query); }, [query]);
@@ -201,7 +277,8 @@ function TaxonEnvironmentSection({ query = "" }) {
       !searchTerm ||
       p.scientificName.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRank = !rankFilter || p.rank === rankFilter;
-    return matchesSearch && matchesRank;
+    const matchesDepth = matchDepthZone(p, depthZone);
+    return matchesSearch && matchesRank && matchesDepth;
   });
 
   return (
@@ -225,6 +302,27 @@ function TaxonEnvironmentSection({ query = "" }) {
             {filtered.length} / {profiles.length} {lang === "tr" ? "kayıt" : "records"}
           </span>
         )}
+      </div>
+
+      {/* Depositional Depth Spectrum */}
+      <div className="ms-geo-depth-spectrum" role="group" aria-label={lang === "tr" ? "Çökelme derinliği zonu filtresi" : "Depositional depth zone filter"}>
+        <div className="ms-geo-depth-bar" aria-hidden="true" />
+        <div className="ms-geo-depth-tabs">
+          {DEPTH_ZONES.map((zone) => {
+            const active = depthZone === zone.id;
+            return (
+              <button
+                key={zone.id}
+                type="button"
+                className={`ms-geo-depth-btn${active ? " is-active" : ""}`}
+                onClick={() => setDepthZone(zone.id)}
+              >
+                <span className="ms-geo-depth-label">{zone.label[lang]}</span>
+                <span className="ms-geo-depth-range">{typeof zone.range === "string" ? zone.range : zone.range[lang]}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Search & Filter Toolbar */}
@@ -318,7 +416,7 @@ function TaxonEnvironmentSection({ query = "" }) {
               <button
                 type="button"
                 className="ms-btn ms-btn--secondary ms-btn--sm"
-                onClick={() => { setSearchTerm(""); setRankFilter(""); }}
+                onClick={() => { setSearchTerm(""); setRankFilter(""); setDepthZone("all"); }}
               >
                 {lang === "tr" ? "Filtreleri Temizle" : "Clear Filters"}
               </button>

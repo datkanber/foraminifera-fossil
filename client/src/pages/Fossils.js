@@ -3,11 +3,32 @@ import PageHero from "../components/ms/PageHero";
 import "../styles/pages/fossils.css";
 import ceratiteIcon from "../assets/johnny-automatic-ceratite.svg";
 import foraminiferaIcon from "../assets/foraminifera.svg";
+import foram1 from "../assets/images/foram1.jpg";
 import TaxonProfileCard from "../components/TaxonProfileCard";
 import { useLanguage } from "../contexts/LanguageContext";
 import characterDictionary from "../../../api/data/characters.json";
 
 const API = process.env.REACT_APP_API_URL + "/api/diagnose";
+
+function WarningSvg() {
+  return (
+    <svg className="ms-inline-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+      <line x1="12" y1="9" x2="12" y2="13" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
+  );
+}
+
+function HintSvg() {
+  return (
+    <svg className="ms-inline-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="12" y1="16" x2="12" y2="12" />
+      <line x1="12" y1="8" x2="12.01" y2="8" />
+    </svg>
+  );
+}
 
 const renderText = (str, lang) => {
   if (!str) return null;
@@ -52,6 +73,9 @@ function Fossils() {
         title={t("fossils.title")}
         text={t("fossils.desc")}
         tone="gray"
+        image={foram1}
+        imageFit="contain"
+        imageAlt={lang === "tr" ? "Foraminifera morfolojisi" : "Foraminifera morphology"}
       />
 
       <section className="ms-section ms-fossils-section">
@@ -190,8 +214,20 @@ function WizardMode({ onBack }) {
     fetchStart();
   };
 
+  const progressPct = result ? 100 : Math.min(92, Math.max(10, crumbs.length * 14));
+
   return (
     <div className="wizard-layout">
+      <div className="wizard-progress" aria-label={lang === 'tr' ? "Tanılama ilerlemesi" : "Diagnosis progress"}>
+        <div className="wizard-progress-meta">
+          <span>{lang === 'tr' ? `Adım ${crumbs.length + (result ? 0 : 1)}` : `Step ${crumbs.length + (result ? 0 : 1)}`}</span>
+          <span>{result ? (lang === 'tr' ? "Tamamlandı" : "Complete") : `${progressPct}%`}</span>
+        </div>
+        <div className="wizard-progress-track">
+          <div className="wizard-progress-fill" style={{ width: `${progressPct}%` }} />
+        </div>
+      </div>
+
       {/* Breadcrumb bar */}
       <div className="wizard-breadcrumb">
         <button className="back-link" onClick={onBack}>{t("btn.back")}</button>
@@ -253,7 +289,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
     <div className="question-card">
       {node.sectionSensitive && (
         <div className="section-warning">
-          ⚠️ <strong>{lang === 'tr' ? "Kesit Yönü Kontrolü:" : "Section Orientation:"}</strong> {lang === 'tr' ? "Bu soru kesit yönüne duyarlıdır. Aksiyal veya ekvatoryal kesit olduğundan emin olun" : "This question is sensitive to section orientation. Make sure you are using an axial or equatorial section"} (CHR_21).
+          <WarningSvg /> <strong>{lang === 'tr' ? "Kesit Yönü Kontrolü:" : "Section Orientation:"}</strong> {lang === 'tr' ? "Bu soru kesit yönüne duyarlıdır. Aksiyal veya ekvatoryal kesit olduğundan emin olun" : "This question is sensitive to section orientation. Make sure you are using an axial or equatorial section"} (CHR_21).
         </div>
       )}
 
@@ -269,7 +305,7 @@ function QuestionCard({ current, onAnswer, onBack }) {
 
       {node.observationHint && (
         <div className="observation-hint">
-          💡 {lang === 'tr' ? "Gözlem ipucu" : "Observation hint"}:{" "}
+          <HintSvg /> {lang === 'tr' ? "Gözlem ipucu" : "Observation hint"}:{" "}
           {Array.isArray(node.observationHint)
             ? node.observationHint.join(", ")
             : node.observationHint}
@@ -378,7 +414,7 @@ function ResultCard({ result, onReset, onBack }) {
             marginBottom: "16px",
             fontSize: "14px",
           }}>
-            <strong style={{ color: "#1e3a8a" }}>💡 {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
+            <strong style={{ color: "#1e3a8a" }}><HintSvg /> {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
             <span style={{ color: "#1e40af" }}>
               {lang === 'tr' ? "Geri gidip bu soru için mevcut cevaplardan birini seçebilirsiniz:" : "You can go back and choose one of the available answers for this question:"}{" "}
               {node.availableBranches.map((b) => (lang === 'tr' ? b.labelTr : b.labelEn) || b.value).join(", ")}
@@ -405,9 +441,9 @@ function ResultCard({ result, onReset, onBack }) {
       <h3 className="result-genus"><em>{name}</em></h3>
       <div className="result-module-badge">{module}</div>
 
-      {flag && <div className="flag-warning">⚠️ {flag}</div>}
+      {flag && <div className="flag-warning"><WarningSvg /> {flag}</div>}
       {taxonomicReviewRequired && (
-        <div className="flag-warning">⚠️ {t("warning.taxonomic")}</div>
+        <div className="flag-warning"><WarningSvg /> {t("warning.taxonomic")}</div>
       )}
 
       <div className="flag-warning" style={{ background: "#fff3cd", color: "#856404", border: "1px solid #ffeeba", marginTop: "12px", fontSize: "13px" }}>
@@ -639,7 +675,7 @@ function ScoreResult({ data }) {
               {ranking.map((r, i) => (
                 <tr key={r.genus} className={i === 0 ? "top-row" : ""}>
                   <td>{i + 1}</td>
-                  <td><em>{r.genus}</em>{r.flag ? " ⚠️" : ""}</td>
+                  <td><em>{r.genus}</em>{r.flag ? <> <WarningSvg /></> : ""}</td>
                   <td><span className="module-chip">{r.module?.slice(0, 3)}</span></td>
                   <td><strong>{r.score}</strong></td>
                   <td>{r.mandatoryMatched}/{r.mandatoryTotal}</td>

@@ -18,6 +18,7 @@ export default function PageHero({
   image,
   imageAlt = "",
   imagePosition,
+  imageFit = "cover",
   actions,
   titleId,
   children,
@@ -25,6 +26,9 @@ export default function PageHero({
   const classes = ["ms-page-hero"];
   if (tone !== "gray") classes.push(`ms-page-hero--${tone}`);
   if (image) classes.push("ms-page-hero--media");
+
+  const mediaClasses = ["ms-page-hero-media"];
+  if (imageFit === "contain") mediaClasses.push("ms-page-hero-media--contain");
 
   return (
     <header className={classes.join(" ")}>
@@ -37,7 +41,7 @@ export default function PageHero({
           {children}
         </div>
         {image && (
-          <div className="ms-page-hero-media">
+          <div className={mediaClasses.join(" ")}>
             <img src={image} alt={imageAlt} style={imagePosition ? { objectPosition: imagePosition } : undefined} />
           </div>
         )}
