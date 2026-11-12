@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+<img width="2848" height="1418" alt="image" src="https://github.com/user-attachments/assets/bbcebdab-005f-4c9a-956e-48f070ac32ca" />
 
 The project is designed around the following principles:
 
