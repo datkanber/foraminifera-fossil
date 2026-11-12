@@ -64,3 +64,6 @@ desktop.ini
 .env*
 
 __pycache__/
+
+# Large local release archive
+client/src/assets/scs/release_candidate/foraminifera-fossil_v1.0_DRAFT.zip
