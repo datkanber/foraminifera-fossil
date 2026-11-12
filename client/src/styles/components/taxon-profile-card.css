@@ -2,9 +2,10 @@
 
 .taxon-card {
   margin-top: 16px;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-8);
   overflow: hidden;
 }
 
@@ -13,20 +14,20 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 16px;
-  background: var(--color-sap-bg);
-  border-bottom: 1px solid var(--color-border);
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #f8fbfe 0%, var(--ms-gray-20) 100%);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .taxon-card-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--ms-navy);
 }
 
 .taxon-card-title em {
   font-style: italic;
-  color: var(--color-primary);
+  color: var(--ms-blue);
 }
 
 /* ─── Availability badges ──────────────────────────────────────────────── */

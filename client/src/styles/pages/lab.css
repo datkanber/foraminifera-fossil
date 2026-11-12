@@ -2,17 +2,15 @@
    LAB.CSS — Foraminifera 3D Laboratory
    ─────────────────────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 .lab-wrapper {
-  --lab-bg: rgba(8, 20, 13, 0.94);
-  --lab-panel: linear-gradient(165deg, rgba(14, 32, 20, 0.98) 0%, rgba(8, 20, 13, 0.99) 100%);
-  --lab-border: rgba(122, 232, 112, 0.18);
-  --lab-border-strong: rgba(122, 232, 112, 0.38);
-  --lab-text: #e3f3dc;
-  --lab-muted: rgba(200, 228, 190, 0.68);
-  --lab-accent: #7ae870;
-  --lab-accent-deep: #2d7a2d;
+  --lab-bg: rgba(8, 29, 44, 0.9);
+  --lab-panel: linear-gradient(165deg, rgba(11, 43, 64, 0.96) 0%, rgba(6, 24, 36, 0.98) 100%);
+  --lab-border: rgba(80, 230, 255, 0.22);
+  --lab-border-strong: rgba(80, 230, 255, 0.48);
+  --lab-text: #eef6fc;
+  --lab-muted: rgba(206, 226, 242, 0.72);
+  --lab-accent: #50e6ff;
+  --lab-accent-deep: #0067b8;
   --lab-plankton: #e58bb8;
   --lab-art: #c79bdc;
   --lab-danger: #ff8a80;
@@ -23,7 +21,7 @@
   height: calc(100dvh - 68px);
   min-height: 480px;
   overflow: hidden;
-  background: #050a08;
+  background: #061824;
   font-family: var(--font-base), system-ui, sans-serif;
   color: var(--lab-text);
 }
@@ -59,31 +57,31 @@
   gap: 8px;
   padding: 12px 22px;
   border-radius: 12px;
-  font: 600 15px/1.2 'Space Grotesk', 'Inter', sans-serif;
+  font: 600 15px/1.2 var(--font-display);
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .lab-primary-btn {
-  background: linear-gradient(140deg, #2d7a2d, #4a9f3f);
+  background: linear-gradient(140deg, #0067b8, #0078d4);
   border: none;
   color: #fff;
-  box-shadow: 0 8px 22px rgba(45, 122, 45, 0.4);
+  box-shadow: 0 8px 22px rgba(0, 103, 184, 0.42);
 }
 
 .lab-primary-btn:hover {
-  background: linear-gradient(140deg, #3a9a3a, #5ab550);
+  background: linear-gradient(140deg, #0078d4, #1890f1);
   transform: translateY(-1px);
 }
 
 .lab-ghost-btn {
-  background: rgba(122, 232, 112, 0.06);
+  background: rgba(80, 230, 255, 0.06);
   border: 1px solid var(--lab-border-strong);
   color: var(--lab-text);
 }
 
 .lab-ghost-btn:hover:not(:disabled) {
-  background: rgba(122, 232, 112, 0.14);
+  background: rgba(80, 230, 255, 0.14);
 }
 
 .lab-ghost-btn:disabled {
@@ -143,7 +141,7 @@
   background: var(--lab-accent-deep);
   border: 2px solid #c8a24a;
   color: #fff;
-  font: 700 17px 'Space Grotesk', sans-serif;
+  font: 700 17px var(--font-display);
 }
 
 .lab-num.is-art {
@@ -173,7 +171,7 @@
 .lab-progress-fill {
   height: 100%;
   border-radius: 99px;
-  background: linear-gradient(90deg, #2d7a2d, #4aaa40, #7ae870);
+  background: linear-gradient(90deg, #0067b8, #0078d4, #50e6ff);
   transition: width 0.35s ease;
 }
 
@@ -185,7 +183,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
-  background: rgba(3, 10, 6, 0.72);
+  background: rgba(6, 24, 36, 0.78);
   backdrop-filter: blur(8px);
   z-index: 90;
   animation: lab-fade 0.4s ease;
@@ -211,7 +209,7 @@
 
 .lab-intro-box h2 {
   margin: 0 0 12px;
-  font: 700 27px 'Space Grotesk', sans-serif;
+  font: 700 27px var(--font-display);
   letter-spacing: -0.03em;
   color: var(--lab-text);
 }
@@ -238,7 +236,7 @@
   padding: 6px 12px;
   font-size: 12.5px;
   color: var(--lab-accent);
-  background: rgba(122, 232, 112, 0.08);
+  background: rgba(80, 230, 255, 0.08);
   border: 1px solid var(--lab-border);
   border-radius: 99px;
 }
@@ -266,12 +264,12 @@
 }
 
 .lab-key-badge {
-  font: 600 11.5px 'Space Grotesk', monospace;
+  font: 600 11.5px ui-monospace, Consolas, monospace;
   color: var(--lab-accent);
   background: rgba(0, 0, 0, 0.4);
   padding: 4px 9px;
   border-radius: 7px;
-  border: 1px solid rgba(122, 232, 112, 0.25);
+  border: 1px solid rgba(80, 230, 255, 0.25);
   white-space: nowrap;
 }
 
@@ -350,7 +348,7 @@
   border: 1px solid var(--lab-border-strong);
   background: var(--lab-bg);
   color: var(--lab-text);
-  font: 700 17px 'Space Grotesk', sans-serif;
+  font: 700 17px var(--font-display);
   cursor: pointer;
   z-index: 20;
 }
@@ -396,7 +394,7 @@
   background: none;
   border: none;
   color: var(--lab-text);
-  font: 600 15px 'Space Grotesk', sans-serif;
+  font: 600 15px var(--font-display);
   cursor: pointer;
   text-align: left;
 }
@@ -404,7 +402,7 @@
 .lab-notebook-count {
   font-size: 12px;
   color: var(--lab-accent);
-  background: rgba(122, 232, 112, 0.1);
+  background: rgba(80, 230, 255, 0.1);
   padding: 3px 9px;
   border-radius: 99px;
 }
@@ -430,7 +428,7 @@
   display: flex;
   justify-content: space-between;
   margin: 14px 2px 6px;
-  font: 600 10.5px 'Inter', sans-serif;
+  font: 600 10.5px var(--font-base);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--lab-muted);
@@ -458,13 +456,13 @@
 }
 
 .lab-notebook-list button:hover {
-  background: rgba(122, 232, 112, 0.08);
+  background: rgba(80, 230, 255, 0.08);
   border-color: var(--lab-border);
 }
 
 .lab-notebook-list button.is-done .lab-num {
-  background: #3fae4f;
-  border-color: #d8ffd0;
+  background: #0078d4;
+  border-color: #84ecff;
 }
 
 .lab-notebook-name {
@@ -522,7 +520,7 @@
 
 .lab-inspect-titles h2 {
   margin: 0 0 6px;
-  font: 700 22px 'Inter', sans-serif;
+  font: 700 22px var(--font-base);
   letter-spacing: -0.01em;
   color: var(--lab-text);
 }
@@ -577,7 +575,7 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(ellipse at center, rgba(30, 58, 40, 0.9) 0%, rgba(6, 14, 9, 1) 80%);
+  background: radial-gradient(ellipse at center, rgba(11, 43, 64, 0.92) 0%, rgba(6, 24, 36, 1) 80%);
   border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -608,7 +606,7 @@
   width: 42px;
   height: 42px;
   margin: -21px 0 0 -21px;
-  border: 3px solid rgba(122, 232, 112, 0.2);
+  border: 3px solid rgba(80, 230, 255, 0.2);
   border-top-color: var(--lab-accent);
   border-radius: 50%;
   animation: lab-spin 0.9s linear infinite;
@@ -658,7 +656,7 @@
 .lab-segmented button,
 .lab-tool-btn {
   padding: 7px 12px;
-  font: 600 12.5px 'Inter', sans-serif;
+  font: 600 12.5px var(--font-base);
   color: var(--lab-muted);
   background: none;
   border: none;
@@ -667,7 +665,7 @@
 }
 
 .lab-segmented button.is-active {
-  color: #06140b;
+  color: #061824;
   background: var(--lab-accent);
 }
 
@@ -722,7 +720,7 @@
 
 .lab-tabs button {
   padding: 9px 12px;
-  font: 600 13px 'Inter', sans-serif;
+  font: 600 13px var(--font-base);
   white-space: nowrap;
   color: var(--lab-muted);
   background: none;
@@ -746,12 +744,12 @@
   margin: 0 0 18px;
   font-size: 14.5px;
   line-height: 1.7;
-  color: rgba(222, 240, 214, 0.9);
+  color: rgba(220, 236, 248, 0.9);
 }
 
 .lab-subhead {
   margin: 0 0 12px;
-  font: 600 15px 'Space Grotesk', sans-serif;
+  font: 600 15px var(--font-display);
   color: var(--lab-text);
 }
 
@@ -820,7 +818,7 @@
   justify-content: center;
   border-radius: 50%;
   background: var(--lab-accent-deep);
-  font: 700 12px 'Space Grotesk', sans-serif;
+  font: 700 12px var(--font-display);
 }
 
 /* Size ruler */
@@ -877,7 +875,7 @@
   margin-left: -6px;
   border-radius: 50%;
   background: var(--lab-accent);
-  box-shadow: 0 0 0 4px rgba(122, 232, 112, 0.25);
+  box-shadow: 0 0 0 4px rgba(80, 230, 255, 0.25);
   z-index: 1;
 }
 
@@ -890,7 +888,7 @@
   font-size: 11.5px;
   font-weight: 600;
   white-space: nowrap;
-  color: #06140b;
+  color: #061824;
   background: var(--lab-accent);
   border-radius: 6px;
 }
@@ -925,7 +923,7 @@
   margin: 0;
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(222, 240, 214, 0.85);
+  color: rgba(220, 236, 248, 0.85);
 }
 
 .lab-inspect-foot {
@@ -938,7 +936,7 @@
 }
 
 .lab-step {
-  font: 600 13px 'Space Grotesk', sans-serif;
+  font: 600 13px var(--font-display);
   color: var(--lab-muted);
 }
 
@@ -987,7 +985,7 @@
 
 .lab-card h2 {
   margin: 0 0 10px;
-  font: 700 20px 'Space Grotesk', sans-serif;
+  font: 700 20px var(--font-display);
 }
 
 .lab-card p {
@@ -1021,7 +1019,7 @@
 
 .lab-quiz-head h2 {
   margin: 0;
-  font: 700 19px 'Space Grotesk', sans-serif;
+  font: 700 19px var(--font-display);
 }
 
 .lab-quiz-dots {
@@ -1090,7 +1088,7 @@
 .lab-quiz-viewer {
   position: relative;
   min-height: 340px;
-  background: radial-gradient(ellipse at center, rgba(30, 58, 40, 0.9) 0%, rgba(6, 14, 9, 1) 80%);
+  background: radial-gradient(ellipse at center, rgba(11, 43, 64, 0.92) 0%, rgba(6, 24, 36, 1) 80%);
 }
 
 .lab-quiz-question {
@@ -1108,7 +1106,7 @@
 
 .lab-quiz-question h3 {
   margin: 0 0 18px;
-  font: 600 19px/1.4 'Inter', sans-serif;
+  font: 600 19px/1.4 var(--font-base);
   color: var(--lab-text);
 }
 
@@ -1119,7 +1117,7 @@
 
 .lab-quiz-option {
   padding: 13px 16px;
-  font: 500 14.5px 'Inter', sans-serif;
+  font: 500 14.5px var(--font-base);
   text-align: left;
   color: var(--lab-text);
   background: rgba(255, 255, 255, 0.04);
@@ -1131,7 +1129,7 @@
 
 .lab-quiz-option:hover:not(:disabled) {
   border-color: var(--lab-border-strong);
-  background: rgba(122, 232, 112, 0.08);
+  background: rgba(80, 230, 255, 0.08);
 }
 
 .lab-quiz-option:disabled {
@@ -1141,7 +1139,7 @@
 
 .lab-quiz-option.is-right {
   opacity: 1;
-  color: #06140b;
+  color: #061824;
   background: var(--lab-accent);
   border-color: var(--lab-accent);
 }
@@ -1161,7 +1159,7 @@
 }
 
 .lab-quiz-feedback.is-right {
-  background: rgba(122, 232, 112, 0.08);
+  background: rgba(80, 230, 255, 0.08);
   border-color: var(--lab-border-strong);
 }
 
@@ -1178,11 +1176,11 @@
   margin: 6px 0 12px;
   font-size: 13.5px;
   line-height: 1.6;
-  color: rgba(222, 240, 214, 0.88);
+  color: rgba(220, 236, 248, 0.88);
 }
 
 .lab-quiz-score {
-  font: 700 64px 'Space Grotesk', sans-serif;
+  font: 700 64px var(--font-display);
   color: var(--lab-accent);
 }
 
@@ -1337,4 +1335,10 @@
   .lab-quiz-question {
     padding: 18px 16px;
   }
+}
+
+.lab-notebook-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }

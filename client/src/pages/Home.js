@@ -227,9 +227,12 @@ function QuickIcon({ name }) {
 export default function Home() {
   const { lang } = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isUserPaused, setIsUserPaused] = useState(false);
+  const [persona, setPersona] = useState("researchers");
 
   const activeSlide = heroSlides[slideIndex];
+  const isPaused = isHovered || isUserPaused;
 
   useEffect(() => {
     if (isPaused) return;
@@ -238,6 +241,37 @@ export default function Home() {
     }, 6000);
     return () => window.clearInterval(timer);
   }, [isPaused]);
+
+  const personaGuides = {
+    researchers: {
+      label: { tr: "Araştırmacılar için", en: "For Researchers" },
+      title: { tr: "Şeffaf Karakter Kuralları ve WoRMS Entegrasyonu", en: "Transparent Character Rules & WoRMS Integration" },
+      desc: {
+        tr: "İnce kesit fotoğraflarından Görsel YZ ile karakter çıkarımı yapın, kural matrisinde aday cinsleri daraltın ve her eşleşmenin stratigrafik dayanağını görün.",
+        en: "Extract diagnostic traits from thin sections with Visual AI, narrow candidates through the rule matrix, and inspect each match's stratigraphic rationale.",
+      },
+      cta: { to: "/vlm", tr: "Görsel YZ Stüdyosunu Aç", en: "Open Visual AI Studio" },
+    },
+    students: {
+      label: { tr: "Öğrenciler ve Eğitim", en: "For Students & Education" },
+      title: { tr: "3D Sanal Laboratuvarda Etkileşimli Kavkı İnceleme", en: "Interactive Shell Inspection in the 3D Virtual Lab" },
+      desc: {
+        tr: "Hiyalin, porselen ve aglütinat kavkı örneklerini 3D kesit modunda döndürün, ölçüm cetveliyle karşılaştırın ve kısa tanı testiyle bilginizi sınayın.",
+        en: "Inspect hyaline, porcelaneous, and agglutinated tests in 3D cross-section mode, compare sizes on the logarithmic ruler, and test yourself in the lab quiz.",
+      },
+      cta: { to: "/lab", tr: "3D Laboratuvara Gir", en: "Enter 3D Lab" },
+    },
+    fieldwork: {
+      label: { tr: "Saha ve Taş Mirası", en: "Fieldwork & Heritage" },
+      title: { tr: "Paleosen–Eosen Zaman Çizelgesi ve STONE Raporları", en: "Paleocene–Eocene Timeline & STONE Field Reports" },
+      desc: {
+        tr: "Tanesiyen'den Küiziyen'e çökelme derinliklerini filtreleyin ve Yazılıkaya Frig Vadisi ile ESOGÜ'de yürütülen uluslararası saha belgelerine erişin.",
+        en: "Filter depositional depth zones from Thanetian to Cuisian and browse international field documentation from Yazılıkaya and ESOGÜ.",
+      },
+      cta: { to: "/jeoloji", tr: "Jeolojik Bağlamı Keşfet", en: "Explore Geological Context" },
+    },
+  };
+  const activePersona = personaGuides[persona] || personaGuides.researchers;
 
   function prevSlide() {
     setSlideIndex(prev => (prev - 1 + heroSlides.length) % heroSlides.length);
@@ -284,10 +318,10 @@ export default function Home() {
     <main className="ms-home" lang={lang}>
       {/* ── 1. HERO SPOTLIGHT BANNER (FULL-BLEED MICROSOFT ACRYLIC SHOWCASE) ── */}
       <section
-        className="ms-home-hero"
+        className={`ms-home-hero${isPaused ? " is-paused" : ""}`}
         aria-label={lang === "tr" ? "Öne Çıkan Başlıklar" : "Featured Highlights"}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <div className="ms-home-banner">
           <div className="ms-home-banner-media">
@@ -357,6 +391,15 @@ export default function Home() {
                   aria-label={lang === "tr" ? "Sonraki slayt" : "Next slide"}
                 >
                   ›
+                </button>
+                <button
+                  type="button"
+                  className="ms-home-control-btn"
+                  onClick={() => setIsUserPaused((p) => !p)}
+                  aria-pressed={isUserPaused}
+                  aria-label={isUserPaused ? (lang === "tr" ? "Slaytı oynat" : "Play slideshow") : (lang === "tr" ? "Slaytı duraklat" : "Pause slideshow")}
+                >
+                  {isUserPaused ? "▶" : "❚❚"}
                 </button>
               </div>
             </div>
@@ -473,6 +516,34 @@ export default function Home() {
               {lang === "tr" ? "Karar destek aracını aç" : "Open decision support"}
             </Link>
           </Reveal>
+
+          {/* Microsoft Persona / Workflow Pivot */}
+          <div className="ms-home-persona-wrap">
+            <div className="ms-pivot" role="tablist" aria-label={lang === "tr" ? "Kullanım senaryoları" : "Workflow scenarios"}>
+              {Object.entries(personaGuides).map(([key, item]) => (
+                <button
+                  key={key}
+                  type="button"
+                  role="tab"
+                  aria-selected={persona === key}
+                  className={`ms-pivot-item${persona === key ? " is-active" : ""}`}
+                  onClick={() => setPersona(key)}
+                >
+                  {item.label[lang]}
+                </button>
+              ))}
+            </div>
+            <div className="ms-home-persona-panel" role="tabpanel" key={persona}>
+              <div>
+                <h3>{activePersona.title[lang]}</h3>
+                <p>{activePersona.desc[lang]}</p>
+              </div>
+              <Link className="ms-btn ms-btn--secondary" to={activePersona.cta.to}>
+                <span>{activePersona.cta[lang]}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
 
           <div className="ms-home-bento">
             <Reveal className="ms-home-bento-feature" delay={0}>

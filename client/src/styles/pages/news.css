@@ -2,6 +2,34 @@
    MICROSOFT FLUENT NEWS & EVENTS PAGE STYLES (GeoKnow)
    ========================================================================== */
 
+.ms-news-shell {
+  width: 100%;
+  background: #ffffff;
+}
+
+.ms-news-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(24px, 3vw, 36px);
+  background: var(--ms-gray-30);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.ms-news-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 90% at 88% 12%, rgb(0 103 184 / 9%) 0%, transparent 72%),
+    radial-gradient(45% 70% at 12% 90%, rgb(80 230 255 / 12%) 0%, transparent 70%);
+}
+
+.ms-news-hero .ms-container--wide {
+  position: relative;
+  z-index: 1;
+}
+
 .news-page {
   --stone-ink: var(--ms-gray-170);
   --stone-muted: var(--ms-gray-130);
@@ -9,16 +37,24 @@
   --stone-accent: var(--ms-blue);
   width: min(100% - 2 * var(--content-gutter), var(--wide-max-width));
   margin: 0 auto;
-  padding: clamp(28px, 4vw, 48px) 0 64px;
+  padding: 0 0 64px;
   color: var(--stone-ink);
   font-family: var(--font-base);
   font-size: 16px;
   line-height: 1.65;
 }
 
-.news-page :is(h1, h2, h3, p, figure, dl) { margin: 0; }
-.news-page :is(h1, h2, h3) { font-family: var(--font-display); font-weight: 600; text-wrap: balance; }
-.news-page :is(a, button):focus-visible { outline: 2px solid var(--ms-blue); outline-offset: 3px; }
+.ms-news-shell :is(h1, h2, h3, p, figure, dl) { margin: 0; }
+.ms-news-shell :is(h1, h2, h3) { font-family: var(--font-display); font-weight: 600; text-wrap: balance; }
+.ms-news-shell :is(a, button):focus-visible { outline: 2px solid var(--ms-blue); outline-offset: 3px; }
+
+.ms-news-day-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
 
 .stone-page-label {
   display: flex;

@@ -48,6 +48,23 @@ function BoardView({ id, lang, onClose }) {
   );
 }
 
+function LabSvg({ name }) {
+  if (name === "monitor") {
+    return (
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <path d="M8 21h8M12 17v4" />
+      </svg>
+    );
+  }
+  return (
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="m12 2 9 5v10l-9 5-9-5V7l9-5z" />
+      <path d="m12 12 9-5M12 12v10M12 12 3 7" />
+    </svg>
+  );
+}
+
 function MonitorCard({ lang, onClose, onGo }) {
   const t = UI[lang];
   return (
@@ -56,7 +73,7 @@ function MonitorCard({ lang, onClose, onGo }) {
         <button className="lab-icon-btn lab-board-close" onClick={onClose} aria-label={t.close}>
           ✕
         </button>
-        <div className="lab-card-icon">🖥️</div>
+        <div className="lab-card-icon"><LabSvg name="monitor" /></div>
         <h2 id="lab-monitor-title">{t.monitorTitle}</h2>
         <p>{t.monitorText}</p>
         <button className="lab-primary-btn" onClick={onGo} autoFocus>
@@ -246,7 +263,7 @@ export default function Lab() {
         <div className="lab-intro" role="dialog" aria-modal="true" aria-labelledby="lab-intro-title">
           <div className="lab-intro-box">
             <div className="lab-intro-icon" aria-hidden="true">
-              🔬
+              <LabSvg name="cube" />
             </div>
             <h2 id="lab-intro-title">{t.title}</h2>
             <p className="lab-intro-lead">{t.introLead}</p>
@@ -261,15 +278,15 @@ export default function Lab() {
                 <span className="lab-ctrl-label">{t.controlsWalk}</span>
               </div>
               <div className="lab-ctrl-item">
-                <span className="lab-key-badge">🖱 {t.keyDrag}</span>
+                <span className="lab-key-badge">{t.keyDrag}</span>
                 <span className="lab-ctrl-label">{t.controlsLook}</span>
               </div>
               <div className="lab-ctrl-item">
-                <span className="lab-key-badge">🖱 {t.keyClick}</span>
+                <span className="lab-key-badge">{t.keyClick}</span>
                 <span className="lab-ctrl-label">{t.controlsClick}</span>
               </div>
               <div className="lab-ctrl-item">
-                <span className="lab-key-badge">⚙ {t.keyWheel}</span>
+                <span className="lab-key-badge">{t.keyWheel}</span>
                 <span className="lab-ctrl-label">{t.controlsWheel}</span>
               </div>
             </div>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { eventPhotos, stoneDays, pressSources, projectParticipants } from '../data/news';
+import Reveal from '../components/ms/Reveal';
 import '../styles/pages/news.css';
 
 const copy = {
@@ -174,11 +175,15 @@ export default function News() {
   const { hash } = useLocation();
   const text = copy[lang];
   const [activeIndex, setActiveIndex] = useState(null);
+  const [dayFilter, setDayFilter] = useState('all');
   const dialogRef = useRef(null);
   const triggerRef = useRef(null);
 
   useEffect(() => {
     if (!hash) return;
+    if (hash === '#day-1' || hash === '#day-2' || hash === '#day-3') {
+      setDayFilter('all');
+    }
     const frame = requestAnimationFrame(() => {
       document.getElementById(hash.slice(1))?.scrollIntoView({ block: 'start' });
     });
@@ -197,74 +202,113 @@ export default function News() {
     dialogRef.current.showModal();
   }
 
+  const visibleDays = dayFilter === 'all' ? stoneDays : stoneDays.filter(d => d.day === dayFilter);
+
   return (
-    <main className="news-page" lang={lang}>
-      <div className="stone-page-label">
-        <span>{text.pageTitle}</span>
-        <span>GeoKnow · {text.hostName}</span>
-      </div>
+    <main className="ms-news-shell" lang={lang}>
+      <section className="ms-news-hero">
+        <div className="ms-container--wide">
+          <div className="stone-page-label">
+            <span>{text.pageTitle}</span>
+            <span>GeoKnow · {text.hostName}</span>
+          </div>
 
-      <header className="stone-intro">
-        <div className="stone-intro-copy">
-          <p className="stone-event-date">Erasmus+ STONE<span aria-hidden="true">·</span>{text.date}</p>
-          <h1>STONE Eskişehir<span>Digital Geo Academy</span></h1>
-          <p className="stone-intro-summary">{text.intro}</p>
-          <dl className="stone-event-details">
-            <div><dt>{text.host}</dt><dd>{text.hostName}</dd></div>
-            <div><dt>{text.venue}</dt><dd>{text.venueName}</dd></div>
-            <div><dt>{text.programme}</dt><dd>{text.programmeName}</dd></div>
-          </dl>
-        </div>
-        <Photograph photo={eventPhotos[0]} lang={lang} text={text} onOpen={openPhoto} cover />
-      </header>
-
-      <div className="stone-report-layout">
-        <aside className="stone-report-sidebar">
-          <nav aria-label={text.onPage}>
-            <p>{text.onPage}</p>
-            <a href="#about-meeting">{text.overview}</a>
-            {stoneDays.map(day => <a href={`#day-${day.day}`} key={day.day}>{text.day} {day.day}<span>{day.title[lang]}</span></a>)}
-            <a href="#project-teams">{text.partners}</a>
-            <a href="#press-coverage">{text.press}</a>
-          </nav>
-          <p className="stone-project-reference">Erasmus+ KA210-SCH<br />KA210-SCH-CEAB2BDA</p>
-        </aside>
-
-        <div className="stone-report-body">
-          <section id="about-meeting" className="stone-overview stone-report-section" aria-labelledby="stone-overview-title">
-            <h2 id="stone-overview-title">{text.aboutTitle}</h2>
-            <p>{text.about}</p>
-          </section>
-
-          {stoneDays.map(day => <DailyReport key={day.day} day={day} lang={lang} text={text} onOpen={openPhoto} />)}
-
-          <section id="project-teams" className="stone-teams stone-report-section" aria-labelledby="stone-teams-title">
-            <h2 id="stone-teams-title">{text.partners}</h2>
-            <p>{text.partnersIntro}</p>
-            <div className="stone-team-grid">
-              {projectParticipants.map(group => (
-                <section key={group.institution.en}>
-                  <h3>{group.institution[lang]}</h3>
-                  <p>{group.detail[lang]}</p>
-                  <ul>{(Array.isArray(group.names) ? group.names : group.names[lang]).map(name => <li key={name}>{name}</li>)}</ul>
-                </section>
-              ))}
+          <header className="stone-intro">
+            <div className="stone-intro-copy">
+              <p className="stone-event-date">Erasmus+ STONE<span aria-hidden="true">·</span>{text.date}</p>
+              <h1>STONE Eskişehir<span>Digital Geo Academy</span></h1>
+              <p className="stone-intro-summary">{text.intro}</p>
+              <dl className="stone-event-details">
+                <div><dt>{text.host}</dt><dd>{text.hostName}</dd></div>
+                <div><dt>{text.venue}</dt><dd>{text.venueName}</dd></div>
+                <div><dt>{text.programme}</dt><dd>{text.programmeName}</dd></div>
+              </dl>
             </div>
-          </section>
+            <Photograph photo={eventPhotos[0]} lang={lang} text={text} onOpen={openPhoto} cover />
+          </header>
+        </div>
+      </section>
 
-          <section id="press-coverage" className="stone-press stone-report-section" aria-labelledby="stone-press-title">
-            <h2 id="stone-press-title">{text.press}</h2>
-            <p>{text.pressIntro}</p>
-            <div className="stone-press-links">
-              {pressSources.map(source => (
-                <a key={source.name} href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`${source.name} · ${text.original} (${text.newTab})`}>
-                  <span className="stone-press-meta">{source.name}<time dateTime={source.date}>{formatDate(source.date, lang)}</time></span>
-                  <span className="stone-press-title" lang="es">{source.title}</span>
-                  <span className="stone-press-action">{text.original}<span aria-hidden="true">↗</span></span>
+      <div className="news-page">
+        <div className="stone-report-layout">
+          <aside className="stone-report-sidebar">
+            <nav aria-label={text.onPage}>
+              <p>{text.onPage}</p>
+              <a href="#about-meeting">{text.overview}</a>
+              {stoneDays.map(day => (
+                <a
+                  href={`#day-${day.day}`}
+                  key={day.day}
+                  onClick={() => { if (dayFilter !== 'all' && dayFilter !== day.day) setDayFilter('all'); }}
+                >
+                  {text.day} {day.day}<span>{day.title[lang]}</span>
                 </a>
               ))}
-            </div>
-          </section>
+              <a href="#project-teams">{text.partners}</a>
+              <a href="#press-coverage">{text.press}</a>
+            </nav>
+            <p className="stone-project-reference">Erasmus+ KA210-SCH<br />KA210-SCH-CEAB2BDA</p>
+          </aside>
+
+          <div className="stone-report-body">
+            <Reveal as="section" id="about-meeting" className="stone-overview stone-report-section" aria-labelledby="stone-overview-title">
+              <h2 id="stone-overview-title">{text.aboutTitle}</h2>
+              <p>{text.about}</p>
+              <div className="ms-news-day-filter" role="tablist" aria-label={lang === 'tr' ? 'Günlere göre filtrele' : 'Filter by day'}>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={dayFilter === 'all'}
+                  className={`ms-pivot-item${dayFilter === 'all' ? ' is-active' : ''}`}
+                  onClick={() => setDayFilter('all')}
+                >
+                  {lang === 'tr' ? 'Tüm Program (3 Gün)' : 'Full Programme (3 Days)'}
+                </button>
+                {stoneDays.map(d => (
+                  <button
+                    key={d.day}
+                    type="button"
+                    role="tab"
+                    aria-selected={dayFilter === d.day}
+                    className={`ms-pivot-item${dayFilter === d.day ? ' is-active' : ''}`}
+                    onClick={() => setDayFilter(d.day)}
+                  >
+                    {text.day} {d.day}
+                  </button>
+                ))}
+              </div>
+            </Reveal>
+
+            {visibleDays.map(day => <DailyReport key={day.day} day={day} lang={lang} text={text} onOpen={openPhoto} />)}
+
+            <Reveal as="section" id="project-teams" className="stone-teams stone-report-section" aria-labelledby="stone-teams-title">
+              <h2 id="stone-teams-title">{text.partners}</h2>
+              <p>{text.partnersIntro}</p>
+              <div className="stone-team-grid">
+                {projectParticipants.map(group => (
+                  <section key={group.institution.en}>
+                    <h3>{group.institution[lang]}</h3>
+                    <p>{group.detail[lang]}</p>
+                    <ul>{(Array.isArray(group.names) ? group.names : group.names[lang]).map(name => <li key={name}>{name}</li>)}</ul>
+                  </section>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal as="section" id="press-coverage" className="stone-press stone-report-section" aria-labelledby="stone-press-title">
+              <h2 id="stone-press-title">{text.press}</h2>
+              <p>{text.pressIntro}</p>
+              <div className="stone-press-links">
+                {pressSources.map(source => (
+                  <a key={source.name} href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`${source.name} · ${text.original} (${text.newTab})`}>
+                    <span className="stone-press-meta">{source.name}<time dateTime={source.date}>{formatDate(source.date, lang)}</time></span>
+                    <span className="stone-press-title" lang="es">{source.title}</span>
+                    <span className="stone-press-action">{text.original}<span aria-hidden="true">↗</span></span>
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
 

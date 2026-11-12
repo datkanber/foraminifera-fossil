@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -44,9 +45,32 @@ function GlobeIcon() {
 function Footer() {
   const { t, lang, toggleLanguage } = useLanguage();
   const year = new Date().getFullYear();
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 420);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="site-footer">
+      {showTop && (
+        <button
+          type="button"
+          className="ms-back-to-top"
+          onClick={scrollToTop}
+          aria-label={lang === "tr" ? "Sayfa başına dön" : "Back to top"}
+        >
+          <span aria-hidden="true">↑</span>
+          <span>{lang === "tr" ? "Yukarı çık" : "Back to top"}</span>
+        </button>
+      )}
       <div className="site-footer-inner">
         <div className="site-footer-top">
           <div className="site-footer-brand">

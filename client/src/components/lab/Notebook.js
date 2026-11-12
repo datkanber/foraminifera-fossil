@@ -17,7 +17,13 @@ export default function Notebook({ lang, open, onToggle, studied, boardsRead, be
   return (
     <aside className={`lab-notebook ${open ? "is-open" : ""}`} aria-label={t.notebook}>
       <button className="lab-notebook-toggle" onClick={onToggle} aria-expanded={open}>
-        <span>📓 {t.notebook}</span>
+        <span className="lab-notebook-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          {t.notebook}
+        </span>
         <span className="lab-notebook-count">
           {doneCount}/{total}
         </span>
@@ -36,7 +42,7 @@ export default function Notebook({ lang, open, onToggle, studied, boardsRead, be
               </button>
             )}
             <button className={`${tourDone ? "lab-primary-btn" : "lab-ghost-btn"} is-small`} onClick={onQuiz}>
-              🧪 {t.quiz}
+              {t.quiz}
               {typeof bestScore === "number" && <span className="lab-notebook-best"> · {bestScore}/{quizTotal}</span>}
             </button>
           </div>

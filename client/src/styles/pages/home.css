@@ -238,7 +238,8 @@
   animation: ms-dot-timer 6s linear infinite;
 }
 
-.ms-home-hero:hover .ms-home-dot-fill {
+.ms-home-hero:hover .ms-home-dot-fill,
+.ms-home-hero.is-paused .ms-home-dot-fill {
   animation-play-state: paused;
 }
 
@@ -419,6 +420,40 @@
 .ms-home-metrics-section {
   padding-block: var(--section-space);
   background: #ffffff;
+}
+
+.ms-home-persona-wrap {
+  margin-bottom: 24px;
+}
+
+.ms-home-persona-panel {
+  margin-top: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background: linear-gradient(135deg, #ffffff 0%, var(--ms-gray-20) 100%);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  animation: ms-hero-copy 300ms var(--ease-decelerate-max) both;
+}
+
+.ms-home-persona-panel h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ms-navy);
+}
+
+.ms-home-persona-panel p {
+  margin: 6px 0 0;
+  max-width: 720px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ms-gray-130);
 }
 
 .ms-home-bento {

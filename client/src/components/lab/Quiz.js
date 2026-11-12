@@ -57,7 +57,7 @@ export default function Quiz({ lang, bestScore, onClose, onFinish, onStudy }) {
     <div className="lab-modal" role="dialog" aria-modal="true" aria-labelledby="lab-quiz-title" onClick={onClose}>
       <div className="lab-quiz" onClick={(e) => e.stopPropagation()}>
         <header className="lab-quiz-head">
-          <h2 id="lab-quiz-title">🧪 {t.quizTitle}</h2>
+          <h2 id="lab-quiz-title">{t.quizTitle}</h2>
           {index >= 0 && !finished && (
             <ol className="lab-quiz-dots" aria-label={`${t.question} ${index + 1} / ${questions.length}`}>
               {questions.map((q, i) => (
