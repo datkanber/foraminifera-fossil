@@ -48,7 +48,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center 38%;
-  animation: ms-spotlight-fade 500ms var(--ease-decelerate-max) both;
+  animation: ms-spotlight-fade 600ms var(--ease-decelerate-max) both, ms-ken-burns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+}
+
+@keyframes ms-ken-burns {
+  0% { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.05) translate3d(-1%, -1%, 0); }
 }
 
 .ms-home-banner-media-gradient {
@@ -171,19 +176,42 @@
 }
 
 .ms-home-dot {
-  width: 10px;
-  height: 10px;
+  position: relative;
+  width: 8px;
+  height: 8px;
   padding: 0;
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
+  overflow: hidden;
   transition: all var(--duration-normal) var(--ease-decelerate-max);
 }
 
 .ms-home-dot.is-active {
-  width: 24px;
+  width: 36px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ms-home-dot-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
   background: var(--ms-blue-bright);
+  border-radius: inherit;
+}
+
+.ms-home-dot.is-active .ms-home-dot-fill {
+  animation: ms-dot-timer 6s linear infinite;
+}
+
+.ms-home-hero:hover .ms-home-dot-fill {
+  animation-play-state: paused;
+}
+
+@keyframes ms-dot-timer {
+  from { width: 0%; }
+  to { width: 100%; }
 }
 
 .ms-home-slide-counter {
@@ -216,39 +244,47 @@
 }
 
 .ms-home-quick-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 20px 18px;
+  padding: 22px 20px;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   background: #ffffff;
-  box-shadow: var(--shadow-2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--shadow-2);
   transition: all var(--duration-slow) var(--ease-decelerate-max);
   text-decoration: none;
 }
 
 .ms-home-quick-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px) scale(1.01);
   border-color: var(--ms-blue-tint-strong);
-  box-shadow: var(--shadow-16);
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 12px 28px -4px rgba(0, 103, 184, 0.16),
+    var(--shadow-16);
 }
 
 .ms-home-quick-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-md);
   background: var(--ms-blue-tint);
   color: var(--ms-blue);
-  transition: all var(--duration-faster) var(--ease-easy);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all var(--duration-normal) var(--ease-decelerate-max);
 }
 
 .ms-home-quick-card:hover .ms-home-quick-icon {
   background: var(--ms-blue);
   color: #ffffff;
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 6px 18px rgba(0, 103, 184, 0.32);
 }
 
 .ms-home-quick-icon svg {
@@ -433,6 +469,8 @@
 }
 
 .ms-home-cta-box {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -440,9 +478,21 @@
   gap: 32px;
   padding: clamp(36px, 5vw, 64px);
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, var(--ms-blue) 0%, var(--ms-navy) 100%);
+  background: linear-gradient(135deg, var(--ms-blue) 0%, var(--ms-navy) 65%, #081d2c 100%);
   color: #ffffff;
-  box-shadow: var(--shadow-28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), var(--shadow-28);
+}
+
+.ms-home-cta-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(76, 194, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .ms-home-cta-copy {

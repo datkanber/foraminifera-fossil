@@ -296,7 +296,9 @@ export default function Home() {
                       aria-label={`${lang === "tr" ? "Slayt" : "Slide"} ${idx + 1}`}
                       className={`ms-home-dot${idx === slideIndex ? " is-active" : ""}`}
                       onClick={() => setSlideIndex(idx)}
-                    />
+                    >
+                      <span className="ms-home-dot-fill" />
+                    </button>
                   ))}
                 </div>
                 <button

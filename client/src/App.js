@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageTransition, { RouteProgress } from "./components/ms/PageTransition";
+import { useFluentReveal } from "./components/ms/useFluentReveal";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Geology from "./pages/Geology";
@@ -19,6 +20,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import "./styles/global.css";
 
 function App() {
+  useFluentReveal();
   return (
     <LanguageProvider>
       <BrowserRouter>

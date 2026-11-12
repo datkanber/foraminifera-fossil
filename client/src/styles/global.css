@@ -156,11 +156,12 @@ button:disabled { cursor: not-allowed; }
 
 .ms-reveal {
   opacity: 0;
-  transform: translate3d(0, 28px, 0);
+  transform: translate3d(0, 24px, 0) scale(0.985);
   transition:
-    opacity var(--duration-ultra-slow) var(--ease-decelerate-mid),
-    transform 700ms var(--ease-decelerate-max);
+    opacity 600ms var(--ease-decelerate-mid),
+    transform 750ms var(--ease-decelerate-max);
   transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
 .ms-reveal.is-visible {
@@ -373,6 +374,8 @@ button:disabled { cursor: not-allowed; }
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), var(--shadow-2);
   transition:
     background-color var(--duration-faster) var(--ease-easy),
     border-color var(--duration-faster) var(--ease-easy),
@@ -381,8 +384,39 @@ button:disabled { cursor: not-allowed; }
     transform var(--duration-faster) var(--ease-easy);
 }
 
-.ms-btn:hover { background: var(--ms-blue-hover); box-shadow: var(--shadow-4); }
-.ms-btn:active { background: var(--ms-blue-pressed); transform: scale(0.98); box-shadow: none; }
+.ms-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.75s var(--ease-decelerate-max);
+  pointer-events: none;
+}
+
+.ms-btn:hover::after {
+  left: 150%;
+}
+
+.ms-btn:hover {
+  background: var(--ms-blue-hover);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 6px 18px rgba(0, 103, 184, 0.28), var(--shadow-8);
+  transform: translateY(-1px);
+}
+
+.ms-btn:active {
+  background: var(--ms-blue-pressed);
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 .ms-btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 .ms-btn:disabled,
 .ms-btn[aria-disabled="true"] {
@@ -472,7 +506,7 @@ button:disabled { cursor: not-allowed; }
 
 .ms-text-link:hover { color: var(--ms-blue-pressed); text-decoration-thickness: 2px; }
 
-/* ───────────────────────── Cards ───────────────────────── */
+/* ───────────────────────── Cards & Fluent Reveal ───────────────────────── */
 
 .ms-card {
   position: relative;
@@ -483,17 +517,52 @@ button:disabled { cursor: not-allowed; }
   border-radius: var(--radius-lg);
   background: #fff;
   color: var(--color-text);
-  box-shadow: var(--shadow-4);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--shadow-4);
   transition:
     box-shadow var(--duration-slow) var(--ease-decelerate-max),
-    transform var(--duration-slow) var(--ease-decelerate-max);
+    transform var(--duration-slow) var(--ease-decelerate-max),
+    border-color var(--duration-normal) var(--ease-easy);
+}
+
+/* Fluent Reveal Cursor Illumination */
+.ms-card::before,
+.ms-home-quick-card::before,
+.mode-card::before,
+.taxon-env-card::before,
+.ms-home-metric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    380px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(0, 103, 184, 0.08),
+    transparent 55%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-easy);
+  z-index: 1;
+}
+
+.ms-card:hover::before,
+.ms-home-quick-card:hover::before,
+.mode-card:hover::before,
+.taxon-env-card:hover::before,
+.ms-home-metric-card:hover::before {
+  opacity: 1;
 }
 
 .ms-card--interactive:hover,
 a.ms-card:hover,
 .ms-card:focus-within:not(.ms-card--static) {
-  box-shadow: var(--shadow-16);
-  transform: translate3d(0, -4px, 0);
+  border-color: var(--ms-blue-tint-strong);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 12px 28px -4px rgba(0, 103, 184, 0.14),
+    var(--shadow-16);
+  transform: translate3d(0, -4px, 0) scale(1.004);
 }
 
 .ms-card--flat { box-shadow: none; border: 1px solid var(--color-border-subtle); }
