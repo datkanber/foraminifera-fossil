@@ -7,6 +7,8 @@
  *   text="One or two sentences."
  *   tone="gray" | "light" | "brand" | "dark"
  *   image={src} imageAlt=""
+ *   highlights={["Tag 1", "Tag 2"]}
+ *   mediaTag="Caption"
  *   actions={<Link className="ms-btn" to="/x">Go</Link>}
  * />
  */
@@ -19,6 +21,8 @@ export default function PageHero({
   imageAlt = "",
   imagePosition,
   imageFit = "cover",
+  mediaTag,
+  highlights,
   actions,
   titleId,
   children,
@@ -34,15 +38,35 @@ export default function PageHero({
     <header className={classes.join(" ")}>
       <div className="ms-container ms-page-hero-inner">
         <div className="ms-page-hero-copy">
-          {eyebrow && <p className="ms-eyebrow">{eyebrow}</p>}
+          {eyebrow && (
+            <p className="ms-eyebrow ms-page-hero-eyebrow">
+              <span className="ms-page-hero-eyebrow-dot" aria-hidden="true" />
+              <span>{eyebrow}</span>
+            </p>
+          )}
           <h1 className="ms-page-hero-title" id={titleId}>{title}</h1>
           {text && <p className="ms-page-hero-text">{text}</p>}
+          {Array.isArray(highlights) && highlights.length > 0 && (
+            <ul className="ms-page-hero-highlights" aria-label={eyebrow || title}>
+              {highlights.map((item) => (
+                <li key={item} className="ms-page-hero-highlight">{item}</li>
+              ))}
+            </ul>
+          )}
           {actions && <div className="ms-page-hero-actions">{actions}</div>}
           {children}
         </div>
         {image && (
           <div className={mediaClasses.join(" ")}>
-            <img src={image} alt={imageAlt} style={imagePosition ? { objectPosition: imagePosition } : undefined} />
+            <div className="ms-page-hero-media-frame">
+              <img src={image} alt={imageAlt} style={imagePosition ? { objectPosition: imagePosition } : undefined} />
+              {mediaTag && (
+                <div className="ms-page-hero-media-tag" aria-hidden="true">
+                  <span className="ms-page-hero-media-tag-dot" />
+                  <span>{mediaTag}</span>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>

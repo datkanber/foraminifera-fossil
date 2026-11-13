@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageTransition, { RouteProgress } from "./components/ms/PageTransition";
@@ -16,8 +17,6 @@ const Lab = lazy(() => import("./pages/Lab"));
 const News = lazy(() => import("./pages/News"));
 const Search = lazy(() => import("./pages/Search"));
 import { LanguageProvider } from "./contexts/LanguageContext";
-
-import "./styles/global.css";
 
 function App() {
   useFluentReveal();

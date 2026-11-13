@@ -32,20 +32,22 @@ function InlineNoticeIcon({ kind = "info" }) {
  * Props:
  * - scientificName: string (genus name to look up)
  */
-function TaxonProfileCard({ scientificName }) {
+function TaxonProfileCard({ scientificName, displayName }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { lang, t } = useLanguage();
+  const queryName = (scientificName || "").trim().split(/\s+/)[0];
+  const shownName = displayName || scientificName;
 
   useEffect(() => {
-    if (!scientificName) return;
+    if (!queryName) return;
 
     let cancelled = false;
     setLoading(true);
     setError(null);
 
-    fetch(`${API}/profile?name=${encodeURIComponent(scientificName)}`)
+    fetch(`${API}/profile?name=${encodeURIComponent(queryName)}`)
       .then((res) => {
         if (!res.ok) throw new Error("Profil yüklenemedi");
         return res.json();
@@ -64,15 +66,15 @@ function TaxonProfileCard({ scientificName }) {
       });
 
     return () => { cancelled = true; };
-  }, [scientificName]);
+  }, [queryName]);
 
-  if (!scientificName) return null;
+  if (!queryName) return null;
 
   if (loading) {
     return (
       <div className="taxon-card">
         <div className="taxon-card-header">
-          <span className="taxon-card-title">{t("taxon.profile")}</span>
+          <span className="taxon-card-title">{t("taxon.profile")} — <em>{shownName}</em></span>
         </div>
         <div className="taxon-skeleton">
           <div className="skeleton-line" style={{ width: "60%" }} />
@@ -87,23 +89,36 @@ function TaxonProfileCard({ scientificName }) {
     return (
       <div className="taxon-card">
         <div className="taxon-card-header">
-          <span className="taxon-card-title">{t("taxon.profile")}</span>
+          <span className="taxon-card-title">{t("taxon.profile")} — <em>{shownName}</em></span>
         </div>
         <div className="taxon-info-notice">
-          {lang === 'tr' ? "Takson profili yüklenirken bir hata oluştu." : "Error loading taxon profile."}
+          {lang === "tr" ? "Takson profili yüklenirken bir hata oluştu." : "Error loading taxon profile."}
         </div>
       </div>
     );
   }
 
-  if (!data || !data.success) return null;
+  if (!data || !data.success) {
+    return (
+      <div className="taxon-card">
+        <div className="taxon-card-header">
+          <span className="taxon-card-title">{t("taxon.profile")} — <em>{shownName}</em></span>
+        </div>
+        <div className="taxon-info-notice">
+          {lang === "tr"
+            ? `${shownName} için WoRMS veya Neo4j takson profili kaydı bulunamadı.`
+            : `No WoRMS or Neo4j taxon profile record was found for ${shownName}.`}
+        </div>
+      </div>
+    );
+  }
 
   const { taxonomy, wormsEnvironment, localProfiles, availability, warnings } = data;
 
   return (
     <div className="taxon-card">
       <div className="taxon-card-header">
-        <span className="taxon-card-title">{t("taxon.profile")} — <em>{scientificName}</em></span>
+        <span className="taxon-card-title">{t("taxon.profile")} — <em>{shownName}</em></span>
         <AvailabilityBadge worms={availability?.worms} local={availability?.local} lang={lang} />
       </div>
 
@@ -123,7 +138,7 @@ function TaxonProfileCard({ scientificName }) {
       <WormsEnvironmentSection env={wormsEnvironment} lang={lang} t={t} />
 
       {/* Local Profiles Section */}
-      <LocalProfilesSection profiles={localProfiles} genusName={scientificName} lang={lang} t={t} />
+      <LocalProfilesSection profiles={localProfiles} genusName={queryName} lang={lang} t={t} />
     </div>
   );
 }

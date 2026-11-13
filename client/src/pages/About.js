@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import PageHero from "../components/ms/PageHero";
 import Reveal from "../components/ms/Reveal";
-import workshopPhoto from "../assets/photos/1792745417607.jpg";
+import heroAboutLab from "../assets/images/hero-about-lab.jpg";
 import "../styles/pages/about.css";
 
 function About() {
@@ -19,10 +19,16 @@ function About() {
             ? "Paleosen–Eosen büyük bentik foraminiferleri için ortak bir tanımlama ontolojisi geliştirmek ve paleontolojik teşhis sürecini şeffaf karar desteğiyle güçlendirmek amacıyla hazırlanmıştır."
             : "Developed to establish a common diagnostic ontology for Paleocene–Eocene larger benthic foraminifera and to empower paleontological diagnosis through transparent decision support."
         }
+        highlights={
+          lang === "tr"
+            ? ["7 Pilot Tür", "30+ Tanı Kuralı", "Açık Ontoloji"]
+            : ["7 Pilot Taxa", "30+ Diagnostic Rules", "Open Ontology"]
+        }
         tone="gray"
-        image={workshopPhoto}
-        imageAlt="Laboratory and Research Activity"
-        imagePosition="center 30%"
+        image={heroAboutLab}
+        imageAlt={lang === "tr" ? "Mikropaleontoloji laboratuvarı ve ince kesit mikroskobu" : "Micropaleontology laboratory bench and petrographic microscope"}
+        imagePosition="center center"
+        mediaTag={lang === "tr" ? "Mikropaleontoloji & Ontoloji Laboratuvarı" : "Micropaleontology & Ontology Lab"}
         actions={
           <div className="ms-page-hero-actions">
             <Link to="/tani" className="ms-btn">
@@ -138,7 +144,7 @@ function About() {
           </Reveal>
 
           <div className="ms-grid ms-grid--4">
-            <Reveal as="div" className="ms-card ms-card--flat" delay={0}>
+            <Reveal as="div" className="ms-card ms-card--flat ms-about-pillar-card" delay={0}>
               <div className="ms-card-body">
                 <span className="ms-about-card-badge">01</span>
                 <h3 className="ms-card-title">
@@ -152,7 +158,7 @@ function About() {
               </div>
             </Reveal>
 
-            <Reveal as="div" className="ms-card ms-card--flat" delay={80}>
+            <Reveal as="div" className="ms-card ms-card--flat ms-about-pillar-card" delay={80}>
               <div className="ms-card-body">
                 <span className="ms-about-card-badge">02</span>
                 <h3 className="ms-card-title">
@@ -166,7 +172,7 @@ function About() {
               </div>
             </Reveal>
 
-            <Reveal as="div" className="ms-card ms-card--flat" delay={160}>
+            <Reveal as="div" className="ms-card ms-card--flat ms-about-pillar-card" delay={160}>
               <div className="ms-card-body">
                 <span className="ms-about-card-badge">03</span>
                 <h3 className="ms-card-title">
@@ -180,7 +186,7 @@ function About() {
               </div>
             </Reveal>
 
-            <Reveal as="div" className="ms-card ms-card--flat" delay={240}>
+            <Reveal as="div" className="ms-card ms-card--flat ms-about-pillar-card" delay={240}>
               <div className="ms-card-body">
                 <span className="ms-about-card-badge">04</span>
                 <h3 className="ms-card-title">

@@ -65,15 +65,15 @@ function drawPlaque(canvas, specimen, lang) {
   const { width: w, height: h } = canvas;
   const t = specimen[lang];
   ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#13201a";
+  ctx.fillStyle = "#081c2b";
   ctx.fillRect(0, 0, w, h);
-  ctx.strokeStyle = "#c8a24a";
+  ctx.strokeStyle = "#38bdf8";
   ctx.lineWidth = 8;
   ctx.strokeRect(4, 4, w - 8, h - 8);
 
   ctx.beginPath();
   ctx.arc(62, 70, 36, 0, Math.PI * 2);
-  ctx.fillStyle = specimen.art ? "#8a5a9e" : "#2d7a2d";
+  ctx.fillStyle = specimen.art ? "#7b4ea3" : "#0067b8";
   ctx.fill();
   ctx.fillStyle = "#ffffff";
   ctx.font = "700 40px Inter, system-ui, sans-serif";
@@ -83,11 +83,11 @@ function drawPlaque(canvas, specimen, lang) {
   ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
 
-  ctx.fillStyle = "#f2ead0";
+  ctx.fillStyle = "#eef6fc";
   fitFont(ctx, specimen.name, w - 140, 40, 700, specimen.art ? "" : "italic");
   ctx.fillText(specimen.name, 114, 84);
 
-  ctx.fillStyle = "#9fd88f";
+  ctx.fillStyle = "#50e6ff";
   ctx.font = "600 27px Inter, system-ui, sans-serif";
   const kind = specimen.art
     ? UI[lang].artBadge
@@ -95,7 +95,7 @@ function drawPlaque(canvas, specimen, lang) {
   fitFont(ctx, kind, w - 60, 27, 600);
   ctx.fillText(kind, 30, 160);
 
-  ctx.fillStyle = "#c9c2ab";
+  ctx.fillStyle = "#c2d8e8";
   const detail = specimen.art ? t.specimen : `≈ ${formatSize(specimen.size.mm, lang)} · ${specimen.depth[0]}–${specimen.depth[1]} m`;
   fitFont(ctx, detail, w - 60, 25, 500);
   ctx.fillText(detail, 30, 212);
@@ -107,10 +107,10 @@ function drawBadge(canvas, number, studied) {
   ctx.clearRect(0, 0, s, s);
   ctx.beginPath();
   ctx.arc(s / 2, s / 2, s / 2 - 6, 0, Math.PI * 2);
-  ctx.fillStyle = studied ? "#3fae4f" : "rgba(15, 30, 22, 0.88)";
+  ctx.fillStyle = studied ? "#0078d4" : "rgba(8, 28, 44, 0.90)";
   ctx.fill();
   ctx.lineWidth = 6;
-  ctx.strokeStyle = studied ? "#d8ffd0" : "#c8a24a";
+  ctx.strokeStyle = studied ? "#50e6ff" : "#38bdf8";
   ctx.stroke();
   ctx.fillStyle = "#ffffff";
   ctx.font = `700 ${studied ? 64 : 58}px Inter, system-ui, sans-serif`;
@@ -123,14 +123,14 @@ function drawMonitorScreen(canvas, lang) {
   const ctx = canvas.getContext("2d");
   const { width: w, height: h } = canvas;
   const g = ctx.createLinearGradient(0, 0, 0, h);
-  g.addColorStop(0, "#0f3b36");
-  g.addColorStop(1, "#0a2421");
+  g.addColorStop(0, "#0b2b40");
+  g.addColorStop(1, "#061824");
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, w, h);
-  ctx.fillStyle = "#5eead4";
+  ctx.fillStyle = "#50e6ff";
   ctx.font = "700 44px Inter, system-ui, sans-serif";
   ctx.fillText("ForamID", 28, 62);
-  ctx.fillStyle = "#cdeee8";
+  ctx.fillStyle = "#cfe4fa";
   fitFont(ctx, UI[lang].monitorTitle, w - 56, 24, 500);
   ctx.fillText(UI[lang].monitorTitle, 28, 98);
   // A thin-section-like disc.
@@ -139,10 +139,10 @@ function drawMonitorScreen(canvas, lang) {
   for (let r = 70; r > 0; r -= 10) {
     ctx.beginPath();
     ctx.ellipse(cx, cy, r * 1.3, r * 0.75, 0, 0, Math.PI * 2);
-    ctx.fillStyle = r % 20 ? "#d9c089" : "#bfa46c";
+    ctx.fillStyle = r % 20 ? "#9ec5e6" : "#679ed1";
     ctx.fill();
   }
-  ctx.fillStyle = "#14b8a6";
+  ctx.fillStyle = "#0078d4";
   ctx.fillRect(270, 170, 210, 60);
   ctx.fillStyle = "#ffffff";
   ctx.font = "700 24px Inter, system-ui, sans-serif";
@@ -238,7 +238,7 @@ export function createLabWorld(canvas, { lang, onHover, onSelect, onProgress }) 
     if (highlight) highlights.set(`${userData.kind}:${userData.id}`, highlight);
   };
 
-  const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x7ae870, transparent: true, opacity: 0.75, depthWrite: false });
+  const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x50e6ff, transparent: true, opacity: 0.78, depthWrite: false });
   const makeRing = (x, y, z, inner, outer) => {
     const ring = new THREE.Mesh(new THREE.RingGeometry(inner, outer, 48), ringMaterial);
     ring.rotation.x = -Math.PI / 2;
@@ -253,7 +253,7 @@ export function createLabWorld(canvas, { lang, onHover, onSelect, onProgress }) 
 
   // ── Vitrines ──
   const shadowTexture = contactShadowTexture();
-  const plinthMat = new THREE.MeshStandardMaterial({ color: 0x23302a, roughness: 0.5, metalness: 0.2 });
+  const plinthMat = new THREE.MeshStandardMaterial({ color: 0x162a3a, roughness: 0.45, metalness: 0.28 });
   const plateMat = new THREE.MeshStandardMaterial({ color: 0xd4af37, roughness: 0.25, metalness: 0.85 });
   const glassMat = new THREE.MeshBasicMaterial({ color: 0xcfeaff, transparent: true, opacity: 0.08, depthWrite: false });
   const edgeMat = new THREE.LineBasicMaterial({ color: 0xd4af37 });
@@ -331,7 +331,7 @@ export function createLabWorld(canvas, { lang, onHover, onSelect, onProgress }) 
     group.position.set(place.x, place.y, place.z);
     group.rotation.y = place.ry;
 
-    const glow = new THREE.Mesh(new THREE.PlaneGeometry(place.w + 0.32, h + 0.32), new THREE.MeshBasicMaterial({ color: 0x7ae870 }));
+    const glow = new THREE.Mesh(new THREE.PlaneGeometry(place.w + 0.32, h + 0.32), new THREE.MeshBasicMaterial({ color: 0x50e6ff }));
     glow.position.z = -0.02;
     glow.visible = false;
     group.add(glow);

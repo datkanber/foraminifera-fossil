@@ -34,9 +34,15 @@ const EN_TRANSLATIONS = {
 const STAGES = [
   {
     id: "thanetian",
+    step: "01",
     epoch: { tr: "Geç Paleosen", en: "Late Paleocene" },
     name: { tr: "Tanesiyen (Thanetian)", en: "Thanetian" },
     age: "59.2 – 56.0 My",
+    duration: "3.2 Ma",
+    facies: {
+      tr: "İlk büyük bentik radyasyon · Sığ karbonat platformu",
+      en: "Initial larger benthic radiation · Shallow carbonate platform",
+    },
     desc: {
       tr: "Karmaşık kabuk formlarının ilk radyasyonu ve spesifik bentik fauna toplulukları ile karakterizedir. Karsella ve Laffitteina gibi erken formlar bu dönemde öne çıkar.",
       en: "Characterized by the initial radiation of complex shell forms and specific benthic faunal assemblages, featuring early taxa such as Karsella and Laffitteina.",
@@ -45,9 +51,15 @@ const STAGES = [
   },
   {
     id: "ilerdian",
+    step: "02",
     epoch: { tr: "Erken Eosen", en: "Early Eocene" },
     name: { tr: "İlerdiyen (Ilerdian)", en: "Ilerdian" },
     age: "56.0 – 52.0 My",
+    duration: "4.0 Ma",
+    facies: {
+      tr: "Hızlı takson çeşitlenmesi · İç rampa ve resif kuşağı",
+      en: "Rapid taxonomic diversification · Inner ramp & reef belt",
+    },
     desc: {
       tr: "Tethys bölgesinde kritik bir Erken Eosen katı. Alveolina, Orbitolites ve Nummulitidae taksonlarının hızlı yayılımına ve sığ karbonat platformlarına tanık olmuştur.",
       en: "A critical Early Eocene stage in the Tethys realm, witnessing explosive diversification of taxa such as Alveolina and shallow carbonate platform communities.",
@@ -56,9 +68,15 @@ const STAGES = [
   },
   {
     id: "cuisian",
+    step: "03",
     epoch: { tr: "Geç Erken Eosen", en: "Late Early Eocene" },
     name: { tr: "Küiziyen (Cuisian)", en: "Cuisian" },
     age: "52.0 – 47.8 My",
+    duration: "4.2 Ma",
+    facies: {
+      tr: "İleri kavkı uzmanlaşması · Kıyıdan açık havzaya geçiş",
+      en: "Advanced test specialization · Shoreline to outer basin gradient",
+    },
     desc: {
       tr: "Kavkı morfolojisi, loca dizilimi ve ekolojik adaptasyonlarda ileri uzmanlaşmaların görüldüğü; iç rampadan dış havzaya geçiş zonlarını temsil eden kat.",
       en: "Stage characterized by advanced specializations in shell morphology, chamber arrangement, and adaptations from inner ramp to outer basin transition zones.",
@@ -66,6 +84,144 @@ const STAGES = [
     taxa: ["Orbitoclypeus haymanaensis", "Ranikothalia polatliensis", "Chapmanina"],
   },
 ];
+
+const STAGE_TAXA_INFO = {
+  "Karsella hottingeri": {
+    stageId: "thanetian",
+    genus: "Karsella",
+    rank: "SPECIES",
+    depth: { tr: "Sığ denizel ortam", en: "Shallow marine environment" },
+    habitat: {
+      tr: "Sıcak ve sığ kıyı suları",
+      en: "Warm and shallow coastal waters",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  "Laffitteina erki": {
+    stageId: "thanetian",
+    genus: "Laffitteina",
+    rank: "SPECIES",
+    depth: { tr: "Sığ su denizel ortamı", en: "Shallow marine water environment" },
+    habitat: {
+      tr: "Algler ve diğer sığ su canlılarıyla birlikte, güneş ışığının deniz tabanına rahatça ulaştığı sıcak, berrak ve sakin okyanus suları.",
+      en: "Warm, clear, and calm ocean waters where sunlight easily reaches the seabed, along with algae and other shallow water organisms.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  "Pseudolacazina oeztemueri": {
+    stageId: "thanetian",
+    genus: "Pseudolacazina",
+    rank: "SPECIES",
+    depth: {
+      tr: "Çok sığ ile sığ su denizel ortamı",
+      en: "Very shallow to shallow marine water environment",
+    },
+    habitat: {
+      tr: "Kırmızı ve yeşil alglerle birlikte deniz tabanında yaşamıştır.",
+      en: "Lived on the seabed together with red and green algae.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  "Alveolina haymanaensis": {
+    stageId: "ilerdian",
+    genus: "Alveolina",
+    rank: "SPECIES",
+    depth: {
+      tr: "Sığ–çok sığ denizel bölge, iç rampa",
+      en: "Shallow-very shallow marine zone, inner ramp",
+    },
+    habitat: {
+      tr: "Okyanusların sığ kesimlerinde tabana tutunarak yaşayan, sıcak ve güneşli sahil ekosistemleri.",
+      en: "Warm and sunny coastal ecosystems, living attached to the bottom in the shallow parts of the oceans.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  Orbitolites: {
+    stageId: "ilerdian",
+    genus: "Orbitolites",
+    rank: "GENUS",
+    depth: { tr: "Çok sığ ile sığ deniz", en: "Very shallow to shallow sea" },
+    habitat: {
+      tr: "Normal tuzluluğa sahip kısıtlı şelf, iç rampa ve sığ denizel karbonat platformu çökelleri.",
+      en: "Restricted shelf with normal salinity, inner ramp and shallow marine carbonate platform deposits.",
+    },
+    source: {
+      tr: "Proje ortam veri tablosu",
+      en: "Project environment data table",
+    },
+  },
+  "Discocyclina seunesi": {
+    stageId: "ilerdian",
+    genus: "Discocyclina",
+    rank: "SPECIES",
+    depth: { tr: "Çok sığ su denizel ortamı", en: "Very shallow marine water environment" },
+    habitat: {
+      tr: "Deniz tabanında, diğer çok sığ su canlılarıyla birlikte sıcak okyanus kıyı ekosistemleri.",
+      en: "Warm ocean coastal ecosystems on the seabed, together with other very shallow water organisms.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  "Orbitoclypeus haymanaensis": {
+    stageId: "cuisian",
+    genus: "Orbitoclypeus",
+    rank: "SPECIES",
+    depth: { tr: "Sığ deniz", en: "Shallow sea" },
+    habitat: {
+      tr: "İlerleyen deniz suyunun oluşturduğu masif kireçtaşı kayalıklarının altında yer alan kırıntılı ve karbonatlı denizel kıyı ortamı.",
+      en: "Detrital and carbonate marine coastal environment located under massive limestone rocks formed by advancing sea water.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  "Ranikothalia polatliensis": {
+    stageId: "cuisian",
+    genus: "Ranikothalia",
+    rank: "SPECIES",
+    depth: {
+      tr: "Karadan denize geçişi temsil eden, kıyı çizgisine son derece yakın çok sığ ortam",
+      en: "Very shallow environment extremely close to the shoreline, representing the transition from land to sea",
+    },
+    habitat: {
+      tr: "Akarsuların denize döküldüğü deltaların hemen önündeki çok sığ ve sıcak okyanus kıyıları.",
+      en: "Very shallow and warm ocean coasts just in front of deltas where rivers flow into the sea.",
+    },
+    source: {
+      tr: "Proje veri seti – Excel Sayfa 10, literatür derlemesi",
+      en: "Project dataset – Excel Sheet 10, literature review",
+    },
+  },
+  Chapmanina: {
+    stageId: "cuisian",
+    genus: "Chapmanina",
+    rank: "GENUS",
+    depth: { tr: "Çok sığ ile sığ deniz", en: "Very shallow to shallow sea" },
+    habitat: {
+      tr: "İç rampa, resif gerisi veya önüyle bağlantılı sığ denizel kireçtaşı ve killi ya da kumlu kireçtaşı çökelleri.",
+      en: "Inner ramp, shallow marine limestone, and clayey or sandy limestone deposits associated with back-reef or fore-reef.",
+    },
+    source: {
+      tr: "Proje ortam veri tablosu",
+      en: "Project environment data table",
+    },
+  },
+};
 
 const DEPTH_ZONES = [
   { id: "all", label: { tr: "Tüm Zonlar", en: "All Zones" }, range: { tr: "0 – 1000+ m", en: "0 – 1000+ m" } },
@@ -87,17 +243,48 @@ function Geology() {
   const { lang } = useLanguage();
   const [params, setSearchParams] = useSearchParams();
   const selectedTaxon = (params.get("taxon") || "").trim().slice(0, 100);
-  const [activeStageId, setActiveStageId] = useState("ilerdian");
+  const matchedInitialStage = STAGE_TAXA_INFO[selectedTaxon]?.stageId;
+
+  const [activeStageId, setActiveStageId] = useState(matchedInitialStage || "ilerdian");
+  const [activeChipTaxon, setActiveChipTaxon] = useState(() => {
+    if (selectedTaxon && STAGE_TAXA_INFO[selectedTaxon]) return selectedTaxon;
+    return "Alveolina haymanaensis";
+  });
+  const [scrollTrigger, setScrollTrigger] = useState(() => (selectedTaxon ? 1 : 0));
 
   useEffect(() => {
-    if (!selectedTaxon) return;
+    if (!scrollTrigger || !selectedTaxon) return;
     const frame = requestAnimationFrame(() =>
       document.getElementById("taxon-profile")?.scrollIntoView({ block: "start", behavior: "smooth" })
     );
     return () => cancelAnimationFrame(frame);
-  }, [selectedTaxon]);
+  }, [scrollTrigger, selectedTaxon]);
 
   const activeStage = STAGES.find((s) => s.id === activeStageId) || STAGES[1];
+  const spotlightTaxon = activeStage.taxa.includes(activeChipTaxon)
+    ? activeChipTaxon
+    : activeStage.taxa[0];
+  const taxonMeta = STAGE_TAXA_INFO[spotlightTaxon];
+
+  const handleStageSelect = (stageId) => {
+    setActiveStageId(stageId);
+    const stageObj = STAGES.find((s) => s.id === stageId);
+    if (stageObj && !stageObj.taxa.includes(activeChipTaxon)) {
+      setActiveChipTaxon(stageObj.taxa[0]);
+    }
+  };
+
+  const handleChipSelect = (e, stageId, taxonName) => {
+    e.stopPropagation();
+    setActiveStageId(stageId);
+    setActiveChipTaxon(taxonName);
+    setSearchParams({ taxon: taxonName }, { replace: true });
+  };
+
+  const handleOpenProfileSection = (taxonName) => {
+    setSearchParams({ taxon: taxonName }, { replace: true });
+    setScrollTrigger((c) => c + 1);
+  };
 
   return (
     <main id="geology" className="ms-geology-page" lang={lang}>
@@ -114,6 +301,12 @@ function Geology() {
         image={heroImg}
         imageAlt="Midas Monument and Geological Landscape"
         imagePosition="center 30%"
+        highlights={[
+          lang === "tr" ? "59.2 – 47.8 My Kronostratigrafi" : "59.2 – 47.8 Ma Chronostratigraphy",
+          lang === "tr" ? "Tethys Karbonat Platformu" : "Tethys Carbonate Realm",
+          lang === "tr" ? "18+ Ortam ve Derinlik Kaydı" : "18+ Depth & Environment Records",
+        ]}
+        mediaTag={lang === "tr" ? "Saha Stratigrafisi · Paleosen–Eosen" : "Field Stratigraphy · Paleocene–Eocene"}
         actions={
           <Link to="/tani" className="ms-btn">
             <span>{lang === "tr" ? "Fosil Tanılamaya Geç" : "Go to Identification"}</span>
@@ -135,8 +328,8 @@ function Geology() {
               </h2>
               <p className="ms-section-lead">
                 {lang === "tr"
-                  ? "Tethys biyoprovensinde foraminifer faunasının evrimsel çeşitlenişini belirleyen üç kritik katı zaman çizelgesi üzerinden inceleyin."
-                  : "Explore the three critical stages defining the evolutionary diversification of Tethyan foraminiferal fauna along the interactive timeline."}
+                  ? "Tethys biyoprovensinde foraminifer faunasının evrimsel çeşitlenişini belirleyen üç kritik katı ve mavi takson etiketlerini yerinde inceleyin."
+                  : "Explore the three critical stages defining the evolutionary diversification of Tethyan foraminiferal fauna along the interactive timeline and taxon selectors."}
               </p>
             </div>
           </Reveal>
@@ -152,63 +345,126 @@ function Geology() {
                   role="tab"
                   aria-selected={isSelected}
                   className={`ms-geo-timeline-node${isSelected ? " is-active" : ""}`}
-                  onClick={() => setActiveStageId(stage.id)}
+                  onClick={() => handleStageSelect(stage.id)}
                 >
                   <span className="ms-geo-node-dot" aria-hidden="true" />
                   <span className="ms-geo-node-age">{stage.age}</span>
                   <strong className="ms-geo-node-name">{stage.name[lang]}</strong>
-                  <span className="ms-geo-node-epoch">{stage.epoch[lang]}</span>
+                  <span className="ms-geo-node-epoch">{stage.epoch[lang]} · {stage.duration}</span>
                 </button>
               );
             })}
           </div>
 
           <div className="ms-grid ms-grid--3 ms-geo-stage-cards">
-            {STAGES.map((stage, i) => {
+            {STAGES.map((stage) => {
               const isSelected = stage.id === activeStageId;
               return (
-                <Reveal
-                  as="div"
+                <div
                   key={stage.id}
                   className={`ms-card ms-geology-card${isSelected ? " is-selected" : ""}`}
-                  delay={i * 70}
+                  onClick={() => handleStageSelect(stage.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleStageSelect(stage.id);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isSelected}
                 >
                   <div className="ms-card-body">
                     <div className="ms-geo-card-top">
                       <span className={`ms-badge ${isSelected ? "ms-badge--accent" : "ms-badge--neutral"}`}>
-                        {stage.epoch[lang]}
+                        {stage.step} · {stage.epoch[lang]}
                       </span>
                       <span className="ms-geo-card-age">{stage.age}</span>
                     </div>
                     <h3 className="ms-card-title">{stage.name[lang]}</h3>
                     <p className="ms-card-text">{stage.desc[lang]}</p>
                     <div className="ms-geo-card-taxa">
-                      {stage.taxa.map((taxonName) => (
-                        <button
-                          key={taxonName}
-                          type="button"
-                          className="ms-geo-taxon-chip"
-                          onClick={() => {
-                            setActiveStageId(stage.id);
-                            setSearchParams({ taxon: taxonName });
-                          }}
-                        >
-                          <em>{taxonName}</em>
-                        </button>
-                      ))}
+                      {stage.taxa.map((taxonName) => {
+                        const chipActive = isSelected && spotlightTaxon === taxonName;
+                        return (
+                          <button
+                            key={taxonName}
+                            type="button"
+                            aria-pressed={chipActive}
+                            className={`ms-geo-taxon-chip${chipActive ? " is-active" : ""}`}
+                            onClick={(e) => handleChipSelect(e, stage.id, taxonName)}
+                          >
+                            <em>{taxonName}</em>
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
-                </Reveal>
+                </div>
               );
             })}
           </div>
 
           <div className="ms-geo-stage-spotlight" role="tabpanel" aria-label={activeStage.name[lang]}>
-            <div className="ms-geo-spotlight-meta">
-              <span className="ms-eyebrow">{activeStage.epoch[lang]} · {activeStage.age}</span>
-              <h3>{activeStage.name[lang]}</h3>
+            <div className="ms-geo-spotlight-stage">
+              <div className="ms-geo-spotlight-meta">
+                <span className="ms-eyebrow">
+                  {activeStage.step} · {activeStage.epoch[lang]} · {activeStage.age} ({activeStage.duration})
+                </span>
+                <h3>{activeStage.name[lang]}</h3>
+              </div>
+              <p className="ms-geo-spotlight-desc">{activeStage.desc[lang]}</p>
+              <div className="ms-geo-spotlight-facies">{activeStage.facies[lang]}</div>
             </div>
-            <p className="ms-geo-spotlight-desc">{activeStage.desc[lang]}</p>
+
+            {taxonMeta && (
+              <div className="ms-geo-spotlight-taxon">
+                <div className="ms-geo-spotlight-taxon-head">
+                  <div>
+                    <span className="ms-geo-spotlight-kicker">
+                      {lang === "tr" ? "Seçili Kat Temsilci Taksonu" : "Selected Stage Representative Taxon"}
+                    </span>
+                    <h4 className="ms-geo-spotlight-taxon-name">
+                      <em>{spotlightTaxon}</em>
+                    </h4>
+                  </div>
+                  <span className="ms-geo-spotlight-rank">
+                    {taxonMeta.rank === "SPECIES"
+                      ? (lang === "tr" ? "Tür" : "Species")
+                      : (lang === "tr" ? "Cins" : "Genus")}
+                  </span>
+                </div>
+
+                <dl className="ms-geo-spotlight-facts">
+                  <div className="ms-geo-spotlight-fact">
+                    <dt>{lang === "tr" ? "Paleo-derinlik" : "Paleo-depth"}</dt>
+                    <dd>{taxonMeta.depth[lang]}</dd>
+                  </div>
+                  <div className="ms-geo-spotlight-fact">
+                    <dt>{lang === "tr" ? "Ortam" : "Habitat"}</dt>
+                    <dd>{taxonMeta.habitat[lang]}</dd>
+                  </div>
+                </dl>
+
+                <div className="ms-geo-spotlight-actions">
+                  <button
+                    type="button"
+                    className="ms-btn ms-btn--sm ms-geo-spotlight-btn"
+                    onClick={() => handleOpenProfileSection(spotlightTaxon)}
+                  >
+                    <span>
+                      {lang === "tr" ? "Tam WoRMS & Ontoloji Profili ↓" : "Full WoRMS & Ontology Profile ↓"}
+                    </span>
+                  </button>
+                  <Link
+                    to={`/fosiller?q=${encodeURIComponent(taxonMeta.genus)}`}
+                    className="ms-btn ms-btn--sm ms-geo-spotlight-secondary"
+                  >
+                    <span>{lang === "tr" ? "Fosil Kataloğunda Aç →" : "Open in Fossil Catalog →"}</span>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -226,8 +482,15 @@ function Geology() {
                   <em>{selectedTaxon}</em>
                 </h2>
               </div>
+              <button
+                type="button"
+                className="ms-btn ms-btn--secondary ms-btn--sm"
+                onClick={() => setSearchParams({}, { replace: true })}
+              >
+                {lang === "tr" ? "Profili Kapat ×" : "Close Profile ×"}
+              </button>
             </div>
-            <TaxonProfileCard scientificName={selectedTaxon} />
+            <TaxonProfileCard scientificName={selectedTaxon} displayName={selectedTaxon} />
           </div>
         </section>
       )}
@@ -235,7 +498,7 @@ function Geology() {
       {/* ── 4. TAXON ENVIRONMENT RECORDS ── */}
       <section className="ms-section ms-section--gray ms-geology-env-section">
         <div className="ms-container">
-          <TaxonEnvironmentSection query={selectedTaxon || params.get("q") || ""} />
+          <TaxonEnvironmentSection query={params.get("q") || ""} />
         </div>
       </section>
     </main>
@@ -370,7 +633,7 @@ function TaxonEnvironmentSection({ query = "" }) {
         <>
           <div className="taxon-env-grid">
             {filtered.map((p, i) => (
-              <Reveal as="div" key={p.scientificName || i} className="ms-card taxon-env-card" delay={(i % 6) * 40}>
+              <div key={p.scientificName || i} className="ms-card taxon-env-card">
                 <div className="ms-card-body taxon-env-card-body">
                   <div className="taxon-env-card-header">
                     <em className="taxon-env-name">{p.scientificName}</em>
@@ -406,7 +669,7 @@ function TaxonEnvironmentSection({ query = "" }) {
                     </div>
                   )}
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
 

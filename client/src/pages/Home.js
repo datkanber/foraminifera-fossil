@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { dayTwoPhotos } from "../data/fieldPhotos";
+import heroVisualAi from "../assets/images/hero-visual-ai.jpg";
 import workshopPhoto from "../assets/photos/1792745417607.jpg";
 import collectionPhoto from "../assets/photos/1792745403944.jpg";
 import foram1 from "../assets/images/foram1.jpg";
@@ -58,7 +59,7 @@ const featuredTaxa = [
 const heroSlides = [
   {
     id: "spotlight-1",
-    photo: dayTwoPhotos.find(p => p.id === "20261023_145547") || dayTwoPhotos[3],
+    photo: dayTwoPhotos.find(p => p.id === "20261023_150127") || dayTwoPhotos[8],
     tabLabel: {
       tr: "Dijital Keşif",
       en: "Digital Discovery",
@@ -118,7 +119,14 @@ const heroSlides = [
   },
   {
     id: "spotlight-3",
-    photo: dayTwoPhotos.find(p => p.id === "20261023_145836") || dayTwoPhotos[7],
+    photo: {
+      id: "visual-ai-thin-section",
+      src: heroVisualAi,
+      caption: {
+        tr: "Polarize mikroskop altında foraminifer ince kesit matriksi",
+        en: "Foraminiferal thin-section matrix under polarized microscopy",
+      },
+    },
     tabLabel: {
       tr: "Görsel Yapay Zekâ",
       en: "Visual AI",
@@ -316,7 +324,7 @@ export default function Home() {
 
   return (
     <main className="ms-home" lang={lang}>
-      {/* ── 1. HERO SPOTLIGHT BANNER (FULL-BLEED MICROSOFT ACRYLIC SHOWCASE) ── */}
+      {/* ── 1. HERO SPOTLIGHT BANNER (FLAGSHIP MICROSOFT FULL-BLEED SHOWCASE) ── */}
       <section
         className={`ms-home-hero${isPaused ? " is-paused" : ""}`}
         aria-label={lang === "tr" ? "Öne Çıkan Başlıklar" : "Featured Highlights"}
@@ -339,7 +347,8 @@ export default function Home() {
           <div className="ms-container ms-home-hero-overlay">
             <div className="ms-home-banner-copy" key={activeSlide.id}>
               <span className="ms-eyebrow ms-home-kicker">
-                {activeSlide.eyebrow[lang]}
+                <span className="ms-home-kicker-dot" aria-hidden="true" />
+                <span>{activeSlide.eyebrow[lang]}</span>
               </span>
               <h1 className="ms-home-hero-title">
                 {activeSlide.title[lang]}
@@ -353,54 +362,67 @@ export default function Home() {
                   <span>{activeSlide.actionPrimary[lang]}</span>
                   <span className="ms-home-arrow" aria-hidden="true">→</span>
                 </Link>
-                <Link className="ms-btn ms-btn--lg ms-btn--secondary ms-home-btn-secondary" to={activeSlide.actionSecondary.to}>
+                <Link className="ms-btn ms-btn--lg ms-home-btn-secondary" to={activeSlide.actionSecondary.to}>
                   {activeSlide.actionSecondary[lang]}
                 </Link>
               </div>
+            </div>
+          </div>
 
-              {/* Microsoft-style showcase controls */}
-              <div className="ms-home-carousel-controls">
-                <button
-                  type="button"
-                  className="ms-home-control-btn"
-                  onClick={prevSlide}
-                  aria-label={lang === "tr" ? "Önceki slayt" : "Previous slide"}
-                >
-                  ‹
-                </button>
-                <div className="ms-home-slide-tabs" role="tablist" aria-label="Slides">
-                  {heroSlides.map((slide, idx) => (
-                    <button
-                      key={slide.id}
-                      type="button"
-                      role="tab"
-                      aria-selected={idx === slideIndex}
-                      className={`ms-home-slide-tab${idx === slideIndex ? " is-active" : ""}`}
-                      onClick={() => setSlideIndex(idx)}
-                    >
-                      <span className="ms-home-slide-tab-num">0{idx + 1}</span>
-                      <span className="ms-home-slide-tab-label">{slide.tabLabel[lang]}</span>
-                      <span className="ms-home-dot-fill" />
-                    </button>
-                  ))}
+          {/* Bottom Full-Width Microsoft Showcase Rail Dock */}
+          <div className="ms-home-carousel-dock">
+            <div className="ms-container ms-home-carousel-dock-inner">
+              <div className="ms-home-slide-tabs" role="tablist" aria-label={lang === "tr" ? "Vitrindeki Başlıklar" : "Featured slides"}>
+                {heroSlides.map((slide, idx) => (
+                  <button
+                    key={slide.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={idx === slideIndex}
+                    className={`ms-home-slide-tab${idx === slideIndex ? " is-active" : ""}`}
+                    onClick={() => setSlideIndex(idx)}
+                  >
+                    <span className="ms-home-dot-fill" />
+                    <span className="ms-home-slide-tab-num">0{idx + 1}</span>
+                    <span className="ms-home-slide-tab-label">{slide.tabLabel[lang]}</span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="ms-home-dock-right">
+                {activeSlide.photo.caption && (
+                  <div className="ms-home-banner-caption" aria-hidden="true">
+                    <span className="ms-home-banner-caption-dot" />
+                    <span>{activeSlide.photo.caption[lang]}</span>
+                  </div>
+                )}
+                <div className="ms-home-carousel-controls">
+                  <button
+                    type="button"
+                    className="ms-home-control-btn"
+                    onClick={prevSlide}
+                    aria-label={lang === "tr" ? "Önceki slayt" : "Previous slide"}
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    className="ms-home-control-btn"
+                    onClick={nextSlide}
+                    aria-label={lang === "tr" ? "Sonraki slayt" : "Next slide"}
+                  >
+                    ›
+                  </button>
+                  <button
+                    type="button"
+                    className="ms-home-control-btn"
+                    onClick={() => setIsUserPaused((p) => !p)}
+                    aria-pressed={isUserPaused}
+                    aria-label={isUserPaused ? (lang === "tr" ? "Slaytı oynat" : "Play slideshow") : (lang === "tr" ? "Slaytı duraklat" : "Pause slideshow")}
+                  >
+                    {isUserPaused ? "▶" : "❚❚"}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  className="ms-home-control-btn"
-                  onClick={nextSlide}
-                  aria-label={lang === "tr" ? "Sonraki slayt" : "Next slide"}
-                >
-                  ›
-                </button>
-                <button
-                  type="button"
-                  className="ms-home-control-btn"
-                  onClick={() => setIsUserPaused((p) => !p)}
-                  aria-pressed={isUserPaused}
-                  aria-label={isUserPaused ? (lang === "tr" ? "Slaytı oynat" : "Play slideshow") : (lang === "tr" ? "Slaytı duraklat" : "Pause slideshow")}
-                >
-                  {isUserPaused ? "▶" : "❚❚"}
-                </button>
               </div>
             </div>
           </div>
@@ -411,10 +433,13 @@ export default function Home() {
       <section className="ms-section ms-home-quick-section" aria-label={lang === "tr" ? "Hızlı Erişim" : "Quick Access"}>
         <div className="ms-container">
           <div className="ms-home-quick-grid">
-            {quickLinks.map((item, i) => (
+            {quickLinks.map((item) => (
               <Link key={item.to} to={item.to} className="ms-home-quick-card">
-                <div className="ms-home-quick-icon">
-                  <QuickIcon name={item.icon} />
+                <div className="ms-home-quick-top">
+                  <div className="ms-home-quick-icon">
+                    <QuickIcon name={item.icon} />
+                  </div>
+                  <span className="ms-home-quick-arrow" aria-hidden="true">↗</span>
                 </div>
                 <div className="ms-home-quick-text">
                   <span className="ms-home-quick-title">{item.title}</span>
@@ -568,9 +593,10 @@ export default function Home() {
                 </div>
                 <div className="ms-home-bento-actions">
                   <Link className="ms-btn ms-home-btn-primary" to="/vlm">
-                    {lang === "tr" ? "Görsel YZ Başlat" : "Launch Visual AI"}
+                    <span>{lang === "tr" ? "Görsel YZ Başlat" : "Launch Visual AI"}</span>
+                    <span className="ms-home-arrow" aria-hidden="true">→</span>
                   </Link>
-                  <Link className="ms-btn ms-btn--secondary ms-home-btn-secondary" to="/lab">
+                  <Link className="ms-btn ms-home-btn-secondary" to="/lab">
                     {lang === "tr" ? "3D Laboratuvar" : "3D Lab"}
                   </Link>
                 </div>
@@ -670,7 +696,10 @@ export default function Home() {
                     <img src={taxon.img} alt={taxon.name} loading="lazy" />
                   </div>
                   <div className="ms-home-taxon-meta">
-                    <span className="ms-home-taxon-name">{taxon.name}</span>
+                    <div className="ms-home-taxon-head">
+                      <span className="ms-home-taxon-name">{taxon.name}</span>
+                      <span className="ms-home-taxon-arrow" aria-hidden="true">↗</span>
+                    </div>
                     <span className="ms-home-taxon-age">{taxon.age[lang]}</span>
                     <span className="ms-home-taxon-zone">{taxon.zone[lang]}</span>
                   </div>

@@ -44,12 +44,25 @@
   border: 1px solid var(--color-border-subtle);
   border-top: 4px solid var(--ms-blue);
   border-radius: var(--radius-lg);
-  background: #ffffff;
-  box-shadow: var(--shadow-8);
+  background: linear-gradient(180deg, #ffffff 0%, #fafcfe 100%);
+  box-shadow: inset 0 1px 0 #ffffff, var(--shadow-8);
 }
 
 .ms-about-highlight-card .ms-card-body {
   padding: 32px 28px;
+}
+
+.ms-about-pillar-card {
+  border-top: 3px solid transparent;
+  transition:
+    border-top-color var(--duration-normal) var(--ease-easy),
+    border-color var(--duration-normal) var(--ease-easy),
+    box-shadow var(--duration-slow) var(--ease-decelerate-max),
+    transform var(--duration-slow) var(--ease-decelerate-max);
+}
+
+.ms-about-pillar-card:hover {
+  border-top-color: var(--ms-blue);
 }
 
 .ms-about-stat-strip {

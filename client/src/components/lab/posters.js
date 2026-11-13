@@ -6,12 +6,12 @@ import { SPECIMENS, specimenNumber } from "./specimens";
 // so the content is written once. Redrawn when the language changes.
 
 const FONT = "Inter, 'Segoe UI', system-ui, sans-serif";
-const PAPER = "#f7f2e6";
-const INK = "#1f2d24";
-const MUTED = "#56665b";
-const ACCENT = "#2d6e34";
-const LINE = "#7a6a48";
-const SHELL = "#fbf3dc";
+const PAPER = "#f6f8fb";
+const INK = "#0b2b40";
+const MUTED = "#4f6272";
+const ACCENT = "#0067b8";
+const LINE = "#b8cad8";
+const SHELL = "#f9fbfe";
 
 export const POSTERS = [
   { id: "anatomy", icon: "🔬", size: [900, 1200] },
@@ -669,7 +669,7 @@ function drawTimeline(ctx, w, h, t) {
   });
 
   // Paleocene–Eocene highlight: the interval the ForamID tool covers.
-  ctx.fillStyle = "rgba(45, 110, 52, 0.28)";
+  ctx.fillStyle = "rgba(0, 103, 184, 0.14)";
   ctx.fillRect(xAt(66), band.y - 10, xAt(34) - xAt(66), band.h + 20);
 
   ctx.fillStyle = MUTED;
@@ -704,12 +704,12 @@ function drawTimeline(ctx, w, h, t) {
     ctx.lineTo(Math.min(Math.max(x, e.card + 20), e.card + cardW - 20), e.above ? cardY + cardH : cardY);
     ctx.stroke();
 
-    ctx.fillStyle = e.highlight ? "#dcebd5" : "#ffffff";
+    ctx.fillStyle = e.highlight ? "#e6f2fb" : "#ffffff";
     roundRect(ctx, e.card, cardY, cardW, cardH, 14);
     ctx.fill();
-    ctx.strokeStyle = e.highlight ? ACCENT : "#d6ccb2";
+    ctx.strokeStyle = e.highlight ? ACCENT : "#d0dde8";
     ctx.stroke();
-    ctx.fillStyle = e.highlight ? ACCENT : "#8a6d2f";
+    ctx.fillStyle = e.highlight ? ACCENT : "#3b5972";
     ctx.font = font(20, 700);
     ctx.fillText(e.label || (e.ma === 0 ? "0 Ma" : `~${e.ma} Ma`), e.card + 16, cardY + 32);
     ctx.fillStyle = INK;

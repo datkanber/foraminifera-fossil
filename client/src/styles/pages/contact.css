@@ -15,6 +15,7 @@
 
 .ms-contact-card {
   border: 1px solid var(--color-border-subtle);
+  border-top: 3px solid transparent;
   border-radius: var(--radius-lg);
   background: #ffffff;
   box-shadow: var(--shadow-4);
@@ -25,6 +26,7 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-16);
   border-color: var(--ms-blue-tint-strong);
+  border-top-color: var(--ms-blue);
 }
 
 .ms-contact-card .ms-card-body {

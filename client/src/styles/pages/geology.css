@@ -15,12 +15,16 @@
 }
 
 .ms-geology-card {
+  cursor: pointer;
   border: 1px solid var(--color-border-subtle);
   border-top: 4px solid var(--ms-blue);
   border-radius: var(--radius-lg);
   background: #ffffff;
   box-shadow: var(--shadow-4);
-  transition: all var(--duration-slow) var(--ease-decelerate-max);
+  transition:
+    transform var(--duration-normal) var(--ease-decelerate-max),
+    box-shadow var(--duration-normal) var(--ease-decelerate-max),
+    border-color var(--duration-fast) var(--ease-easy);
 }
 
 .ms-geology-card:hover {
@@ -28,9 +32,14 @@
   box-shadow: var(--shadow-16);
 }
 
+.ms-geology-card:focus-visible {
+  outline: 2px solid var(--ms-blue);
+  outline-offset: 2px;
+}
+
 .ms-geology-card.is-selected {
   border-color: var(--ms-blue);
-  box-shadow: 0 12px 30px -6px rgb(0 103 184 / 22%), var(--shadow-8);
+  box-shadow: 0 12px 30px -6px rgb(0 103 184 / 24%), var(--shadow-8);
 }
 
 /* Interactive Chronostratigraphic Timeline */
@@ -135,7 +144,10 @@
 }
 
 .ms-geo-taxon-chip {
-  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid var(--ms-blue-tint-strong);
   background: var(--ms-blue-tint);
@@ -143,48 +155,192 @@
   font-family: var(--font-base);
   font-size: 12px;
   font-weight: 600;
+  line-height: 1.3;
   cursor: pointer;
-  transition: background var(--duration-faster) var(--ease-easy), color var(--duration-faster) var(--ease-easy);
+  transition:
+    background var(--duration-faster) var(--ease-easy),
+    border-color var(--duration-faster) var(--ease-easy),
+    color var(--duration-faster) var(--ease-easy),
+    transform var(--duration-faster) var(--ease-easy),
+    box-shadow var(--duration-faster) var(--ease-easy);
 }
 
 .ms-geo-taxon-chip:hover {
-  background: var(--ms-blue);
+  background: #00589f;
+  border-color: #00589f;
   color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ms-geo-taxon-chip:focus-visible {
+  outline: 2px solid var(--ms-navy);
+  outline-offset: 2px;
+}
+
+.ms-geo-taxon-chip.is-active,
+.ms-geo-taxon-chip.is-active:hover {
+  background: var(--ms-blue);
+  border-color: var(--ms-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgb(0 103 184 / 28%);
+}
+
+.ms-geo-taxon-chip.is-active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #50e6ff;
+  flex-shrink: 0;
 }
 
 .ms-geo-stage-spotlight {
-  margin-top: 20px;
-  padding: 18px 24px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 22px;
+  padding: 26px 28px;
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--ms-blue);
-  background: var(--ms-navy);
+  border: 1px solid rgb(80 230 255 / 22%);
+  border-left: 4px solid var(--ms-blue-bright);
+  background:
+    radial-gradient(60% 110% at 92% 10%, rgb(80 230 255 / 16%) 0%, transparent 70%),
+    linear-gradient(135deg, #061824 0%, var(--ms-navy) 100%);
   color: #ffffff;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
+  align-items: stretch;
+  gap: 24px;
+  box-shadow: var(--shadow-16);
+}
+
+.ms-geo-spotlight-stage {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
-  box-shadow: var(--shadow-8);
+  gap: 12px;
 }
 
 .ms-geo-spotlight-meta h3 {
   margin: 4px 0 0;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
+  line-height: 1.25;
   color: #ffffff;
 }
 
 .ms-geo-spotlight-meta .ms-eyebrow {
-  color: var(--ms-blue-bright);
+  color: #8ce9ff;
   margin: 0;
 }
 
 .ms-geo-spotlight-desc {
   margin: 0;
-  flex: 1 1 360px;
   font-size: 14.5px;
-  line-height: 1.55;
-  color: rgb(255 255 255 / 86%);
+  line-height: 1.6;
+  color: rgb(255 255 255 / 88%);
+}
+
+.ms-geo-spotlight-facies {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgb(80 230 255 / 26%);
+  background: rgb(80 230 255 / 10%);
+  color: #bdefff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ms-geo-spotlight-taxon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 20px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgb(255 255 255 / 14%);
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(12px);
+}
+
+.ms-geo-spotlight-taxon-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.ms-geo-spotlight-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8ce9ff;
+}
+
+.ms-geo-spotlight-taxon-name {
+  margin: 4px 0 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ms-geo-spotlight-rank {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgb(80 230 255 / 28%);
+  background: rgb(0 120 212 / 24%);
+  color: #d6f5ff;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.ms-geo-spotlight-facts {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ms-geo-spotlight-fact {
+  display: grid;
+  gap: 2px;
+}
+
+.ms-geo-spotlight-fact dt {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #9cd8f4;
+}
+
+.ms-geo-spotlight-fact dd {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #f4f9fd;
+}
+
+.ms-geo-spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.ms-geo-spotlight-secondary {
+  background: rgb(255 255 255 / 10%);
+  border-color: rgb(255 255 255 / 24%);
+  color: #ffffff;
+}
+
+.ms-geo-spotlight-secondary:hover {
+  background: rgb(255 255 255 / 18%);
+  border-color: rgb(255 255 255 / 40%);
+  color: #ffffff;
 }
 
 /* Depositional Depth Spectrum Filter */
@@ -434,6 +590,13 @@
   background: var(--ms-gray-30);
   color: var(--ms-gray-130);
   align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+  .ms-geo-stage-spotlight {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 22px 20px;
+  }
 }
 
 @media (max-width: 720px) {

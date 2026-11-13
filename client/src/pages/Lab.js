@@ -265,6 +265,9 @@ export default function Lab() {
             <div className="lab-intro-icon" aria-hidden="true">
               <LabSvg name="cube" />
             </div>
+            <div className="lab-intro-kicker">
+              {lang === "tr" ? "3D Sanal Mikroskopi Stüdyosu" : "3D Virtual Microscopy Studio"}
+            </div>
             <h2 id="lab-intro-title">{t.title}</h2>
             <p className="lab-intro-lead">{t.introLead}</p>
             <ul className="lab-intro-goals">
