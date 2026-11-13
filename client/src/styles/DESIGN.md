@@ -3,8 +3,13 @@
 The whole site follows the look and motion of **microsoft.com** (Fluent 2):
 white canvas, Segoe UI, Microsoft blue `#0067b8`, generous whitespace,
 full-bleed sections alternating white and `#f2f2f2`, rounded cards with soft
-Fluent shadows that lift on hover, "Learn more ›" links, and fast-out/slow-in
-motion.
+Fluent shadows for interactive cards, "Learn more ›" links, and purposeful,
+brief motion. Real project photography takes priority over generated scenes.
+
+References: [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365),
+[Fluent typography](https://fluent2.microsoft.design/typography),
+[Fluent motion](https://fluent2.microsoft.design/motion), and
+[Fluent elevation](https://fluent2.microsoft.design/elevation).
 
 Tokens live in `styles/variables.css`; shared classes in `styles/global.css`.
 **Always reuse tokens/classes — do not hard-code colours, shadows, easings.**
@@ -20,28 +25,68 @@ Tokens live in `styles/variables.css`; shared classes in `styles/global.css`.
    Body 16px / 1.5, muted text `var(--color-text-muted)`.
 4. Corners: buttons/inputs `--radius-md` (4px), cards/panels/images
    `--radius-lg` (8px). Never fully pill-shaped except badges.
-5. Elevation: resting cards `--shadow-4`, hovered `--shadow-16`, flyouts /
-   dialogs `--shadow-28`, modals `--shadow-64`. Prefer shadow over borders;
-   use `1px solid var(--color-border-subtle)` for quiet separation.
+5. Elevation: resting cards `--shadow-2`, hovered `--shadow-8`, flyouts
+   `--shadow-16`, modals `--shadow-64`. Tool panels use subtle borders without
+   shadows. Hover changes elevation without moving or scaling content.
 6. Colour: blue is the only accent for interactive things. Status colours only
    for status (`--ms-success`, `--ms-warning`, `--ms-danger` + `-bg`).
+
+## Restraint rules — avoid the "AI generated" look
+
+microsoft.com is calm and flat. Its polish comes from photography, type scale
+and spacing, not from effects. These are banned unless noted:
+
+- **No decorative glows**: no `radial-gradient` blobs/meshes, no glowing dots
+  (`box-shadow: 0 0 8px <colour>`), no coloured drop shadows
+  (`rgb(0 103 184 / x)` shadows). Use the neutral `--shadow-*` ramp only.
+- **No neon cyan** (`#50e6ff`, `#8ce9ff`, `#a6ecff`, `#4cc2ff` as text/borders).
+  On dark navy use white, `rgb(255 255 255 / 80%)` for muted text, and plain
+  white underlined links. `--ms-blue-bright` is only
+  allowed for focus/links on dark if contrast requires it.
+- **No glassmorphism**: no `backdrop-filter` except the sticky navbar.
+- **No decorative grids / noise / mesh backgrounds**. Section backgrounds are
+  solid: `#fff`, `--ms-gray-30` (`#f2f2f2`), or solid `--ms-navy`.
+- **Gradients** only as a functional photo scrim for text legibility
+  (black/navy → transparent), a loading indicator, or the geological depth
+  spectrum. Never on buttons, cards, borders or text.
+- **Eyebrows are plain text**: sentence case, 14px, weight 600, no pill, no
+  dot, no letter-spaced uppercase.
+- **Pills** (`border-radius: 999px`) only for small status badges and filter
+  chips. Not for eyebrows, captions or tag lists — use plain text separated by
+  `·` or a thin vertical rule.
+- **Buttons are flat**: solid fill, 4px radius, darker fill on hover. No shine
+  sweep, no lift (`translateY`), no inset highlights, no coloured glow.
+- **Cards**: white, `--shadow-2` (or 1px border), hover → `--shadow-8`. No
+  scale, no cursor-follow spotlight, no gradient accent bars.
+- **No emoji as icons**. Use the inline SVG line icons (1.5px stroke, 24px box).
+- **Motion is quiet**: fade + ≤8px rise, no scale-in, no zoom-on-hover larger
+  than `scale(1.03)` on photos.
+- Coloured top borders (`border-top: 4px solid blue`) on every card read as
+  template-y; use at most one accent per section, e.g. the selected item.
 
 ## Motion
 
 | Use | Duration | Easing |
 | --- | --- | --- |
-| hover colour/background | `--duration-faster` (100ms) | `--ease-easy` |
-| hover lift / shadow | `--duration-slow` (300ms) | `--ease-decelerate-max` |
-| element enter (fade + 16–28px rise) | 400–700ms | `--ease-decelerate-max` |
+| hover colour/background | `--motion-hover` (150ms) | `--ease-easy` |
+| hover shadow | `--duration-normal` (200ms) | `--ease-easy` |
+| page change (fade only) | `--motion-page` (200ms) | `--ease-decelerate-mid` |
+| element enter (fade + ≤8px rise) | `--motion-enter` (300ms) | `--ease-decelerate-max` |
 | element exit | 150–200ms | `--ease-accelerate-mid` |
-| press | 100ms, `transform: scale(0.98)` | `--ease-easy` |
+| press | darker background, no transform | `--ease-easy` |
 
 - Route changes already animate (`components/ms/PageTransition.js`).
 - Use `<Reveal>` (`components/ms/Reveal.js`) for scroll-in of sections/cards.
-  Stagger siblings with `delay={index * 80}` (keep ≤ 320ms).
+  Stagger siblings with `delay={index * 60}` (automatically capped at 200ms).
+  Above-the-fold content is immediately visible; only content below the viewport
+  is deferred. All content remains readable without IntersectionObserver.
 - Panels that appear (results, accordions, dialogs) should fade/slide in with a
   keyframe using the tokens above.
 - All animation is disabled automatically under `prefers-reduced-motion`.
+- The home carousel pauses on hover, keyboard focus, and hidden browser tabs.
+  Reduced motion starts it paused. Both tab sets support arrows and Home/End.
+- Sticky tools and anchor links use `--header-height`, measured by the navbar,
+  to account for language, wrapping announcements, dismissal, and viewport changes.
 
 ## Shared React components
 

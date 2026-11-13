@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import PageHero from "../components/ms/PageHero";
 import Reveal from "../components/ms/Reveal";
-import heroContactHall from "../assets/images/hero-contact-hall.jpg";
+import heroContactHall from "../assets/photos/1792745403944.jpg";
 import "../styles/pages/contact.css";
 
 function ContactIcon({ name }) {
@@ -64,9 +64,9 @@ function Contact() {
         }
         tone="gray"
         image={heroContactHall}
-        imageAlt={lang === "tr" ? "Yer bilimleri araştırma galerisi ve kayaç vitrinleri" : "Earth sciences research hall and rock specimen vitrines"}
+        imageAlt={lang === "tr" ? "ESOGÜ jeoloji koleksiyonunu ziyaret eden STONE araştırma ekibi" : "The STONE research team visiting the ESOGÜ geology collection"}
         imagePosition="center center"
-        mediaTag={lang === "tr" ? "ESOGÜ Yer Bilimleri Koleksiyonu" : "ESOGÜ Earth Sciences Archive"}
+        mediaTag={lang === "tr" ? "ESOGÜ jeoloji koleksiyonu · STONE araştırma ekibi" : "ESOGÜ geology collection · STONE research team"}
       />
 
       {/* ── 2. CONTACT CHANNELS GRID ── */}

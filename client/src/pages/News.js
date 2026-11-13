@@ -207,7 +207,7 @@ export default function News() {
   return (
     <main className="ms-news-shell" lang={lang}>
       <section className="ms-news-hero">
-        <div className="ms-container--wide">
+        <div className="news-page ms-news-hero-inner">
           <div className="stone-page-label">
             <span>{text.pageTitle}</span>
             <span>GeoKnow · {text.hostName}</span>

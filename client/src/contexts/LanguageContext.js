@@ -9,6 +9,7 @@ export const LanguageProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('foram_lang', lang);
+    document.documentElement.lang = lang;
   }, [lang]);
 
   const toggleLanguage = () => {

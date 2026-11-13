@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import PageHero from "../components/ms/PageHero";
 import Reveal from "../components/ms/Reveal";
-import heroAboutLab from "../assets/images/hero-about-lab.jpg";
+import heroAboutLab from "../assets/photos/1792745417607.jpg";
 import "../styles/pages/about.css";
 
 function About() {
@@ -26,9 +26,9 @@ function About() {
         }
         tone="gray"
         image={heroAboutLab}
-        imageAlt={lang === "tr" ? "Mikropaleontoloji laboratuvarı ve ince kesit mikroskobu" : "Micropaleontology laboratory bench and petrographic microscope"}
+        imageAlt={lang === "tr" ? "ESOGÜ'de STONE atölyesine katılan araştırmacılar" : "Researchers at the STONE workshop at ESOGÜ"}
         imagePosition="center center"
-        mediaTag={lang === "tr" ? "Mikropaleontoloji & Ontoloji Laboratuvarı" : "Micropaleontology & Ontology Lab"}
+        mediaTag={lang === "tr" ? "STONE atölyesi · Eskişehir Osmangazi Üniversitesi" : "STONE workshop · Eskişehir Osmangazi University"}
         actions={
           <div className="ms-page-hero-actions">
             <Link to="/tani" className="ms-btn">

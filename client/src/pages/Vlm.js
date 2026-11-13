@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "../components/ms/PageHero";
-import foram2 from "../assets/images/foram2.jpg";
+import microscopeWorkbenchVisual from "../assets/images/generated/microscope-workbench.jpg";
 import "../styles/pages/vlm.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -49,6 +49,7 @@ function Vlm() {
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
   const fileInputRef = useRef(null);
+  const uploadTriggerRef = useRef(null);
   const { lang, t } = useLanguage();
 
   const [formData, setFormData] = useState({
@@ -148,9 +149,9 @@ function Vlm() {
         title={t("vlm.title")}
         text={t("vlm.desc")}
         tone="gray"
-        image={foram2}
-        imageFit="contain"
-        imageAlt={lang === "tr" ? "Foraminifera ince kesit ve kavkı yapısı" : "Foraminifera thin section and test morphology"}
+        image={microscopeWorkbenchVisual}
+        imageAlt={lang === "tr" ? "İnce kesit incelemeye hazırlanan optik mikroskobun temsili laboratuvar görünümü" : "Illustrative laboratory scene with an optical microscope prepared for thin-section examination"}
+        mediaTag={lang === "tr" ? "Mikroskopi ve görsel analiz · Temsili görsel" : "Microscopy and visual analysis · Illustrative image"}
         actions={
           <Link to="/tani" className="ms-btn ms-btn--secondary">
             <span>{lang === "tr" ? "Kural Tabanlı Tanıya Geç" : "Switch to Rule-Based Diagnosis"}</span>
@@ -163,15 +164,15 @@ function Vlm() {
           <div className="vlm-body">
           {/* Left Side: Upload & Form */}
           <div className="vlm-left">
+            <h2 className="vlm-panel-title">{lang === "tr" ? "1. Görsel ve gözlem bilgileri" : "1. Image and observations"}</h2>
             <div 
               className={`upload-zone ${base64Image ? 'active' : ''}${loading ? ' is-scanning' : ''}`}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
-              onClick={() => !base64Image && fileInputRef.current?.click()}
             >
               {base64Image ? (
                 <>
-                  <img src={base64Image} alt="Preview" className="image-preview" />
+                  <img src={base64Image} alt={lang === "tr" ? "Seçilen ince kesit görseli" : "Selected thin-section image"} className="image-preview" />
                   {loading && (
                     <div className="vlm-scan-overlay" aria-hidden="true">
                       <div className="vlm-scan-beam" />
@@ -179,23 +180,28 @@ function Vlm() {
                   )}
                   <button 
                     className="remove-btn" 
+                    type="button"
+                    disabled={loading}
                     onClick={(e) => {
                       e.stopPropagation();
                       setBase64Image("");
                       setFile(null);
                       setResult(null);
+                      if (fileInputRef.current) fileInputRef.current.value = "";
+                      requestAnimationFrame(() => uploadTriggerRef.current?.focus());
                     }}
-                    title="Görüntüyü Kaldır"
+                    aria-label={lang === "tr" ? "Görseli kaldır" : "Remove image"}
+                    title={lang === "tr" ? "Görseli kaldır" : "Remove image"}
                   >
                     <CloseIcon />
                   </button>
                 </>
               ) : (
-                <>
+                <button ref={uploadTriggerRef} type="button" className="upload-trigger" onClick={() => fileInputRef.current?.click()}>
                   <CameraIcon />
-                  <div className="upload-text">{t("vlm.upload")}</div>
-                  <div className="upload-hint">{t("vlm.formats")}</div>
-                </>
+                  <span className="upload-text">{t("vlm.upload")}</span>
+                  <span className="upload-hint">{t("vlm.formats")}</span>
+                </button>
               )}
               <input 
                 type="file" 
@@ -208,8 +214,9 @@ function Vlm() {
 
             <div className="form-grid">
               <div className="form-group">
-                <label>{t("vlm.loc")}</label>
+                <label htmlFor="vlm-locality">{t("vlm.loc")}</label>
                 <input 
+                  id="vlm-locality"
                   type="text" 
                   name="locality" 
                   placeholder={t("vlm.loc.ph")} 
@@ -219,8 +226,9 @@ function Vlm() {
               </div>
 
               <div className="form-group">
-                <label>{t("vlm.age")}</label>
+                <label htmlFor="vlm-age">{t("vlm.age")}</label>
                 <input 
+                  id="vlm-age"
                   type="text" 
                   name="age" 
                   placeholder={t("vlm.age.ph")} 
@@ -230,8 +238,9 @@ function Vlm() {
               </div>
 
               <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                <label>{t("vlm.optics")}</label>
+                <label htmlFor="vlm-optics">{t("vlm.optics")}</label>
                 <input 
+                  id="vlm-optics"
                   type="text" 
                   name="optics" 
                   placeholder={t("vlm.optics.ph")} 
@@ -253,7 +262,7 @@ function Vlm() {
             </div>
 
             {error && (
-              <div className="error-message">
+              <div className="error-message" role="alert">
                 <AlertIcon /> <span>{error}</span>
               </div>
             )}
@@ -272,7 +281,8 @@ function Vlm() {
           </div>
 
           {/* Right Side: Results */}
-          <div className="vlm-right">
+          <div className="vlm-right" aria-busy={loading} aria-live="polite">
+            <h2 className="vlm-panel-title">{lang === "tr" ? "2. Bulgular ve aday cinsler" : "2. Findings and candidate genera"}</h2>
             {!result && !loading && (
               <div className="empty-state">
                 <BotIcon />

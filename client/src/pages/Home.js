@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { dayTwoPhotos } from "../data/fieldPhotos";
-import heroVisualAi from "../assets/images/hero-visual-ai.jpg";
 import workshopPhoto from "../assets/photos/1792745417607.jpg";
 import collectionPhoto from "../assets/photos/1792745403944.jpg";
 import foram1 from "../assets/images/foram1.jpg";
-import foram2 from "../assets/images/foram2.jpg";
-import foram3 from "../assets/images/foram3.jpg";
+import thinSectionVisual from "../assets/images/generated/thin-section.jpg";
+import shellCutawayVisual from "../assets/images/generated/shell-cutaway.jpg";
+import carbonateStrataVisual from "../assets/images/generated/carbonate-strata.jpg";
+import decisionSupportVisual from "../assets/images/decision-support.svg";
 import amphisteginaImg from "../assets/hyaline/amphistegina.png";
 import heterosteginaImg from "../assets/hyaline/heterostegina.png";
 import discocyclinaImg from "../assets/hyaline/discocyclina.png";
@@ -89,7 +90,7 @@ const heroSlides = [
   },
   {
     id: "spotlight-2",
-    photo: dayTwoPhotos.find(p => p.id === "20261023_145744") || dayTwoPhotos[5],
+    photo: dayTwoPhotos.find(p => p.id === "20261023_145821") || dayTwoPhotos[6],
     tabLabel: {
       tr: "STONE Saha Mirası",
       en: "STONE Heritage",
@@ -121,10 +122,10 @@ const heroSlides = [
     id: "spotlight-3",
     photo: {
       id: "visual-ai-thin-section",
-      src: heroVisualAi,
+      src: thinSectionVisual,
       caption: {
-        tr: "Polarize mikroskop altında foraminifer ince kesit matriksi",
-        en: "Foraminiferal thin-section matrix under polarized microscopy",
+        tr: "İnce kesitte kavkı duvarları ve loca düzeni · Temsili görsel",
+        en: "Test walls and chamber arrangements in thin section · Illustrative image",
       },
     },
     tabLabel: {
@@ -236,19 +237,45 @@ export default function Home() {
   const { lang } = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isUserPaused, setIsUserPaused] = useState(false);
+  const [isUserPaused, setIsUserPaused] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const [hasFocus, setHasFocus] = useState(false);
+  const [isDocumentVisible, setIsDocumentVisible] = useState(() => !document.hidden);
   const [persona, setPersona] = useState("researchers");
 
   const activeSlide = heroSlides[slideIndex];
-  const isPaused = isHovered || isUserPaused;
+  const isPaused = isHovered || hasFocus || isUserPaused || !isDocumentVisible;
+
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onPreferenceChange = event => { if (event.matches) setIsUserPaused(true); };
+    const onVisibilityChange = () => setIsDocumentVisible(!document.hidden);
+    preference.addEventListener("change", onPreferenceChange);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => {
+      preference.removeEventListener("change", onPreferenceChange);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (isPaused) return;
     const timer = window.setInterval(() => {
       setSlideIndex(prev => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 8000);
     return () => window.clearInterval(timer);
-  }, [isPaused]);
+  }, [isPaused, slideIndex]);
+
+  function navigateTabs(event, keys, select) {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    const tabs = Array.from(event.currentTarget.querySelectorAll('[role="tab"]'));
+    const current = tabs.indexOf(document.activeElement);
+    if (current < 0) return;
+    event.preventDefault();
+    const index = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1
+      : (current + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+    select(keys[index]);
+    tabs[index].focus();
+  }
 
   const personaGuides = {
     researchers: {
@@ -324,32 +351,18 @@ export default function Home() {
 
   return (
     <main className="ms-home" lang={lang}>
-      {/* ── 1. HERO SPOTLIGHT BANNER (FLAGSHIP MICROSOFT FULL-BLEED SHOWCASE) ── */}
+      {/* Featured research and fieldwork */}
       <section
         className={`ms-home-hero${isPaused ? " is-paused" : ""}`}
         aria-label={lang === "tr" ? "Öne Çıkan Başlıklar" : "Featured Highlights"}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onFocusCapture={() => setHasFocus(true)}
+        onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setHasFocus(false); }}
       >
-        <div className="ms-home-banner">
-          <div className="ms-home-banner-media">
-            <img
-              key={activeSlide.photo.id || activeSlide.id}
-              src={activeSlide.photo.src}
-              srcSet={activeSlide.photo.srcSet}
-              sizes="100vw"
-              alt={activeSlide.photo.caption ? activeSlide.photo.caption[lang] : activeSlide.title[lang]}
-              className="ms-home-banner-img"
-            />
-            <div className="ms-home-banner-media-gradient" />
-          </div>
-
-          <div className="ms-container ms-home-hero-overlay">
-            <div className="ms-home-banner-copy" key={activeSlide.id}>
-              <span className="ms-eyebrow ms-home-kicker">
-                <span className="ms-home-kicker-dot" aria-hidden="true" />
-                <span>{activeSlide.eyebrow[lang]}</span>
-              </span>
+        <div className="ms-container ms-home-banner" role="tabpanel" id={`home-panel-${activeSlide.id}`} aria-labelledby={`home-tab-${activeSlide.id}`}>
+            <div className="ms-home-banner-copy" key={activeSlide.id} aria-live={isUserPaused ? "polite" : "off"}>
+              <p className="ms-eyebrow ms-home-kicker">{activeSlide.eyebrow[lang]}</p>
               <h1 className="ms-home-hero-title">
                 {activeSlide.title[lang]}
               </h1>
@@ -362,27 +375,41 @@ export default function Home() {
                   <span>{activeSlide.actionPrimary[lang]}</span>
                   <span className="ms-home-arrow" aria-hidden="true">→</span>
                 </Link>
-                <Link className="ms-btn ms-btn--lg ms-home-btn-secondary" to={activeSlide.actionSecondary.to}>
+                <Link className="ms-link" to={activeSlide.actionSecondary.to}>
                   {activeSlide.actionSecondary[lang]}
                 </Link>
               </div>
             </div>
-          </div>
+          <figure className="ms-home-banner-media" key={activeSlide.photo.id || activeSlide.id}>
+            <div className="ms-home-banner-image-frame">
+              <img
+                src={activeSlide.photo.src}
+                srcSet={activeSlide.photo.srcSet}
+                sizes="(max-width: 859px) 100vw, 52vw"
+                alt={activeSlide.photo.caption ? activeSlide.photo.caption[lang] : activeSlide.title[lang]}
+                className="ms-home-banner-img"
+                fetchPriority="high"
+              />
+            </div>
+            {activeSlide.photo.caption && <figcaption className="ms-home-banner-caption">{activeSlide.photo.caption[lang]}</figcaption>}
+          </figure>
+        </div>
 
-          {/* Bottom Full-Width Microsoft Showcase Rail Dock */}
           <div className="ms-home-carousel-dock">
             <div className="ms-container ms-home-carousel-dock-inner">
-              <div className="ms-home-slide-tabs" role="tablist" aria-label={lang === "tr" ? "Vitrindeki Başlıklar" : "Featured slides"}>
+              <div className="ms-home-slide-tabs" role="tablist" aria-label={lang === "tr" ? "Vitrindeki Başlıklar" : "Featured slides"} onKeyDown={event => navigateTabs(event, heroSlides.map((_, i) => i), setSlideIndex)}>
                 {heroSlides.map((slide, idx) => (
                   <button
                     key={slide.id}
                     type="button"
                     role="tab"
                     aria-selected={idx === slideIndex}
+                    id={`home-tab-${slide.id}`}
+                    aria-controls={idx === slideIndex ? `home-panel-${slide.id}` : undefined}
+                    tabIndex={idx === slideIndex ? 0 : -1}
                     className={`ms-home-slide-tab${idx === slideIndex ? " is-active" : ""}`}
                     onClick={() => setSlideIndex(idx)}
                   >
-                    <span className="ms-home-dot-fill" />
                     <span className="ms-home-slide-tab-num">0{idx + 1}</span>
                     <span className="ms-home-slide-tab-label">{slide.tabLabel[lang]}</span>
                   </button>
@@ -390,12 +417,6 @@ export default function Home() {
               </div>
 
               <div className="ms-home-dock-right">
-                {activeSlide.photo.caption && (
-                  <div className="ms-home-banner-caption" aria-hidden="true">
-                    <span className="ms-home-banner-caption-dot" />
-                    <span>{activeSlide.photo.caption[lang]}</span>
-                  </div>
-                )}
                 <div className="ms-home-carousel-controls">
                   <button
                     type="button"
@@ -403,7 +424,7 @@ export default function Home() {
                     onClick={prevSlide}
                     aria-label={lang === "tr" ? "Önceki slayt" : "Previous slide"}
                   >
-                    ‹
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
                   </button>
                   <button
                     type="button"
@@ -411,7 +432,7 @@ export default function Home() {
                     onClick={nextSlide}
                     aria-label={lang === "tr" ? "Sonraki slayt" : "Next slide"}
                   >
-                    ›
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
                   </button>
                   <button
                     type="button"
@@ -420,16 +441,15 @@ export default function Home() {
                     aria-pressed={isUserPaused}
                     aria-label={isUserPaused ? (lang === "tr" ? "Slaytı oynat" : "Play slideshow") : (lang === "tr" ? "Slaytı duraklat" : "Pause slideshow")}
                   >
-                    {isUserPaused ? "▶" : "❚❚"}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">{isUserPaused ? <path d="m9 5 10 7-10 7Z" /> : <path d="M9 5v14M15 5v14" />}</svg>
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
 
-      {/* ── 2. QUICK ACCESS CARDS (MICROSOFT 365 / SURFACE STYLE) ── */}
+      {/* Quick access to the research tools */}
       <section className="ms-section ms-home-quick-section" aria-label={lang === "tr" ? "Hızlı Erişim" : "Quick Access"}>
         <div className="ms-container">
           <div className="ms-home-quick-grid">
@@ -525,7 +545,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. RESEARCH BENTO GRID (MICROSOFT SHOWCASE + NUMBERS) ── */}
+      {/* Workflows and platform capabilities */}
       <section className="ms-section ms-home-metrics-section">
         <div className="ms-container">
           <Reveal className="ms-section-header">
@@ -544,13 +564,16 @@ export default function Home() {
 
           {/* Microsoft Persona / Workflow Pivot */}
           <div className="ms-home-persona-wrap">
-            <div className="ms-pivot" role="tablist" aria-label={lang === "tr" ? "Kullanım senaryoları" : "Workflow scenarios"}>
+            <div className="ms-pivot" role="tablist" aria-label={lang === "tr" ? "Kullanım senaryoları" : "Workflow scenarios"} onKeyDown={event => navigateTabs(event, Object.keys(personaGuides), setPersona)}>
               {Object.entries(personaGuides).map(([key, item]) => (
                 <button
                   key={key}
                   type="button"
                   role="tab"
                   aria-selected={persona === key}
+                  id={`persona-tab-${key}`}
+                  aria-controls={persona === key ? `persona-panel-${key}` : undefined}
+                  tabIndex={persona === key ? 0 : -1}
                   className={`ms-pivot-item${persona === key ? " is-active" : ""}`}
                   onClick={() => setPersona(key)}
                 >
@@ -558,7 +581,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <div className="ms-home-persona-panel" role="tabpanel" key={persona}>
+            <div className="ms-home-persona-panel" role="tabpanel" id={`persona-panel-${persona}`} aria-labelledby={`persona-tab-${persona}`} tabIndex={0} key={persona}>
               <div>
                 <h3>{activePersona.title[lang]}</h3>
                 <p>{activePersona.desc[lang]}</p>
@@ -587,7 +610,7 @@ export default function Home() {
                     : "Visual AI extracts wall and chamber traits from thin-section imagery while the 3D Lab lets you inspect shell geometry from every angle."}
                 </p>
                 <div className="ms-home-bento-tags" aria-hidden="true">
-                  <span>Hiyalin Duvar</span>
+                  <span>{lang === "tr" ? "Hiyalin duvar" : "Hyaline wall"}</span>
                   <span>Planispiral</span>
                   <span>Trokoispiral</span>
                 </div>
@@ -603,8 +626,8 @@ export default function Home() {
               </div>
               <div className="ms-home-bento-feature-visual">
                 <img
-                  src={foram2}
-                  alt={lang === "tr" ? "Foraminifer kavkı mikroskop illüstrasyonu" : "Foraminifera test illustration"}
+                  src={shellCutawayVisual}
+                  alt={lang === "tr" ? "İç loca düzenini gösteren temsili üç boyutlu kavkı modeli" : "Illustrative three-dimensional test model showing internal chamber partitions"}
                   loading="lazy"
                 />
               </div>
@@ -756,7 +779,7 @@ export default function Home() {
 
             <Reveal as="article" className="ms-card ms-card--interactive" delay={80}>
               <div className="ms-card-media ms-home-edu-media">
-                <img src={foram2} alt={lang === "tr" ? "Jeolojik Önem" : "Geological Importance"} />
+                <img src={carbonateStrataVisual} alt={lang === "tr" ? "Jeolojik kaydı temsil eden katmanlı karbonat kayaç illüstrasyonu" : "Illustration of layered carbonate rocks representing the geological record"} loading="lazy" />
               </div>
               <div className="ms-card-body">
                 <h3 className="ms-card-title">
@@ -777,7 +800,7 @@ export default function Home() {
 
             <Reveal as="article" className="ms-card ms-card--interactive" delay={160}>
               <div className="ms-card-media ms-home-edu-media">
-                <img src={foram3} alt={lang === "tr" ? "Fosil Verileri" : "Fossil Data"} />
+                <img src={decisionSupportVisual} alt={lang === "tr" ? "Fosil gözlemlerini karakter analizi ve aday taksonlarla ilişkilendiren karar ağı" : "Decision network linking fossil observations to character analysis and candidate taxa"} loading="lazy" />
               </div>
               <div className="ms-card-body">
                 <h3 className="ms-card-title">

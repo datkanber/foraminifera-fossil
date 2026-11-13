@@ -40,8 +40,7 @@ export default function PageHero({
         <div className="ms-page-hero-copy">
           {eyebrow && (
             <p className="ms-eyebrow ms-page-hero-eyebrow">
-              <span className="ms-page-hero-eyebrow-dot" aria-hidden="true" />
-              <span>{eyebrow}</span>
+              {eyebrow}
             </p>
           )}
           <h1 className="ms-page-hero-title" id={titleId}>{title}</h1>
@@ -57,17 +56,12 @@ export default function PageHero({
           {children}
         </div>
         {image && (
-          <div className={mediaClasses.join(" ")}>
+          <figure className={mediaClasses.join(" ")}>
             <div className="ms-page-hero-media-frame">
               <img src={image} alt={imageAlt} style={imagePosition ? { objectPosition: imagePosition } : undefined} />
-              {mediaTag && (
-                <div className="ms-page-hero-media-tag" aria-hidden="true">
-                  <span className="ms-page-hero-media-tag-dot" />
-                  <span>{mediaTag}</span>
-                </div>
-              )}
             </div>
-          </div>
+            {mediaTag && <figcaption className="ms-page-hero-media-tag">{mediaTag}</figcaption>}
+          </figure>
         )}
       </div>
     </header>

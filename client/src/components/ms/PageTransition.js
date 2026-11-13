@@ -8,14 +8,13 @@ import { useLocation } from "react-router-dom";
  */
 export default function PageTransition({ children }) {
   const { pathname, hash } = useLocation();
-  const section = pathname.split("/")[1] || "home";
 
   useLayoutEffect(() => {
     if (!hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname, hash]);
 
   return (
-    <div className="ms-page-transition" key={section}>
+    <div className="ms-page-transition" key={pathname}>
       {children}
     </div>
   );

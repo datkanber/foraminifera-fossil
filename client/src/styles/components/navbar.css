@@ -3,10 +3,10 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: rgb(255 255 255 / 96%);
+  background: #fff;
   color: var(--ms-gray-170);
   font-family: var(--font-base);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: normal;
   box-shadow: 0 1px 0 var(--ms-gray-40);
@@ -18,11 +18,13 @@
 }
 
 @supports (backdrop-filter: blur(1px)) {
-  .navbar { background: rgb(255 255 255 / 88%); backdrop-filter: saturate(180%) blur(20px); }
+  .navbar { background: rgb(255 255 255 / 96%); backdrop-filter: blur(12px); }
 }
 
-.navbar.is-scrolled { box-shadow: var(--shadow-8); }
-.navbar:has(.navbar-announcement).is-scrolled { box-shadow: 0 6px 20px rgb(6 24 36 / 14%); }
+.navbar.is-scrolled {
+  box-shadow: var(--shadow-4); }
+.navbar:has(.navbar-announcement).is-scrolled {
+  box-shadow: var(--shadow-4); }
 
 .navbar-skip {
   position: absolute;
@@ -44,20 +46,24 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 32px;
-  width: min(100% - 32px, var(--wide-max-width));
-  min-height: 60px;
+  gap: 28px;
+  width: 100%;
+  min-height: 64px;
   margin: 0 auto;
+  max-width: calc(var(--page-max-width) + 2 * var(--content-gutter));
+  padding-inline: var(--content-gutter);
 }
 
 .navbar-brand { display: flex; flex: 0 0 auto; align-items: center; }
-.navbar-logo { display: block; width: 124px; height: 54px; object-fit: contain; }
+.navbar-logo { display: block;
+  width: 112px;
+  height: 50px; object-fit: contain; }
 .navbar-menu { display: flex; align-items: center; gap: 4px; }
 
 .navbar-link {
   position: relative;
-  display: inline-block;
-  padding: 10px 10px;
+  display: inline-flex;
+  padding: 12px 10px;
   border-radius: var(--radius-md);
   color: var(--ms-gray-170);
   font-size: inherit;
@@ -65,6 +71,8 @@
   text-decoration: none;
   white-space: nowrap;
   transition: background-color var(--duration-faster) var(--ease-easy), color var(--duration-faster) var(--ease-easy);
+  min-height: 44px;
+  align-items: center;
 }
 
 .navbar-link::after {
@@ -130,10 +138,11 @@
   width: 460px;
   padding: 24px 28px 28px;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  background: #fff;
-  box-shadow: var(--shadow-28);
+  background: var(--ms-gray-20);
+  box-shadow: var(--shadow-16);
   transform-origin: top right;
   animation: navbar-flyout var(--duration-slow) var(--ease-decelerate-max) both;
+  border: 1px solid var(--color-border-subtle);
 }
 
 .navbar-explore-panel::before {
@@ -176,7 +185,7 @@
 
 .navbar-lang-btn:active,
 .navbar-search-btn:active,
-.navbar-toggle:active { transform: scale(0.96); }
+.navbar-toggle:active { background: var(--ms-gray-40); }
 
 .navbar-lang-btn { gap: 8px; min-width: 64px; min-height: 40px; padding: 0 10px; }
 .navbar-search-btn { gap: 8px; min-width: 40px; min-height: 40px; padding: 0 10px; }
@@ -193,16 +202,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
+  min-height: 44px;
   padding: 11px 72px;
-  border-top: 1px solid var(--ms-gray-40);
+  border-top: 0;
   border-bottom: 0;
-  background: linear-gradient(90deg, #00589f 0%, var(--ms-blue) 48%, #0078d4 100%);
+  background: var(--ms-blue);
   color: #fff;
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   animation: navbar-announcement-in var(--duration-ultra-slow) var(--ease-decelerate-max) both;
+  padding-block: 10px;
 }
 
 @keyframes navbar-announcement-in {
@@ -254,7 +264,7 @@
 }
 .navbar-announcement-close svg { width: 20px; height: 20px; }
 .navbar-announcement-close:hover { background: rgb(255 255 255 / 14%); }
-.navbar-announcement-close:active { transform: translateY(-50%) scale(0.94); }
+.navbar-announcement-close:active { background: rgb(255 255 255 / 20%); }
 .navbar-announcement :focus-visible { outline-color: #fff !important; }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
@@ -320,7 +330,7 @@
 }
 
 @keyframes navbar-item-in {
-  from { opacity: 0; transform: translate3d(-12px, 0, 0); }
+  from { opacity: 0; transform: translate3d(-8px, 0, 0); }
   to { opacity: 1; transform: none; }
 }
 

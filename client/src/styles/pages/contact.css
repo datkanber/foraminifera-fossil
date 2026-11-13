@@ -15,18 +15,18 @@
 
 .ms-contact-card {
   border: 1px solid var(--color-border-subtle);
-  border-top: 3px solid transparent;
+  border-top: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   background: #ffffff;
-  box-shadow: var(--shadow-4);
-  transition: all var(--duration-slow) var(--ease-decelerate-max);
+  box-shadow: var(--shadow-2);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .ms-contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-16);
-  border-color: var(--ms-blue-tint-strong);
-  border-top-color: var(--ms-blue);
+  transform: none;
+  box-shadow: var(--shadow-8);
+  border-color: var(--ms-gray-60);
+  border-top-color: var(--ms-gray-60);
 }
 
 .ms-contact-card .ms-card-body {
@@ -38,19 +38,19 @@
 .ms-contact-icon-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+  justify-content: flex-start;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-md);
-  background: var(--ms-blue-tint);
+  background: transparent;
   color: var(--ms-blue);
   margin-bottom: 20px;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .ms-contact-card:hover .ms-contact-icon-wrap {
-  background: var(--ms-blue);
-  color: #ffffff;
+  background: transparent;
+  color: var(--ms-blue);
 }
 
 .ms-contact-icon-wrap svg {
@@ -87,7 +87,8 @@
   color: var(--ms-blue);
   text-decoration: none;
   transition: color var(--duration-faster) var(--ease-easy);
-  word-break: break-all;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .ms-contact-link:hover {
@@ -116,7 +117,7 @@
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   background: #ffffff;
-  box-shadow: var(--shadow-8);
+  box-shadow: none;
 }
 
 .ms-contact-inst-body {

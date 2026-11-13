@@ -10,9 +10,9 @@
   --ms-blue-pressed: #004e8c;
   --ms-blue-tint: #e6f2fb;
   --ms-blue-tint-strong: #cfe4fa;
-  --ms-blue-bright: #4cc2ff;     /* Windows accent, used on dark surfaces */
-  --ms-navy: #0b2b40;            /* deep brand surface */
-  --ms-navy-2: #10344d;
+  --ms-blue-bright: #75b6e7;     /* Accessible links on dark surfaces */
+  --ms-navy: #172b3a;
+  --ms-navy-2: #213b4d;
 
   /* Microsoft logo palette — used sparingly for accents */
   --ms-red: #f25022;
@@ -63,9 +63,9 @@
   --font-mono: "Cascadia Code", Consolas, "Courier New", monospace;
 
   /* microsoft.com type ramp */
-  --type-display: clamp(34px, 4.2vw, 56px);
-  --type-h1: clamp(30px, 3.3vw, 46px);
-  --type-h2: clamp(26px, 2.6vw, 34px);
+  --type-display: clamp(36px, 3.6vw, 52px);
+  --type-h1: clamp(32px, 3.2vw, 44px);
+  --type-h2: clamp(28px, 2.5vw, 36px);
   --type-h3: 24px;
   --type-h4: 20px;
   --type-subtitle: 18px;
@@ -75,12 +75,17 @@
   --type-tiny: 12px;
 
   /* ── Layout ────────────────────────────────────────── */
-  --wide-max-width: 1600px;      /* full-bleed sections, header, footer */
+  --wide-max-width: 1440px;      /* full-bleed sections, header, footer */
   --page-max-width: 1280px;      /* standard content column */
   --content-max-width: 1280px;
-  --reading-width: 760px;
-  --content-gutter: clamp(16px, 5vw, 64px);
-  --section-space: clamp(40px, 6vw, 80px);
+  --reading-width: 680px;
+  --content-gutter: clamp(20px, 4vw, 64px);
+  --section-space: clamp(48px, 6vw, 88px);
+  --header-height: 108px;
+  --control-height: 44px;
+  --motion-page: 200ms;
+  --motion-enter: 300ms;
+  --motion-hover: 150ms;
   --spacing-small: 12px;
   --spacing-medium: 24px;
   --spacing-large: 40px;

@@ -15,23 +15,24 @@
   width: min(720px, calc(100% - 32px));
   max-height: min(740px, calc(100dvh - 64px));
   margin: 48px auto;
-  padding: 24px 28px;
+  padding: 28px 32px;
   border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   background: #ffffff;
   box-shadow: var(--shadow-64);
   overscroll-behavior: contain;
   animation: ms-dialog-in 250ms var(--ease-decelerate-max) both;
+  margin-top: max(24px, 10vh);
 }
 
 @keyframes ms-dialog-in {
-  from { opacity: 0; transform: scale(0.97) translateY(-8px); }
+  from { opacity: 0; transform: translateY(-4px); }
   to { opacity: 1; transform: none; }
 }
 
 .site-search-dialog::backdrop {
-  background: rgba(11, 26, 36, 0.45);
-  backdrop-filter: blur(12px);
+  background: rgb(0 0 0 / 40%);
+  backdrop-filter: none;
 }
 
 .site-search-dialog-heading {
@@ -54,15 +55,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border: 0;
   border-radius: var(--radius-md);
   background: transparent;
   color: var(--ms-gray-130);
   font-size: 20px;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .site-search-close:hover {
@@ -87,7 +88,7 @@
   background: #ffffff;
   color: var(--ms-gray-190);
   font-size: 15px;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .site-search-form input:focus {
@@ -105,7 +106,7 @@
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .site-search-form button:hover {
@@ -127,7 +128,8 @@
   color: var(--ms-gray-150);
   font-size: 13px;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
+  min-height: 40px;
 }
 
 .site-search-filters button:hover {
@@ -166,7 +168,7 @@
   color: var(--ms-blue);
   font-size: 13px;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .site-search-popular button:hover {
@@ -219,9 +221,8 @@
 }
 
 .site-search-results li:hover {
-  border-color: var(--ms-blue-tint-strong);
+  border-color: var(--ms-gray-60);
   box-shadow: var(--shadow-8);
-  transform: translateY(-1px);
 }
 
 .site-search-results a {
@@ -287,7 +288,7 @@
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .site-search-view-all:hover {

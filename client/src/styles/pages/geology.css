@@ -17,10 +17,10 @@
 .ms-geology-card {
   cursor: pointer;
   border: 1px solid var(--color-border-subtle);
-  border-top: 4px solid var(--ms-blue);
+  border-top: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   background: #ffffff;
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-2);
   transition:
     transform var(--duration-normal) var(--ease-decelerate-max),
     box-shadow var(--duration-normal) var(--ease-decelerate-max),
@@ -28,8 +28,8 @@
 }
 
 .ms-geology-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-16);
+  transform: none;
+  box-shadow: var(--shadow-8);
 }
 
 .ms-geology-card:focus-visible {
@@ -39,7 +39,8 @@
 
 .ms-geology-card.is-selected {
   border-color: var(--ms-blue);
-  box-shadow: 0 12px 30px -6px rgb(0 103 184 / 24%), var(--shadow-8);
+  box-shadow: inset 0 -3px 0 var(--ms-blue);
+  background: var(--ms-blue-tint);
 }
 
 /* Interactive Chronostratigraphic Timeline */
@@ -49,21 +50,21 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 24px;
-  padding: 20px 18px;
+  padding: 24px 18px;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-subtle);
-  background: linear-gradient(180deg, #fafcfe 0%, var(--ms-gray-20) 100%);
+  border: 0;
+  background: var(--ms-gray-20);
 }
 
 .ms-geo-timeline-rail {
   position: absolute;
   left: 60px;
   right: 60px;
-  top: 29px;
-  height: 3px;
+  top: 33px;
+  height: 1px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--ms-blue-bright) 0%, var(--ms-blue) 50%, var(--ms-navy) 100%);
-  opacity: 0.35;
+  background: var(--ms-gray-80);
+  opacity: 1;
 }
 
 .ms-geo-timeline-node {
@@ -79,6 +80,7 @@
   font-family: var(--font-base);
   text-align: center;
   cursor: pointer;
+  min-height: 76px;
 }
 
 .ms-geo-node-dot {
@@ -93,13 +95,13 @@
 
 .ms-geo-timeline-node:hover .ms-geo-node-dot {
   background: var(--ms-blue);
-  transform: scale(1.15);
+  transform: none;
 }
 
 .ms-geo-timeline-node.is-active .ms-geo-node-dot {
   background: var(--ms-blue);
-  box-shadow: 0 0 0 4px rgb(0 103 184 / 22%);
-  transform: scale(1.2);
+  box-shadow: 0 0 0 2px var(--ms-blue);
+  transform: none;
 }
 
 .ms-geo-node-age {
@@ -169,7 +171,6 @@
   background: #00589f;
   border-color: #00589f;
   color: #ffffff;
-  transform: translateY(-1px);
 }
 
 .ms-geo-taxon-chip:focus-visible {
@@ -182,7 +183,7 @@
   background: var(--ms-blue);
   border-color: var(--ms-blue);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgb(0 103 184 / 28%);
+  box-shadow: none;
 }
 
 .ms-geo-taxon-chip.is-active::before {
@@ -190,7 +191,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #50e6ff;
+  background: #fff;
   flex-shrink: 0;
 }
 
@@ -198,19 +199,17 @@
   position: relative;
   overflow: hidden;
   margin-top: 22px;
-  padding: 26px 28px;
+  padding: 32px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgb(80 230 255 / 22%);
-  border-left: 4px solid var(--ms-blue-bright);
-  background:
-    radial-gradient(60% 110% at 92% 10%, rgb(80 230 255 / 16%) 0%, transparent 70%),
-    linear-gradient(135deg, #061824 0%, var(--ms-navy) 100%);
+  border: 0;
+  border-left: 0;
+  background: var(--ms-navy);
   color: #ffffff;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
   align-items: stretch;
   gap: 24px;
-  box-shadow: var(--shadow-16);
+  box-shadow: none;
 }
 
 .ms-geo-spotlight-stage {
@@ -229,7 +228,7 @@
 }
 
 .ms-geo-spotlight-meta .ms-eyebrow {
-  color: #8ce9ff;
+  color: rgb(255 255 255 / 80%);
   margin: 0;
 }
 
@@ -242,11 +241,11 @@
 
 .ms-geo-spotlight-facies {
   align-self: flex-start;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid rgb(80 230 255 / 26%);
-  background: rgb(80 230 255 / 10%);
-  color: #bdefff;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(255 255 255 / 80%);
   font-size: 12px;
   font-weight: 600;
 }
@@ -259,8 +258,8 @@
   padding: 20px 22px;
   border-radius: var(--radius-md);
   border: 1px solid rgb(255 255 255 / 14%);
-  background: rgb(255 255 255 / 6%);
-  backdrop-filter: blur(12px);
+  background: var(--ms-navy-2);
+  backdrop-filter: none;
 }
 
 .ms-geo-spotlight-taxon-head {
@@ -274,11 +273,11 @@
 
 .ms-geo-spotlight-kicker {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8ce9ff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgb(255 255 255 / 80%);
 }
 
 .ms-geo-spotlight-taxon-name {
@@ -291,10 +290,10 @@
 .ms-geo-spotlight-rank {
   flex-shrink: 0;
   padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgb(80 230 255 / 28%);
-  background: rgb(0 120 212 / 24%);
-  color: #d6f5ff;
+  border-radius: var(--radius-md);
+  border: 1px solid rgb(255 255 255 / 25%);
+  background: transparent;
+  color: #fff;
   font-size: 11.5px;
   font-weight: 600;
 }
@@ -354,10 +353,10 @@
 }
 
 .ms-geo-depth-bar {
-  height: 8px;
-  border-radius: 999px;
+  height: 4px;
+  border-radius: 0;
   margin-bottom: 12px;
-  background: linear-gradient(90deg, #50e6ff 0%, #0078d4 45%, #004e8c 75%, #0b2b40 100%);
+  background: linear-gradient(90deg, #b9d8ec, #0067b8 65%, #172b3a);
 }
 
 .ms-geo-depth-tabs {
@@ -379,7 +378,7 @@
   font-family: var(--font-base);
   text-align: left;
   cursor: pointer;
-  transition: all var(--duration-faster) var(--ease-easy);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .ms-geo-depth-btn:hover {
@@ -391,7 +390,7 @@
   border-color: var(--ms-blue);
   background: var(--ms-blue);
   color: #ffffff;
-  box-shadow: var(--shadow-4);
+  box-shadow: none;
 }
 
 .ms-geo-depth-label {
@@ -515,13 +514,12 @@
   border-radius: var(--radius-lg);
   background: #ffffff;
   box-shadow: var(--shadow-2);
-  transition: all var(--duration-slow) var(--ease-decelerate-max);
+  transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }
 
 .taxon-env-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-16);
-  border-color: var(--ms-blue-tint-strong);
+  box-shadow: var(--shadow-8);
+  border-color: var(--ms-gray-60);
 }
 
 .taxon-env-card-body {

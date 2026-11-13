@@ -4,7 +4,6 @@ import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageTransition, { RouteProgress } from "./components/ms/PageTransition";
-import { useFluentReveal } from "./components/ms/useFluentReveal";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Geology from "./pages/Geology";
@@ -19,7 +18,6 @@ const Search = lazy(() => import("./pages/Search"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
-  useFluentReveal();
   return (
     <LanguageProvider>
       <BrowserRouter>

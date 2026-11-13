@@ -91,26 +91,30 @@ function Fossils() {
 
 // ─── MODE SELECTOR ──────────────────────────────────────────────────────────
 function ModeSelector({ onSelect }) {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   return (
     <div className="mode-selector">
       <button className="mode-card" onClick={() => onSelect("wizard")}>
+        <span className="mode-card-step" aria-hidden="true">01</span>
         <img
           src={ceratiteIcon}
-          alt={t("mode.wizard.title")}
+          alt=""
           className="mode-icon-svg"
         />
         <strong>{t("mode.wizard.title")}</strong>
-        <span>{t("mode.wizard.desc")}</span>
+        <span className="mode-card-description">{t("mode.wizard.desc")}</span>
+        <span className="mode-card-action">{lang === "tr" ? "Adım adım başla" : "Start step by step"}<span aria-hidden="true">→</span></span>
       </button>
       <button className="mode-card" onClick={() => onSelect("scoring")}>
+        <span className="mode-card-step" aria-hidden="true">02</span>
         <img
           src={foraminiferaIcon}
-          alt={t("mode.scoring.title")}
+          alt=""
           className="mode-icon-svg"
         />
         <strong>{t("mode.scoring.title")}</strong>
-        <span>{t("mode.scoring.desc")}</span>
+        <span className="mode-card-description">{t("mode.scoring.desc")}</span>
+        <span className="mode-card-action">{lang === "tr" ? "Karakterleri değerlendir" : "Evaluate characters"}<span aria-hidden="true">→</span></span>
       </button>
     </div>
   );

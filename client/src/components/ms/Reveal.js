@@ -8,6 +8,7 @@ function getObserver() {
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          entry.target.classList.remove("is-pending");
           entry.target.classList.add("is-visible");
           sharedObserver.unobserve(entry.target);
         }
@@ -29,9 +30,14 @@ export default function Reveal({ as = "div", delay = 0, className = "", style, c
     const node = ref.current;
     if (!node) return undefined;
     const observer = getObserver();
-    if (!observer) {
+    if (!observer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       node.classList.add("is-visible");
       return undefined;
+    }
+    // Content stays readable if JavaScript or observation is unavailable.
+    // Only defer content below the initial viewport.
+    if (node.getBoundingClientRect().top >= window.innerHeight) {
+      node.classList.add("is-pending");
     }
     observer.observe(node);
     return () => observer.unobserve(node);
@@ -42,7 +48,7 @@ export default function Reveal({ as = "div", delay = 0, className = "", style, c
     {
       ref,
       className: `ms-reveal${className ? ` ${className}` : ""}`,
-      style: delay ? { ...style, "--reveal-delay": `${delay}ms` } : style,
+      style: delay ? { ...style, "--reveal-delay": `${Math.min(delay, 200)}ms` } : style,
       ...rest,
     },
     children

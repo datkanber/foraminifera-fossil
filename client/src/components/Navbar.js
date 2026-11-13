@@ -86,6 +86,15 @@ export default function Navbar() {
   }, [location.pathname, location.hash, location.search]);
 
   useEffect(() => {
+    if (!headerRef.current) return undefined;
+    const syncHeight = () => document.documentElement.style.setProperty("--header-height", `${headerRef.current.getBoundingClientRect().height}px`);
+    syncHeight();
+    const observer = new ResizeObserver(syncHeight);
+    observer.observe(headerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     function onScroll() {
       setIsScrolled(window.scrollY > 4);
     }
