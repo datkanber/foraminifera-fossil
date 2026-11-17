@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
@@ -11,7 +12,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "assets/js/[name].[contenthash:8].js",
+    chunkFilename: "assets/js/[name].[contenthash:8].chunk.js",
     publicPath: "/",
     clean: true,
   },
@@ -51,6 +53,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./src/assets/images/logo.png",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "public/_redirects", to: "_redirects", toType: "file" },
+        { from: "public/_headers", to: "_headers", toType: "file" },
+      ],
     }),
     new webpack.DefinePlugin({
       'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || 'https://foraminifera-fossil.onrender.com')

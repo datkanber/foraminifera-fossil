@@ -17,6 +17,8 @@ const navigation = [
   { to: "/hakkinda", key: "nav.about" },
   { to: "/iletisim", key: "nav.contact" },
 ];
+const primaryNavigation = navigation.slice(0, 6);
+const secondaryNavigation = navigation.slice(6);
 
 // Change the ID when publishing a new announcement so it appears again.
 const announcement = {
@@ -88,11 +90,16 @@ export default function Navbar() {
   }, [location.pathname, location.hash, location.search]);
 
   useEffect(() => {
-    if (!headerRef.current) return undefined;
-    const syncHeight = () => document.documentElement.style.setProperty("--header-height", `${headerRef.current.getBoundingClientRect().height}px`);
+    const header = headerRef.current;
+    if (!header) return undefined;
+    const syncHeight = () => document.documentElement.style.setProperty("--header-height", `${header.getBoundingClientRect().height}px`);
     syncHeight();
+    if (typeof ResizeObserver === "undefined") {
+      window.addEventListener("resize", syncHeight);
+      return () => window.removeEventListener("resize", syncHeight);
+    }
     const observer = new ResizeObserver(syncHeight);
-    observer.observe(headerRef.current);
+    observer.observe(header);
     return () => observer.disconnect();
   }, []);
 
@@ -155,9 +162,9 @@ export default function Navbar() {
     return location.pathname === to || location.pathname.startsWith(`${to}/`);
   }
 
-  function navigationLink(item) {
+  function navigationLink(item, className = "") {
     return (
-      <Link key={item.to} to={item.to} className="navbar-link" aria-current={isActive(item.to) ? "page" : undefined} onClick={closeMenus}>
+      <Link key={item.to} to={item.to} className={`navbar-link${className ? ` ${className}` : ""}`} aria-current={isActive(item.to) ? "page" : undefined} onClick={closeMenus}>
         {t(item.key)}
       </Link>
     );
@@ -176,14 +183,15 @@ export default function Navbar() {
         </Link>
 
         <nav id="site-navigation" className={`navbar-menu${isMenuOpen ? " navbar-menu-open" : ""}`} aria-label={lang === "tr" ? "Ana gezinme" : "Main navigation"}>
-          {navigation.map(navigationLink)}
+          {primaryNavigation.map(item => navigationLink(item))}
+          {secondaryNavigation.map(item => navigationLink(item, "navbar-secondary-link"))}
         </nav>
 
         <div className="navbar-tools">
           <details className="navbar-explore" ref={exploreRef}>
-            <summary>{lang === "tr" ? "Tüm GeoKnow" : "All GeoKnow"}<Icon name="chevron" /></summary>
+            <summary>{lang === "tr" ? "Tüm sayfalar" : "All pages"}<Icon name="chevron" /></summary>
             <nav className="navbar-explore-panel" data-heading={lang === "tr" ? "GeoKnow sayfaları" : "GeoKnow pages"} aria-label={lang === "tr" ? "Tüm GeoKnow sayfaları" : "All GeoKnow pages"}>
-              {navigation.map(navigationLink)}
+              {navigation.map(item => navigationLink(item))}
             </nav>
           </details>
           <button ref={searchRef} type="button" className="navbar-search-btn" onClick={openSearch} aria-label={lang === "tr" ? "Sitede ara" : "Search the site"} aria-haspopup="dialog" aria-expanded={isSearchOpen} title={lang === "tr" ? "Sitede ara (Ctrl+K)" : "Search the site (Ctrl+K)"}>
