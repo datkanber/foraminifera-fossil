@@ -1,5 +1,8 @@
 # GeoKnow bağımsız uzman doğrulaması
 
+Canlı sitede beyaz ekran, HTML dönen oturum API'si veya `404 Cannot GET` için
+[mevcut sunucuda yayım ve API yönlendirme kılavuzuna](EXPERT_VALIDATION_DEPLOYMENT_TR.md) bakın.
+
 Yeni üç kategori, AI simülasyonları, güvenli staging ve makale entegrasyonu için
 [V32 sürüm ve staging kılavuzu](EXPERT_VALIDATION_RELEASE.md) dosyasına bakın.
 

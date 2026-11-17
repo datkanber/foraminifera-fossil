@@ -46,11 +46,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 16px;
   width: 100%;
   min-height: 64px;
   margin: 0 auto;
-  max-width: calc(var(--page-max-width) + 2 * var(--content-gutter));
+  max-width: 1600px;
   padding-inline: var(--content-gutter);
 }
 
@@ -58,7 +58,8 @@
 .navbar-logo { display: block;
   width: 112px;
   height: 50px; object-fit: contain; }
-.navbar-menu { display: flex; flex: 1 1 auto; min-width: 0; flex-wrap: wrap; align-items: center; gap: 4px; }
+.navbar-menu { display: flex; flex: 1 0 auto; min-width: 0; flex-wrap: nowrap; align-items: center; gap: 4px; }
+.navbar-menu > .navbar-link { flex-shrink: 0; }
 
 .navbar-link {
   position: relative;
@@ -267,11 +268,10 @@
 .navbar-announcement-close:active { background: rgb(255 255 255 / 20%); }
 .navbar-announcement :focus-visible { outline-color: #fff !important; }
 
-@media (min-width: 1200px) and (max-width: 1439px) {
-  .navbar-container { gap: 16px; }
+@media (min-width: 1200px) and (max-width: 1599px) {
   .navbar-menu { gap: 0; }
-  .navbar-link { padding-inline: 8px; }
-  .navbar-link::after { right: 8px; left: 8px; }
+  .navbar-link { padding-inline: 6px; }
+  .navbar-link::after { right: 6px; left: 6px; }
   .navbar-explore { display: none; }
   .navbar-search-btn > span { display: none; }
 }
