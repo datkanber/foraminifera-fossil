@@ -65,10 +65,7 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: 2px;
-  padding: 4px;
-  border: 1px solid var(--ms-gray-40);
-  border-radius: 10px;
-  background: var(--ms-gray-20);
+  padding: 0;
 }
 .navbar-menu > .navbar-link { flex-shrink: 0; }
 .navbar-secondary-link { display: none; }
@@ -79,7 +76,7 @@
   align-items: center;
   min-height: 40px;
   padding: 8px 12px;
-  border-radius: 7px;
+  border-radius: 4px;
   color: var(--ms-gray-170);
   font-size: inherit;
   font-weight: 400;
@@ -89,16 +86,26 @@
 }
 
 .navbar-link::after {
-  display: none;
+  position: absolute;
+  right: 12px;
+  bottom: 1px;
+  left: 12px;
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ms-blue);
+  content: "";
+  transform: scaleX(0);
+  transition: transform var(--duration-fast) var(--ease-easy);
 }
 
 .navbar-link:hover { background: #fff; color: var(--ms-blue); }
+.navbar-link:hover::after { transform: scaleX(1); }
 .navbar-link[aria-current="page"] {
-  background: #fff;
-  box-shadow: var(--shadow-2);
   color: var(--ms-blue);
   font-weight: 600;
 }
+.navbar-link[aria-current="page"]::after { transform: scaleX(1); }
 .navbar :is(a, button, summary):focus-visible { outline: 2px solid var(--ms-gray-170); outline-offset: 2px; }
 
 .navbar-tools {
