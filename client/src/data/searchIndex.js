@@ -17,6 +17,8 @@ const pages = [
   ["/lab", "3D Laboratuvar", "3D Lab", "Üç boyutlu foraminifer örneklerini sanal laboratuvarda keşfedin.", "Explore three-dimensional foraminiferal specimens in the virtual laboratory.", "3d üç boyutlu sanal laboratuvar virtual lab model museum müze Globigerinoides ruber"],
   ["/hakkinda", "Veriseti ve Proje Hakkında", "About the Dataset & Project", "GeoKnow projesi, foraminifer veri seti ve karar destek yaklaşımı.", "The GeoKnow project, foraminiferal dataset and decision-support approach.", "hakkında about veri seti dataset proje project ontoloji ontology paleontoloji paleontology"],
   ["/iletisim", "İletişim", "Contact", "GeoKnow araştırma grubuyla iletişime geçin.", "Get in touch with the GeoKnow research group.", "iletişim contact email eposta ESOGÜ Osmangazi"],
+  ["/expert-validation", "Uzman Girişi", "Expert Sign-in", "Size özel davet bağlantısı veya hesabınızla uzman değerlendirme alanına giriş yapın.", "Access the expert evaluation workspace using your private invitation or account.", "uzman değerlendirme giriş davet form A form B expert validation sign in invitation"],
+  ["/uzman-rehberi", "Uzman Kullanım Rehberi", "Expert User Guide", "Davetle giriş, bağımsız Form B gözlemleri, Form A kural incelemesi ve kesin gönderim adımları.", "Instructions for invitations, independent Form B observations, Form A rule reviews and final submission.", "uzman rehberi kullanım nasıl form B form A taslak gönderim bağımsız kör gözlem expert guide instructions blinded observation draft submit"],
 ].map(([href, tr, en, descriptionTr, descriptionEn, keywords]) => ({
   id: `page:${href}`, type: "pages", href, title: pair(tr, en),
   description: pair(descriptionTr, descriptionEn), keywords: [keywords],

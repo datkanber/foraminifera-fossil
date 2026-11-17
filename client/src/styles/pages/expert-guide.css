@@ -1,0 +1,38 @@
+.expert-guide { color: var(--color-text); background: var(--color-background); }
+.expert-guide-content { padding-block: 36px 64px; }
+.expert-guide h2 { font-size: clamp(24px, 2.5vw, 32px); margin: 0 0 22px; line-height: 1.25; }
+.expert-guide h3 { font-size: 21px; margin: 0 0 12px; line-height: 1.4; }
+.expert-guide p, .expert-guide li { line-height: 1.75; }
+.expert-guide p { margin: 0 0 16px; }
+.expert-guide-content > section { margin-top: 48px; }
+.expert-guide-sequence { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.expert-guide-sequence li { padding: 18px 20px; border-top: 3px solid var(--ms-blue); background: var(--ms-blue-tint); color: var(--ms-navy); font-weight: 600; }
+.expert-guide-before { padding: clamp(22px, 3vw, 36px); border: 1px solid var(--color-border-subtle); background: var(--ms-gray-20); }
+.expert-guide-before ul { margin: 0; padding-left: 22px; }
+.expert-guide-before li + li { margin-top: 12px; }
+.expert-guide-steps { padding: 0; margin: 0; list-style: none; }
+.expert-guide-steps > li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--color-border-subtle); }
+.expert-guide-steps > li:first-child { padding-top: 10px; }
+.expert-guide-number { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--ms-blue-tint); color: var(--ms-blue); font-size: 22px; font-weight: 600; }
+.expert-guide-note { padding: 14px 18px; border-left: 3px solid var(--ms-blue); background: var(--ms-info-bg); font-size: 14px; }
+.expert-guide-table { overflow-x: auto; margin-bottom: 20px; }
+.expert-guide table { width: 100%; border-collapse: collapse; text-align: left; }
+.expert-guide th, .expert-guide td { padding: 16px; border-bottom: 1px solid var(--color-border); vertical-align: top; line-height: 1.65; }
+.expert-guide thead { background: var(--ms-gray-20); }
+.expert-guide th[scope=row] { width: 200px; }
+.expert-guide code { font-family: var(--font-mono); font-size: 13px; }
+.expert-guide-faq details { padding: 20px 0; border-bottom: 1px solid var(--color-border-subtle); }
+.expert-guide-faq summary { font-size: 17px; font-weight: 600; cursor: pointer; line-height: 1.5; }
+.expert-guide-faq details p { margin: 16px 0 0; max-width: 900px; }
+.expert-guide :is(summary, a):focus-visible { outline: 3px solid var(--ms-blue); outline-offset: 5px; }
+.expert-guide-finish { padding: clamp(24px, 4vw, 40px); background: var(--ms-gray-20); }
+#expert-guide-steps { scroll-margin-top: calc(var(--header-height) + 20px); }
+@media (max-width: 767px) {
+  .expert-guide-sequence { grid-template-columns: 1fr; gap: 8px; }
+  .expert-guide-steps > li { grid-template-columns: 38px minmax(0, 1fr); gap: 14px; }
+  .expert-guide-number { width: 36px; height: 36px; font-size: 17px; }
+  .expert-guide h3 { font-size: 19px; }
+  .expert-guide th, .expert-guide td { padding: 12px 8px; }
+  .expert-guide th[scope=row] { width: auto; }
+  .expert-guide code { font-size: 11px; overflow-wrap: anywhere; }
+}

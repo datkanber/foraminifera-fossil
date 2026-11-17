@@ -58,7 +58,7 @@
 .navbar-logo { display: block;
   width: 112px;
   height: 50px; object-fit: contain; }
-.navbar-menu { display: flex; align-items: center; gap: 4px; }
+.navbar-menu { display: flex; flex: 1 1 auto; min-width: 0; flex-wrap: wrap; align-items: center; gap: 4px; }
 
 .navbar-link {
   position: relative;
@@ -308,6 +308,7 @@
   .navbar-menu-open {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     animation: navbar-flyout var(--duration-slow) var(--ease-decelerate-max) both;
   }
   .navbar-menu .navbar-link {

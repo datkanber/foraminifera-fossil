@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { validationRequest, setValidationCsrf, studyPath } from '../components/expert/api';
 import { TextField, SelectField, useExpertText } from '../components/expert/Controls';
@@ -36,7 +37,7 @@ export default function ExpertValidation() {
   };
   const phases = { PREPARATION: t('Hazırlık', 'Preparation'), SPECIMENS: t('1 · Kör gözlem', '1 · Blinded observations'), RULES: t('2 · Kural incelemesi', '2 · Rule review'), LOCKED: t('3 · Veri kilitli', '3 · Data locked') };
   return <main className="ev-page">
-    <header className="ev-header"><a className="ev-brand" href="/">GeoKnow<span>{t('Bağımsız uzman doğrulaması', 'Independent expert validation')}</span></a><div className="ev-actions"><button type="button" onClick={toggleLanguage}>{lang === 'tr' ? 'English' : 'Türkçe'}</button>{session && <><span>{session.user.code}</span><button type="button" disabled={busy} onClick={signOut}>{t('Çıkış', 'Sign out')}</button></>}</div></header>
+    <header className="ev-header"><a className="ev-brand" href="/">GeoKnow<span>{t('Bağımsız uzman doğrulaması', 'Independent expert validation')}</span></a><div className="ev-actions"><Link to="/uzman-rehberi" target="_blank" rel="noreferrer">{t('Uzman rehberi', 'Expert guide')}</Link><button type="button" onClick={toggleLanguage}>{lang === 'tr' ? 'English' : 'Türkçe'}</button>{session && <><span>{session.user.code}</span><button type="button" disabled={busy} onClick={signOut}>{t('Çıkış', 'Sign out')}</button></>}</div></header>
     <div className="ev-content"><p className="ev-eyebrow">{t('ÖZEL ARAŞTIRMA ALANI', 'PRIVATE RESEARCH WORKSPACE')}</p><h1>{t('Bağımsız uzman değerlendirmesi', 'Independent expert validation')}</h1>
       <p className="ev-intro">{t('Önce fosilleri bağımsız gözlemleyin. Ardından ontoloji ve kural kartlarını değerlendirin.', 'Observe the specimens independently first. Then review the ontology and rule cards.')}</p>
       {error && <div className="ev-error" role="alert"><span>{error}</span><button type="button" onClick={() => setError('')} aria-label={t('Mesajı kapat', 'Dismiss message')}>×</button></div>}

@@ -12,6 +12,8 @@ const navigation = [
   { to: "/vlm", key: "nav.vlm" },
   { to: "/jeoloji", key: "nav.geology" },
   { to: "/lab", key: "nav.lab" },
+  { to: "/expert-validation", key: "nav.expertValidation" },
+  { to: "/uzman-rehberi", key: "nav.expertGuide" },
   { to: "/hakkinda", key: "nav.about" },
   { to: "/iletisim", key: "nav.contact" },
 ];

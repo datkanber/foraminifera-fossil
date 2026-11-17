@@ -16,6 +16,7 @@ const Lab = lazy(() => import("./pages/Lab"));
 const News = lazy(() => import("./pages/News"));
 const Search = lazy(() => import("./pages/Search"));
 const ExpertValidation = lazy(() => import("./pages/ExpertValidation"));
+const ExpertGuide = lazy(() => import("./pages/ExpertGuide"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function SiteChrome({ children }) {
@@ -45,6 +46,7 @@ function App() {
                   <Route path="/news" element={<News />} />
                   <Route path="/arama" element={<Search />} />
                   <Route path="/expert-validation/*" element={<ExpertValidation />} />
+                  <Route path="/uzman-rehberi" element={<ExpertGuide />} />
                   <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </Suspense>
