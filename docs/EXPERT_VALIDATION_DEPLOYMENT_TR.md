@@ -40,7 +40,13 @@ statik site köküne `client/dist` içeriğini yayımlayın.
 
 `/api/expert-validation/*` istekleri SPA'nın `index.html` geri dönüşüne girmeden
 güncel Express API'ye yönlenmelidir. Kimlik doğrulaması aynı alan adındaki
-HttpOnly çerezlerini kullanır. İstemci adresini uzak API alan adına çevirmek
+HttpOnly çerezlerini kullanır. Cloudflare Pages kullanıyorsanız
+`client/functions/api/expert-validation/[[path]].js` Pages Function'ı bu proxy'yi
+POST gövdesi, çerezler ve yanıt başlıklarıyla birlikte yapar; `_redirects` yalnız
+SPA rotaları için kullanılmalıdır. Pages projesinin kökü `client/`, build çıktısı
+`dist` olmalı ve Functions özelliği etkin olmalıdır.
+
+Cloudflare Pages kullanmıyorsanız istemci adresini uzak API alan adına çevirmek
 yerine, mevcut ters vekilinizde bu yolu yönlendirin.
 
 Nginx kullanıyorsanız, mevcut HTTPS `server` bloğunuz için örnek:
