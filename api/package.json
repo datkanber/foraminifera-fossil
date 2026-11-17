@@ -7,7 +7,10 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "import": "node import_ontology.js",
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "validation:admin": "node scripts/validation-admin.js",
+    "validation:staging": "node scripts/staging-validation.js setup",
+    "validation:simulation": "node scripts/run-validation-simulation.js"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +21,8 @@
     "csv-parser": "^3.2.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "neo4j-driver": "^6.2.0"
+    "neo4j-driver": "^6.2.0",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

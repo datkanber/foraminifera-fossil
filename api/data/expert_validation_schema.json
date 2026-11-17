@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "geoknow-independent-2",
+  "dataCategories": ["SOFTWARE_TEST", "AI_ASSISTED_REVIEW", "INDEPENDENT_HUMAN_OBSERVATION"],
+  "aiAssistedRuleReviewRequiresPerRuleHumanVerification": true,
+  "simulationProfilesAreHumanAccounts": false,
+  "sourceDocuments": [
+    { "form": "A", "filename": "Form_A_Bagimsiz_Kural_Ontoloji_Degerlendirmesi.docx", "sha256": "8102ba04aec52e7b73310e831cfe3fab3c9a3f24d58ba21058fbb77d8ab2f725" },
+    { "form": "B", "filename": "Form_B_Kor_Fosil_Kesiti_Gozlem_Formu.docx", "sha256": "724b58f0a35c96844546b75247f05f18829063e2811e4bd3981e7152096ab675" }
+  ],
+  "observationStates": ["PRESENT", "ABSENT", "NOT_OBSERVABLE", "UNCERTAIN"],
+  "negativeValues": ["ABSENT", "NONE"],
+  "neutralStatesNeverSupplyEvidence": true,
+  "sectionOrientationCharacter": "CHR_21",
+  "sectionOrientationIsScored": false,
+  "characterSource": "api/data/characters.json",
+  "workflow": ["PREPARATION", "SPECIMENS", "RULES", "LOCKED"],
+  "experts": ["EXP01", "EXP02"],
+  "timing": { "method": "server_clock_with_browser_heartbeat", "heartbeatSeconds": 30, "maximumUnconfirmedGapSeconds": 90, "hiddenTabPauses": true },
+  "independentGenusIsOptional": true,
+  "subjectiveConfidence": ["HIGH", "MODERATE", "LOW"],
+  "originalFinalResponsesAreImmutable": true,
+  "correctionsIncludedInPrimaryAnalysis": false
+}

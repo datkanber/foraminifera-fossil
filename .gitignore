@@ -64,6 +64,10 @@ desktop.ini
 .env*
 
 __pycache__/
+api/.npm-cache/
+*.validation-backup.json
+deliverables/expert-validation/
+.tmp/expert-validation-staging/
 
 # Large local release archive
 client/src/assets/scs/release_candidate/foraminifera-fossil_v1.0_DRAFT.zip

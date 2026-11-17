@@ -626,3 +626,9 @@ To run this project, make sure you have the following packages installed:
 * OpenCV
 * NumPy
 * Matplotlib
+
+## Independent expert validation
+
+The private `/expert-validation` module adds Form B → Form A review, secure
+individual invitations, immutable submissions, coordinator data lock and
+reproducible English reports. See [setup and user instructions](docs/EXPERT_VALIDATION.md).
