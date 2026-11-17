@@ -5,9 +5,19 @@ import '../styles/pages/expert-guide.css';
 
 const copy = {
   tr: {
-    eyebrow: 'GeoKnow · Uzmanlar için', title: 'Uzman kullanım rehberi',
-    intro: 'Değerlendirme sırasında ne yapacağınızı buradan okuyabilirsiniz. Önce fosilleri bağımsız gözlemleyin; ardından size atanan kural kartlarını inceleyin.',
-    enter: 'Uzman alanına giriş yap', jump: 'Adımları incele',
+    eyebrow: 'GeoKnow · Platform rehberi', title: 'GeoKnow Kullanım Kılavuzu',
+    intro: 'Tanı, görsel yapay zekâ, jeoloji ve 3D laboratuvar araçlarını nasıl kullanacağınızı öğrenin. Bilimsel sonuçları kendi gözlemlerinizle doğrulayın.',
+    enter: 'Değerlendirme Alanını Aç', jump: 'Değerlendirme adımlarını incele',
+    toolsTitle: 'GeoKnow araçlarını kullanma',
+    toolsIntro: 'Her araç farklı bir çalışma adımını destekler. En uygun akış, önce 3D Laboratuvar ile temel morfolojiyi tanımak, ardından Tanı Yap veya Görsel YZ ile incelemeyi derinleştirmektir.',
+    tools: [
+      { title: 'Tanı Yap', description: 'İnce kesit gözlemlerinden olası cinsleri kural tabanlı karar desteğiyle daraltın.', steps: ['Adım Adım Tanı ile soruları sırayla yanıtlayın veya Karakter Puanlama ile CHR karakterlerini doğrudan girin.', 'Görüntüde açıkça görülen değerleri seçin; gözlenemeyen yapıları yok kabul etmeyin.', 'Sonuç durumunu, eşleşen karakterleri ve uyarıları birlikte değerlendirip gerektiğinde taksonomik kaynaklarla doğrulayın.'], href: '/tani', cta: 'Tanı aracını aç' },
+      { title: 'Görsel YZ', description: 'Foraminifer görüntüsünü görsel yapay zekâ ile inceleyip morfolojik adaylar ve gözlem notları üretin.', steps: ['JPG, PNG veya WEBP formatında, 8 MB’dan küçük bir görüntü yükleyin.', 'Lokasyon, jeolojik yaş, optik/büyütme ve ölçek bilgilerini mümkün olduğunca doldurun.', 'Analiz Sonuçları bölümündeki adayları karar değil, doğrulanması gereken bir gözlem önerisi olarak kullanın. İsterseniz Karar Destek motorunu ayrıca çalıştırın.'], href: '/vlm', cta: 'Görsel YZ’yi aç' },
+      { title: 'Jeoloji', description: 'Jeolojik zaman, çökelme derinliği, ortam ve takson kayıtlarını birlikte inceleyin.', steps: ['Paleosen–Eosen zaman çizelgesinden bir kat seçin ve seçili katın açıklamasını okuyun.', 'Takson etiketlerini seçerek WoRMS ve ontoloji profilini açın.', 'Derinlik zonu ve taksonomik seviye filtreleriyle ortam kayıtlarını daraltın; seçili taksonu fosil kataloğunda görüntüleyin.'], href: '/jeoloji', cta: 'Jeoloji alanını aç' },
+      { title: '3D Laboratuvar', description: 'Foraminifer modellerini sanal sergi içinde inceleyin ve morfolojik terimleri etkileşimli olarak öğrenin.', steps: ['Rehberli turla başlayın veya serbest dolaşımı seçin; Keşif Defteri üzerinden sergileri ve panoları takip edin.', 'Bir modeli açınca Yüzey, Röntgen ve Kesit görünümleriyle dış ve iç yapıyı karşılaştırın; sürükleyerek döndürün, tekerlekle yakınlaşın.', 'Rehberli turdan sonra Kendini Sına bölümündeki sorularla öğrenmenizi kontrol edin.'], href: '/lab', cta: '3D Laboratuvarı aç' },
+      { title: 'Haberler ve Etkinlikler', description: 'GeoKnow araştırma grubunun saha, eğitim ve akademik etkinlik notlarını takip edin.', steps: ['Haberler ve Etkinlikler sayfasından bir başlık seçin.', 'Gün, konu ve görseller üzerinden etkinliğin bağlamını inceleyin.', 'İlgili araçlara geçiş bağlantılarını kullanarak okuduğunuz içeriği Tanı, Jeoloji veya 3D Lab ile ilişkilendirin.'], href: '/haberler', cta: 'Haberleri aç' },
+      { title: 'Değerlendirme Alanı', description: 'Yetkili koordinatör ve katılımcılar için bağımsız gözlem ve kural inceleme çalışma alanıdır.', steps: ['Koordinatör hesabınızla veya kişisel davet bağlantınızla giriş yapın.', 'Önce Form B’de bağımsız fosil gözlemini tamamlayın; Form A yalnızca aşama açıldığında kullanılabilir.', 'Taslakları kaydedin, bağımsızlık beyanlarını kontrol edin ve kesin gönderimden önce yanıtları gözden geçirin.'], href: '/expert-validation', cta: 'Alana git' }
+    ],
     sequence: ['1 · Form B: Fosil gözlemi', '2 · Form A: Kural incelemesi', '3 · Son kontrol ve gönderim'],
     beforeTitle: 'Başlamadan önce',
     before: [
@@ -43,9 +53,19 @@ const copy = {
     finishTitle: 'Hazırsanız kendi hesabınızla başlayın', finishText: 'Bu rehberi giriş yapmadan okuyabilirsiniz. Değerlendirme kayıtları ve özel materyaller yalnız yetkili hesaplara açılır.'
   },
   en: {
-    eyebrow: 'GeoKnow · For experts', title: 'Expert user guide',
-    intro: 'Read these instructions before you begin. Observe the specimens independently first, then review the rule cards assigned to you.',
-    enter: 'Sign in to the expert workspace', jump: 'Read the steps',
+    eyebrow: 'GeoKnow · Platform guide', title: 'GeoKnow User Guide',
+    intro: 'Learn how to use the identification, visual AI, geology and 3D laboratory tools. Verify scientific results against your own observations.',
+    enter: 'Open Review Workspace', jump: 'Read evaluation steps',
+    toolsTitle: 'Using GeoKnow tools',
+    toolsIntro: 'Each tool supports a different stage of the workflow. A useful path is to begin with the 3D Laboratory, then deepen the investigation with Identification or Visual AI.',
+    tools: [
+      { title: 'Identification', description: 'Narrow possible genera from thin-section observations with rule-based decision support.', steps: ['Choose Step-by-Step Identification to answer questions in sequence, or Character Scoring to enter CHR characters directly.', 'Record values that are clearly visible; do not treat an unobservable structure as absent.', 'Review the result state, matching characters and warnings together, then verify with taxonomic sources.'], href: '/tani', cta: 'Open Identification' },
+      { title: 'Visual AI', description: 'Use visual AI to inspect a foraminifera image and generate morphological candidates and observation notes.', steps: ['Upload a JPG, PNG or WEBP image smaller than 8 MB.', 'Fill in locality, geological age, optics/magnification and scale when available.', 'Treat candidates in Analysis Results as suggestions to verify, not as a diagnosis. You may also run the Decision Support engine.'], href: '/vlm', cta: 'Open Visual AI' },
+      { title: 'Geology', description: 'Explore geological time, depositional depth, habitats and taxonomic records together.', steps: ['Select a stage from the Paleocene–Eocene timeline and read its overview.', 'Select taxon labels to open the WoRMS and ontology profile.', 'Use depth-zone and taxonomic-rank filters to narrow environment records, then open the taxon in the fossil catalogue.'], href: '/jeoloji', cta: 'Open Geology' },
+      { title: '3D Laboratory', description: 'Explore foraminifera models in a virtual exhibition and learn morphology interactively.', steps: ['Start the guided tour or choose free roam; use the Field Notebook to follow exhibits and boards.', 'Open a model and compare Surface, X-ray and Section views; drag to rotate and use the wheel to zoom.', 'After the tour, use Test Yourself to check what you learned.'], href: '/lab', cta: 'Open 3D Lab' },
+      { title: 'News & Events', description: 'Follow field, teaching and academic activity notes from the GeoKnow research group.', steps: ['Choose a story from News & Events.', 'Use its day, topic and images to understand the activity context.', 'Follow related tool links to connect the story with Identification, Geology or the 3D Lab.'], href: '/haberler', cta: 'Open News' },
+      { title: 'Review Workspace', description: 'A controlled workspace for independent observations and rule review by authorized coordinators and participants.', steps: ['Sign in with your coordinator account or personal invitation link.', 'Complete independent specimen observations in Form B first; Form A opens only when the phase is enabled.', 'Save drafts, check independence declarations and review responses before final submission.'], href: '/expert-validation', cta: 'Open workspace' }
+    ],
     sequence: ['1 · Form B: Specimen observations', '2 · Form A: Rule review', '3 · Final check and submission'],
     beforeTitle: 'Before you begin',
     before: [
@@ -88,6 +108,24 @@ export default function ExpertGuide() {
   return <main className="expert-guide" lang={lang}>
     <PageHero eyebrow={c.eyebrow} title={c.title} text={c.intro} tone="gray" actions={<div className="ms-page-hero-actions"><Link className="ms-btn" to="/expert-validation">{c.enter}<span aria-hidden="true">→</span></Link><a className="ms-btn ms-btn--secondary" href="#expert-guide-steps">{c.jump}</a></div>} />
     <div className="ms-container expert-guide-content">
+      <section className="expert-guide-tools" aria-labelledby="expert-guide-tools-title">
+        <h2 id="expert-guide-tools-title">{c.toolsTitle}</h2>
+        <p className="expert-guide-lead">{c.toolsIntro}</p>
+        <div className="expert-guide-tool-grid">
+          {c.tools.map(tool => (
+            <article className="expert-guide-tool" key={tool.title}>
+              <div>
+                <h3>{tool.title}</h3>
+                <p>{tool.description}</p>
+                <ol>
+                  {tool.steps.map(step => <li key={step}>{step}</li>)}
+                </ol>
+              </div>
+              <Link className="expert-guide-tool-link" to={tool.href}>{tool.cta}<span aria-hidden="true">→</span></Link>
+            </article>
+          ))}
+        </div>
+      </section>
       <ol className="expert-guide-sequence" aria-label={lang === 'tr' ? 'Değerlendirme sırası' : 'Evaluation order'}>{c.sequence.map(item => <li key={item}>{item}</li>)}</ol>
       <section className="expert-guide-before" aria-labelledby="expert-guide-before-title"><h2 id="expert-guide-before-title">{c.beforeTitle}</h2><ul>{c.before.map(item => <li key={item}>{item}</li>)}</ul></section>
       <section id="expert-guide-steps" aria-labelledby="expert-guide-steps-title"><h2 id="expert-guide-steps-title">{c.stepsTitle}</h2><ol className="expert-guide-steps">{c.steps.map((step, index) => <li key={step.title}><span className="expert-guide-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p><p className="expert-guide-note">{step.note}</p></div></li>)}</ol></section>
