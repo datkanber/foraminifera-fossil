@@ -10,13 +10,13 @@ import Geology from "./pages/Geology";
 import Fossils from "./pages/Fossils";
 import Contact from "./pages/Contact";
 import Vlm from "./pages/Vlm";
+import ExpertValidation from "./pages/ExpertValidation";
+import ExpertGuide from "./pages/ExpertGuide";
 // -jr Loaded on demand: the lab brings three.js (~600 KB), which no other
 // page needs.
 const Lab = lazy(() => import("./pages/Lab"));
 const News = lazy(() => import("./pages/News"));
 const Search = lazy(() => import("./pages/Search"));
-const ExpertValidation = lazy(() => import("./pages/ExpertValidation"));
-const ExpertGuide = lazy(() => import("./pages/ExpertGuide"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function SiteChrome({ children }) {
