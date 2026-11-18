@@ -96,22 +96,30 @@ function ModeSelector({ onSelect }) {
     <div className="mode-selector">
       <button className="mode-card" onClick={() => onSelect("wizard")}>
         <span className="mode-card-step" aria-hidden="true">01</span>
-        <img
-          src={ceratiteIcon}
-          alt=""
-          className="mode-icon-svg"
-        />
+        <span className="mode-icon-frame" aria-hidden="true">
+          <img
+            src={ceratiteIcon}
+            alt=""
+            className="mode-icon-svg"
+            width="48"
+            height="48"
+          />
+        </span>
         <strong>{t("mode.wizard.title")}</strong>
         <span className="mode-card-description">{t("mode.wizard.desc")}</span>
         <span className="mode-card-action">{lang === "tr" ? "Adım adım başla" : "Start step by step"}<span aria-hidden="true">→</span></span>
       </button>
       <button className="mode-card" onClick={() => onSelect("scoring")}>
         <span className="mode-card-step" aria-hidden="true">02</span>
-        <img
-          src={foraminiferaIcon}
-          alt=""
-          className="mode-icon-svg"
-        />
+        <span className="mode-icon-frame" aria-hidden="true">
+          <img
+            src={foraminiferaIcon}
+            alt=""
+            className="mode-icon-svg"
+            width="48"
+            height="48"
+          />
+        </span>
         <strong>{t("mode.scoring.title")}</strong>
         <span className="mode-card-description">{t("mode.scoring.desc")}</span>
         <span className="mode-card-action">{lang === "tr" ? "Karakterleri değerlendir" : "Evaluate characters"}<span aria-hidden="true">→</span></span>

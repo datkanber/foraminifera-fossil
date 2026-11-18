@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { dayTwoPhotos } from "../data/fieldPhotos";
@@ -236,6 +236,7 @@ function QuickIcon({ name }) {
 export default function Home() {
   const { lang } = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
+  const swipeStart = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isUserPaused, setIsUserPaused] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [hasFocus, setHasFocus] = useState(false);
@@ -380,7 +381,26 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          <figure className="ms-home-banner-media" key={activeSlide.photo.id || activeSlide.id}>
+          <figure
+            className="ms-home-banner-media"
+            key={activeSlide.photo.id || activeSlide.id}
+            onTouchStart={event => {
+              const touch = event.touches.length === 1 ? event.touches[0] : null;
+              swipeStart.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+            }}
+            onTouchCancel={() => { swipeStart.current = null; }}
+            onTouchEnd={event => {
+              const start = swipeStart.current;
+              swipeStart.current = null;
+              const end = event.changedTouches[0];
+              if (!start || !end) return;
+              const deltaX = end.clientX - start.x;
+              const deltaY = end.clientY - start.y;
+              if (Math.abs(deltaX) >= 60 && Math.abs(deltaX) > Math.abs(deltaY) * 1.4) {
+                if (deltaX < 0) nextSlide(); else prevSlide();
+              }
+            }}
+          >
             <div className="ms-home-banner-image-frame">
               <img
                 src={activeSlide.photo.src}
@@ -474,23 +494,23 @@ export default function Home() {
       {/* ── 3. FEATURED EVENT: STONE ESKİŞEHİR DIGITAL GEO ACADEMY ── */}
       <section className="ms-section ms-section--gray ms-home-event-section" aria-labelledby="home-event-title">
         <div className="ms-container">
-          <Reveal className="ms-section-header">
-            <div>
+          <Reveal className="ms-section-header ms-home-event-header">
+            <div className="ms-home-event-heading">
               <span className="ms-eyebrow">
                 {lang === "tr" ? "Uluslararası Etkinlik ve Saha Mirası" : "International Event & Field Heritage"}
               </span>
               <h2 id="home-event-title" className="ms-section-title">
                 STONE Eskişehir Digital Geo Academy
               </h2>
-              <p className="ms-section-lead">
-                {lang === "tr"
-                  ? "Taş mirası ve dijital jeolojinin buluştuğu Erasmus+ STONE projesinde Eskişehir Osmangazi Üniversitesi ve İspanya ortaklığıyla gerçekleştirilen saha ve laboratuvar çalışmaları."
-                  : "Field and laboratory studies conducted through the Erasmus+ STONE project connecting stone heritage and digital geology, hosted at Eskişehir Osmangazi University."}
-              </p>
             </div>
-            <Link className="ms-link" to="/haberler">
+            <Link className="ms-link ms-home-event-all-news" to="/haberler">
               {lang === "tr" ? "Tüm haberler ve fotoğraflar" : "All news and photographs"}
             </Link>
+            <p className="ms-section-lead ms-home-event-summary">
+              {lang === "tr"
+                ? "Taş mirası ve dijital jeolojinin buluştuğu Erasmus+ STONE projesinde Eskişehir Osmangazi Üniversitesi ve İspanya ortaklığıyla gerçekleştirilen saha ve laboratuvar çalışmaları."
+                : "Field and laboratory studies conducted through the Erasmus+ STONE project connecting stone heritage and digital geology, hosted at Eskişehir Osmangazi University."}
+            </p>
           </Reveal>
 
           <div className="ms-home-event-layout">

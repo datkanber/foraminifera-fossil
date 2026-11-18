@@ -1,0 +1,67 @@
+/* Enterprise presentation shared by the existing pages. Application logic,
+   scientific media and WebGL lifecycles remain in their original components. */
+body { line-height: 1.6; }
+h1, h2, h3 { letter-spacing: -0.02em; }
+::selection { background: var(--ms-blue-tint-strong); color: var(--color-text); }
+:focus-visible { outline-color: var(--color-primary); outline-offset: 3px; }
+.ms-btn:focus-visible { outline-color: var(--color-primary); }
+.ms-btn:active { background: var(--ms-blue-pressed); }
+.ms-btn--secondary, .ms-btn--light { border-color: var(--color-border); background: var(--color-surface); color: var(--color-text); }
+.ms-btn--outline { color: var(--color-primary); border-color: var(--color-primary); }
+.ms-btn--outline:hover { background: var(--color-primary-soft); }
+.ms-link, .ms-text-link { color: var(--color-accent-text); }
+.ms-link::after { flex: 0 0 auto; }
+.ms-eyebrow { color: var(--color-text-muted); font-size: 14px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.ms-badge { border: 1px solid var(--ms-blue-tint-strong); border-radius: var(--radius-sm); padding: 2px 8px; white-space: normal; }
+.ms-badge--accent { border-color: var(--color-primary); }
+.ms-card {
+  box-shadow: var(--shadow-2);
+  transition: opacity var(--motion-enter) ease-out, border-color var(--motion-hover) ease-out, transform var(--motion-hover) ease-out, box-shadow var(--motion-hover) ease-out;
+}
+a.ms-card:hover, .ms-card--interactive:hover { border-color: var(--color-border); transform: translateY(-2px); box-shadow: var(--shadow-8); }
+.ms-card--flat { box-shadow: none; }
+.ms-card--interactive:hover .ms-card-media img, a.ms-card:hover .ms-card-media img { transform: scale(1.02); }
+.ms-page-hero { background: var(--color-surface-subtle); }
+.ms-page-hero--light { background: var(--color-surface); }
+.ms-page-hero--brand { background: var(--color-primary); }
+.ms-page-hero--dark { background: #171717; }
+.ms-page-hero-inner { min-height: 320px; padding-block: clamp(40px, 5vw, 72px); }
+.ms-page-hero-title { font-weight: 600; line-height: 1.14; }
+.ms-page-hero-highlights { gap: 8px; }
+.ms-page-hero-highlight, .ms-page-hero-highlight + .ms-page-hero-highlight {
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-size: 13px;
+}
+.ms-page-hero-media-frame { border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); }
+.ms-page-hero-media-tag { font-size: 12px; }
+.ms-section-header { margin-bottom: 32px; }
+.ms-section--dark, .ms-on-dark {
+  --color-text: #ffffff;
+  --color-text-muted: #d8e2e9;
+  --color-accent-text: #9cd8f4;
+}
+.ms-section--dark { background: #171717; }
+.ms-home-cta-section { background: var(--color-surface); }
+.ms-home-cta-box { border: 0; border-radius: var(--radius-lg); background: var(--ms-navy); color: var(--color-on-dark); }
+.ms-btn.ms-home-cta-btn-white { background: #ffffff; color: var(--ms-navy); }
+.ms-btn.ms-home-cta-btn-white:hover { background: #edf5fb; }
+.ms-btn.ms-home-cta-btn-ghost { border-color: rgb(255 255 255 / 70%); color: #ffffff; }
+.ms-panel, .vlm-left, .vlm-right { box-shadow: var(--shadow-2); }
+.ms-input, .ms-select, .ms-textarea { border-bottom-color: var(--color-border); }
+.ms-input:focus, .ms-select:focus, .ms-textarea:focus { border-color: var(--color-primary); }
+.ms-geo-stage-spotlight { --color-accent-text: #9cd8f4; }
+.stone-report-sidebar { top: calc(var(--header-height) + 24px); }
+.stone-report-section { scroll-margin-top: calc(var(--header-height) + 24px); }
+.vlm-id { color: var(--color-text); }
+.vlm-scan-beam { top: 0; height: 100%; background: linear-gradient(transparent 49%, var(--color-primary) 50%, transparent 51%); }
+@keyframes vlm-scan-sweep { 0%, 100% { transform: translateY(-44%); opacity: .7; } 50% { transform: translateY(44%); opacity: 1; } }
+@media (max-width: 599px) {
+  .ms-section-header { margin-bottom: 24px; }
+  .ms-page-hero-inner { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.ms-card:hover, .ms-card--interactive:hover { transform: none; }
+}

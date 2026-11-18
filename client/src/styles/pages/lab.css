@@ -3,14 +3,15 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 .lab-wrapper {
+  color-scheme: dark;
   --lab-bg: #0c0f1b;
   --lab-panel: #0c0f1b;
   --lab-border: rgb(255 255 255 / 16%);
   --lab-border-strong: rgb(255 255 255 / 35%);
   --lab-text: #eef6fc;
   --lab-muted: rgba(206, 226, 242, 0.72);
-  --lab-accent: #b9b3ff;
-  --lab-accent-deep: #4945ff;
+  --lab-accent: #9cd8f4;
+  --lab-accent-deep: #0067b8;
   --lab-plankton: #e58bb8;
   --lab-art: #c79bdc;
   --lab-danger: #ff8a80;

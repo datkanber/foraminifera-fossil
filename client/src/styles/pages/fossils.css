@@ -57,9 +57,23 @@
   transform: none;
 }
 
+.mode-icon-frame {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  padding: 10px;
+  border: 1px solid var(--color-icon-border, #d6e5f0);
+  border-radius: var(--radius-lg);
+  background: var(--color-icon-surface, #edf4fa);
+  color-scheme: light;
+}
+
 .mode-icon-svg {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
+  max-width: 100%;
   object-fit: contain;
   display: block;
   filter: none;
@@ -105,7 +119,7 @@
 .reset-btn { color: var(--color-accent-text); border-color: var(--ms-blue); }
 .reset-btn:hover { background: var(--ms-blue-tint); border-color: var(--ms-blue-hover); color: var(--ms-blue-hover); }
 .skip-btn { color: var(--ms-warning); border-color: #f9e2ae; background: var(--ms-warning-bg); }
-.skip-btn:hover { background: #3a2c18; border-color: var(--ms-warning); }
+.skip-btn:hover { background: #fbe9b6; border-color: var(--ms-warning); }
 
 .ms-inline-svg {
   display: inline-block;
@@ -590,7 +604,7 @@
   box-shadow: var(--shadow-4);
 }
 .not-obs-btn { color: var(--ms-warning); border-color: #f9e2ae; background: var(--ms-warning-bg); }
-.not-obs-btn:hover { background: #3a2c18; border-color: var(--ms-warning); }
+.not-obs-btn:hover { background: #fbe9b6; border-color: var(--ms-warning); }
 .not-obs-btn.selected { background: var(--ms-warning); color: var(--color-background); border-color: var(--ms-warning); }
 
 .diagnose-button {
