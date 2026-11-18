@@ -1,5 +1,16 @@
-/* microsoft.com style footer */
+/* Light footer: local tokens isolate it from the dark application. */
 .site-footer {
+  color-scheme: light;
+  --ms-gray-130: #62667b;
+  --ms-gray-150: #242464;
+  --ms-gray-170: #242464;
+  --ms-gray-30: #ffffff;
+  --ms-gray-40: #f1efff;
+  --ms-gray-50: #e6e3ff;
+  --color-border: #e6e6ef;
+  --color-border-subtle: #e6e6ef;
+  --color-accent-text: #4945ff;
+  --ms-blue: #4945ff;
   width: 100%;
   margin-top: auto;
   background: var(--ms-gray-30);
@@ -11,14 +22,14 @@
 .site-footer-inner {
   width: 100%;
   margin: 0 auto;
-  padding: clamp(32px, 4vw, 48px) 0 24px;
+  padding: clamp(48px, 6vw, 80px) 0 32px;
   max-width: calc(var(--page-max-width) + 2 * var(--content-gutter));
   padding-inline: var(--content-gutter);
 }
 
 .site-footer-top {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) minmax(0, 3fr);
+  grid-template-columns: minmax(200px, 1fr) minmax(0, 3fr);
   gap: 32px clamp(32px, 5vw, 80px);
 }
 
@@ -166,3 +177,5 @@
   .site-footer-columns { grid-template-columns: minmax(0, 1fr); }
   .site-footer-copy { margin-left: 0; white-space: normal; }
 }
+
+.site-footer :focus-visible { outline-color: #4945ff; }

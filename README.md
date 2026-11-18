@@ -627,8 +627,12 @@ To run this project, make sure you have the following packages installed:
 * NumPy
 * Matplotlib
 
-## Independent expert validation
+## Interface updates
 
-The private `/expert-validation` module adds Form B → Form A review, secure
-individual invitations, immutable submissions, coordinator data lock and
-reproducible English reports. See [setup and user instructions](docs/EXPERT_VALIDATION.md).
+The public website uses a dark-first, purple-accented design with local Poppins fonts,
+a sticky header that becomes white on scroll, and a light footer. See the
+[design system](client/src/styles/DESIGN.md) for presentation conventions.
+
+The evaluation workspace and user guide have been retired. Their UI routes,
+navigation/search entries and API hosting bindings are removed. Offline evaluation
+tools and archived study records remain available for research reproducibility.

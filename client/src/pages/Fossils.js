@@ -668,6 +668,7 @@ function ScoreResult({ data }) {
       {ranking.length > 0 && (
         <div className="ranking-section">
           <div className="ranking-header">{t("score.ranking")}</div>
+          <div className="ranking-table-scroll" role="region" aria-label={t("score.ranking")} tabIndex={0}>
           <table className="ranking-table">
             <thead>
               <tr>
@@ -691,6 +692,7 @@ function ScoreResult({ data }) {
               ))}
             </tbody>
           </table>
+          </div>
 
           {/* Evidence for top candidate */}
           {ranking[0]?.matchedEvidence?.length > 0 && (

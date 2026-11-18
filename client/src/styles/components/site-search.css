@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MICROSOFT FLUENT SITE SEARCH (Dialog & Page)
+   GEOKNOW SITE SEARCH (Dialog & Page)
    ========================================================================== */
 
 .site-search-dialog,
@@ -18,7 +18,7 @@
   padding: 28px 32px;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-64);
   overscroll-behavior: contain;
   animation: ms-dialog-in 250ms var(--ease-decelerate-max) both;
@@ -85,7 +85,7 @@
   border: 1px solid var(--ms-gray-60);
   border-bottom: 2px solid var(--ms-blue);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--color-surface);
   color: var(--ms-gray-190);
   font-size: 15px;
   transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
@@ -165,7 +165,7 @@
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
   background: var(--ms-gray-10);
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 13px;
   cursor: pointer;
   transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
@@ -188,7 +188,7 @@
   border: 1px solid var(--ms-blue);
   border-radius: var(--radius-md);
   background: transparent;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-weight: 600;
   cursor: pointer;
 }
@@ -215,7 +215,7 @@
   min-width: 0;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-2);
   transition: box-shadow var(--duration-normal) var(--ease-decelerate-max), border-color var(--duration-fast) var(--ease-easy), transform var(--duration-normal) var(--ease-decelerate-max);
 }
@@ -257,7 +257,7 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 16px;
   font-weight: 600;
   overflow-wrap: anywhere;
@@ -284,7 +284,7 @@
   border: 1px solid var(--ms-blue);
   border-radius: var(--radius-md);
   background: transparent;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;

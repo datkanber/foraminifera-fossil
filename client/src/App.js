@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -10,8 +10,6 @@ import Geology from "./pages/Geology";
 import Fossils from "./pages/Fossils";
 import Contact from "./pages/Contact";
 import Vlm from "./pages/Vlm";
-import ExpertValidation from "./pages/ExpertValidation";
-import ExpertGuide from "./pages/ExpertGuide";
 // -jr Loaded on demand: the lab brings three.js (~600 KB), which no other
 // page needs.
 const Lab = lazy(() => import("./pages/Lab"));
@@ -19,17 +17,12 @@ const News = lazy(() => import("./pages/News"));
 const Search = lazy(() => import("./pages/Search"));
 import { LanguageProvider } from "./contexts/LanguageContext";
 
-function SiteChrome({ children }) {
-  const privateWorkspace = useLocation().pathname.startsWith('/expert-validation');
-  return <>{!privateWorkspace && <Navbar />}{children}{!privateWorkspace && <Footer />}</>;
-}
-
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
         <div className="app-layout">
-          <SiteChrome>
+          <Navbar />
 
           <div className="app-main" id="main-content" tabIndex={-1}>
             <PageTransition>
@@ -45,15 +38,13 @@ function App() {
                   <Route path="/haberler/:slug?" element={<News />} />
                   <Route path="/news" element={<News />} />
                   <Route path="/arama" element={<Search />} />
-                  <Route path="/expert-validation/*" element={<ExpertValidation />} />
-                  <Route path="/uzman-rehberi" element={<ExpertGuide />} />
                   <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </Suspense>
             </PageTransition>
           </div>
 
-          </SiteChrome>
+          <Footer />
         </div>
       </BrowserRouter>
     </LanguageProvider>

@@ -1,71 +1,61 @@
-/*
- * GeoKnow design tokens — modelled on microsoft.com and Fluent 2.
- * Every page and component should read colours, type, motion and
- * elevation from here instead of hard-coding values.
- */
+/* GeoKnow dark-first design tokens. Legacy ms-* aliases preserve component contracts. */
 :root {
-  /* ── Brand ─────────────────────────────────────────── */
-  --ms-blue: #0067b8;            /* microsoft.com primary */
-  --ms-blue-hover: #005da6;
-  --ms-blue-pressed: #004e8c;
-  --ms-blue-tint: #e6f2fb;
-  --ms-blue-tint-strong: #cfe4fa;
-  --ms-blue-bright: #75b6e7;     /* Accessible links on dark surfaces */
-  --ms-navy: #172b3a;
-  --ms-navy-2: #213b4d;
+  color-scheme: dark;
+  --color-background: #040711;
+  --color-surface: #0c0f1b;
+  --color-surface-subtle: #101422;
+  --color-surface-alt: #080b16;
+  --color-text: #ffffff;
+  --color-text-muted: #b3b8ca;
+  --color-border: #292d42;
+  --color-border-subtle: #202437;
+  --color-primary: #4945ff;
+  --color-primary-hover: #625eff;
+  --color-primary-soft: #19163b;
+  --color-accent-text: #b9b3ff;
+  --color-announcement: #8b49d6;
+  --color-sap-bg: var(--color-surface-subtle);
+  --color-light-text: #242464;
+  --color-light-muted: #62667b;
 
-  /* Microsoft logo palette — used sparingly for accents */
-  --ms-red: #f25022;
-  --ms-green: #7fba00;
-  --ms-azure: #00a4ef;
-  --ms-yellow: #ffb900;
+  --ms-blue: var(--color-primary);
+  --ms-blue-hover: var(--color-primary-hover);
+  --ms-blue-pressed: #b9b3ff;
+  --ms-blue-tint: var(--color-primary-soft);
+  --ms-blue-tint-strong: #393264;
+  --ms-blue-bright: #b9b3ff;
+  --ms-navy: #101027;
+  --ms-navy-2: #191631;
+  --ms-red: #ff9b9b;
+  --ms-green: #8de0b0;
+  --ms-azure: #a3b7ff;
+  --ms-yellow: #f4ca83;
+  --ms-gray-10: #090c17;
+  --ms-gray-20: var(--color-surface-alt);
+  --ms-gray-30: var(--color-surface-subtle);
+  --ms-gray-40: #202437;
+  --ms-gray-50: #292d42;
+  --ms-gray-60: #3c415b;
+  --ms-gray-80: #666d89;
+  --ms-gray-110: #9a9fb4;
+  --ms-gray-130: var(--color-text-muted);
+  --ms-gray-150: #d1d4e3;
+  --ms-gray-170: var(--color-text);
+  --ms-gray-190: #ffffff;
+  --ms-success: #95e8b4;
+  --ms-success-bg: #10271e;
+  --ms-warning: #f4ca83;
+  --ms-warning-bg: #2b2215;
+  --ms-danger: #ffb0ba;
+  --ms-danger-bg: #301722;
+  --ms-info-bg: #171830;
 
-  /* ── Neutrals (Fluent 2) ───────────────────────────── */
-  --ms-gray-10: #fafafa;
-  --ms-gray-20: #f5f5f5;
-  --ms-gray-30: #f2f2f2;
-  --ms-gray-40: #ebebeb;
-  --ms-gray-50: #e0e0e0;
-  --ms-gray-60: #d1d1d1;
-  --ms-gray-80: #bdbdbd;
-  --ms-gray-110: #8a8a8a;
-  --ms-gray-130: #616161;
-  --ms-gray-150: #424242;
-  --ms-gray-170: #242424;
-  --ms-gray-190: #1a1a1a;
-
-  /* Semantic status colours */
-  --ms-success: #107c10;
-  --ms-success-bg: #dff6dd;
-  --ms-warning: #8a5300;
-  --ms-warning-bg: #fff4ce;
-  --ms-danger: #c50f1f;
-  --ms-danger-bg: #fde7e9;
-  --ms-info-bg: #ebf3fc;
-
-  /* ── Semantic aliases (kept for existing pages) ────── */
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
-  --color-surface-subtle: var(--ms-gray-30);
-  --color-surface-alt: var(--ms-gray-20);
-  --color-text: var(--ms-gray-170);
-  --color-text-muted: var(--ms-gray-130);
-  --color-border: var(--ms-gray-60);
-  --color-border-subtle: var(--ms-gray-40);
-  --color-primary: var(--ms-blue);
-  --color-primary-hover: var(--ms-blue-hover);
-  --color-primary-soft: var(--ms-blue-tint);
-  --color-sap-bg: var(--ms-gray-30);
-
-  /* ── Typography ────────────────────────────────────── */
-  --font-base: "Segoe UI Variable Text", "Segoe UI", SegoeUI, "GeoKnow Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: "Segoe UI Variable Display", "Segoe UI", SegoeUI, "GeoKnow Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono: "Cascadia Code", Consolas, "Courier New", monospace;
-
-  /* microsoft.com type ramp */
-  --type-display: clamp(36px, 3.6vw, 52px);
-  --type-h1: clamp(32px, 3.2vw, 44px);
-  --type-h2: clamp(28px, 2.5vw, 36px);
+  --font-base: "Poppins", "Segoe UI", Arial, sans-serif;
+  --font-display: var(--font-base);
+  --font-mono: "Cascadia Code", Consolas, monospace;
+  --type-display: clamp(36px, 4.2vw, 64px);
+  --type-h1: clamp(32px, 3.8vw, 56px);
+  --type-h2: clamp(28px, 3vw, 40px);
   --type-h3: 24px;
   --type-h4: 20px;
   --type-subtitle: 18px;
@@ -73,54 +63,44 @@
   --type-small: 14px;
   --type-caption: 13px;
   --type-tiny: 12px;
-
-  /* ── Layout ────────────────────────────────────────── */
-  --wide-max-width: 1440px;      /* full-bleed sections, header, footer */
-  --page-max-width: 1280px;      /* standard content column */
+  --wide-max-width: 1440px;
+  --page-max-width: 1280px;
   --content-max-width: 1280px;
   --reading-width: 680px;
   --content-gutter: clamp(20px, 4vw, 64px);
-  --section-space: clamp(48px, 6vw, 88px);
-  --header-height: 108px;
-  --control-height: 44px;
-  --motion-page: 200ms;
-  --motion-enter: 300ms;
-  --motion-hover: 150ms;
-  --spacing-small: 12px;
+  --section-space: clamp(56px, 7vw, 104px);
+  --header-height: 128px;
+  --control-height: 48px;
+  --spacing-small: 8px;
   --spacing-medium: 24px;
-  --spacing-large: 40px;
-
-  /* ── Shape ─────────────────────────────────────────── */
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-
-  /* ── Elevation (Fluent 2 shadow ramp) ──────────────── */
-  --shadow-2: 0 0 2px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 14%);
-  --shadow-4: 0 0 2px rgb(0 0 0 / 12%), 0 2px 4px rgb(0 0 0 / 14%);
-  --shadow-8: 0 0 2px rgb(0 0 0 / 12%), 0 4px 8px rgb(0 0 0 / 14%);
-  --shadow-16: 0 0 2px rgb(0 0 0 / 12%), 0 8px 16px rgb(0 0 0 / 14%);
-  --shadow-28: 0 0 8px rgb(0 0 0 / 12%), 0 14px 28px rgb(0 0 0 / 14%);
-  --shadow-64: 0 0 8px rgb(0 0 0 / 12%), 0 32px 64px rgb(0 0 0 / 14%);
+  --spacing-large: 48px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --shadow-2: 0 2px 8px rgb(0 0 0 / 8%);
+  --shadow-4: 0 4px 16px rgb(0 0 0 / 12%);
+  --shadow-8: 0 8px 24px rgb(0 0 0 / 16%);
+  --shadow-16: 0 16px 40px rgb(0 0 0 / 20%);
+  --shadow-28: 0 24px 56px rgb(0 0 0 / 24%);
+  --shadow-64: 0 32px 80px rgb(0 0 0 / 32%);
   --shadow-card: var(--shadow-4);
-
-  /* ── Motion (Fluent 2) ─────────────────────────────── */
+  --motion-page: 200ms;
+  --motion-enter: 500ms;
+  --motion-hover: 250ms;
   --duration-ultra-fast: 50ms;
-  --duration-faster: 100ms;
-  --duration-fast: 150ms;
-  --duration-normal: 200ms;
-  --duration-gentle: 250ms;
+  --duration-faster: 150ms;
+  --duration-fast: 200ms;
+  --duration-normal: 250ms;
+  --duration-gentle: 300ms;
   --duration-slow: 300ms;
   --duration-slower: 400ms;
   --duration-ultra-slow: 500ms;
-  --ease-decelerate-max: cubic-bezier(0.1, 0.9, 0.2, 1);  /* "fast out, slow in" */
-  --ease-decelerate-mid: cubic-bezier(0, 0, 0, 1);
-  --ease-accelerate-mid: cubic-bezier(1, 0, 1, 1);
-  --ease-accelerate-max: cubic-bezier(0.9, 0.1, 1, 0.2);
-  --ease-easy: cubic-bezier(0.33, 0, 0.67, 1);
-  --ease-standard: cubic-bezier(0.8, 0, 0.2, 1);
-
-  /* Focus ring */
-  --focus-ring: 0 0 0 2px #fff, 0 0 0 4px var(--ms-gray-170);
+  --ease-decelerate-max: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-decelerate-mid: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-accelerate-mid: cubic-bezier(0.4, 0, 1, 1);
+  --ease-accelerate-max: cubic-bezier(0.7, 0, 1, 0.5);
+  --ease-easy: ease-out;
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --focus-ring: 0 0 0 2px var(--color-background), 0 0 0 4px #b9b3ff;
 }

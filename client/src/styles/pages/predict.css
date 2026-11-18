@@ -1,15 +1,15 @@
 .predict-container {
   padding: 30px 40px !important;
-  background-color: #f8f9fa !important;
+  background-color: var(--color-background) !important;
   min-height: 85vh !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  color: #2c3e50 !important;
+  font-family: var(--font-base) !important;
+  color: var(--color-text) !important;
 }
 
 /* Üst Banner Alanı */
 .predict-header-banner {
-  background: linear-gradient(135deg, #f4f8f6 0%, #eaf2ec 100%) !important;
-  border: 1px solid #d8e5e0 !important;
+  background: var(--color-surface-subtle) !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 8px !important;
   padding: 24px 30px !important;
   display: flex !important;
@@ -26,7 +26,7 @@
 .banner-left .workspace-tag {
   font-size: 11px !important;
   font-weight: 700 !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   letter-spacing: 0.5px !important;
   display: block !important;
   margin-bottom: 6px !important;
@@ -36,19 +36,19 @@
 .banner-left h1 {
   font-size: 22px !important;
   margin: 0 0 6px 0 !important;
-  color: #1a2c24 !important;
+  color: var(--color-text) !important;
   font-weight: 700 !important;
 }
 
 .banner-left p {
   font-size: 13px !important;
-  color: #64736f !important;
+  color: var(--color-text-muted) !important;
   margin: 0 !important;
 }
 
 .banner-right-box {
-  background: #ffffff !important;
-  border: 1px solid #d8e5e0 !important;
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
   padding: 14px 20px !important;
   border-radius: 6px !important;
   text-align: right !important;
@@ -59,7 +59,7 @@
 .proto-title {
   display: block !important;
   font-size: 10px !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   text-transform: uppercase !important;
   margin-bottom: 3px !important;
   font-weight: 600 !important;
@@ -68,7 +68,7 @@
 .proto-val {
   font-size: 13px !important;
   font-weight: 700 !important;
-  color: #2d453b !important;
+  color: var(--color-text) !important;
   display: block !important;
 }
 
@@ -80,8 +80,8 @@
 }
 
 .predict-card {
-  background: #ffffff !important;
-  border: 1px solid #e5ebe9 !important;
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 8px !important;
   padding: 25px !important;
   flex: 1 !important;
@@ -94,24 +94,24 @@
   align-items: center !important;
   font-size: 11px !important;
   font-weight: 700 !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   margin-bottom: 12px !important;
   letter-spacing: 0.5px !important;
 }
 
 .side-badge {
-  background: #f0f4f2 !important;
+  background: var(--color-primary-soft) !important;
   padding: 3px 10px !important;
   border-radius: 12px !important;
   font-size: 11px !important;
-  color: #385247 !important;
+  color: var(--color-accent-text) !important;
   font-weight: 600 !important;
 }
 
 .predict-card h2 {
   font-size: 18px !important;
   margin-bottom: 20px !important;
-  color: #1a2c24 !important;
+  color: var(--color-text) !important;
   font-weight: 700 !important;
 }
 
@@ -135,25 +135,25 @@
 .form-group label {
   font-size: 12px !important;
   font-weight: 600 !important;
-  color: #435550 !important;
+  color: var(--color-text-muted) !important;
   margin-bottom: 6px !important;
 }
 
 .form-group input {
   width: 100% !important;
   padding: 10px 12px !important;
-  border: 1px solid #dce4e1 !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 6px !important;
   font-size: 13px !important;
-  background: #fafbfb !important;
-  color: #2c3e50 !important;
+  background: var(--color-surface-alt) !important;
+  color: var(--color-text) !important;
   outline: none !important;
   box-sizing: border-box !important;
 }
 
 .form-group input:focus {
-  border-color: #385247 !important;
-  background: #ffffff !important;
+  border-color: var(--color-accent-text) !important;
+  background: var(--color-surface) !important;
 }
 
 .formula-row {
@@ -163,12 +163,12 @@
 
 .formula-text p {
   font-size: 11px !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   margin: 0 !important;
 }
 
 .predict-btn {
-  background-color: #354f43 !important;
+  background-color: var(--color-primary) !important;
   color: white !important;
   border: none !important;
   padding: 10px 20px !important;
@@ -179,7 +179,7 @@
 }
 
 .predict-btn:hover {
-  background-color: #283d34 !important;
+  background-color: var(--color-primary-hover) !important;
 }
 
 /* Ortadaki Ok */
@@ -195,7 +195,7 @@
 
 .arrow-line {
   font-size: 24px !important;
-  color: #385247 !important;
+  color: var(--color-accent-text) !important;
   font-weight: bold !important;
   line-height: 1 !important;
   margin-bottom: 4px !important;
@@ -204,14 +204,14 @@
 .arrow-text {
   font-size: 10px !important;
   font-weight: 700 !important;
-  color: #385247 !important;
+  color: var(--color-accent-text) !important;
   letter-spacing: 1px !important;
 }
 
 /* Sağ Çıktı (Output) Bölümleri */
 .result-main-box {
-  background: #fafbfb !important;
-  border: 1px solid #e5ebe9 !important;
+  background: var(--color-surface-alt) !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 8px !important;
   padding: 20px !important;
   margin-bottom: 15px !important;
@@ -225,7 +225,7 @@
 }
 
 .fossil-icon {
-  background: #354f43 !important;
+  background: var(--color-primary) !important;
   color: white !important;
   width: 36px !important;
   height: 36px !important;
@@ -239,20 +239,20 @@
 .rec-label {
   font-size: 10px !important;
   font-weight: 700 !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   letter-spacing: 0.5px !important;
 }
 
 .result-icon-title h3 {
   font-size: 18px !important;
-  color: #1a2c24 !important;
+  color: var(--color-text) !important;
   margin: 0 !important;
   font-weight: 700 !important;
 }
 
 .result-desc {
   font-size: 12px !important;
-  color: #64736f !important;
+  color: var(--color-text-muted) !important;
   line-height: 1.5 !important;
   margin-bottom: 20px !important;
 }
@@ -264,8 +264,8 @@
 }
 
 .metric-item, .sub-box {
-  background: #ffffff !important;
-  border: 1px solid #e5ebe9 !important;
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
   padding: 12px 14px !important;
   border-radius: 6px !important;
 }
@@ -273,14 +273,14 @@
 .m-label {
   display: block !important;
   font-size: 11px !important;
-  color: #8c9896 !important;
+  color: var(--color-text-muted) !important;
   margin-bottom: 3px !important;
 }
 
 .m-val {
   font-size: 14px !important;
   font-weight: 700 !important;
-  color: #1a2c24 !important;
+  color: var(--color-text) !important;
 }
 
 .result-sub-grid {

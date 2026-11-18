@@ -1,17 +1,17 @@
 /* ==========================================================================
-   MICROSOFT FLUENT GEOLOGY PAGE STYLES (GeoKnow)
+   GEOKNOW GEOLOGY PAGE STYLES (GeoKnow)
    ========================================================================== */
 
 .ms-geology-page {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   color: var(--ms-gray-170);
 }
 
 /* ── 2. GEOLOGICAL STAGES SECTION ── */
 .ms-geology-stages-section {
   padding-block: var(--section-space);
-  background-color: #ffffff;
+  background-color: var(--color-surface);
 }
 
 .ms-geology-card {
@@ -19,7 +19,7 @@
   border: 1px solid var(--color-border-subtle);
   border-top: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-2);
   transition:
     transform var(--duration-normal) var(--ease-decelerate-max),
@@ -109,13 +109,13 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
 }
 
 .ms-geo-node-name {
   font-size: 14px;
   font-weight: 600;
-  color: var(--ms-navy);
+  color: var(--color-text);
 }
 
 .ms-geo-node-epoch {
@@ -168,8 +168,8 @@
 }
 
 .ms-geo-taxon-chip:hover {
-  background: #00589f;
-  border-color: #00589f;
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
   color: #ffffff;
 }
 
@@ -191,7 +191,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--color-surface);
   flex-shrink: 0;
 }
 
@@ -348,7 +348,7 @@
   padding: 16px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-subtle);
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-2);
 }
 
@@ -356,7 +356,7 @@
   height: 4px;
   border-radius: 0;
   margin-bottom: 12px;
-  background: linear-gradient(90deg, #b9d8ec, #0067b8 65%, #172b3a);
+  background: linear-gradient(90deg, #b9b3ff, #4945ff 65%, #191631);
 }
 
 .ms-geo-depth-tabs {
@@ -467,7 +467,7 @@
   padding-left: 38px !important;
   min-height: 42px;
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .taxon-env-filter {
@@ -475,7 +475,7 @@
   min-width: 180px;
   min-height: 42px;
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .taxon-env-loading {
@@ -492,7 +492,7 @@
 .taxon-env-empty {
   text-align: center;
   padding: 48px 24px;
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-subtle);
   color: var(--ms-gray-130);
@@ -512,7 +512,7 @@
 .taxon-env-card {
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #ffffff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-2);
   transition: background-color var(--motion-hover) var(--ease-easy), border-color var(--motion-hover) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-easy);
 }

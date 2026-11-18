@@ -1,0 +1,69 @@
+/* Shared presentation. Existing components retain their behavior and media lifecycles. */
+body { line-height: 1.65; }
+h1, h2, h3 { letter-spacing: -0.035em; }
+::selection { background: #4945ff; color: #fff; }
+:focus-visible { outline-color: var(--color-accent-text); outline-offset: 4px; }
+.ms-btn:focus-visible { outline-color: var(--color-accent-text); }
+.ms-btn:active { background: #3a38b9; }
+.ms-btn--secondary, .ms-btn--light { border-color: var(--color-border); background: var(--color-surface); color: var(--color-text); }
+.ms-btn--outline { color: var(--color-accent-text); border-color: #514a87; }
+.ms-btn--outline:hover { background: var(--color-primary-soft); }
+.ms-link, .ms-text-link { color: var(--color-accent-text); }
+.ms-eyebrow { color: var(--color-accent-text); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.ms-badge { border: 1px solid var(--ms-blue-tint-strong); border-radius: var(--radius-sm); padding: 3px 10px; white-space: normal; }
+.ms-badge--accent { border-color: var(--color-primary); }
+.ms-card { box-shadow: none; transition: opacity var(--motion-enter) ease-out, border-color var(--motion-hover) ease-out, transform var(--motion-hover) ease-out, box-shadow var(--motion-hover) ease-out; }
+a.ms-card:hover, .ms-card--interactive:hover { border-color: #615798; transform: translateY(-3px); box-shadow: 0 12px 32px rgb(73 69 255 / 8%); }
+.ms-page-hero, .ms-home-hero, .ms-news-hero {
+  position: relative;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 80% 20%, rgb(73 69 255 / 16%), transparent 60%), var(--color-background);
+}
+.ms-page-hero::before, .ms-home-hero::before, .ms-news-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, #7973b5 1px, transparent 1px);
+  background-size: 14px 14px;
+  mask-image: linear-gradient(90deg, #000, transparent 15%, transparent 85%, #000);
+  opacity: 0.2;
+  pointer-events: none;
+  content: "";
+}
+.ms-page-hero-inner { min-height: 360px; padding-block: clamp(48px, 6vw, 88px); }
+.ms-page-hero-title { font-weight: 600; line-height: 1.14; }
+.ms-page-hero-highlights { gap: 8px; }
+.ms-page-hero-highlight, .ms-page-hero-highlight + .ms-page-hero-highlight {
+  padding: 6px 12px;
+  border: 1px solid #393264;
+  border-radius: var(--radius-sm);
+  background: rgb(73 69 255 / 8%);
+  color: var(--color-accent-text);
+  font-size: 12px;
+}
+.ms-page-hero-media-frame { border: 1px solid #393264; border-radius: var(--radius-xl); }
+.ms-page-hero-media-tag { font-size: 12px; }
+.ms-home-cta-section { background: var(--color-background); }
+.ms-home-cta-box { border: 1px solid #393264; border-radius: var(--radius-xl); background: radial-gradient(ellipse at 90% 0%, rgb(73 69 255 / 24%), transparent 70%), var(--color-surface); }
+.ms-btn.ms-home-cta-btn-white { background: var(--color-primary); color: #fff; }
+.ms-btn.ms-home-cta-btn-white:hover { background: var(--color-primary-hover); }
+.ms-btn.ms-home-cta-btn-ghost { border-color: #514a87; }
+.ms-section--dark { background: var(--color-background); }
+.ms-section-header { margin-bottom: 40px; }
+.ms-panel, .vlm-left, .vlm-right { box-shadow: none; }
+.ms-input, .ms-select, .ms-textarea { border-bottom-color: var(--color-border); }
+.ms-input:focus, .ms-select:focus, .ms-textarea:focus { border-color: var(--color-accent-text); }
+.ms-geo-spotlight-fact dt { color: var(--color-accent-text); }
+.ms-geo-depth-bar { background: linear-gradient(90deg, #b9b3ff, #4945ff 65%, #191631); }
+.stone-report-sidebar { top: calc(var(--header-height) + 24px); }
+.stone-report-section { scroll-margin-top: calc(var(--header-height) + 24px); }
+.vlm-id { color: var(--color-text); }
+.vlm-scan-beam { top: 0; height: 100%; background: linear-gradient(transparent 49%, var(--color-accent-text) 50%, transparent 51%); }
+@keyframes vlm-scan-sweep { 0%, 100% { transform: translateY(-44%); opacity: .7; } 50% { transform: translateY(44%); opacity: 1; } }
+@media (max-width: 599px) {
+  .ms-section-header { margin-bottom: 24px; }
+  .ms-page-hero-inner { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.ms-card:hover, .ms-card--interactive:hover { transform: none; }
+}

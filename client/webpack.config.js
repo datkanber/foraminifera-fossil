@@ -34,7 +34,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg|woff2)$/i,
         type: "asset/resource",
       },
 
@@ -70,7 +70,6 @@ module.exports = {
     open: true,
     hot: true,
     historyApiFallback: true,
-    proxy: [{ context: ['/api/expert-validation'], target: 'http://127.0.0.1:5000' }],
   },
 
   devtool: process.env.NODE_ENV === "production" ? false : "source-map",

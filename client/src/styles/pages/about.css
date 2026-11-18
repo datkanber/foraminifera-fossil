@@ -1,16 +1,16 @@
 /* ==========================================================================
-   MICROSOFT FLUENT ABOUT PAGE STYLES (GeoKnow)
+   GEOKNOW ABOUT PAGE STYLES (GeoKnow)
    ========================================================================== */
 
 .ms-about-page {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   color: var(--ms-gray-170);
 }
 
 .ms-about-narrative-section {
   padding-block: var(--section-space);
-  background-color: #ffffff;
+  background-color: var(--color-surface);
 }
 
 .ms-about-columns {
@@ -103,13 +103,13 @@
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 700;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   margin-bottom: 4px;
 }
 
 .ms-about-cta-section {
   padding-block: var(--section-space);
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 @media (max-width: 900px) {

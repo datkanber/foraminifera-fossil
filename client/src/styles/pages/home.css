@@ -1,5 +1,5 @@
-/* GeoKnow home: photography, clear hierarchy and Fluent interaction states. */
-.ms-home { width: 100%; background: #fff; color: var(--color-text); }
+/* GeoKnow home: original content and photography with the shared dark theme. */
+.ms-home { width: 100%; background: var(--color-surface); color: var(--color-text); }
 
 /* The photograph and the copy each have their own space. */
 .ms-home-hero { background: var(--ms-gray-30); }
@@ -7,12 +7,12 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
   align-items: center;
-  gap: clamp(32px, 5vw, 72px);
-  min-height: 560px;
-  padding-block: clamp(40px, 4.5vw, 64px);
+  gap: clamp(32px, 5vw, 80px);
+  min-height: 640px;
+  padding-block: clamp(48px, 6vw, 88px);
 }
 .ms-home-banner-copy { min-width: 0; animation: ms-home-content-in var(--motion-enter) var(--ease-decelerate-mid) both; }
-.ms-home-kicker { margin: 0 0 18px; color: var(--ms-gray-150); }
+.ms-home-kicker { margin: 0 0 24px; color: var(--color-accent-text); }
 .ms-home-hero-title {
   max-width: 19ch;
   margin: 0;
@@ -27,13 +27,13 @@
 .ms-home-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; margin-top: 32px; }
 .ms-home-arrow { margin-left: 4px; }
 .ms-home-banner-media { min-width: 0; margin: 0; animation: ms-home-content-in var(--motion-enter) var(--ease-decelerate-mid) both; }
-.ms-home-banner-image-frame { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-md); background: var(--ms-gray-50); }
+.ms-home-banner-image-frame { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid #51456e; border-radius: var(--radius-xl); background: var(--color-surface); box-shadow: 0 24px 80px rgb(37 25 100 / 20%); }
 .ms-home-banner-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
 .ms-home-banner-caption { margin-top: 12px; color: var(--color-text-muted); font-size: 12px; line-height: 1.5; }
 @keyframes ms-home-content-in { from { opacity: 0; } to { opacity: 1; } }
 
 /* A quiet, keyboard-accessible carousel rail. */
-.ms-home-carousel-dock { border-block: 1px solid var(--color-border-subtle); background: #fff; }
+.ms-home-carousel-dock { border-block: 1px solid var(--color-border-subtle); background: rgb(12 15 27 / 80%); }
 .ms-home-carousel-dock-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .ms-home-slide-tabs { display: flex; flex: 1; align-self: stretch; gap: 32px; }
 .ms-home-slide-tab {
@@ -64,17 +64,16 @@
 .ms-home-control-btn[aria-pressed='true'] { background: var(--ms-gray-30); }
 
 /* Compact navigation, without another row of floating cards. */
-.ms-home-quick-section { padding-block: 32px; }
-.ms-home-quick-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
-.ms-home-quick-card { display: flex; align-items: flex-start; gap: 14px; min-width: 0; padding: 16px 22px; border-right: 1px solid var(--color-border-subtle); }
-.ms-home-quick-card:first-child { padding-left: 0; }
-.ms-home-quick-card:last-child { border-right: 0; padding-right: 0; }
+.ms-home-quick-section { padding-block: 40px; background: var(--color-background); }
+.ms-home-quick-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.ms-home-quick-card { display: flex; align-items: flex-start; gap: 12px; min-width: 0; padding: 24px 16px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); transition: transform var(--motion-hover) ease-out, border-color var(--motion-hover) ease-out, background-color var(--motion-hover) ease-out; }
+.ms-home-quick-card:hover { transform: translateY(-3px); border-color: #615798; background: #121427; }
 .ms-home-quick-top { flex-shrink: 0; }
-.ms-home-quick-icon { width: 28px; height: 28px; color: var(--ms-blue); }
+.ms-home-quick-icon { width: 28px; height: 28px; color: var(--color-accent-text); }
 .ms-home-quick-icon svg { display: block; width: 100%; height: 100%; stroke-linejoin: round; stroke-linecap: round; }
 .ms-home-quick-arrow { display: none; }
 .ms-home-quick-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.ms-home-quick-title { color: var(--ms-blue); font-size: 16px; font-weight: 600; line-height: 1.4; }
+.ms-home-quick-title { color: var(--color-text); font-size: 15px; font-weight: 500; line-height: 1.4; }
 .ms-home-quick-sub { color: var(--color-text-muted); font-size: 12px; line-height: 1.5; }
 .ms-home-quick-card:hover .ms-home-quick-title { text-decoration: underline; text-underline-offset: 4px; }
 
@@ -82,7 +81,7 @@
 .ms-home-event-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
 .ms-home-event-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .ms-home-gallery-item { min-width: 0; margin: 0; }
-.ms-home-gallery-link { display: block; overflow: hidden; border-radius: var(--radius-md); background: #fff; }
+.ms-home-gallery-link { display: block; overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
 .ms-home-gallery-link img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; transition: opacity var(--duration-normal) var(--ease-easy); }
 .ms-home-gallery-link:hover img { opacity: 0.9; }
 .ms-home-gallery-overlay { padding: 10px 12px 12px; color: var(--color-text-muted); font-size: 12px; line-height: 1.4; }
@@ -95,17 +94,17 @@
 
 /* Workflow tabs and a single featured tool. */
 .ms-home-persona-wrap { margin-bottom: 32px; }
-.ms-home-persona-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 160px; padding-block: 28px; animation: ms-home-content-in var(--motion-page) var(--ease-easy) both; }
+.ms-home-persona-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 160px; margin-top: 24px; padding: 32px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); animation: ms-home-content-in var(--motion-page) var(--ease-easy) both; }
 .ms-home-persona-panel h3 { margin: 0; font-size: 20px; line-height: 1.35; }
 .ms-home-persona-panel p { max-width: 720px; margin: 12px 0 0; color: var(--color-text-muted); font-size: 15px; line-height: 1.65; }
 .ms-home-persona-panel > .ms-btn { flex-shrink: 0; }
 .ms-home-bento { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; }
-.ms-home-bento-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.85fr); gap: 24px; align-items: center; overflow: hidden; padding: 32px; border-radius: var(--radius-lg); background: var(--ms-gray-30); }
+.ms-home-bento-feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.85fr); gap: 24px; align-items: center; overflow: hidden; padding: 32px; border: 1px solid #393264; border-radius: var(--radius-xl); background: radial-gradient(ellipse at 90% 0%, rgb(73 69 255 / 12%), transparent 75%), var(--color-surface); }
 .ms-home-bento-feature .ms-badge--accent { padding: 0; border-radius: 0; background: transparent; color: var(--color-text-muted); font-size: 13px; }
 .ms-home-bento-feature-copy h3 { margin: 16px 0 0; font-size: 26px; line-height: 1.25; text-wrap: balance; }
 .ms-home-bento-feature-copy p { margin: 16px 0 0; color: var(--color-text-muted); font-size: 15px; line-height: 1.65; }
-.ms-home-bento-tags { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 20px; color: var(--color-text-muted); font-size: 12px; }
-.ms-home-bento-tags span + span { padding-left: 14px; border-left: 1px solid var(--color-border); }
+.ms-home-bento-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; color: var(--color-accent-text); font-size: 12px; }
+.ms-home-bento-tags span { padding: 4px 8px; border: 1px solid #393264; border-radius: var(--radius-sm); }
 .ms-home-bento-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .ms-home-btn-primary { background: var(--ms-blue); color: #fff; }
 .ms-home-btn-secondary { border-color: var(--ms-gray-60); background: transparent; color: var(--ms-gray-170); }
@@ -122,23 +121,23 @@
 .ms-home-taxa-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .ms-home-taxon-wrap { min-width: 0; }
 .ms-home-taxon-card { height: 100%; }
-.ms-home-taxon-frame { display: grid; place-items: center; flex: 0 0 auto; height: 156px; padding: 16px; border-bottom: 1px solid var(--color-border-subtle); background: #fff; }
+.ms-home-taxon-frame { color-scheme: light; display: grid; place-items: center; flex: 0 0 auto; height: 156px; padding: 16px; border-bottom: 1px solid var(--color-border-subtle); background: #fff; }
 .ms-home-taxon-frame img { display: block; width: auto; height: auto; max-width: min(100%, 136px); max-height: 124px; object-fit: contain; }
 .ms-home-taxon-meta { display: flex; flex-direction: column; gap: 8px; padding: 16px; }
 .ms-home-taxon-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .ms-home-taxon-name { font-size: 16px; font-weight: 600; line-height: 1.3; }
-.ms-home-taxon-arrow { color: var(--ms-blue); font-size: 16px; }
+.ms-home-taxon-arrow { color: var(--color-accent-text); font-size: 16px; }
 .ms-home-taxon-card:hover .ms-home-taxon-name { text-decoration: underline; text-underline-offset: 4px; }
 .ms-home-taxon-age, .ms-home-taxon-zone { color: var(--color-text-muted); font-size: 12px; line-height: 1.5; }
 .ms-home-taxon-zone { padding-top: 8px; border-top: 1px solid var(--color-border-subtle); }
 .ms-home-edu-media { aspect-ratio: 16 / 10; }
 
 @media (min-width: 1440px) {
-  .ms-home-banner { min-height: 600px; }
+  .ms-home-banner { min-height: 680px; }
 }
 @media (max-width: 1100px) {
   .ms-home-taxa-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .ms-home-hero-title { font-size: 42px; }
+  .ms-home-hero-title { font-size: clamp(36px, 4.4vw, 48px); }
   .ms-home-hero-text { font-size: 16px; }
   .ms-home-quick-card { padding-inline: 16px; }
   .ms-home-quick-sub { display: none; }
@@ -150,7 +149,7 @@
 @media (max-width: 859px) {
   .ms-home-banner { grid-template-columns: minmax(0, 1fr); gap: 32px; min-height: 0; }
   .ms-home-banner-copy { max-width: 650px; }
-  .ms-home-hero-title { max-width: 23ch; font-size: clamp(36px, 5.2vw, 44px); }
+  .ms-home-hero-title { max-width: 23ch; font-size: clamp(34px, 5.2vw, 48px); }
   .ms-home-banner-image-frame { aspect-ratio: 16 / 9; }
   .ms-home-slide-tabs { gap: 20px; }
   .ms-home-slide-tab-num { display: none; }
@@ -167,9 +166,9 @@
   .ms-home-slide-tab { min-height: 60px; padding-block: 16px; }
   .ms-home-dock-right { margin-inline: auto; }
   .ms-home-quick-section { padding-block: 20px; }
-  .ms-home-quick-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 8px; }
-  .ms-home-quick-card { flex-direction: column; align-items: center; gap: 12px; padding: 16px 8px; border: 0; text-align: center; }
-  .ms-home-quick-card:first-child, .ms-home-quick-card:last-child { padding-inline: 8px; }
+  .ms-home-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .ms-home-quick-card { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 16px; }
+  .ms-home-quick-card:last-child { grid-column: 1 / -1; flex-direction: row; align-items: center; }
   .ms-home-quick-title { font-size: 14px; }
   .ms-home-quick-icon { width: 24px; height: 24px; }
   .ms-home-event-gallery { gap: 12px; }
@@ -177,7 +176,7 @@
   .ms-home-bento-feature { grid-template-columns: minmax(0, 1fr); padding: 24px; }
   .ms-home-bento-feature-visual img { aspect-ratio: 16 / 9; }
   .ms-home-bento-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ms-home-persona-panel { padding-block: 24px; }
+  .ms-home-persona-panel { padding: 24px; }
   .ms-home-persona-panel > .ms-btn { flex-shrink: 1; }
   .ms-home-taxon-frame { height: 140px; padding: 14px; }
   .ms-home-taxon-frame img { max-height: 112px; }
@@ -185,4 +184,8 @@
   .ms-home-taxon-name { font-size: 16px; overflow-wrap: anywhere; }
   .ms-home-taxon-age, .ms-home-taxon-zone { font-size: 12px; }
   .ms-home-taxon-arrow { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-home-quick-card:hover { transform: none; }
 }

@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/expert-validation/:path*",
-      "destination": "https://foraminifera-fossil.onrender.com/api/expert-validation/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -12,8 +12,6 @@ const navigation = [
   { to: "/vlm", key: "nav.vlm" },
   { to: "/jeoloji", key: "nav.geology" },
   { to: "/lab", key: "nav.lab" },
-  { to: "/expert-validation", key: "nav.expertValidation" },
-  { to: "/uzman-rehberi", key: "nav.expertGuide" },
   { to: "/hakkinda", key: "nav.about" },
   { to: "/iletisim", key: "nav.contact" },
 ];
@@ -58,6 +56,7 @@ export default function Navbar() {
     }
   });
   const headerRef = useRef(null);
+  const sentinelRef = useRef(null);
   const brandRef = useRef(null);
   const toggleRef = useRef(null);
   const exploreRef = useRef(null);
@@ -104,6 +103,11 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (typeof IntersectionObserver !== "undefined") {
+      const observer = new IntersectionObserver(([entry]) => setIsScrolled(!entry.isIntersecting));
+      observer.observe(sentinelRef.current);
+      return () => observer.disconnect();
+    }
     function onScroll() {
       setIsScrolled(window.scrollY > 4);
     }
@@ -171,8 +175,21 @@ export default function Navbar() {
   }
 
   return (
+    <>
+    <div ref={sentinelRef} className="navbar-sentinel" aria-hidden="true" />
     <header className={`navbar${isScrolled ? " is-scrolled" : ""}`} ref={headerRef} onKeyDown={handleEscape}>
       <a className="navbar-skip" href="#main-content">{lang === "tr" ? "Ana içeriğe atla" : "Skip to main content"}</a>
+      {isAnnouncementVisible && (
+        <aside className="navbar-announcement" aria-label={lang === "tr" ? "GeoKnow duyurusu" : "GeoKnow announcement"}>
+          <div className="navbar-announcement-content">
+            <span>{text.message}</span>
+            <Link to={announcement.to} onClick={closeMenus}>{text.link}</Link>
+          </div>
+          <button type="button" className="navbar-announcement-close" onClick={dismissAnnouncement} aria-label={lang === "tr" ? "Duyuruyu kapat" : "Dismiss announcement"}>
+            <Icon name="close" />
+          </button>
+        </aside>
+      )}
       <div className="navbar-container">
         <button ref={toggleRef} type="button" className="navbar-toggle" onClick={() => setIsMenuOpen(open => !open)} aria-label={lang === "tr" ? (isMenuOpen ? "Menüyü kapat" : "Menüyü aç") : (isMenuOpen ? "Close menu" : "Open menu")} aria-expanded={isMenuOpen} aria-controls="site-navigation">
           <Icon name={isMenuOpen ? "close" : "menu"} />
@@ -203,18 +220,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isAnnouncementVisible && (
-        <aside className="navbar-announcement" aria-label={lang === "tr" ? "GeoKnow duyurusu" : "GeoKnow announcement"}>
-          <div className="navbar-announcement-content">
-            <span>{text.message}</span>
-            <Link to={announcement.to} onClick={closeMenus}>{text.link}</Link>
-          </div>
-          <button type="button" className="navbar-announcement-close" onClick={dismissAnnouncement} aria-label={lang === "tr" ? "Duyuruyu kapat" : "Dismiss announcement"}>
-            <Icon name="close" />
-          </button>
-        </aside>
-      )}
-      {isSearchOpen && <SiteSearchDialog onClose={closeSearch} />}
     </header>
+    {isSearchOpen && <SiteSearchDialog onClose={closeSearch} />}
+    </>
   );
 }

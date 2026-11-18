@@ -3,14 +3,14 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 .lab-wrapper {
-  --lab-bg: #202a33;
-  --lab-panel: #202a33;
+  --lab-bg: #0c0f1b;
+  --lab-panel: #0c0f1b;
   --lab-border: rgb(255 255 255 / 16%);
   --lab-border-strong: rgb(255 255 255 / 35%);
   --lab-text: #eef6fc;
   --lab-muted: rgba(206, 226, 242, 0.72);
-  --lab-accent: #91caff;
-  --lab-accent-deep: #0067b8;
+  --lab-accent: #b9b3ff;
+  --lab-accent-deep: #4945ff;
   --lab-plankton: #e58bb8;
   --lab-art: #c79bdc;
   --lab-danger: #ff8a80;
@@ -21,7 +21,7 @@
   height: calc(100dvh - var(--header-height));
   min-height: 480px;
   overflow: hidden;
-  background: #061824;
+  background: #040711;
   font-family: var(--font-base), system-ui, sans-serif;
   color: var(--lab-text);
 }
@@ -603,12 +603,13 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
 }
 
 /* Viewer side */
 .lab-stage {
   position: relative;
+  min-width: 0;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -742,6 +743,7 @@
 
 /* Info side */
 .lab-info {
+  min-width: 0;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -1287,7 +1289,7 @@
   }
 
   .lab-inspect-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(260px, 46%) 1fr;
   }
 

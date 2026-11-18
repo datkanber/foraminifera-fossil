@@ -1,5 +1,5 @@
 /**
- * microsoft.com style page banner used at the top of every sub-page.
+ * Shared page banner. Presentation follows the GeoKnow theme tokens.
  *
  * <PageHero
  *   eyebrow="GeoKnow"

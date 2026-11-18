@@ -1,33 +1,8 @@
 /*
- * GeoKnow global styles + shared Microsoft-style components.
+ * GeoKnow global styles and shared components.
  * Shared classes are prefixed with `ms-` and documented in
  * client/src/styles/DESIGN.md.
  */
-
-/* Segoe UI fallback for platforms where it is not installed. */
-@font-face {
-  font-family: "GeoKnow Segoe UI";
-  src: local("Segoe UI"), url("https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "GeoKnow Segoe UI";
-  src: local("Segoe UI Semibold"), url("https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "GeoKnow Segoe UI";
-  src: local("Segoe UI Bold"), url("https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
 
 *,
 *::before,
@@ -195,7 +170,7 @@ button:disabled {
 
 .ms-reveal.is-pending {
   opacity: 0;
-  transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 20px, 0);
 }
 
 .ms-reveal.is-visible {
@@ -425,7 +400,7 @@ button:disabled {
 .ms-page-hero-media--contain .ms-page-hero-media-frame { background: #fff; }
 .ms-page-hero-media--contain img { padding: 24px; object-fit: contain; }
 @keyframes ms-hero-copy {
-  from { opacity: 0; transform: translate3d(0, 8px, 0); }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
   to { opacity: 1; transform: none; }
 }
 @media (max-width: 859px) {
@@ -467,12 +442,12 @@ button:disabled {
   cursor: not-allowed;
 }
 .ms-btn svg { width: 18px; height: 18px; flex: 0 0 auto; }
-.ms-btn--secondary { border-color: var(--ms-gray-60); background: #fff; color: var(--ms-gray-170); }
+.ms-btn--secondary { border-color: var(--ms-gray-60); background: var(--color-surface); color: var(--ms-gray-170); }
 .ms-btn--secondary:hover { border-color: var(--ms-gray-130); background: var(--ms-gray-20); }
 .ms-btn--secondary:active { background: var(--ms-gray-40); }
-.ms-btn--outline { border-color: var(--ms-blue); background: transparent; color: var(--ms-blue); }
+.ms-btn--outline { border-color: var(--ms-blue); background: transparent; color: var(--color-accent-text); }
 .ms-btn--outline:hover { background: var(--ms-blue-tint); }
-.ms-btn--light { background: #fff; color: var(--ms-gray-170); }
+.ms-btn--light { background: var(--color-surface); color: var(--ms-gray-170); }
 .ms-btn--light:hover { background: var(--ms-gray-30); }
 .ms-btn--ghost-light { border-color: rgb(255 255 255 / 70%); background: transparent; color: #fff; }
 .ms-btn--ghost-light:hover { border-color: #fff; background: rgb(255 255 255 / 12%); }
@@ -487,7 +462,7 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -524,7 +499,7 @@ button:disabled {
 }
 
 .ms-text-link {
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -543,7 +518,7 @@ button:disabled {
   overflow: hidden;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-text);
   box-shadow: var(--shadow-2);
   transition: box-shadow var(--duration-normal) var(--ease-easy),
@@ -608,7 +583,7 @@ a.ms-card:hover .ms-card-media img {
 .ms-panel {
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: var(--shadow-2);
 }
 
@@ -683,7 +658,7 @@ a.ms-card:hover .ms-card-media img {
   border: 1px solid var(--ms-gray-60);
   border-bottom-color: var(--ms-gray-130);
   border-radius: var(--radius-md);
-  background: #fff;
+  background: var(--color-surface);
   color: var(--ms-gray-170);
   font-size: 15px;
   transition: border-color var(--duration-faster) var(--ease-easy), box-shadow var(--duration-normal) var(--ease-decelerate-max);
@@ -847,7 +822,7 @@ a.ms-card:hover .ms-card-media img {
 .ms-home-cta-title { margin: 0; font-size: var(--type-h2); line-height: 1.24; color: #fff; text-wrap: balance; }
 .ms-home-cta-desc { margin: 16px 0 0; font-size: 16px; line-height: 1.65; color: rgb(255 255 255 / 80%); }
 .ms-home-cta-buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-.ms-btn.ms-home-cta-btn-white { background: #fff; color: var(--ms-gray-170); }
+.ms-btn.ms-home-cta-btn-white { background: var(--color-surface); color: var(--ms-gray-170); }
 .ms-btn.ms-home-cta-btn-white:hover { background: var(--ms-gray-40); }
 .ms-btn.ms-home-cta-btn-ghost { border-color: rgb(255 255 255 / 65%); background: transparent; color: #fff; }
 .ms-btn.ms-home-cta-btn-ghost:hover { border-color: #fff; background: rgb(255 255 255 / 10%); }

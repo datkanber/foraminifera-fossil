@@ -1,10 +1,10 @@
 /* ==========================================================================
-   MICROSOFT FLUENT NEWS & EVENTS PAGE STYLES (GeoKnow)
+   GEOKNOW NEWS & EVENTS PAGE STYLES (GeoKnow)
    ========================================================================== */
 
 .ms-news-shell {
   width: 100%;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .ms-news-hero {
@@ -56,7 +56,7 @@
   border-bottom: 1px solid var(--stone-rule);
   font-size: 15px;
   font-weight: 600;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
 }
 .stone-page-label > span:last-child {
   color: var(--stone-muted);
@@ -76,7 +76,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0;
@@ -201,7 +201,7 @@
 }
 .stone-report-sidebar a:hover {
   background: var(--ms-gray-20);
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
 }
 .stone-report-sidebar a > span {
   display: block;
@@ -248,7 +248,7 @@
   align-items: baseline;
   flex-wrap: wrap;
   gap: 12px;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 8px;
@@ -299,7 +299,7 @@
 }
 .stone-agenda-time {
   margin-bottom: 2px;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 12px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -323,7 +323,7 @@
   border-left: 3px solid var(--ms-blue);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   background: var(--ms-blue-tint);
-  color: var(--ms-navy);
+  color: var(--color-text);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -361,7 +361,7 @@
   margin-top: 28px;
 }
 .stone-team-grid > section {
-  background: #ffffff;
+  background: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   padding: 24px;
@@ -398,7 +398,7 @@
 .stone-press-links > a {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   padding: 24px;
@@ -418,7 +418,7 @@
   width: 100%;
   font-size: 13px;
   font-weight: 600;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
 }
 .stone-press-meta time {
   color: var(--stone-muted);
@@ -438,7 +438,7 @@
   align-items: center;
   gap: 6px;
   margin-top: auto;
-  color: var(--ms-blue);
+  color: var(--color-accent-text);
   font-size: 14px;
   font-weight: 600;
 }
