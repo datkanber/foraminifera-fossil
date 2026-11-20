@@ -472,5 +472,242 @@
 .vlm-panel-title { margin: 0 0 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border-subtle); font-size: 18px; line-height: 1.4; }
 .upload-trigger { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 100%; min-height: 180px; padding: 24px 16px; border: 0; border-radius: inherit; background: transparent; }
 .upload-trigger:focus-visible { outline: 2px solid var(--ms-blue); outline-offset: -4px; }
+.upload-trigger:disabled { cursor: not-allowed; }
+
+/* ── Limited / On-Request Access Notice ── */
+.vlm-access-notice {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.9fr);
+  gap: 24px 32px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-left: 4px solid var(--ms-warning);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+}
+
+.vlm-access-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--ms-warning-bg);
+  border: 1px solid var(--ms-warning-border);
+  color: var(--ms-warning);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.vlm-access-title {
+  margin: 14px 0 8px;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.28;
+  color: var(--color-text);
+}
+
+.vlm-access-desc {
+  margin: 0;
+  max-width: 64ch;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.vlm-access-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 20px;
+}
+
+.vlm-access-meta {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--ms-gray-20);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.vlm-access-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.vlm-access-meta > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.vlm-access-meta dt {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.vlm-access-meta dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ── Locked left form preview ── */
+.vlm-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.vlm-panel-head .vlm-panel-title {
+  margin: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.vlm-lock-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--ms-gray-20);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.vlm-left--locked .upload-zone.is-locked,
+.vlm-left--locked .upload-zone.is-locked:hover {
+  border-color: var(--color-border);
+  background: var(--ms-gray-20);
+  opacity: 0.85;
+}
+
+.vlm-left--locked .form-group input:disabled {
+  background: var(--ms-gray-20);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.78;
+}
+
+.vlm-left--locked .checkbox-group {
+  background: var(--ms-gray-20);
+  border-color: var(--color-border-subtle);
+  opacity: 0.8;
+}
+
+.vlm-left--locked .checkbox-group input:disabled,
+.vlm-left--locked .checkbox-group label {
+  cursor: not-allowed;
+}
+
+.submit-btn--contact {
+  text-decoration: none;
+}
+
+/* ── Restricted mode workflow & sample preview ── */
+.vlm-restricted-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vlm-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.vlm-workflow-step {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--ms-gray-20);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.vlm-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--ms-blue-tint);
+  border: 1px solid var(--ms-blue-tint-strong);
+  color: var(--color-accent-text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vlm-workflow-step h3 {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.vlm-workflow-step p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.vlm-sample-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vlm-sample-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.vlm-sample-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.vlm-suggestion--sample {
+  box-shadow: var(--shadow-2);
+  background: var(--ms-gray-10);
+}
+
+@media (max-width: 960px) {
+  .vlm-access-notice {
+    grid-template-columns: 1fr;
+  }
+
+  .vlm-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) { .vlm-left { position: static; max-height: none; overflow: visible; } }
-@media (max-width: 480px) { .vlm-left, .vlm-right { padding: 20px; } .form-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .vlm-left, .vlm-right, .vlm-access-notice { padding: 20px; } .form-grid { grid-template-columns: minmax(0, 1fr); } }

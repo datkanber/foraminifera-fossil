@@ -290,19 +290,20 @@ export async function answerQuestion(query, lang = "tr") {
   if (hasAny(norm, ["gorsel yz", "yapay zeka", "vlm", "ince kesit", "foto", "goruntu", "visual ai", "thin section", "artificial intelligence", "image", "gemini"])) {
     return {
       text: isTr
-        ? "Görsel YZ (/vlm) modülü, mikroskop ince kesit fotoğraflarınızı analiz ederek loca dizilimi, kavkı formu ve duvar yapısı için otomatik gözlem taslağı üretir ve kural tabanlı tanı sistemine veri sağlar."
-        : "The Visual AI (/vlm) module analyzes thin-section micrographs to generate draft observations for chamber arrangement, test form, and wall structure before rule-based diagnosis.",
+        ? "Görsel YZ (/vlm) modülü, mikroskop ince kesit fotoğraflarından loca dizilimi, kavkı formu ve duvar yapısı gibi morfolojik karakterleri çıkarır. API kotası yönetimi nedeniyle şu anda sınırlı ve talep üzerine erişim kapsamındadır."
+        : "The Visual AI (/vlm) module extracts draft morphological observations from thin-section micrographs. To protect API quotas, open public access is currently paused and available on request.",
       bullets: isTr
         ? [
-            "İnce kesit görüntüsü yükleyip otomatik karakter taslağı çıkarabilirsiniz.",
-            "Sonuçlar kesin tür tayini değil, uzman kontrolüne yönelik karar desteğidir.",
+            "Akademik araştırma veya demo erişimi talep etmek için İletişim (/iletisim) sayfasından ekibimize yazabilirsiniz.",
+            "API gerektirmeyen Tanı Yap (/tani) ve 3D Lab (/lab) araçlarını sınırsız şekilde hemen kullanabilirsiniz.",
           ]
         : [
-            "Upload thin-section imagery to extract draft morphological observations.",
-            "Outputs provide transparent decision support alongside rule-based verification.",
+            "Contact our team via the Contact page (/iletisim) to request demo or research access.",
+            "Rule-based Diagnosis (/tani) and the 3D Lab (/lab) remain fully open without any usage limit.",
           ],
       links: [
-        { to: "/vlm", label: isTr ? "Görsel YZ'yi Aç" : "Open Visual AI" },
+        { to: "/iletisim", label: isTr ? "Erişim İçin İletişim" : "Contact for Access" },
+        { to: "/vlm", label: isTr ? "Görsel YZ Sayfası" : "Visual AI Page" },
         { to: "/tani", label: isTr ? "Kural Tabanlı Tanı" : "Rule-Based Diagnosis" },
       ],
     };
