@@ -138,8 +138,8 @@
 
 .ms-back-to-top {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 24px;
+  bottom: 82px;
   z-index: 900;
   display: inline-flex;
   align-items: center;
@@ -176,6 +176,18 @@
 @media (max-width: 479px) {
   .site-footer-columns { grid-template-columns: minmax(0, 1fr); }
   .site-footer-copy { margin-left: 0; white-space: normal; }
+}
+
+@media (max-width: 600px) {
+  .ms-back-to-top {
+    right: 12px;
+    bottom: 68px;
+  }
+}
+
+body:has(.geoknow-chat-panel) .ms-back-to-top {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .site-footer :focus-visible { outline-color: var(--color-primary); }

@@ -149,9 +149,9 @@ function Vlm() {
         title={t("vlm.title")}
         text={t("vlm.desc")}
         tone="gray"
+        backdrop="thinsection"
         image={microscopeWorkbenchVisual}
-        imageAlt={lang === "tr" ? "İnce kesit incelemeye hazırlanan optik mikroskobun temsili laboratuvar görünümü" : "Illustrative laboratory scene with an optical microscope prepared for thin-section examination"}
-        mediaTag={lang === "tr" ? "Mikroskopi ve görsel analiz · Temsili görsel" : "Microscopy and visual analysis · Illustrative image"}
+        imageAlt={lang === "tr" ? "İnce kesit incelemeye hazırlanan optik mikroskop" : "Optical microscope prepared for thin-section examination"}
         actions={
           <Link to="/tani" className="ms-btn ms-btn--secondary">
             <span>{lang === "tr" ? "Kural Tabanlı Tanıya Geç" : "Switch to Rule-Based Diagnosis"}</span>

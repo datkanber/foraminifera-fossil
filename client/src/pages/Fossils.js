@@ -3,7 +3,7 @@ import PageHero from "../components/ms/PageHero";
 import "../styles/pages/fossils.css";
 import ceratiteIcon from "../assets/johnny-automatic-ceratite.svg";
 import foraminiferaIcon from "../assets/foraminifera.svg";
-import foram1 from "../assets/images/foram1.jpg";
+import foram1 from "../assets/images/foram1-cutout.png";
 import TaxonProfileCard from "../components/TaxonProfileCard";
 import { useLanguage } from "../contexts/LanguageContext";
 import characterDictionary from "../../../api/data/characters.json";
@@ -73,8 +73,9 @@ function Fossils() {
         title={t("fossils.title")}
         text={t("fossils.desc")}
         tone="gray"
+        backdrop="spiral"
         image={foram1}
-        imageFit="contain"
+        imageFit="cutout"
         imageAlt={lang === "tr" ? "Foraminifera morfolojisi" : "Foraminifera morphology"}
       />
 

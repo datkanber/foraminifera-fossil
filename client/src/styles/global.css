@@ -399,6 +399,27 @@ button:disabled {
 .ms-page-hero--dark .ms-page-hero-media-tag { color: rgb(255 255 255 / 80%); }
 .ms-page-hero-media--contain .ms-page-hero-media-frame { background: #fff; }
 .ms-page-hero-media--contain img { padding: 24px; object-fit: contain; }
+.ms-page-hero-media--cutout .ms-page-hero-media-frame {
+  aspect-ratio: auto;
+  min-height: 290px;
+  max-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.ms-page-hero-media--cutout img {
+  width: auto;
+  max-width: min(100%, 340px);
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgb(23 43 58 / 12%));
+}
 @keyframes ms-hero-copy {
   from { opacity: 0; transform: translate3d(0, 20px, 0); }
   to { opacity: 1; transform: none; }
@@ -406,6 +427,222 @@ button:disabled {
 @media (max-width: 859px) {
   .ms-page-hero--media .ms-page-hero-inner { grid-template-columns: minmax(0, 1fr); }
   .ms-page-hero-media-frame { aspect-ratio: 16 / 9; }
+}
+
+/* ── Hero backdrop: grid + strata + contours (components/ms/HeroBackdrop.js) ── */
+
+.pointer-events-none { pointer-events: none; }
+.-z-10 { z-index: -10; }
+
+/* The hero becomes its own stacking context so the -z-10 layer stays above
+   the hero background but below the text and photo. */
+.has-hero-backdrop {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hero-bd {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-bd-art,
+.hero-bd-veil,
+.hero-bd-grid {
+  position: absolute;
+  inset: 0;
+}
+
+/* Artwork dissolves towards the left so the headline sits on clean white. */
+.hero-bd-art {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, rgb(0 0 0 / 48%) 32%, #000 54%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 10%, rgb(0 0 0 / 48%) 32%, #000 54%);
+}
+
+.hero-bd-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pointer-reactive 2-plane parallax depth */
+.hero-bd-parallax-back,
+.hero-bd-parallax-front {
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.hero-bd-parallax-back {
+  transform: translate3d(calc(var(--hx, 0) * -12px), calc(var(--hy, 0) * -9px), 0);
+}
+
+.hero-bd-parallax-front {
+  transform: translate3d(calc(var(--hx, 0) * 18px), calc(var(--hy, 0) * 14px), 0);
+}
+
+.hero-bd-breathe,
+.hero-bd-drift,
+.hero-bd-wave-a,
+.hero-bd-wave-b,
+.hero-bd-fault-slip,
+.hero-bd-spin,
+.hero-bd-spin-rev,
+.hero-bd-scan,
+.hero-bd-float,
+.hero-bd-float-slow,
+.hero-bd-dash-flow,
+.hero-bd-route-flow,
+.hero-bd-grain-a,
+.hero-bd-grain-b,
+.hero-bd-grain-c,
+.hero-bd-pulse {
+  transform-box: view-box;
+  will-change: transform, opacity;
+}
+
+.hero-bd-breathe { animation: hero-bd-breathe 14s ease-in-out infinite alternate; }
+.hero-bd-drift { transform-origin: 100% 100%; animation: hero-bd-drift 12s ease-in-out infinite alternate; }
+.hero-bd-wave-a { animation: hero-bd-wave-a 11s ease-in-out infinite alternate; }
+.hero-bd-wave-b { animation: hero-bd-wave-b 15s ease-in-out infinite alternate; }
+.hero-bd-fault-slip { animation: hero-bd-fault-slip 9s ease-in-out infinite alternate; }
+.hero-bd-spin { animation: hero-bd-spin 28s linear infinite; }
+.hero-bd-spin-rev { animation: hero-bd-spin 36s linear infinite reverse; }
+.hero-bd-scan { animation: hero-bd-scan 6.5s ease-in-out infinite; }
+.hero-bd-float { transform-origin: 75% 50%; animation: hero-bd-float 11s ease-in-out infinite alternate; }
+.hero-bd-float-slow { transform-origin: 75% 50%; animation: hero-bd-float 16s ease-in-out infinite alternate-reverse; }
+.hero-bd-dash-flow { animation: hero-bd-dash-flow 7.5s linear infinite; will-change: stroke-dashoffset; }
+.hero-bd-route-flow { animation: hero-bd-route-flow 2.8s linear infinite; will-change: stroke-dashoffset; }
+.hero-bd-grain-a { animation: hero-bd-shimmer 4.2s ease-in-out infinite alternate; }
+.hero-bd-grain-b { animation: hero-bd-shimmer 5.6s ease-in-out -1.8s infinite alternate; }
+.hero-bd-grain-c { animation: hero-bd-shimmer 6.8s ease-in-out -3.4s infinite alternate; }
+.hero-bd-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hero-bd-pulse 3s ease-out infinite;
+}
+
+@keyframes hero-bd-breathe {
+  from { transform: rotate(-2deg) scale(0.985); }
+  to { transform: rotate(4.5deg) scale(1.045); }
+}
+
+@keyframes hero-bd-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-44px, 10px, 0); }
+}
+
+@keyframes hero-bd-wave-a {
+  from { transform: translate3d(-42px, 0, 0); }
+  to { transform: translate3d(42px, -8px, 0); }
+}
+
+@keyframes hero-bd-wave-b {
+  from { transform: translate3d(38px, -6px, 0); }
+  to { transform: translate3d(-38px, 8px, 0); }
+}
+
+@keyframes hero-bd-fault-slip {
+  from { transform: translate3d(0, 26px, 0); }
+  to { transform: translate3d(-6px, 44px, 0); }
+}
+
+@keyframes hero-bd-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes hero-bd-scan {
+  0% { transform: translateY(0); opacity: 0; }
+  12%, 86% { opacity: 1; }
+  100% { transform: translateY(668px); opacity: 0; }
+}
+
+@keyframes hero-bd-float {
+  from { transform: translate3d(12px, 8px, 0); }
+  to { transform: translate3d(-24px, -14px, 0); }
+}
+
+@keyframes hero-bd-dash-flow {
+  from { stroke-dashoffset: 420; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes hero-bd-route-flow {
+  from { stroke-dashoffset: 40; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes hero-bd-shimmer {
+  from { opacity: 0.45; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-bd-pulse {
+  0% { transform: scale(0.45); opacity: 0.85; }
+  75%, 100% { transform: scale(1.85); opacity: 0; }
+}
+
+/* Soft white melt behind the copy column. */
+.hero-bd-veil {
+  background:
+    radial-gradient(ellipse 50% 80% at 15% 50%, #ffffff 0%, rgb(255 255 255 / 92%) 40%, rgb(255 255 255 / 0%) 100%),
+    linear-gradient(90deg, #ffffff 0%, rgb(255 255 255 / 70%) 22%, rgb(255 255 255 / 0%) 46%);
+}
+
+/* Very faint grid (≈5% opacity) matching GeoKnow primary blue. */
+.hero-bd-grid {
+  background-image:
+    linear-gradient(to right, rgb(0 103 184 / 4.5%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(0 103 184 / 4.5%) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 82%, transparent 100%);
+}
+
+/* A quiet edge so photos read as sitting in front of the artwork. */
+.has-hero-backdrop .ms-page-hero-media:not(.ms-page-hero-media--cutout) .ms-page-hero-media-frame {
+  box-shadow: var(--shadow-16);
+}
+
+@media (max-width: 859px) {
+  /* Image stacks under the copy: fade the artwork in from the bottom. */
+  .hero-bd-art {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, transparent 30%, rgb(0 0 0 / 45%) 52%, #000 74%);
+    mask-image: linear-gradient(180deg, transparent 0%, transparent 30%, rgb(0 0 0 / 45%) 52%, #000 74%);
+  }
+
+  .hero-bd-veil {
+    background: linear-gradient(180deg, #ffffff 0%, rgb(255 255 255 / 85%) 30%, rgb(255 255 255 / 0%) 55%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bd-parallax-back,
+  .hero-bd-parallax-front {
+    transform: none;
+    transition: none;
+  }
+
+  .hero-bd-breathe,
+  .hero-bd-drift,
+  .hero-bd-wave-a,
+  .hero-bd-wave-b,
+  .hero-bd-fault-slip,
+  .hero-bd-spin,
+  .hero-bd-spin-rev,
+  .hero-bd-scan,
+  .hero-bd-float,
+  .hero-bd-float-slow,
+  .hero-bd-dash-flow,
+  .hero-bd-route-flow,
+  .hero-bd-grain-a,
+  .hero-bd-grain-b,
+  .hero-bd-grain-c,
+  .hero-bd-pulse { animation: none; }
 }
 
 /* ───────────────────────── Buttons ───────────────────────── */

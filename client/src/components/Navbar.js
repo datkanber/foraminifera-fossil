@@ -44,6 +44,51 @@ function Icon({ name, ...props }) {
   );
 }
 
+function NavbarClock({ lang }) {
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const locale = lang === "tr" ? "tr-TR" : "en-GB";
+  const timeText = new Intl.DateTimeFormat(locale, {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(now);
+  const dateText = new Intl.DateTimeFormat(locale, {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(now);
+  const fullLabel = new Intl.DateTimeFormat(locale, {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(now);
+
+  return (
+    <time
+      className="navbar-clock"
+      dateTime={now.toISOString()}
+      title={fullLabel}
+      aria-label={fullLabel}
+    >
+      <span className="navbar-clock-date">{dateText}</span>
+      <span className="navbar-clock-sep" aria-hidden="true">·</span>
+      <span className="navbar-clock-time">{timeText}</span>
+    </time>
+  );
+}
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -217,6 +262,7 @@ export default function Navbar() {
           <button type="button" className="navbar-lang-btn" onClick={toggleLanguage} aria-label={lang === "tr" ? "Switch to English" : "Türkçeye geç"} title={lang === "tr" ? "Switch to English" : "Türkçeye geç"}>
             <Icon name="globe" /><span>{lang === "tr" ? "TR" : "EN"}</span>
           </button>
+          <NavbarClock lang={lang} />
         </div>
       </div>
 

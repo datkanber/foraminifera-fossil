@@ -25,10 +25,10 @@ function About() {
             : ["7 Pilot Taxa", "30+ Diagnostic Rules", "Open Ontology"]
         }
         tone="gray"
+        backdrop="network"
         image={heroAboutLab}
         imageAlt={lang === "tr" ? "ESOGÜ'de STONE atölyesine katılan araştırmacılar" : "Researchers at the STONE workshop at ESOGÜ"}
         imagePosition="center center"
-        mediaTag={lang === "tr" ? "STONE atölyesi · Eskişehir Osmangazi Üniversitesi" : "STONE workshop · Eskişehir Osmangazi University"}
         actions={
           <div className="ms-page-hero-actions">
             <Link to="/tani" className="ms-btn">

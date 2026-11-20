@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SiteChatbot from "./components/SiteChatbot";
 import PageTransition, { RouteProgress } from "./components/ms/PageTransition";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -45,6 +46,7 @@ function App() {
           </div>
 
           <Footer />
+          <SiteChatbot />
         </div>
       </BrowserRouter>
     </LanguageProvider>

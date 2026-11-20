@@ -1,0 +1,340 @@
+/* Floating bottom-right GeoKnow Assistant synced to site Fluent 2 tokens. */
+
+.geoknow-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  font-family: var(--font-base);
+}
+
+.geoknow-chat-launcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 18px 0 15px;
+  border: 1px solid var(--ms-blue-hover);
+  border-radius: var(--radius-lg);
+  background: var(--ms-blue);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: var(--shadow-16);
+  cursor: pointer;
+  transition: background-color var(--duration-faster) var(--ease-easy),
+    box-shadow var(--duration-normal) var(--ease-decelerate-max);
+}
+
+.geoknow-chat-launcher:hover {
+  background: var(--ms-blue-hover);
+  box-shadow: var(--shadow-28);
+}
+
+.geoknow-chat-launcher svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.geoknow-chat-launcher.is-open {
+  min-width: 46px;
+  padding: 0 12px;
+  background: var(--ms-navy);
+  border-color: var(--ms-navy-2);
+}
+
+.geoknow-chat-launcher.is-open .geoknow-chat-launcher-label {
+  display: none;
+}
+
+.geoknow-chat.is-compact-route .geoknow-chat-launcher:not(.is-open) {
+  padding: 0 12px;
+}
+
+.geoknow-chat.is-compact-route .geoknow-chat-launcher:not(.is-open) .geoknow-chat-launcher-label {
+  display: none;
+}
+
+.geoknow-chat-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(392px, calc(100vw - 24px));
+  height: min(540px, calc(100dvh - 104px));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-28);
+  animation: geoknow-chat-in 220ms var(--ease-decelerate-max) both;
+}
+
+@keyframes geoknow-chat-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.geoknow-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--ms-blue-hover);
+  background: var(--ms-blue);
+  color: #ffffff;
+}
+
+.geoknow-chat-header-info {
+  min-width: 0;
+}
+
+.geoknow-chat-header-info h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.geoknow-chat-header-info p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgb(255 255 255 / 85%);
+}
+
+.geoknow-chat-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.geoknow-chat-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color var(--duration-faster) var(--ease-easy);
+}
+
+.geoknow-chat-icon-btn:hover {
+  background: rgb(255 255 255 / 16%);
+}
+
+.geoknow-chat-icon-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.geoknow-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--ms-gray-10);
+}
+
+.geoknow-chat-msg {
+  max-width: 90%;
+  padding: 11px 14px;
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.geoknow-chat-msg p {
+  margin: 0;
+}
+
+.geoknow-chat-msg.is-bot {
+  align-self: flex-start;
+  border: 1px solid var(--color-border-subtle);
+  background: #ffffff;
+  color: var(--color-text);
+  box-shadow: var(--shadow-2);
+}
+
+.geoknow-chat-msg.is-user {
+  align-self: flex-end;
+  background: var(--ms-blue);
+  color: #ffffff;
+}
+
+.geoknow-chat-msg.is-thinking p {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.geoknow-chat-bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ms-gray-150);
+}
+
+.geoknow-chat-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.geoknow-chat-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid var(--ms-blue-tint-strong);
+  border-radius: var(--radius-md);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue-pressed);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--duration-faster) var(--ease-easy),
+    border-color var(--duration-faster) var(--ease-easy);
+}
+
+.geoknow-chat-link-btn:hover {
+  background: #dceefa;
+  border-color: var(--ms-blue);
+}
+
+.geoknow-chat-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.geoknow-chat-prompt-btn {
+  padding: 6px 10px;
+  border: 1px solid var(--ms-blue-tint-strong);
+  border-radius: var(--radius-md);
+  background: var(--ms-blue-tint);
+  color: var(--ms-blue-pressed);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--duration-faster) var(--ease-easy);
+}
+
+.geoknow-chat-prompt-btn:hover {
+  background: #dceefa;
+}
+
+.geoknow-chat-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--color-border-subtle);
+  background: #ffffff;
+}
+
+.geoknow-chat-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 38px;
+  padding: 6px 12px;
+  border: 1px solid var(--ms-gray-60);
+  border-bottom: 2px solid var(--ms-gray-130);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.geoknow-chat-input:focus {
+  outline: none;
+  border-bottom-color: var(--ms-blue);
+}
+
+.geoknow-chat-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--ms-blue);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color var(--duration-faster) var(--ease-easy);
+}
+
+.geoknow-chat-send:hover:not(:disabled) {
+  background: var(--ms-blue-hover);
+}
+
+.geoknow-chat-send:disabled {
+  background: var(--ms-gray-40);
+  color: var(--ms-gray-110);
+  cursor: not-allowed;
+}
+
+.geoknow-chat-send svg {
+  width: 18px;
+  height: 18px;
+}
+
+.geoknow-chat :is(button, a, input):focus-visible {
+  outline: 2px solid var(--ms-blue);
+  outline-offset: 2px;
+}
+
+.geoknow-chat-header :focus-visible {
+  outline-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .geoknow-chat {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .geoknow-chat-launcher:not(.is-open) {
+    padding: 0 14px;
+  }
+
+  .geoknow-chat-panel {
+    width: calc(100vw - 24px);
+    height: min(490px, calc(100dvh - 84px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geoknow-chat-panel {
+    animation: none;
+  }
+}
+

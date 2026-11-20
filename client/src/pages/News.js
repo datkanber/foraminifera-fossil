@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { eventPhotos, stoneDays, pressSources, projectParticipants } from '../data/news';
+import HeroBackdrop from '../components/ms/HeroBackdrop';
 import Reveal from '../components/ms/Reveal';
 import '../styles/pages/news.css';
 
@@ -74,7 +75,7 @@ function Photograph({ photo, lang, text, onOpen, cover = false }) {
           decoding="async"
         />
       </button>
-      <figcaption>{photo.caption[lang]}</figcaption>
+      {!cover && <figcaption>{photo.caption[lang]}</figcaption>}
     </figure>
   );
 }
@@ -206,13 +207,9 @@ export default function News() {
 
   return (
     <main className="ms-news-shell" lang={lang}>
-      <section className="ms-news-hero">
+      <section className="ms-news-hero has-hero-backdrop">
+        <HeroBackdrop variant="heritage" />
         <div className="news-page ms-news-hero-inner">
-          <div className="stone-page-label">
-            <span>{text.pageTitle}</span>
-            <span>GeoKnow · {text.hostName}</span>
-          </div>
-
           <header className="stone-intro">
             <div className="stone-intro-copy">
               <p className="stone-event-date">Erasmus+ STONE<span aria-hidden="true">·</span>{text.date}</p>

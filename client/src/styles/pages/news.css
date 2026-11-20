@@ -10,8 +10,7 @@
 .ms-news-hero {
   position: relative;
   overflow: hidden;
-  padding-top: clamp(24px, 3vw, 36px);
-  background: var(--ms-gray-30);
+  background: #ffffff;
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
@@ -19,6 +18,10 @@
   position: relative;
   z-index: 1;
   padding-bottom: 0;
+}
+
+.has-hero-backdrop .stone-photograph--cover {
+  box-shadow: var(--shadow-16);
 }
 
 .news-page {
@@ -45,23 +48,6 @@
   gap: 8px;
   margin-top: 24px;
   border-bottom: 1px solid var(--color-border-subtle);
-}
-
-.stone-page-label {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--stone-rule);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-accent-text);
-}
-.stone-page-label > span:last-child {
-  color: var(--stone-muted);
-  font-size: 13px;
-  font-weight: 400;
 }
 
 .stone-intro {

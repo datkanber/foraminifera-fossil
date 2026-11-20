@@ -63,10 +63,10 @@ function Contact() {
             : ["ESOGÜ Geological Eng.", "GeoKnow Research Group", "Erasmus+ STONE"]
         }
         tone="gray"
+        backdrop="survey"
         image={heroContactHall}
         imageAlt={lang === "tr" ? "ESOGÜ jeoloji koleksiyonunu ziyaret eden STONE araştırma ekibi" : "The STONE research team visiting the ESOGÜ geology collection"}
         imagePosition="center center"
-        mediaTag={lang === "tr" ? "ESOGÜ jeoloji koleksiyonu · STONE araştırma ekibi" : "ESOGÜ geology collection · STONE research team"}
       />
 
       {/* ── 2. CONTACT CHANNELS GRID ── */}

@@ -6,17 +6,21 @@
  *   title="Page title"
  *   text="One or two sentences."
  *   tone="gray" | "light" | "brand" | "dark"
- *   image={src} imageAlt=""
+ *   backdrop="strata" | "outcrop" | "spiral" | "thinsection" | "network" | "survey" | "seismic" | "heritage"
+ *   image={src} imageAlt="" imageFit="cover" | "contain" | "cutout"
  *   highlights={["Tag 1", "Tag 2"]}
  *   mediaTag="Caption"
  *   actions={<Link className="ms-btn" to="/x">Go</Link>}
  * />
  */
+import HeroBackdrop from "./HeroBackdrop";
+
 export default function PageHero({
   eyebrow,
   title,
   text,
   tone = "gray",
+  backdrop = "strata",
   image,
   imageAlt = "",
   imagePosition,
@@ -30,12 +34,16 @@ export default function PageHero({
   const classes = ["ms-page-hero"];
   if (tone !== "gray") classes.push(`ms-page-hero--${tone}`);
   if (image) classes.push("ms-page-hero--media");
+  const showBackdrop = tone === "gray" || tone === "light";
+  if (showBackdrop) classes.push("has-hero-backdrop");
 
   const mediaClasses = ["ms-page-hero-media"];
   if (imageFit === "contain") mediaClasses.push("ms-page-hero-media--contain");
+  if (imageFit === "cutout") mediaClasses.push("ms-page-hero-media--cutout");
 
   return (
     <header className={classes.join(" ")}>
+      {showBackdrop && <HeroBackdrop variant={backdrop} />}
       <div className="ms-container ms-page-hero-inner">
         <div className="ms-page-hero-copy">
           {eyebrow && (

@@ -38,6 +38,7 @@ export default function Search() {
         eyebrow={lang === "tr" ? "Platform Araması" : "Site Search"}
         title={text.title}
         tone="gray"
+        backdrop="seismic"
       />
       <section className="ms-section">
         <div className="ms-container site-search-page">

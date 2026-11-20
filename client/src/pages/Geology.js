@@ -298,6 +298,7 @@ function Geology() {
             : "The current ontology focuses on the Paleocene and Eocene periods, representing key evolutionary radiation stages, depositional depths, and fossil environment records for larger benthic foraminifera."
         }
         tone="gray"
+        backdrop="outcrop"
         image={heroImg}
         imageAlt="Midas Monument and Geological Landscape"
         imagePosition="center 30%"
@@ -306,7 +307,6 @@ function Geology() {
           lang === "tr" ? "Tethys Karbonat Platformu" : "Tethys Carbonate Realm",
           lang === "tr" ? "18+ Ortam ve Derinlik Kaydı" : "18+ Depth & Environment Records",
         ]}
-        mediaTag={lang === "tr" ? "Saha Stratigrafisi · Paleosen–Eosen" : "Field Stratigraphy · Paleocene–Eocene"}
         actions={
           <Link to="/tani" className="ms-btn">
             <span>{lang === "tr" ? "Fosil Tanılamaya Geç" : "Go to Identification"}</span>

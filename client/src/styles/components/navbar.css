@@ -60,7 +60,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
   width: 100%;
   min-height: 68px;
   margin: 0 auto;
@@ -81,7 +81,7 @@
   min-width: 0;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 6px;
+  gap: 14px;
   padding: 0;
 }
 .navbar-menu > .navbar-link { flex-shrink: 0; }
@@ -92,7 +92,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 40px;
-  padding: 9px 10px;
+  padding: 9px 14px;
   border-radius: var(--radius-md);
   color: var(--ms-gray-170);
   font-size: inherit;
@@ -104,9 +104,9 @@
 
 .navbar-link::after {
   position: absolute;
-  right: 12px;
+  right: 14px;
   bottom: 1px;
-  left: 12px;
+  left: 14px;
   display: block;
   height: 2px;
   border-radius: 2px;
@@ -234,6 +234,42 @@
 .navbar-toggle { display: none; width: 40px; height: 40px; }
 .navbar-toggle svg { width: 22px; height: 22px; }
 
+.navbar-clock {
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  margin-left: 4px;
+  padding-left: 14px;
+  border-left: 1px solid var(--ms-gray-40);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.navbar-clock-date {
+  color: var(--ms-gray-130);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.navbar-clock-sep {
+  color: var(--ms-gray-80);
+  font-size: 13px;
+}
+
+.navbar-clock-time {
+  min-width: 58px;
+  color: var(--ms-gray-170);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
 .navbar-announcement {
   position: relative;
   display: flex;
@@ -305,9 +341,10 @@
 .navbar-announcement :focus-visible { outline-color: #fff !important; }
 
 @media (min-width: 1280px) and (max-width: 1599px) {
-  .navbar-menu { gap: 0; }
-  .navbar-link { padding-inline: 6px; }
-  .navbar-link::after { right: 6px; left: 6px; }
+  .navbar-container { gap: 22px; }
+  .navbar-menu { gap: 6px; }
+  .navbar-link { padding-inline: 11px; }
+  .navbar-link::after { right: 11px; left: 11px; }
   .navbar-explore { display: block; }
   .navbar-search-btn > span { display: none; }
 }
@@ -379,9 +416,14 @@
 }
 
 @media (max-width: 599px) {
-  .navbar-container { gap: 8px; padding: 0 8px; }
+  .navbar-container { gap: 4px; padding: 0 8px; }
+  .navbar-logo { width: 96px; height: 42px; }
   .navbar-tools { gap: 0; }
-  .navbar-lang-btn { min-width: 54px; gap: 6px; }
+  .navbar-lang-btn { min-width: 44px; padding-inline: 5px; gap: 4px; }
+  .navbar-clock { gap: 4px; margin-left: 2px; padding-left: 8px; }
+  .navbar-clock-date,
+  .navbar-clock-sep { font-size: 11px; }
+  .navbar-clock-time { min-width: 50px; font-size: 11.5px; }
   .navbar-announcement { padding: 12px 52px 12px 16px; font-size: 14px; line-height: 21px; }
   .navbar-announcement-close { right: 4px; }
 }

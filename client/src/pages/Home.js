@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+import HeroBackdrop from "../components/ms/HeroBackdrop";
 import { dayTwoPhotos } from "../data/fieldPhotos";
 import workshopPhoto from "../assets/photos/1792745417607.jpg";
 import collectionPhoto from "../assets/photos/1792745403944.jpg";
@@ -124,8 +125,8 @@ const heroSlides = [
       id: "visual-ai-thin-section",
       src: thinSectionVisual,
       caption: {
-        tr: "İnce kesitte kavkı duvarları ve loca düzeni · Temsili görsel",
-        en: "Test walls and chamber arrangements in thin section · Illustrative image",
+        tr: "İnce kesitte kavkı duvarları ve loca düzeni",
+        en: "Test walls and chamber arrangements in thin section",
       },
     },
     tabLabel: {
@@ -361,6 +362,8 @@ export default function Home() {
         onFocusCapture={() => setHasFocus(true)}
         onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setHasFocus(false); }}
       >
+        <div className="ms-home-hero-stage has-hero-backdrop">
+        <HeroBackdrop />
         <div className="ms-container ms-home-banner" role="tabpanel" id={`home-panel-${activeSlide.id}`} aria-labelledby={`home-tab-${activeSlide.id}`}>
             <div className="ms-home-banner-copy" key={activeSlide.id} aria-live={isUserPaused ? "polite" : "off"}>
               <p className="ms-eyebrow ms-home-kicker">{activeSlide.eyebrow[lang]}</p>
@@ -411,8 +414,8 @@ export default function Home() {
                 fetchPriority="high"
               />
             </div>
-            {activeSlide.photo.caption && <figcaption className="ms-home-banner-caption">{activeSlide.photo.caption[lang]}</figcaption>}
           </figure>
+        </div>
         </div>
 
           <div className="ms-home-carousel-dock">
