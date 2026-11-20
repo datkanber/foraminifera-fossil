@@ -48,11 +48,28 @@
   --ms-gray-190: #1a1a1a;
   --ms-success: #107c10;
   --ms-success-bg: #dff6dd;
+  --ms-success-border: #9fd89f;
   --ms-warning: #8a5300;
   --ms-warning-bg: #fff4ce;
+  --ms-warning-border: #f9e2ae;
+  --ms-warning-hover: #fbe9b6;
   --ms-danger: #c50f1f;
   --ms-danger-bg: #fde7e9;
+  --ms-danger-border: #eeacb2;
   --ms-info-bg: #ebf3fc;
+
+  /* Hero backdrop geometric plate palette */
+  --bd-blue: #0067b8;
+  --bd-azure: #0078d4;
+  --bd-sky: #9cd8f4;
+  --bd-tint: #cfe4f4;
+  --bd-soft: #edf5fb;
+  --bd-navy: #172b3a;
+  --bd-slate: #213b4d;
+  --bd-sage: #5f8f7b;
+  --bd-sage-soft: #dcebe4;
+  --bd-sep: #ffffff;
+  --bd-grid: rgb(0 103 184 / 4.5%);
 
   --font-base: "Segoe UI", Arial, sans-serif;
   --font-display: var(--font-base);
@@ -107,4 +124,77 @@
   --ease-easy: ease-out;
   --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
   --focus-ring: 0 0 0 2px var(--color-background), 0 0 0 4px #0067b8;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-background: #0d141c;
+  --color-surface: #121c27;
+  --color-surface-subtle: #162331;
+  --color-surface-alt: #1b2a3a;
+  --color-text: #eaf0f7;
+  --color-text-muted: #a6b7c8;
+  --color-border: #2c3e52;
+  --color-border-subtle: #223244;
+  --color-primary: #0f6cbd;
+  --color-primary-hover: #1b7ad0;
+  --color-primary-soft: rgb(59 150 232 / 16%);
+  --color-accent-text: #74bfff;
+  --color-announcement: #0b4c8a;
+  --color-light-text: #eaf0f7;
+  --color-light-muted: #a6b7c8;
+  --color-icon-surface: rgb(59 150 232 / 16%);
+  --color-icon-border: rgb(116 191 255 / 28%);
+
+  --ms-blue-pressed: #0a5496;
+  --ms-blue-tint-strong: rgb(116 191 255 / 32%);
+  --ms-blue-bright: #9cd8f4;
+  --ms-navy: #0a141f;
+  --ms-navy-2: #142435;
+  --ms-azure: #3b96e8;
+
+  --ms-gray-10: #14202c;
+  --ms-gray-20: #172534;
+  --ms-gray-30: #162331;
+  --ms-gray-40: #223244;
+  --ms-gray-50: #2a3c50;
+  --ms-gray-60: #364a61;
+  --ms-gray-80: #556c84;
+  --ms-gray-110: #8fa3b8;
+  --ms-gray-130: #a6b7c8;
+  --ms-gray-150: #c8d4e0;
+  --ms-gray-170: #eaf0f7;
+  --ms-gray-190: #f7faff;
+
+  --ms-success: #6fd474;
+  --ms-success-bg: rgb(35 134 54 / 22%);
+  --ms-success-border: rgb(111 212 116 / 38%);
+  --ms-warning: #f3bd59;
+  --ms-warning-bg: rgb(180 115 16 / 24%);
+  --ms-warning-border: rgb(243 189 89 / 40%);
+  --ms-warning-hover: rgb(180 115 16 / 36%);
+  --ms-danger: #ff8a93;
+  --ms-danger-bg: rgb(209 52 56 / 24%);
+  --ms-danger-border: rgb(255 138 147 / 40%);
+  --ms-info-bg: rgb(59 150 232 / 16%);
+
+  --bd-blue: #4ba8f8;
+  --bd-azure: #2f8de4;
+  --bd-sky: #1e4b72;
+  --bd-tint: #183654;
+  --bd-soft: #132538;
+  --bd-navy: #8ec8f8;
+  --bd-slate: #7496b4;
+  --bd-sage: #52a386;
+  --bd-sage-soft: #16322c;
+  --bd-sep: #0d141c;
+  --bd-grid: rgb(116 191 255 / 6%);
+
+  --shadow-2: 0 1px 3px rgb(0 0 0 / 35%), 0 2px 6px rgb(0 0 0 / 28%);
+  --shadow-4: 0 4px 12px rgb(0 0 0 / 42%);
+  --shadow-8: 0 10px 26px rgb(0 0 0 / 50%);
+  --shadow-16: 0 18px 42px rgb(0 0 0 / 60%);
+  --shadow-28: 0 24px 56px rgb(0 0 0 / 68%);
+  --shadow-64: 0 32px 80px rgb(0 0 0 / 78%);
+  --focus-ring: 0 0 0 2px var(--color-background), 0 0 0 4px #74bfff;
 }

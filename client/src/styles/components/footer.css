@@ -190,4 +190,32 @@ body:has(.geoknow-chat-panel) .ms-back-to-top {
   pointer-events: none;
 }
 
-.site-footer :focus-visible { outline-color: var(--color-primary); }
+.site-footer :focus-visible { outline-color: var(--color-accent-text); }
+
+:root[data-theme="dark"] .site-footer {
+  color-scheme: dark;
+  --ms-gray-130: #a6b7c8;
+  --ms-gray-150: #c8d4e0;
+  --ms-gray-170: #eaf0f7;
+  --ms-gray-30: #0c141d;
+  --ms-gray-40: #1b2a39;
+  --ms-gray-50: #2a3c50;
+  --color-border: #243547;
+  --color-border-subtle: #1e2d3d;
+  --color-accent-text: #74bfff;
+}
+
+:root[data-theme="dark"] .site-footer-brand img {
+  filter: invert(0.92) hue-rotate(180deg) brightness(1.14);
+}
+
+:root[data-theme="dark"] .ms-back-to-top {
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+:root[data-theme="dark"] .ms-back-to-top:hover {
+  background: var(--ms-gray-50);
+  color: var(--color-accent-text);
+}

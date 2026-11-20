@@ -73,7 +73,7 @@
   font-size: 13px;
   color: var(--ms-warning);
   background: var(--ms-warning-bg);
-  border: 1px solid #f9e2ae;
+  border: 1px solid var(--ms-warning-border);
   padding: 6px 10px;
   border-radius: var(--radius-md);
   margin-bottom: 4px;
@@ -285,7 +285,7 @@
 
 .rank-species {
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
 }
 
 .rank-genus {

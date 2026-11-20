@@ -82,7 +82,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: rgb(255 255 255 / 25%);
+  background: var(--ms-blue-tint);
   overflow: hidden;
 }
 
@@ -154,7 +154,7 @@
 .remove-btn:hover {
   color: var(--ms-danger);
   background: var(--ms-danger-bg);
-  border-color: #eeacb2;
+  border-color: var(--ms-danger-border);
 }
 
 .form-group {
@@ -347,7 +347,7 @@
 .vlm-status {
   font-size: 12px;
   font-weight: 700;
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   margin-bottom: 8px;
   display: inline-block;
   padding: 5px 12px;
@@ -400,7 +400,7 @@
   border-radius: 999px;
   border: 1px solid var(--ms-blue-tint-strong);
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
@@ -459,7 +459,7 @@
 .error-message {
   background: var(--ms-danger-bg);
   color: var(--ms-danger);
-  border: 1px solid #eeacb2;
+  border: 1px solid var(--ms-danger-border);
   padding: 12px 16px;
   border-radius: var(--radius-lg);
   margin-top: 20px;

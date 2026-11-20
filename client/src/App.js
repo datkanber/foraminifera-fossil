@@ -17,10 +17,12 @@ const Lab = lazy(() => import("./pages/Lab"));
 const News = lazy(() => import("./pages/News"));
 const Search = lazy(() => import("./pages/Search"));
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   return (
-    <LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
       <BrowserRouter>
         <div className="app-layout">
           <Navbar />
@@ -50,6 +52,7 @@ function App() {
         </div>
       </BrowserRouter>
     </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

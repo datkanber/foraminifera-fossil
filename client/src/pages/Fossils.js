@@ -40,14 +40,14 @@ const renderText = (str, lang) => {
 const getStatusMeta = (t) => ({
   CONFIRMED_GENUS:          { label: t("status.confirmed"),      color: "var(--ms-success)",      bg: "var(--ms-success-bg)" },
   PROBABLE_GENUS:           { label: t("status.probable"),       color: "var(--ms-warning)",      bg: "var(--ms-warning-bg)" },
-  CANDIDATE_GENUS:          { label: t("status.candidate"),      color: "var(--ms-blue-pressed)", bg: "var(--ms-blue-tint)" },
+  CANDIDATE_GENUS:          { label: t("status.candidate"),      color: "var(--color-accent-text)", bg: "var(--ms-blue-tint)" },
   INDETERMINATE:            { label: t("status.indeterminate"),  color: "var(--ms-danger)",       bg: "var(--ms-danger-bg)" },
   NO_MATCH_WITHIN_CORE_TAXA:{ label: t("status.nomatch"),        color: "var(--ms-gray-150)",     bg: "var(--ms-gray-30)" },
 });
 
 const getLevelLabels = (t) => ({
   M: { label: t("level.m"), color: "var(--ms-danger)",       bg: "var(--ms-danger-bg)" },
-  D: { label: t("level.d"), color: "var(--ms-blue-pressed)", bg: "var(--ms-blue-tint)" },
+  D: { label: t("level.d"), color: "var(--color-accent-text)", bg: "var(--ms-blue-tint)" },
   S: { label: t("level.s"), color: "var(--ms-success)",      bg: "var(--ms-success-bg)" },
   C: { label: t("level.c"), color: "var(--ms-gray-150)",     bg: "var(--ms-gray-30)" },
 });
@@ -405,7 +405,7 @@ function ResultCard({ result, onReset, onBack }) {
                     background: "var(--ms-blue-tint)",
                     border: "1px solid var(--ms-blue-tint-strong)",
                     borderRadius: "var(--radius-md)",
-                    color: "var(--ms-blue-pressed)",
+                    color: "var(--color-accent-text)",
                     fontStyle: "italic",
                     fontWeight: "600",
                   }}
@@ -427,8 +427,8 @@ function ResultCard({ result, onReset, onBack }) {
             marginBottom: "16px",
             fontSize: "14px",
           }}>
-            <strong style={{ color: "var(--ms-navy)" }}><HintSvg /> {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
-            <span style={{ color: "var(--ms-blue-pressed)" }}>
+            <strong style={{ color: "var(--color-text)" }}><HintSvg /> {lang === 'tr' ? "İpucu:" : "Hint:"}</strong>{" "}
+            <span style={{ color: "var(--color-accent-text)" }}>
               {lang === 'tr' ? "Geri gidip bu soru için mevcut cevaplardan birini seçebilirsiniz:" : "You can go back and choose one of the available answers for this question:"}{" "}
               {node.availableBranches.map((b) => (lang === 'tr' ? b.labelTr : b.labelEn) || b.value).join(", ")}
             </span>

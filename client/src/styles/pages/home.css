@@ -2,7 +2,7 @@
 .ms-home { width: 100%; background: var(--color-surface); color: var(--color-text); }
 
 /* The photograph and the copy each have their own space. */
-.ms-home-hero { background: #ffffff; }
+.ms-home-hero { background: var(--color-background); }
 .has-hero-backdrop .ms-home-banner-image-frame { box-shadow: var(--shadow-16); }
 .ms-home-banner {
   display: grid;
@@ -12,7 +12,7 @@
   min-height: 560px;
   padding-block: clamp(40px, 5vw, 72px);
 }
-.ms-home-banner-copy { min-width: 0; animation: ms-home-content-in var(--motion-enter) var(--ease-decelerate-mid) both; }
+.ms-home-banner-copy { min-width: 0; animation: ms-home-content-in 280ms var(--ease-decelerate-max) both; }
 .ms-home-kicker { margin: 0 0 20px; color: var(--color-text-muted); }
 .ms-home-hero-title {
   max-width: 19ch;
@@ -27,10 +27,10 @@
 .ms-home-hero-text { max-width: 520px; margin: 24px 0 0; color: var(--ms-gray-150); font-size: 17px; line-height: 1.65; }
 .ms-home-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; margin-top: 32px; }
 .ms-home-arrow { margin-left: 4px; }
-.ms-home-banner-media { min-width: 0; margin: 0; touch-action: pan-y pinch-zoom; animation: ms-home-content-in var(--motion-enter) var(--ease-decelerate-mid) both; }
+.ms-home-banner-media { min-width: 0; margin: 0; touch-action: pan-y pinch-zoom; animation: ms-home-content-in 280ms var(--ease-decelerate-max) both; }
 .ms-home-banner-image-frame { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: var(--shadow-2); }
 .ms-home-banner-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
-@keyframes ms-home-content-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ms-home-content-in { from { opacity: 0; transform: translate3d(0, 6px, 0); } to { opacity: 1; transform: none; } }
 
 /* A quiet, keyboard-accessible carousel rail. */
 .ms-home-carousel-dock { border-block: 1px solid var(--color-border-subtle); background: var(--color-surface); }
@@ -51,10 +51,28 @@
   text-align: left;
   transition: color var(--motion-hover) var(--ease-easy);
 }
-.ms-home-slide-tab::after { position: absolute; inset: auto 0 -1px; height: 3px; background: var(--ms-blue); content: ''; transform: scaleX(0); transition: transform var(--duration-normal) var(--ease-decelerate-max); }
+.ms-home-slide-tab::after { position: absolute; inset: auto 0 -1px; height: 3px; background: var(--ms-blue-tint-strong); content: ''; opacity: 0; transition: opacity var(--duration-fast) var(--ease-easy); }
 .ms-home-slide-tab:hover { color: var(--ms-gray-170); }
 .ms-home-slide-tab.is-active { color: var(--ms-gray-170); font-weight: 600; }
-.ms-home-slide-tab.is-active::after { transform: scaleX(1); }
+.ms-home-slide-tab.is-active::after { opacity: 1; }
+.ms-home-slide-progress {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: 1;
+  height: 3px;
+  background: var(--ms-blue);
+  transform-origin: left center;
+  animation: ms-home-slide-progress 3500ms linear forwards;
+}
+.ms-home-hero.is-paused .ms-home-slide-progress {
+  animation-play-state: paused;
+}
+@keyframes ms-home-slide-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
 .ms-home-slide-tab-num { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--ms-gray-130); }
 .ms-home-carousel-controls { display: flex; gap: 4px; }
 .ms-home-control-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: var(--radius-md); background: transparent; color: var(--ms-gray-170); transition: background-color var(--motion-hover) var(--ease-easy); }
@@ -195,4 +213,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ms-home-quick-card:hover { transform: none; }
+  .ms-home-slide-progress { animation: none; transform: scaleX(1); }
+}
+
+:root[data-theme="dark"] .ms-home-bento-feature-visual {
+  background: var(--color-surface);
+}
+
+:root[data-theme="dark"] .ms-home-bento-feature-visual img {
+  filter: invert(0.92) hue-rotate(180deg);
 }

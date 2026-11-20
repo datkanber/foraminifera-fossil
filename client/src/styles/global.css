@@ -397,7 +397,7 @@ button:disabled {
 }
 .ms-page-hero--brand .ms-page-hero-media-tag,
 .ms-page-hero--dark .ms-page-hero-media-tag { color: rgb(255 255 255 / 80%); }
-.ms-page-hero-media--contain .ms-page-hero-media-frame { background: #fff; }
+.ms-page-hero-media--contain .ms-page-hero-media-frame { background: var(--color-surface); }
 .ms-page-hero-media--contain img { padding: 24px; object-fit: contain; }
 .ms-page-hero-media--cutout .ms-page-hero-media-frame {
   aspect-ratio: auto;
@@ -420,6 +420,10 @@ button:disabled {
   object-fit: contain;
   filter: drop-shadow(0 12px 24px rgb(23 43 58 / 12%));
 }
+
+:root[data-theme="dark"] .ms-page-hero-media--cutout img {
+  filter: invert(0.93) hue-rotate(180deg) drop-shadow(0 12px 24px rgb(0 0 0 / 55%));
+}
 @keyframes ms-hero-copy {
   from { opacity: 0; transform: translate3d(0, 20px, 0); }
   to { opacity: 1; transform: none; }
@@ -440,7 +444,7 @@ button:disabled {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--color-background);
 }
 
 .hero-bd {
@@ -592,11 +596,17 @@ button:disabled {
     linear-gradient(90deg, #ffffff 0%, rgb(255 255 255 / 70%) 22%, rgb(255 255 255 / 0%) 46%);
 }
 
+:root[data-theme="dark"] .hero-bd-veil {
+  background:
+    radial-gradient(ellipse 50% 80% at 15% 50%, #0d141c 0%, rgb(13 20 28 / 92%) 40%, rgb(13 20 28 / 0%) 100%),
+    linear-gradient(90deg, #0d141c 0%, rgb(13 20 28 / 74%) 24%, rgb(13 20 28 / 0%) 48%);
+}
+
 /* Very faint grid (≈5% opacity) matching GeoKnow primary blue. */
 .hero-bd-grid {
   background-image:
-    linear-gradient(to right, rgb(0 103 184 / 4.5%) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(0 103 184 / 4.5%) 1px, transparent 1px);
+    linear-gradient(to right, var(--bd-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bd-grid) 1px, transparent 1px);
   background-size: 56px 56px;
   background-position: -1px -1px;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 82%, transparent 100%);
@@ -617,6 +627,10 @@ button:disabled {
 
   .hero-bd-veil {
     background: linear-gradient(180deg, #ffffff 0%, rgb(255 255 255 / 85%) 30%, rgb(255 255 255 / 0%) 55%);
+  }
+
+  :root[data-theme="dark"] .hero-bd-veil {
+    background: linear-gradient(180deg, #0d141c 0%, rgb(13 20 28 / 88%) 30%, rgb(13 20 28 / 0%) 56%);
   }
 }
 
@@ -746,6 +760,10 @@ button:disabled {
   text-decoration-thickness: 2px;
 }
 
+:root[data-theme="dark"] .ms-text-link:hover {
+  color: #a8d8ff;
+}
+
 /* Shared cards: elevation communicates interaction without moving content. */
 .ms-card {
   position: relative;
@@ -847,7 +865,7 @@ a.ms-card:hover .ms-card-media img {
   padding: 1px 8px;
   border-radius: 999px;
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;
@@ -923,21 +941,22 @@ a.ms-card:hover .ms-card-media img {
   border: 1px solid var(--ms-gray-50);
   border-radius: var(--radius-md);
   background: var(--ms-info-bg);
+  color: var(--color-text);
   font-size: 14px;
 }
 
 .ms-message--warning {
-  border-color: #f9e2ae;
+  border-color: var(--ms-warning-border);
   background: var(--ms-warning-bg);
 }
 
 .ms-message--error {
-  border-color: #eeacb2;
+  border-color: var(--ms-danger-border);
   background: var(--ms-danger-bg);
 }
 
 .ms-message--success {
-  border-color: #9fd89f;
+  border-color: var(--ms-success-border);
   background: var(--ms-success-bg);
 }
 

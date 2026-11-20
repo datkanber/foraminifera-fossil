@@ -139,7 +139,7 @@
 .site-search-filters button[aria-pressed="true"] {
   border-color: var(--ms-blue);
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   font-weight: 600;
 }
 

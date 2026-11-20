@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useTheme } from "../contexts/ThemeContext";
 import logo from "../assets/images/logo.png";
 import SiteSearchDialog from "./SiteSearchDialog";
 import "../styles/components/navbar.css";
@@ -40,6 +41,8 @@ function Icon({ name, ...props }) {
       {name === "close" && <path d="m6 6 12 12M18 6 6 18" />}
       {name === "menu" && <path d="M4 6h16M4 12h16M4 18h16" />}
       {name === "search" && <><circle cx="10.5" cy="10.5" r="7" /><path d="m16 16 5 5" /></>}
+      {name === "moon" && <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8Z" />}
+      {name === "sun" && <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></>}
     </svg>
   );
 }
@@ -108,6 +111,8 @@ export default function Navbar() {
   const searchRef = useRef(null);
   const location = useLocation();
   const { lang, toggleLanguage, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
   const text = announcement[lang];
 
   function closeMenus() {
@@ -261,6 +266,24 @@ export default function Navbar() {
           </button>
           <button type="button" className="navbar-lang-btn" onClick={toggleLanguage} aria-label={lang === "tr" ? "Switch to English" : "Türkçeye geç"} title={lang === "tr" ? "Switch to English" : "Türkçeye geç"}>
             <Icon name="globe" /><span>{lang === "tr" ? "TR" : "EN"}</span>
+          </button>
+          <button
+            type="button"
+            className="navbar-theme-btn"
+            onClick={toggleTheme}
+            aria-pressed={isDark}
+            aria-label={
+              lang === "tr"
+                ? (isDark ? "Açık temaya geç" : "Koyu temaya geç")
+                : (isDark ? "Switch to light mode" : "Switch to dark mode")
+            }
+            title={
+              lang === "tr"
+                ? (isDark ? "Açık mod" : "Koyu mod")
+                : (isDark ? "Light mode" : "Dark mode")
+            }
+          >
+            <Icon name={isDark ? "sun" : "moon"} />
           </button>
           <NavbarClock lang={lang} />
         </div>

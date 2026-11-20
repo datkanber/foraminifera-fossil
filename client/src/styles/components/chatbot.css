@@ -172,7 +172,7 @@
 .geoknow-chat-msg.is-bot {
   align-self: flex-start;
   border: 1px solid var(--color-border-subtle);
-  background: #ffffff;
+  background: var(--color-surface);
   color: var(--color-text);
   box-shadow: var(--shadow-2);
 }
@@ -213,7 +213,7 @@
   border: 1px solid var(--ms-blue-tint-strong);
   border-radius: var(--radius-md);
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   font-size: 12.5px;
   font-weight: 600;
   text-decoration: none;
@@ -222,7 +222,7 @@
 }
 
 .geoknow-chat-link-btn:hover {
-  background: #dceefa;
+  background: var(--ms-blue-tint-strong);
   border-color: var(--ms-blue);
 }
 
@@ -238,7 +238,7 @@
   border: 1px solid var(--ms-blue-tint-strong);
   border-radius: var(--radius-md);
   background: var(--ms-blue-tint);
-  color: var(--ms-blue-pressed);
+  color: var(--color-accent-text);
   font-size: 12.5px;
   font-weight: 600;
   text-align: left;
@@ -247,7 +247,7 @@
 }
 
 .geoknow-chat-prompt-btn:hover {
-  background: #dceefa;
+  background: var(--ms-blue-tint-strong);
 }
 
 .geoknow-chat-form {
@@ -256,7 +256,7 @@
   gap: 8px;
   padding: 10px 12px;
   border-top: 1px solid var(--color-border-subtle);
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .geoknow-chat-input {
@@ -267,7 +267,7 @@
   border: 1px solid var(--ms-gray-60);
   border-bottom: 2px solid var(--ms-gray-130);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--color-surface);
   color: var(--color-text);
   font-size: 14px;
 }

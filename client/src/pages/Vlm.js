@@ -344,7 +344,7 @@ function Vlm() {
                     <div style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--color-text)' }}>
                       {result.score.identification ? <em>{result.score.identification}</em> : (lang === 'tr' ? "Tanı Konulamadı" : "No diagnosis")}
                     </div>
-                    <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--color-primary)', marginTop: '6px' }}>
+                    <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--color-accent-text)', marginTop: '6px' }}>
                       {result.score.status}
                     </div>
                   </div>

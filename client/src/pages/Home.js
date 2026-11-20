@@ -234,6 +234,8 @@ function QuickIcon({ name }) {
   return null;
 }
 
+const SLIDE_DURATION_MS = 3500;
+
 export default function Home() {
   const { lang } = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
@@ -263,9 +265,18 @@ export default function Home() {
     if (isPaused) return;
     const timer = window.setInterval(() => {
       setSlideIndex(prev => (prev + 1) % heroSlides.length);
-    }, 8000);
+    }, SLIDE_DURATION_MS);
     return () => window.clearInterval(timer);
   }, [isPaused, slideIndex]);
+
+  useEffect(() => {
+    heroSlides.forEach(slide => {
+      if (slide.photo?.src) {
+        const img = new Image();
+        img.src = slide.photo.src;
+      }
+    });
+  }, []);
 
   function navigateTabs(event, keys, select) {
     if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
@@ -357,8 +368,6 @@ export default function Home() {
       <section
         className={`ms-home-hero${isPaused ? " is-paused" : ""}`}
         aria-label={lang === "tr" ? "Öne Çıkan Başlıklar" : "Featured Highlights"}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         onFocusCapture={() => setHasFocus(true)}
         onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setHasFocus(false); }}
       >
@@ -374,7 +383,11 @@ export default function Home() {
                 {activeSlide.summary[lang]}
               </p>
 
-              <div className="ms-home-hero-actions">
+              <div
+                className="ms-home-hero-actions"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
                 <Link className="ms-btn ms-btn--lg ms-home-btn-primary" to={activeSlide.actionPrimary.to}>
                   <span>{activeSlide.actionPrimary[lang]}</span>
                   <span className="ms-home-arrow" aria-hidden="true">→</span>
@@ -418,7 +431,11 @@ export default function Home() {
         </div>
         </div>
 
-          <div className="ms-home-carousel-dock">
+          <div
+            className="ms-home-carousel-dock"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <div className="ms-container ms-home-carousel-dock-inner">
               <div className="ms-home-slide-tabs" role="tablist" aria-label={lang === "tr" ? "Vitrindeki Başlıklar" : "Featured slides"} onKeyDown={event => navigateTabs(event, heroSlides.map((_, i) => i), setSlideIndex)}>
                 {heroSlides.map((slide, idx) => (
@@ -435,6 +452,7 @@ export default function Home() {
                   >
                     <span className="ms-home-slide-tab-num">0{idx + 1}</span>
                     <span className="ms-home-slide-tab-label">{slide.tabLabel[lang]}</span>
+                    {idx === slideIndex && <span key={`p-${slideIndex}`} className="ms-home-slide-progress" aria-hidden="true" />}
                   </button>
                 ))}
               </div>

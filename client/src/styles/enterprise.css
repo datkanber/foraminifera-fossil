@@ -58,6 +58,11 @@ a.ms-card:hover, .ms-card--interactive:hover { border-color: var(--color-border)
 .vlm-id { color: var(--color-text); }
 .vlm-scan-beam { top: 0; height: 100%; background: linear-gradient(transparent 49%, var(--color-primary) 50%, transparent 51%); }
 @keyframes vlm-scan-sweep { 0%, 100% { transform: translateY(-44%); opacity: .7; } 50% { transform: translateY(44%); opacity: 1; } }
+:root[data-theme="dark"] .ms-btn--secondary:hover { background: var(--ms-gray-50); }
+:root[data-theme="dark"] .ms-home-cta-box {
+  background: #132333;
+  border: 1px solid var(--color-border-subtle);
+}
 @media (max-width: 599px) {
   .ms-section-header { margin-bottom: 24px; }
   .ms-page-hero-inner { min-height: 0; }

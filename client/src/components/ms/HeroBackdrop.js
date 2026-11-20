@@ -18,15 +18,16 @@ import { useEffect, useId, useRef } from "react";
 const W = 1440;
 const H = 640;
 
-const BLUE = "#0067b8";
-const AZURE = "#0078d4";
-const SKY = "#9cd8f4";
-const TINT = "#cfe4f4";
-const SOFT = "#edf5fb";
-const NAVY = "#172b3a";
-const SLATE = "#213b4d";
-const SAGE = "#5f8f7b";
-const SAGE_SOFT = "#dcebe4";
+const BLUE = "var(--bd-blue, #0067b8)";
+const AZURE = "var(--bd-azure, #0078d4)";
+const SKY = "var(--bd-sky, #9cd8f4)";
+const TINT = "var(--bd-tint, #cfe4f4)";
+const SOFT = "var(--bd-soft, #edf5fb)";
+const NAVY = "var(--bd-navy, #172b3a)";
+const SLATE = "var(--bd-slate, #213b4d)";
+const SAGE = "var(--bd-sage, #5f8f7b)";
+const SAGE_SOFT = "var(--bd-sage-soft, #dcebe4)";
+const SEP = "var(--bd-sep, #ffffff)";
 
 /* ── helpers ─────────────────────────────────────────────────────────── */
 
@@ -147,7 +148,7 @@ function StrataArt() {
               d={w.d}
               fill={w.fill}
               fillOpacity={w.opacity}
-              stroke="#FFFFFF"
+              stroke={SEP}
               strokeOpacity="0.9"
               strokeWidth="1.2"
               className={`hero-bd-grain-${w.tone}`}
@@ -212,7 +213,7 @@ function OutcropBeds({ id }) {
     <g key={i}>
       <path d={bed.area} fill={bed.fill} fillOpacity={bed.opacity} />
       {i % 2 === 1 && <path d={bed.area} fill={`url(#${id("beddots")})`} />}
-      <path d={bed.surface} fill="none" stroke="#FFFFFF" strokeOpacity="0.92" strokeWidth="1.6" />
+      <path d={bed.surface} fill="none" stroke={SEP} strokeOpacity="0.92" strokeWidth="1.6" />
       <path d={bed.surface} fill="none" stroke={SLATE} strokeOpacity="0.16" strokeWidth="0.9" transform="translate(0 2)" />
       {(i === 0 || i === 2) && (
         <path
@@ -345,7 +346,7 @@ function SpiralArt() {
               d={c.d}
               fill={c.fill}
               fillOpacity={Math.min(c.opacity, 0.5)}
-              stroke="#FFFFFF"
+              stroke={SEP}
               strokeOpacity="0.92"
               strokeWidth="1.2"
               className={`hero-bd-grain-${c.tone}`}
@@ -388,7 +389,7 @@ const THIN_SECTION = (() => {
       pts[j].push([680 + i * sx + (j % 2) * (sx / 2) + (rand() - 0.5) * 26, -20 + j * sy + (rand() - 0.5) * 22]);
     }
   }
-  const palette = [SOFT, TINT, SAGE_SOFT, "#dbeaf7", SKY, "#e7f1ee"];
+  const palette = [SOFT, TINT, SAGE_SOFT, "var(--bd-tint, #dbeaf7)", SKY, "var(--bd-sage-soft, #e7f1ee)"];
   const tris = [];
   for (let j = 0; j < rows - 1; j += 1) {
     for (let i = 0; i < cols - 1; i += 1) {
@@ -465,7 +466,7 @@ function ThinSectionArt({ id }) {
             d={t.d}
             fill={t.fill || "none"}
             fillOpacity={t.opacity}
-            stroke="#FFFFFF"
+            stroke={SEP}
             strokeOpacity="0.92"
             strokeWidth="1.1"
             className={t.tone ? `hero-bd-grain-${t.tone}` : undefined}
@@ -555,7 +556,7 @@ function NetworkArt() {
               d={f.d}
               fill={f.fill}
               fillOpacity="0.35"
-              stroke="#FFFFFF"
+              stroke={SEP}
               strokeOpacity="0.85"
               strokeWidth="1.1"
               className={`hero-bd-grain-${f.tone}`}
@@ -612,7 +613,7 @@ function NetworkArt() {
                   r={hub ? 6.5 : sageHub ? 5 : 3.6}
                   fill={sageHub ? SAGE : hub ? BLUE : AZURE}
                   fillOpacity={sageHub ? 0.8 : 0.72}
-                  stroke="#FFFFFF"
+                  stroke={SEP}
                   strokeWidth="1.6"
                 />
               </g>
@@ -714,7 +715,7 @@ function SurveyArt() {
           <circle className="hero-bd-pulse" r="46" fill={TINT} fillOpacity="0.36" stroke={BLUE} strokeOpacity="0.36" />
           <circle className="hero-bd-pulse" style={{ animationDelay: "1.2s" }} r="46" fill="none" stroke={BLUE} strokeOpacity="0.32" />
           <circle className="hero-bd-pulse" style={{ animationDelay: "2.4s" }} r="46" fill="none" stroke={SAGE} strokeOpacity="0.28" />
-          <path d="M0 0c-9-12-15-20-15-28a15 15 0 0 1 30 0c0 8-6 16-15 28z" fill={BLUE} fillOpacity="0.78" stroke="#FFFFFF" strokeWidth="1.6" />
+          <path d="M0 0c-9-12-15-20-15-28a15 15 0 0 1 30 0c0 8-6 16-15 28z" fill={BLUE} fillOpacity="0.78" stroke={SEP} strokeWidth="1.6" />
           <circle cy="-28" r="5" fill="#FFFFFF" />
         </g>
       </g>
@@ -836,7 +837,7 @@ function HeritageArt() {
               d={w.d}
               fill={w.fill}
               fillOpacity={w.opacity}
-              stroke="#FFFFFF"
+              stroke={SEP}
               strokeOpacity="0.92"
               strokeWidth="1.3"
               className={`hero-bd-grain-${w.tone}`}
@@ -860,7 +861,7 @@ function HeritageArt() {
               d={w.d}
               fill={w.fill}
               fillOpacity={w.opacity}
-              stroke="#FFFFFF"
+              stroke={SEP}
               strokeOpacity="0.92"
               strokeWidth="1.4"
             />
