@@ -6,6 +6,7 @@ import InspectPanel from "../components/lab/InspectPanel";
 import Notebook from "../components/lab/Notebook";
 import Quiz from "../components/lab/Quiz";
 import { UI } from "../components/lab/labText";
+import TypewriterText from "../components/ms/TypewriterText";
 import { drawPoster, posterTitle } from "../components/lab/posters";
 import { QUIZ_LENGTH } from "../components/lab/quizQuestions";
 import { SPECIMENS, specimenById, specimenNumber } from "../components/lab/specimens";
@@ -268,7 +269,7 @@ export default function Lab() {
             <div className="lab-intro-kicker">
               {lang === "tr" ? "3D Sanal Mikroskopi Stüdyosu" : "3D Virtual Microscopy Studio"}
             </div>
-            <h2 id="lab-intro-title">{t.title}</h2>
+            <h2 id="lab-intro-title"><TypewriterText text={t.title} /></h2>
             <p className="lab-intro-lead">{t.introLead}</p>
             <ul className="lab-intro-goals">
               {t.introGoals.map((goal) => (

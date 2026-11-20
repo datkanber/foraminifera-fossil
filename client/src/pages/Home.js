@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import HeroBackdrop from "../components/ms/HeroBackdrop";
+import TypewriterText from "../components/ms/TypewriterText";
 import { dayTwoPhotos } from "../data/fieldPhotos";
 import workshopPhoto from "../assets/photos/1792745417607.jpg";
 import collectionPhoto from "../assets/photos/1792745403944.jpg";
@@ -377,7 +378,7 @@ export default function Home() {
             <div className="ms-home-banner-copy" key={activeSlide.id} aria-live={isUserPaused ? "polite" : "off"}>
               <p className="ms-eyebrow ms-home-kicker">{activeSlide.eyebrow[lang]}</p>
               <h1 className="ms-home-hero-title">
-                {activeSlide.title[lang]}
+                <TypewriterText text={activeSlide.title[lang]} />
               </h1>
               <p className="ms-home-hero-text">
                 {activeSlide.summary[lang]}

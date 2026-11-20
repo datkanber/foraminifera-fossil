@@ -14,6 +14,7 @@
  * />
  */
 import HeroBackdrop from "./HeroBackdrop";
+import TypewriterText from "./TypewriterText";
 
 export default function PageHero({
   eyebrow,
@@ -51,7 +52,9 @@ export default function PageHero({
               {eyebrow}
             </p>
           )}
-          <h1 className="ms-page-hero-title" id={titleId}>{title}</h1>
+          <h1 className="ms-page-hero-title" id={titleId}>
+            {typeof title === "string" ? <TypewriterText text={title} /> : title}
+          </h1>
           {text && <p className="ms-page-hero-text">{text}</p>}
           {Array.isArray(highlights) && highlights.length > 0 && (
             <ul className="ms-page-hero-highlights" aria-label={eyebrow || title}>

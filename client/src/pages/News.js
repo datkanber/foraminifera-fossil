@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { eventPhotos, stoneDays, pressSources, projectParticipants } from '../data/news';
 import HeroBackdrop from '../components/ms/HeroBackdrop';
 import Reveal from '../components/ms/Reveal';
+import TypewriterText from '../components/ms/TypewriterText';
 import '../styles/pages/news.css';
 
 const copy = {
@@ -213,7 +214,14 @@ export default function News() {
           <header className="stone-intro">
             <div className="stone-intro-copy">
               <p className="stone-event-date">Erasmus+ STONE<span aria-hidden="true">·</span>{text.date}</p>
-              <h1>STONE Eskişehir<span>Digital Geo Academy</span></h1>
+              <h1>
+                <TypewriterText
+                  segments={[
+                    { text: 'STONE Eskişehir' },
+                    { text: 'Digital Geo Academy', className: 'stone-intro-subtitle' },
+                  ]}
+                />
+              </h1>
               <p className="stone-intro-summary">{text.intro}</p>
               <dl className="stone-event-details">
                 <div><dt>{text.host}</dt><dd>{text.hostName}</dd></div>
